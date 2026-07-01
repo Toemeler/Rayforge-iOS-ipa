@@ -65,7 +65,12 @@ objcpp_link_args = common_flags
 [properties]
 # iOS is a cross target; disable anything that tries to run target binaries.
 needs_exe_wrapper = true
-sys_root = sdkroot
+# NOTE: deliberately NOT setting 'sys_root'. Meson maps sys_root to
+# PKG_CONFIG_SYSROOT_DIR, which prepends the SDK path to every -I/-L in our
+# .pc files (e.g. libpng's -I<prefix>/include becomes
+# -I<SDK><prefix>/include -> nonexistent), breaking dependent builds. The
+# compiler already gets the SDK sysroot via -isysroot in the flags below,
+# which is sufficient for finding SDK system headers/libraries.
 # Prevent Meson/pkg-config from discovering host (macOS/Homebrew) libraries
 # during the cross build. When building a base library this points at a
 # nonexistent dir (isolation); when building dependent libraries it points
