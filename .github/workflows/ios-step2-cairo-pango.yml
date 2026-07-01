@@ -1,0 +1,322 @@
+name: iOS Step 2 - Build Cairo + Pango stack (arm64)
+
+# Second dependency layer for the Rayforge iOS build. Builds, in dependency
+# order, the rendering + text stack that links against Step 1's GLib:
+#   pixman -> libpng -> freetype -> harfbuzz -> fribidi -> fontconfig
+#   -> cairo -> pango
+# Each library installs into a shared prefix seeded with the Step 1 GLib
+# artifact, so later libraries find earlier ones via PKG_CONFIG_PATH.
+# Produces a verified arm64 'cairo-pango-ios-arm64' artifact.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ios_min:
+        description: "Minimum iOS deployment version"
+        required: false
+        default: "17.0"
+      glib_run_id:
+        description: "Run ID of a successful Step 1 to pull GLib from (blank = build GLib inline)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+env:
+  IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
+  # Pinned, known-good versions.
+  GLIB_VERSION: "2.82.4"
+  PIXMAN_VERSION: "0.44.2"
+  LIBPNG_VERSION: "1.6.44"
+  FREETYPE_VERSION: "2.13.3"
+  HARFBUZZ_VERSION: "14.2.1"
+  FRIBIDI_VERSION: "1.0.16"
+  FONTCONFIG_VERSION: "2.15.0"
+  CAIRO_VERSION: "1.18.4"
+  PANGO_MAJMIN: "1.58"
+  PANGO_VERSION: "1.58.0"
+
+jobs:
+  build-cairo-pango:
+    name: Build Cairo + Pango for iOS arm64
+    runs-on: macos-15
+    timeout-minutes: 120
+
+    steps:
+      - name: "[1/12] Toolchain info"
+        run: |
+          set -x
+          sw_vers || true
+          xcodebuild -version || true
+          xcrun --sdk iphoneos --show-sdk-version || true
+          xcrun --sdk iphoneos --show-sdk-path || true
+
+      - name: "[2/12] Checkout repo"
+        uses: actions/checkout@v4
+
+      - name: "[3/12] Install build tools"
+        run: |
+          set -euxo pipefail
+          brew list meson >/dev/null 2>&1 || brew install meson
+          brew list ninja >/dev/null 2>&1 || brew install ninja
+          brew list pkg-config >/dev/null 2>&1 || brew install pkg-config
+          meson --version && ninja --version && pkg-config --version
+
+      - name: "[4/12] Generate iOS arm64 cross file (isolation, for GLib)"
+        run: |
+          set -euxo pipefail
+          chmod +x ios/scripts/gen-cross-file.sh
+          # No pkgconfig dir -> isolation, so GLib's build ignores host libs.
+          ios/scripts/gen-cross-file.sh "${GITHUB_WORKSPACE}/ios-arm64-cross.txt" "${IOS_MIN}"
+
+      # --------------------------------------------------------------
+      # Seed the shared prefix with Step 1's GLib. Rebuild GLib inline
+      # (self-contained) so this workflow does not depend on artifact
+      # retention from a previous run.
+      # --------------------------------------------------------------
+      - name: "[5/12] Build GLib into shared prefix (arm64)"
+        run: |
+          set -euxo pipefail
+          MAJMIN="$(echo "${GLIB_VERSION}" | cut -d. -f1,2)"
+          curl -fL --retry 3 -o glib.tar.xz \
+            "https://download.gnome.org/sources/glib/${MAJMIN}/glib-${GLIB_VERSION}.tar.xz"
+          mkdir -p glib-src && tar xf glib.tar.xz --strip-components=1 -C glib-src
+          meson setup glib-build glib-src \
+            --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
+            --default-library=static \
+            --prefix="${GITHUB_WORKSPACE}/ios-out" \
+            --buildtype=release \
+            --force-fallback-for=pcre2,libffi \
+            -Dtests=false -Dintrospection=disabled -Dlibmount=disabled \
+            -Dselinux=disabled -Dxattr=false -Dman-pages=disabled -Dnls=disabled \
+            2>&1 | tee glib-setup.log
+          ninja -C glib-build install 2>&1 | tee glib-install.log
+          echo "GLib installed: $(ls ios-out/lib/libglib-2.0.a)"
+
+      - name: "[6/12] Export shared build environment + prefix-aware cross file"
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          echo "PREFIX=${PREFIX}" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_LIBDIR=${PREFIX}/lib/pkgconfig" >> "$GITHUB_ENV"
+          # Regenerate the cross file so its pkg_config_libdir points at the
+          # shared prefix. From pixman onward, each library must find the
+          # ones already installed there (and still NOT host Homebrew libs).
+          ios/scripts/gen-cross-file.sh \
+            "${GITHUB_WORKSPACE}/ios-arm64-cross.txt" "${IOS_MIN}" \
+            "${PREFIX}/lib/pkgconfig"
+          echo "----- regenerated cross file -----"
+          cat "${GITHUB_WORKSPACE}/ios-arm64-cross.txt"
+
+      # --------------------------------------------------------------
+      - name: "[7/12] pixman"
+        run: |
+          set -euxo pipefail
+          curl -fL --retry 3 -o pixman.tar.gz \
+            "https://www.cairographics.org/releases/pixman-${PIXMAN_VERSION}.tar.gz"
+          mkdir -p pixman-src && tar xf pixman.tar.gz --strip-components=1 -C pixman-src
+          meson setup pixman-build pixman-src \
+            --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dtests=disabled -Ddemos=disabled -Dgtk=disabled \
+            2>&1 | tee pixman.log
+          ninja -C pixman-build install 2>&1 | tee -a pixman.log
+
+      - name: "[8/12] libpng"
+        run: |
+          set -euxo pipefail
+          curl -fL --retry 3 -o libpng.tar.xz \
+            "https://download.sourceforge.net/libpng/libpng-${LIBPNG_VERSION}.tar.xz"
+          mkdir -p libpng-src && tar xf libpng.tar.xz --strip-components=1 -C libpng-src
+          # libpng ships meson support; zlib comes from the SDK.
+          meson setup libpng-build libpng-src \
+            --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dtests=false \
+            2>&1 | tee libpng.log
+          ninja -C libpng-build install 2>&1 | tee -a libpng.log
+
+      - name: "[9/12] freetype (no-harfbuzz first pass) + harfbuzz + freetype (final)"
+        run: |
+          set -euxo pipefail
+          # freetype and harfbuzz have a circular dependency. Standard fix:
+          # build freetype WITHOUT harfbuzz, build harfbuzz against it, then
+          # rebuild freetype WITH harfbuzz.
+          curl -fL --retry 3 -o freetype.tar.xz \
+            "https://download.savannah.gnu.org/releases/freetype/freetype-${FREETYPE_VERSION}.tar.xz"
+          mkdir -p freetype-src && tar xf freetype.tar.xz --strip-components=1 -C freetype-src
+
+          echo "----- freetype pass 1 (no harfbuzz) -----"
+          meson setup ft-build1 freetype-src \
+            --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dharfbuzz=disabled -Dbrotli=disabled -Dbzip2=disabled -Dpng=enabled \
+            2>&1 | tee freetype1.log
+          ninja -C ft-build1 install 2>&1 | tee -a freetype1.log
+
+          echo "----- harfbuzz (against freetype pass 1) -----"
+          curl -fL --retry 3 -o harfbuzz.tar.xz \
+            "https://github.com/harfbuzz/harfbuzz/releases/download/${HARFBUZZ_VERSION}/harfbuzz-${HARFBUZZ_VERSION}.tar.xz"
+          mkdir -p harfbuzz-src && tar xf harfbuzz.tar.xz --strip-components=1 -C harfbuzz-src
+          meson setup hb-build harfbuzz-src \
+            --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dtests=disabled -Ddocs=disabled -Dutilities=disabled \
+            -Dfreetype=enabled -Dglib=enabled -Dgobject=enabled -Dcairo=disabled \
+            2>&1 | tee harfbuzz.log
+          ninja -C hb-build install 2>&1 | tee -a harfbuzz.log
+
+          echo "----- freetype pass 2 (with harfbuzz) -----"
+          meson setup ft-build2 freetype-src \
+            --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dharfbuzz=enabled -Dbrotli=disabled -Dbzip2=disabled -Dpng=enabled \
+            2>&1 | tee freetype2.log
+          ninja -C ft-build2 install 2>&1 | tee -a freetype2.log
+
+      - name: "[10/12] fribidi + expat + fontconfig"
+        run: |
+          set -euxo pipefail
+          echo "----- fribidi -----"
+          curl -fL --retry 3 -o fribidi.tar.xz \
+            "https://github.com/fribidi/fribidi/releases/download/v${FRIBIDI_VERSION}/fribidi-${FRIBIDI_VERSION}.tar.xz"
+          mkdir -p fribidi-src && tar xf fribidi.tar.xz --strip-components=1 -C fribidi-src
+          meson setup fribidi-build fribidi-src \
+            --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dtests=false -Ddocs=false -Dbin=false \
+            2>&1 | tee fribidi.log
+          ninja -C fribidi-build install 2>&1 | tee -a fribidi.log
+
+          echo "----- expat (fontconfig needs it) via wrapdb tarball -----"
+          curl -fL --retry 3 -o expat.tar.xz \
+            "https://github.com/libexpat/libexpat/releases/download/R_2_6_4/expat-2.6.4.tar.xz"
+          mkdir -p expat-src && tar xf expat.tar.xz --strip-components=1 -C expat-src
+          # expat uses cmake; build it with cmake toolchain for iOS.
+          SDK=$(xcrun --sdk iphoneos --show-sdk-path)
+          cmake -S expat-src -B expat-build \
+            -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_OSX_SYSROOT="$SDK" -DCMAKE_OSX_DEPLOYMENT_TARGET="${IOS_MIN}" \
+            -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
+            -DEXPAT_SHARED_LIBS=OFF -DEXPAT_BUILD_TOOLS=OFF \
+            -DEXPAT_BUILD_EXAMPLES=OFF -DEXPAT_BUILD_TESTS=OFF \
+            2>&1 | tee expat.log
+          cmake --build expat-build --config Release 2>&1 | tee -a expat.log
+          cmake --install expat-build --config Release 2>&1 | tee -a expat.log
+
+          echo "----- fontconfig -----"
+          curl -fL --retry 3 -o fontconfig.tar.xz \
+            "https://www.freedesktop.org/software/fontconfig/release/fontconfig-${FONTCONFIG_VERSION}.tar.xz"
+          mkdir -p fontconfig-src && tar xf fontconfig.tar.xz --strip-components=1 -C fontconfig-src
+          meson setup fc-build fontconfig-src \
+            --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dtests=disabled -Dtools=disabled -Ddoc=disabled -Dnls=disabled \
+            2>&1 | tee fontconfig.log
+          ninja -C fc-build install 2>&1 | tee -a fontconfig.log
+
+      - name: "[11/12] cairo + pango"
+        run: |
+          set -euxo pipefail
+          echo "----- cairo -----"
+          curl -fL --retry 3 -o cairo.tar.xz \
+            "https://www.cairographics.org/releases/cairo-${CAIRO_VERSION}.tar.xz"
+          mkdir -p cairo-src && tar xf cairo.tar.xz --strip-components=1 -C cairo-src
+          # Quartz surface for native iOS; disable X/GL backends. zlib from SDK.
+          meson setup cairo-build cairo-src \
+            --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dtests=disabled -Dxlib=disabled -Dxcb=disabled \
+            -Dquartz=enabled -Dfreetype=enabled -Dfontconfig=enabled \
+            -Dpng=enabled -Dzlib=enabled -Dglib=enabled \
+            2>&1 | tee cairo.log
+          ninja -C cairo-build install 2>&1 | tee -a cairo.log
+
+          echo "----- pango -----"
+          curl -fL --retry 3 -o pango.tar.xz \
+            "https://download.gnome.org/sources/pango/${PANGO_MAJMIN}/pango-${PANGO_VERSION}.tar.xz"
+          mkdir -p pango-src && tar xf pango.tar.xz --strip-components=1 -C pango-src
+          meson setup pango-build pango-src \
+            --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dintrospection=disabled -Dgtk_doc=false \
+            -Dfontconfig=enabled -Dfreetype=enabled -Dcairo=enabled \
+            2>&1 | tee pango.log
+          ninja -C pango-build install 2>&1 | tee -a pango.log
+
+      - name: "[12/12] Verify + package"
+        run: |
+          set -euxo pipefail
+          {
+            echo "===== KEY STATIC LIBS ====="
+            for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi \
+                        libfontconfig libexpat libcairo libcairo-gobject \
+                        libpango-1.0 libpangocairo-1.0 libpangoft2-1.0; do
+              f=$(find "${PREFIX}/lib" -name "${want}.a" | head -1)
+              if [ -n "$f" ]; then echo "FOUND $f"; else echo "MISSING ${want}.a"; fi
+            done
+            echo
+            echo "===== ARCHITECTURE CHECK (must be arm64) ====="
+            for lib in $(find "${PREFIX}/lib" -name '*.a' | sort); do
+              printf '%-45s ' "$(basename "$lib")"
+              lipo -info "$lib" 2>&1 | sed 's/.*architecture: //'
+            done
+            echo
+            echo "===== .pc FILES ====="
+            find "${PREFIX}/lib/pkgconfig" -name '*.pc' | sort
+          } 2>&1 | tee stack-verify.log
+          tar czf cairo-pango-ios-arm64.tar.gz -C "${PREFIX}" .
+          ls -la cairo-pango-ios-arm64.tar.gz
+
+      - name: Upload stack build
+        uses: actions/upload-artifact@v4
+        with:
+          name: cairo-pango-ios-arm64
+          path: cairo-pango-ios-arm64.tar.gz
+          if-no-files-found: error
+
+      - name: Publish diagnostics to ci-logs branch (always)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uxo pipefail
+          RUN_ID="${GITHUB_RUN_ID}"
+          OUT="ci-logs/step2/run-${RUN_ID}"
+          rm -rf _cilogs && mkdir -p "_cilogs/${OUT}"
+          for f in glib-setup.log glib-install.log pixman.log libpng.log \
+                   freetype1.log harfbuzz.log freetype2.log fribidi.log \
+                   expat.log fontconfig.log cairo.log pango.log \
+                   stack-verify.log ios-arm64-cross.txt; do
+            [ -f "$f" ] && cp "$f" "_cilogs/${OUT}/$(echo "$f" | tr '/' '_')" || true
+          done
+          SUMMARY="_cilogs/${OUT}/SUMMARY.txt"
+          {
+            echo "Run ID: ${RUN_ID}"
+            echo "Commit: ${GITHUB_SHA}"
+            echo "Date: $(date -u)"
+            echo
+            for f in pixman.log libpng.log freetype1.log harfbuzz.log \
+                     freetype2.log fribidi.log expat.log fontconfig.log \
+                     cairo.log pango.log stack-verify.log; do
+              echo "===================== TAIL: $f ====================="
+              if [ -f "$f" ]; then tail -25 "$f"; else echo "(not produced)"; fi
+              echo
+            done
+          } > "${SUMMARY}" 2>&1 || true
+          cd _cilogs
+          git init -q
+          git config user.email "ci@rayforge.local"
+          git config user.name "Rayforge CI Logs"
+          git checkout -q -b ci-logs
+          git add -A
+          git commit -q -m "step2 diagnostics for run ${RUN_ID}" || echo "nothing to commit"
+          REMOTE="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git ls-remote --exit-code "${REMOTE}" ci-logs >/dev/null 2>&1; then
+            git fetch -q "${REMOTE}" ci-logs || true
+            git merge -q --allow-unrelated-histories -m "merge" FETCH_HEAD || true
+          fi
+          git push -q "${REMOTE}" ci-logs:ci-logs || git push -q -f "${REMOTE}" ci-logs:ci-logs
+          echo "Diagnostics pushed under ${OUT}"
