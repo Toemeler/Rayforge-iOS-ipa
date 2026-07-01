@@ -57,15 +57,18 @@ jobs:
       - name: "[3/8] Install build tools (meson, ninja, pkg-config)"
         run: |
           set -euxo pipefail
-          # macos-15 images ship python3; install meson/ninja via pip for a
-          # known-good version, and pkg-config via brew.
-          python3 -m pip install --upgrade pip
-          python3 -m pip install "meson>=1.4" ninja
+          # Install via Homebrew. The runner's system python3 is
+          # externally-managed (PEP 668), so `pip install` would fail without
+          # --break-system-packages; brew formulae avoid that entirely and are
+          # already cached on the macos-15 image.
+          brew list meson >/dev/null 2>&1 || brew install meson
+          brew list ninja >/dev/null 2>&1 || brew install ninja
           brew list pkg-config >/dev/null 2>&1 || brew install pkg-config
           echo "----- versions -----"
           meson --version
           ninja --version
           pkg-config --version
+          which meson ninja pkg-config
 
       # --------------------------------------------------------------
       - name: "[4/8] Download GLib source"
@@ -160,3 +163,61 @@ jobs:
             ios-arm64-cross.txt
             glib-build/meson-logs/meson-log.txt
           if-no-files-found: ignore
+
+      # Commit a consolidated diagnostics bundle back into the repo on a
+      # dedicated 'ci-logs' branch. Artifact/raw-log downloads redirect to
+      # blob storage; committing to the repo makes logs readable via the
+      # plain contents API for automated inspection.
+      - name: Publish diagnostics to ci-logs branch (always)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uxo pipefail
+          RUN_ID="${GITHUB_RUN_ID}"
+          OUT="ci-logs/step1/run-${RUN_ID}"
+          rm -rf _cilogs
+          mkdir -p "_cilogs/${OUT}"
+
+          # Gather every log we produced (ignore missing ones).
+          for f in meson-setup.log glib-build.log glib-install.log \
+                   ios-arm64-cross.txt \
+                   glib-build/meson-logs/meson-log.txt; do
+            if [ -f "$f" ]; then
+              dest="_cilogs/${OUT}/$(echo "$f" | tr '/' '_')"
+              cp "$f" "$dest" || true
+            fi
+          done
+
+          # A concise summary with the tail of each log for quick scanning.
+          SUMMARY="_cilogs/${OUT}/SUMMARY.txt"
+          {
+            echo "Run ID: ${RUN_ID}"
+            echo "Workflow: ${GITHUB_WORKFLOW}"
+            echo "Commit: ${GITHUB_SHA}"
+            echo "Date: $(date -u)"
+            echo
+            for f in meson-setup.log glib-build.log glib-install.log; do
+              echo "===================== TAIL: $f ====================="
+              if [ -f "$f" ]; then tail -60 "$f"; else echo "(not produced)"; fi
+              echo
+            done
+          } > "${SUMMARY}" 2>&1 || true
+
+          # Push to the ci-logs branch using the ephemeral Actions token.
+          cd _cilogs
+          git init -q
+          git config user.email "ci@rayforge.local"
+          git config user.name "Rayforge CI Logs"
+          git checkout -q -b ci-logs
+          git add -A
+          git commit -q -m "step1 diagnostics for run ${RUN_ID}" || echo "nothing to commit"
+          REMOTE="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          # Fetch existing ci-logs so we append rather than overwrite history.
+          if git ls-remote --exit-code "${REMOTE}" ci-logs >/dev/null 2>&1; then
+            git fetch -q "${REMOTE}" ci-logs || true
+            git merge -q --allow-unrelated-histories -m "merge" FETCH_HEAD || true
+          fi
+          git push -q "${REMOTE}" ci-logs:ci-logs || \
+            git push -q -f "${REMOTE}" ci-logs:ci-logs
+          echo "Diagnostics pushed to ci-logs branch under ${OUT}"
