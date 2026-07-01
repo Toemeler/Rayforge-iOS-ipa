@@ -132,15 +132,26 @@ jobs:
           set -euxo pipefail
           ninja -C glib-build -v 2>&1 | tee glib-build.log
           ninja -C glib-build install 2>&1 | tee glib-install.log
-          echo "===== INSTALLED STATIC LIBS ====="
-          find ios-out -name '*.a' -exec ls -la {} \;
-          echo "===== VERIFY ARCHITECTURE (must be arm64) ====="
-          for lib in $(find ios-out -name '*.a'); do
-            echo "--- $lib ---"
-            lipo -info "$lib" || file "$lib"
-          done
-          echo "===== pkgconfig files ====="
-          find ios-out -name '*.pc' | sort
+          # Write a permanent verification report (captured into ci-logs).
+          {
+            echo "===== INSTALLED STATIC LIBS (.a) ====="
+            find ios-out -name '*.a' -exec ls -la {} \;
+            echo
+            echo "===== SHARED LIBS (.so/.dylib) — should be NONE for iOS ====="
+            find ios-out \( -name '*.so*' -o -name '*.dylib' \) -not -name '*-gdb.py' || true
+            echo "(the *-gdb.py pretty-printer scripts are harmless)"
+            echo
+            echo "===== ARCHITECTURE CHECK (must be arm64) ====="
+            for lib in $(find ios-out -name '*.a'); do
+              echo "--- $lib ---"
+              lipo -info "$lib" 2>&1 || file "$lib"
+            done
+            echo
+            echo "===== pkgconfig files ====="
+            find ios-out -name '*.pc' | sort
+          } 2>&1 | tee glib-verify.log
+          echo "===== VERIFY TAIL ====="
+          cat glib-verify.log
 
       # --------------------------------------------------------------
       - name: "[8/8] Package artifact"
@@ -186,6 +197,7 @@ jobs:
 
           # Gather every log we produced (ignore missing ones).
           for f in meson-setup.log glib-build.log glib-install.log \
+                   glib-verify.log \
                    ios-arm64-cross.txt \
                    glib-build/meson-logs/meson-log.txt; do
             if [ -f "$f" ]; then
