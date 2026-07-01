@@ -110,6 +110,30 @@ jobs:
           echo "----- regenerated cross file -----"
           cat "${GITHUB_WORKSPACE}/ios-arm64-cross.txt"
 
+          # zlib lives in the iOS SDK but has no .pc file there. Several
+          # libraries (libpng, freetype) list 'zlib' in their pkg-config
+          # Requires, which breaks the whole pkg-config chain (and thus
+          # dependent include paths) if zlib.pc is missing. Provide one that
+          # points at the SDK so pkg-config resolves it. Written with printf
+          # (not a heredoc) to avoid any indentation/delimiter issues.
+          SDK=$(xcrun --sdk iphoneos --show-sdk-path)
+          mkdir -p "${PREFIX}/lib/pkgconfig"
+          ZPC="${PREFIX}/lib/pkgconfig/zlib.pc"
+          : > "$ZPC"
+          printf 'prefix=%s/usr\n' "$SDK" >> "$ZPC"
+          printf 'exec_prefix=${prefix}\n' >> "$ZPC"
+          printf 'libdir=${exec_prefix}/lib\n' >> "$ZPC"
+          printf 'includedir=${prefix}/include\n' >> "$ZPC"
+          printf '\n' >> "$ZPC"
+          printf 'Name: zlib\n' >> "$ZPC"
+          printf 'Description: zlib compression library (iOS SDK)\n' >> "$ZPC"
+          printf 'Version: 1.2.12\n' >> "$ZPC"
+          printf 'Libs: -L${libdir} -lz\n' >> "$ZPC"
+          printf 'Cflags: -I${includedir}\n' >> "$ZPC"
+          echo "----- zlib.pc -----"
+          cat "$ZPC"
+          PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig" pkg-config --exists zlib && echo "zlib.pc resolves OK"
+
       # --------------------------------------------------------------
       - name: "[7/12] pixman"
         run: |
