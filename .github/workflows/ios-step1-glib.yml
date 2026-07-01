@@ -1,0 +1,162 @@
+name: iOS Step 1 - Build GLib (arm64)
+
+# First foundational step of the Rayforge iOS build.
+# Cross-compiles GLib (the base library the whole GTK stack links against)
+# for iOS device arm64, and uploads it as a downloadable artifact so the
+# result can be inspected/tested before moving to the next dependency.
+
+on:
+  workflow_dispatch:
+    inputs:
+      glib_version:
+        description: "GLib version to build (must exist on download.gnome.org)"
+        required: false
+        default: "2.82.4"
+      ios_min:
+        description: "Minimum iOS deployment version"
+        required: false
+        default: "17.0"
+
+permissions:
+  contents: write
+
+jobs:
+  build-glib:
+    name: Build GLib for iOS arm64
+    runs-on: macos-15
+    timeout-minutes: 90
+
+    env:
+      GLIB_VERSION: ${{ github.event.inputs.glib_version || '2.82.4' }}
+      IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
+
+    steps:
+      # --------------------------------------------------------------
+      - name: "[1/8] Toolchain + environment info"
+        run: |
+          set -x
+          echo "===== RUNNER ENVIRONMENT ====="
+          sw_vers || true
+          uname -a
+          echo "===== XCODE ====="
+          xcodebuild -version || true
+          xcode-select -p || true
+          echo "===== iOS SDK ====="
+          xcrun --sdk iphoneos --show-sdk-version || true
+          xcrun --sdk iphoneos --show-sdk-path || true
+          echo "===== HOST COMPILERS ====="
+          clang --version || true
+          echo "GLIB_VERSION=${GLIB_VERSION}"
+          echo "IOS_MIN=${IOS_MIN}"
+
+      # --------------------------------------------------------------
+      - name: "[2/8] Checkout repo"
+        uses: actions/checkout@v4
+
+      # --------------------------------------------------------------
+      - name: "[3/8] Install build tools (meson, ninja, pkg-config)"
+        run: |
+          set -euxo pipefail
+          # macos-15 images ship python3; install meson/ninja via pip for a
+          # known-good version, and pkg-config via brew.
+          python3 -m pip install --upgrade pip
+          python3 -m pip install "meson>=1.4" ninja
+          brew list pkg-config >/dev/null 2>&1 || brew install pkg-config
+          echo "----- versions -----"
+          meson --version
+          ninja --version
+          pkg-config --version
+
+      # --------------------------------------------------------------
+      - name: "[4/8] Download GLib source"
+        run: |
+          set -euxo pipefail
+          MAJMIN="$(echo "${GLIB_VERSION}" | cut -d. -f1,2)"
+          URL="https://download.gnome.org/sources/glib/${MAJMIN}/glib-${GLIB_VERSION}.tar.xz"
+          echo "Primary URL: ${URL}"
+          if ! curl -fL --retry 3 -o glib.tar.xz "${URL}"; then
+            echo "::warning::Pinned version download failed, discovering latest ${MAJMIN}.x"
+            LISTING="$(curl -fsSL "https://download.gnome.org/sources/glib/${MAJMIN}/")"
+            LATEST="$(echo "${LISTING}" | grep -oE "glib-${MAJMIN}\.[0-9]+\.tar\.xz" | sort -V | tail -1)"
+            echo "Discovered: ${LATEST}"
+            test -n "${LATEST}"
+            curl -fL --retry 3 -o glib.tar.xz "https://download.gnome.org/sources/glib/${MAJMIN}/${LATEST}"
+          fi
+          mkdir -p glib-src
+          tar xf glib.tar.xz --strip-components=1 -C glib-src
+          echo "----- source tree (top level) -----"
+          ls -la glib-src | head -30
+          test -f glib-src/meson.build
+
+      # --------------------------------------------------------------
+      - name: "[5/8] Generate iOS arm64 meson cross file"
+        run: |
+          set -euxo pipefail
+          chmod +x ios/scripts/gen-cross-file.sh
+          ios/scripts/gen-cross-file.sh "${GITHUB_WORKSPACE}/ios-arm64-cross.txt" "${IOS_MIN}"
+
+      # --------------------------------------------------------------
+      - name: "[6/8] Configure GLib (meson setup)"
+        run: |
+          set -euxo pipefail
+          # Disabled options: introspection needs a target-runnable binary
+          # (not possible when cross-compiling to iOS); libmount/selinux/xattr
+          # are Linux-only; tests can't run on the cross target.
+          meson setup glib-build glib-src \
+            --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
+            --default-library=static \
+            --prefix="${GITHUB_WORKSPACE}/ios-out" \
+            --buildtype=release \
+            -Dtests=false \
+            -Dintrospection=disabled \
+            -Dlibmount=disabled \
+            -Dselinux=disabled \
+            -Dxattr=false \
+            -Dman-pages=disabled \
+            -Dnls=disabled \
+            2>&1 | tee meson-setup.log
+          echo "===== meson configure summary tail ====="
+          tail -40 meson-setup.log
+
+      # --------------------------------------------------------------
+      - name: "[7/8] Build + install GLib"
+        run: |
+          set -euxo pipefail
+          ninja -C glib-build -v 2>&1 | tee glib-build.log
+          ninja -C glib-build install 2>&1 | tee glib-install.log
+          echo "===== INSTALLED STATIC LIBS ====="
+          find ios-out -name '*.a' -exec ls -la {} \;
+          echo "===== VERIFY ARCHITECTURE (must be arm64) ====="
+          for lib in $(find ios-out -name '*.a'); do
+            echo "--- $lib ---"
+            lipo -info "$lib" || file "$lib"
+          done
+          echo "===== pkgconfig files ====="
+          find ios-out -name '*.pc' | sort
+
+      # --------------------------------------------------------------
+      - name: "[8/8] Package artifact"
+        run: |
+          set -euxo pipefail
+          tar czf glib-ios-arm64.tar.gz -C ios-out .
+          ls -la glib-ios-arm64.tar.gz
+
+      - name: Upload GLib build
+        uses: actions/upload-artifact@v4
+        with:
+          name: glib-ios-arm64
+          path: glib-ios-arm64.tar.gz
+          if-no-files-found: error
+
+      - name: Upload logs (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: step1-logs
+          path: |
+            meson-setup.log
+            glib-build.log
+            glib-install.log
+            ios-arm64-cross.txt
+            glib-build/meson-logs/meson-log.txt
+          if-no-files-found: ignore
