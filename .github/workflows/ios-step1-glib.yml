@@ -102,14 +102,19 @@ jobs:
       - name: "[6/8] Configure GLib (meson setup)"
         run: |
           set -euxo pipefail
+          # --force-fallback-for + --wrap-mode=forcefallback makes GLib build
+          # its bundled pcre2/zlib/libffi/proxy-libintl subprojects for the
+          # iOS arm64 target instead of picking up host (Homebrew) libraries.
           # Disabled options: introspection needs a target-runnable binary
-          # (not possible when cross-compiling to iOS); libmount/selinux/xattr
+          # (impossible when cross-compiling to iOS); libmount/selinux/xattr
           # are Linux-only; tests can't run on the cross target.
           meson setup glib-build glib-src \
             --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
             --default-library=static \
             --prefix="${GITHUB_WORKSPACE}/ios-out" \
             --buildtype=release \
+            --wrap-mode=forcefallback \
+            --force-fallback-for=pcre2,zlib,libffi \
             -Dtests=false \
             -Dintrospection=disabled \
             -Dlibmount=disabled \

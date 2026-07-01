@@ -50,6 +50,12 @@ objcpp_link_args = common_flags
 # iOS is a cross target; disable anything that tries to run target binaries.
 needs_exe_wrapper = true
 sys_root = sdkroot
+# Prevent Meson/pkg-config from discovering host (macOS/Homebrew) libraries
+# during the cross build. Without this, pkg-config finds e.g. Homebrew's
+# macOS libpcre2/zlib/libffi and feeds their include paths (wrongly prefixed
+# with the iOS -isysroot) into the arm64 compile, which fails. Pointing
+# pkg-config at empty dirs forces Meson to use the bundled wrap subprojects.
+pkg_config_libdir = '${SDKROOT}/nonexistent-pkgconfig'
 
 [host_machine]
 system = 'darwin'
