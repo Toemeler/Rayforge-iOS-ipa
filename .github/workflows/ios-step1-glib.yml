@@ -102,19 +102,19 @@ jobs:
       - name: "[6/8] Configure GLib (meson setup)"
         run: |
           set -euxo pipefail
-          # --force-fallback-for + --wrap-mode=forcefallback makes GLib build
-          # its bundled pcre2/zlib/libffi/proxy-libintl subprojects for the
-          # iOS arm64 target instead of picking up host (Homebrew) libraries.
-          # Disabled options: introspection needs a target-runnable binary
-          # (impossible when cross-compiling to iOS); libmount/selinux/xattr
-          # are Linux-only; tests can't run on the cross target.
+          # pcre2 and libffi are not in the iOS SDK, so build them from
+          # GLib's bundled wraps. zlib IS in the iOS SDK (system libz), and
+          # GLib's bundled zlib-1.2.11 fails to compile against the iOS SDK
+          # headers (its zutil.h #defines fdopen, which mangles the SDK's
+          # fdopen declaration). So we let zlib come from the SDK sysroot
+          # (clang finds it automatically via -isysroot) and only force
+          # fallbacks for the two libs the SDK lacks.
           meson setup glib-build glib-src \
             --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
             --default-library=static \
             --prefix="${GITHUB_WORKSPACE}/ios-out" \
             --buildtype=release \
-            --wrap-mode=forcefallback \
-            --force-fallback-for=pcre2,zlib,libffi \
+            --force-fallback-for=pcre2,libffi \
             -Dtests=false \
             -Dintrospection=disabled \
             -Dlibmount=disabled \
