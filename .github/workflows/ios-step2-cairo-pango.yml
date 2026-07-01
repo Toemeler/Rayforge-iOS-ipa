@@ -101,6 +101,13 @@ jobs:
           echo "PREFIX=${PREFIX}" >> "$GITHUB_ENV"
           echo "PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig" >> "$GITHUB_ENV"
           echo "PKG_CONFIG_LIBDIR=${PREFIX}/lib/pkgconfig" >> "$GITHUB_ENV"
+          # Force pkg-config to NOT prepend any sysroot to the -I/-L paths it
+          # reads from our .pc files. Our libraries live in a normal prefix,
+          # not under the SDK sysroot; without this, meson's cross handling
+          # prepends the iOS SDK path (e.g. libpng's -I<prefix>/include/libpng16
+          # -> -I<SDK><prefix>/include/libpng16, nonexistent) and dependent
+          # builds fail with 'png.h not found'. Empty value = no prepend.
+          echo "PKG_CONFIG_SYSROOT_DIR=" >> "$GITHUB_ENV"
           # Regenerate the cross file so its pkg_config_libdir points at the
           # shared prefix. From pixman onward, each library must find the
           # ones already installed there (and still NOT host Homebrew libs).
