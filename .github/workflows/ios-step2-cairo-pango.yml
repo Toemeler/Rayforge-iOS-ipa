@@ -130,13 +130,23 @@ jobs:
           curl -fL --retry 3 -o libpng.tar.xz \
             "https://download.sourceforge.net/libpng/libpng-${LIBPNG_VERSION}.tar.xz"
           mkdir -p libpng-src && tar xf libpng.tar.xz --strip-components=1 -C libpng-src
-          # libpng ships meson support; zlib comes from the SDK.
-          meson setup libpng-build libpng-src \
-            --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
-            --default-library=static --prefix="${PREFIX}" --buildtype=release \
-            -Dtests=false \
+          # libpng uses CMake (no meson build). zlib comes from the iOS SDK.
+          SDK=$(xcrun --sdk iphoneos --show-sdk-path)
+          cmake -S libpng-src -B libpng-build \
+            -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_OSX_SYSROOT="$SDK" -DCMAKE_OSX_DEPLOYMENT_TARGET="${IOS_MIN}" \
+            -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
+            -DPNG_SHARED=OFF -DPNG_STATIC=ON -DPNG_FRAMEWORK=OFF \
+            -DPNG_TESTS=OFF -DPNG_TOOLS=OFF \
+            -Dld-version-script=OFF \
+            -DZLIB_LIBRARY="${SDK}/usr/lib/libz.tbd" \
+            -DZLIB_INCLUDE_DIR="${SDK}/usr/include" \
             2>&1 | tee libpng.log
-          ninja -C libpng-build install 2>&1 | tee -a libpng.log
+          cmake --build libpng-build --config Release 2>&1 | tee -a libpng.log
+          cmake --install libpng-build --config Release 2>&1 | tee -a libpng.log
+          # Ensure a libpng.pc exists for downstream pkg-config lookups.
+          ls "${PREFIX}/lib/pkgconfig/"libpng*.pc 2>/dev/null || \
+            echo "::warning::no libpng .pc installed; downstream may need PNG hints"
 
       - name: "[9/12] freetype (no-harfbuzz first pass) + harfbuzz + freetype (final)"
         run: |
