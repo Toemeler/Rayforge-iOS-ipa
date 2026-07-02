@@ -86,6 +86,7 @@ meson setup glib-build glib-src \
   --force-fallback-for=pcre2,libffi \
   -Dtests=false -Dintrospection=disabled -Dlibmount=disabled \
   -Dselinux=disabled -Dxattr=false -Dman-pages=disabled -Dnls=disabled \
+  -Dpcre2:jit=disabled \
   2>&1 | tee glib-setup.log
 ninja -C glib-build install 2>&1 | tee glib-install.log
 
