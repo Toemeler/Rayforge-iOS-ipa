@@ -146,8 +146,7 @@ gdk_ios_surface_destroy (GdkSurface *surface,
 static double
 gdk_ios_surface_get_scale (GdkSurface *surface)
 {
-  GdkIOSSurfacePrivate *priv =
-    gdk_ios_surface_get_private (GDK_IOS_SURFACE (surface));
+  GdkIOSSurface *self = GDK_IOS_SURFACE (surface);
   return self->scale > 0 ? self->scale : 1.0;
 }
 
