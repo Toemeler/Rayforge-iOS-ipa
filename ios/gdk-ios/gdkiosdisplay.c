@@ -26,6 +26,11 @@ struct _GdkIOSMonitor
   GdkMonitor parent_instance;
 };
 
+struct _GdkIOSMonitorClass
+{
+  GdkMonitorClass parent_class;
+};
+
 G_DEFINE_TYPE (GdkIOSMonitor, gdk_ios_monitor, GDK_TYPE_MONITOR)
 
 static void
@@ -61,6 +66,11 @@ gdk_ios_monitor_new (GdkDisplay *display)
 struct _GdkIOSDevice
 {
   GdkDevice parent_instance;
+};
+
+struct _GdkIOSDeviceClass
+{
+  GdkDeviceClass parent_class;
 };
 
 G_DEFINE_TYPE (GdkIOSDevice, gdk_ios_device, GDK_TYPE_DEVICE)
@@ -139,6 +149,11 @@ gdk_ios_device_init (GdkIOSDevice *self)
 struct _GdkIOSKeymap
 {
   GdkKeymap parent_instance;
+};
+
+struct _GdkIOSKeymapClass
+{
+  GdkKeymapClass parent_class;
 };
 
 G_DEFINE_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK_TYPE_KEYMAP)

@@ -14,29 +14,20 @@
 
 /* ======================================================== Surface (base) == */
 
-typedef GdkIOSSurfacePrivate GdkIOSSurfacePriv;
-
-G_DEFINE_TYPE_WITH_PRIVATE (GdkIOSSurface, gdk_ios_surface, GDK_TYPE_SURFACE)
-
-GdkIOSSurfacePrivate *
-gdk_ios_surface_get_private (GdkIOSSurface *self)
-{
-  return gdk_ios_surface_get_instance_private (self);
-}
+G_DEFINE_TYPE (GdkIOSSurface, gdk_ios_surface, GDK_TYPE_SURFACE)
 
 void
 gdk_ios_surface_attach_layer (GdkIOSSurface *self)
 {
-  GdkIOSSurfacePrivate *priv = gdk_ios_surface_get_private (self);
-  if (priv->layer != NULL)
+  if (self->layer != NULL)
     return;
 
   CALayer *layer = [[CALayer alloc] init];
   layer.anchorPoint = CGPointMake (0, 0);
-  layer.contentsScale = priv->scale;
+  layer.contentsScale = self->scale;
   layer.opaque = NO;
   layer.magnificationFilter = kCAFilterNearest;
-  priv->layer = (__bridge_retained gpointer) layer;
+  self->layer = (__bridge_retained gpointer) layer;
 
   CALayer *root = (__bridge CALayer *) gdk_ios_shell_get_root_layer ();
   [CATransaction begin];
@@ -48,11 +39,10 @@ gdk_ios_surface_attach_layer (GdkIOSSurface *self)
 void
 gdk_ios_surface_detach_layer (GdkIOSSurface *self)
 {
-  GdkIOSSurfacePrivate *priv = gdk_ios_surface_get_private (self);
-  if (priv->layer == NULL)
+  if (self->layer == NULL)
     return;
-  CALayer *layer = (__bridge_transfer CALayer *) priv->layer;
-  priv->layer = NULL;
+  CALayer *layer = (__bridge_transfer CALayer *) self->layer;
+  self->layer = NULL;
   [CATransaction begin];
   [CATransaction setDisableActions:YES];
   [layer removeFromSuperlayer];
@@ -63,7 +53,6 @@ void
 gdk_ios_surface_apply_frame (GdkIOSSurface *self,
                              int x, int y, int width, int height)
 {
-  GdkIOSSurfacePrivate *priv = gdk_ios_surface_get_private (self);
   GdkSurface *surface = GDK_SURFACE (self);
 
   surface->x = x;
@@ -71,9 +60,9 @@ gdk_ios_surface_apply_frame (GdkIOSSurface *self,
   surface->width = width;
   surface->height = height;
 
-  if (priv->layer != NULL)
+  if (self->layer != NULL)
     {
-      CALayer *layer = (__bridge CALayer *) priv->layer;
+      CALayer *layer = (__bridge CALayer *) self->layer;
       [CATransaction begin];
       [CATransaction setDisableActions:YES];
       layer.frame = CGRectMake (x, y, width, height);
@@ -89,12 +78,11 @@ static void
 gdk_ios_surface_hide (GdkSurface *surface)
 {
   GdkIOSSurface *self = GDK_IOS_SURFACE (surface);
-  GdkIOSSurfacePrivate *priv = gdk_ios_surface_get_private (self);
 
-  priv->visible = FALSE;
-  if (priv->layer != NULL)
+  self->visible = FALSE;
+  if (self->layer != NULL)
     {
-      CALayer *layer = (__bridge CALayer *) priv->layer;
+      CALayer *layer = (__bridge CALayer *) self->layer;
       [CATransaction begin];
       [CATransaction setDisableActions:YES];
       layer.hidden = YES;
@@ -160,7 +148,7 @@ gdk_ios_surface_get_scale (GdkSurface *surface)
 {
   GdkIOSSurfacePrivate *priv =
     gdk_ios_surface_get_private (GDK_IOS_SURFACE (surface));
-  return priv->scale > 0 ? priv->scale : 1.0;
+  return self->scale > 0 ? self->scale : 1.0;
 }
 
 static gboolean
@@ -174,9 +162,8 @@ static void
 gdk_ios_surface_constructed (GObject *object)
 {
   GdkIOSSurface *self = GDK_IOS_SURFACE (object);
-  GdkIOSSurfacePrivate *priv = gdk_ios_surface_get_private (self);
 
-  priv->scale = gdk_ios_shell_get_scale ();
+  self->scale = gdk_ios_shell_get_scale ();
 
   G_OBJECT_CLASS (gdk_ios_surface_parent_class)->constructed (object);
 }
@@ -221,6 +208,11 @@ struct _GdkIOSToplevel
   GdkToplevelLayout *layout;
 };
 
+struct _GdkIOSToplevelClass
+{
+  GdkIOSSurfaceClass parent_class;
+};
+
 static void gdk_ios_toplevel_iface_init (GdkToplevelInterface *iface);
 
 G_DEFINE_TYPE_WITH_CODE (GdkIOSToplevel, gdk_ios_toplevel, GDK_TYPE_IOS_SURFACE,
@@ -233,7 +225,6 @@ gdk_ios_toplevel_present (GdkToplevel *toplevel,
 {
   GdkIOSToplevel *self = GDK_IOS_TOPLEVEL (toplevel);
   GdkIOSSurface *surface_impl = GDK_IOS_SURFACE (self);
-  GdkIOSSurfacePrivate *priv = gdk_ios_surface_get_private (surface_impl);
   GdkSurface *surface = GDK_SURFACE (self);
   GdkIOSDisplay *display = GDK_IOS_DISPLAY (gdk_surface_get_display (surface));
 
@@ -253,12 +244,12 @@ gdk_ios_toplevel_present (GdkToplevel *toplevel,
   gdk_toplevel_notify_compute_size (toplevel, &size);
 
   gdk_ios_surface_attach_layer (surface_impl);
-  priv->visible = TRUE;
+  surface_impl->visible = TRUE;
 
   if (!g_list_find (display->toplevels, self))
     display->toplevels = g_list_prepend (display->toplevels, self);
 
-  CALayer *layer = (__bridge CALayer *) priv->layer;
+  CALayer *layer = (__bridge CALayer *) surface_impl->layer;
   layer.hidden = NO;
 
   gdk_surface_set_is_mapped (surface, TRUE);
@@ -339,6 +330,11 @@ struct _GdkIOSPopup
   GdkIOSSurface parent_instance;
 };
 
+struct _GdkIOSPopupClass
+{
+  GdkIOSSurfaceClass parent_class;
+};
+
 static void gdk_ios_popup_iface_init (GdkPopupInterface *iface);
 
 G_DEFINE_TYPE_WITH_CODE (GdkIOSPopup, gdk_ios_popup, GDK_TYPE_IOS_SURFACE,
@@ -352,7 +348,6 @@ gdk_ios_popup_present (GdkPopup *popup,
                        GdkPopupLayout *layout)
 {
   GdkIOSSurface *surface_impl = GDK_IOS_SURFACE (popup);
-  GdkIOSSurfacePrivate *priv = gdk_ios_surface_get_private (surface_impl);
   GdkSurface *surface = GDK_SURFACE (popup);
   GdkIOSDisplay *display = GDK_IOS_DISPLAY (gdk_surface_get_display (surface));
 
@@ -379,9 +374,9 @@ gdk_ios_popup_present (GdkPopup *popup,
     }
 
   gdk_ios_surface_attach_layer (surface_impl);
-  priv->visible = TRUE;
+  surface_impl->visible = TRUE;
 
-  CALayer *layer = (__bridge CALayer *) priv->layer;
+  CALayer *layer = (__bridge CALayer *) surface_impl->layer;
   layer.hidden = NO;
   layer.zPosition = 100; /* above toplevels */
 

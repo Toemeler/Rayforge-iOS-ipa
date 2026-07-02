@@ -27,6 +27,11 @@ struct _GdkIOSCairoContext
   cairo_surface_t *active_surface; /* valid between begin and end frame */
 };
 
+struct _GdkIOSCairoContextClass
+{
+  GdkCairoContextClass parent_class;
+};
+
 G_DEFINE_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK_TYPE_CAIRO_CONTEXT)
 
 static cairo_t *
@@ -77,8 +82,7 @@ gdk_ios_cairo_context_end_frame (GdkDrawContext *draw_context,
 {
   GdkIOSCairoContext *self = GDK_IOS_CAIRO_CONTEXT (draw_context);
   GdkSurface *surface = gdk_draw_context_get_surface (draw_context);
-  GdkIOSSurfacePrivate *priv =
-    gdk_ios_surface_get_private (GDK_IOS_SURFACE (surface));
+  GdkIOSSurface *surface_impl = GDK_IOS_SURFACE (surface);
 
   if (self->active_surface == NULL)
     return;
@@ -90,7 +94,7 @@ gdk_ios_cairo_context_end_frame (GdkDrawContext *draw_context,
   int stride = cairo_image_surface_get_stride (self->active_surface);
   unsigned char *data = cairo_image_surface_get_data (self->active_surface);
 
-  if (width <= 0 || height <= 0 || data == NULL || priv->layer == NULL)
+  if (width <= 0 || height <= 0 || data == NULL || surface_impl->layer == NULL)
     {
       g_clear_pointer (&self->active_surface, cairo_surface_destroy);
       return;
@@ -112,7 +116,7 @@ gdk_ios_cairo_context_end_frame (GdkDrawContext *draw_context,
   CGColorSpaceRelease (colorspace);
   CGDataProviderRelease (provider);
 
-  CALayer *layer = (__bridge CALayer *) priv->layer;
+  CALayer *layer = (__bridge CALayer *) surface_impl->layer;
   [CATransaction begin];
   [CATransaction setDisableActions:YES];
   layer.contents = (__bridge_transfer id) image;
