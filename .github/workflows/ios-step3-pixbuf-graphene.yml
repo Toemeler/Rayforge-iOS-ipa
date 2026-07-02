@@ -96,8 +96,13 @@ jobs:
             "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/${JPEG_TURBO_VERSION}/libjpeg-turbo-${JPEG_TURBO_VERSION}.tar.gz"
           mkdir -p jpeg-src && tar xf jpeg.tar.gz --strip-components=1 -C jpeg-src
           SDK=$(xcrun --sdk iphoneos --show-sdk-path)
+          # CMAKE_SYSTEM_PROCESSOR must be set explicitly for iOS cross
+          # builds: libjpeg-turbo selects its SIMD assembly from it, and
+          # CMake leaves it empty with CMAKE_SYSTEM_NAME=iOS (its
+          # CMakeLists then fails at string(TOLOWER <empty> ...)).
           cmake -S jpeg-src -B jpeg-build \
-            -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_SYSTEM_PROCESSOR=aarch64 \
+            -DCMAKE_OSX_ARCHITECTURES=arm64 \
             -DCMAKE_OSX_SYSROOT="$SDK" -DCMAKE_OSX_DEPLOYMENT_TARGET="${IOS_MIN}" \
             -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
             -DENABLE_SHARED=OFF -DENABLE_STATIC=ON \
