@@ -1,0 +1,157 @@
++ echo 'Run ID: 28567703810'
+Run ID: 28567703810
++ echo 'Commit: 8e801bec7fa385408e943043098c69eca60872b1'
+Commit: 8e801bec7fa385408e943043098c69eca60872b1
+++ date -u
++ echo 'Date: Thu Jul  2 05:32:35 UTC 2026'
+Date: Thu Jul  2 05:32:35 UTC 2026
++ echo
+
++ for f in jpeg.log graphene.log pixbuf.log stack-verify.log
++ echo '===================== TAIL: jpeg.log ====================='
+===================== TAIL: jpeg.log =====================
++ '[' -f jpeg.log ']'
++ tail -30 jpeg.log
+[100%] Linking C executable ../../test/md5sum
+[100%] Built target md5sum
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libjpeg.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/cjpeg
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/djpeg
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/jpegtran
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/rdjpgcom
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/wrjpgcom
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/doc/libjpeg-turbo/README.ijg
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/doc/libjpeg-turbo/README.md
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/doc/libjpeg-turbo/example.c
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/doc/libjpeg-turbo/libjpeg.txt
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/doc/libjpeg-turbo/structure.txt
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/doc/libjpeg-turbo/usage.txt
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/doc/libjpeg-turbo/wizard.txt
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/doc/libjpeg-turbo/LICENSE.md
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man/man1/cjpeg.1
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man/man1/djpeg.1
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man/man1/jpegtran.1
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man/man1/rdjpgcom.1
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man/man1/wrjpgcom.1
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libjpeg.pc
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/libjpeg-turbo/libjpeg-turboConfig.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/libjpeg-turbo/libjpeg-turboConfigVersion.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/libjpeg-turbo/libjpeg-turboTargets.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/libjpeg-turbo/libjpeg-turboTargets-release.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/jconfig.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/jerror.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/jmorecfg.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/jpeglib.h
++ echo
+
++ for f in jpeg.log graphene.log pixbuf.log stack-verify.log
++ echo '===================== TAIL: graphene.log ====================='
+===================== TAIL: graphene.log =====================
++ '[' -f graphene.log ']'
++ tail -30 graphene.log
+[20/21] Installing files
+Installing src/libgraphene-1.0.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-box.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-euler.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-frustum.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-macros.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-matrix.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-plane.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-point.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-point3d.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-quad.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-quaternion.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-ray.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-rect.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-size.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-sphere.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-triangle.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-vec2.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-vec3.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-vec4.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-version-macros.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-gobject.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-simd4f.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-simd4x4f.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-build/include/graphene-config.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/graphene-1.0/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-build/include/graphene-version.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-build/meson-private/graphene-1.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-build/meson-private/graphene-gobject-1.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ echo
+
++ for f in jpeg.log graphene.log pixbuf.log stack-verify.log
++ echo '===================== TAIL: pixbuf.log ====================='
+===================== TAIL: pixbuf.log =====================
++ '[' -f pixbuf.log ']'
++ tail -30 pixbuf.log
+Installing po/sv/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/sv/LC_MESSAGES
+Installing po/ta/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ta/LC_MESSAGES
+Installing po/te/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/te/LC_MESSAGES
+Installing po/tg/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/tg/LC_MESSAGES
+Installing po/th/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/th/LC_MESSAGES
+Installing po/tk/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/tk/LC_MESSAGES
+Installing po/tr/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/tr/LC_MESSAGES
+Installing po/tt/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/tt/LC_MESSAGES
+Installing po/ug/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ug/LC_MESSAGES
+Installing po/uk/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/uk/LC_MESSAGES
+Installing po/uz/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/uz/LC_MESSAGES
+Installing po/uz@cyrillic/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/uz@cyrillic/LC_MESSAGES
+Installing po/vi/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/vi/LC_MESSAGES
+Installing po/wa/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/wa/LC_MESSAGES
+Installing po/xh/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/xh/LC_MESSAGES
+Installing po/yi/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/yi/LC_MESSAGES
+Installing po/zh_CN/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/zh_CN/LC_MESSAGES
+Installing po/zh_HK/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/zh_HK/LC_MESSAGES
+Installing po/zh_TW/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/zh_TW/LC_MESSAGES
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-animation.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-core.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-io.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-loader.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-macros.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-simple-anim.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-transform.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixdata.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-build/gdk-pixbuf/gdk-pixbuf-features.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-build/meson-private/gdk-pixbuf-2.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ echo
+
++ for f in jpeg.log graphene.log pixbuf.log stack-verify.log
++ echo '===================== TAIL: stack-verify.log ====================='
+===================== TAIL: stack-verify.log =====================
++ '[' -f stack-verify.log ']'
++ tail -30 stack-verify.log
+libgirepository-2.0.a                         arm64
+libglib-2.0.a                                 arm64
+libgmodule-2.0.a                              arm64
+libgobject-2.0.a                              arm64
+libgraphene-1.0.a                             arm64
+libgthread-2.0.a                              arm64
+libharfbuzz-gobject.a                         arm64
+libharfbuzz-gpu.a                             arm64
+libharfbuzz-raster.a                          arm64
+libharfbuzz-subset.a                          arm64
+libharfbuzz-vector.a                          arm64
+libharfbuzz.a                                 arm64
+libintl.a                                     arm64
+libjpeg.a                                     arm64
+libpango-1.0.a                                arm64
+libpangocairo-1.0.a                           arm64
+libpangoft2-1.0.a                             arm64
+libpcre2-16.a                                 arm64
+libpcre2-32.a                                 arm64
+libpcre2-8.a                                  arm64
+libpcre2-posix.a                              arm64
+libpixman-1.a                                 arm64
+libpng.a                                      arm64
+libpng16.a                                    arm64
+
+===== NEW .pc FILES =====
+gdk-pixbuf-2.0.pc
+graphene-1.0.pc
+graphene-gobject-1.0.pc
+libjpeg.pc
++ echo
+
