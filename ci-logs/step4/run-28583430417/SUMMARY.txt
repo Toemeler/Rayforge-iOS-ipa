@@ -1,0 +1,223 @@
++ echo 'Run ID: 28583430417'
+Run ID: 28583430417
++ echo 'Commit: 4c6dfc84450d5a2b547cf8bee62e23fe0e01ac18'
+Commit: 4c6dfc84450d5a2b547cf8bee62e23fe0e01ac18
+++ date -u
++ echo 'Date: Thu Jul  2 10:38:27 UTC 2026'
+Date: Thu Jul  2 10:38:27 UTC 2026
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: tiff.log ====================='
+===================== TAIL: tiff.log =====================
++ '[' -f tiff.log ']'
++ tail -40 tiff.log
+[ 43%] Building C object libtiff/CMakeFiles/tiff.dir/tif_jpeg_12.c.o
+[ 45%] Building C object libtiff/CMakeFiles/tiff.dir/tif_lerc.c.o
+[ 47%] Building C object libtiff/CMakeFiles/tiff.dir/tif_luv.c.o
+[ 50%] Building C object libtiff/CMakeFiles/tiff.dir/tif_lzma.c.o
+[ 52%] Building C object libtiff/CMakeFiles/tiff.dir/tif_lzw.c.o
+[ 54%] Building C object libtiff/CMakeFiles/tiff.dir/tif_next.c.o
+[ 56%] Building C object libtiff/CMakeFiles/tiff.dir/tif_ojpeg.c.o
+[ 58%] Building C object libtiff/CMakeFiles/tiff.dir/tif_open.c.o
+[ 60%] Building C object libtiff/CMakeFiles/tiff.dir/tif_packbits.c.o
+[ 63%] Building C object libtiff/CMakeFiles/tiff.dir/tif_pixarlog.c.o
+[ 65%] Building C object libtiff/CMakeFiles/tiff.dir/tif_predict.c.o
+[ 67%] Building C object libtiff/CMakeFiles/tiff.dir/tif_print.c.o
+[ 69%] Building C object libtiff/CMakeFiles/tiff.dir/tif_read.c.o
+[ 71%] Building C object libtiff/CMakeFiles/tiff.dir/tif_strip.c.o
+[ 73%] Building C object libtiff/CMakeFiles/tiff.dir/tif_swab.c.o
+[ 76%] Building C object libtiff/CMakeFiles/tiff.dir/tif_thunder.c.o
+[ 78%] Building C object libtiff/CMakeFiles/tiff.dir/tif_tile.c.o
+[ 80%] Building C object libtiff/CMakeFiles/tiff.dir/tif_version.c.o
+[ 82%] Building C object libtiff/CMakeFiles/tiff.dir/tif_warning.c.o
+[ 84%] Building C object libtiff/CMakeFiles/tiff.dir/tif_webp.c.o
+[ 86%] Building C object libtiff/CMakeFiles/tiff.dir/tif_write.c.o
+[ 89%] Building C object libtiff/CMakeFiles/tiff.dir/tif_zip.c.o
+[ 91%] Building C object libtiff/CMakeFiles/tiff.dir/tif_zstd.c.o
+[ 93%] Building C object libtiff/CMakeFiles/tiff.dir/tif_unix.c.o
+[ 95%] Linking C static library libtiff.a
+[ 95%] Built target tiff
+[ 97%] Building CXX object libtiff/CMakeFiles/tiffxx.dir/tif_stream.cxx.o
+[100%] Linking CXX static library libtiffxx.a
+[100%] Built target tiffxx
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libtiff-4.pc
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libtiff.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiff.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffio.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffvers.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffconf.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/tiff/TiffTargets.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/tiff/TiffConfigVersion.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/tiff/TiffConfig.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libtiffxx.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffio.hxx
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: epoxy.log ====================='
+===================== TAIL: epoxy.log =====================
++ '[' -f epoxy.log ']'
++ tail -40 epoxy.log
+Run-time dependency gl found: YES
+Found CMake: NO
+Run-time dependency egl found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency x11 found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency glesv2 found: NO  (tried pkg-config, framework and cmake)
+Library libGLESv2 found: NO
+Run-time dependency glesv1_cm found: NO  (tried pkg-config, framework and cmake)
+Library libGLESv1_CM found: NO
+Program src/gen_dispatch.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-src/src/gen_dispatch.py)
+Configuring config.h using configuration
+WARNING: Required dependency was found to be an empty string. Did you mean to pass an empty array?
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build targets in project: 3
+
+libepoxy 1.5.10
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    buildtype      : release
+    default_library: static
+    docs           : false
+    egl            : no
+    glx            : no
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    tests          : false
+    x11            : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `epoxy-build'
+[1/6] Generating include/epoxy/gl_generated.h with a custom command
+[2/6] Generating src/gl_generated_dispatch.c with a custom command
+[3/6] Compiling C object src/libepoxy.a.p/dispatch_common.c.o
+[4/6] Compiling C object src/libepoxy.a.p/meson-generated_.._gl_generated_dispatch.c.o
+[5/6] Linking static target src/libepoxy.a
+[5/6] Installing files
+Installing include/epoxy/gl_generated.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/epoxy
+Installing src/libepoxy.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-src/include/epoxy/common.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/epoxy
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-src/include/epoxy/gl.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/epoxy
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-build/meson-private/epoxy.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-setup.log ====================='
+===================== TAIL: gtk-setup.log =====================
++ '[' -f gtk-setup.log ']'
++ tail -40 gtk-setup.log
+    Examples         : false
+
+  Directories
+    Prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    Includedir       : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+    Libdir           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+    Datadir          : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share
+
+  User defined options
+    Cross files      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    accesskit        : disabled
+    android-backend  : false
+    broadway-backend : true
+    build-demos      : false
+    build-examples   : false
+    build-tests      : false
+    build-testsuite  : false
+    buildtype        : release
+    cloudproviders   : disabled
+    colord           : disabled
+    default_library  : static
+    documentation    : false
+    f16c             : disabled
+    introspection    : disabled
+    macos-backend    : false
+    man-pages        : false
+    media-gstreamer  : disabled
+    prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    print-cpdb       : disabled
+    print-cups       : disabled
+    screenshots      : false
+    sysprof          : disabled
+    tracker          : disabled
+    vulkan           : disabled
+    wayland-backend  : false
+    win32-backend    : false
+    wrap_mode        : nofallback
+    x11-backend      : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ tail -40 gtk-build.log
+[1110/1149] Building translation po/nn/LC_MESSAGES/gtk40-nn.mo
+[1111/1149] Building translation po/nso/LC_MESSAGES/gtk40-nso.mo
+[1112/1149] Building translation po/oc/LC_MESSAGES/gtk40-oc.mo
+[1113/1149] Building translation po/or/LC_MESSAGES/gtk40-or.mo
+[1114/1149] Building translation po/nl/LC_MESSAGES/gtk40-nl.mo
+[1115/1149] Building translation po/ps/LC_MESSAGES/gtk40-ps.mo
+[1116/1149] Building translation po/pa/LC_MESSAGES/gtk40-pa.mo
+[1117/1149] Building translation po/ne/LC_MESSAGES/gtk40-ne.mo
+[1118/1149] Building translation po/pl/LC_MESSAGES/gtk40-pl.mo
+[1119/1149] Building translation po/rw/LC_MESSAGES/gtk40-rw.mo
+[1120/1149] Building translation po/pt/LC_MESSAGES/gtk40-pt.mo
+[1121/1149] Building translation po/ro/LC_MESSAGES/gtk40-ro.mo
+[1122/1149] Building translation po/si/LC_MESSAGES/gtk40-si.mo
+[1123/1149] Building translation po/pt_BR/LC_MESSAGES/gtk40-pt_BR.mo
+[1124/1149] Building translation po/ru/LC_MESSAGES/gtk40-ru.mo
+[1125/1149] Building translation po/sq/LC_MESSAGES/gtk40-sq.mo
+[1126/1149] Building translation po/sl/LC_MESSAGES/gtk40-sl.mo
+[1127/1149] Building translation po/sr@ije/LC_MESSAGES/gtk40-sr@ije.mo
+[1128/1149] Building translation po/sr/LC_MESSAGES/gtk40-sr.mo
+[1129/1149] Building translation po/sk/LC_MESSAGES/gtk40-sk.mo
+[1130/1149] Building translation po/sr@latin/LC_MESSAGES/gtk40-sr@latin.mo
+[1131/1149] Building translation po/ta/LC_MESSAGES/gtk40-ta.mo
+[1132/1149] Building translation po/sv/LC_MESSAGES/gtk40-sv.mo
+[1133/1149] Building translation po/te/LC_MESSAGES/gtk40-te.mo
+[1134/1149] Building translation po/tg/LC_MESSAGES/gtk40-tg.mo
+[1135/1149] Building translation po/tt/LC_MESSAGES/gtk40-tt.mo
+[1136/1149] Building translation po/ur/LC_MESSAGES/gtk40-ur.mo
+[1137/1149] Building translation po/tr/LC_MESSAGES/gtk40-tr.mo
+[1138/1149] Building translation po/uk/LC_MESSAGES/gtk40-uk.mo
+[1139/1149] Building translation po/uz@cyrillic/LC_MESSAGES/gtk40-uz@cyrillic.mo
+[1140/1149] Building translation po/th/LC_MESSAGES/gtk40-th.mo
+[1141/1149] Building translation po/ug/LC_MESSAGES/gtk40-ug.mo
+[1142/1149] Building translation po/uz/LC_MESSAGES/gtk40-uz.mo
+[1143/1149] Building translation po/xh/LC_MESSAGES/gtk40-xh.mo
+[1144/1149] Building translation po/yi/LC_MESSAGES/gtk40-yi.mo
+[1145/1149] Building translation po/vi/LC_MESSAGES/gtk40-vi.mo
+[1146/1149] Building translation po/wa/LC_MESSAGES/gtk40-wa.mo
+[1147/1149] Building translation po/zh_CN/LC_MESSAGES/gtk40-zh_CN.mo
+[1148/1149] Building translation po/zh_HK/LC_MESSAGES/gtk40-zh_HK.mo
+[1149/1149] Building translation po/zh_TW/LC_MESSAGES/gtk40-zh_TW.mo
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-verify.log ====================='
+===================== TAIL: gtk-verify.log =====================
++ '[' -f gtk-verify.log ']'
++ tail -40 gtk-verify.log
+===== GTK LIBS =====
+
+===== ARCHITECTURE =====
+
+===== gtk4.pc =====
+prefix=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+targets=broadway
+gtk_binary_version=4.0.0
+gtk_host=aarch64-darwin
+
+Name: GTK
+Description: GTK Graphical UI Library
+Version: 4.22.4
+Requires: pango >=  1.56, pangocairo >=  1.56, gdk-pixbuf-2.0 >=  2.30.0, cairo >=  1.18.2, cairo-gobject >=  1.18.2, graphene-gobject-1.0 >=  1.10.0, gio-2.0 >=  2.84
+Libs: -L${libdir} -lgtk-4
+Cflags: -I${includedir}/gtk-4.0
++ echo
+
