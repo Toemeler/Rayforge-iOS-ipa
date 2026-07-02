@@ -265,12 +265,16 @@ jobs:
           curl -fL --retry 3 -o cairo.tar.xz \
             "https://www.cairographics.org/releases/cairo-${CAIRO_VERSION}.tar.xz"
           mkdir -p cairo-src && tar xf cairo.tar.xz --strip-components=1 -C cairo-src
-          # Quartz surface for native iOS; disable X/GL backends. zlib from SDK.
+          # Quartz surface is disabled: cairo's Quartz backend targets macOS
+          # AppKit frameworks (the 'appleframeworks' meson dep) which are not
+          # available on iOS, and it is not needed — GTK4/GSK render through
+          # cairo's image surface (and the GL renderer). X/XCB backends off too.
+          # zlib/png/fontconfig/freetype come from the shared prefix + SDK.
           meson setup cairo-build cairo-src \
             --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
             --default-library=static --prefix="${PREFIX}" --buildtype=release \
             -Dtests=disabled -Dxlib=disabled -Dxcb=disabled \
-            -Dquartz=enabled -Dfreetype=enabled -Dfontconfig=enabled \
+            -Dquartz=disabled -Dfreetype=enabled -Dfontconfig=enabled \
             -Dpng=enabled -Dzlib=enabled -Dglib=enabled \
             2>&1 | tee cairo.log
           ninja -C cairo-build install 2>&1 | tee -a cairo.log
