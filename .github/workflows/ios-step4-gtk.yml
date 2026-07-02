@@ -197,6 +197,16 @@ jobs:
           curl -fL --retry 3 -o gtk.tar.xz \
             "https://download.gnome.org/sources/gtk/${GTK_MAJMIN}/gtk-${GTK_VERSION}.tar.xz"
           mkdir -p gtk-src && tar xf gtk.tar.xz --strip-components=1 -C gtk-src
+
+          # ---------- iOS patches (GTK has no upstream iOS support) ----------
+          # P1: meson.build's darwin gate compiles a check requiring
+          # __MAC_OS_X_VERSION_MIN_REQUIRED >= 10.15; that macro is undefined
+          # on the iOS SDK (evaluates 0 -> always fails). Accept iOS SDKs.
+          sed -i '' 's/#if __MAC_OS_X_VERSION_MIN_REQUIRED < 101500L/#if !defined(__IPHONE_OS_VERSION_MIN_REQUIRED) \&\& __MAC_OS_X_VERSION_MIN_REQUIRED < 101500L/' gtk-src/meson.build
+          grep -q '__IPHONE_OS_VERSION_MIN_REQUIRED' gtk-src/meson.build || { echo "::error::iOS SDK patch P1 did not apply"; exit 1; }
+          echo "iOS patch P1 applied"
+          # -------------------------------------------------------------------
+
           meson setup gtk-build gtk-src \
             --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
             --default-library=static --prefix="${PREFIX}" --buildtype=release \
