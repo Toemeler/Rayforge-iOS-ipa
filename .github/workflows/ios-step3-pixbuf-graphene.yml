@@ -1,0 +1,218 @@
+name: iOS Step 3 - Build gdk-pixbuf + graphene (arm64)
+
+# Third dependency layer: the final libraries GTK4 needs before GTK itself.
+#   libjpeg-turbo (for the jpeg loader) -> graphene -> gdk-pixbuf
+# The proven glib->pango base stack is built by ios/scripts/build-base-stack.sh
+# and cached between runs (key: base-stack version string), so iterations on
+# the new libraries don't rebuild everything.
+# Produces a verified arm64 'gtk-deps-ios-arm64' artifact (full prefix).
+
+on:
+  workflow_dispatch:
+    inputs:
+      ios_min:
+        description: "Minimum iOS deployment version"
+        required: false
+        default: "17.0"
+
+permissions:
+  contents: write
+
+env:
+  IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
+  # Bump to invalidate the cached base stack when build-base-stack.sh changes.
+  BASE_STACK_KEY: "base-stack-v1"
+  JPEG_TURBO_VERSION: "3.2.0"
+  GRAPHENE_VERSION: "1.10.8"
+  GDK_PIXBUF_VERSION: "2.44.7"
+
+jobs:
+  build-pixbuf-graphene:
+    name: Build gdk-pixbuf + graphene for iOS arm64
+    runs-on: macos-15
+    timeout-minutes: 120
+
+    steps:
+      - name: "[1/10] Toolchain info"
+        run: |
+          set -x
+          sw_vers || true
+          xcodebuild -version || true
+          xcrun --sdk iphoneos --show-sdk-version || true
+
+      - name: "[2/10] Checkout repo"
+        uses: actions/checkout@v4
+
+      - name: "[3/10] Install build tools"
+        run: |
+          set -euxo pipefail
+          brew list meson >/dev/null 2>&1 || brew install meson
+          brew list ninja >/dev/null 2>&1 || brew install ninja
+          brew list pkg-config >/dev/null 2>&1 || brew install pkg-config
+          meson --version && ninja --version && pkg-config --version
+
+      - name: "[4/10] Restore cached base stack (glib..pango)"
+        id: cache-base
+        uses: actions/cache@v4
+        with:
+          path: ios-out
+          key: ${{ env.BASE_STACK_KEY }}-${{ hashFiles('ios/scripts/build-base-stack.sh', 'ios/scripts/gen-cross-file.sh') }}
+
+      - name: "[5/10] Build base stack (cache miss only)"
+        if: steps.cache-base.outputs.cache-hit != 'true'
+        run: |
+          set -euxo pipefail
+          chmod +x ios/scripts/gen-cross-file.sh ios/scripts/build-base-stack.sh
+          export PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          export CROSS_ISO="${GITHUB_WORKSPACE}/cross-iso.txt"
+          export CROSS_PFX="${GITHUB_WORKSPACE}/cross-pfx.txt"
+          export SCRIPT_DIR="${GITHUB_WORKSPACE}/ios/scripts"
+          bash ios/scripts/build-base-stack.sh 2>&1 | tee base-stack.log
+          tail -5 base-stack.log
+
+      - name: "[6/10] Export env + prefix cross file"
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          echo "PREFIX=${PREFIX}" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_LIBDIR=${PREFIX}/lib/pkgconfig" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_SYSROOT_DIR=" >> "$GITHUB_ENV"
+          chmod +x ios/scripts/gen-cross-file.sh
+          # (Re)generate prefix-aware cross file — needed on cache hit where
+          # step 5 was skipped, and paths are runner-specific anyway.
+          ios/scripts/gen-cross-file.sh \
+            "${GITHUB_WORKSPACE}/cross-pfx.txt" "${IOS_MIN}" \
+            "${PREFIX}/lib/pkgconfig"
+          # Sanity: the base stack must be present (fresh or from cache).
+          test -f "${PREFIX}/lib/libglib-2.0.a"
+          test -f "${PREFIX}/lib/libpango-1.0.a"
+          echo "base stack present"
+
+      - name: "[7/10] libjpeg-turbo"
+        run: |
+          set -euxo pipefail
+          curl -fL --retry 3 -o jpeg.tar.gz \
+            "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/${JPEG_TURBO_VERSION}/libjpeg-turbo-${JPEG_TURBO_VERSION}.tar.gz"
+          mkdir -p jpeg-src && tar xf jpeg.tar.gz --strip-components=1 -C jpeg-src
+          SDK=$(xcrun --sdk iphoneos --show-sdk-path)
+          cmake -S jpeg-src -B jpeg-build \
+            -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_OSX_SYSROOT="$SDK" -DCMAKE_OSX_DEPLOYMENT_TARGET="${IOS_MIN}" \
+            -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
+            -DENABLE_SHARED=OFF -DENABLE_STATIC=ON \
+            -DWITH_TURBOJPEG=OFF \
+            2>&1 | tee jpeg.log
+          cmake --build jpeg-build --config Release 2>&1 | tee -a jpeg.log
+          cmake --install jpeg-build --config Release 2>&1 | tee -a jpeg.log
+          ls "${PREFIX}/lib/pkgconfig/"libjpeg.pc
+
+      - name: "[8/10] graphene + gdk-pixbuf"
+        run: |
+          set -euxo pipefail
+          echo "----- graphene -----"
+          curl -fL --retry 3 -o graphene.tar.gz \
+            "https://github.com/ebassi/graphene/archive/refs/tags/${GRAPHENE_VERSION}.tar.gz"
+          mkdir -p graphene-src && tar xf graphene.tar.gz --strip-components=1 -C graphene-src
+          # sse2 must be OFF for arm64 (x86 SIMD); NEON on. gobject_types on
+          # (GTK requires graphene-gobject-1.0).
+          meson setup graphene-build graphene-src \
+            --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dtests=false -Dinstalled_tests=false -Dintrospection=disabled \
+            -Dgtk_doc=false -Dgobject_types=true \
+            -Dsse2=false -Darm_neon=true \
+            2>&1 | tee graphene.log
+          ninja -C graphene-build install 2>&1 | tee -a graphene.log
+
+          echo "----- gdk-pixbuf -----"
+          PIXBUF_MAJMIN="$(echo "${GDK_PIXBUF_VERSION}" | cut -d. -f1,2)"
+          curl -fL --retry 3 -o gdk-pixbuf.tar.xz \
+            "https://download.gnome.org/sources/gdk-pixbuf/${PIXBUF_MAJMIN}/gdk-pixbuf-${GDK_PIXBUF_VERSION}.tar.xz"
+          mkdir -p pixbuf-src && tar xf gdk-pixbuf.tar.xz --strip-components=1 -C pixbuf-src
+          # iOS: no dynamic module loading -> compile loaders INTO the lib
+          # via builtin_loaders. relocatable=true for app-bundle paths.
+          # tiff disabled (no libtiff); glycin/android/others off.
+          meson setup pixbuf-build pixbuf-src \
+            --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --wrap-mode=nofallback \
+            -Dpng=enabled -Djpeg=enabled -Dtiff=disabled -Dgif=enabled \
+            -Dglycin=disabled -Dandroid=disabled -Dothers=disabled \
+            -Dbuiltin_loaders=png,jpeg,gif,bmp,ico,ani \
+            -Dtests=false -Dinstalled_tests=false \
+            -Dman=false -Ddocumentation=false \
+            -Dthumbnailer=disabled -Dintrospection=disabled \
+            -Drelocatable=true \
+            2>&1 | tee pixbuf.log
+          ninja -C pixbuf-build install 2>&1 | tee -a pixbuf.log
+
+      - name: "[9/10] Verify + package"
+        run: |
+          set -euo pipefail
+          {
+            echo "===== KEY STATIC LIBS ====="
+            for want in libjpeg libgraphene-1.0 libgraphene-gobject-1.0 \
+                        libgdk_pixbuf-2.0; do
+              f=$(find "${PREFIX}/lib" -name "${want}.a" | head -1)
+              if [ -n "$f" ]; then echo "FOUND $(basename "$f")"; else echo "MISSING ${want}.a"; fi
+            done
+            echo
+            echo "===== ARCHITECTURE CHECK ====="
+            for lib in $(find "${PREFIX}/lib" -maxdepth 1 -name '*.a' | sort); do
+              printf '%-45s %s\n' "$(basename "$lib")" \
+                "$(lipo -info "$lib" 2>&1 | sed 's/.*architecture: //;s/.*are: //')"
+            done
+            echo
+            echo "===== NEW .pc FILES ====="
+            ls "${PREFIX}/lib/pkgconfig/" | grep -E "jpeg|graphene|pixbuf" || true
+          } 2>&1 | tee stack-verify.log
+          tar czf gtk-deps-ios-arm64.tar.gz -C "${PREFIX}" .
+          ls -la gtk-deps-ios-arm64.tar.gz
+
+      - name: "[10/10] Upload artifact"
+        uses: actions/upload-artifact@v4
+        with:
+          name: gtk-deps-ios-arm64
+          path: gtk-deps-ios-arm64.tar.gz
+          if-no-files-found: error
+
+      - name: Publish diagnostics to ci-logs branch (always)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uxo pipefail
+          RUN_ID="${GITHUB_RUN_ID}"
+          OUT="ci-logs/step3/run-${RUN_ID}"
+          rm -rf _cilogs && mkdir -p "_cilogs/${OUT}"
+          for f in base-stack.log jpeg.log graphene.log pixbuf.log \
+                   stack-verify.log cross-pfx.txt; do
+            [ -f "$f" ] && cp "$f" "_cilogs/${OUT}/$(echo "$f" | tr '/' '_')" || true
+          done
+          SUMMARY="_cilogs/${OUT}/SUMMARY.txt"
+          {
+            echo "Run ID: ${RUN_ID}"
+            echo "Commit: ${GITHUB_SHA}"
+            echo "Date: $(date -u)"
+            echo
+            for f in jpeg.log graphene.log pixbuf.log stack-verify.log; do
+              echo "===================== TAIL: $f ====================="
+              if [ -f "$f" ]; then tail -30 "$f"; else echo "(not produced)"; fi
+              echo
+            done
+          } > "${SUMMARY}" 2>&1 || true
+          cd _cilogs
+          git init -q
+          git config user.email "ci@rayforge.local"
+          git config user.name "Rayforge CI Logs"
+          git checkout -q -b ci-logs
+          git add -A
+          git commit -q -m "step3 diagnostics for run ${RUN_ID}" || echo "nothing to commit"
+          REMOTE="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git ls-remote --exit-code "${REMOTE}" ci-logs >/dev/null 2>&1; then
+            git fetch -q "${REMOTE}" ci-logs || true
+            git merge -q --allow-unrelated-histories -m "merge" FETCH_HEAD || true
+          fi
+          git push -q "${REMOTE}" ci-logs:ci-logs || git push -q -f "${REMOTE}" ci-logs:ci-logs
+          echo "Diagnostics pushed under ${OUT}"
