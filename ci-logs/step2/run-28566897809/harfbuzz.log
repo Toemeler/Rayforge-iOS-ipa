@@ -1,0 +1,339 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build
+Build type: cross build
+Project name: harfbuzz
+Project version: 14.2.1
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+C++ compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C++ linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+C++ compiler for the build machine: c++ (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C++ linker for the build machine: c++ ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Compiler for C++ supports link arguments -Bsymbolic-functions: YES 
+Compiler for C++ supports arguments -fno-exceptions: YES 
+Compiler for C++ supports arguments -fno-rtti: YES 
+Compiler for C++ supports arguments -fno-threadsafe-statics: YES 
+Compiler for C++ supports arguments -fvisibility-inlines-hidden: YES 
+Library m found: YES
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency freetype2 found: YES 26.2.20
+Run-time dependency glib-2.0 found: YES 2.82.4
+Run-time dependency gobject-2.0 found: YES 2.82.4
+Dependency graphite2 for host machine skipped: feature graphite2 disabled
+Dependency graphite2 for host machine skipped: feature graphite disabled
+Library iwasm skipped: feature wasm disabled
+Found CMake: NO
+Run-time dependency icu-uc found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency chafa found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency libpng found: YES 1.6.44
+Run-time dependency zlib found: YES 1.2.12
+Run-time dependency threads found: YES
+Has header "unistd.h" : YES 
+Has header "sys/mman.h" : YES 
+Has header "stdbool.h" : YES 
+Has header "xlocale.h" : YES 
+Checking for function "atexit" : YES 
+Checking for function "mprotect" : YES 
+Checking for function "sysconf" : YES 
+Checking for function "getpagesize" : YES 
+Checking for function "mmap" : YES 
+Checking for function "isatty" : YES 
+Checking for function "uselocale" : YES 
+Checking for function "newlocale" : YES 
+Checking for function "localeconv_l" : NO 
+Checking for function "sincos" : NO 
+Checking for function "sincosf" : NO 
+Checking for function "FT_Get_Var_Blend_Coordinates" with dependency freetype2: YES 
+Checking for function "FT_Set_Var_Blend_Coordinates" with dependency freetype2: YES 
+Checking for function "FT_Done_MM_Var" with dependency freetype2: YES 
+Checking for function "FT_Get_Transform" with dependency freetype2: YES 
+Program gen-hb-version.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/gen-hb-version.py)
+Configuring hb-version.h with command
+Program ragel found: NO
+harfbuzz-src/src/meson.build:455: WARNING: You have to install ragel if you are going to develop HarfBuzz itself
+Program gen-harfbuzzcc.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/gen-harfbuzzcc.py)
+Configuring hb-features.h using configuration
+Configuring hb-supported-features.h using configuration
+Program gen-def.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/gen-def.py)
+Program gen-harfbuzzcc.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/gen-harfbuzzcc.py)
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Program gen-gpu-shader-artifacts.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/gen-gpu-shader-artifacts.py)
+Configuring harfbuzz-config.cmake using configuration
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build-time dependency glib-2.0 found: YES 2.82.4
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.82.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Program fix_get_types.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/fix_get_types.py)
+Program fix_get_types.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/fix_get_types.py)
+Program g-ir-scanner found: NO
+Program gen-harfbuzz-world.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/gen-harfbuzz-world.py)
+Configuring config.h using configuration
+Build targets in project: 37
+
+harfbuzz 14.2.1
+
+  Directories
+    prefix                    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    bindir                    : bin
+    libdir                    : lib
+    includedir                : include
+    datadir                   : share
+    cmakepackagedir           : lib/cmake
+
+  Unicode callbacks (you want at least one)
+    Builtin                   : YES
+    Glib                      : YES
+    ICU                       : NO
+
+  Font callbacks (the more the merrier)
+    Builtin                   : YES
+    FreeType                  : YES
+    Fontations                : NO
+
+  Additional shapers
+    Graphite2                 : NO
+    WebAssembly (experimental): NO
+
+  Platform / other shapers (not normally needed)
+    CoreText                  : NO
+    DirectWrite               : NO
+    GDI/Uniscribe             : NO
+    HarfRust                  : NO
+    kbts                      : NO
+
+  Additional libraries
+    Subset                    : YES
+    Raster (experimental)     : YES
+    Vector (experimental)     : YES
+    GPU (experimental)        : YES
+
+  Dependencies used by additional libraries
+    PNG                       : YES
+    Zlib                      : YES
+
+  Other features
+    Utilities                 : NO
+    Documentation             : NO
+    GObject bindings          : YES
+    Cairo integration         : NO
+    Introspection             : NO
+    Experimental APIs         : NO
+
+  Dependencies used by command-line utilities
+    Cairo                     : NO
+    Chafa                     : NO
+
+  Testing
+    Tests                     : NO
+    Benchmark                 : NO
+
+  User defined options
+    Cross files               : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-arm64-cross.txt
+    buildtype                 : release
+    cairo                     : disabled
+    default_library           : static
+    docs                      : disabled
+    freetype                  : enabled
+    glib                      : enabled
+    gobject                   : enabled
+    prefix                    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    tests                     : disabled
+    utilities                 : disabled
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `hb-build'
+[1/128] Generating GObject enum file src/hb-gobject-enums-tmp.h (wrapped by meson to capture output)
+[2/128] Compiling C++ object src/libharfbuzz.a.p/hb-blob.cc.o
+[3/128] Generating GObject enum file src/hb-gobject-enums-tmp.cc (wrapped by meson to capture output)
+[4/128] Generating src/hb-gobject-enums.h with a custom command
+[5/128] Generating src/hb-gobject-enums.cc with a custom command
+[6/128] Compiling C++ object src/libharfbuzz.a.p/hb-buffer-serialize.cc.o
+[7/128] Compiling C++ object src/libharfbuzz.a.p/hb-buffer-verify.cc.o
+[8/128] Compiling C++ object src/libharfbuzz.a.p/hb-common.cc.o
+[9/128] Compiling C++ object src/libharfbuzz.a.p/hb-aat-map.cc.o
+[10/128] Compiling C++ object src/libharfbuzz.a.p/hb-draw.cc.o
+[11/128] Compiling C++ object src/libharfbuzz.a.p/hb-paint.cc.o
+[12/128] Compiling C++ object src/libharfbuzz.a.p/hb-buffer.cc.o
+[13/128] Compiling C++ object src/libharfbuzz.a.p/hb-paint-bounded.cc.o
+[14/128] Compiling C++ object src/libharfbuzz.a.p/hb-paint-extents.cc.o
+[15/128] Compiling C++ object src/libharfbuzz.a.p/hb-fallback-shape.cc.o
+[16/128] Compiling C++ object src/libharfbuzz.a.p/hb-face-builder.cc.o
+[17/128] Compiling C++ object src/libharfbuzz.a.p/hb-map.cc.o
+[18/128] Compiling C++ object src/libharfbuzz.a.p/hb-number.cc.o
+[19/128] Compiling C++ object src/libharfbuzz.a.p/hb-font.cc.o
+[20/128] Compiling C++ object src/libharfbuzz.a.p/hb-face.cc.o
+[21/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-cff1-table.cc.o
+[22/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-cff2-table.cc.o
+[23/128] Compiling C++ object src/libharfbuzz.a.p/hb-outline.cc.o
+[24/128] Compiling C++ object src/libharfbuzz.a.p/hb-aat-layout.cc.o
+[25/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-color.cc.o
+[26/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-map.cc.o
+[27/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-face.cc.o
+[28/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-meta.cc.o
+[29/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-math.cc.o
+[30/128] Compiling C++ object src/libharfbuzz.a.p/OT_Var_VARC_VARC.cc.o
+[31/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-name.cc.o
+[32/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-font.cc.o
+[33/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-metrics.cc.o
+[34/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shaper-default.cc.o
+[35/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shaper-hebrew.cc.o
+[36/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shaper-hangul.cc.o
+[37/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shaper-indic-table.cc.o
+[38/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shaper-khmer.cc.o
+[39/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shaper-myanmar.cc.o
+[40/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shaper-indic.cc.o
+[41/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shaper-syllabic.cc.o
+[42/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shaper-thai.cc.o
+[43/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shaper-arabic.cc.o
+[44/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shaper-vowel-constraints.cc.o
+[45/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shaper-use.cc.o
+[46/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shape-normalize.cc.o
+[47/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-tag.cc.o
+[48/128] Compiling C++ object src/libharfbuzz.a.p/hb-set.cc.o
+[49/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shape-fallback.cc.o
+[50/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-shape.cc.o
+[51/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-layout.cc.o
+[52/128] Compiling C++ object src/libharfbuzz.a.p/hb-ot-var.cc.o
+[53/128] Compiling C++ object src/libharfbuzz.a.p/hb-shape-plan.cc.o
+[54/128] Compiling C++ object src/libharfbuzz.a.p/hb-shape.cc.o
+[55/128] Compiling C++ object src/libharfbuzz.a.p/hb-shaper.cc.o
+[56/128] Compiling C++ object src/libharfbuzz.a.p/hb-ucd.cc.o
+[57/128] Compiling C++ object src/libharfbuzz.a.p/hb-unicode.cc.o
+[58/128] Compiling C++ object src/libharfbuzz.a.p/hb-glib.cc.o
+[59/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-number.cc.o
+[60/128] Compiling C++ object src/libharfbuzz.a.p/hb-style.cc.o
+[61/128] Compiling C++ object src/libharfbuzz.a.p/hb-ft.cc.o
+[62/128] Compiling C++ object src/libharfbuzz.a.p/hb-static.cc.o
+[63/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-ot-cff1-table.cc.o
+[64/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-ot-cff2-table.cc.o
+[65/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-cff-common.cc.o
+[66/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-static.cc.o
+[67/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-cff2-to-cff1.cc.o
+[68/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-input.cc.o
+[69/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-instancer-iup.cc.o
+[70/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-instancer-solver.cc.o
+[71/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-cff1.cc.o
+[72/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-cff2.cc.o
+[73/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-plan-var.cc.o
+[74/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-plan.cc.o
+[75/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-plan-layout.cc.o
+[76/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-serialize.cc.o
+[77/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-table-cff.cc.o
+[78/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-table-var.cc.o
+[79/128] Compiling C++ object src/libharfbuzz-subset.a.p/graph_gsubgpos-context.cc.o
+[80/128] Compiling C++ object src/libharfbuzz-raster.a.p/hb-raster.cc.o
+[81/128] Compiling C++ object src/libharfbuzz-raster.a.p/hb-raster-image.cc.o
+[82/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-table-color.cc.o
+[83/128] Compiling C++ object src/libharfbuzz-raster.a.p/hb-raster-draw.cc.o
+[84/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-table-other.cc.o
+[85/128] Compiling C++ object src/libharfbuzz-raster.a.p/hb-raster-paint.cc.o
+[86/128] Compiling C++ object src/libharfbuzz-vector.a.p/hb-zlib.cc.o
+[87/128] Compiling C++ object src/libharfbuzz-vector.a.p/hb-vector.cc.o
+[88/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset-table-layout.cc.o
+[89/128] Compiling C++ object src/libharfbuzz-vector.a.p/hb-vector-path.cc.o
+[90/128] Compiling C++ object src/libharfbuzz-vector.a.p/hb-vector-draw.cc.o
+[91/128] Compiling C++ object src/libharfbuzz-raster.a.p/hb-static.cc.o
+[92/128] Compiling C++ object src/libharfbuzz-vector.a.p/hb-vector-paint.cc.o
+[93/128] Compiling C++ object src/libharfbuzz-vector.a.p/hb-vector-paint-svg.cc.o
+[94/128] Compiling C++ object src/libharfbuzz-gpu.a.p/hb-gpu.cc.o
+[95/128] Compiling C++ object src/libharfbuzz-vector.a.p/hb-vector-paint-pdf.cc.o
+[96/128] Compiling C++ object src/libharfbuzz-gpu.a.p/hb-gpu-draw.cc.o
+[97/128] Compiling C++ object src/libharfbuzz-gpu.a.p/hb-gpu-paint.cc.o
+[98/128] Compiling C++ object src/libharfbuzz-gobject.a.p/meson-generated_.._hb-gobject-enums.cc.o
+[99/128] Generating src/harfbuzz.cc with a custom command
+[100/128] Linking static target src/libharfbuzz.a
+[101/128] Generating src/harfbuzz-subset.cc with a custom command
+[102/128] Linking static target src/libharfbuzz-raster.a
+[103/128] Generating src/hb-gpu-fragment-glsl.hh with a custom command
+[104/128] Generating src/hb-gpu-vertex-glsl.hh with a custom command
+[105/128] Compiling C++ object src/libharfbuzz-vector.a.p/hb-static.cc.o
+[106/128] Generating src/hb-gpu-fragment-wgsl.hh with a custom command
+[107/128] Linking static target src/libharfbuzz-vector.a
+[108/128] Generating src/hb-gpu-vertex-wgsl.hh with a custom command
+[109/128] Generating src/hb-gpu-fragment-msl.hh with a custom command
+[110/128] Generating src/hb-gpu-vertex-msl.hh with a custom command
+[111/128] Generating src/hb-gpu-fragment-hlsl.hh with a custom command
+[112/128] Generating src/hb-gpu-vertex-hlsl.hh with a custom command
+[113/128] Generating src/hb-gpu-draw-fragment-glsl.hh with a custom command
+[114/128] Generating src/hb-gpu-draw-fragment-wgsl.hh with a custom command
+[115/128] Generating src/hb-gpu-draw-fragment-msl.hh with a custom command
+[116/128] Generating src/hb-gpu-draw-fragment-hlsl.hh with a custom command
+[117/128] Generating src/hb-gpu-paint-fragment-glsl.hh with a custom command
+[118/128] Generating src/hb-gpu-paint-fragment-msl.hh with a custom command
+[119/128] Generating src/hb-gpu-paint-fragment-wgsl.hh with a custom command
+[120/128] Generating src/hb-gpu-paint-fragment-hlsl.hh with a custom command
+[121/128] Compiling C++ object src/libharfbuzz-gobject.a.p/hb-gobject-structs.cc.o
+[122/128] Generating src/harfbuzz-world.cc with a custom command
+[123/128] Linking static target src/libharfbuzz-gobject.a
+[124/128] Compiling C++ object src/libharfbuzz-subset.a.p/hb-subset.cc.o
+[125/128] Linking static target src/libharfbuzz-subset.a
+[126/128] Compiling C++ object src/libharfbuzz-gpu.a.p/hb-static.cc.o
+[127/128] Linking static target src/libharfbuzz-gpu.a
+[127/128] Installing files
+Installing src/libharfbuzz.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing src/libharfbuzz-subset.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing src/libharfbuzz-raster.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing src/libharfbuzz-vector.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing src/libharfbuzz-gpu.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing src/hb-gobject-enums.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing src/libharfbuzz-gobject.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-raster.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-vector.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-gpu.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-gobject.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-gobject-structs.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-aat-layout.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-aat.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-blob.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-buffer.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-common.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-cplusplus.hh to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-deprecated.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-draw.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-paint.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-face.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-font.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-map.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-color.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-deprecated.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-font.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-layout.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-math.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-meta.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-metrics.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-name.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-shape.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-var.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-script-list.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-set.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-shape-plan.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-shape.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-style.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-unicode.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/src/hb-version.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ft.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-glib.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-subset.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-subset-serialize.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/src/hb-version.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/src/hb-features.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/meson-private/harfbuzz-raster.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/meson-private/harfbuzz-vector.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/meson-private/harfbuzz-gpu.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/meson-private/harfbuzz.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/meson-private/harfbuzz-subset.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/src/harfbuzz-config.cmake to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/meson-private/harfbuzz-gobject.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
