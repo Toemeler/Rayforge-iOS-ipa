@@ -34,7 +34,20 @@ GTK4 has no iOS backend upstream, so the port is built bottom-up:
 
 | Step | Workflow | Produces | Status |
 | ---- | -------- | -------- | ------ |
-| 1 | `.github/workflows/ios-step1-glib.yml` | `glib-ios-arm64` (static libs) | ✅ current |
+| 1 | `ios-step1-glib.yml` | `glib-ios-arm64` (static libs) | ✅ done |
+| 2 | `ios-step2-cairo-pango.yml` | `cairo-pango-ios-arm64` (full rendering+text stack) | ✅ done |
+| 3 | `ios-step3-pixbuf-graphene.yml` | `gtk-deps-ios-arm64` (+jpeg-turbo, graphene, gdk-pixbuf) | ✅ done |
+| 4 | `ios-step4-gtk.yml` | `gtk4-ios-arm64` — **GTK 4.22.4 (libgtk-4.1.dylib) built for iOS arm64** | ✅ done |
+| 5 | GDK iOS backend (UIKit surface, touch/pointer/keyboard input, cairo renderer) | | 🔜 next |
+
+Key fixes encoded along the way: pkg-config sysroot isolation
+(`PKG_CONFIG_SYSROOT_DIR=`), SDK zlib via synthesized `zlib.pc`, libpng/expat/
+libjpeg-turbo/libtiff via CMake iOS toolchain (`CMAKE_SYSTEM_PROCESSOR=aarch64`),
+freetype↔harfbuzz 3-pass build, fontconfig ≥ 2.17 for pango 1.58, cairo quartz
+backend off (macOS-only frameworks), pcre2 JIT off (forbidden on iOS anyway),
+iOS Mach-O host-tool purge + `.pc` tool-var redirect to native brew tools, GTK
+patches P1 (iOS SDK version gate) and P2 (colorpicker quartz guard — sole
+undefined symbol in the whole libgtk link).
 
 ## How to run and test Step 1
 
