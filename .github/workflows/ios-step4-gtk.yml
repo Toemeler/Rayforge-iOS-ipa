@@ -1,0 +1,283 @@
+name: iOS Step 4 - Build GTK4 (arm64)
+
+# The big one: GTK 4.22 itself, cross-compiled for iOS arm64.
+#
+# Backend strategy: GTK requires at least one GDK backend to build. The only
+# upstream backend with zero platform-framework dependencies is Broadway, so
+# this step builds GTK with broadway ONLY as a compile-validation target —
+# it proves the entire GTK/GSK widget machinery compiles and links for iOS
+# arm64. The final app will NOT use broadway; the custom GDK iOS backend
+# (UIKit surface + touch/pointer/keyboard input) replaces it in Step 5.
+#
+# New deps built here on top of the Step-3 set: libtiff + libepoxy (both
+# hard-required by GTK's meson regardless of backend).
+
+on:
+  workflow_dispatch:
+    inputs:
+      ios_min:
+        description: "Minimum iOS deployment version"
+        required: false
+        default: "17.0"
+
+permissions:
+  contents: write
+
+env:
+  IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
+  DEPS_KEY: "gtk-deps-v1"
+  JPEG_TURBO_VERSION: "3.2.0"
+  GRAPHENE_VERSION: "1.10.8"
+  GDK_PIXBUF_VERSION: "2.44.7"
+  TIFF_VERSION: "4.7.0"
+  EPOXY_VERSION: "1.5.10"
+  GTK_VERSION: "4.22.4"
+
+jobs:
+  build-gtk:
+    name: Build GTK4 for iOS arm64
+    runs-on: macos-15
+    timeout-minutes: 150
+
+    steps:
+      - name: "[1/10] Toolchain info"
+        run: |
+          set -x
+          sw_vers || true
+          xcodebuild -version || true
+          xcrun --sdk iphoneos --show-sdk-version || true
+
+      - name: "[2/10] Checkout repo"
+        uses: actions/checkout@v4
+
+      - name: "[3/10] Install build tools (incl. native glib for host tools)"
+        run: |
+          set -euxo pipefail
+          brew list meson >/dev/null 2>&1 || brew install meson
+          brew list ninja >/dev/null 2>&1 || brew install ninja
+          brew list pkg-config >/dev/null 2>&1 || brew install pkg-config
+          # GTK's build runs glib-compile-resources / glib-genmarshal /
+          # glib-mkenums on the BUILD machine; our cross-compiled glib can't
+          # execute on macOS, so provide native host copies via brew.
+          brew list glib >/dev/null 2>&1 || brew install glib
+          meson --version && ninja --version
+          which glib-compile-resources glib-genmarshal glib-mkenums
+
+      - name: "[4/10] Restore cached deps prefix"
+        id: cache-deps
+        uses: actions/cache@v4
+        with:
+          path: ios-out
+          key: ${{ env.DEPS_KEY }}-${{ hashFiles('ios/scripts/build-base-stack.sh', 'ios/scripts/gen-cross-file.sh') }}-jpeg${{ env.JPEG_TURBO_VERSION }}-gr${{ env.GRAPHENE_VERSION }}-pb${{ env.GDK_PIXBUF_VERSION }}-tiff${{ env.TIFF_VERSION }}-ep${{ env.EPOXY_VERSION }}
+
+      - name: "[5/10] Build base stack (cache miss only)"
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: |
+          set -euxo pipefail
+          chmod +x ios/scripts/gen-cross-file.sh ios/scripts/build-base-stack.sh
+          export PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          export CROSS_ISO="${GITHUB_WORKSPACE}/cross-iso.txt"
+          export CROSS_PFX="${GITHUB_WORKSPACE}/cross-pfx.txt"
+          export SCRIPT_DIR="${GITHUB_WORKSPACE}/ios/scripts"
+          bash ios/scripts/build-base-stack.sh 2>&1 | tee base-stack.log
+          tail -3 base-stack.log
+
+      - name: "[6/10] Build jpeg/graphene/pixbuf/tiff/epoxy (cache miss only)"
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig"
+          export PKG_CONFIG_LIBDIR="${PREFIX}/lib/pkgconfig"
+          export PKG_CONFIG_SYSROOT_DIR=
+          SDK=$(xcrun --sdk iphoneos --show-sdk-path)
+          CROSS="${GITHUB_WORKSPACE}/cross-pfx.txt"
+
+          echo "----- libjpeg-turbo -----"
+          curl -fL --retry 3 -o jpeg.tar.gz \
+            "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/${JPEG_TURBO_VERSION}/libjpeg-turbo-${JPEG_TURBO_VERSION}.tar.gz"
+          mkdir -p jpeg-src && tar xf jpeg.tar.gz --strip-components=1 -C jpeg-src
+          cmake -S jpeg-src -B jpeg-build \
+            -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_SYSTEM_PROCESSOR=aarch64 \
+            -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_OSX_SYSROOT="$SDK" -DCMAKE_OSX_DEPLOYMENT_TARGET="${IOS_MIN}" \
+            -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
+            -DENABLE_SHARED=OFF -DENABLE_STATIC=ON -DWITH_TURBOJPEG=OFF \
+            2>&1 | tee jpeg.log
+          cmake --build jpeg-build --config Release 2>&1 | tee -a jpeg.log
+          cmake --install jpeg-build --config Release 2>&1 | tee -a jpeg.log
+
+          echo "----- graphene -----"
+          curl -fL --retry 3 -o graphene.tar.gz \
+            "https://github.com/ebassi/graphene/archive/refs/tags/${GRAPHENE_VERSION}.tar.gz"
+          mkdir -p graphene-src && tar xf graphene.tar.gz --strip-components=1 -C graphene-src
+          meson setup graphene-build graphene-src \
+            --cross-file="${CROSS}" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dtests=false -Dinstalled_tests=false -Dintrospection=disabled \
+            -Dgtk_doc=false -Dgobject_types=true -Dsse2=false -Darm_neon=true \
+            2>&1 | tee graphene.log
+          ninja -C graphene-build install 2>&1 | tee -a graphene.log
+
+          echo "----- gdk-pixbuf -----"
+          PIXBUF_MAJMIN="$(echo "${GDK_PIXBUF_VERSION}" | cut -d. -f1,2)"
+          curl -fL --retry 3 -o gdk-pixbuf.tar.xz \
+            "https://download.gnome.org/sources/gdk-pixbuf/${PIXBUF_MAJMIN}/gdk-pixbuf-${GDK_PIXBUF_VERSION}.tar.xz"
+          mkdir -p pixbuf-src && tar xf gdk-pixbuf.tar.xz --strip-components=1 -C pixbuf-src
+          meson setup pixbuf-build pixbuf-src \
+            --cross-file="${CROSS}" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --wrap-mode=nofallback \
+            -Dpng=enabled -Djpeg=enabled -Dtiff=disabled -Dgif=enabled \
+            -Dglycin=disabled -Dandroid=disabled -Dothers=disabled \
+            -Dbuiltin_loaders=png,jpeg,gif,bmp,ico,ani \
+            -Dtests=false -Dinstalled_tests=false \
+            -Dman=false -Ddocumentation=false \
+            -Dthumbnailer=disabled -Dintrospection=disabled \
+            -Drelocatable=true \
+            2>&1 | tee pixbuf.log
+          ninja -C pixbuf-build install 2>&1 | tee -a pixbuf.log
+
+          echo "----- libtiff -----"
+          curl -fL --retry 3 -o tiff.tar.gz \
+            "https://download.osgeo.org/libtiff/tiff-${TIFF_VERSION}.tar.gz"
+          mkdir -p tiff-src && tar xf tiff.tar.gz --strip-components=1 -C tiff-src
+          cmake -S tiff-src -B tiff-build \
+            -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_SYSTEM_PROCESSOR=aarch64 \
+            -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_OSX_SYSROOT="$SDK" -DCMAKE_OSX_DEPLOYMENT_TARGET="${IOS_MIN}" \
+            -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
+            -DBUILD_SHARED_LIBS=OFF \
+            -Dtiff-tools=OFF -Dtiff-tests=OFF -Dtiff-docs=OFF -Dtiff-contrib=OFF \
+            -Dwebp=OFF -Dzstd=OFF -Dlzma=OFF -Djbig=OFF -Dlerc=OFF \
+            -DZLIB_LIBRARY="${SDK}/usr/lib/libz.tbd" \
+            -DZLIB_INCLUDE_DIR="${SDK}/usr/include" \
+            -DJPEG_LIBRARY="${PREFIX}/lib/libjpeg.a" \
+            -DJPEG_INCLUDE_DIR="${PREFIX}/include" \
+            2>&1 | tee tiff.log
+          cmake --build tiff-build --config Release 2>&1 | tee -a tiff.log
+          cmake --install tiff-build --config Release 2>&1 | tee -a tiff.log
+
+          echo "----- libepoxy -----"
+          # egl/glx/x11 all off: on __APPLE__ epoxy's dispatch is pure dlfcn
+          # (no CGL headers), so it compiles for iOS. GL is never dispatched
+          # at runtime with the cairo renderer.
+          curl -fL --retry 3 -o epoxy.tar.gz \
+            "https://github.com/anholt/libepoxy/archive/refs/tags/${EPOXY_VERSION}.tar.gz"
+          mkdir -p epoxy-src && tar xf epoxy.tar.gz --strip-components=1 -C epoxy-src
+          meson setup epoxy-build epoxy-src \
+            --cross-file="${CROSS}" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dglx=no -Degl=no -Dx11=false -Dtests=false -Ddocs=false \
+            2>&1 | tee epoxy.log
+          ninja -C epoxy-build install 2>&1 | tee -a epoxy.log
+
+      - name: "[7/10] Export env + prefix cross file + sanity"
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          echo "PREFIX=${PREFIX}" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_LIBDIR=${PREFIX}/lib/pkgconfig" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_SYSROOT_DIR=" >> "$GITHUB_ENV"
+          chmod +x ios/scripts/gen-cross-file.sh
+          ios/scripts/gen-cross-file.sh \
+            "${GITHUB_WORKSPACE}/cross-pfx.txt" "${IOS_MIN}" \
+            "${PREFIX}/lib/pkgconfig"
+          for lib in libglib-2.0 libpango-1.0 libgdk_pixbuf-2.0 \
+                     libgraphene-1.0 libjpeg libtiff libepoxy; do
+            test -f "${PREFIX}/lib/${lib}.a" || { echo "MISSING ${lib}.a"; exit 1; }
+          done
+          echo "all prerequisite libs present"
+
+      - name: "[8/10] Build GTK ${{ env.GTK_VERSION }}"
+        run: |
+          set -euxo pipefail
+          GTK_MAJMIN="$(echo "${GTK_VERSION}" | cut -d. -f1,2)"
+          curl -fL --retry 3 -o gtk.tar.xz \
+            "https://download.gnome.org/sources/gtk/${GTK_MAJMIN}/gtk-${GTK_VERSION}.tar.xz"
+          mkdir -p gtk-src && tar xf gtk.tar.xz --strip-components=1 -C gtk-src
+          meson setup gtk-build gtk-src \
+            --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --wrap-mode=nofallback \
+            -Dx11-backend=false -Dwayland-backend=false -Dwin32-backend=false \
+            -Dmacos-backend=false -Dandroid-backend=false -Dbroadway-backend=true \
+            -Dmedia-gstreamer=disabled -Dprint-cpdb=disabled -Dprint-cups=disabled \
+            -Dvulkan=disabled -Dcloudproviders=disabled -Dsysprof=disabled \
+            -Dtracker=disabled -Dcolord=disabled -Daccesskit=disabled \
+            -Df16c=disabled \
+            -Dintrospection=disabled -Ddocumentation=false -Dman-pages=false \
+            -Dscreenshots=false \
+            -Dbuild-demos=false -Dbuild-testsuite=false -Dbuild-examples=false \
+            -Dbuild-tests=false \
+            2>&1 | tee gtk-setup.log
+          ninja -C gtk-build 2>&1 | tee gtk-build.log
+          ninja -C gtk-build install 2>&1 | tee gtk-install.log
+
+      - name: "[9/10] Verify + package"
+        run: |
+          set -euo pipefail
+          {
+            echo "===== GTK LIBS ====="
+            find "${PREFIX}/lib" -maxdepth 1 -name 'libgtk*.a' -exec ls -la {} \;
+            echo
+            echo "===== ARCHITECTURE ====="
+            for lib in $(find "${PREFIX}/lib" -maxdepth 1 -name 'libgtk*.a'); do
+              printf '%-30s %s\n' "$(basename "$lib")" \
+                "$(lipo -info "$lib" 2>&1 | sed 's/.*architecture: //;s/.*are: //')"
+            done
+            echo
+            echo "===== gtk4.pc ====="
+            cat "${PREFIX}/lib/pkgconfig/gtk4.pc" || echo "gtk4.pc MISSING"
+          } 2>&1 | tee gtk-verify.log
+          tar czf gtk4-ios-arm64.tar.gz -C "${PREFIX}" .
+          ls -la gtk4-ios-arm64.tar.gz
+
+      - name: "[10/10] Upload artifact"
+        uses: actions/upload-artifact@v4
+        with:
+          name: gtk4-ios-arm64
+          path: gtk4-ios-arm64.tar.gz
+          if-no-files-found: error
+
+      - name: Publish diagnostics to ci-logs branch (always)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uxo pipefail
+          RUN_ID="${GITHUB_RUN_ID}"
+          OUT="ci-logs/step4/run-${RUN_ID}"
+          rm -rf _cilogs && mkdir -p "_cilogs/${OUT}"
+          for f in base-stack.log jpeg.log graphene.log pixbuf.log tiff.log \
+                   epoxy.log gtk-setup.log gtk-build.log gtk-install.log \
+                   gtk-verify.log cross-pfx.txt; do
+            [ -f "$f" ] && cp "$f" "_cilogs/${OUT}/$(echo "$f" | tr '/' '_')" || true
+          done
+          SUMMARY="_cilogs/${OUT}/SUMMARY.txt"
+          {
+            echo "Run ID: ${RUN_ID}"
+            echo "Commit: ${GITHUB_SHA}"
+            echo "Date: $(date -u)"
+            echo
+            for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log; do
+              echo "===================== TAIL: $f ====================="
+              if [ -f "$f" ]; then tail -40 "$f"; else echo "(not produced)"; fi
+              echo
+            done
+          } > "${SUMMARY}" 2>&1 || true
+          cd _cilogs
+          git init -q
+          git config user.email "ci@rayforge.local"
+          git config user.name "Rayforge CI Logs"
+          git checkout -q -b ci-logs
+          git add -A
+          git commit -q -m "step4 diagnostics for run ${RUN_ID}" || echo "nothing to commit"
+          REMOTE="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git ls-remote --exit-code "${REMOTE}" ci-logs >/dev/null 2>&1; then
+            git fetch -q "${REMOTE}" ci-logs || true
+            git merge -q --allow-unrelated-histories -m "merge" FETCH_HEAD || true
+          fi
+          git push -q "${REMOTE}" ci-logs:ci-logs || git push -q -f "${REMOTE}" ci-logs:ci-logs
+          echo "Diagnostics pushed under ${OUT}"
