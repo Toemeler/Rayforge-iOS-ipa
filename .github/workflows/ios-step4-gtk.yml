@@ -190,6 +190,28 @@ jobs:
           done
           echo "all prerequisite libs present"
 
+          # GTK's gnome meson module resolves build-time tools
+          # (glib-compile-resources etc.) via the gio-2.0.pc variables, which
+          # point INTO our prefix — at cross-compiled iOS arm64 Mach-O
+          # binaries that macOS kills with SIGKILL. The python-script tools
+          # (genmarshal/mkenums/gdbus-codegen) run fine and stay. Delete the
+          # Mach-O ones and point the .pc tool variables at native brew
+          # tools.
+          BREW_BIN="$(brew --prefix)/bin"
+          for f in "${PREFIX}/bin/"*; do
+            [ -f "$f" ] || continue
+            if file "$f" | grep -q "Mach-O"; then rm -v "$f"; fi
+          done
+          for pc in "${PREFIX}/lib/pkgconfig/gio-2.0.pc" \
+                    "${PREFIX}/lib/pkgconfig/glib-2.0.pc"; do
+            sed -i '' \
+              -e "s|^glib_compile_resources=.*|glib_compile_resources=${BREW_BIN}/glib-compile-resources|" \
+              -e "s|^glib_compile_schemas=.*|glib_compile_schemas=${BREW_BIN}/glib-compile-schemas|" \
+              "$pc" || true
+          done
+          grep -h "glib_compile" "${PREFIX}/lib/pkgconfig/gio-2.0.pc" || true
+          which glib-compile-resources
+
       - name: "[8/10] Build GTK ${{ env.GTK_VERSION }}"
         run: |
           set -euxo pipefail
