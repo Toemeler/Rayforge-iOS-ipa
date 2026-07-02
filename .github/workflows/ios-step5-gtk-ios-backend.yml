@@ -245,7 +245,6 @@ jobs:
             grep "targets" "${PREFIX}/lib/pkgconfig/gtk4.pc" || true
           } 2>&1 | tee gtk-verify.log
           tar czf gtk4-ios-backend-arm64.tar.gz -C "${PREFIX}" .
-          cp rayforge-smoketest .
           ls -la gtk4-ios-backend-arm64.tar.gz rayforge-smoketest
 
       - name: Upload artifact
