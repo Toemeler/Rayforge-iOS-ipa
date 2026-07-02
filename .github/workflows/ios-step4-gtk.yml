@@ -227,6 +227,16 @@ jobs:
           sed -i '' 's/#if __MAC_OS_X_VERSION_MIN_REQUIRED < 101500L/#if !defined(__IPHONE_OS_VERSION_MIN_REQUIRED) \&\& __MAC_OS_X_VERSION_MIN_REQUIRED < 101500L/' gtk-src/meson.build
           grep -q '__IPHONE_OS_VERSION_MIN_REQUIRED' gtk-src/meson.build || { echo "::error::iOS SDK patch P1 did not apply"; exit 1; }
           echo "iOS patch P1 applied"
+          # P2: gtkcolorpicker.c dispatches on __APPLE__ (which iOS defines)
+          # to gtk_color_picker_quartz_new(), but the quartz picker is only
+          # compiled with the macos backend -> sole undefined symbol in the
+          # whole libgtk link. Every other quartz call-site in GTK correctly
+          # guards with GDK_WINDOWING_MACOS; align this one (upstream bug for
+          # any darwin-without-macos-backend build). Picker becomes NULL on
+          # iOS; GTK handles that (color chooser simply has no eyedropper).
+          sed -i '' 's/#elif defined (__APPLE__)/#elif defined (GDK_WINDOWING_MACOS)/' gtk-src/gtk/gtkcolorpicker.c
+          grep -q 'GDK_WINDOWING_MACOS' gtk-src/gtk/gtkcolorpicker.c || { echo "::error::iOS patch P2 did not apply"; exit 1; }
+          echo "iOS patch P2 applied"
           # -------------------------------------------------------------------
 
           meson setup gtk-build gtk-src \
