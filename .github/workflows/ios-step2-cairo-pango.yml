@@ -32,7 +32,7 @@ env:
   FREETYPE_VERSION: "2.13.3"
   HARFBUZZ_VERSION: "14.2.1"
   FRIBIDI_VERSION: "1.0.16"
-  FONTCONFIG_VERSION: "2.15.0"
+  FONTCONFIG_VERSION: "2.17.1"
   CAIRO_VERSION: "1.18.4"
   PANGO_MAJMIN: "1.58"
   PANGO_VERSION: "1.58.0"
@@ -248,8 +248,12 @@ jobs:
           cmake --install expat-build --config Release 2>&1 | tee -a expat.log
 
           echo "----- fontconfig -----"
-          curl -fL --retry 3 -o fontconfig.tar.xz \
-            "https://www.freedesktop.org/software/fontconfig/release/fontconfig-${FONTCONFIG_VERSION}.tar.xz"
+          # Try the freedesktop.org release URL first; fall back to the
+          # GitLab generic-packages URL (the pattern WrapDB uses).
+          FC_URL1="https://www.freedesktop.org/software/fontconfig/release/fontconfig-${FONTCONFIG_VERSION}.tar.xz"
+          FC_URL2="https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/${FONTCONFIG_VERSION}/fontconfig-${FONTCONFIG_VERSION}.tar.xz"
+          curl -fL --retry 3 -o fontconfig.tar.xz "${FC_URL1}" || \
+            curl -fL --retry 3 -o fontconfig.tar.xz "${FC_URL2}"
           mkdir -p fontconfig-src && tar xf fontconfig.tar.xz --strip-components=1 -C fontconfig-src
           meson setup fc-build fontconfig-src \
             --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
@@ -283,9 +287,14 @@ jobs:
           curl -fL --retry 3 -o pango.tar.xz \
             "https://download.gnome.org/sources/pango/${PANGO_MAJMIN}/pango-${PANGO_VERSION}.tar.xz"
           mkdir -p pango-src && tar xf pango.tar.xz --strip-components=1 -C pango-src
+          # nofallback: all of pango's deps (glib/cairo/harfbuzz/fribidi/
+          # fontconfig/freetype) are now in the prefix; never let it silently
+          # build bundled subprojects (whose iOS-incompatible tests broke the
+          # previous run) — fail loudly instead if something is missing.
           meson setup pango-build pango-src \
             --cross-file="${GITHUB_WORKSPACE}/ios-arm64-cross.txt" \
             --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --wrap-mode=nofallback \
             -Dintrospection=disabled -Dgtk_doc=false \
             -Dfontconfig=enabled -Dfreetype=enabled -Dcairo=enabled \
             2>&1 | tee pango.log
