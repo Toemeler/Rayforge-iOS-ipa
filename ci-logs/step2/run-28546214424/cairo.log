@@ -1,0 +1,2704 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build
+Build type: cross build
+Program version.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/version.py)
+Project name: cairo
+Project version: 1.18.4
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Werror-implicit-function-declaration: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wsign-compare: YES 
+Compiler for C supports arguments -Wpacked: YES 
+Compiler for C supports arguments -Wswitch-enum: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wvolatile-register-var: YES 
+Compiler for C supports arguments -Wstrict-aliasing=2: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wunsafe-loop-optimizations: NO 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wno-attributes: YES 
+Compiler for C supports arguments -Wno-long-long: YES 
+Compiler for C supports arguments -Winline: YES 
+Compiler for C supports arguments -Wno-unused-but-set-variable: YES 
+Compiler for C supports arguments -Wno-enum-conversion: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fno-common: YES 
+Compiler for C supports arguments -Wp,-D_FORTIFY_SOURCE=2: YES 
+Program python3 found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14)
+Library m found: YES
+Dependency gtk+-2.0 for host machine skipped: feature gtk2-utils disabled
+Compiler for C supports link arguments -Wl,-Bsymbolic-functions: NO 
+Fetching value of define "__FLOAT_WORD_ORDER__" : (undefined) 
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Found CMake: NO
+Run-time dependency lzo2 found: NO  (tried pkg-config, framework and cmake)
+Library dl found: YES
+Checking for function "dlsym" with dependency -ldl: YES 
+Run-time dependency zlib found: YES 1.2.12
+Run-time dependency libpng found: YES 1.6.44
+Run-time dependency fontconfig found: YES 2.15.0
+Program ttx found: NO
+Run-time dependency freetype2 found: YES 26.2.20
+Checking for type "FT_SVG_Document" with dependency freetype2: YES 
+Checking if define "FT_LOAD_NO_SVG" with dependency freetype2 exists: YES 
+Checking for function "FT_Get_Color_Glyph_Paint" with dependency freetype2: YES 
+Dependency x11 for host machine skipped: feature xlib disabled
+Dependency xext for host machine skipped: feature xlib disabled
+Dependency xcb for host machine skipped: feature xcb disabled
+Dependency xcb-render for host machine skipped: feature xcb disabled
+Run-time dependency appleframeworks found: NO  (tried framework)
+
+cairo-src/meson.build:454:16: ERROR: Dependency "appleframeworks" not found (tried framework)
+
+A full log can be found at /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-logs/meson-log.txt
+::group::==== CI platform detected, click here for meson-log.txt contents. ====
+Build started at 2026-07-01T20:41:56.467495
+Main binary: /opt/homebrew/opt/python@3.14/bin/python3.14
+Build Options: -Dbuildtype=release -Ddefault_library=static -Dprefix=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out -Dtests=disabled -Dxlib=disabled -Dxcb=disabled -Dquartz=enabled -Dfreetype=enabled -Dfontconfig=enabled -Dpng=enabled -Dzlib=enabled -Dglib=enabled --cross-file=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-arm64-cross.txt
+Python system: Darwin
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build
+Build type: cross build
+Program version.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/version.py)
+Running command: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/version.py
+--- stdout ---
+1.18.4
+
+--- stderr ---
+
+
+Project name: cairo
+Project version: 1.18.4
+-----------
+Detecting compiler via: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --version` -> 0
+stdout:
+Apple clang version 17.0.0 (clang-1700.0.13.5)
+Target: arm64-apple-darwin24.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+-----------
+Running command: -x c -E -dM -
+-----
+-----------
+Detecting linker via: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Wl,--version -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0` -> 1
+stderr:
+ld: unknown options: --version 
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+-----------
+-----------
+Detecting Apple linker via: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Wl,-v -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0` -> 0
+stderr:
+@(#)PROGRAM:ld PROJECT:ld-1167.5
+BUILD 01:45:05 Apr 30 2025
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
+TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.0.3.5)
+-----------
+Sanity check compiler command line: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -o sanity_check_for_c_cross.exe sanity_check_for_c.c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -c
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Cannot run cross check
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+-----------
+Detecting archiver via: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar --version` -> 1
+stderr:
+usage:  ar -d [-TLsv] archive file ...
+	ar -m [-TLsv] archive file ...
+	ar -m [-abiTLsv] position archive file ...
+	ar -p [-TLsv] archive [file ...]
+	ar -q [-cTLsv] archive file ...
+	ar -r [-cuTLsv] archive file ...
+	ar -r [-abciuTLsv] position archive file ...
+	ar -t [-TLsv] archive [file ...]
+	ar -x [-ouTLsv] archive [file ...]
+-----------
+-----------
+Detecting compiler via: `cc --version` -> 0
+stdout:
+Apple clang version 17.0.0 (clang-1700.0.13.5)
+Target: arm64-apple-darwin24.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+-----------
+Running command: -x c -E -dM -
+-----
+-----------
+Detecting linker via: `cc -Wl,--version` -> 1
+stderr:
+ld: unknown options: --version 
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+-----------
+-----------
+Detecting Apple linker via: `cc -Wl,-v` -> 0
+stderr:
+@(#)PROGRAM:ld PROJECT:ld-1167.5
+BUILD 01:45:05 Apr 30 2025
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
+TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.0.3.5)
+-----------
+Sanity check compiler command line: cc -o sanity_check_for_c.exe sanity_check_for_c.c
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Sanity check built target output for build machine c compiler
+ -- Running test binary command:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/sanity_check_for_c.exe
+-----------
+Sanity check: `/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/sanity_check_for_c.exe` -> 0
+ -- stdout:
+ 
+ -- stderr:
+ 
+ -- returncode: 0
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+-----------
+Detecting archiver via: `llvm-ar-17 --version` -> [Errno 2] No such file or directory: 'llvm-ar-17'
+-----------
+Detecting archiver via: `llvm-ar --version` -> [Errno 2] No such file or directory: 'llvm-ar'
+-----------
+Detecting archiver via: `ar --version` -> 1
+stderr:
+usage:  ar -d [-TLsv] archive file ...
+	ar -m [-TLsv] archive file ...
+	ar -m [-abiTLsv] position archive file ...
+	ar -p [-TLsv] archive [file ...]
+	ar -q [-cTLsv] archive file ...
+	ar -r [-cuTLsv] archive file ...
+	ar -r [-abciuTLsv] position archive file ...
+	ar -t [-TLsv] archive [file ...]
+	ar -x [-ouTLsv] archive [file ...]
+-----------
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpf4adprjr
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpf4adprjr/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpf4adprjr/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wmissing-declarations` -> 0
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpefbxdor8
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpefbxdor8/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpefbxdor8/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Werror-implicit-function-declaration` -> 0
+Compiler for C supports arguments -Werror-implicit-function-declaration: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpazqfhrjv
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpazqfhrjv/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpazqfhrjv/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wpointer-arith` -> 0
+Compiler for C supports arguments -Wpointer-arith: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpyv8fal4c
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpyv8fal4c/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpyv8fal4c/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wwrite-strings` -> 0
+Compiler for C supports arguments -Wwrite-strings: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpaszzcy09
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpaszzcy09/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpaszzcy09/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wsign-compare` -> 0
+Compiler for C supports arguments -Wsign-compare: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpmzg8423l
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpmzg8423l/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpmzg8423l/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wpacked` -> 0
+Compiler for C supports arguments -Wpacked: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpijbrart7
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpijbrart7/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpijbrart7/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wswitch-enum` -> 0
+Compiler for C supports arguments -Wswitch-enum: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp20_h1rna
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp20_h1rna/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp20_h1rna/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wmissing-format-attribute` -> 0
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr_tiuh4r
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr_tiuh4r/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr_tiuh4r/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wvolatile-register-var` -> 0
+Compiler for C supports arguments -Wvolatile-register-var: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpu5wctjc7
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpu5wctjc7/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpu5wctjc7/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wstrict-aliasing=2` -> 0
+Compiler for C supports arguments -Wstrict-aliasing=2: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpk3qypz7b
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpk3qypz7b/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpk3qypz7b/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Winit-self` -> 0
+Compiler for C supports arguments -Winit-self: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpwa5xidxc
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpwa5xidxc/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpwa5xidxc/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wunsafe-loop-optimizations` -> 1
+stderr:
+error: unknown warning option '-Wunsafe-loop-optimizations' [-Werror,-Wunknown-warning-option]
+-----------
+Compiler for C supports arguments -Wunsafe-loop-optimizations: NO 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp6xznnxr2
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp6xznnxr2/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp6xznnxr2/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wmissing-field-initializers -Wno-missing-field-initializers` -> 0
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp8g78616c
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp8g78616c/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp8g78616c/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wunused-parameter -Wno-unused-parameter` -> 0
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpoe1m_x8j
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpoe1m_x8j/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpoe1m_x8j/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wattributes -Wno-attributes` -> 0
+Compiler for C supports arguments -Wno-attributes: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpztgh63he
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpztgh63he/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpztgh63he/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wlong-long -Wno-long-long` -> 0
+Compiler for C supports arguments -Wno-long-long: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpv22ber36
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpv22ber36/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpv22ber36/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Winline` -> 0
+Compiler for C supports arguments -Winline: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpk_15eivg
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpk_15eivg/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpk_15eivg/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wunused-but-set-variable -Wno-unused-but-set-variable` -> 0
+Compiler for C supports arguments -Wno-unused-but-set-variable: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpp02ass27
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpp02ass27/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpp02ass27/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wenum-conversion -Wno-enum-conversion` -> 0
+Compiler for C supports arguments -Wno-enum-conversion: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpwe8dvfn2
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpwe8dvfn2/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpwe8dvfn2/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -fno-strict-aliasing` -> 0
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpsqnvjcye
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpsqnvjcye/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpsqnvjcye/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -fno-common` -> 0
+Compiler for C supports arguments -fno-common: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpzt99e3jp
+Code:
+extern int i;
+int i;
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpzt99e3jp/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpzt99e3jp/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -Wp,-D_FORTIFY_SOURCE=2` -> 0
+Compiler for C supports arguments -Wp,-D_FORTIFY_SOURCE=2: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpw31a_h9r
+Source file: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/meson-cc-tests/check-unused-result.c
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/meson-cc-tests/check-unused-result.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpw31a_h9r/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -std=gnu11 -Wno-attributes -Werror` -> 0
+Program python3 found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14)
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr3cdoyvc
+Code:
+int main(void) { return 0; }
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr3cdoyvc/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr3cdoyvc/output.exe -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -lm -Wl,-undefined,dynamic_lookup` -> 0
+stderr:
+ld: warning: -undefined dynamic_lookup is deprecated on iOS
+-----------
+Library m found: YES
+Dependency gtk+-2.0 for host machine skipped: feature gtk2-utils disabled
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpvbpjs31o
+Code:
+int main(void) { return 0; }
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpvbpjs31o/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpvbpjs31o/output.exe -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Wl,-fatal_warnings -Wl,-no_warn_duplicate_libraries -Wl,-Bsymbolic-functions` -> 1
+stderr:
+ld: unknown options: -Bsymbolic-functions 
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+-----------
+Compiler for C supports link arguments -Wl,-Bsymbolic-functions: NO 
+Running compile:
+Working directory:  /var/folders/mn/js5hmsy13552y330w_94s79h0000gn/T/tmpmnc4c8vp
+Code:
+
+        
+        #ifndef __FLOAT_WORD_ORDER__
+        # define __FLOAT_WORD_ORDER__ "MESON_GET_DEFINE_UNDEFINED_SENTINEL"
+        #endif
+        "MESON_GET_DEFINE_DELIMITER_START"
+__FLOAT_WORD_ORDER__
+"MESON_GET_DEFINE_DELIMITER_END"
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /var/folders/mn/js5hmsy13552y330w_94s79h0000gn/T/tmpmnc4c8vp/testfile.c -E -P -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -P -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -std=gnu11` -> 0
+stdout:
+"MESON_GET_DEFINE_DELIMITER_START"
+"MESON_GET_DEFINE_UNDEFINED_SENTINEL"
+"MESON_GET_DEFINE_DELIMITER_END"
+-----------
+Fetching value of define "__FLOAT_WORD_ORDER__" : (undefined) 
+Pkg-config binary for host machine specified from cross file, native file, or env var as ['pkg-config']
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Determining dependency 'lzo2' with pkg-config executable '/opt/homebrew/bin/pkg-config'
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --modversion lzo2` -> 1
+stderr:
+Package lzo2 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `lzo2.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'lzo2' not found
+-----------
+Finding framework path by running:  /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E - -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 
+
+Looking for framework lzo2 in /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/System/Library/Frameworks
+CMake binary for host machine is not cached
+CMake binary missing from cross or native file, or env var undefined.
+Default target is not allowed for cross use
+Found CMake: NO
+CMake binary for machine host machine not found. Giving up.
+Run-time dependency lzo2 found: NO  (tried pkg-config, framework and cmake)
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpcwsa43cd
+Code:
+int main(void) { return 0; }
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpcwsa43cd/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpcwsa43cd/output.exe -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -ldl -Wl,-undefined,dynamic_lookup` -> 0
+stderr:
+ld: warning: -undefined dynamic_lookup is deprecated on iOS
+-----------
+Library dl found: YES
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp8lmev3eo
+Code:
+
+        #define dlsym meson_disable_define_of_dlsym
+        
+        #include <limits.h>
+        #undef dlsym
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char dlsym (void);
+        
+        #if defined __stub_dlsym || defined __stub___dlsym
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return dlsym ();
+        }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp8lmev3eo/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp8lmev3eo/output.exe -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -std=gnu11 -Wl,-no_weak_imports -ldl` -> 0
+Checking for function "dlsym" with dependency -ldl: YES 
+Determining dependency 'zlib' with pkg-config executable '/opt/homebrew/bin/pkg-config'
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --modversion zlib` -> 0
+stdout:
+1.2.12
+-----------
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --cflags zlib` -> 0
+stdout:
+-I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include
+-----------
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --libs zlib` -> 0
+stdout:
+-L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz
+-----------
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --libs zlib` -> 0
+stdout:
+-L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz
+-----------
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp5jgexknv
+Code:
+
+        #include <stddef.h>
+        int main(void) {
+            void * something;
+            return 0;
+        }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp5jgexknv/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp5jgexknv/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument` -> 0
+Running compile:
+Working directory:  /var/folders/mn/js5hmsy13552y330w_94s79h0000gn/T/tmprirqlrh_
+Code:
+
+        
+        #ifndef sizeof(void *)
+        # define sizeof(void *) "MESON_GET_DEFINE_UNDEFINED_SENTINEL"
+        #endif
+        "MESON_GET_DEFINE_DELIMITER_START"
+sizeof(void *)
+"MESON_GET_DEFINE_DELIMITER_END"
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /var/folders/mn/js5hmsy13552y330w_94s79h0000gn/T/tmprirqlrh_/testfile.c -E -P -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -P -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration` -> 1
+stdout:
+"MESON_GET_DEFINE_DELIMITER_START"
+sizeof(void *)
+"MESON_GET_DEFINE_DELIMITER_END"
+-----------
+stderr:
+/var/folders/mn/js5hmsy13552y330w_94s79h0000gn/T/tmprirqlrh_/testfile.c:3:23: warning: extra tokens at end of #ifndef directive [-Wextra-tokens]
+    3 |         #ifndef sizeof(void *)
+      |                       ^
+      |                       //
+/var/folders/mn/js5hmsy13552y330w_94s79h0000gn/T/tmprirqlrh_/testfile.c:4:30: error: expected comma in macro parameter list
+    4 |         # define sizeof(void *) "MESON_GET_DEFINE_UNDEFINED_SENTINEL"
+      |                              ^
+1 warning and 1 error generated.
+-----------
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr5hgioje
+Code:
+
+        #include <stddef.h>
+        int main(void) { static int a[1-2*!(sizeof(void *) >= 0)]; a[0]=0; return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr5hgioje/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr5hgioje/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument` -> 0
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpqr74jnbl
+Code:
+
+        #include <stddef.h>
+        int main(void) { static int a[1-2*!(sizeof(void *) > 0)]; a[0]=0; return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpqr74jnbl/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpqr74jnbl/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument` -> 0
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpo2afrq9p
+Code:
+
+        #include <stddef.h>
+        int main(void) { static int a[1-2*!(sizeof(void *) > 1)]; a[0]=0; return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpo2afrq9p/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpo2afrq9p/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument` -> 0
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpcw1sa6h0
+Code:
+
+        #include <stddef.h>
+        int main(void) { static int a[1-2*!(sizeof(void *) > 3)]; a[0]=0; return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpcw1sa6h0/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpcw1sa6h0/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument` -> 0
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpt3x5vxrj
+Code:
+
+        #include <stddef.h>
+        int main(void) { static int a[1-2*!(sizeof(void *) > 7)]; a[0]=0; return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpt3x5vxrj/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpt3x5vxrj/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument` -> 0
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpa1iemsu6
+Code:
+
+        #include <stddef.h>
+        int main(void) { static int a[1-2*!(sizeof(void *) > 15)]; a[0]=0; return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpa1iemsu6/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpa1iemsu6/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument` -> 1
+stderr:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpa1iemsu6/testfile.c:3:39: error: 'a' declared as an array with a negative size
+    3 |         int main(void) { static int a[1-2*!(sizeof(void *) > 15)]; a[0]=0; return 0; }
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+-----------
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpiznshodk
+Code:
+
+        #include <stddef.h>
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 11)]; a[0]=0; return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpiznshodk/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpiznshodk/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument` -> 0
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp4xyv0ff4
+Code:
+
+        #include <stddef.h>
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 9)]; a[0]=0; return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp4xyv0ff4/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp4xyv0ff4/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument` -> 0
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpva5x_vtr
+Code:
+
+        #include <stddef.h>
+        int main(void) { static int a[1-2*!(sizeof(void *) <= 8)]; a[0]=0; return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpva5x_vtr/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpva5x_vtr/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument` -> 0
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpky8ihwtq
+Code:
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpky8ihwtq/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpky8ihwtq/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument --print-search-dirs` -> 0
+stdout:
+programs: =/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+libraries: =/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17
+-----------
+Run-time dependency zlib found: YES 1.2.12
+Determining dependency 'libpng' with pkg-config executable '/opt/homebrew/bin/pkg-config'
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --modversion libpng` -> 0
+stdout:
+1.6.44
+-----------
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --cflags libpng` -> 0
+stdout:
+-I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include
+-----------
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --libs libpng` -> 0
+stdout:
+-L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -lpng16
+-----------
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --libs libpng` -> 0
+stdout:
+-L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -lpng16
+-----------
+Run-time dependency libpng found: YES 1.6.44
+Determining dependency 'fontconfig' with pkg-config executable '/opt/homebrew/bin/pkg-config'
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --modversion fontconfig` -> 0
+stdout:
+2.15.0
+-----------
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --cflags fontconfig` -> 0
+stdout:
+-I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -DG_INTL_STATIC_COMPILATION -DPCRE2_STATIC -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include
+-----------
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --libs fontconfig` -> 0
+stdout:
+-L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -lfontconfig -lfreetype -lpng16 -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -lharfbuzz -lglib-2.0 -lintl -liconv -lm -lpcre2-8 -lexpat
+-----------
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --libs fontconfig` -> 0
+stdout:
+-L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -lfontconfig -lfreetype -lpng16 -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -lharfbuzz -lglib-2.0 -lintl -liconv -lm -lpcre2-8 -lexpat
+-----------
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp7zs34xvb
+Code:
+int main(void) { return 0; }
+
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp7zs34xvb/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp7zs34xvb/output.exe -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -lm -Wl,-undefined,dynamic_lookup` -> 0
+stderr:
+ld: warning: -undefined dynamic_lookup is deprecated on iOS
+-----------
+Run-time dependency fontconfig found: YES 2.15.0
+Program ttx found: NO
+Determining dependency 'freetype2' with pkg-config executable '/opt/homebrew/bin/pkg-config'
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --modversion freetype2` -> 0
+stdout:
+26.2.20
+-----------
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --cflags freetype2` -> 0
+stdout:
+-I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -DG_INTL_STATIC_COMPILATION -DPCRE2_STATIC -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+-----------
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --libs freetype2` -> 0
+stdout:
+-L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -lfreetype -lpng16 -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -lharfbuzz -lglib-2.0 -lintl -liconv -lm -lpcre2-8
+-----------
+env[PKG_CONFIG_SYSROOT_DIR]: 
+env[PKG_CONFIG_LIBDIR]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG_PATH]: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+env[PKG_CONFIG]: /opt/homebrew/bin/pkg-config
+-----------
+Called: `/opt/homebrew/bin/pkg-config --libs freetype2` -> 0
+stdout:
+-L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -lfreetype -lpng16 -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -lharfbuzz -lglib-2.0 -lintl -liconv -lm -lpcre2-8
+-----------
+Run-time dependency freetype2 found: YES 26.2.20
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpajihgzhc
+Code:
+#include <freetype/otsvg.h>
+        void bar(void) {
+            (void) sizeof(FT_SVG_Document);
+        }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpajihgzhc/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpajihgzhc/output.obj -c -DG_INTL_STATIC_COMPILATION -DPCRE2_STATIC -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -std=gnu11` -> 0
+Checking for type "FT_SVG_Document" with dependency freetype2: YES 
+Running compile:
+Working directory:  /var/folders/mn/js5hmsy13552y330w_94s79h0000gn/T/tmp0w1dkpt6
+Code:
+
+        #include <freetype/freetype.h>
+        #ifndef FT_LOAD_NO_SVG
+        # define FT_LOAD_NO_SVG "MESON_GET_DEFINE_UNDEFINED_SENTINEL"
+        #endif
+        "MESON_GET_DEFINE_DELIMITER_START"
+FT_LOAD_NO_SVG
+"MESON_GET_DEFINE_DELIMITER_END"
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include /var/folders/mn/js5hmsy13552y330w_94s79h0000gn/T/tmp0w1dkpt6/testfile.c -E -P -DG_INTL_STATIC_COMPILATION -DPCRE2_STATIC -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -P -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -std=gnu11` -> 0
+stdout:
+typedef long int ptrdiff_t;
+typedef long unsigned int size_t;
+typedef int wchar_t;
+typedef long double max_align_t;
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+typedef short __int16_t;
+typedef unsigned short __uint16_t;
+typedef int __int32_t;
+typedef unsigned int __uint32_t;
+typedef long long __int64_t;
+typedef unsigned long long __uint64_t;
+typedef long __darwin_intptr_t;
+typedef unsigned int __darwin_natural_t;
+typedef int __darwin_ct_rune_t;
+typedef union {
+ char __mbstate8[128];
+ long long _mbstateL;
+} __mbstate_t;
+typedef __mbstate_t __darwin_mbstate_t;
+typedef long int __darwin_ptrdiff_t;
+typedef long unsigned int __darwin_size_t;
+typedef __builtin_va_list __darwin_va_list;
+typedef int __darwin_wchar_t;
+typedef __darwin_wchar_t __darwin_rune_t;
+typedef int __darwin_wint_t;
+typedef unsigned long __darwin_clock_t;
+typedef __uint32_t __darwin_socklen_t;
+typedef long __darwin_ssize_t;
+typedef long __darwin_time_t;
+typedef __int64_t __darwin_blkcnt_t;
+typedef __int32_t __darwin_blksize_t;
+typedef __int32_t __darwin_dev_t;
+typedef unsigned int __darwin_fsblkcnt_t;
+typedef unsigned int __darwin_fsfilcnt_t;
+typedef __uint32_t __darwin_gid_t;
+typedef __uint32_t __darwin_id_t;
+typedef __uint64_t __darwin_ino64_t;
+typedef __darwin_ino64_t __darwin_ino_t;
+typedef __darwin_natural_t __darwin_mach_port_name_t;
+typedef __darwin_mach_port_name_t __darwin_mach_port_t;
+typedef __uint16_t __darwin_mode_t;
+typedef __int64_t __darwin_off_t;
+typedef __int32_t __darwin_pid_t;
+typedef __uint32_t __darwin_sigset_t;
+typedef __int32_t __darwin_suseconds_t;
+typedef __uint32_t __darwin_uid_t;
+typedef __uint32_t __darwin_useconds_t;
+typedef unsigned char __darwin_uuid_t[16];
+typedef char __darwin_uuid_string_t[37];
+struct __darwin_pthread_handler_rec {
+ void (*__routine)(void *);
+ void *__arg;
+ struct __darwin_pthread_handler_rec *__next;
+};
+struct _opaque_pthread_attr_t {
+ long __sig;
+ char __opaque[56];
+};
+struct _opaque_pthread_cond_t {
+ long __sig;
+ char __opaque[40];
+};
+struct _opaque_pthread_condattr_t {
+ long __sig;
+ char __opaque[8];
+};
+struct _opaque_pthread_mutex_t {
+ long __sig;
+ char __opaque[56];
+};
+struct _opaque_pthread_mutexattr_t {
+ long __sig;
+ char __opaque[8];
+};
+struct _opaque_pthread_once_t {
+ long __sig;
+ char __opaque[8];
+};
+struct _opaque_pthread_rwlock_t {
+ long __sig;
+ char __opaque[192];
+};
+struct _opaque_pthread_rwlockattr_t {
+ long __sig;
+ char __opaque[16];
+};
+struct _opaque_pthread_t {
+ long __sig;
+ struct __darwin_pthread_handler_rec *__cleanup_stack;
+ char __opaque[8176];
+};
+typedef struct _opaque_pthread_attr_t __darwin_pthread_attr_t;
+typedef struct _opaque_pthread_cond_t __darwin_pthread_cond_t;
+typedef struct _opaque_pthread_condattr_t __darwin_pthread_condattr_t;
+typedef unsigned long __darwin_pthread_key_t;
+typedef struct _opaque_pthread_mutex_t __darwin_pthread_mutex_t;
+typedef struct _opaque_pthread_mutexattr_t __darwin_pthread_mutexattr_t;
+typedef struct _opaque_pthread_once_t __darwin_pthread_once_t;
+typedef struct _opaque_pthread_rwlock_t __darwin_pthread_rwlock_t;
+typedef struct _opaque_pthread_rwlockattr_t __darwin_pthread_rwlockattr_t;
+typedef struct _opaque_pthread_t *__darwin_pthread_t;
+typedef int __darwin_nl_item;
+typedef int __darwin_wctrans_t;
+typedef __uint32_t __darwin_wctype_t;
+
+void *
+  memchr(const void * __s, int __c, size_t __n);
+int memcmp(const void * __s1, const void * __s2,
+  size_t __n);
+void *
+  memcpy(void * __dst, const void * __src,
+  size_t __n);
+void *
+  memmove(void * __dst,
+  const void * __src, size_t __len);
+void *
+  memset(void * __b, int __c, size_t __len);
+char *
+  strcat(char * __s1, const char *__s2)
+                                  ;
+char * strchr(const char *__s, int __c);
+int strcmp(const char *__s1, const char *__s2);
+int strcoll(const char *__s1, const char *__s2);
+char *
+  strcpy(char * __dst, const char *__src)
+                                  ;
+size_t strcspn(const char *__s, const char *__charset);
+char * strerror(int __errnum) __asm("_" "strerror" );
+size_t strlen(const char *__s);
+char *
+  strncat(char * __s1,
+  const char * __s2, size_t __n)
+                                  ;
+int strncmp(const char * __s1,
+  const char * __s2, size_t __n);
+char *
+  strncpy(char * __dst,
+        const char * __src, size_t __n)
+                                        ;
+char * strpbrk(const char *__s, const char *__charset);
+char * strrchr(const char *__s, int __c);
+size_t strspn(const char *__s, const char *__charset);
+char * strstr(const char *__big, const char *__little);
+char * strtok(char * __str, const char *__sep);
+size_t strxfrm(char * __s1, const char *__s2, size_t __n);
+char *
+        strtok_r(char * __str, const char *__sep,
+        char * *__lasts);
+int strerror_r(int __errnum, char * __strerrbuf,
+        size_t __buflen);
+char * strdup(const char *__s1);
+void *
+        memccpy(void * __dst, const void * __src,
+        int __c, size_t __n);
+char *
+        stpcpy(char * __dst, const char *__src) ;
+char *
+        stpncpy(char * __dst,
+        const char * __src, size_t __n)
+        __attribute__((availability(ios,introduced=4.3)))
+                                        ;
+char * strndup(const char * __s1, size_t __n) __attribute__((availability(ios,introduced=4.3)));
+size_t strnlen(const char * __s1, size_t __n) __attribute__((availability(ios,introduced=4.3)));
+char * strsignal(int __sig);
+typedef signed char int8_t;
+typedef short int16_t;
+typedef int int32_t;
+typedef long long int64_t;
+
+typedef unsigned char u_int8_t;
+typedef unsigned short u_int16_t;
+typedef unsigned int u_int32_t;
+typedef unsigned long long u_int64_t;
+typedef int64_t register_t;
+typedef __darwin_intptr_t intptr_t;
+typedef unsigned long uintptr_t;
+typedef u_int64_t user_addr_t;
+typedef u_int64_t user_size_t;
+typedef int64_t user_ssize_t;
+typedef int64_t user_long_t;
+typedef u_int64_t user_ulong_t;
+typedef int64_t user_time_t;
+typedef int64_t user_off_t;
+typedef u_int64_t syscall_arg_t;
+typedef __darwin_size_t rsize_t;
+typedef int errno_t;
+errno_t memset_s(void * __s, rsize_t __smax, int __c, rsize_t __n) __attribute__((availability(ios,introduced=7.0)));
+typedef __darwin_ssize_t ssize_t;
+void *
+        memmem(const void * __big, size_t __big_len,
+        const void * __little, size_t __little_len) __attribute__((availability(ios,introduced=4.3)));
+void memset_pattern4(void * __b, const void * __pattern4, size_t __len) __attribute__((availability(ios,introduced=3.0)));
+void memset_pattern8(void * __b, const void * __pattern8, size_t __len) __attribute__((availability(ios,introduced=3.0)));
+void memset_pattern16(void * __b, const void * __pattern16, size_t __len) __attribute__((availability(ios,introduced=3.0)));
+char *
+        strcasestr(const char *__big, const char *__little);
+__attribute__((availability(macosx,introduced=15.4))) __attribute__((availability(ios,introduced=18.4)))
+__attribute__((availability(tvos,introduced=18.4))) __attribute__((availability(watchos,introduced=11.4)))
+char *
+        strchrnul(const char *__s, int __c);
+char *
+        strnstr(const char * __big, const char *__little, size_t __len);
+size_t strlcat(char * __dst, const char *__source, size_t __size);
+size_t strlcpy(char * __dst, const char *__source, size_t __size);
+void strmode(int __mode, char * __bp);
+char *
+        strsep(char * *__stringp, const char *__delim);
+void swab(const void * restrict, void * restrict, ssize_t __len);
+__attribute__((availability(macosx,introduced=10.12.1))) __attribute__((availability(ios,introduced=10.1)))
+__attribute__((availability(tvos,introduced=10.0.1))) __attribute__((availability(watchos,introduced=3.1)))
+int timingsafe_bcmp(const void * __b1, const void * __b2, size_t __len);
+__attribute__((availability(macosx,introduced=11.0))) __attribute__((availability(ios,introduced=14.0)))
+__attribute__((availability(tvos,introduced=14.0))) __attribute__((availability(watchos,introduced=7.0)))
+int strsignal_r(int __sig, char * __strsignalbuf, size_t __buflen);
+int bcmp(const void *, const void *, size_t __n) ;
+void bcopy(const void *, void *, size_t __n) ;
+void bzero(void *, size_t __n) ;
+char * index(const char *, int) ;
+char * rindex(const char *, int) ;
+int ffs(int);
+int strcasecmp(const char *, const char *);
+int strncasecmp(const char *, const char *, size_t);
+int ffsl(long) __attribute__((availability(ios,introduced=2.0)));
+int ffsll(long long) __attribute__((availability(ios,introduced=7.0)));
+int fls(int) __attribute__((availability(ios,introduced=2.0)));
+int flsl(long) __attribute__((availability(ios,introduced=2.0)));
+int flsll(long long) __attribute__((availability(ios,introduced=7.0)));
+typedef __darwin_va_list va_list;
+
+int renameat(int, const char *, int, const char *) __attribute__((availability(ios,introduced=8.0)));
+int renamex_np(const char *, const char *, unsigned int) __attribute__((availability(macosx,introduced=10.12))) __attribute__((availability(ios,introduced=10.0))) __attribute__((availability(tvos,introduced=10.0))) __attribute__((availability(watchos,introduced=3.0)));
+int renameatx_np(int, const char *, int, const char *, unsigned int) __attribute__((availability(macosx,introduced=10.12))) __attribute__((availability(ios,introduced=10.0))) __attribute__((availability(tvos,introduced=10.0))) __attribute__((availability(watchos,introduced=3.0)));
+int printf(const char * restrict, ...) __attribute__((__format__ (__printf__, 1, 2)));
+typedef __darwin_off_t fpos_t;
+struct __sbuf {
+ unsigned char * _base;
+ int _size;
+};
+struct __sFILEX;
+typedef struct __sFILE {
+ unsigned char * _p;
+ int _r;
+ int _w;
+ short _flags;
+ short _file;
+ struct __sbuf _bf;
+ int _lbfsize;
+ void *_cookie;
+ int (* _Nullable _close)(void *);
+ int (* _Nullable _read) (void *, char *, int __n);
+ fpos_t (* _Nullable _seek) (void *, fpos_t, int);
+ int (* _Nullable _write)(void *, const char *, int __n);
+ struct __sbuf _ub;
+ struct __sFILEX *_extra;
+ int _ur;
+ unsigned char _ubuf[3];
+ unsigned char _nbuf[1];
+ struct __sbuf _lb;
+ int _blksize;
+ fpos_t _offset;
+} FILE;
+extern FILE *__stdinp __attribute__((__swift_attr__("nonisolated(unsafe)")));
+extern FILE *__stdoutp __attribute__((__swift_attr__("nonisolated(unsafe)")));
+extern FILE *__stderrp __attribute__((__swift_attr__("nonisolated(unsafe)")));
+void clearerr(FILE *);
+int fclose(FILE *);
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+int fgetc(FILE *);
+int fgetpos(FILE * restrict, fpos_t *);
+char * fgets(char * restrict , int __size, FILE *);
+FILE *fopen(const char * restrict __filename, const char * restrict __mode) __asm("_" "fopen" );
+int fprintf(FILE * restrict, const char * restrict, ...) __attribute__((__format__ (__printf__, 2, 3)));
+int fputc(int, FILE *);
+int fputs(const char * restrict, FILE * restrict) __asm("_" "fputs" );
+size_t fread(void * restrict __ptr, size_t __size, size_t __nitems, FILE * restrict __stream);
+FILE *freopen(const char * restrict, const char * restrict,
+     FILE * restrict) __asm("_" "freopen" );
+int fscanf(FILE * restrict, const char * restrict, ...) __attribute__((__format__ (__scanf__, 2, 3)));
+int fseek(FILE *, long, int);
+int fsetpos(FILE *, const fpos_t *);
+long ftell(FILE *);
+size_t fwrite(const void * restrict __ptr, size_t __size, size_t __nitems, FILE * restrict __stream) __asm("_" "fwrite" );
+int getc(FILE *);
+int getchar(void);
+__attribute__((__deprecated__("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of gets(3), it is highly recommended that you use fgets(3) instead.")))
+char * gets(char *) ;
+void perror(const char *) __attribute__((__cold__));
+int putc(int, FILE *);
+int putchar(int);
+int puts(const char *);
+int remove(const char *);
+int rename (const char *__old, const char *__new);
+void rewind(FILE *);
+int scanf(const char * restrict, ...) __attribute__((__format__ (__scanf__, 1, 2)));
+void setbuf(FILE * restrict, char * restrict );
+int setvbuf(FILE * restrict, char * restrict , int, size_t __size);
+__attribute__((__availability__(swift, unavailable, message="Use snprintf instead.")))
+__attribute__((__deprecated__("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")))
+int sprintf(char * restrict , const char * restrict, ...) __attribute__((__format__ (__printf__, 2, 3))) ;
+int sscanf(const char * restrict, const char * restrict, ...) __attribute__((__format__ (__scanf__, 2, 3)));
+FILE *tmpfile(void);
+__attribute__((__availability__(swift, unavailable, message="Use mkstemp(3) instead.")))
+__attribute__((__deprecated__("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of tmpnam(3), it is highly recommended that you use mkstemp(3) instead.")))
+char * tmpnam(char *);
+int ungetc(int, FILE *);
+int vfprintf(FILE * restrict, const char * restrict, va_list) __attribute__((__format__ (__printf__, 2, 0)));
+int vprintf(const char * restrict, va_list) __attribute__((__format__ (__printf__, 1, 0)));
+__attribute__((__availability__(swift, unavailable, message="Use vsnprintf instead.")))
+__attribute__((__deprecated__("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use vsnprintf(3) instead.")))
+int vsprintf(char * restrict , const char * restrict, va_list) __attribute__((__format__ (__printf__, 2, 0))) ;
+char * ctermid(char *);
+FILE *fdopen(int, const char *) __asm("_" "fdopen" );
+int fileno(FILE *);
+int pclose(FILE *) __attribute__((__availability__(swift, unavailable, message="Use posix_spawn APIs or NSTask instead. (On iOS, process spawning is unavailable.)")));
+FILE *popen(const char *, const char *) __asm("_" "popen" ) __attribute__((__availability__(swift, unavailable, message="Use posix_spawn APIs or NSTask instead. (On iOS, process spawning is unavailable.)")));
+int __srget(FILE *);
+int __svfscanf(FILE *, const char *, va_list) __attribute__((__format__ (__scanf__, 2, 0)));
+int __swbuf(int, FILE *);
+inline __attribute__ ((__always_inline__)) int __sputc(int _c, FILE *_p) {
+ if (--_p->_w >= 0 || (_p->_w >= _p->_lbfsize && (char)_c != '\n'))
+  return (*_p->_p++ = _c);
+ else
+  return (__swbuf(_c, _p));
+}
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+int getw(FILE *);
+int putw(int, FILE *);
+__attribute__((__availability__(swift, unavailable, message="Use mkstemp(3) instead.")))
+__attribute__((__deprecated__("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of tempnam(3), it is highly recommended that you use mkstemp(3) instead.")))
+char * tempnam(const char *__dir, const char *__prefix) __asm("_" "tempnam" );
+typedef __darwin_off_t off_t;
+int fseeko(FILE * __stream, off_t __offset, int __whence);
+off_t ftello(FILE * __stream);
+int snprintf(char * restrict __str, size_t __size, const char * restrict __format, ...) __attribute__((__format__ (__printf__, 3, 4)));
+int vfscanf(FILE * restrict __stream, const char * restrict __format, va_list) __attribute__((__format__ (__scanf__, 2, 0)));
+int vscanf(const char * restrict __format, va_list) __attribute__((__format__ (__scanf__, 1, 0)));
+int vsnprintf(char * restrict __str, size_t __size, const char * restrict __format, va_list) __attribute__((__format__ (__printf__, 3, 0)));
+int vsscanf(const char * restrict __str, const char * restrict __format, va_list) __attribute__((__format__ (__scanf__, 2, 0)));
+int dprintf(int, const char * restrict, ...) __attribute__((__format__ (__printf__, 2, 3))) __attribute__((availability(ios,introduced=4.3)));
+int vdprintf(int, const char * restrict, va_list) __attribute__((__format__ (__printf__, 2, 0))) __attribute__((availability(ios,introduced=4.3)));
+ssize_t getdelim(char * *restrict __linep, size_t * restrict __linecapp, int __delimiter, FILE * restrict __stream) __attribute__((availability(ios,introduced=4.3)));
+ssize_t getline(char * *restrict __linep, size_t * restrict __linecapp, FILE * restrict __stream) __attribute__((availability(ios,introduced=4.3)));
+FILE *fmemopen(void * restrict __buf , size_t __size, const char * restrict __mode) __attribute__((availability(macos,introduced=10.13))) __attribute__((availability(ios,introduced=11.0))) __attribute__((availability(tvos,introduced=11.0))) __attribute__((availability(watchos,introduced=4.0)));
+FILE *open_memstream(char * *__bufp, size_t *__sizep) __attribute__((availability(macos,introduced=10.13))) __attribute__((availability(ios,introduced=11.0))) __attribute__((availability(tvos,introduced=11.0))) __attribute__((availability(watchos,introduced=4.0)));
+extern const int sys_nerr;
+extern const char *const sys_errlist[];
+int asprintf(char * *restrict, const char * restrict, ...) __attribute__((__format__ (__printf__, 2, 3)));
+char * ctermid_r(char *);
+char * fgetln(FILE *, size_t *__len);
+const char *fmtcheck(const char *, const char *) __attribute__((format_arg(2)));
+int fpurge(FILE *);
+void setbuffer(FILE *, char *, int __size);
+int setlinebuf(FILE *);
+int vasprintf(char * *restrict, const char * restrict, va_list) __attribute__((__format__ (__printf__, 2, 0)));
+FILE *funopen(const void *,
+     int (* _Nullable)(void *, char *, int __n),
+     int (* _Nullable)(void *, const char *, int __n),
+     fpos_t (* _Nullable)(void *, fpos_t, int),
+     int (* _Nullable)(void *));
+extern int __sprintf_chk (char * restrict , int, size_t,
+     const char * restrict, ...);
+extern int __snprintf_chk (char * restrict , size_t __maxlen, int, size_t,
+      const char * restrict, ...);
+extern int __vsprintf_chk (char * restrict , int, size_t,
+      const char * restrict, va_list);
+extern int __vsnprintf_chk (char * restrict , size_t __maxlen, int, size_t,
+       const char * restrict, va_list);
+typedef enum {
+ P_ALL,
+ P_PID,
+ P_PGID
+} idtype_t;
+typedef __darwin_pid_t pid_t;
+typedef __darwin_id_t id_t;
+typedef int sig_atomic_t;
+struct __darwin_arm_exception_state
+{
+ __uint32_t __exception;
+ __uint32_t __fsr;
+ __uint32_t __far;
+};
+struct __darwin_arm_exception_state64
+{
+ __uint64_t __far;
+ __uint32_t __esr;
+ __uint32_t __exception;
+};
+struct __darwin_arm_exception_state64_v2
+{
+ __uint64_t __far;
+ __uint64_t __esr;
+};
+struct __darwin_arm_thread_state
+{
+ __uint32_t __r[13];
+ __uint32_t __sp;
+ __uint32_t __lr;
+ __uint32_t __pc;
+ __uint32_t __cpsr;
+};
+struct __darwin_arm_thread_state64
+{
+ __uint64_t __x[29];
+ __uint64_t __fp;
+ __uint64_t __lr;
+ __uint64_t __sp;
+ __uint64_t __pc;
+ __uint32_t __cpsr;
+ __uint32_t __pad;
+};
+struct __darwin_arm_vfp_state
+{
+ __uint32_t __r[64];
+ __uint32_t __fpscr;
+};
+struct __darwin_arm_neon_state64
+{
+ __uint128_t __v[32];
+ __uint32_t __fpsr;
+ __uint32_t __fpcr;
+};
+struct __darwin_arm_neon_state
+{
+ __uint128_t __v[16];
+ __uint32_t __fpsr;
+ __uint32_t __fpcr;
+};
+struct __arm_pagein_state
+{
+ int __pagein_error;
+};
+struct __darwin_arm_sme_state
+{
+ __uint64_t __svcr;
+ __uint64_t __tpidr2_el0;
+ __uint16_t __svl_b;
+};
+struct __darwin_arm_sve_z_state
+{
+ char __z[16][256];
+} __attribute__((aligned(4)));
+struct __darwin_arm_sve_p_state
+{
+ char __p[16][256 / 8];
+} __attribute__((aligned(4)));
+struct __darwin_arm_sme_za_state
+{
+ char __za[4096];
+} __attribute__((aligned(4)));
+struct __darwin_arm_sme2_state
+{
+ char __zt0[64];
+} __attribute__((aligned(4)));
+struct __arm_legacy_debug_state
+{
+ __uint32_t __bvr[16];
+ __uint32_t __bcr[16];
+ __uint32_t __wvr[16];
+ __uint32_t __wcr[16];
+};
+struct __darwin_arm_debug_state32
+{
+ __uint32_t __bvr[16];
+ __uint32_t __bcr[16];
+ __uint32_t __wvr[16];
+ __uint32_t __wcr[16];
+ __uint64_t __mdscr_el1;
+};
+struct __darwin_arm_debug_state64
+{
+ __uint64_t __bvr[16];
+ __uint64_t __bcr[16];
+ __uint64_t __wvr[16];
+ __uint64_t __wcr[16];
+ __uint64_t __mdscr_el1;
+};
+struct __darwin_arm_cpmu_state64
+{
+ __uint64_t __ctrs[16];
+};
+struct __darwin_mcontext32
+{
+ struct __darwin_arm_exception_state __es;
+ struct __darwin_arm_thread_state __ss;
+ struct __darwin_arm_vfp_state __fs;
+};
+struct __darwin_mcontext64
+{
+ struct __darwin_arm_exception_state64 __es;
+ struct __darwin_arm_thread_state64 __ss;
+ struct __darwin_arm_neon_state64 __ns;
+};
+typedef struct __darwin_mcontext64 *mcontext_t;
+
+typedef __darwin_pthread_attr_t pthread_attr_t;
+
+struct __darwin_sigaltstack
+{
+ void *ss_sp;
+ __darwin_size_t ss_size;
+ int ss_flags;
+};
+typedef struct __darwin_sigaltstack stack_t;
+struct __darwin_ucontext
+{
+ int uc_onstack;
+ __darwin_sigset_t uc_sigmask;
+ struct __darwin_sigaltstack uc_stack;
+ struct __darwin_ucontext *uc_link;
+ __darwin_size_t uc_mcsize;
+ struct __darwin_mcontext64 *uc_mcontext;
+};
+typedef struct __darwin_ucontext ucontext_t;
+typedef __darwin_sigset_t sigset_t;
+typedef __darwin_uid_t uid_t;
+
+union sigval {
+ int sival_int;
+ void *sival_ptr;
+};
+struct sigevent {
+ int sigev_notify;
+ int sigev_signo;
+ union sigval sigev_value;
+ void (*sigev_notify_function)(union sigval);
+ pthread_attr_t *sigev_notify_attributes;
+};
+typedef struct __siginfo {
+ int si_signo;
+ int si_errno;
+ int si_code;
+ pid_t si_pid;
+ uid_t si_uid;
+ int si_status;
+ void *si_addr;
+ union sigval si_value;
+ long si_band;
+ unsigned long __pad[7];
+} siginfo_t;
+union __sigaction_u {
+ void (*__sa_handler)(int);
+ void (*__sa_sigaction)(int, struct __siginfo *,
+     void *);
+};
+struct __sigaction {
+ union __sigaction_u __sigaction_u;
+ void (*sa_tramp)(void *, int, int, siginfo_t *, void *);
+ sigset_t sa_mask;
+ int sa_flags;
+};
+struct sigaction {
+ union __sigaction_u __sigaction_u;
+ sigset_t sa_mask;
+ int sa_flags;
+};
+typedef void (*sig_t)(int);
+struct sigvec {
+ void (*sv_handler)(int);
+ int sv_mask;
+ int sv_flags;
+};
+struct sigstack {
+ char *ss_sp;
+ int ss_onstack;
+};
+void(*signal(int, void (*)(int)))(int);
+typedef unsigned char uint8_t;
+typedef unsigned short uint16_t;
+typedef unsigned int uint32_t;
+typedef unsigned long long uint64_t;
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+typedef int32_t int_least32_t;
+typedef int64_t int_least64_t;
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+typedef uint32_t uint_least32_t;
+typedef uint64_t uint_least64_t;
+typedef int8_t int_fast8_t;
+typedef int16_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef int64_t int_fast64_t;
+typedef uint8_t uint_fast8_t;
+typedef uint16_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+typedef uint64_t uint_fast64_t;
+typedef long int intmax_t;
+typedef long unsigned int uintmax_t;
+struct timeval
+{
+ __darwin_time_t tv_sec;
+ __darwin_suseconds_t tv_usec;
+};
+typedef __uint64_t rlim_t;
+struct rusage {
+ struct timeval ru_utime;
+ struct timeval ru_stime;
+ long ru_maxrss;
+ long ru_ixrss;
+ long ru_idrss;
+ long ru_isrss;
+ long ru_minflt;
+ long ru_majflt;
+ long ru_nswap;
+ long ru_inblock;
+ long ru_oublock;
+ long ru_msgsnd;
+ long ru_msgrcv;
+ long ru_nsignals;
+ long ru_nvcsw;
+ long ru_nivcsw;
+};
+typedef void *rusage_info_t;
+struct rusage_info_v0 {
+ uint8_t ri_uuid[16];
+ uint64_t ri_user_time;
+ uint64_t ri_system_time;
+ uint64_t ri_pkg_idle_wkups;
+ uint64_t ri_interrupt_wkups;
+ uint64_t ri_pageins;
+ uint64_t ri_wired_size;
+ uint64_t ri_resident_size;
+ uint64_t ri_phys_footprint;
+ uint64_t ri_proc_start_abstime;
+ uint64_t ri_proc_exit_abstime;
+};
+struct rusage_info_v1 {
+ uint8_t ri_uuid[16];
+ uint64_t ri_user_time;
+ uint64_t ri_system_time;
+ uint64_t ri_pkg_idle_wkups;
+ uint64_t ri_interrupt_wkups;
+ uint64_t ri_pageins;
+ uint64_t ri_wired_size;
+ uint64_t ri_resident_size;
+ uint64_t ri_phys_footprint;
+ uint64_t ri_proc_start_abstime;
+ uint64_t ri_proc_exit_abstime;
+ uint64_t ri_child_user_time;
+ uint64_t ri_child_system_time;
+ uint64_t ri_child_pkg_idle_wkups;
+ uint64_t ri_child_interrupt_wkups;
+ uint64_t ri_child_pageins;
+ uint64_t ri_child_elapsed_abstime;
+};
+struct rusage_info_v2 {
+ uint8_t ri_uuid[16];
+ uint64_t ri_user_time;
+ uint64_t ri_system_time;
+ uint64_t ri_pkg_idle_wkups;
+ uint64_t ri_interrupt_wkups;
+ uint64_t ri_pageins;
+ uint64_t ri_wired_size;
+ uint64_t ri_resident_size;
+ uint64_t ri_phys_footprint;
+ uint64_t ri_proc_start_abstime;
+ uint64_t ri_proc_exit_abstime;
+ uint64_t ri_child_user_time;
+ uint64_t ri_child_system_time;
+ uint64_t ri_child_pkg_idle_wkups;
+ uint64_t ri_child_interrupt_wkups;
+ uint64_t ri_child_pageins;
+ uint64_t ri_child_elapsed_abstime;
+ uint64_t ri_diskio_bytesread;
+ uint64_t ri_diskio_byteswritten;
+};
+struct rusage_info_v3 {
+ uint8_t ri_uuid[16];
+ uint64_t ri_user_time;
+ uint64_t ri_system_time;
+ uint64_t ri_pkg_idle_wkups;
+ uint64_t ri_interrupt_wkups;
+ uint64_t ri_pageins;
+ uint64_t ri_wired_size;
+ uint64_t ri_resident_size;
+ uint64_t ri_phys_footprint;
+ uint64_t ri_proc_start_abstime;
+ uint64_t ri_proc_exit_abstime;
+ uint64_t ri_child_user_time;
+ uint64_t ri_child_system_time;
+ uint64_t ri_child_pkg_idle_wkups;
+ uint64_t ri_child_interrupt_wkups;
+ uint64_t ri_child_pageins;
+ uint64_t ri_child_elapsed_abstime;
+ uint64_t ri_diskio_bytesread;
+ uint64_t ri_diskio_byteswritten;
+ uint64_t ri_cpu_time_qos_default;
+ uint64_t ri_cpu_time_qos_maintenance;
+ uint64_t ri_cpu_time_qos_background;
+ uint64_t ri_cpu_time_qos_utility;
+ uint64_t ri_cpu_time_qos_legacy;
+ uint64_t ri_cpu_time_qos_user_initiated;
+ uint64_t ri_cpu_time_qos_user_interactive;
+ uint64_t ri_billed_system_time;
+ uint64_t ri_serviced_system_time;
+};
+struct rusage_info_v4 {
+ uint8_t ri_uuid[16];
+ uint64_t ri_user_time;
+ uint64_t ri_system_time;
+ uint64_t ri_pkg_idle_wkups;
+ uint64_t ri_interrupt_wkups;
+ uint64_t ri_pageins;
+ uint64_t ri_wired_size;
+ uint64_t ri_resident_size;
+ uint64_t ri_phys_footprint;
+ uint64_t ri_proc_start_abstime;
+ uint64_t ri_proc_exit_abstime;
+ uint64_t ri_child_user_time;
+ uint64_t ri_child_system_time;
+ uint64_t ri_child_pkg_idle_wkups;
+ uint64_t ri_child_interrupt_wkups;
+ uint64_t ri_child_pageins;
+ uint64_t ri_child_elapsed_abstime;
+ uint64_t ri_diskio_bytesread;
+ uint64_t ri_diskio_byteswritten;
+ uint64_t ri_cpu_time_qos_default;
+ uint64_t ri_cpu_time_qos_maintenance;
+ uint64_t ri_cpu_time_qos_background;
+ uint64_t ri_cpu_time_qos_utility;
+ uint64_t ri_cpu_time_qos_legacy;
+ uint64_t ri_cpu_time_qos_user_initiated;
+ uint64_t ri_cpu_time_qos_user_interactive;
+ uint64_t ri_billed_system_time;
+ uint64_t ri_serviced_system_time;
+ uint64_t ri_logical_writes;
+ uint64_t ri_lifetime_max_phys_footprint;
+ uint64_t ri_instructions;
+ uint64_t ri_cycles;
+ uint64_t ri_billed_energy;
+ uint64_t ri_serviced_energy;
+ uint64_t ri_interval_max_phys_footprint;
+ uint64_t ri_runnable_time;
+};
+struct rusage_info_v5 {
+ uint8_t ri_uuid[16];
+ uint64_t ri_user_time;
+ uint64_t ri_system_time;
+ uint64_t ri_pkg_idle_wkups;
+ uint64_t ri_interrupt_wkups;
+ uint64_t ri_pageins;
+ uint64_t ri_wired_size;
+ uint64_t ri_resident_size;
+ uint64_t ri_phys_footprint;
+ uint64_t ri_proc_start_abstime;
+ uint64_t ri_proc_exit_abstime;
+ uint64_t ri_child_user_time;
+ uint64_t ri_child_system_time;
+ uint64_t ri_child_pkg_idle_wkups;
+ uint64_t ri_child_interrupt_wkups;
+ uint64_t ri_child_pageins;
+ uint64_t ri_child_elapsed_abstime;
+ uint64_t ri_diskio_bytesread;
+ uint64_t ri_diskio_byteswritten;
+ uint64_t ri_cpu_time_qos_default;
+ uint64_t ri_cpu_time_qos_maintenance;
+ uint64_t ri_cpu_time_qos_background;
+ uint64_t ri_cpu_time_qos_utility;
+ uint64_t ri_cpu_time_qos_legacy;
+ uint64_t ri_cpu_time_qos_user_initiated;
+ uint64_t ri_cpu_time_qos_user_interactive;
+ uint64_t ri_billed_system_time;
+ uint64_t ri_serviced_system_time;
+ uint64_t ri_logical_writes;
+ uint64_t ri_lifetime_max_phys_footprint;
+ uint64_t ri_instructions;
+ uint64_t ri_cycles;
+ uint64_t ri_billed_energy;
+ uint64_t ri_serviced_energy;
+ uint64_t ri_interval_max_phys_footprint;
+ uint64_t ri_runnable_time;
+ uint64_t ri_flags;
+};
+struct rusage_info_v6 {
+ uint8_t ri_uuid[16];
+ uint64_t ri_user_time;
+ uint64_t ri_system_time;
+ uint64_t ri_pkg_idle_wkups;
+ uint64_t ri_interrupt_wkups;
+ uint64_t ri_pageins;
+ uint64_t ri_wired_size;
+ uint64_t ri_resident_size;
+ uint64_t ri_phys_footprint;
+ uint64_t ri_proc_start_abstime;
+ uint64_t ri_proc_exit_abstime;
+ uint64_t ri_child_user_time;
+ uint64_t ri_child_system_time;
+ uint64_t ri_child_pkg_idle_wkups;
+ uint64_t ri_child_interrupt_wkups;
+ uint64_t ri_child_pageins;
+ uint64_t ri_child_elapsed_abstime;
+ uint64_t ri_diskio_bytesread;
+ uint64_t ri_diskio_byteswritten;
+ uint64_t ri_cpu_time_qos_default;
+ uint64_t ri_cpu_time_qos_maintenance;
+ uint64_t ri_cpu_time_qos_background;
+ uint64_t ri_cpu_time_qos_utility;
+ uint64_t ri_cpu_time_qos_legacy;
+ uint64_t ri_cpu_time_qos_user_initiated;
+ uint64_t ri_cpu_time_qos_user_interactive;
+ uint64_t ri_billed_system_time;
+ uint64_t ri_serviced_system_time;
+ uint64_t ri_logical_writes;
+ uint64_t ri_lifetime_max_phys_footprint;
+ uint64_t ri_instructions;
+ uint64_t ri_cycles;
+ uint64_t ri_billed_energy;
+ uint64_t ri_serviced_energy;
+ uint64_t ri_interval_max_phys_footprint;
+ uint64_t ri_runnable_time;
+ uint64_t ri_flags;
+ uint64_t ri_user_ptime;
+ uint64_t ri_system_ptime;
+ uint64_t ri_pinstructions;
+ uint64_t ri_pcycles;
+ uint64_t ri_energy_nj;
+ uint64_t ri_penergy_nj;
+ uint64_t ri_secure_time_in_system;
+ uint64_t ri_secure_ptime_in_system;
+ uint64_t ri_neural_footprint;
+ uint64_t ri_lifetime_max_neural_footprint;
+ uint64_t ri_interval_max_neural_footprint;
+ uint64_t ri_reserved[9];
+};
+typedef struct rusage_info_v6 rusage_info_current;
+struct rlimit {
+ rlim_t rlim_cur;
+ rlim_t rlim_max;
+};
+struct proc_rlimit_control_wakeupmon {
+ uint32_t wm_flags;
+ int32_t wm_rate;
+};
+int getpriority(int, id_t);
+int getiopolicy_np(int, int) __attribute__((availability(ios,introduced=2.0)));
+int getrlimit(int, struct rlimit *) __asm("_" "getrlimit" );
+int getrusage(int, struct rusage *);
+int setpriority(int, id_t, int);
+int setiopolicy_np(int, int, int) __attribute__((availability(ios,introduced=2.0)));
+int setrlimit(int, const struct rlimit *) __asm("_" "setrlimit" );
+static inline
+__uint16_t
+_OSSwapInt16(
+ __uint16_t _data
+ )
+{
+ return (__uint16_t)(_data << 8 | _data >> 8);
+}
+static inline
+__uint32_t
+_OSSwapInt32(
+ __uint32_t _data
+ )
+{
+ _data = __builtin_bswap32(_data);
+ return _data;
+}
+static inline
+__uint64_t
+_OSSwapInt64(
+ __uint64_t _data
+ )
+{
+ return __builtin_bswap64(_data);
+}
+union wait {
+ int w_status;
+ struct {
+  unsigned int w_Termsig:7,
+      w_Coredump:1,
+      w_Retcode:8,
+      w_Filler:16;
+ } w_T;
+ struct {
+  unsigned int w_Stopval:8,
+      w_Stopsig:8,
+      w_Filler:16;
+ } w_S;
+};
+pid_t wait(int *) __asm("_" "wait" );
+pid_t waitpid(pid_t, int *, int) __asm("_" "waitpid" );
+int waitid(idtype_t, id_t, siginfo_t *, int) __asm("_" "waitid" );
+pid_t wait3(int *, int, struct rusage *);
+pid_t wait4(pid_t, int *, int, struct rusage *);
+
+void * alloca(size_t __size);
+typedef __darwin_ct_rune_t ct_rune_t;
+typedef __darwin_rune_t rune_t;
+typedef struct {
+ int quot;
+ int rem;
+} div_t;
+typedef struct {
+ long quot;
+ long rem;
+} ldiv_t;
+typedef struct {
+ long long quot;
+ long long rem;
+} lldiv_t;
+extern int __mb_cur_max;
+typedef unsigned long long malloc_type_id_t;
+
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) void * malloc_type_malloc(size_t size, malloc_type_id_t type_id) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(1)));
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) void * malloc_type_calloc(size_t count, size_t size, malloc_type_id_t type_id) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(1,2)));
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) void malloc_type_free(void * ptr, malloc_type_id_t type_id);
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) void * malloc_type_realloc(void * ptr, size_t size, malloc_type_id_t type_id) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(2)));
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) void * malloc_type_valloc(size_t size, malloc_type_id_t type_id) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(1)));
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) void * malloc_type_aligned_alloc(size_t alignment, size_t size, malloc_type_id_t type_id) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(2)));
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) int malloc_type_posix_memalign(void * *memptr, size_t alignment, size_t size, malloc_type_id_t type_id) ;
+typedef struct _malloc_zone_t malloc_zone_t;
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) void * malloc_type_zone_malloc(malloc_zone_t *zone, size_t size, malloc_type_id_t type_id) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(2)));
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) void * malloc_type_zone_calloc(malloc_zone_t *zone, size_t count, size_t size, malloc_type_id_t type_id) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(2,3)));
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) void malloc_type_zone_free(malloc_zone_t *zone, void * ptr, malloc_type_id_t type_id);
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) void * malloc_type_zone_realloc(malloc_zone_t *zone, void * ptr, size_t size, malloc_type_id_t type_id) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(3)));
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) void * malloc_type_zone_valloc(malloc_zone_t *zone, size_t size, malloc_type_id_t type_id) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(2)));
+__attribute__((availability(macos,introduced=14.0))) __attribute__((availability(ios,introduced=17.0))) __attribute__((availability(tvos,introduced=17.0))) __attribute__((availability(watchos,introduced=10.0))) __attribute__((availability(visionos,introduced=1.0))) __attribute__((availability(driverkit,introduced=23.0))) void * malloc_type_zone_memalign(malloc_zone_t *zone, size_t alignment, size_t size, malloc_type_id_t type_id) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(3)));
+void * malloc(size_t __size) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(1))) ;
+void * calloc(size_t __count, size_t __size) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(1,2))) ;
+void free(void * );
+void * realloc(void * __ptr, size_t __size) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(2))) ;
+void * reallocf(void * __ptr, size_t __size) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(2)));
+void * valloc(size_t __size) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(1))) ;
+void * aligned_alloc(size_t __alignment, size_t __size) __attribute__((__warn_unused_result__)) __attribute__((alloc_align(1))) __attribute__((alloc_size(2))) __attribute__((availability(macosx,introduced=10.15))) __attribute__((availability(ios,introduced=13.0))) __attribute__((availability(tvos,introduced=13.0))) __attribute__((availability(watchos,introduced=6.0)));
+int posix_memalign(void * *__memptr, size_t __alignment, size_t __size) __attribute__((availability(ios,introduced=3.0)));
+void abort(void) __attribute__((__cold__)) __attribute__((__noreturn__));
+int abs(int) __attribute__((__const__));
+int atexit(void (* _Nonnull)(void));
+int at_quick_exit(void (*)(void));
+double atof(const char *);
+int atoi(const char *);
+long atol(const char *);
+long long
+  atoll(const char *);
+void *bsearch(const void * __key, const void * __base, size_t __nel,
+     size_t __width, int (* _Nonnull __compar)(const void *, const void *));
+div_t div(int, int) __attribute__((__const__));
+void exit(int) __attribute__((__noreturn__));
+char * getenv(const char *);
+long labs(long) __attribute__((__const__));
+ldiv_t ldiv(long, long) __attribute__((__const__));
+long long
+  llabs(long long);
+lldiv_t lldiv(long long, long long);
+int mblen(const char * __s, size_t __n);
+size_t mbstowcs(wchar_t * restrict , const char * restrict, size_t __n);
+int mbtowc(wchar_t * restrict, const char * restrict , size_t __n);
+void qsort(void * __base, size_t __nel, size_t __width,
+     int (* _Nonnull __compar)(const void *, const void *));
+void quick_exit(int) __attribute__((__noreturn__));
+int rand(void) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
+void srand(unsigned) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
+double strtod(const char *, char * *) __asm("_" "strtod" );
+float strtof(const char *, char * *) __asm("_" "strtof" );
+long strtol(const char *__str, char * *__endptr, int __base);
+long double
+  strtold(const char *, char * *);
+long long
+  strtoll(const char *__str, char * *__endptr, int __base);
+unsigned long
+  strtoul(const char *__str, char * *__endptr, int __base);
+unsigned long long
+  strtoull(const char *__str, char * *__endptr, int __base);
+__attribute__((__availability__(swift, unavailable, message="Use posix_spawn APIs or NSTask instead. (On iOS, process spawning is unavailable.)")))
+__attribute__((availability(macos,introduced=10.0))) __attribute__((availability(ios,unavailable)))
+__attribute__((availability(watchos,unavailable))) __attribute__((availability(tvos,unavailable)))
+int system(const char *) __asm("_" "system" );
+size_t wcstombs(char * restrict , const wchar_t * restrict, size_t __n);
+int wctomb(char *, wchar_t);
+void _Exit(int) __attribute__((__noreturn__));
+long a64l(const char *);
+double drand48(void);
+char * ecvt(double, int, int *restrict, int *restrict);
+double erand48(unsigned short[3]);
+char * fcvt(double, int, int *restrict, int *restrict);
+char * gcvt(double, int, char *) ;
+int getsubopt(char * *, char * const *, char * *);
+int grantpt(int);
+char *
+  initstate(unsigned, char *, size_t __size);
+long jrand48(unsigned short[3]) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
+char *l64a(long);
+void lcong48(unsigned short[7]);
+long lrand48(void) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
+__attribute__((__deprecated__("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of mktemp(3), it is highly recommended that you use mkstemp(3) instead.")))
+char * mktemp(char *);
+int mkstemp(char *);
+long mrand48(void) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
+long nrand48(unsigned short[3]) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
+int posix_openpt(int);
+char * ptsname(int);
+int ptsname_r(int fildes, char * buffer, size_t buflen) __attribute__((availability(macos,introduced=10.13.4))) __attribute__((availability(ios,introduced=11.3))) __attribute__((availability(tvos,introduced=11.3))) __attribute__((availability(watchos,introduced=4.3)));
+int putenv(char *) __asm("_" "putenv" );
+long random(void) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
+int rand_r(unsigned *) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
+char * realpath(const char * restrict, char * restrict ) __asm("_" "realpath" "$DARWIN_EXTSN");
+unsigned short * seed48(unsigned short[3]);
+int setenv(const char * __name, const char * __value, int __overwrite) __asm("_" "setenv" );
+void setkey(const char *) __asm("_" "setkey" );
+char * setstate(const char *);
+void srand48(long);
+void srandom(unsigned);
+int unlockpt(int);
+int unsetenv(const char *) __asm("_" "unsetenv" );
+typedef __darwin_dev_t dev_t;
+typedef __darwin_mode_t mode_t;
+uint32_t arc4random(void);
+void arc4random_addrandom(unsigned char * , int __datlen)
+    __attribute__((availability(macosx,introduced=10.0))) __attribute__((availability(macosx,deprecated=10.12,message="use arc4random_stir")))
+    __attribute__((availability(ios,introduced=2.0))) __attribute__((availability(ios,deprecated=10.0,message="use arc4random_stir")))
+    __attribute__((availability(tvos,introduced=2.0))) __attribute__((availability(tvos,deprecated=10.0,message="use arc4random_stir")))
+    __attribute__((availability(watchos,introduced=1.0))) __attribute__((availability(watchos,deprecated=3.0,message="use arc4random_stir")));
+void arc4random_buf(void * __buf, size_t __nbytes) __attribute__((availability(ios,introduced=4.3)));
+void arc4random_stir(void);
+uint32_t
+  arc4random_uniform(uint32_t __upper_bound) __attribute__((availability(ios,introduced=4.3)));
+int atexit_b(void (^ _Nonnull)(void)) __attribute__((availability(ios,introduced=3.2)));
+void *bsearch_b(const void * __key, const void * __base, size_t __nel,
+     size_t __width, int (^ _Nonnull __compar)(const void *, const void *) __attribute__((__noescape__)))
+     __attribute__((availability(ios,introduced=3.2)));
+char * cgetcap(char *, const char *, int);
+int cgetclose(void);
+int cgetent(char * *, char * *, const char *);
+int cgetfirst(char * *, char * *);
+int cgetmatch(const char *, const char *);
+int cgetnext(char * *, char * *);
+int cgetnum(char *, const char *, long *);
+int cgetset(const char *);
+int cgetstr(char *, const char *, char * *);
+int cgetustr(char *, const char *, char * *);
+int daemon(int, int) __asm("_" "daemon" ) __attribute__((availability(ios,introduced=2.0,deprecated=2.0,message="Use posix_spawn APIs instead."))) __attribute__((availability(watchos,unavailable))) __attribute__((availability(tvos,unavailable)));
+char * devname(dev_t, mode_t);
+char * devname_r(dev_t, mode_t, char * buf, int len);
+char * getbsize(int *, long *);
+int getloadavg(double [], int __nelem);
+const char
+ *getprogname(void);
+void setprogname(const char *);
+int heapsort(void * __base, size_t __nel, size_t __width,
+     int (* _Nonnull __compar)(const void *, const void *));
+int heapsort_b(void * __base, size_t __nel, size_t __width,
+     int (^ _Nonnull __compar)(const void *, const void *) __attribute__((__noescape__)))
+     __attribute__((availability(ios,introduced=3.2)));
+int mergesort(void * __base, size_t __nel, size_t __width,
+     int (* _Nonnull __compar)(const void *, const void *));
+int mergesort_b(void * __base, size_t __nel, size_t __width,
+     int (^ _Nonnull __compar)(const void *, const void *) __attribute__((__noescape__)))
+     __attribute__((availability(ios,introduced=3.2)));
+void psort(void * __base, size_t __nel, size_t __width,
+     int (* _Nonnull __compar)(const void *, const void *))
+     __attribute__((availability(ios,introduced=3.2)));
+void psort_b(void * __base, size_t __nel, size_t __width,
+     int (^ _Nonnull __compar)(const void *, const void *) __attribute__((__noescape__)))
+     __attribute__((availability(ios,introduced=3.2)));
+void psort_r(void * __base, size_t __nel, size_t __width, void *,
+     int (* _Nonnull __compar)(void *, const void *, const void *))
+     __attribute__((availability(ios,introduced=3.2)));
+void qsort_b(void * __base, size_t __nel, size_t __width,
+     int (^ _Nonnull __compar)(const void *, const void *) __attribute__((__noescape__)))
+     __attribute__((availability(ios,introduced=3.2)));
+void qsort_r(void * __base, size_t __nel, size_t __width, void *,
+     int (* _Nonnull __compar)(void *, const void *, const void *));
+int radixsort(const unsigned char * * __base, int __nel, const unsigned char * __table,
+     unsigned __endbyte);
+int rpmatch(const char *)
+ __attribute__((availability(macos,introduced=10.15))) __attribute__((availability(ios,introduced=13.0))) __attribute__((availability(tvos,introduced=13.0))) __attribute__((availability(watchos,introduced=6.0)));
+int sradixsort(const unsigned char * * __base, int __nel, const unsigned char * __table,
+     unsigned __endbyte);
+void sranddev(void);
+void srandomdev(void);
+long long
+ strtonum(const char *__numstr, long long __minval, long long __maxval, const char * *__errstrp)
+ __attribute__((availability(macos,introduced=11.0))) __attribute__((availability(ios,introduced=14.0))) __attribute__((availability(tvos,introduced=14.0))) __attribute__((availability(watchos,introduced=7.0)));
+long long
+  strtoq(const char *__str, char * *__endptr, int __base);
+unsigned long long
+  strtouq(const char *__str, char * *__endptr, int __base);
+extern char * suboptarg;
+typedef int jmp_buf[((14 + 8 + 2) * 2)];
+typedef int sigjmp_buf[((14 + 8 + 2) * 2) + 1];
+extern int setjmp(jmp_buf);
+extern void longjmp(jmp_buf, int) __attribute__((__noreturn__));
+int _setjmp(jmp_buf);
+void _longjmp(jmp_buf, int) __attribute__((__noreturn__));
+int sigsetjmp(sigjmp_buf, int);
+void siglongjmp(sigjmp_buf, int) __attribute__((__noreturn__));
+void longjmperror(void);
+typedef __builtin_va_list __gnuc_va_list;
+typedef __builtin_va_list va_list;
+
+ typedef signed short FT_Int16;
+  typedef unsigned short FT_UInt16;
+  typedef signed int FT_Int32;
+  typedef unsigned int FT_UInt32;
+  typedef int FT_Fast;
+  typedef unsigned int FT_UFast;
+  typedef long FT_Int64;
+  typedef unsigned long FT_UInt64;
+extern int * __error(void);
+
+ typedef struct FT_MemoryRec_* FT_Memory;
+  typedef void*
+  (*FT_Alloc_Func)( FT_Memory memory,
+                    long size );
+  typedef void
+  (*FT_Free_Func)( FT_Memory memory,
+                   void* block );
+  typedef void*
+  (*FT_Realloc_Func)( FT_Memory memory,
+                      long cur_size,
+                      long new_size,
+                      void* block );
+  struct FT_MemoryRec_
+  {
+    void* user;
+    FT_Alloc_Func alloc;
+    FT_Free_Func free;
+    FT_Realloc_Func realloc;
+  };
+  typedef struct FT_StreamRec_* FT_Stream;
+  typedef union FT_StreamDesc_
+  {
+    long value;
+    void* pointer;
+  } FT_StreamDesc;
+  typedef unsigned long
+  (*FT_Stream_IoFunc)( FT_Stream stream,
+                       unsigned long offset,
+                       unsigned char* buffer,
+                       unsigned long count );
+  typedef void
+  (*FT_Stream_CloseFunc)( FT_Stream stream );
+  typedef struct FT_StreamRec_
+  {
+    unsigned char* base;
+    unsigned long size;
+    unsigned long pos;
+    FT_StreamDesc descriptor;
+    FT_StreamDesc pathname;
+    FT_Stream_IoFunc read;
+    FT_Stream_CloseFunc close;
+    FT_Memory memory;
+    unsigned char* cursor;
+    unsigned char* limit;
+  } FT_StreamRec;
+ typedef signed long FT_Pos;
+  typedef struct FT_Vector_
+  {
+    FT_Pos x;
+    FT_Pos y;
+  } FT_Vector;
+  typedef struct FT_BBox_
+  {
+    FT_Pos xMin, yMin;
+    FT_Pos xMax, yMax;
+  } FT_BBox;
+  typedef enum FT_Pixel_Mode_
+  {
+    FT_PIXEL_MODE_NONE = 0,
+    FT_PIXEL_MODE_MONO,
+    FT_PIXEL_MODE_GRAY,
+    FT_PIXEL_MODE_GRAY2,
+    FT_PIXEL_MODE_GRAY4,
+    FT_PIXEL_MODE_LCD,
+    FT_PIXEL_MODE_LCD_V,
+    FT_PIXEL_MODE_BGRA,
+    FT_PIXEL_MODE_MAX
+  } FT_Pixel_Mode;
+  typedef struct FT_Bitmap_
+  {
+    unsigned int rows;
+    unsigned int width;
+    int pitch;
+    unsigned char* buffer;
+    unsigned short num_grays;
+    unsigned char pixel_mode;
+    unsigned char palette_mode;
+    void* palette;
+  } FT_Bitmap;
+  typedef struct FT_Outline_
+  {
+    unsigned short n_contours;
+    unsigned short n_points;
+    FT_Vector* points;
+    unsigned char* tags;
+    unsigned short* contours;
+    int flags;
+  } FT_Outline;
+  typedef int
+  (*FT_Outline_MoveToFunc)( const FT_Vector* to,
+                            void* user );
+  typedef int
+  (*FT_Outline_LineToFunc)( const FT_Vector* to,
+                            void* user );
+  typedef int
+  (*FT_Outline_ConicToFunc)( const FT_Vector* control,
+                             const FT_Vector* to,
+                             void* user );
+  typedef int
+  (*FT_Outline_CubicToFunc)( const FT_Vector* control1,
+                             const FT_Vector* control2,
+                             const FT_Vector* to,
+                             void* user );
+  typedef struct FT_Outline_Funcs_
+  {
+    FT_Outline_MoveToFunc move_to;
+    FT_Outline_LineToFunc line_to;
+    FT_Outline_ConicToFunc conic_to;
+    FT_Outline_CubicToFunc cubic_to;
+    int shift;
+    FT_Pos delta;
+  } FT_Outline_Funcs;
+  typedef enum FT_Glyph_Format_
+  {
+    FT_GLYPH_FORMAT_NONE = ( ( (unsigned long)(unsigned char)(0) << 24 ) | ( (unsigned long)(unsigned char)(0) << 16 ) | ( (unsigned long)(unsigned char)(0) << 8 ) | (unsigned long)(unsigned char)(0) ),
+    FT_GLYPH_FORMAT_COMPOSITE = ( ( (unsigned long)(unsigned char)('c') << 24 ) | ( (unsigned long)(unsigned char)('o') << 16 ) | ( (unsigned long)(unsigned char)('m') << 8 ) | (unsigned long)(unsigned char)('p') ),
+    FT_GLYPH_FORMAT_BITMAP = ( ( (unsigned long)(unsigned char)('b') << 24 ) | ( (unsigned long)(unsigned char)('i') << 16 ) | ( (unsigned long)(unsigned char)('t') << 8 ) | (unsigned long)(unsigned char)('s') ),
+    FT_GLYPH_FORMAT_OUTLINE = ( ( (unsigned long)(unsigned char)('o') << 24 ) | ( (unsigned long)(unsigned char)('u') << 16 ) | ( (unsigned long)(unsigned char)('t') << 8 ) | (unsigned long)(unsigned char)('l') ),
+    FT_GLYPH_FORMAT_PLOTTER = ( ( (unsigned long)(unsigned char)('p') << 24 ) | ( (unsigned long)(unsigned char)('l') << 16 ) | ( (unsigned long)(unsigned char)('o') << 8 ) | (unsigned long)(unsigned char)('t') ),
+    FT_GLYPH_FORMAT_SVG = ( ( (unsigned long)(unsigned char)('S') << 24 ) | ( (unsigned long)(unsigned char)('V') << 16 ) | ( (unsigned long)(unsigned char)('G') << 8 ) | (unsigned long)(unsigned char)(' ') )
+  } FT_Glyph_Format;
+  typedef struct FT_Span_
+  {
+    short x;
+    unsigned short len;
+    unsigned char coverage;
+  } FT_Span;
+  typedef void
+  (*FT_SpanFunc)( int y,
+                  int count,
+                  const FT_Span* spans,
+                  void* user );
+  typedef int
+  (*FT_Raster_BitTest_Func)( int y,
+                             int x,
+                             void* user );
+  typedef void
+  (*FT_Raster_BitSet_Func)( int y,
+                            int x,
+                            void* user );
+  typedef struct FT_Raster_Params_
+  {
+    const FT_Bitmap* target;
+    const void* source;
+    int flags;
+    FT_SpanFunc gray_spans;
+    FT_SpanFunc black_spans;
+    FT_Raster_BitTest_Func bit_test;
+    FT_Raster_BitSet_Func bit_set;
+    void* user;
+    FT_BBox clip_box;
+  } FT_Raster_Params;
+  typedef struct FT_RasterRec_* FT_Raster;
+  typedef int
+  (*FT_Raster_NewFunc)( void* memory,
+                        FT_Raster* raster );
+  typedef void
+  (*FT_Raster_DoneFunc)( FT_Raster raster );
+  typedef void
+  (*FT_Raster_ResetFunc)( FT_Raster raster,
+                          unsigned char* pool_base,
+                          unsigned long pool_size );
+  typedef int
+  (*FT_Raster_SetModeFunc)( FT_Raster raster,
+                            unsigned long mode,
+                            void* args );
+  typedef int
+  (*FT_Raster_RenderFunc)( FT_Raster raster,
+                           const FT_Raster_Params* params );
+  typedef struct FT_Raster_Funcs_
+  {
+    FT_Glyph_Format glyph_format;
+    FT_Raster_NewFunc raster_new;
+    FT_Raster_ResetFunc raster_reset;
+    FT_Raster_SetModeFunc raster_set_mode;
+    FT_Raster_RenderFunc raster_render;
+    FT_Raster_DoneFunc raster_done;
+  } FT_Raster_Funcs;
+
+ typedef unsigned char FT_Bool;
+  typedef signed short FT_FWord;
+  typedef unsigned short FT_UFWord;
+  typedef signed char FT_Char;
+  typedef unsigned char FT_Byte;
+  typedef const FT_Byte* FT_Bytes;
+  typedef FT_UInt32 FT_Tag;
+  typedef char FT_String;
+  typedef signed short FT_Short;
+  typedef unsigned short FT_UShort;
+  typedef signed int FT_Int;
+  typedef unsigned int FT_UInt;
+  typedef signed long FT_Long;
+  typedef unsigned long FT_ULong;
+  typedef signed short FT_F2Dot14;
+  typedef signed long FT_F26Dot6;
+  typedef signed long FT_Fixed;
+  typedef int FT_Error;
+  typedef void* FT_Pointer;
+  typedef size_t FT_Offset;
+  typedef ptrdiff_t FT_PtrDist;
+  typedef struct FT_UnitVector_
+  {
+    FT_F2Dot14 x;
+    FT_F2Dot14 y;
+  } FT_UnitVector;
+  typedef struct FT_Matrix_
+  {
+    FT_Fixed xx, xy;
+    FT_Fixed yx, yy;
+  } FT_Matrix;
+  typedef struct FT_Data_
+  {
+    const FT_Byte* pointer;
+    FT_UInt length;
+  } FT_Data;
+  typedef void (*FT_Generic_Finalizer)( void* object );
+  typedef struct FT_Generic_
+  {
+    void* data;
+    FT_Generic_Finalizer finalizer;
+  } FT_Generic;
+  typedef struct FT_ListNodeRec_* FT_ListNode;
+  typedef struct FT_ListRec_* FT_List;
+  typedef struct FT_ListNodeRec_
+  {
+    FT_ListNode prev;
+    FT_ListNode next;
+    void* data;
+  } FT_ListNodeRec;
+  typedef struct FT_ListRec_
+  {
+    FT_ListNode head;
+    FT_ListNode tail;
+  } FT_ListRec;
+ enum {
+  FT_Mod_Err_Base = 0,
+  FT_Mod_Err_Autofit = 0,
+  FT_Mod_Err_BDF = 0,
+  FT_Mod_Err_Bzip2 = 0,
+  FT_Mod_Err_Cache = 0,
+  FT_Mod_Err_CFF = 0,
+  FT_Mod_Err_CID = 0,
+  FT_Mod_Err_Gzip = 0,
+  FT_Mod_Err_LZW = 0,
+  FT_Mod_Err_OTvalid = 0,
+  FT_Mod_Err_PCF = 0,
+  FT_Mod_Err_PFR = 0,
+  FT_Mod_Err_PSaux = 0,
+  FT_Mod_Err_PShinter = 0,
+  FT_Mod_Err_PSnames = 0,
+  FT_Mod_Err_Raster = 0,
+  FT_Mod_Err_SFNT = 0,
+  FT_Mod_Err_Smooth = 0,
+  FT_Mod_Err_TrueType = 0,
+  FT_Mod_Err_Type1 = 0,
+  FT_Mod_Err_Type42 = 0,
+  FT_Mod_Err_Winfonts = 0,
+  FT_Mod_Err_GXvalid = 0,
+  FT_Mod_Err_Sdf = 0,
+  FT_Mod_Err_Max };
+ enum {
+ FT_Err_Ok = 0x00,
+  FT_Err_Cannot_Open_Resource = 0x01 + 0,
+  FT_Err_Unknown_File_Format = 0x02 + 0,
+  FT_Err_Invalid_File_Format = 0x03 + 0,
+  FT_Err_Invalid_Version = 0x04 + 0,
+  FT_Err_Lower_Module_Version = 0x05 + 0,
+  FT_Err_Invalid_Argument = 0x06 + 0,
+  FT_Err_Unimplemented_Feature = 0x07 + 0,
+  FT_Err_Invalid_Table = 0x08 + 0,
+  FT_Err_Invalid_Offset = 0x09 + 0,
+  FT_Err_Array_Too_Large = 0x0A + 0,
+  FT_Err_Missing_Module = 0x0B + 0,
+  FT_Err_Missing_Property = 0x0C + 0,
+  FT_Err_Invalid_Glyph_Index = 0x10 + 0,
+  FT_Err_Invalid_Character_Code = 0x11 + 0,
+  FT_Err_Invalid_Glyph_Format = 0x12 + 0,
+  FT_Err_Cannot_Render_Glyph = 0x13 + 0,
+  FT_Err_Invalid_Outline = 0x14 + 0,
+  FT_Err_Invalid_Composite = 0x15 + 0,
+  FT_Err_Too_Many_Hints = 0x16 + 0,
+  FT_Err_Invalid_Pixel_Size = 0x17 + 0,
+  FT_Err_Invalid_SVG_Document = 0x18 + 0,
+  FT_Err_Invalid_Handle = 0x20 + 0,
+  FT_Err_Invalid_Library_Handle = 0x21 + 0,
+  FT_Err_Invalid_Driver_Handle = 0x22 + 0,
+  FT_Err_Invalid_Face_Handle = 0x23 + 0,
+  FT_Err_Invalid_Size_Handle = 0x24 + 0,
+  FT_Err_Invalid_Slot_Handle = 0x25 + 0,
+  FT_Err_Invalid_CharMap_Handle = 0x26 + 0,
+  FT_Err_Invalid_Cache_Handle = 0x27 + 0,
+  FT_Err_Invalid_Stream_Handle = 0x28 + 0,
+  FT_Err_Too_Many_Drivers = 0x30 + 0,
+  FT_Err_Too_Many_Extensions = 0x31 + 0,
+  FT_Err_Out_Of_Memory = 0x40 + 0,
+  FT_Err_Unlisted_Object = 0x41 + 0,
+  FT_Err_Cannot_Open_Stream = 0x51 + 0,
+  FT_Err_Invalid_Stream_Seek = 0x52 + 0,
+  FT_Err_Invalid_Stream_Skip = 0x53 + 0,
+  FT_Err_Invalid_Stream_Read = 0x54 + 0,
+  FT_Err_Invalid_Stream_Operation = 0x55 + 0,
+  FT_Err_Invalid_Frame_Operation = 0x56 + 0,
+  FT_Err_Nested_Frame_Access = 0x57 + 0,
+  FT_Err_Invalid_Frame_Read = 0x58 + 0,
+  FT_Err_Raster_Uninitialized = 0x60 + 0,
+  FT_Err_Raster_Corrupted = 0x61 + 0,
+  FT_Err_Raster_Overflow = 0x62 + 0,
+  FT_Err_Raster_Negative_Height = 0x63 + 0,
+  FT_Err_Too_Many_Caches = 0x70 + 0,
+  FT_Err_Invalid_Opcode = 0x80 + 0,
+  FT_Err_Too_Few_Arguments = 0x81 + 0,
+  FT_Err_Stack_Overflow = 0x82 + 0,
+  FT_Err_Code_Overflow = 0x83 + 0,
+  FT_Err_Bad_Argument = 0x84 + 0,
+  FT_Err_Divide_By_Zero = 0x85 + 0,
+  FT_Err_Invalid_Reference = 0x86 + 0,
+  FT_Err_Debug_OpCode = 0x87 + 0,
+  FT_Err_ENDF_In_Exec_Stream = 0x88 + 0,
+  FT_Err_Nested_DEFS = 0x89 + 0,
+  FT_Err_Invalid_CodeRange = 0x8A + 0,
+  FT_Err_Execution_Too_Long = 0x8B + 0,
+  FT_Err_Too_Many_Function_Defs = 0x8C + 0,
+  FT_Err_Too_Many_Instruction_Defs = 0x8D + 0,
+  FT_Err_Table_Missing = 0x8E + 0,
+  FT_Err_Horiz_Header_Missing = 0x8F + 0,
+  FT_Err_Locations_Missing = 0x90 + 0,
+  FT_Err_Name_Table_Missing = 0x91 + 0,
+  FT_Err_CMap_Table_Missing = 0x92 + 0,
+  FT_Err_Hmtx_Table_Missing = 0x93 + 0,
+  FT_Err_Post_Table_Missing = 0x94 + 0,
+  FT_Err_Invalid_Horiz_Metrics = 0x95 + 0,
+  FT_Err_Invalid_CharMap_Format = 0x96 + 0,
+  FT_Err_Invalid_PPem = 0x97 + 0,
+  FT_Err_Invalid_Vert_Metrics = 0x98 + 0,
+  FT_Err_Could_Not_Find_Context = 0x99 + 0,
+  FT_Err_Invalid_Post_Table_Format = 0x9A + 0,
+  FT_Err_Invalid_Post_Table = 0x9B + 0,
+  FT_Err_DEF_In_Glyf_Bytecode = 0x9C + 0,
+  FT_Err_Missing_Bitmap = 0x9D + 0,
+  FT_Err_Missing_SVG_Hooks = 0x9E + 0,
+  FT_Err_Syntax_Error = 0xA0 + 0,
+  FT_Err_Stack_Underflow = 0xA1 + 0,
+  FT_Err_Ignore = 0xA2 + 0,
+  FT_Err_No_Unicode_Glyph_Name = 0xA3 + 0,
+  FT_Err_Glyph_Too_Big = 0xA4 + 0,
+  FT_Err_Missing_Startfont_Field = 0xB0 + 0,
+  FT_Err_Missing_Font_Field = 0xB1 + 0,
+  FT_Err_Missing_Size_Field = 0xB2 + 0,
+  FT_Err_Missing_Fontboundingbox_Field = 0xB3 + 0,
+  FT_Err_Missing_Chars_Field = 0xB4 + 0,
+  FT_Err_Missing_Startchar_Field = 0xB5 + 0,
+  FT_Err_Missing_Encoding_Field = 0xB6 + 0,
+  FT_Err_Missing_Bbx_Field = 0xB7 + 0,
+  FT_Err_Bbx_Too_Big = 0xB8 + 0,
+  FT_Err_Corrupted_Font_Header = 0xB9 + 0,
+  FT_Err_Corrupted_Font_Glyphs = 0xBA + 0,
+ FT_Err_Max };
+  __attribute__(( visibility( "default" ) )) extern const char*
+  FT_Error_String( FT_Error error_code );
+ typedef struct FT_Glyph_Metrics_
+  {
+    FT_Pos width;
+    FT_Pos height;
+    FT_Pos horiBearingX;
+    FT_Pos horiBearingY;
+    FT_Pos horiAdvance;
+    FT_Pos vertBearingX;
+    FT_Pos vertBearingY;
+    FT_Pos vertAdvance;
+  } FT_Glyph_Metrics;
+  typedef struct FT_Bitmap_Size_
+  {
+    FT_Short height;
+    FT_Short width;
+    FT_Pos size;
+    FT_Pos x_ppem;
+    FT_Pos y_ppem;
+  } FT_Bitmap_Size;
+  typedef struct FT_LibraryRec_ *FT_Library;
+  typedef struct FT_ModuleRec_* FT_Module;
+  typedef struct FT_DriverRec_* FT_Driver;
+  typedef struct FT_RendererRec_* FT_Renderer;
+  typedef struct FT_FaceRec_* FT_Face;
+  typedef struct FT_SizeRec_* FT_Size;
+  typedef struct FT_GlyphSlotRec_* FT_GlyphSlot;
+  typedef struct FT_CharMapRec_* FT_CharMap;
+  typedef enum FT_Encoding_
+  {
+    FT_ENCODING_NONE = ( ( (FT_UInt32)(unsigned char)(0) << 24 ) | ( (FT_UInt32)(unsigned char)(0) << 16 ) | ( (FT_UInt32)(unsigned char)(0) << 8 ) | (FT_UInt32)(unsigned char)(0) ),
+    FT_ENCODING_MS_SYMBOL = ( ( (FT_UInt32)(unsigned char)('s') << 24 ) | ( (FT_UInt32)(unsigned char)('y') << 16 ) | ( (FT_UInt32)(unsigned char)('m') << 8 ) | (FT_UInt32)(unsigned char)('b') ),
+    FT_ENCODING_UNICODE = ( ( (FT_UInt32)(unsigned char)('u') << 24 ) | ( (FT_UInt32)(unsigned char)('n') << 16 ) | ( (FT_UInt32)(unsigned char)('i') << 8 ) | (FT_UInt32)(unsigned char)('c') ),
+    FT_ENCODING_SJIS = ( ( (FT_UInt32)(unsigned char)('s') << 24 ) | ( (FT_UInt32)(unsigned char)('j') << 16 ) | ( (FT_UInt32)(unsigned char)('i') << 8 ) | (FT_UInt32)(unsigned char)('s') ),
+    FT_ENCODING_PRC = ( ( (FT_UInt32)(unsigned char)('g') << 24 ) | ( (FT_UInt32)(unsigned char)('b') << 16 ) | ( (FT_UInt32)(unsigned char)(' ') << 8 ) | (FT_UInt32)(unsigned char)(' ') ),
+    FT_ENCODING_BIG5 = ( ( (FT_UInt32)(unsigned char)('b') << 24 ) | ( (FT_UInt32)(unsigned char)('i') << 16 ) | ( (FT_UInt32)(unsigned char)('g') << 8 ) | (FT_UInt32)(unsigned char)('5') ),
+    FT_ENCODING_WANSUNG = ( ( (FT_UInt32)(unsigned char)('w') << 24 ) | ( (FT_UInt32)(unsigned char)('a') << 16 ) | ( (FT_UInt32)(unsigned char)('n') << 8 ) | (FT_UInt32)(unsigned char)('s') ),
+    FT_ENCODING_JOHAB = ( ( (FT_UInt32)(unsigned char)('j') << 24 ) | ( (FT_UInt32)(unsigned char)('o') << 16 ) | ( (FT_UInt32)(unsigned char)('h') << 8 ) | (FT_UInt32)(unsigned char)('a') ),
+    FT_ENCODING_GB2312 = FT_ENCODING_PRC,
+    FT_ENCODING_MS_SJIS = FT_ENCODING_SJIS,
+    FT_ENCODING_MS_GB2312 = FT_ENCODING_PRC,
+    FT_ENCODING_MS_BIG5 = FT_ENCODING_BIG5,
+    FT_ENCODING_MS_WANSUNG = FT_ENCODING_WANSUNG,
+    FT_ENCODING_MS_JOHAB = FT_ENCODING_JOHAB,
+    FT_ENCODING_ADOBE_STANDARD = ( ( (FT_UInt32)(unsigned char)('A') << 24 ) | ( (FT_UInt32)(unsigned char)('D') << 16 ) | ( (FT_UInt32)(unsigned char)('O') << 8 ) | (FT_UInt32)(unsigned char)('B') ),
+    FT_ENCODING_ADOBE_EXPERT = ( ( (FT_UInt32)(unsigned char)('A') << 24 ) | ( (FT_UInt32)(unsigned char)('D') << 16 ) | ( (FT_UInt32)(unsigned char)('B') << 8 ) | (FT_UInt32)(unsigned char)('E') ),
+    FT_ENCODING_ADOBE_CUSTOM = ( ( (FT_UInt32)(unsigned char)('A') << 24 ) | ( (FT_UInt32)(unsigned char)('D') << 16 ) | ( (FT_UInt32)(unsigned char)('B') << 8 ) | (FT_UInt32)(unsigned char)('C') ),
+    FT_ENCODING_ADOBE_LATIN_1 = ( ( (FT_UInt32)(unsigned char)('l') << 24 ) | ( (FT_UInt32)(unsigned char)('a') << 16 ) | ( (FT_UInt32)(unsigned char)('t') << 8 ) | (FT_UInt32)(unsigned char)('1') ),
+    FT_ENCODING_OLD_LATIN_2 = ( ( (FT_UInt32)(unsigned char)('l') << 24 ) | ( (FT_UInt32)(unsigned char)('a') << 16 ) | ( (FT_UInt32)(unsigned char)('t') << 8 ) | (FT_UInt32)(unsigned char)('2') ),
+    FT_ENCODING_APPLE_ROMAN = ( ( (FT_UInt32)(unsigned char)('a') << 24 ) | ( (FT_UInt32)(unsigned char)('r') << 16 ) | ( (FT_UInt32)(unsigned char)('m') << 8 ) | (FT_UInt32)(unsigned char)('n') )
+  } FT_Encoding;
+  typedef struct FT_CharMapRec_
+  {
+    FT_Face face;
+    FT_Encoding encoding;
+    FT_UShort platform_id;
+    FT_UShort encoding_id;
+  } FT_CharMapRec;
+  typedef struct FT_Face_InternalRec_* FT_Face_Internal;
+  typedef struct FT_FaceRec_
+  {
+    FT_Long num_faces;
+    FT_Long face_index;
+    FT_Long face_flags;
+    FT_Long style_flags;
+    FT_Long num_glyphs;
+    FT_String* family_name;
+    FT_String* style_name;
+    FT_Int num_fixed_sizes;
+    FT_Bitmap_Size* available_sizes;
+    FT_Int num_charmaps;
+    FT_CharMap* charmaps;
+    FT_Generic generic;
+    FT_BBox bbox;
+    FT_UShort units_per_EM;
+    FT_Short ascender;
+    FT_Short descender;
+    FT_Short height;
+    FT_Short max_advance_width;
+    FT_Short max_advance_height;
+    FT_Short underline_position;
+    FT_Short underline_thickness;
+    FT_GlyphSlot glyph;
+    FT_Size size;
+    FT_CharMap charmap;
+    FT_Driver driver;
+    FT_Memory memory;
+    FT_Stream stream;
+    FT_ListRec sizes_list;
+    FT_Generic autohint;
+    void* extensions;
+    FT_Face_Internal internal;
+  } FT_FaceRec;
+  typedef struct FT_Size_InternalRec_* FT_Size_Internal;
+  typedef struct FT_Size_Metrics_
+  {
+    FT_UShort x_ppem;
+    FT_UShort y_ppem;
+    FT_Fixed x_scale;
+    FT_Fixed y_scale;
+    FT_Pos ascender;
+    FT_Pos descender;
+    FT_Pos height;
+    FT_Pos max_advance;
+  } FT_Size_Metrics;
+  typedef struct FT_SizeRec_
+  {
+    FT_Face face;
+    FT_Generic generic;
+    FT_Size_Metrics metrics;
+    FT_Size_Internal internal;
+  } FT_SizeRec;
+  typedef struct FT_SubGlyphRec_* FT_SubGlyph;
+  typedef struct FT_Slot_InternalRec_* FT_Slot_Internal;
+  typedef struct FT_GlyphSlotRec_
+  {
+    FT_Library library;
+    FT_Face face;
+    FT_GlyphSlot next;
+    FT_UInt glyph_index;
+    FT_Generic generic;
+    FT_Glyph_Metrics metrics;
+    FT_Fixed linearHoriAdvance;
+    FT_Fixed linearVertAdvance;
+    FT_Vector advance;
+    FT_Glyph_Format format;
+    FT_Bitmap bitmap;
+    FT_Int bitmap_left;
+    FT_Int bitmap_top;
+    FT_Outline outline;
+    FT_UInt num_subglyphs;
+    FT_SubGlyph subglyphs;
+    void* control_data;
+    long control_len;
+    FT_Pos lsb_delta;
+    FT_Pos rsb_delta;
+    void* other;
+    FT_Slot_Internal internal;
+  } FT_GlyphSlotRec;
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Init_FreeType( FT_Library *alibrary );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Done_FreeType( FT_Library library );
+  typedef struct FT_Parameter_
+  {
+    FT_ULong tag;
+    FT_Pointer data;
+  } FT_Parameter;
+  typedef struct FT_Open_Args_
+  {
+    FT_UInt flags;
+    const FT_Byte* memory_base;
+    FT_Long memory_size;
+    FT_String* pathname;
+    FT_Stream stream;
+    FT_Module driver;
+    FT_Int num_params;
+    FT_Parameter* params;
+  } FT_Open_Args;
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_New_Face( FT_Library library,
+               const char* filepathname,
+               FT_Long face_index,
+               FT_Face *aface );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_New_Memory_Face( FT_Library library,
+                      const FT_Byte* file_base,
+                      FT_Long file_size,
+                      FT_Long face_index,
+                      FT_Face *aface );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Open_Face( FT_Library library,
+                const FT_Open_Args* args,
+                FT_Long face_index,
+                FT_Face *aface );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Attach_File( FT_Face face,
+                  const char* filepathname );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Attach_Stream( FT_Face face,
+                    const FT_Open_Args* parameters );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Reference_Face( FT_Face face );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Done_Face( FT_Face face );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Select_Size( FT_Face face,
+                  FT_Int strike_index );
+  typedef enum FT_Size_Request_Type_
+  {
+    FT_SIZE_REQUEST_TYPE_NOMINAL,
+    FT_SIZE_REQUEST_TYPE_REAL_DIM,
+    FT_SIZE_REQUEST_TYPE_BBOX,
+    FT_SIZE_REQUEST_TYPE_CELL,
+    FT_SIZE_REQUEST_TYPE_SCALES,
+    FT_SIZE_REQUEST_TYPE_MAX
+  } FT_Size_Request_Type;
+  typedef struct FT_Size_RequestRec_
+  {
+    FT_Size_Request_Type type;
+    FT_Long width;
+    FT_Long height;
+    FT_UInt horiResolution;
+    FT_UInt vertResolution;
+  } FT_Size_RequestRec;
+  typedef struct FT_Size_RequestRec_ *FT_Size_Request;
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Request_Size( FT_Face face,
+                   FT_Size_Request req );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Set_Char_Size( FT_Face face,
+                    FT_F26Dot6 char_width,
+                    FT_F26Dot6 char_height,
+                    FT_UInt horz_resolution,
+                    FT_UInt vert_resolution );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Set_Pixel_Sizes( FT_Face face,
+                      FT_UInt pixel_width,
+                      FT_UInt pixel_height );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Load_Glyph( FT_Face face,
+                 FT_UInt glyph_index,
+                 FT_Int32 load_flags );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Load_Char( FT_Face face,
+                FT_ULong char_code,
+                FT_Int32 load_flags );
+  __attribute__(( visibility( "default" ) )) extern void
+  FT_Set_Transform( FT_Face face,
+                    FT_Matrix* matrix,
+                    FT_Vector* delta );
+  __attribute__(( visibility( "default" ) )) extern void
+  FT_Get_Transform( FT_Face face,
+                    FT_Matrix* matrix,
+                    FT_Vector* delta );
+  typedef enum FT_Render_Mode_
+  {
+    FT_RENDER_MODE_NORMAL = 0,
+    FT_RENDER_MODE_LIGHT,
+    FT_RENDER_MODE_MONO,
+    FT_RENDER_MODE_LCD,
+    FT_RENDER_MODE_LCD_V,
+    FT_RENDER_MODE_SDF,
+    FT_RENDER_MODE_MAX
+  } FT_Render_Mode;
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Render_Glyph( FT_GlyphSlot slot,
+                   FT_Render_Mode render_mode );
+  typedef enum FT_Kerning_Mode_
+  {
+    FT_KERNING_DEFAULT = 0,
+    FT_KERNING_UNFITTED,
+    FT_KERNING_UNSCALED
+  } FT_Kerning_Mode;
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Get_Kerning( FT_Face face,
+                  FT_UInt left_glyph,
+                  FT_UInt right_glyph,
+                  FT_UInt kern_mode,
+                  FT_Vector *akerning );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Get_Track_Kerning( FT_Face face,
+                        FT_Fixed point_size,
+                        FT_Int degree,
+                        FT_Fixed* akerning );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Select_Charmap( FT_Face face,
+                     FT_Encoding encoding );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Set_Charmap( FT_Face face,
+                  FT_CharMap charmap );
+  __attribute__(( visibility( "default" ) )) extern FT_Int
+  FT_Get_Charmap_Index( FT_CharMap charmap );
+  __attribute__(( visibility( "default" ) )) extern FT_UInt
+  FT_Get_Char_Index( FT_Face face,
+                     FT_ULong charcode );
+  __attribute__(( visibility( "default" ) )) extern FT_ULong
+  FT_Get_First_Char( FT_Face face,
+                     FT_UInt *agindex );
+  __attribute__(( visibility( "default" ) )) extern FT_ULong
+  FT_Get_Next_Char( FT_Face face,
+                    FT_ULong char_code,
+                    FT_UInt *agindex );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Face_Properties( FT_Face face,
+                      FT_UInt num_properties,
+                      FT_Parameter* properties );
+  __attribute__(( visibility( "default" ) )) extern FT_UInt
+  FT_Get_Name_Index( FT_Face face,
+                     const FT_String* glyph_name );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Get_Glyph_Name( FT_Face face,
+                     FT_UInt glyph_index,
+                     FT_Pointer buffer,
+                     FT_UInt buffer_max );
+  __attribute__(( visibility( "default" ) )) extern const char*
+  FT_Get_Postscript_Name( FT_Face face );
+  __attribute__(( visibility( "default" ) )) extern FT_Error
+  FT_Get_SubGlyph_Info( FT_GlyphSlot glyph,
+                        FT_UInt sub_index,
+                        FT_Int *p_index,
+                        FT_UInt *p_flags,
+                        FT_Int *p_arg1,
+                        FT_Int *p_arg2,
+                        FT_Matrix *p_transform );
+  __attribute__(( visibility( "default" ) )) extern FT_UShort
+  FT_Get_FSType_Flags( FT_Face face );
+  __attribute__(( visibility( "default" ) )) extern FT_UInt
+  FT_Face_GetCharVariantIndex( FT_Face face,
+                               FT_ULong charcode,
+                               FT_ULong variantSelector );
+  __attribute__(( visibility( "default" ) )) extern FT_Int
+  FT_Face_GetCharVariantIsDefault( FT_Face face,
+                                   FT_ULong charcode,
+                                   FT_ULong variantSelector );
+  __attribute__(( visibility( "default" ) )) extern FT_UInt32*
+  FT_Face_GetVariantSelectors( FT_Face face );
+  __attribute__(( visibility( "default" ) )) extern FT_UInt32*
+  FT_Face_GetVariantsOfChar( FT_Face face,
+                             FT_ULong charcode );
+  __attribute__(( visibility( "default" ) )) extern FT_UInt32*
+  FT_Face_GetCharsOfVariant( FT_Face face,
+                             FT_ULong variantSelector );
+  __attribute__(( visibility( "default" ) )) extern FT_Long
+  FT_MulDiv( FT_Long a,
+             FT_Long b,
+             FT_Long c );
+  __attribute__(( visibility( "default" ) )) extern FT_Long
+  FT_MulFix( FT_Long a,
+             FT_Long b );
+  __attribute__(( visibility( "default" ) )) extern FT_Long
+  FT_DivFix( FT_Long a,
+             FT_Long b );
+  __attribute__(( visibility( "default" ) )) extern FT_Fixed
+  FT_RoundFix( FT_Fixed a );
+  __attribute__(( visibility( "default" ) )) extern FT_Fixed
+  FT_CeilFix( FT_Fixed a );
+  __attribute__(( visibility( "default" ) )) extern FT_Fixed
+  FT_FloorFix( FT_Fixed a );
+  __attribute__(( visibility( "default" ) )) extern void
+  FT_Vector_Transform( FT_Vector* vector,
+                       const FT_Matrix* matrix );
+  __attribute__(( visibility( "default" ) )) extern void
+  FT_Library_Version( FT_Library library,
+                      FT_Int *amajor,
+                      FT_Int *aminor,
+                      FT_Int *apatch );
+  __attribute__(( visibility( "default" ) )) extern FT_Bool
+  FT_Face_CheckTrueTypePatents( FT_Face face );
+  __attribute__(( visibility( "default" ) )) extern FT_Bool
+  FT_Face_SetUnpatentedHinting( FT_Face face,
+                                FT_Bool value );
+ "MESON_GET_DEFINE_DELIMITER_START"
+( 1L << 24 )
+"MESON_GET_DEFINE_DELIMITER_END"
+-----------
+Checking if define "FT_LOAD_NO_SVG" with dependency freetype2 exists: YES 
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp3cfvmzct
+Code:
+
+        #define FT_Get_Color_Glyph_Paint meson_disable_define_of_FT_Get_Color_Glyph_Paint
+        
+        #include <limits.h>
+        #undef FT_Get_Color_Glyph_Paint
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char FT_Get_Color_Glyph_Paint (void);
+        
+        #if defined __stub_FT_Get_Color_Glyph_Paint || defined __stub___FT_Get_Color_Glyph_Paint
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return FT_Get_Color_Glyph_Paint ();
+        }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp3cfvmzct/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmp3cfvmzct/output.exe -DG_INTL_STATIC_COMPILATION -DPCRE2_STATIC -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -std=gnu11 -Wl,-no_weak_imports /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfreetype.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng16.a -lz /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.a -liconv -lm /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpcre2-8.a` -> 0
+Checking for function "FT_Get_Color_Glyph_Paint" with dependency freetype2: YES 
+Dependency x11 for host machine skipped: feature xlib disabled
+Dependency xext for host machine skipped: feature xlib disabled
+Dependency xcb for host machine skipped: feature xcb disabled
+Dependency xcb-render for host machine skipped: feature xcb disabled
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr_4fqu21
+Code:
+int main(void) { return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr_4fqu21/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr_4fqu21/output.exe -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -framework CoreFoundation` -> 0
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpkciz8mfm
+Code:
+int main(void) { return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpkciz8mfm/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpkciz8mfm/output.exe -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -framework ApplicationServices` -> 1
+stderr:
+ld: framework 'ApplicationServices' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+-----------
+Run-time dependency appleframeworks found: NO  (tried framework)
+
+cairo-src/meson.build:454:16: ERROR: Dependency "appleframeworks" not found (tried framework)
+
+::endgroup::
+
