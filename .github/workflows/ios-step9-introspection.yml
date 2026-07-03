@@ -74,6 +74,13 @@ jobs:
           echo "SIM_UDID=$UDID" >> "$GITHUB_ENV"
           echo "EXE_WRAPPER=${GITHUB_WORKSPACE}/ios/scripts/sim-run.sh" >> "$GITHUB_ENV"
           echo "SIMCTL_CHILD_DYLD_LIBRARY_PATH=${GITHUB_WORKSPACE}/ios-out/lib" >> "$GITHUB_ENV"
+          # g-ir-scanner spawns the dumper DIRECTLY (it does not use the
+          # meson exe_wrapper). Simulator CLI binaries run natively on
+          # macOS if DYLD_ROOT_PATH points at the simulator runtime root.
+          RUNTIME_ROOT=$(xcrun simctl list runtimes -j | python3 -c "import json,sys; rs=[r for r in json.load(sys.stdin)['runtimes'] if r.get('platform')=='iOS' and r.get('isAvailable')]; print(rs[-1]['runtimeRoot'])")
+          echo "runtime root: $RUNTIME_ROOT"
+          test -d "$RUNTIME_ROOT"
+          echo "DYLD_ROOT_PATH=$RUNTIME_ROOT" >> "$GITHUB_ENV"
           chmod +x ios/scripts/sim-run.sh
           # smoke: wrapper can run a simulator binary (use sim's own /bin/ls? spawn runs host-path binaries built for sim; test with true)
           xcrun simctl spawn "$UDID" /usr/bin/true && echo "spawn works"
