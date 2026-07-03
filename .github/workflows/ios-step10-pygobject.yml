@@ -179,7 +179,10 @@ jobs:
           # build path). Applies to every target — fine, this cross file only
           # builds the two python extensions. The common_flags line is:
           #   common_flags = ['-arch', 'arm64', '-isysroot', sdkroot, ios_min]
-          sed -i '' "s|ios_min]|ios_min, '-I${PYINC}']|" "${GITHUB_WORKSPACE}/cross-pfx.txt"
+          # -I: iOS Python headers (sysconfig INCLUDEPY is a stale build
+          # path); -F: the real framework dir (sysconfig PYTHONFRAMEWORKPREFIX
+          # is equally stale -> 'framework Python not found' at link).
+          sed -i '' "s|ios_min]|ios_min, '-I${PYINC}', '-F${SIM_SLICE}']|" "${GITHUB_WORKSPACE}/cross-pfx.txt"
           grep "common_flags" "${GITHUB_WORKSPACE}/cross-pfx.txt"
 
           # Cross file fragment selecting the host python3.13 as the
