@@ -164,6 +164,7 @@ jobs:
             -Dtests=false -Dinstalled_tests=false -Dintrospection=enabled \
             -Dgtk_doc=false -Dgobject_types=true -Dsse2=false -Darm_neon=true \
             2>&1 | tee graphene.log
+          ninja -k0 -C graphene-build 2>&1 | tee -a graphene.log || true
           ninja -C graphene-build install 2>&1 | tee -a graphene.log
 
           PIXBUF_MAJMIN="$(echo "${GDK_PIXBUF_VERSION}" | cut -d. -f1,2)"
@@ -182,6 +183,7 @@ jobs:
             -Dthumbnailer=disabled -Dintrospection=enabled \
             -Drelocatable=true \
             2>&1 | tee pixbuf.log
+          ninja -k0 -C pixbuf-build 2>&1 | tee -a pixbuf.log || true
           ninja -C pixbuf-build install 2>&1 | tee -a pixbuf.log
 
           curl -fL --retry 3 -o tiff.tar.gz \
@@ -385,7 +387,8 @@ jobs:
           RUN_ID="${GITHUB_RUN_ID}"
           OUT="ci-logs/step9/run-${RUN_ID}"
           rm -rf _cilogs && mkdir -p "_cilogs/${OUT}"
-          for f in base-stack.log gtk-setup.log gtk-build.log adw-setup.log \
+          for f in base-stack.log jpeg.log graphene.log pixbuf.log tiff.log epoxy.log \
+                   gtk-setup.log gtk-build.log gtk-install.log adw-setup.log \
                    adw-build.log adw-install.log typelibs.txt girs.txt; do
             [ -f "$f" ] && cp "$f" "_cilogs/${OUT}/$(echo "$f" | tr '/' '_')" || true
           done
