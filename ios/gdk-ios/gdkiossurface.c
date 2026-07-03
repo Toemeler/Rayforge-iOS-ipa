@@ -161,8 +161,17 @@ static void
 gdk_ios_surface_constructed (GObject *object)
 {
   GdkIOSSurface *self = GDK_IOS_SURFACE (object);
+  GdkSurface *surface = GDK_SURFACE (object);
+  GdkFrameClock *frame_clock;
 
   self->scale = gdk_ios_shell_get_scale ();
+
+  /* Every surface needs a frame clock before gtk_native_realize();
+   * same pattern as the android backend (idle clock driven by the
+   * GLib main context, which our CADisplayLink pumps). */
+  frame_clock = _gdk_frame_clock_idle_new ();
+  gdk_surface_set_frame_clock (surface, frame_clock);
+  g_object_unref (frame_clock);
 
   G_OBJECT_CLASS (gdk_ios_surface_parent_class)->constructed (object);
 }
@@ -205,6 +214,12 @@ struct _GdkIOSToplevel
 {
   GdkIOSSurface parent_instance;
   GdkToplevelLayout *layout;
+  char *title;
+};
+
+enum
+{
+  IOS_TOPLEVEL_N_PROPERTIES = 1, /* prop ids start at 1 */
 };
 
 struct _GdkIOSToplevelClass
@@ -308,13 +323,142 @@ gdk_ios_toplevel_finalize (GObject *object)
 {
   GdkIOSToplevel *self = GDK_IOS_TOPLEVEL (object);
   g_clear_pointer (&self->layout, gdk_toplevel_layout_unref);
+  g_clear_pointer (&self->title, g_free);
   G_OBJECT_CLASS (gdk_ios_toplevel_parent_class)->finalize (object);
+}
+
+static void
+gdk_ios_toplevel_get_property (GObject    *object,
+                               guint       prop_id,
+                               GValue     *value,
+                               GParamSpec *pspec)
+{
+  GdkIOSToplevel *self = GDK_IOS_TOPLEVEL (object);
+  GdkSurface *surface = (GdkSurface *) self;
+
+  switch (prop_id)
+    {
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_STATE:
+      g_value_set_flags (value, surface->state);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_TITLE:
+      g_value_set_string (value, self->title);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_STARTUP_ID:
+      g_value_set_string (value, "");
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_TRANSIENT_FOR:
+      g_value_set_object (value, surface->transient_for);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_MODAL:
+      g_value_set_boolean (value, surface->modal_hint);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_ICON_LIST:
+      g_value_set_pointer (value, NULL);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_DECORATED:
+      g_value_set_boolean (value, FALSE);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_DELETABLE:
+      g_value_set_boolean (value, FALSE);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_FULLSCREEN_MODE:
+      g_value_set_enum (value, surface->fullscreen_mode);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_SHORTCUTS_INHIBITED:
+      g_value_set_boolean (value, FALSE);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_CAPABILITIES:
+      g_value_set_flags (value, 0);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_GRAVITY:
+      g_value_set_enum (value, GDK_GRAVITY_NORTH_WEST);
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
+    }
+}
+
+static void
+gdk_ios_toplevel_set_property (GObject      *object,
+                               guint         prop_id,
+                               const GValue *value,
+                               GParamSpec   *pspec)
+{
+  GdkIOSToplevel *self = GDK_IOS_TOPLEVEL (object);
+  GdkSurface *surface = (GdkSurface *) self;
+
+  switch (prop_id)
+    {
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_TITLE:
+      g_clear_pointer (&self->title, g_free);
+      self->title = g_value_dup_string (value);
+      g_object_notify_by_pspec (G_OBJECT (surface), pspec);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_STARTUP_ID:
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_TRANSIENT_FOR:
+      g_clear_object (&surface->transient_for);
+      surface->transient_for = g_value_dup_object (value);
+      g_object_notify_by_pspec (G_OBJECT (surface), pspec);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_MODAL:
+      surface->modal_hint = g_value_get_boolean (value);
+      g_object_notify_by_pspec (G_OBJECT (surface), pspec);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_ICON_LIST:
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_DECORATED:
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_DELETABLE:
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_FULLSCREEN_MODE:
+      surface->fullscreen_mode = g_value_get_enum (value);
+      g_object_notify_by_pspec (G_OBJECT (surface), pspec);
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_SHORTCUTS_INHIBITED:
+      break;
+
+    case IOS_TOPLEVEL_N_PROPERTIES + GDK_TOPLEVEL_PROP_GRAVITY:
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
+    }
 }
 
 static void
 gdk_ios_toplevel_class_init (GdkIOSToplevelClass *klass)
 {
-  G_OBJECT_CLASS (klass)->finalize = gdk_ios_toplevel_finalize;
+  GObjectClass *object_class = G_OBJECT_CLASS (klass);
+
+  object_class->finalize = gdk_ios_toplevel_finalize;
+  object_class->get_property = gdk_ios_toplevel_get_property;
+  object_class->set_property = gdk_ios_toplevel_set_property;
+
+  gdk_toplevel_install_properties (object_class, IOS_TOPLEVEL_N_PROPERTIES);
 }
 
 static void
@@ -422,9 +566,70 @@ gdk_ios_popup_iface_init (GdkPopupInterface *iface)
   iface->get_position_y = gdk_ios_popup_get_position_y;
 }
 
+enum
+{
+  IOS_POPUP_N_PROPERTIES = 1, /* prop ids start at 1 */
+};
+
+static void
+gdk_ios_popup_get_property (GObject    *object,
+                            guint       prop_id,
+                            GValue     *value,
+                            GParamSpec *pspec)
+{
+  GdkSurface *surface = GDK_SURFACE (object);
+
+  switch (prop_id)
+    {
+    case IOS_POPUP_N_PROPERTIES + GDK_POPUP_PROP_PARENT:
+      g_value_set_object (value, surface->parent);
+      break;
+
+    case IOS_POPUP_N_PROPERTIES + GDK_POPUP_PROP_AUTOHIDE:
+      g_value_set_boolean (value, surface->autohide);
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
+    }
+}
+
+static void
+gdk_ios_popup_set_property (GObject      *object,
+                            guint         prop_id,
+                            const GValue *value,
+                            GParamSpec   *pspec)
+{
+  GdkSurface *surface = (GdkSurface *) object;
+
+  switch (prop_id)
+    {
+    case IOS_POPUP_N_PROPERTIES + GDK_POPUP_PROP_PARENT:
+      surface->parent = g_value_dup_object (value);
+      if (surface->parent != NULL)
+        surface->parent->children = g_list_prepend (surface->parent->children, surface);
+      break;
+
+    case IOS_POPUP_N_PROPERTIES + GDK_POPUP_PROP_AUTOHIDE:
+      surface->autohide = g_value_get_boolean (value);
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
+    }
+}
+
 static void
 gdk_ios_popup_class_init (GdkIOSPopupClass *klass)
 {
+  GObjectClass *object_class = G_OBJECT_CLASS (klass);
+
+  object_class->get_property = gdk_ios_popup_get_property;
+  object_class->set_property = gdk_ios_popup_set_property;
+
+  gdk_popup_install_properties (object_class, IOS_POPUP_N_PROPERTIES);
 }
 
 static void
