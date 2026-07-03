@@ -1,0 +1,147 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-build
+Build type: cross build
+Project name: fribidi
+Project version: 1.0.16
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Checking for function "memmove" : YES 
+Checking for function "memset" : YES 
+Checking for function "strdup" : YES 
+Has header "stdlib.h" : YES 
+Has header "string.h" : YES 
+Has header "memory.h" : YES 
+Has header "strings.h" : YES 
+Has header "sys/times.h" : YES 
+Has header "strings.h" : YES (cached)
+Configuring config.h using configuration
+Has header "stdlib.h" : YES (cached)
+Has header "string.h" : YES (cached)
+Has header "strings.h" : YES (cached)
+Checking for size of "int" : 4 
+Configuring fribidi-config.h using configuration
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build targets in project: 15
+
+fribidi 1.0.16
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-arm64-cross.txt
+    bin            : false
+    buildtype      : release
+    default_library: static
+    docs           : false
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    tests          : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `fribidi-build'
+[1/47] Compiling C object gen.tab/gen-unicode-version.p/gen-unicode-version.c.o
+[2/47] Linking target gen.tab/gen-unicode-version
+[3/47] Generating gen.tab/fribidi-unicode-version.h with a custom command (wrapped by meson to capture output)
+[4/47] Compiling C object gen.tab/gen-arabic-shaping-tab.p/gen-arabic-shaping-tab.c.o
+[5/47] Compiling C object gen.tab/gen-bidi-type-tab.p/gen-bidi-type-tab.c.o
+[6/47] Compiling C object gen.tab/gen-joining-type-tab.p/gen-joining-type-tab.c.o
+[7/47] Compiling C object gen.tab/gen-mirroring-tab.p/gen-mirroring-tab.c.o
+[8/47] Compiling C object gen.tab/gen-bidi-type-tab.p/packtab.c.o
+[9/47] Compiling C object gen.tab/gen-joining-type-tab.p/packtab.c.o
+[10/47] Compiling C object gen.tab/gen-brackets-tab.p/gen-brackets-tab.c.o
+[11/47] Compiling C object gen.tab/gen-brackets-type-tab.p/gen-brackets-type-tab.c.o
+[12/47] Compiling C object gen.tab/gen-arabic-shaping-tab.p/packtab.c.o
+[13/47] Compiling C object gen.tab/gen-mirroring-tab.p/packtab.c.o
+[14/47] Linking target gen.tab/gen-bidi-type-tab
+[15/47] Linking target gen.tab/gen-joining-type-tab
+[16/47] Linking target gen.tab/gen-arabic-shaping-tab
+[17/47] Linking target gen.tab/gen-mirroring-tab
+[18/47] Compiling C object gen.tab/gen-brackets-tab.p/packtab.c.o
+[19/47] Compiling C object gen.tab/gen-brackets-type-tab.p/packtab.c.o
+[20/47] Linking target gen.tab/gen-brackets-tab
+[21/47] Linking target gen.tab/gen-brackets-type-tab
+[22/47] Generating gen.tab/gen-arabic-shaping-tab with a custom command (wrapped by meson to capture output)
+[23/47] Generating gen.tab/gen-brackets-tab with a custom command (wrapped by meson to capture output)
+[24/47] Generating gen.tab/gen-mirroring-tab with a custom command (wrapped by meson to capture output)
+[25/47] Generating gen.tab/gen-brackets-type-tab with a custom command (wrapped by meson to capture output)
+[26/47] Generating gen.tab/gen-bidi-type-tab with a custom command (wrapped by meson to capture output)
+[27/47] Generating gen.tab/gen-joining-type-tab with a custom command (wrapped by meson to capture output)
+[28/47] Compiling C object lib/libfribidi.a.p/fribidi-arabic.c.o
+[29/47] Compiling C object lib/libfribidi.a.p/fribidi-char-sets.c.o
+[30/47] Compiling C object lib/libfribidi.a.p/fribidi-bidi-types.c.o
+[31/47] Compiling C object lib/libfribidi.a.p/fribidi.c.o
+[32/47] Compiling C object lib/libfribidi.a.p/fribidi-char-sets-cp1255.c.o
+[33/47] Compiling C object lib/libfribidi.a.p/fribidi-char-sets-iso8859-6.c.o
+[34/47] Compiling C object lib/libfribidi.a.p/fribidi-char-sets-cp1256.c.o
+[35/47] Compiling C object lib/libfribidi.a.p/fribidi-char-sets-cap-rtl.c.o
+[36/47] Compiling C object lib/libfribidi.a.p/fribidi-deprecated.c.o
+[37/47] Compiling C object lib/libfribidi.a.p/fribidi-char-sets-iso8859-8.c.o
+[38/47] Compiling C object lib/libfribidi.a.p/fribidi-char-sets-utf8.c.o
+[39/47] Compiling C object lib/libfribidi.a.p/fribidi-joining.c.o
+[40/47] Compiling C object lib/libfribidi.a.p/fribidi-mirroring.c.o
+[41/47] Compiling C object lib/libfribidi.a.p/fribidi-brackets.c.o
+[42/47] Compiling C object lib/libfribidi.a.p/fribidi-joining-types.c.o
+[43/47] Compiling C object lib/libfribidi.a.p/fribidi-shape.c.o
+[44/47] Compiling C object lib/libfribidi.a.p/fribidi-run.c.o
+[45/47] Compiling C object lib/libfribidi.a.p/fribidi-bidi.c.o
+../fribidi-src/lib/fribidi-bidi.c:577:28: warning: implicit conversion from enumeration type 'FriBidiCharType' to different enumeration type 'FriBidiParType' [-Wenum-conversion]
+  577 |               *pbase_dir = FRIBIDI_LEVEL_TO_DIR (base_level);
+      |                          ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../fribidi-src/lib/fribidi-bidi-types.h:257:32: note: expanded from macro 'FRIBIDI_LEVEL_TO_DIR'
+  257 |         (FRIBIDI_LEVEL_IS_RTL (lev) ? FRIBIDI_TYPE_RTL : FRIBIDI_TYPE_LTR)
+      |                                       ^~~~~~~~~~~~~~~~
+../fribidi-src/lib/fribidi-bidi.c:577:28: warning: implicit conversion from enumeration type 'FriBidiCharType' to different enumeration type 'FriBidiParType' [-Wenum-conversion]
+  577 |               *pbase_dir = FRIBIDI_LEVEL_TO_DIR (base_level);
+      |                          ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../fribidi-src/lib/fribidi-bidi-types.h:257:51: note: expanded from macro 'FRIBIDI_LEVEL_TO_DIR'
+  257 |         (FRIBIDI_LEVEL_IS_RTL (lev) ? FRIBIDI_TYPE_RTL : FRIBIDI_TYPE_LTR)
+      |                                                          ^~~~~~~~~~~~~~~~
+../fribidi-src/lib/fribidi-bidi.c:582:14: warning: implicit conversion from enumeration type 'FriBidiCharType' to different enumeration type 'FriBidiParType' [-Wenum-conversion]
+  582 |   base_dir = FRIBIDI_LEVEL_TO_DIR (base_level);
+      |            ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../fribidi-src/lib/fribidi-bidi-types.h:257:32: note: expanded from macro 'FRIBIDI_LEVEL_TO_DIR'
+  257 |         (FRIBIDI_LEVEL_IS_RTL (lev) ? FRIBIDI_TYPE_RTL : FRIBIDI_TYPE_LTR)
+      |                                       ^~~~~~~~~~~~~~~~
+../fribidi-src/lib/fribidi-bidi.c:582:14: warning: implicit conversion from enumeration type 'FriBidiCharType' to different enumeration type 'FriBidiParType' [-Wenum-conversion]
+  582 |   base_dir = FRIBIDI_LEVEL_TO_DIR (base_level);
+      |            ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../fribidi-src/lib/fribidi-bidi-types.h:257:51: note: expanded from macro 'FRIBIDI_LEVEL_TO_DIR'
+  257 |         (FRIBIDI_LEVEL_IS_RTL (lev) ? FRIBIDI_TYPE_RTL : FRIBIDI_TYPE_LTR)
+      |                                                          ^~~~~~~~~~~~~~~~
+../fribidi-src/lib/fribidi-bidi.c:1392:16: warning: implicit conversion from enumeration type 'FriBidiParType' to different enumeration type 'FriBidiCharType' [-Wenum-conversion]
+ 1392 |             p->type = base_dir;
+      |                     ~ ^~~~~~~~
+5 warnings generated.
+[46/47] Linking static target lib/libfribidi.a
+[46/47] Installing files
+Installing gen.tab/fribidi-unicode-version.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing lib/libfribidi.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-arabic.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-begindecls.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-bidi.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-bidi-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-bidi-types-list.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-char-sets.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-char-sets-list.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-common.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-deprecated.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-enddecls.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-flags.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-joining.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-joining-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-joining-types-list.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-mirroring.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-brackets.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-shape.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-unicode.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-build/lib/fribidi-config.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-build/meson-private/fribidi.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
