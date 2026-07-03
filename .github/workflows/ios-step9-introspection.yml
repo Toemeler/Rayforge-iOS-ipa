@@ -267,6 +267,21 @@ jobs:
 
           # g-ir-scanner resolves gir includes via XDG data dirs; add our prefix
           export XDG_DATA_DIRS="${PREFIX}/share:/opt/homebrew/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
+          # UIKit-linking dumpers (Gdk/Gtk/Adw) must run inside a real
+          # simulator context: route the scanner through a wrapper that
+          # forces --use-binary-wrapper=sim-spawn.sh (simctl). Entered via
+          # the g_ir_scanner variable of our synthetic gi pc.
+          chmod +x ios/scripts/sim-spawn.sh
+          SCANNER_WRAP="${GITHUB_WORKSPACE}/g-ir-scanner-simwrapped.sh"
+          REAL_SCANNER="$(brew --prefix gobject-introspection)/bin/g-ir-scanner"
+          printf '#!/bin/bash\nexec "%s" --use-binary-wrapper="%s" "$@"\n' \
+            "$REAL_SCANNER" "${GITHUB_WORKSPACE}/ios/scripts/sim-spawn.sh" > "$SCANNER_WRAP"
+          chmod +x "$SCANNER_WRAP"
+          sed -i '' "s|^g_ir_scanner=.*|g_ir_scanner=${SCANNER_WRAP}|" \
+            "${PREFIX}/lib/pkgconfig/gobject-introspection-1.0.pc"
+          grep g_ir_scanner "${PREFIX}/lib/pkgconfig/gobject-introspection-1.0.pc"
+
+          
           meson setup gtk-build gtk-src \
             --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
             --default-library=static --prefix="${PREFIX}" --buildtype=release \
@@ -334,6 +349,21 @@ jobs:
 
           # g-ir-scanner resolves gir includes via XDG data dirs; add our prefix
           export XDG_DATA_DIRS="${PREFIX}/share:/opt/homebrew/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
+          # UIKit-linking dumpers (Gdk/Gtk/Adw) must run inside a real
+          # simulator context: route the scanner through a wrapper that
+          # forces --use-binary-wrapper=sim-spawn.sh (simctl). Entered via
+          # the g_ir_scanner variable of our synthetic gi pc.
+          chmod +x ios/scripts/sim-spawn.sh
+          SCANNER_WRAP="${GITHUB_WORKSPACE}/g-ir-scanner-simwrapped.sh"
+          REAL_SCANNER="$(brew --prefix gobject-introspection)/bin/g-ir-scanner"
+          printf '#!/bin/bash\nexec "%s" --use-binary-wrapper="%s" "$@"\n' \
+            "$REAL_SCANNER" "${GITHUB_WORKSPACE}/ios/scripts/sim-spawn.sh" > "$SCANNER_WRAP"
+          chmod +x "$SCANNER_WRAP"
+          sed -i '' "s|^g_ir_scanner=.*|g_ir_scanner=${SCANNER_WRAP}|" \
+            "${PREFIX}/lib/pkgconfig/gobject-introspection-1.0.pc"
+          grep g_ir_scanner "${PREFIX}/lib/pkgconfig/gobject-introspection-1.0.pc"
+
+          
           meson setup adw-build adw-src \
             --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
             --default-library=shared --prefix="${PREFIX}" --buildtype=release \
