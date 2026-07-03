@@ -304,7 +304,7 @@ jobs:
             $(pkg-config --cflags libadwaita-1 gtk4) \
             -I"${PYINC}" \
             -L"${PREFIX}/lib" \
-            -ladwaita-1 -lgtk-4 \
+            $(pkg-config --libs libadwaita-1 gtk4 glib-2.0 gio-2.0 gobject-2.0) \
             -F"${SIM_SLICE}" -framework Python \
             -framework CoreFoundation \
             2>&1 | tee "${GITHUB_WORKSPACE}/testapp-link.log"
