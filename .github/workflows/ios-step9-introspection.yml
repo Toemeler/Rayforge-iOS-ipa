@@ -90,12 +90,17 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ios-out
-          key: gi-sim-v1-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}
+          key: gi-sim-v2-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}-run${{ github.run_id }}
+          restore-keys: |
+            gi-sim-v2-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}-
 
-      - name: "[5/13] Build base stack for simulator (cache miss only)"
-        if: steps.cache-gi.outputs.cache-hit != 'true'
+      - name: "[5/13] Build base stack for simulator (resumes from cache)"
         run: |
           set -euxo pipefail
+          if [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/Pango-1.0.typelib" ]; then
+            echo "base stack with introspection already in prefix — skipping"
+            exit 0
+          fi
           chmod +x ios/scripts/gen-cross-file.sh ios/scripts/build-base-stack.sh ios/scripts/sim-run.sh
           export INTROSPECTION=enabled
           export LIB_MODE=shared
@@ -131,10 +136,13 @@ jobs:
           bash ios/scripts/build-base-stack.sh 2>&1 | tee base-stack.log
           tail -3 base-stack.log
 
-      - name: "[6/13] Build jpeg/graphene/pixbuf/tiff/epoxy for simulator (cache miss only)"
-        if: steps.cache-gi.outputs.cache-hit != 'true'
+      - name: "[6/13] Build jpeg/graphene/pixbuf/tiff/epoxy for simulator (resumes from cache)"
         run: |
           set -euxo pipefail
+          if [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/GdkPixbuf-2.0.typelib" ]; then
+            echo "pixbuf layer with introspection already in prefix — skipping"
+            exit 0
+          fi
           PREFIX="${GITHUB_WORKSPACE}/ios-out"
           export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig"
           export PKG_CONFIG_LIBDIR="${PREFIX}/lib/pkgconfig"
@@ -240,10 +248,13 @@ jobs:
               "$pc" || true
           done
 
-      - name: "[8/13] Build GTK with the GDK iOS backend (simulator, full-cache miss only)"
-        if: steps.cache-gi.outputs.cache-hit != 'true'
+      - name: "[8/13] Build GTK with the GDK iOS backend (resumes from cache)"
         run: |
           set -euxo pipefail
+          if [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/Gtk-4.0.typelib" ]; then
+            echo "GTK with introspection already in prefix — skipping"
+            exit 0
+          fi
           GTK_MAJMIN="$(echo "${GTK_VERSION}" | cut -d. -f1,2)"
           curl -fL --retry 3 -o gtk.tar.xz \
             "https://download.gnome.org/sources/gtk/${GTK_MAJMIN}/gtk-${GTK_VERSION}.tar.xz"
@@ -276,10 +287,13 @@ jobs:
           ninja -C gtk-build install 2>&1 | tee gtk-install.log
 
 
-      - name: "[9/13] Build appstream stub + libadwaita (simulator, full-cache miss only)"
-        if: steps.cache-gi.outputs.cache-hit != 'true'
+      - name: "[9/13] Build appstream stub + libadwaita (resumes from cache)"
         run: |
           set -euxo pipefail
+          if [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/Adw-1.typelib" ]; then
+            echo "libadwaita with introspection already in prefix — skipping"
+            exit 0
+          fi
           SDK=$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)
 
           # --- appstream stub: satisfies libadwaita's appstream dependency
