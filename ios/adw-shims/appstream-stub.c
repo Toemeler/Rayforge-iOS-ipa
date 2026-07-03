@@ -107,6 +107,15 @@ as_component_get_launchable (AsComponent      *component,
   return NULL;
 }
 
+/* Never reached (get_launchable returns NULL and libadwaita checks),
+ * but must exist for the link. */
+GPtrArray *
+as_launchable_get_entries (AsLaunchable *launchable)
+{
+  (void) launchable;
+  return NULL;
+}
+
 static GPtrArray *
 empty_release_array (void)
 {
