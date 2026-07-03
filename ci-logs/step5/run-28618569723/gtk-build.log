@@ -1,0 +1,1198 @@
+ninja: Entering directory `gtk-build'
+[1/1130] Generating gsk/gpu/shaders/gskgpuboxshadowinstance.glsl with a custom command (wrapped by meson to capture output)
+[2/1130] Generating gsk/gpu/shaders/gskgpublurinstance.glsl with a custom command (wrapped by meson to capture output)
+[3/1130] Generating gsk/gpu/shaders/gskgpuarithmeticinstance.glsl with a custom command (wrapped by meson to capture output)
+[4/1130] Generating gsk/gpu/shaders/gskgpuborderinstance.glsl with a custom command (wrapped by meson to capture output)
+[5/1130] Generating gsk/gpu/shaders/gskgpublendmodeinstance.glsl with a custom command (wrapped by meson to capture output)
+[6/1130] Generating gsk/gpu/shaders/gskgpucolorinstance.glsl with a custom command (wrapped by meson to capture output)
+[7/1130] Generating gsk/gpu/shaders/gskgpucolorizeinstance.glsl with a custom command (wrapped by meson to capture output)
+[8/1130] Generating gsk/gpu/shaders/gskgpucomponenttransferinstance.glsl with a custom command (wrapped by meson to capture output)
+[9/1130] Generating gsk/gpu/shaders/gskgpucolormatrixinstance.glsl with a custom command (wrapped by meson to capture output)
+[10/1130] Generating gsk/gpu/shaders/gskgpucompositeinstance.glsl with a custom command (wrapped by meson to capture output)
+[11/1130] Generating gsk/gpu/shaders/gskgpuconicgradientinstance.glsl with a custom command (wrapped by meson to capture output)
+[12/1130] Generating gsk/gpu/shaders/gskgpuconvertinstance.glsl with a custom command (wrapped by meson to capture output)
+[13/1130] Generating gsk/gpu/shaders/gskgpuconvertcicpinstance.glsl with a custom command (wrapped by meson to capture output)
+[14/1130] Generating gsk/gpu/shaders/gskgpuconvertbuiltininstance.glsl with a custom command (wrapped by meson to capture output)
+[15/1130] Generating gsk/gpu/shaders/gskgpudisplacementinstance.glsl with a custom command (wrapped by meson to capture output)
+[16/1130] Generating gsk/gpu/shaders/gskgpucrossfadeinstance.glsl with a custom command (wrapped by meson to capture output)
+[17/1130] Generating gsk/gpu/shaders/gskgpulineargradientinstance.glsl with a custom command (wrapped by meson to capture output)
+[18/1130] Generating gsk/gpu/shaders/gskgpuroundedcolorinstance.glsl with a custom command (wrapped by meson to capture output)
+[19/1130] Generating gsk/gpu/shaders/gskgpumaskinstance.glsl with a custom command (wrapped by meson to capture output)
+[20/1130] Generating gsk/gpu/shaders/gskgpuradialgradientinstance.glsl with a custom command (wrapped by meson to capture output)
+[21/1130] Generating gsk/gpu/shaders/gskgpuarithmetic.glsl with a custom command (wrapped by meson to capture output)
+[22/1130] Generating gsk/gpu/shaders/gskgputextureinstance.glsl with a custom command (wrapped by meson to capture output)
+[23/1130] Generating gsk/gpu/shaders/gskgpublendmode.glsl with a custom command (wrapped by meson to capture output)
+[24/1130] Generating gsk/gpu/shaders/gskgpublur.glsl with a custom command (wrapped by meson to capture output)
+[25/1130] Generating gsk/gpu/shaders/gskgpuborder.glsl with a custom command (wrapped by meson to capture output)
+[26/1130] Generating gsk/gpu/shaders/gskgpucolor.glsl with a custom command (wrapped by meson to capture output)
+[27/1130] Generating gsk/gpu/shaders/gskgpuboxshadow.glsl with a custom command (wrapped by meson to capture output)
+[28/1130] Generating gsk/gpu/shaders/gskgpucolorize.glsl with a custom command (wrapped by meson to capture output)
+[29/1130] Generating gsk/gpu/shaders/gskgpucomponenttransfer.glsl with a custom command (wrapped by meson to capture output)
+[30/1130] Generating gsk/gpu/shaders/gskgpucolormatrix.glsl with a custom command (wrapped by meson to capture output)
+[31/1130] Generating gsk/gpu/shaders/gskgpuconicgradient.glsl with a custom command (wrapped by meson to capture output)
+[32/1130] Generating gsk/gpu/shaders/gskgpucomposite.glsl with a custom command (wrapped by meson to capture output)
+[33/1130] Generating gsk/gpu/shaders/gskgpuconvertcicp.glsl with a custom command (wrapped by meson to capture output)
+[34/1130] Generating gsk/gpu/shaders/gskgpuconvert.glsl with a custom command (wrapped by meson to capture output)
+[35/1130] Generating gsk/gpu/shaders/gskgpuconvertbuiltin.glsl with a custom command (wrapped by meson to capture output)
+[36/1130] Generating gsk/gpu/shaders/gskgpudisplacement.glsl with a custom command (wrapped by meson to capture output)
+[37/1130] Generating gsk/gpu/shaders/gskgpucrossfade.glsl with a custom command (wrapped by meson to capture output)
+[38/1130] Generating gsk/gpu/shaders/gskgpuradialgradient.glsl with a custom command (wrapped by meson to capture output)
+[39/1130] Generating gsk/gpu/shaders/gskgpumask.glsl with a custom command (wrapped by meson to capture output)
+[40/1130] Generating gsk/gpu/shaders/gskgpulineargradient.glsl with a custom command (wrapped by meson to capture output)
+[41/1130] Generating gsk/gpu/shaders/gskgpuroundedcolor.glsl with a custom command (wrapped by meson to capture output)
+[42/1130] Generating gsk/gpu/shaders/gskgputexture.glsl with a custom command (wrapped by meson to capture output)
+[43/1130] Generating glib marshaller header gdk/gdkmarshalers_h
+[44/1130] Generating gsk/gsk.resources.xml with a custom command
+[45/1130] Generating glib marshaller header gtk/gtkmarshalers_h
+[46/1130] Generating GObject enum file gtk/css/gtkcssenumtypes.h (wrapped by meson to capture output)
+[47/1130] Generating GObject enum file gsk/gskenumtypes.h (wrapped by meson to capture output)
+[48/1130] Generating GObject enum file gdk/gdkenumtypes.h (wrapped by meson because command contains newlines, to capture output)
+[49/1130] Generating profile-conf with a custom command (wrapped by meson to capture output)
+[50/1130] Generating GObject enum file gtk/gtkprivatetypebuiltins.h (wrapped by meson to capture output)
+[51/1130] Generating gdk/version/gdk-visibility.h with a custom command
+[52/1130] Generating gdk/version/gdkversionmacros.h with a custom command
+[53/1130] Generating gdk/gdkresources_c with a custom command
+[54/1130] Generating gdk/gdkresources_h with a custom command
+[55/1130] Generating glib marshaller source gdk/gdkmarshalers_c
+[56/1130] Generating gsk/gpu/shaders/gskgpuarithmeticop.c with a custom command (wrapped by meson to capture output)
+[57/1130] Generating GObject enum file gtk/css/gtkcssenumtypes.c (wrapped by meson to capture output)
+[58/1130] Generating gsk/gpu/shaders/gskgpuarithmeticopprivate.h with a custom command (wrapped by meson to capture output)
+[59/1130] Generating GObject enum file gtk/gtktypebuiltins.h (wrapped by meson to capture output)
+[60/1130] Generating gsk/gpu/shaders/gskgpublurop.c with a custom command (wrapped by meson to capture output)
+[61/1130] Generating gsk/gpu/shaders/gskgpublendmodeopprivate.h with a custom command (wrapped by meson to capture output)
+[62/1130] Generating gsk/gpu/shaders/gskgpublendmodeop.c with a custom command (wrapped by meson to capture output)
+[63/1130] Generating GObject enum file gdk/gdkenumtypes.c (wrapped by meson because command contains newlines, to capture output)
+[64/1130] Generating gsk/gpu/shaders/gskgpubluropprivate.h with a custom command (wrapped by meson to capture output)
+[65/1130] Generating gsk/gpu/shaders/gskgpuborderop.c with a custom command (wrapped by meson to capture output)
+[66/1130] Generating gsk/gpu/shaders/gskgpuborderopprivate.h with a custom command (wrapped by meson to capture output)
+[67/1130] Generating gsk/gpu/shaders/gskgpuboxshadowop.c with a custom command (wrapped by meson to capture output)
+[68/1130] Generating gsk/gpu/shaders/gskgpuboxshadowopprivate.h with a custom command (wrapped by meson to capture output)
+[69/1130] Generating gsk/gpu/shaders/gskgpucolorop.c with a custom command (wrapped by meson to capture output)
+[70/1130] Generating gsk/gpu/shaders/gskgpucolorizeop.c with a custom command (wrapped by meson to capture output)
+[71/1130] Generating gsk/gpu/shaders/gskgpucoloropprivate.h with a custom command (wrapped by meson to capture output)
+[72/1130] Generating gsk/gpu/shaders/gskgpucolorizeopprivate.h with a custom command (wrapped by meson to capture output)
+[73/1130] Generating gsk/gpu/shaders/gskgpucolormatrixop.c with a custom command (wrapped by meson to capture output)
+[74/1130] Generating gsk/gpu/shaders/gskgpucolormatrixopprivate.h with a custom command (wrapped by meson to capture output)
+[75/1130] Generating gsk/gpu/shaders/gskgpucomponenttransferop.c with a custom command (wrapped by meson to capture output)
+[76/1130] Generating gsk/gpu/shaders/gskgpucomponenttransferopprivate.h with a custom command (wrapped by meson to capture output)
+[77/1130] Generating gsk/gpu/shaders/gskgpucompositeop.c with a custom command (wrapped by meson to capture output)
+[78/1130] Generating gsk/gpu/shaders/gskgpucompositeopprivate.h with a custom command (wrapped by meson to capture output)
+[79/1130] Generating gsk/gpu/shaders/gskgpuconicgradientop.c with a custom command (wrapped by meson to capture output)
+[80/1130] Generating gsk/gpu/shaders/gskgpuconvertop.c with a custom command (wrapped by meson to capture output)
+[81/1130] Generating gsk/gpu/shaders/gskgpuconicgradientopprivate.h with a custom command (wrapped by meson to capture output)
+[82/1130] Generating gsk/gpu/shaders/gskgpuconvertbuiltinopprivate.h with a custom command (wrapped by meson to capture output)
+[83/1130] Generating gsk/gpu/shaders/gskgpuconvertopprivate.h with a custom command (wrapped by meson to capture output)
+[84/1130] Generating gsk/gpu/shaders/gskgpuconvertbuiltinop.c with a custom command (wrapped by meson to capture output)
+[85/1130] Generating gsk/gpu/shaders/gskgpuconvertcicpopprivate.h with a custom command (wrapped by meson to capture output)
+[86/1130] Generating gsk/gpu/shaders/gskgpuconvertcicpop.c with a custom command (wrapped by meson to capture output)
+[87/1130] Generating gsk/gpu/shaders/gskgpucrossfadeop.c with a custom command (wrapped by meson to capture output)
+[88/1130] Generating gsk/gpu/shaders/gskgpucrossfadeopprivate.h with a custom command (wrapped by meson to capture output)
+[89/1130] Generating gsk/gpu/shaders/gskgpudisplacementop.c with a custom command (wrapped by meson to capture output)
+[90/1130] Generating gsk/gpu/shaders/gskgpulineargradientop.c with a custom command (wrapped by meson to capture output)
+[91/1130] Generating gsk/gpu/shaders/gskgpudisplacementopprivate.h with a custom command (wrapped by meson to capture output)
+[92/1130] Generating gsk/gpu/shaders/gskgpulineargradientopprivate.h with a custom command (wrapped by meson to capture output)
+[93/1130] Generating gsk/gpu/shaders/gskgpumaskop.c with a custom command (wrapped by meson to capture output)
+[94/1130] Generating gsk/gpu/shaders/gskgpuradialgradientopprivate.h with a custom command (wrapped by meson to capture output)
+[95/1130] Generating gsk/gpu/shaders/gskgpuroundedcolorop.c with a custom command (wrapped by meson to capture output)
+[96/1130] Generating gsk/gpu/shaders/gskgpumaskopprivate.h with a custom command (wrapped by meson to capture output)
+[97/1130] Generating gsk/gpu/shaders/gskgpuradialgradientop.c with a custom command (wrapped by meson to capture output)
+[98/1130] Generating gsk/gpu/shaders/gskgpuroundedcoloropprivate.h with a custom command (wrapped by meson to capture output)
+[99/1130] Generating gsk/gskresources_h with a custom command
+[100/1130] Generating gsk/gpu/shaders/gskgputextureopprivate.h with a custom command (wrapped by meson to capture output)
+[101/1130] Generating gsk/gpu/shaders/gskgputextureop.c with a custom command (wrapped by meson to capture output)
+[102/1130] Generating gsk/gskresources_c with a custom command
+[103/1130] Generating gtk/a11y/atspi/atspi-accessible-hdr with a custom command
+[104/1130] Generating gtk/a11y/atspi/atspi-action-hdr with a custom command
+[105/1130] Generating gtk/a11y/atspi/atspi-action-src with a custom command
+[106/1130] Generating gtk/a11y/atspi/atspi-application-hdr with a custom command
+[107/1130] Generating gtk/a11y/atspi/atspi-accessible-src with a custom command
+[108/1130] Generating GObject enum file gsk/gskenumtypes.c (wrapped by meson to capture output)
+[109/1130] Generating gtk/a11y/atspi/atspi-application-src with a custom command
+[110/1130] Generating gtk/a11y/atspi/atspi-cache-hdr with a custom command
+[111/1130] Generating gtk/a11y/atspi/atspi-cache-src with a custom command
+[112/1130] Generating gtk/a11y/atspi/atspi-collection-hdr with a custom command
+[113/1130] Generating gtk/a11y/atspi/atspi-collection-src with a custom command
+[114/1130] Generating gtk/a11y/atspi/atspi-component-hdr with a custom command
+[115/1130] Generating gtk/a11y/atspi/atspi-component-src with a custom command
+[116/1130] Generating gtk/a11y/atspi/atspi-deviceeventcontroller-hdr with a custom command
+[117/1130] Generating gtk/a11y/atspi/atspi-deviceeventcontroller-src with a custom command
+[118/1130] Generating gtk/a11y/atspi/atspi-deviceeventlistener-src with a custom command
+[119/1130] Generating gtk/a11y/atspi/atspi-deviceeventlistener-hdr with a custom command
+[120/1130] Generating gtk/a11y/atspi/atspi-document-src with a custom command
+[121/1130] Generating gtk/a11y/atspi/atspi-editabletext-src with a custom command
+[122/1130] Generating gtk/a11y/atspi/atspi-editabletext-hdr with a custom command
+[123/1130] Generating gtk/a11y/atspi/atspi-document-hdr with a custom command
+[124/1130] Generating gtk/a11y/atspi/atspi-event-hdr with a custom command
+[125/1130] Generating gtk/a11y/atspi/atspi-hyperlink-src with a custom command
+[126/1130] Generating gtk/a11y/atspi/atspi-hyperlink-hdr with a custom command
+[127/1130] Generating gtk/a11y/atspi/atspi-event-src with a custom command
+[128/1130] Generating gtk/a11y/atspi/atspi-hypertext-hdr with a custom command
+[129/1130] Generating gtk/a11y/atspi/atspi-hypertext-src with a custom command
+[130/1130] Generating gtk/a11y/atspi/atspi-registry-hdr with a custom command
+[131/1130] Generating gtk/a11y/atspi/atspi-image-src with a custom command
+[132/1130] Generating gtk/a11y/atspi/atspi-image-hdr with a custom command
+[133/1130] Generating gtk/a11y/atspi/atspi-selection-hdr with a custom command
+[134/1130] Generating gtk/a11y/atspi/atspi-selection-src with a custom command
+[135/1130] Generating gtk/a11y/atspi/atspi-registry-src with a custom command
+[136/1130] Generating gtk/a11y/atspi/atspi-socket-hdr with a custom command
+[137/1130] Generating gtk/a11y/atspi/atspi-table-hdr with a custom command
+[138/1130] Generating gtk/a11y/atspi/atspi-socket-src with a custom command
+[139/1130] Generating gtk/a11y/atspi/atspi-text-src with a custom command
+[140/1130] Generating gtk/a11y/atspi/atspi-tablecell-src with a custom command
+[141/1130] Generating gtk/a11y/atspi/atspi-tablecell-hdr with a custom command
+[142/1130] Generating gtk/a11y/atspi/atspi-table-src with a custom command
+[143/1130] Generating gtk/a11y/atspi/atspi-text-hdr with a custom command
+[144/1130] Generating gtk/a11y/atspi/atspi-value-hdr with a custom command
+[145/1130] Generating gtk/a11y/atspi/atspi-value-src with a custom command
+[146/1130] Generating gdbus source gtk/gtkdbusgenerated.c
+[147/1130] Generating gdbus header gtk/gtkdbusgenerated.h
+[148/1130] Generating glib marshaller source gtk/gtkmarshalers_c
+[149/1130] Generating GObject enum file gtk/gtkprivatetypebuiltins.c (wrapped by meson to capture output)
+[150/1130] Generating gtk/gtktypefuncs.inc with a custom command
+[151/1130] Generating gdbus header gtk/xdp-dbus.h
+[152/1130] Generating gdbus source gtk/xdp-dbus.c
+[153/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcsserror.c.o
+[154/1130] Compiling C object gtk/css/libgtk_css.a.p/meson-generated_.._gtkcssenumtypes.c.o
+[155/1130] Generating GObject enum file gtk/gtktypebuiltins.c (wrapped by meson to capture output)
+[156/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcsssection.c.o
+[157/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcssdataurl.c.o
+[158/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcssserializer.c.o
+[159/1130] Generating gtk/gtkresources_h with a custom command
+[160/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcssvariablevalue.c.o
+[161/1130] Generating gtk/gtkresources_c with a custom command
+[162/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcsstokenizer.c.o
+[163/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcssparser.c.o
+[164/1130] Compiling C object gdk/libgdk.a.p/meson-generated_.._gdkenumtypes.c.o
+[165/1130] Compiling C object gdk/libgdk.a.p/meson-generated_.._gdkmarshalers.c.o
+[166/1130] Compiling C object gdk/ios/libgdk-ios.a.p/gdkiosdisplay.c.o
+FAILED: [code=1] gdk/ios/libgdk-ios.a.p/gdkiosdisplay.c.o 
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Igdk/ios/libgdk-ios.a.p -Igdk/ios -I../gtk-src/gdk/ios -I. -I../gtk-src -Igdk -I../gtk-src/gdk -Igdk/version -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/graphene-1.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0 -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu11 -O3 -DG_LOG_USE_STRUCTURED=1 -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_84 -DGLIB_VERSION_MAX_ALLOWED=GLIB_VERSION_2_84 '-DPANGO_VERSION_MIN_REQUIRED=G_ENCODE_VERSION(1,56)' '-DPANGO_VERSION_MAX_ALLOWED=G_ENCODE_VERSION(1,56)' '-DGTK_VERSION="4.22.4"' -D_GNU_SOURCE -DG_DISABLE_CAST_CHECKS -DG_DISABLE_ASSERT -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DFFI_STATIC_BUILD -DG_INTL_STATIC_COMPILATION -DPCRE2_STATIC -DGTK_COMPILATION '-DG_LOG_DOMAIN="Gdk"' -fno-strict-aliasing -Wno-c++11-extensions -Wno-missing-include-dirs -Wno-typedef-redefinition -Wno-tautological-constant-out-of-range-compare -Wformat=2 -Wformat-nonliteral -Wformat-security -Wignored-qualifiers -Wimplicit-function-declaration -Wmisleading-indentation -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wold-style-definition -Wpointer-arith -Wshadow -Wstrict-prototypes -Wswitch-default -Wswitch-enum -Wundef -Wuninitialized -Wunused -Waddress -Warray-bounds -Wempty-body -Wimplicit -Wimplicit-fallthrough -Winit-self -Wint-to-pointer-cast -Wmain -Wmissing-braces -Wmissing-declarations -Wmissing-prototypes -Wnonnull -Woverride-init -Wpointer-to-int-cast -Wredundant-decls -Wreturn-type -Wsequence-point -Wtrigraphs -Wvla -Wwrite-strings -xobjective-c -fobjc-arc -MD -MQ gdk/ios/libgdk-ios.a.p/gdkiosdisplay.c.o -MF gdk/ios/libgdk-ios.a.p/gdkiosdisplay.c.o.d -o gdk/ios/libgdk-ios.a.p/gdkiosdisplay.c.o -c ../gtk-src/gdk/ios/gdkiosdisplay.c
+In file included from ../gtk-src/gdk/ios/gdkiosdisplay.c:12:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkKeymap'; did you mean 'glib_autoptr_clear_GdkIOSKeymap'?
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:114:1: note: expanded from here
+  114 | glib_autoptr_clear_GdkKeymap
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: 'glib_autoptr_clear_GdkIOSKeymap' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:123:1: note: expanded from here
+  123 | glib_autoptr_clear_GdkIOSKeymap
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosdisplay.c:12:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: warning: incompatible pointer types passing 'GdkKeymap *' (aka 'struct _GdkKeymap *') to parameter of type 'GdkIOSKeymap *' (aka 'struct _GdkIOSKeymap *') [-Wincompatible-pointer-types]
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1361:28: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1361 |     { if (_ptr) (cleanup) ((ParentName *) _ptr); }                                                              \
+      |                            ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+In file included from ../gtk-src/gdk/ios/gdkiosdisplay.c:12:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkKeymap'; did you mean 'glib_autoptr_clear_GdkIOSKeymap'?
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:114:1: note: expanded from here
+  114 | glib_autoptr_clear_GdkKeymap
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: 'glib_autoptr_clear_GdkIOSKeymap' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:123:1: note: expanded from here
+  123 | glib_autoptr_clear_GdkIOSKeymap
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosdisplay.c:12:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: warning: incompatible pointer types passing 'GdkKeymap *' (aka 'struct _GdkKeymap *') to parameter of type 'GdkIOSKeymap *' (aka 'struct _GdkIOSKeymap *') [-Wincompatible-pointer-types]
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1365:18: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1365 |     { (cleanup) ((ParentName *) _ptr); }                                                                        \
+      |                  ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+In file included from ../gtk-src/gdk/ios/gdkiosdisplay.c:12:
+../gtk-src/gdk/ios/gdkiosprivate.h:56:1: error: field has incomplete type 'GdkIOSSurfaceClass' (aka 'struct _GdkIOSSurfaceClass')
+   56 | G_DECLARE_FINAL_TYPE (GdkIOSToplevel, gdk_ios_toplevel, GDK, IOS_TOPLEVEL, GdkIOSSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1612:38: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1612 |   typedef struct { ParentName##Class parent_class; } ModuleObjName##Class;                               \
+      |                                      ^
+../gtk-src/gdk/ios/gdkiosprivate.h:53:1: note: forward declaration of 'struct _GdkIOSSurfaceClass'
+   53 | G_DECLARE_DERIVABLE_TYPE (GdkIOSSurface, gdk_ios_surface, GDK, IOS_SURFACE, GdkSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1715:18: note: expanded from macro 'G_DECLARE_DERIVABLE_TYPE'
+ 1715 |   typedef struct _##ModuleObjName##Class ModuleObjName##Class;                                           \
+      |                  ^
+<scratch space>:23:1: note: expanded from here
+   23 | _GdkIOSSurfaceClass
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosdisplay.c:12:
+../gtk-src/gdk/ios/gdkiosprivate.h:59:1: error: field has incomplete type 'GdkIOSSurfaceClass' (aka 'struct _GdkIOSSurfaceClass')
+   59 | G_DECLARE_FINAL_TYPE (GdkIOSPopup, gdk_ios_popup, GDK, IOS_POPUP, GdkIOSSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1612:38: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1612 |   typedef struct { ParentName##Class parent_class; } ModuleObjName##Class;                               \
+      |                                      ^
+../gtk-src/gdk/ios/gdkiosprivate.h:53:1: note: forward declaration of 'struct _GdkIOSSurfaceClass'
+   53 | G_DECLARE_DERIVABLE_TYPE (GdkIOSSurface, gdk_ios_surface, GDK, IOS_SURFACE, GdkSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1715:18: note: expanded from macro 'G_DECLARE_DERIVABLE_TYPE'
+ 1715 |   typedef struct _##ModuleObjName##Class ModuleObjName##Class;                                           \
+      |                  ^
+<scratch space>:23:1: note: expanded from here
+   23 | _GdkIOSSurfaceClass
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosdisplay.c:12:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkCairoContext'; did you mean 'glib_autoptr_clear_GdkIOSCairoContext'?
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:58:1: note: expanded from here
+   58 | glib_autoptr_clear_GdkCairoContext
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: 'glib_autoptr_clear_GdkIOSCairoContext' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:67:1: note: expanded from here
+   67 | glib_autoptr_clear_GdkIOSCairoContext
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosdisplay.c:12:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: warning: incompatible pointer types passing 'GdkCairoContext *' (aka 'struct _GdkCairoContext *') to parameter of type 'GdkIOSCairoContext *' (aka 'struct _GdkIOSCairoContext *') [-Wincompatible-pointer-types]
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1361:28: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1361 |     { if (_ptr) (cleanup) ((ParentName *) _ptr); }                                                              \
+      |                            ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+In file included from ../gtk-src/gdk/ios/gdkiosdisplay.c:12:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkCairoContext'; did you mean 'glib_autoptr_clear_GdkIOSCairoContext'?
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:58:1: note: expanded from here
+   58 | glib_autoptr_clear_GdkCairoContext
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: 'glib_autoptr_clear_GdkIOSCairoContext' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:67:1: note: expanded from here
+   67 | glib_autoptr_clear_GdkIOSCairoContext
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosdisplay.c:12:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: warning: incompatible pointer types passing 'GdkCairoContext *' (aka 'struct _GdkCairoContext *') to parameter of type 'GdkIOSCairoContext *' (aka 'struct _GdkIOSCairoContext *') [-Wincompatible-pointer-types]
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1365:18: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1365 |     { (cleanup) ((ParentName *) _ptr); }                                                                        \
+      |                  ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+4 warnings and 6 errors generated.
+[167/1130] Compiling C object gdk/libgdk.a.p/meson-generated_.._gdkresources.c.o
+[168/1130] Compiling C object gdk/ios/libgdk-ios.a.p/gdkioscairocontext.c.o
+FAILED: [code=1] gdk/ios/libgdk-ios.a.p/gdkioscairocontext.c.o 
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Igdk/ios/libgdk-ios.a.p -Igdk/ios -I../gtk-src/gdk/ios -I. -I../gtk-src -Igdk -I../gtk-src/gdk -Igdk/version -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/graphene-1.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0 -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu11 -O3 -DG_LOG_USE_STRUCTURED=1 -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_84 -DGLIB_VERSION_MAX_ALLOWED=GLIB_VERSION_2_84 '-DPANGO_VERSION_MIN_REQUIRED=G_ENCODE_VERSION(1,56)' '-DPANGO_VERSION_MAX_ALLOWED=G_ENCODE_VERSION(1,56)' '-DGTK_VERSION="4.22.4"' -D_GNU_SOURCE -DG_DISABLE_CAST_CHECKS -DG_DISABLE_ASSERT -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DFFI_STATIC_BUILD -DG_INTL_STATIC_COMPILATION -DPCRE2_STATIC -DGTK_COMPILATION '-DG_LOG_DOMAIN="Gdk"' -fno-strict-aliasing -Wno-c++11-extensions -Wno-missing-include-dirs -Wno-typedef-redefinition -Wno-tautological-constant-out-of-range-compare -Wformat=2 -Wformat-nonliteral -Wformat-security -Wignored-qualifiers -Wimplicit-function-declaration -Wmisleading-indentation -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wold-style-definition -Wpointer-arith -Wshadow -Wstrict-prototypes -Wswitch-default -Wswitch-enum -Wundef -Wuninitialized -Wunused -Waddress -Warray-bounds -Wempty-body -Wimplicit -Wimplicit-fallthrough -Winit-self -Wint-to-pointer-cast -Wmain -Wmissing-braces -Wmissing-declarations -Wmissing-prototypes -Wnonnull -Woverride-init -Wpointer-to-int-cast -Wredundant-decls -Wreturn-type -Wsequence-point -Wtrigraphs -Wvla -Wwrite-strings -xobjective-c -fobjc-arc -MD -MQ gdk/ios/libgdk-ios.a.p/gdkioscairocontext.c.o -MF gdk/ios/libgdk-ios.a.p/gdkioscairocontext.c.o.d -o gdk/ios/libgdk-ios.a.p/gdkioscairocontext.c.o -c ../gtk-src/gdk/ios/gdkioscairocontext.c
+In file included from ../gtk-src/gdk/ios/gdkioscairocontext.c:21:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkKeymap'; did you mean 'glib_autoptr_clear_GdkIOSKeymap'?
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:84:1: note: expanded from here
+   84 | glib_autoptr_clear_GdkKeymap
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: 'glib_autoptr_clear_GdkIOSKeymap' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:93:1: note: expanded from here
+   93 | glib_autoptr_clear_GdkIOSKeymap
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkioscairocontext.c:21:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: warning: incompatible pointer types passing 'GdkKeymap *' (aka 'struct _GdkKeymap *') to parameter of type 'GdkIOSKeymap *' (aka 'struct _GdkIOSKeymap *') [-Wincompatible-pointer-types]
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1361:28: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1361 |     { if (_ptr) (cleanup) ((ParentName *) _ptr); }                                                              \
+      |                            ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+In file included from ../gtk-src/gdk/ios/gdkioscairocontext.c:21:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkKeymap'; did you mean 'glib_autoptr_clear_GdkIOSKeymap'?
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:84:1: note: expanded from here
+   84 | glib_autoptr_clear_GdkKeymap
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: 'glib_autoptr_clear_GdkIOSKeymap' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:93:1: note: expanded from here
+   93 | glib_autoptr_clear_GdkIOSKeymap
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkioscairocontext.c:21:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: warning: incompatible pointer types passing 'GdkKeymap *' (aka 'struct _GdkKeymap *') to parameter of type 'GdkIOSKeymap *' (aka 'struct _GdkIOSKeymap *') [-Wincompatible-pointer-types]
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1365:18: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1365 |     { (cleanup) ((ParentName *) _ptr); }                                                                        \
+      |                  ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+In file included from ../gtk-src/gdk/ios/gdkioscairocontext.c:21:
+../gtk-src/gdk/ios/gdkiosprivate.h:56:1: error: field has incomplete type 'GdkIOSSurfaceClass' (aka 'struct _GdkIOSSurfaceClass')
+   56 | G_DECLARE_FINAL_TYPE (GdkIOSToplevel, gdk_ios_toplevel, GDK, IOS_TOPLEVEL, GdkIOSSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1612:38: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1612 |   typedef struct { ParentName##Class parent_class; } ModuleObjName##Class;                               \
+      |                                      ^
+../gtk-src/gdk/ios/gdkiosprivate.h:53:1: note: forward declaration of 'struct _GdkIOSSurfaceClass'
+   53 | G_DECLARE_DERIVABLE_TYPE (GdkIOSSurface, gdk_ios_surface, GDK, IOS_SURFACE, GdkSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1715:18: note: expanded from macro 'G_DECLARE_DERIVABLE_TYPE'
+ 1715 |   typedef struct _##ModuleObjName##Class ModuleObjName##Class;                                           \
+      |                  ^
+<scratch space>:141:1: note: expanded from here
+  141 | _GdkIOSSurfaceClass
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkioscairocontext.c:21:
+../gtk-src/gdk/ios/gdkiosprivate.h:59:1: error: field has incomplete type 'GdkIOSSurfaceClass' (aka 'struct _GdkIOSSurfaceClass')
+   59 | G_DECLARE_FINAL_TYPE (GdkIOSPopup, gdk_ios_popup, GDK, IOS_POPUP, GdkIOSSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1612:38: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1612 |   typedef struct { ParentName##Class parent_class; } ModuleObjName##Class;                               \
+      |                                      ^
+../gtk-src/gdk/ios/gdkiosprivate.h:53:1: note: forward declaration of 'struct _GdkIOSSurfaceClass'
+   53 | G_DECLARE_DERIVABLE_TYPE (GdkIOSSurface, gdk_ios_surface, GDK, IOS_SURFACE, GdkSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1715:18: note: expanded from macro 'G_DECLARE_DERIVABLE_TYPE'
+ 1715 |   typedef struct _##ModuleObjName##Class ModuleObjName##Class;                                           \
+      |                  ^
+<scratch space>:141:1: note: expanded from here
+  141 | _GdkIOSSurfaceClass
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkioscairocontext.c:21:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkCairoContext'; did you mean 'glib_autoptr_clear_GdkIOSCairoContext'?
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:27:1: note: expanded from here
+   27 | glib_autoptr_clear_GdkCairoContext
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: 'glib_autoptr_clear_GdkIOSCairoContext' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:36:1: note: expanded from here
+   36 | glib_autoptr_clear_GdkIOSCairoContext
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkioscairocontext.c:21:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: warning: incompatible pointer types passing 'GdkCairoContext *' (aka 'struct _GdkCairoContext *') to parameter of type 'GdkIOSCairoContext *' (aka 'struct _GdkIOSCairoContext *') [-Wincompatible-pointer-types]
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1361:28: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1361 |     { if (_ptr) (cleanup) ((ParentName *) _ptr); }                                                              \
+      |                            ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+In file included from ../gtk-src/gdk/ios/gdkioscairocontext.c:21:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkCairoContext'; did you mean 'glib_autoptr_clear_GdkIOSCairoContext'?
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:27:1: note: expanded from here
+   27 | glib_autoptr_clear_GdkCairoContext
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: 'glib_autoptr_clear_GdkIOSCairoContext' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:36:1: note: expanded from here
+   36 | glib_autoptr_clear_GdkIOSCairoContext
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkioscairocontext.c:21:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: warning: incompatible pointer types passing 'GdkCairoContext *' (aka 'struct _GdkCairoContext *') to parameter of type 'GdkIOSCairoContext *' (aka 'struct _GdkIOSCairoContext *') [-Wincompatible-pointer-types]
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1365:18: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1365 |     { (cleanup) ((ParentName *) _ptr); }                                                                        \
+      |                  ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+4 warnings and 6 errors generated.
+[169/1130] Compiling C object gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o
+FAILED: [code=1] gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o 
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Igdk/ios/libgdk-ios.a.p -Igdk/ios -I../gtk-src/gdk/ios -I. -I../gtk-src -Igdk -I../gtk-src/gdk -Igdk/version -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/graphene-1.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0 -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu11 -O3 -DG_LOG_USE_STRUCTURED=1 -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_84 -DGLIB_VERSION_MAX_ALLOWED=GLIB_VERSION_2_84 '-DPANGO_VERSION_MIN_REQUIRED=G_ENCODE_VERSION(1,56)' '-DPANGO_VERSION_MAX_ALLOWED=G_ENCODE_VERSION(1,56)' '-DGTK_VERSION="4.22.4"' -D_GNU_SOURCE -DG_DISABLE_CAST_CHECKS -DG_DISABLE_ASSERT -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DFFI_STATIC_BUILD -DG_INTL_STATIC_COMPILATION -DPCRE2_STATIC -DGTK_COMPILATION '-DG_LOG_DOMAIN="Gdk"' -fno-strict-aliasing -Wno-c++11-extensions -Wno-missing-include-dirs -Wno-typedef-redefinition -Wno-tautological-constant-out-of-range-compare -Wformat=2 -Wformat-nonliteral -Wformat-security -Wignored-qualifiers -Wimplicit-function-declaration -Wmisleading-indentation -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wold-style-definition -Wpointer-arith -Wshadow -Wstrict-prototypes -Wswitch-default -Wswitch-enum -Wundef -Wuninitialized -Wunused -Waddress -Warray-bounds -Wempty-body -Wimplicit -Wimplicit-fallthrough -Winit-self -Wint-to-pointer-cast -Wmain -Wmissing-braces -Wmissing-declarations -Wmissing-prototypes -Wnonnull -Woverride-init -Wpointer-to-int-cast -Wredundant-decls -Wreturn-type -Wsequence-point -Wtrigraphs -Wvla -Wwrite-strings -xobjective-c -fobjc-arc -MD -MQ gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o -MF gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o.d -o gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o -c ../gtk-src/gdk/ios/gdkiossurface.c
+In file included from ../gtk-src/gdk/ios/gdkiossurface.c:13:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkKeymap'; did you mean 'glib_autoptr_clear_GdkIOSKeymap'?
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:84:1: note: expanded from here
+   84 | glib_autoptr_clear_GdkKeymap
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: 'glib_autoptr_clear_GdkIOSKeymap' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:93:1: note: expanded from here
+   93 | glib_autoptr_clear_GdkIOSKeymap
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiossurface.c:13:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: warning: incompatible pointer types passing 'GdkKeymap *' (aka 'struct _GdkKeymap *') to parameter of type 'GdkIOSKeymap *' (aka 'struct _GdkIOSKeymap *') [-Wincompatible-pointer-types]
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1361:28: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1361 |     { if (_ptr) (cleanup) ((ParentName *) _ptr); }                                                              \
+      |                            ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+In file included from ../gtk-src/gdk/ios/gdkiossurface.c:13:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkKeymap'; did you mean 'glib_autoptr_clear_GdkIOSKeymap'?
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:84:1: note: expanded from here
+   84 | glib_autoptr_clear_GdkKeymap
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: 'glib_autoptr_clear_GdkIOSKeymap' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:93:1: note: expanded from here
+   93 | glib_autoptr_clear_GdkIOSKeymap
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiossurface.c:13:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: warning: incompatible pointer types passing 'GdkKeymap *' (aka 'struct _GdkKeymap *') to parameter of type 'GdkIOSKeymap *' (aka 'struct _GdkIOSKeymap *') [-Wincompatible-pointer-types]
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1365:18: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1365 |     { (cleanup) ((ParentName *) _ptr); }                                                                        \
+      |                  ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+In file included from ../gtk-src/gdk/ios/gdkiossurface.c:13:
+../gtk-src/gdk/ios/gdkiosprivate.h:56:1: error: field has incomplete type 'GdkIOSSurfaceClass' (aka 'struct _GdkIOSSurfaceClass')
+   56 | G_DECLARE_FINAL_TYPE (GdkIOSToplevel, gdk_ios_toplevel, GDK, IOS_TOPLEVEL, GdkIOSSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1612:38: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1612 |   typedef struct { ParentName##Class parent_class; } ModuleObjName##Class;                               \
+      |                                      ^
+../gtk-src/gdk/ios/gdkiosprivate.h:53:1: note: forward declaration of 'struct _GdkIOSSurfaceClass'
+   53 | G_DECLARE_DERIVABLE_TYPE (GdkIOSSurface, gdk_ios_surface, GDK, IOS_SURFACE, GdkSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1715:18: note: expanded from macro 'G_DECLARE_DERIVABLE_TYPE'
+ 1715 |   typedef struct _##ModuleObjName##Class ModuleObjName##Class;                                           \
+      |                  ^
+<scratch space>:141:1: note: expanded from here
+  141 | _GdkIOSSurfaceClass
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiossurface.c:13:
+../gtk-src/gdk/ios/gdkiosprivate.h:59:1: error: field has incomplete type 'GdkIOSSurfaceClass' (aka 'struct _GdkIOSSurfaceClass')
+   59 | G_DECLARE_FINAL_TYPE (GdkIOSPopup, gdk_ios_popup, GDK, IOS_POPUP, GdkIOSSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1612:38: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1612 |   typedef struct { ParentName##Class parent_class; } ModuleObjName##Class;                               \
+      |                                      ^
+../gtk-src/gdk/ios/gdkiosprivate.h:53:1: note: forward declaration of 'struct _GdkIOSSurfaceClass'
+   53 | G_DECLARE_DERIVABLE_TYPE (GdkIOSSurface, gdk_ios_surface, GDK, IOS_SURFACE, GdkSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1715:18: note: expanded from macro 'G_DECLARE_DERIVABLE_TYPE'
+ 1715 |   typedef struct _##ModuleObjName##Class ModuleObjName##Class;                                           \
+      |                  ^
+<scratch space>:141:1: note: expanded from here
+  141 | _GdkIOSSurfaceClass
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiossurface.c:13:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkCairoContext'; did you mean 'glib_autoptr_clear_GdkIOSCairoContext'?
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:27:1: note: expanded from here
+   27 | glib_autoptr_clear_GdkCairoContext
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: 'glib_autoptr_clear_GdkIOSCairoContext' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:36:1: note: expanded from here
+   36 | glib_autoptr_clear_GdkIOSCairoContext
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiossurface.c:13:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: warning: incompatible pointer types passing 'GdkCairoContext *' (aka 'struct _GdkCairoContext *') to parameter of type 'GdkIOSCairoContext *' (aka 'struct _GdkIOSCairoContext *') [-Wincompatible-pointer-types]
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1361:28: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1361 |     { if (_ptr) (cleanup) ((ParentName *) _ptr); }                                                              \
+      |                            ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+In file included from ../gtk-src/gdk/ios/gdkiossurface.c:13:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkCairoContext'; did you mean 'glib_autoptr_clear_GdkIOSCairoContext'?
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:27:1: note: expanded from here
+   27 | glib_autoptr_clear_GdkCairoContext
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: 'glib_autoptr_clear_GdkIOSCairoContext' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:36:1: note: expanded from here
+   36 | glib_autoptr_clear_GdkIOSCairoContext
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiossurface.c:13:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: warning: incompatible pointer types passing 'GdkCairoContext *' (aka 'struct _GdkCairoContext *') to parameter of type 'GdkIOSCairoContext *' (aka 'struct _GdkIOSCairoContext *') [-Wincompatible-pointer-types]
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1365:18: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1365 |     { (cleanup) ((ParentName *) _ptr); }                                                                        \
+      |                  ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+4 warnings and 6 errors generated.
+[170/1130] Compiling C object gdk/ios/libgdk-ios.a.p/gdkiosmain.c.o
+FAILED: [code=1] gdk/ios/libgdk-ios.a.p/gdkiosmain.c.o 
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Igdk/ios/libgdk-ios.a.p -Igdk/ios -I../gtk-src/gdk/ios -I. -I../gtk-src -Igdk -I../gtk-src/gdk -Igdk/version -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/graphene-1.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0 -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu11 -O3 -DG_LOG_USE_STRUCTURED=1 -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_84 -DGLIB_VERSION_MAX_ALLOWED=GLIB_VERSION_2_84 '-DPANGO_VERSION_MIN_REQUIRED=G_ENCODE_VERSION(1,56)' '-DPANGO_VERSION_MAX_ALLOWED=G_ENCODE_VERSION(1,56)' '-DGTK_VERSION="4.22.4"' -D_GNU_SOURCE -DG_DISABLE_CAST_CHECKS -DG_DISABLE_ASSERT -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DFFI_STATIC_BUILD -DG_INTL_STATIC_COMPILATION -DPCRE2_STATIC -DGTK_COMPILATION '-DG_LOG_DOMAIN="Gdk"' -fno-strict-aliasing -Wno-c++11-extensions -Wno-missing-include-dirs -Wno-typedef-redefinition -Wno-tautological-constant-out-of-range-compare -Wformat=2 -Wformat-nonliteral -Wformat-security -Wignored-qualifiers -Wimplicit-function-declaration -Wmisleading-indentation -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wold-style-definition -Wpointer-arith -Wshadow -Wstrict-prototypes -Wswitch-default -Wswitch-enum -Wundef -Wuninitialized -Wunused -Waddress -Warray-bounds -Wempty-body -Wimplicit -Wimplicit-fallthrough -Winit-self -Wint-to-pointer-cast -Wmain -Wmissing-braces -Wmissing-declarations -Wmissing-prototypes -Wnonnull -Woverride-init -Wpointer-to-int-cast -Wredundant-decls -Wreturn-type -Wsequence-point -Wtrigraphs -Wvla -Wwrite-strings -xobjective-c -fobjc-arc -MD -MQ gdk/ios/libgdk-ios.a.p/gdkiosmain.c.o -MF gdk/ios/libgdk-ios.a.p/gdkiosmain.c.o.d -o gdk/ios/libgdk-ios.a.p/gdkiosmain.c.o -c ../gtk-src/gdk/ios/gdkiosmain.c
+In file included from ../gtk-src/gdk/ios/gdkiosmain.c:24:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkKeymap'; did you mean 'glib_autoptr_clear_GdkIOSKeymap'?
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:67:1: note: expanded from here
+   67 | glib_autoptr_clear_GdkKeymap
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: 'glib_autoptr_clear_GdkIOSKeymap' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:76:1: note: expanded from here
+   76 | glib_autoptr_clear_GdkIOSKeymap
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosmain.c:24:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: warning: incompatible pointer types passing 'GdkKeymap *' (aka 'struct _GdkKeymap *') to parameter of type 'GdkIOSKeymap *' (aka 'struct _GdkIOSKeymap *') [-Wincompatible-pointer-types]
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1361:28: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1361 |     { if (_ptr) (cleanup) ((ParentName *) _ptr); }                                                              \
+      |                            ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+In file included from ../gtk-src/gdk/ios/gdkiosmain.c:24:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkKeymap'; did you mean 'glib_autoptr_clear_GdkIOSKeymap'?
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:67:1: note: expanded from here
+   67 | glib_autoptr_clear_GdkKeymap
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: 'glib_autoptr_clear_GdkIOSKeymap' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:76:1: note: expanded from here
+   76 | glib_autoptr_clear_GdkIOSKeymap
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosmain.c:24:
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: warning: incompatible pointer types passing 'GdkKeymap *' (aka 'struct _GdkKeymap *') to parameter of type 'GdkIOSKeymap *' (aka 'struct _GdkIOSKeymap *') [-Wincompatible-pointer-types]
+   50 | G_DECLARE_FINAL_TYPE (GdkIOSKeymap, gdk_ios_keymap, GDK, IOS_KEYMAP, GdkKeymap)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1365:18: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1365 |     { (cleanup) ((ParentName *) _ptr); }                                                                        \
+      |                  ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:50:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+In file included from ../gtk-src/gdk/ios/gdkiosmain.c:24:
+../gtk-src/gdk/ios/gdkiosprivate.h:56:1: error: field has incomplete type 'GdkIOSSurfaceClass' (aka 'struct _GdkIOSSurfaceClass')
+   56 | G_DECLARE_FINAL_TYPE (GdkIOSToplevel, gdk_ios_toplevel, GDK, IOS_TOPLEVEL, GdkIOSSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1612:38: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1612 |   typedef struct { ParentName##Class parent_class; } ModuleObjName##Class;                               \
+      |                                      ^
+../gtk-src/gdk/ios/gdkiosprivate.h:53:1: note: forward declaration of 'struct _GdkIOSSurfaceClass'
+   53 | G_DECLARE_DERIVABLE_TYPE (GdkIOSSurface, gdk_ios_surface, GDK, IOS_SURFACE, GdkSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1715:18: note: expanded from macro 'G_DECLARE_DERIVABLE_TYPE'
+ 1715 |   typedef struct _##ModuleObjName##Class ModuleObjName##Class;                                           \
+      |                  ^
+<scratch space>:124:1: note: expanded from here
+  124 | _GdkIOSSurfaceClass
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosmain.c:24:
+../gtk-src/gdk/ios/gdkiosprivate.h:59:1: error: field has incomplete type 'GdkIOSSurfaceClass' (aka 'struct _GdkIOSSurfaceClass')
+   59 | G_DECLARE_FINAL_TYPE (GdkIOSPopup, gdk_ios_popup, GDK, IOS_POPUP, GdkIOSSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1612:38: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1612 |   typedef struct { ParentName##Class parent_class; } ModuleObjName##Class;                               \
+      |                                      ^
+../gtk-src/gdk/ios/gdkiosprivate.h:53:1: note: forward declaration of 'struct _GdkIOSSurfaceClass'
+   53 | G_DECLARE_DERIVABLE_TYPE (GdkIOSSurface, gdk_ios_surface, GDK, IOS_SURFACE, GdkSurface)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1715:18: note: expanded from macro 'G_DECLARE_DERIVABLE_TYPE'
+ 1715 |   typedef struct _##ModuleObjName##Class ModuleObjName##Class;                                           \
+      |                  ^
+<scratch space>:124:1: note: expanded from here
+  124 | _GdkIOSSurfaceClass
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosmain.c:24:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkCairoContext'; did you mean 'glib_autoptr_clear_GdkIOSCairoContext'?
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:10:1: note: expanded from here
+   10 | glib_autoptr_clear_GdkCairoContext
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: 'glib_autoptr_clear_GdkIOSCairoContext' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:19:1: note: expanded from here
+   19 | glib_autoptr_clear_GdkIOSCairoContext
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosmain.c:24:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: warning: incompatible pointer types passing 'GdkCairoContext *' (aka 'struct _GdkCairoContext *') to parameter of type 'GdkIOSCairoContext *' (aka 'struct _GdkIOSCairoContext *') [-Wincompatible-pointer-types]
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1361:28: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1361 |     { if (_ptr) (cleanup) ((ParentName *) _ptr); }                                                              \
+      |                            ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+In file included from ../gtk-src/gdk/ios/gdkiosmain.c:24:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: error: use of undeclared identifier 'glib_autoptr_clear_GdkCairoContext'; did you mean 'glib_autoptr_clear_GdkIOSCairoContext'?
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:65: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |                                                                 ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:10:1: note: expanded from here
+   10 | glib_autoptr_clear_GdkCairoContext
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: 'glib_autoptr_clear_GdkIOSCairoContext' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:19:1: note: expanded from here
+   19 | glib_autoptr_clear_GdkIOSCairoContext
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosmain.c:24:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: warning: incompatible pointer types passing 'GdkCairoContext *' (aka 'struct _GdkCairoContext *') to parameter of type 'GdkIOSCairoContext *' (aka 'struct _GdkIOSCairoContext *') [-Wincompatible-pointer-types]
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1365:18: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1365 |     { (cleanup) ((ParentName *) _ptr); }                                                                        \
+      |                  ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+../gtk-src/gdk/ios/gdkiosmain.c:234:11: warning: 137 enumeration values not explicitly handled in switch: 'UIKeyboardHIDUsageKeyboardErrorRollOver', 'UIKeyboardHIDUsageKeyboardPOSTFail', 'UIKeyboardHIDUsageKeyboardErrorUndefined'... [-Wswitch-enum]
+  234 |   switch (key.keyCode)
+      |           ^~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosmain.c:234:11: note: add missing switch cases
+  234 |   switch (key.keyCode)
+      |           ^
+5 warnings and 6 errors generated.
+ninja: build stopped: subcommand failed.
