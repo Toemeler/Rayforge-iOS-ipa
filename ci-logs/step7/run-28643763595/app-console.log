@@ -1,0 +1,3 @@
+Gdk-Message: 06:56:28.156: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/BE920449-F1D7-494C-A634-8E97E2A80103/data/Containers/Bundle/Application/D6060EA8-EB91-486D-950E-F791C9CE4BD5/RayforgeAdw.app
+** Message: 06:56:32.612: adw smoke test UI presented
+** Message: 06:56:32.612: adw smoke test: gdk_ios_application_run -> 0

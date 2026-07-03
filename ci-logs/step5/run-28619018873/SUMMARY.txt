@@ -1,0 +1,139 @@
++ echo 'Run ID: 28619018873'
+Run ID: 28619018873
++ echo 'Commit: 64a2ae6beb009ee7212063a8e604decf9fe31f34'
+Commit: 64a2ae6beb009ee7212063a8e604decf9fe31f34
+++ date -u
++ echo 'Date: Thu Jul  2 20:20:38 UTC 2026'
+Date: Thu Jul  2 20:20:38 UTC 2026
++ echo
+
++ for f in gtk-setup.log gtk-build.log testapp-link.log gtk-verify.log
++ echo '===================== TAIL: gtk-setup.log ====================='
+===================== TAIL: gtk-setup.log =====================
++ '[' -f gtk-setup.log ']'
++ tail -50 gtk-setup.log
+  Build
+    Debugging        : false
+    Optimization     : 3
+    Introspection    : false
+    Documentation    : false
+    Man pages        : false
+    Testsuite        : false
+    Tests            : false
+    Demos            : false
+    Examples         : false
+
+  Directories
+    Prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    Includedir       : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+    Libdir           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+    Datadir          : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share
+
+  User defined options
+    Cross files      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    accesskit        : disabled
+    android-backend  : false
+    broadway-backend : false
+    build-demos      : false
+    build-examples   : false
+    build-tests      : false
+    build-testsuite  : false
+    buildtype        : release
+    cloudproviders   : disabled
+    colord           : disabled
+    default_library  : static
+    documentation    : false
+    f16c             : disabled
+    introspection    : disabled
+    ios-backend      : true
+    macos-backend    : false
+    man-pages        : false
+    media-gstreamer  : disabled
+    prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    print-cpdb       : disabled
+    print-cups       : disabled
+    screenshots      : false
+    sysprof          : disabled
+    tracker          : disabled
+    vulkan           : disabled
+    wayland-backend  : false
+    win32-backend    : false
+    wrap_mode        : nofallback
+    x11-backend      : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in gtk-setup.log gtk-build.log testapp-link.log gtk-verify.log
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ tail -50 gtk-build.log
+[168/1130] Compiling C object gdk/libgdk.a.p/gdkapplaunchcontext.c.o
+[169/1130] Compiling C object gdk/ios/libgdk-ios.a.p/gdkioscairocontext.c.o
+[170/1130] Compiling C object gdk/libgdk.a.p/gdkcairo.c.o
+[171/1130] Compiling C object gdk/libgdk.a.p/gdk.c.o
+[172/1130] Compiling C object gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o
+FAILED: [code=1] gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o 
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Igdk/ios/libgdk-ios.a.p -Igdk/ios -I../gtk-src/gdk/ios -I. -I../gtk-src -Igdk -I../gtk-src/gdk -Igdk/version -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/graphene-1.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0 -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu11 -O3 -DG_LOG_USE_STRUCTURED=1 -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_84 -DGLIB_VERSION_MAX_ALLOWED=GLIB_VERSION_2_84 '-DPANGO_VERSION_MIN_REQUIRED=G_ENCODE_VERSION(1,56)' '-DPANGO_VERSION_MAX_ALLOWED=G_ENCODE_VERSION(1,56)' '-DGTK_VERSION="4.22.4"' -D_GNU_SOURCE -DG_DISABLE_CAST_CHECKS -DG_DISABLE_ASSERT -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DFFI_STATIC_BUILD -DG_INTL_STATIC_COMPILATION -DPCRE2_STATIC -DGTK_COMPILATION '-DG_LOG_DOMAIN="Gdk"' -fno-strict-aliasing -Wno-c++11-extensions -Wno-missing-include-dirs -Wno-typedef-redefinition -Wno-tautological-constant-out-of-range-compare -Wformat=2 -Wformat-nonliteral -Wformat-security -Wignored-qualifiers -Wimplicit-function-declaration -Wmisleading-indentation -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wold-style-definition -Wpointer-arith -Wshadow -Wstrict-prototypes -Wswitch-default -Wswitch-enum -Wundef -Wuninitialized -Wunused -Waddress -Warray-bounds -Wempty-body -Wimplicit -Wimplicit-fallthrough -Winit-self -Wint-to-pointer-cast -Wmain -Wmissing-braces -Wmissing-declarations -Wmissing-prototypes -Wnonnull -Woverride-init -Wpointer-to-int-cast -Wredundant-decls -Wreturn-type -Wsequence-point -Wtrigraphs -Wvla -Wwrite-strings -xobjective-c -fobjc-arc -MD -MQ gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o -MF gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o.d -o gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o -c ../gtk-src/gdk/ios/gdkiossurface.c
+../gtk-src/gdk/ios/gdkiossurface.c:149:3: error: unknown type name 'GdkIOSSurfacePrivate'; did you mean 'GdkIOSSurfaceClass'?
+  149 |   GdkIOSSurfacePrivate *priv =
+      |   ^~~~~~~~~~~~~~~~~~~~
+      |   GdkIOSSurfaceClass
+../gtk-src/gdk/ios/gdkiosprivate.h:74:36: note: 'GdkIOSSurfaceClass' declared here
+   74 | typedef struct _GdkIOSSurfaceClass GdkIOSSurfaceClass;
+      |                                    ^
+../gtk-src/gdk/ios/gdkiossurface.c:150:5: error: call to undeclared function 'gdk_ios_surface_get_private'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  150 |     gdk_ios_surface_get_private (GDK_IOS_SURFACE (surface));
+      |     ^
+../gtk-src/gdk/ios/gdkiossurface.c:150:5: note: did you mean 'gdk_ios_surface_get_scale'?
+../gtk-src/gdk/ios/gdkiossurface.c:147:1: note: 'gdk_ios_surface_get_scale' declared here
+  147 | gdk_ios_surface_get_scale (GdkSurface *surface)
+      | ^
+  148 | {
+  149 |   GdkIOSSurfacePrivate *priv =
+  150 |     gdk_ios_surface_get_private (GDK_IOS_SURFACE (surface));
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     gdk_ios_surface_get_scale
+../gtk-src/gdk/ios/gdkiossurface.c:149:25: error: incompatible integer to pointer conversion initializing 'GdkIOSSurfaceClass *' (aka 'struct _GdkIOSSurfaceClass *') with an expression of type 'int' [-Wint-conversion]
+  149 |   GdkIOSSurfacePrivate *priv =
+      |                         ^
+  150 |     gdk_ios_surface_get_private (GDK_IOS_SURFACE (surface));
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiossurface.c:151:10: error: use of undeclared identifier 'self'
+  151 |   return self->scale > 0 ? self->scale : 1.0;
+      |          ^
+../gtk-src/gdk/ios/gdkiossurface.c:151:28: error: use of undeclared identifier 'self'
+  151 |   return self->scale > 0 ? self->scale : 1.0;
+      |                            ^
+5 errors generated.
+[173/1130] Compiling C object gdk/libgdk.a.p/gdkcicpparams.c.o
+[174/1130] Compiling C object gdk/libgdk.a.p/gdkclipboard.c.o
+[175/1130] Compiling C object gdk/libgdk.a.p/gdkcairocontext.c.o
+[176/1130] Compiling C object gdk/ios/libgdk-ios.a.p/gdkiosmain.c.o
+../gtk-src/gdk/ios/gdkiosmain.c:234:11: warning: 137 enumeration values not explicitly handled in switch: 'UIKeyboardHIDUsageKeyboardErrorRollOver', 'UIKeyboardHIDUsageKeyboardPOSTFail', 'UIKeyboardHIDUsageKeyboardErrorUndefined'... [-Wswitch-enum]
+  234 |   switch (key.keyCode)
+      |           ^~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosmain.c:234:11: note: add missing switch cases
+  234 |   switch (key.keyCode)
+      |           ^
+1 warning generated.
+ninja: build stopped: subcommand failed.
++ echo
+
++ for f in gtk-setup.log gtk-build.log testapp-link.log gtk-verify.log
++ echo '===================== TAIL: testapp-link.log ====================='
+===================== TAIL: testapp-link.log =====================
++ '[' -f testapp-link.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in gtk-setup.log gtk-build.log testapp-link.log gtk-verify.log
++ echo '===================== TAIL: gtk-verify.log ====================='
+===================== TAIL: gtk-verify.log =====================
++ '[' -f gtk-verify.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
