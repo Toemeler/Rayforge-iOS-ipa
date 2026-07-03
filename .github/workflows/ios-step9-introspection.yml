@@ -182,7 +182,7 @@ jobs:
           meson setup pixbuf-build pixbuf-src \
             --cross-file="${CROSS}" \
             --default-library=shared --prefix="${PREFIX}" --buildtype=release \
-            --wrap-mode=nofallback \
+            -Dc_link_args="-lz"             --wrap-mode=nofallback \
             -Dpng=enabled -Djpeg=enabled -Dtiff=disabled -Dgif=enabled \
             -Dglycin=disabled -Dandroid=disabled -Dothers=disabled \
             -Dbuiltin_loaders=png,jpeg,gif,bmp,ico,ani \
@@ -268,7 +268,7 @@ jobs:
           meson setup gtk-build gtk-src \
             --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
             --default-library=static --prefix="${PREFIX}" --buildtype=release \
-            --wrap-mode=nofallback \
+            -Dc_link_args="-lz"             --wrap-mode=nofallback \
             -Dios-backend=true \
             -Dx11-backend=false -Dwayland-backend=false -Dwin32-backend=false \
             -Dmacos-backend=false -Dandroid-backend=false -Dbroadway-backend=false \
