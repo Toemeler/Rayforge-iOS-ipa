@@ -31,6 +31,11 @@ SDKROOT="$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)"
 echo "[gen-cross-file] SDKROOT=${SDKROOT}"
 echo "[gen-cross-file] iOS min version=${IOS_MIN}"
 
+# Optional: EXE_WRAPPER env — path to a wrapper able to execute target
+# binaries (simulator builds only; see sim-run.sh). Enables running
+# g-ir-scanner dumpers and other target executables during the build.
+EXE_WRAPPER="${EXE_WRAPPER:-}"
+
 CC_PATH="$(xcrun --sdk "${IOS_SDK}" --find clang)"
 CXX_PATH="$(xcrun --sdk "${IOS_SDK}" --find clang++)"
 AR_PATH="$(xcrun --sdk "${IOS_SDK}" --find ar)"
@@ -60,6 +65,7 @@ objcpp = '${CXX_PATH}'
 ar = '${AR_PATH}'
 strip = '${STRIP_PATH}'
 pkg-config = 'pkg-config'
+$( [ -n "${EXE_WRAPPER}" ] && echo "exe_wrapper = ['bash', '${EXE_WRAPPER}']" )
 
 [built-in options]
 c_args = common_flags

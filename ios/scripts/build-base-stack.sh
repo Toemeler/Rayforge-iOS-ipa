@@ -33,6 +33,13 @@ set -euxo pipefail
 : "${IOS_MIN:?IOS_MIN required}"
 : "${SCRIPT_DIR:?SCRIPT_DIR required}"
 
+# Optional: INTROSPECTION=enabled builds GObject-Introspection data
+# (.gir/.typelib) for glib, harfbuzz and pango. Requires host
+# gobject-introspection (g-ir-scanner) and, since this is a cross build,
+# an exe_wrapper in the cross file (EXE_WRAPPER env for
+# gen-cross-file.sh + a booted simulator; see sim-run.sh).
+GI="${INTROSPECTION:-disabled}"
+
 GLIB_VERSION="${GLIB_VERSION:-2.84.4}"
 PIXMAN_VERSION="${PIXMAN_VERSION:-0.44.2}"
 LIBPNG_VERSION="${LIBPNG_VERSION:-1.6.44}"
@@ -85,7 +92,7 @@ meson setup glib-build glib-src \
   --cross-file="${CROSS_ISO}" \
   --default-library=static --prefix="${PREFIX}" --buildtype=release \
   --force-fallback-for=pcre2,libffi \
-  -Dtests=false -Dintrospection=disabled -Dlibmount=disabled \
+  -Dtests=false -Dintrospection="${GI}" -Dlibmount=disabled \
   -Dselinux=disabled -Dxattr=false -Dman-pages=disabled -Dnls=disabled \
   -Dpcre2:jit=disabled \
   2>&1 | tee glib-setup.log
@@ -141,6 +148,7 @@ meson setup hb-build harfbuzz-src \
   --default-library=static --prefix="${PREFIX}" --buildtype=release \
   -Dtests=disabled -Ddocs=disabled -Dutilities=disabled \
   -Dfreetype=enabled -Dglib=enabled -Dgobject=enabled -Dcairo=disabled \
+  -Dintrospection="${GI}" \
   2>&1 | tee harfbuzz.log
 ninja -C hb-build install 2>&1 | tee -a harfbuzz.log
 
@@ -218,7 +226,7 @@ meson setup pango-build pango-src \
   --cross-file="${CROSS_PFX}" \
   --default-library=static --prefix="${PREFIX}" --buildtype=release \
   --wrap-mode=nofallback \
-  -Dintrospection=disabled -Dgtk_doc=false \
+  -Dintrospection="${GI}" -Dgtk_doc=false \
   -Dfontconfig=enabled -Dfreetype=enabled -Dcairo=enabled \
   2>&1 | tee pango.log
 ninja -C pango-build install 2>&1 | tee -a pango.log

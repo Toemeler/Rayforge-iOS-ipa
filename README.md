@@ -42,7 +42,8 @@ GTK4 has no iOS backend upstream, so the port is built bottom-up:
 | 6 | `ios-step6-simulator-test.yml` | **GTK 4 app running in the iOS simulator** (.app bundle, launch, screenshot) — a world first | ✅ done |
 | 7 | `ios-step7-libadwaita.yml` | **Libadwaita 1.9.1 running on iOS** — AdwApplication via `gdk_ios_application_run()`, AppKit-free patches, appstream stub | ✅ done |
 | 8 | `ios-step8-python.yml` | **CPython 3.13.14 running natively on iOS** (sys.platform=ios) inside the Adw app | ✅ done |
-| 9 | PyGObject + pycairo cross-compiled against the prefix | | 🔜 next |
+| 9 | `ios-step9-introspection.yml` | GObject-Introspection stack (typelibs via simctl-spawn exe_wrapper) | 🔨 in progress |
+| 10 | PyGObject + pycairo cross-compiled against the prefix | | 🔜 next |
 
 Key fixes encoded along the way: pkg-config sysroot isolation
 (`PKG_CONFIG_SYSROOT_DIR=`), SDK zlib via synthesized `zlib.pc`, libpng/expat/

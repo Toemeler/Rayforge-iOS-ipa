@@ -1,0 +1,383 @@
+name: iOS Step 9 - GObject-Introspection for iOS
+
+# Rebuilds the simulator stack WITH introspection: g-ir-scanner must RUN
+# target binaries (dumpers), which works on the simulator via `simctl
+# spawn` as meson exe_wrapper (sim-run.sh). Produces the .gir/.typelib
+# set (GLib..Gtk..Adw) that PyGObject needs at runtime. Success = all
+# required typelibs present in the prefix. No app launch in this step.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ios_min:
+        description: "Minimum iOS deployment version"
+        required: false
+        default: "17.0"
+
+permissions:
+  contents: write
+
+env:
+  IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
+  IOS_SDK: "iphonesimulator"
+  DEPS_KEY: "gtk-deps-sim-v1"
+  JPEG_TURBO_VERSION: "3.2.0"
+  GRAPHENE_VERSION: "1.10.8"
+  GDK_PIXBUF_VERSION: "2.44.7"
+  TIFF_VERSION: "4.7.0"
+  EPOXY_VERSION: "1.5.10"
+  GTK_VERSION: "4.22.4"
+  ADW_VERSION: "1.9.1"
+
+jobs:
+  introspection:
+    name: Build stack with introspection (simulator exe_wrapper)
+    runs-on: macos-15
+    timeout-minutes: 180
+
+    steps:
+      - name: "[1/13] Toolchain + simulator inventory"
+        run: |
+          set -x
+          sw_vers || true
+          xcodebuild -version || true
+          xcrun --sdk iphonesimulator --show-sdk-version || true
+          xcrun simctl list runtimes || true
+          xcrun simctl list devices available | head -30 || true
+
+      - name: "[2/13] Checkout repo"
+        uses: actions/checkout@v4
+
+      - name: "[3/13] Install build tools"
+        run: |
+          set -euxo pipefail
+          brew list meson >/dev/null 2>&1 || brew install meson
+          brew list ninja >/dev/null 2>&1 || brew install ninja
+          brew list pkg-config >/dev/null 2>&1 || brew install pkg-config
+          brew list glib >/dev/null 2>&1 || brew install glib
+          brew list sassc >/dev/null 2>&1 || brew install sassc
+          brew list gobject-introspection >/dev/null 2>&1 || brew install gobject-introspection
+          brew list gettext >/dev/null 2>&1 || brew install gettext
+          echo "$(brew --prefix gettext)/bin" >> "$GITHUB_PATH"
+
+
+
+      - name: "[3b/13] Boot simulator early (exe_wrapper target)"
+        run: |
+          set -euxo pipefail
+          RUNTIME=$(xcrun simctl list runtimes | awk '/iOS/{id=$NF} END{print id}')
+          DEVTYPE=$(xcrun simctl list devicetypes | grep -Eo "com.apple.CoreSimulator.SimDeviceType.iPad-Pro[^ )]*" | head -1)
+          if [ -z "$DEVTYPE" ]; then DEVTYPE=$(xcrun simctl list devicetypes | grep -Eo "com.apple.CoreSimulator.SimDeviceType.iPad[^ )]*" | head -1); fi
+          UDID=$(xcrun simctl create "gi-runner" "$DEVTYPE" "$RUNTIME")
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          echo "SIM_UDID=$UDID" >> "$GITHUB_ENV"
+          echo "EXE_WRAPPER=${GITHUB_WORKSPACE}/ios/scripts/sim-run.sh" >> "$GITHUB_ENV"
+          echo "SIMCTL_CHILD_DYLD_LIBRARY_PATH=${GITHUB_WORKSPACE}/ios-out/lib" >> "$GITHUB_ENV"
+          chmod +x ios/scripts/sim-run.sh
+          # smoke: wrapper can run a simulator binary (use sim's own /bin/ls? spawn runs host-path binaries built for sim; test with true)
+          xcrun simctl spawn "$UDID" /usr/bin/true && echo "spawn works"
+
+      - name: "[4/13] Restore cached introspection prefix"
+        id: cache-gi
+        uses: actions/cache@v4
+        with:
+          path: ios-out
+          key: gi-sim-v1-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}
+
+      - name: "[5/13] Build base stack for simulator (cache miss only)"
+        if: steps.cache-gi.outputs.cache-hit != 'true'
+        run: |
+          set -euxo pipefail
+          chmod +x ios/scripts/gen-cross-file.sh ios/scripts/build-base-stack.sh ios/scripts/sim-run.sh
+          export INTROSPECTION=enabled
+          export PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          export CROSS_ISO="${GITHUB_WORKSPACE}/cross-iso.txt"
+          export CROSS_PFX="${GITHUB_WORKSPACE}/cross-pfx.txt"
+          export SCRIPT_DIR="${GITHUB_WORKSPACE}/ios/scripts"
+          bash ios/scripts/build-base-stack.sh 2>&1 | tee base-stack.log
+          tail -3 base-stack.log
+
+      - name: "[6/13] Build jpeg/graphene/pixbuf/tiff/epoxy for simulator (cache miss only)"
+        if: steps.cache-gi.outputs.cache-hit != 'true'
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig"
+          export PKG_CONFIG_LIBDIR="${PREFIX}/lib/pkgconfig"
+          export PKG_CONFIG_SYSROOT_DIR=
+          SDK=$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)
+          CROSS="${GITHUB_WORKSPACE}/cross-pfx.txt"
+
+          curl -fL --retry 3 -o jpeg.tar.gz \
+            "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/${JPEG_TURBO_VERSION}/libjpeg-turbo-${JPEG_TURBO_VERSION}.tar.gz"
+          mkdir -p jpeg-src && tar xf jpeg.tar.gz --strip-components=1 -C jpeg-src
+          cmake -S jpeg-src -B jpeg-build \
+            -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_SYSTEM_PROCESSOR=aarch64 \
+            -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_OSX_SYSROOT="$SDK" -DCMAKE_OSX_DEPLOYMENT_TARGET="${IOS_MIN}" \
+            -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
+            -DENABLE_SHARED=OFF -DENABLE_STATIC=ON -DWITH_TURBOJPEG=OFF \
+            2>&1 | tee jpeg.log
+          cmake --build jpeg-build --config Release 2>&1 | tee -a jpeg.log
+          cmake --install jpeg-build --config Release 2>&1 | tee -a jpeg.log
+
+          curl -fL --retry 3 -o graphene.tar.gz \
+            "https://github.com/ebassi/graphene/archive/refs/tags/${GRAPHENE_VERSION}.tar.gz"
+          mkdir -p graphene-src && tar xf graphene.tar.gz --strip-components=1 -C graphene-src
+          meson setup graphene-build graphene-src \
+            --cross-file="${CROSS}" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dtests=false -Dinstalled_tests=false -Dintrospection=enabled \
+            -Dgtk_doc=false -Dgobject_types=true -Dsse2=false -Darm_neon=true \
+            2>&1 | tee graphene.log
+          ninja -C graphene-build install 2>&1 | tee -a graphene.log
+
+          PIXBUF_MAJMIN="$(echo "${GDK_PIXBUF_VERSION}" | cut -d. -f1,2)"
+          curl -fL --retry 3 -o gdk-pixbuf.tar.xz \
+            "https://download.gnome.org/sources/gdk-pixbuf/${PIXBUF_MAJMIN}/gdk-pixbuf-${GDK_PIXBUF_VERSION}.tar.xz"
+          mkdir -p pixbuf-src && tar xf gdk-pixbuf.tar.xz --strip-components=1 -C pixbuf-src
+          meson setup pixbuf-build pixbuf-src \
+            --cross-file="${CROSS}" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --wrap-mode=nofallback \
+            -Dpng=enabled -Djpeg=enabled -Dtiff=disabled -Dgif=enabled \
+            -Dglycin=disabled -Dandroid=disabled -Dothers=disabled \
+            -Dbuiltin_loaders=png,jpeg,gif,bmp,ico,ani \
+            -Dtests=false -Dinstalled_tests=false \
+            -Dman=false -Ddocumentation=false \
+            -Dthumbnailer=disabled -Dintrospection=enabled \
+            -Drelocatable=true \
+            2>&1 | tee pixbuf.log
+          ninja -C pixbuf-build install 2>&1 | tee -a pixbuf.log
+
+          curl -fL --retry 3 -o tiff.tar.gz \
+            "https://download.osgeo.org/libtiff/tiff-${TIFF_VERSION}.tar.gz"
+          mkdir -p tiff-src && tar xf tiff.tar.gz --strip-components=1 -C tiff-src
+          cmake -S tiff-src -B tiff-build \
+            -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_SYSTEM_PROCESSOR=aarch64 \
+            -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_OSX_SYSROOT="$SDK" -DCMAKE_OSX_DEPLOYMENT_TARGET="${IOS_MIN}" \
+            -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
+            -DBUILD_SHARED_LIBS=OFF \
+            -Dtiff-tools=OFF -Dtiff-tests=OFF -Dtiff-docs=OFF -Dtiff-contrib=OFF \
+            -Dwebp=OFF -Dzstd=OFF -Dlzma=OFF -Djbig=OFF -Dlerc=OFF \
+            -DZLIB_LIBRARY="${SDK}/usr/lib/libz.tbd" \
+            -DZLIB_INCLUDE_DIR="${SDK}/usr/include" \
+            -DJPEG_LIBRARY="${PREFIX}/lib/libjpeg.a" \
+            -DJPEG_INCLUDE_DIR="${PREFIX}/include" \
+            2>&1 | tee tiff.log
+          cmake --build tiff-build --config Release 2>&1 | tee -a tiff.log
+          cmake --install tiff-build --config Release 2>&1 | tee -a tiff.log
+
+          curl -fL --retry 3 -o epoxy.tar.gz \
+            "https://github.com/anholt/libepoxy/archive/refs/tags/${EPOXY_VERSION}.tar.gz"
+          mkdir -p epoxy-src && tar xf epoxy.tar.gz --strip-components=1 -C epoxy-src
+          meson setup epoxy-build epoxy-src \
+            --cross-file="${CROSS}" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dglx=no -Degl=no -Dx11=false -Dtests=false -Ddocs=false \
+            2>&1 | tee epoxy.log
+          ninja -C epoxy-build install 2>&1 | tee -a epoxy.log
+
+      - name: "[7/13] Export env + host-tool fixup"
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          echo "PREFIX=${PREFIX}" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_LIBDIR=${PREFIX}/lib/pkgconfig" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_SYSROOT_DIR=" >> "$GITHUB_ENV"
+          chmod +x ios/scripts/gen-cross-file.sh
+          ios/scripts/gen-cross-file.sh \
+            "${GITHUB_WORKSPACE}/cross-pfx.txt" "${IOS_MIN}" \
+            "${PREFIX}/lib/pkgconfig"
+          BREW_BIN="$(brew --prefix)/bin"
+          for f in "${PREFIX}/bin/"*; do
+            [ -f "$f" ] || continue
+            if file "$f" | grep -q "Mach-O"; then rm -v "$f"; fi
+          done
+          for pc in "${PREFIX}/lib/pkgconfig/gio-2.0.pc" \
+                    "${PREFIX}/lib/pkgconfig/glib-2.0.pc"; do
+            sed -i '' \
+              -e "s|^glib_compile_resources=.*|glib_compile_resources=${BREW_BIN}/glib-compile-resources|" \
+              -e "s|^glib_compile_schemas=.*|glib_compile_schemas=${BREW_BIN}/glib-compile-schemas|" \
+              "$pc" || true
+          done
+
+      - name: "[8/13] Build GTK with the GDK iOS backend (simulator, full-cache miss only)"
+        if: steps.cache-gi.outputs.cache-hit != 'true'
+        run: |
+          set -euxo pipefail
+          GTK_MAJMIN="$(echo "${GTK_VERSION}" | cut -d. -f1,2)"
+          curl -fL --retry 3 -o gtk.tar.xz \
+            "https://download.gnome.org/sources/gtk/${GTK_MAJMIN}/gtk-${GTK_VERSION}.tar.xz"
+          mkdir -p gtk-src && tar xf gtk.tar.xz --strip-components=1 -C gtk-src
+          sed -i '' 's/#if __MAC_OS_X_VERSION_MIN_REQUIRED < 101500L/#if !defined(__IPHONE_OS_VERSION_MIN_REQUIRED) \&\& __MAC_OS_X_VERSION_MIN_REQUIRED < 101500L/' gtk-src/meson.build
+          grep -q '__IPHONE_OS_VERSION_MIN_REQUIRED' gtk-src/meson.build || { echo "::error::patch P1 failed"; exit 1; }
+          sed -i '' 's/#elif defined (__APPLE__)/#elif defined (GDK_WINDOWING_MACOS)/' gtk-src/gtk/gtkcolorpicker.c
+          grep -q 'GDK_WINDOWING_MACOS' gtk-src/gtk/gtkcolorpicker.c || { echo "::error::patch P2 failed"; exit 1; }
+          python3 ios/scripts/patch-gtk-ios.py gtk-src ios/gdk-ios
+
+          meson setup gtk-build gtk-src \
+            --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --wrap-mode=nofallback \
+            -Dios-backend=true \
+            -Dx11-backend=false -Dwayland-backend=false -Dwin32-backend=false \
+            -Dmacos-backend=false -Dandroid-backend=false -Dbroadway-backend=false \
+            -Dmedia-gstreamer=disabled -Dprint-cpdb=disabled -Dprint-cups=disabled \
+            -Dvulkan=disabled -Dcloudproviders=disabled -Dsysprof=disabled \
+            -Dtracker=disabled -Dcolord=disabled -Daccesskit=disabled \
+            -Df16c=disabled \
+            -Dintrospection=enabled -Ddocumentation=false -Dman-pages=false \
+            -Dscreenshots=false \
+            -Dbuild-demos=false -Dbuild-testsuite=false -Dbuild-examples=false \
+            -Dbuild-tests=false \
+            2>&1 | tee gtk-setup.log
+          ninja -C gtk-build 2>&1 | tee gtk-build.log
+          ninja -C gtk-build install 2>&1 | tee gtk-install.log
+
+
+      - name: "[9/13] Build appstream stub + libadwaita (simulator, full-cache miss only)"
+        if: steps.cache-gi.outputs.cache-hit != 'true'
+        run: |
+          set -euxo pipefail
+          SDK=$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)
+
+          # --- appstream stub: satisfies libadwaita's appstream dependency
+          # (only used by adw_about_*_new_from_appdata) without cross-
+          # compiling real appstream + libxmlb + libcurl for iOS.
+          mkdir -p "${PREFIX}/include/appstream-stub"
+          cp ios/adw-shims/appstream.h "${PREFIX}/include/appstream-stub/"
+          xcrun --sdk "${IOS_SDK}" clang -c \
+            -arch arm64 -isysroot "$SDK" \
+            -mios-simulator-version-min="${IOS_MIN}" \
+            ios/adw-shims/appstream-stub.c \
+            $(pkg-config --cflags glib-2.0 gio-2.0) \
+            -o appstream-stub.o 2>&1 | tee adw-stub.log
+          xcrun libtool -static -o "${PREFIX}/lib/libappstream-stub.a" appstream-stub.o
+          PC="${PREFIX}/lib/pkgconfig/appstream.pc"
+          : > "$PC"
+          echo "prefix=${PREFIX}" >> "$PC"
+          echo "libdir=\${prefix}/lib" >> "$PC"
+          echo "includedir=\${prefix}/include/appstream-stub" >> "$PC"
+          echo "" >> "$PC"
+          echo "Name: appstream" >> "$PC"
+          echo "Description: appstream stub for iOS (about-dialog appdata parsing disabled)" >> "$PC"
+          echo "Version: 1.0.99" >> "$PC"
+          echo "Requires: glib-2.0 gio-2.0" >> "$PC"
+          echo "Cflags: -I\${includedir}" >> "$PC"
+          echo "Libs: -L\${libdir} -lappstream-stub" >> "$PC"
+          cat "$PC"
+          pkg-config --exists --print-errors appstream
+
+          # --- libadwaita, patched for iOS (no AppKit, portal settings)
+          ADW_MAJMIN="$(echo "${ADW_VERSION}" | cut -d. -f1,2)"
+          curl -fL --retry 3 -o adw.tar.xz \
+            "https://download.gnome.org/sources/libadwaita/${ADW_MAJMIN}/libadwaita-${ADW_VERSION}.tar.xz"
+          mkdir -p adw-src && tar xf adw.tar.xz --strip-components=1 -C adw-src
+          python3 ios/scripts/patch-adw-ios.py adw-src
+
+          meson setup adw-build adw-src \
+            --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --wrap-mode=nofallback \
+            -Dintrospection=enabled -Dvapi=false \
+            -Dtests=false -Dexamples=false -Ddocumentation=false \
+            2>&1 | tee adw-setup.log
+          ninja -C adw-build 2>&1 | tee adw-build.log
+          ninja -C adw-build install 2>&1 | tee adw-install.log
+          ls -la "${PREFIX}/lib/" | grep -i adw
+
+
+      - name: "[10/13] Compile pseudo-girs (cairo etc.) + verify typelibs"
+        run: |
+          set -euxo pipefail
+          GIRDIR="$(brew --prefix gobject-introspection)/share/gir-1.0"
+          ALT_GIRDIR="$(brew --prefix)/share/gir-1.0"
+          mkdir -p "${PREFIX}/lib/girepository-1.0" "${PREFIX}/share/gir-1.0"
+          for g in cairo-1.0 fontconfig-2.0 freetype2-2.0 GL-1.0 libxml2-2.0 win32-1.0; do
+            SRC=""
+            for d in "$GIRDIR" "$ALT_GIRDIR"; do
+              [ -f "$d/$g.gir" ] && SRC="$d/$g.gir" && break
+            done
+            [ -n "$SRC" ] || continue
+            case "$g" in win32-1.0) continue;; esac
+            g-ir-compiler \
+              --includedir="$GIRDIR" --includedir="$ALT_GIRDIR" \
+              --includedir="${PREFIX}/share/gir-1.0" \
+              "$SRC" -o "${PREFIX}/lib/girepository-1.0/$g.typelib" || true
+            cp "$SRC" "${PREFIX}/share/gir-1.0/" || true
+          done
+
+          echo "== all typelibs in prefix:"
+          find "${PREFIX}/lib" -name "*.typelib" | sort | tee typelibs.txt
+          echo "== all girs in prefix:"
+          find "${PREFIX}/share/gir-1.0" -name "*.gir" 2>/dev/null | sort | tee girs.txt || true
+
+          MISSING=0
+          for t in GLib-2.0 GObject-2.0 Gio-2.0 GModule-2.0 HarfBuzz-0.0 \
+                   Pango-1.0 PangoCairo-1.0 GdkPixbuf-2.0 Graphene-1.0 \
+                   Gdk-4.0 Gsk-4.0 Gtk-4.0 Adw-1 cairo-1.0; do
+            if ! find "${PREFIX}/lib" -name "$t.typelib" | grep -q .; then
+              echo "::error::missing typelib: $t"
+              MISSING=1
+            fi
+          done
+          xcrun simctl shutdown "$SIM_UDID" || true
+          test "$MISSING" = "0"
+
+      - name: "[12/13] Upload artifacts"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: introspection-results
+          path: |
+            simulator-screenshot.png
+            app-console.log
+            app-syslog.log
+            typelibs.txt
+            girs.txt
+          if-no-files-found: warn
+
+      - name: Publish diagnostics to ci-logs branch (always)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uxo pipefail
+          RUN_ID="${GITHUB_RUN_ID}"
+          OUT="ci-logs/step9/run-${RUN_ID}"
+          rm -rf _cilogs && mkdir -p "_cilogs/${OUT}"
+          for f in base-stack.log gtk-setup.log gtk-build.log adw-setup.log \
+                   adw-build.log adw-install.log typelibs.txt girs.txt; do
+            [ -f "$f" ] && cp "$f" "_cilogs/${OUT}/$(echo "$f" | tr '/' '_')" || true
+          done
+          if [ -d crash-reports ]; then cp crash-reports/* "_cilogs/${OUT}/" 2>/dev/null || true; fi
+          SUMMARY="_cilogs/${OUT}/SUMMARY.txt"
+          {
+            echo "Run ID: ${RUN_ID}"
+            echo "Commit: ${GITHUB_SHA}"
+            echo "Date: $(date -u)"
+            echo
+            for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt; do
+              echo "===================== TAIL: $f ====================="
+              if [ -f "$f" ]; then tail -60 "$f"; else echo "(not produced)"; fi
+              echo
+            done
+          } > "${SUMMARY}" 2>&1 || true
+          cd _cilogs
+          git init -q
+          git config user.email "ci@rayforge.local"
+          git config user.name "Rayforge CI Logs"
+          git checkout -q -b ci-logs
+          git add -A
+          git commit -q -m "step9 diagnostics for run ${RUN_ID}" || echo "nothing to commit"
+          REMOTE="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git ls-remote --exit-code "${REMOTE}" ci-logs >/dev/null 2>&1; then
+            git fetch -q "${REMOTE}" ci-logs || true
+            git merge -q --allow-unrelated-histories -m "merge" FETCH_HEAD || true
+          fi
+          git push -q "${REMOTE}" ci-logs:ci-logs || git push -q -f "${REMOTE}" ci-logs:ci-logs
+          echo "Diagnostics pushed under ${OUT}"
