@@ -96,6 +96,16 @@ meson setup glib-build glib-src \
   -Dselinux=disabled -Dxattr=false -Dman-pages=disabled -Dnls=disabled \
   -Dpcre2:jit=disabled \
   2>&1 | tee glib-setup.log
+# When introspection is enabled, the GLib-2.0 gir dumper links
+# -lgio-2.0 but glib's gir target does not fully declare that dependency
+# — under parallel ninja the dumper link can race ahead of
+# libgio-2.0.a. Force the core libraries first.
+if [ "${GI}" = "enabled" ]; then
+  ninja -C glib-build \
+    glib/libglib-2.0.a gobject/libgobject-2.0.a \
+    gmodule/libgmodule-2.0.a gio/libgio-2.0.a \
+    2>&1 | tee glib-prelibs.log
+fi
 ninja -C glib-build install 2>&1 | tee glib-install.log
 
 # ---------------------------------------------------------------- pixman
