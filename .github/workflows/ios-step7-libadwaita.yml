@@ -281,15 +281,20 @@ jobs:
           # the executable as well would create a second GLib copy at
           # runtime (duplicate GType registrations -> crashes).
           # libadwaita is a static lib resolving its GTK/GLib symbols from
-          # the gtk dylib (single GLib copy). The appstream stub satisfies
-          # the about-dialog symbols.
+          # the gtk dylib (single GLib copy). -force_load is REQUIRED: the
+          # GResource bundles (UI templates, stylesheet, icons) register
+          # via __attribute__((constructor)) in objects no symbol refers
+          # to — plain -ladwaita-1 drops them and every composite-template
+          # widget crashes at runtime.
           xcrun --sdk "${IOS_SDK}" clang \
             -arch arm64 -isysroot "$SDK" \
             -mios-simulator-version-min="${IOS_MIN}" \
             ios/testapp/main-adw.c \
             -o rayforge-adwtest \
             $(pkg-config --cflags libadwaita-1 gtk4) \
-            -L"${PREFIX}/lib" -ladwaita-1 -lappstream-stub -lgtk-4 \
+            -L"${PREFIX}/lib" \
+            -Wl,-force_load,"${PREFIX}/lib/libadwaita-1.a" \
+            -lappstream-stub -lgtk-4 \
             2>&1 | tee testapp-link.log
 
           APP="RayforgeAdw.app"
