@@ -265,6 +265,8 @@ jobs:
           grep -q 'GDK_WINDOWING_MACOS' gtk-src/gtk/gtkcolorpicker.c || { echo "::error::patch P2 failed"; exit 1; }
           python3 ios/scripts/patch-gtk-ios.py gtk-src ios/gdk-ios
 
+          # g-ir-scanner resolves gir includes via XDG data dirs; add our prefix
+          export XDG_DATA_DIRS="${PREFIX}/share:/opt/homebrew/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
           meson setup gtk-build gtk-src \
             --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
             --default-library=static --prefix="${PREFIX}" --buildtype=release \
@@ -330,6 +332,8 @@ jobs:
           mkdir -p adw-src && tar xf adw.tar.xz --strip-components=1 -C adw-src
           python3 ios/scripts/patch-adw-ios.py adw-src
 
+          # g-ir-scanner resolves gir includes via XDG data dirs; add our prefix
+          export XDG_DATA_DIRS="${PREFIX}/share:/opt/homebrew/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
           meson setup adw-build adw-src \
             --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
             --default-library=shared --prefix="${PREFIX}" --buildtype=release \
