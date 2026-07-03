@@ -1,0 +1,703 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-build
+Build type: cross build
+DEPRECATION: Option "gtk_doc" is replaced by 'documentation'
+Project name: pango
+Project version: 1.58.0
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+C++ compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C++ linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+C++ compiler for the build machine: c++ (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C++ linker for the build machine: c++ ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Compiler for C supports arguments -Wno-c++11-extensions: YES 
+Compiler for C supports arguments -Wno-missing-include-dirs: YES 
+Compiler for C supports arguments -Wno-typedef-redefinition: YES 
+Compiler for C supports arguments -Wduplicated-branches: NO 
+Compiler for C supports arguments -Wduplicated-cond: NO 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Wformat-nonliteral: YES 
+Compiler for C supports arguments -Wformat-security: YES 
+Compiler for C supports arguments -Wignored-qualifiers: YES 
+Compiler for C supports arguments -Wimplicit-function-declaration: YES 
+Compiler for C supports arguments -Wlogical-op: NO 
+Compiler for C supports arguments -Wmisleading-indentation: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wswitch-default: YES 
+Compiler for C supports arguments -Wswitch-enum: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wuninitialized: YES 
+Compiler for C supports arguments -Wunused: YES 
+Compiler for C supports arguments -Werror=address: YES 
+Compiler for C supports arguments -Werror=empty-body: YES 
+Compiler for C supports arguments -Werror=implicit: YES 
+Compiler for C supports arguments -Werror=implicit-fallthrough: YES 
+Compiler for C supports arguments -Werror=init-self: YES 
+Compiler for C supports arguments -Werror=int-to-pointer-cast: YES 
+Compiler for C supports arguments -Werror=main: YES 
+Compiler for C supports arguments -Werror=missing-braces: YES 
+Compiler for C supports arguments -Werror=missing-declarations: YES 
+Compiler for C supports arguments -Werror=missing-prototypes: YES 
+Compiler for C supports arguments -Werror=nonnull: YES 
+Compiler for C supports arguments -Werror=pointer-to-int-cast: YES 
+Compiler for C supports arguments -Werror=redundant-decls: YES 
+Compiler for C supports arguments -Werror=return-type: YES 
+Compiler for C supports arguments -Werror=sequence-point: YES 
+Compiler for C supports arguments -Werror=trigraphs: YES 
+Compiler for C supports arguments -Werror=vla: YES 
+Compiler for C supports arguments -Werror=write-strings: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -Wpointer-arith: YES (cached)
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wformat=2: YES (cached)
+Compiler for C supports arguments -Wformat-nonliteral: YES (cached)
+Compiler for C supports arguments -Wformat-security: YES (cached)
+Compiler for C supports arguments -Wunused: YES (cached)
+Compiler for C supports arguments -Wcast-align: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES (cached)
+Compiler for C supports arguments -Wmissing-format-attribute: YES (cached)
+Compiler for C supports arguments -Wmissing-include-dirs: YES (cached)
+Compiler for C supports arguments -Wlogical-op: NO (cached)
+Compiler for C supports arguments -Wno-uninitialized: YES 
+Compiler for C supports arguments -Wno-shadow: YES 
+Compiler for C supports arguments -Werror=implicit-fallthrough: YES (cached)
+Compiler for C supports arguments -Werror=nonnull: YES (cached)
+Compiler for C supports arguments -Werror=init-self: YES (cached)
+Compiler for C supports arguments -Werror=main: YES (cached)
+Compiler for C supports arguments -Werror=missing-braces: YES (cached)
+Compiler for C supports arguments -Werror=sequence-point: YES (cached)
+Compiler for C supports arguments -Werror=return-type: YES (cached)
+Compiler for C supports arguments -Werror=trigraphs: YES (cached)
+Compiler for C supports arguments -Werror=write-strings: YES (cached)
+Compiler for C supports arguments -Werror=address: YES (cached)
+Compiler for C supports arguments -Werror=int-to-pointer-cast: YES (cached)
+Compiler for C supports arguments -Werror=empty-body: YES (cached)
+Compiler for C supports arguments -Werror=write-strings: YES (cached)
+Compiler for C supports arguments -Werror=unused-but-set-variable: YES 
+Compiler for C supports arguments -Wundef: YES (cached)
+Compiler for C supports arguments -Werror=redundant-decls: YES (cached)
+Message: Disabling cast checks
+Library m found: YES
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency glib-2.0 found: YES 2.82.4
+Run-time dependency gobject-2.0 found: YES 2.82.4
+Run-time dependency gio-2.0 found: YES 2.82.4
+Found CMake: NO
+Run-time dependency gobject-introspection-1.0 found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency fribidi found: YES 1.0.16
+Run-time dependency libthai found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency harfbuzz found: YES 14.2.1
+Run-time dependency fontconfig found: YES 2.17.1
+Run-time dependency freetype2 found: YES 26.2.20
+Run-time dependency xft found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency cairo found: YES 1.18.4
+Run-time dependency cairo-ft found: YES 1.18.4
+Checking if "Cairo is built with FreeType and FontConfig support" with dependency cairo-ft links: YES 
+Run-time dependency cairo-win32 found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency cairo-quartz found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency cairo-png found: YES 1.18.4
+Run-time dependency cairo-ps found: YES 1.18.4
+Run-time dependency cairo-pdf found: YES 1.18.4
+Run-time dependency cairo-xlib found: NO  (tried pkg-config, framework and cmake)
+Program g-ir-scanner skipped: feature introspection disabled
+Dependency sysprof-capture-4 for host machine skipped: feature sysprof disabled
+Configuring config.h using configuration
+Configuring pango-features.h using configuration
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build-time dependency glib-2.0 found: YES 2.82.4
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.82.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Program gi-docgen found: NO
+Program rst2man rst2man.py found: NO
+Program rst2html5 rst2html5.py found: NO
+Build targets in project: 38
+
+pango 1.58.0
+
+  Font backends
+    Fontconfig     : true
+    DirectWrite    : false
+    CoreText       : false
+
+  Features
+    Cairo          : true
+    Thai           : false
+    Sysprof        : false
+
+  Toolchain
+    Compiler       : clang
+    Linker         : ld64
+
+  Build
+    Debugging      : false
+    Optimization   : 3
+    Introspection  : false
+    Documentation  : false
+    Man pages      : false
+    Tests          : true
+    Examples       : true
+
+  Directories
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    includedir     : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+    libdir         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+    datadir        : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-arm64-cross.txt
+    buildtype      : release
+    cairo          : enabled
+    default_library: static
+    fontconfig     : enabled
+    freetype       : enabled
+    gtk_doc        : false
+    introspection  : disabled
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    wrap_mode      : nofallback
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `pango-build'
+[1/133] Generating GObject enum file pango/pango-enum-types.h (wrapped by meson to capture output)
+[2/133] Compiling C object pango/libpango-1.0.a.p/glyphstring.c.o
+[3/133] Generating GObject enum file pango/pango-enum-types.c (wrapped by meson to capture output)
+[4/133] Compiling C object pango/libpango-1.0.a.p/ellipsize.c.o
+[5/133] Compiling C object pango/libpango-1.0.a.p/meson-generated_.._pango-enum-types.c.o
+[6/133] Compiling C object pango/libpango-1.0.a.p/modules.c.o
+[7/133] Compiling C object pango/libpango-1.0.a.p/pango-bidi-type.c.o
+[8/133] Compiling C object pango/libpango-1.0.a.p/pango-color.c.o
+[9/133] Compiling C object pango/libpango-1.0.a.p/itemize.c.o
+[10/133] Compiling C object pango/libpango-1.0.a.p/pango-coverage.c.o
+[11/133] Compiling C object pango/libpango-1.0.a.p/pango-context.c.o
+[12/133] Compiling C object pango/libpango-1.0.a.p/fonts.c.o
+[13/133] Compiling C object pango/libpango-1.0.a.p/pango-emoji.c.o
+[14/133] Compiling C object pango/libpango-1.0.a.p/pango-engine.c.o
+[15/133] Compiling C object pango/libpango-1.0.a.p/pango-fontset.c.o
+[16/133] Compiling C object pango/libpango-1.0.a.p/pango-fontset-simple.c.o
+[17/133] Compiling C object pango/libpango-1.0.a.p/pango-gravity.c.o
+[18/133] Compiling C object pango/libpango-1.0.a.p/pango-fontmap.c.o
+[19/133] Compiling C object pango/libpango-1.0.a.p/pango-attributes.c.o
+[20/133] Compiling C object pango/libpango-1.0.a.p/pango-glyph-item.c.o
+[21/133] Compiling C object pango/libpango-1.0.a.p/pango-item.c.o
+[22/133] Compiling C object pango/libpango-1.0.a.p/pango-matrix.c.o
+[23/133] Compiling C object pango/libpango-1.0.a.p/pango-language.c.o
+[24/133] Compiling C object pango/libpango-1.0.a.p/pango-script.c.o
+[25/133] Compiling C object pango/libpango-1.0.a.p/pango-tabs.c.o
+[26/133] Compiling C object pango/libpango-1.0.a.p/pango-renderer.c.o
+[27/133] Compiling C object pango/libpango-1.0.a.p/reorder-items.c.o
+[28/133] Compiling C object pango/libpango-1.0.a.p/pango-utils.c.o
+[29/133] Compiling C object pango/libpango-1.0.a.p/shape.c.o
+[30/133] Compiling C object pango/libpango-1.0.a.p/serializer.c.o
+[31/133] Compiling C object pango/libpango-1.0.a.p/json_gtkjsonprinter.c.o
+[32/133] Compiling C object pango/libpango-1.0.a.p/json_gtkjsonparser.c.o
+[33/133] Compiling C object pango/libpangoft2-1.0.a.p/pangofc-font.c.o
+[34/133] Compiling C object pango/libpangoft2-1.0.a.p/pangofc-decoder.c.o
+[35/133] Compiling C object pango/libpangoft2-1.0.a.p/pango-trace.c.o
+[36/133] Compiling C object pango/libpangoft2-1.0.a.p/pango-ot-buffer.c.o
+[37/133] Compiling C object pango/libpangoft2-1.0.a.p/pango-ot-info.c.o
+[38/133] Compiling C object pango/libpango-1.0.a.p/pango-markup.c.o
+[39/133] Compiling C object pango/libpangoft2-1.0.a.p/pango-ot-tag.c.o
+[40/133] Compiling C object pango/libpangoft2-1.0.a.p/pangofc-fontmap.c.o
+../pango-src/pango/pangofc-fontmap.c:3416:17: warning: cast from 'gchar *' (aka 'char *') to 'int *' increases required alignment from 1 to 4 [-Wcast-align]
+ 3416 |               *sizes = (int *) size_array->data;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[41/133] Compiling C object pango/libpangoft2-1.0.a.p/pango-ot-ruleset.c.o
+[42/133] Compiling C object pango/libpangoft2-1.0.a.p/pangoft2-fontmap.c.o
+In file included from ../pango-src/pango/pangoft2-fontmap.c:34:
+In file included from ../pango-src/pango/pangoft2-private.h:26:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/pango/pangoft2-fontmap.c:34:
+In file included from ../pango-src/pango/pangoft2-private.h:26:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[43/133] Compiling C object pango/libpangoft2-1.0.a.p/pangoft2.c.o
+In file included from ../pango-src/pango/pangoft2.c:31:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/pango/pangoft2.c:31:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[44/133] Compiling C object pango/libpangoft2-1.0.a.p/pangoft2-render.c.o
+In file included from ../pango-src/pango/pangoft2-render.c:27:
+In file included from ../pango-src/pango/pangoft2-private.h:26:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/pango/pangoft2-render.c:27:
+In file included from ../pango-src/pango/pangoft2-private.h:26:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[45/133] Compiling C object pango/libpangocairo-1.0.a.p/pangocairo-context.c.o
+[46/133] Compiling C object pango/libpangocairo-1.0.a.p/pangocairo-fontmap.c.o
+[47/133] Compiling C object pango/libpango-1.0.a.p/pango-layout.c.o
+[48/133] Compiling C object pango/libpangocairo-1.0.a.p/pangocairo-fcfont.c.o
+[49/133] Compiling C object pango/libpangocairo-1.0.a.p/pangocairo-render.c.o
+[50/133] Compiling C object pango/libpangocairo-1.0.a.p/pangocairo-font.c.o
+[51/133] Compiling C object pango/libpangocairo-1.0.a.p/pangocairo-fcfontmap.c.o
+[52/133] Linking static target pango/libpangoft2-1.0.a
+[53/133] Compiling C object utils/pango-view.p/pango-view.c.o
+[54/133] Linking static target pango/libpangocairo-1.0.a
+[55/133] Compiling C object utils/pango-view.p/viewer-main.c.o
+[56/133] Compiling C object utils/pango-view.p/viewer-render.c.o
+[57/133] Compiling C object utils/pango-view.p/viewer-pangoft2.c.o
+In file included from ../pango-src/utils/viewer-pangoft2.c:31:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/utils/viewer-pangoft2.c:31:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[58/133] Compiling C object utils/pango-view.p/viewer-cairo.c.o
+[59/133] Compiling C object tools/gen-script-for-lang.p/gen-script-for-lang.c.o
+[60/133] Compiling C object utils/pango-list.p/pango-list.c.o
+[61/133] Compiling C object utils/pango-segmentation.p/pango-segmentation.c.o
+[62/133] Compiling C object tests/test-coverage.p/test-coverage.c.o
+[63/133] Compiling C object utils/pango-view.p/viewer-pangocairo.c.o
+[64/133] Compiling C object tests/testboundaries.p/testboundaries.c.o
+[65/133] Compiling C object tests/testboundaries_ucd.p/testboundaries_ucd.c.o
+[66/133] Compiling C object tests/testscript.p/testscript.c.o
+[67/133] Compiling C object tests/testlanguage.p/testlanguage.c.o
+[68/133] Compiling C object tests/testcolor.p/testcolor.c.o
+[69/133] Compiling C object tests/testtabs.p/testtabs.c.o
+[70/133] Compiling C object tests/testmatrix.p/testmatrix.c.o
+../pango-src/tests/testmatrix.c:197:27: warning: implicit conversion from 'double' to 'guint64' (aka 'unsigned long long') changes value from 0.2 to 0 [-Wliteral-conversion]
+  197 |   g_assert_cmphex (r, ==, 0.2);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gtestutils.h:66:75: note: expanded from macro 'g_assert_cmphex'
+   66 |                                              guint64 __n1 = (n1), __n2 = (n2); \
+      |                                                                   ~~~~    ^~
+../pango-src/tests/testmatrix.c:202:27: warning: implicit conversion from 'double' to 'guint64' (aka 'unsigned long long') changes value from 0.2 to 0 [-Wliteral-conversion]
+  202 |   g_assert_cmphex (r, ==, 0.2);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gtestutils.h:66:75: note: expanded from macro 'g_assert_cmphex'
+   66 |                                              guint64 __n1 = (n1), __n2 = (n2); \
+      |                                                                   ~~~~    ^~
+../pango-src/tests/testmatrix.c:207:27: warning: implicit conversion from 'double' to 'guint64' (aka 'unsigned long long') changes value from 0.2 to 0 [-Wliteral-conversion]
+  207 |   g_assert_cmphex (r, ==, 0.2);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gtestutils.h:66:75: note: expanded from macro 'g_assert_cmphex'
+   66 |                                              guint64 __n1 = (n1), __n2 = (n2); \
+      |                                                                   ~~~~    ^~
+../pango-src/tests/testmatrix.c:210:27: warning: implicit conversion from 'double' to 'guint64' (aka 'unsigned long long') changes value from 0.4 to 0 [-Wliteral-conversion]
+  210 |   g_assert_cmphex (r, ==, 0.4);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gtestutils.h:66:75: note: expanded from macro 'g_assert_cmphex'
+   66 |                                              guint64 __n1 = (n1), __n2 = (n2); \
+      |                                                                   ~~~~    ^~
+4 warnings generated.
+[71/133] Compiling C object tests/test-ot-tags.p/test-ot-tags.c.o
+In file included from ../pango-src/tests/test-ot-tags.c:24:
+In file included from ../pango-src/pango/pango-ot.h:27:
+In file included from ../pango-src/pango/pangofc-font.h:36:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/tests/test-ot-tags.c:24:
+In file included from ../pango-src/pango/pango-ot.h:27:
+In file included from ../pango-src/pango/pangofc-font.h:36:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[72/133] Compiling C object tests/testcontext.p/testcontext.c.o
+[73/133] Compiling C object tests/test-font-data.p/test-common.c.o
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[74/133] Compiling C object tests/test-font-data.p/test-font-data.c.o
+[75/133] Compiling C object tests/test-ellipsize.p/test-ellipsize.c.o
+[76/133] Compiling C object tests/testiter.p/testiter.c.o
+[77/133] Compiling C object tests/markup-parse.p/markup-parse.c.o
+[78/133] Compiling C object tests/test-bidi.p/test-bidi.c.o
+[79/133] Compiling C object tests/markup-parse.p/test-common.c.o
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[80/133] Compiling C object tests/test-itemize.p/test-itemize.c.o
+[81/133] Compiling C object tests/test-itemize.p/test-common.c.o
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[82/133] Compiling C object tests/test-shape.p/test-common.c.o
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[83/133] Compiling C object tests/test-font.p/test-common.c.o
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[84/133] Compiling C object tests/test-shape.p/test-shape.c.o
+[85/133] Compiling C object tests/testattributes.p/testattributes.c.o
+[86/133] Compiling C object tests/testattributes.p/test-common.c.o
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[87/133] Compiling C++ object tests/cxx-test.p/cxx-test.cpp.o
+[88/133] Compiling C object tests/test-harfbuzz.p/test-harfbuzz.c.o
+[89/133] Compiling C object pango/libpango-1.0.a.p/break.c.o
+[90/133] Compiling C object tests/test-break.p/test-common.c.o
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/tests/test-common.c:41:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[91/133] Linking static target pango/libpango-1.0.a
+[92/133] Compiling C object tests/test-font.p/test-font.c.o
+In file included from ../pango-src/tests/test-font.c:34:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/tests/test-font.c:34:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[93/133] Compiling C object tests/test-break.p/validate-log-attrs.c.o
+[94/133] Compiling C object tests/test-pangocairo-threads.p/test-pangocairo-threads.c.o
+[95/133] Compiling C object tests/test-break.p/test-break.c.o
+[96/133] Compiling C object examples/cairosimple.p/cairosimple.c.o
+[97/133] Compiling C object examples/cairoshape.p/cairoshape.c.o
+[98/133] Linking target utils/pango-list
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[99/133] Linking target utils/pango-view
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[100/133] Compiling C object tests/testmisc.p/testmisc.c.o
+In file included from ../pango-src/tests/testmisc.c:27:
+In file included from ../pango-src/pango/pango-ot.h:27:
+In file included from ../pango-src/pango/pangofc-font.h:36:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/tests/testmisc.c:27:
+In file included from ../pango-src/pango/pango-ot.h:27:
+In file included from ../pango-src/pango/pangofc-font.h:36:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[101/133] Linking target tests/test-coverage
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[102/133] Compiling C object examples/cairotwisted.p/cairotwisted.c.o
+[103/133] Linking target tools/gen-script-for-lang
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[104/133] Linking target utils/pango-segmentation
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[105/133] Linking target tests/testscript
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[106/133] Linking target tests/testcolor
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[107/133] Linking target tests/testboundaries_ucd
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[108/133] Linking target tests/testlanguage
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[109/133] Compiling C object tests/testserialize.p/testserialize.c.o
+In file included from ../pango-src/tests/testserialize.c:25:
+In file included from ../pango-src/pango/pangocairo-fc.h:25:
+In file included from ../pango-src/pango/pangofc-fontmap.h:27:
+In file included from ../pango-src/pango/pangofc-decoder.h:25:
+In file included from ../pango-src/pango/pangofc-font.h:36:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/tests/testserialize.c:25:
+In file included from ../pango-src/pango/pangocairo-fc.h:25:
+In file included from ../pango-src/pango/pangofc-fontmap.h:27:
+In file included from ../pango-src/pango/pangofc-decoder.h:25:
+In file included from ../pango-src/pango/pangofc-font.h:36:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[110/133] Linking target tests/testboundaries
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[111/133] Linking target tests/testmatrix
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[112/133] Linking target tests/testtabs
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[113/133] Linking target tests/test-font-data
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[114/133] Linking target tests/test-ot-tags
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[115/133] Linking target tests/test-bidi
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[116/133] Linking target tests/testcontext
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[117/133] Linking target tests/testiter
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[118/133] Linking target tests/test-itemize
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[119/133] Linking target tests/test-ellipsize
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[120/133] Linking target tests/markup-parse
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[121/133] Linking target tests/test-shape
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[122/133] Linking target tests/test-font
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[123/133] Linking target tests/cxx-test
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[124/133] Linking target tests/testattributes
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[125/133] Linking target tests/test-break
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[126/133] Linking target tests/test-harfbuzz
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[127/133] Linking target tests/testmisc
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[128/133] Linking target tests/testserialize
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[129/133] Linking target examples/cairosimple
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[130/133] Linking target examples/cairoshape
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[131/133] Linking target tests/test-pangocairo-threads
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[132/133] Linking target examples/cairotwisted
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[132/133] Installing files
+Installing pango/pango-enum-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing pango/libpango-1.0.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing pango/libpangoft2-1.0.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing pango/libpangocairo-1.0.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing utils/pango-view to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing utils/pango-list to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing utils/pango-segmentation to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-attributes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-bidi-type.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-break.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-color.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-context.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-coverage.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-direction.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-engine.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-font.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-fontmap.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-fontset.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-fontset-simple.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-glyph.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-glyph-item.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-gravity.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-item.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-language.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-layout.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-matrix.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-markup.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-modules.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-renderer.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-script.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-tabs.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-utils.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-version-macros.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pangoft2.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pangofc-font.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pangofc-fontmap.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pangofc-decoder.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pango-ot.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/pango/pangocairo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-build/pango/pango-features.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0/pango
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-build/meson-private/pango.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-build/meson-private/pangoft2.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-build/meson-private/pangoot.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-build/meson-private/pangofc.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-build/meson-private/pangocairo.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig

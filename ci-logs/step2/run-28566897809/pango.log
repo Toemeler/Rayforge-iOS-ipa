@@ -1,0 +1,603 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-build
+Build type: cross build
+DEPRECATION: Option "gtk_doc" is replaced by 'documentation'
+Project name: pango
+Project version: 1.58.0
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+C++ compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C++ linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+C++ compiler for the build machine: c++ (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C++ linker for the build machine: c++ ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Compiler for C supports arguments -Wno-c++11-extensions: YES 
+Compiler for C supports arguments -Wno-missing-include-dirs: YES 
+Compiler for C supports arguments -Wno-typedef-redefinition: YES 
+Compiler for C supports arguments -Wduplicated-branches: NO 
+Compiler for C supports arguments -Wduplicated-cond: NO 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Wformat-nonliteral: YES 
+Compiler for C supports arguments -Wformat-security: YES 
+Compiler for C supports arguments -Wignored-qualifiers: YES 
+Compiler for C supports arguments -Wimplicit-function-declaration: YES 
+Compiler for C supports arguments -Wlogical-op: NO 
+Compiler for C supports arguments -Wmisleading-indentation: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wswitch-default: YES 
+Compiler for C supports arguments -Wswitch-enum: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wuninitialized: YES 
+Compiler for C supports arguments -Wunused: YES 
+Compiler for C supports arguments -Werror=address: YES 
+Compiler for C supports arguments -Werror=empty-body: YES 
+Compiler for C supports arguments -Werror=implicit: YES 
+Compiler for C supports arguments -Werror=implicit-fallthrough: YES 
+Compiler for C supports arguments -Werror=init-self: YES 
+Compiler for C supports arguments -Werror=int-to-pointer-cast: YES 
+Compiler for C supports arguments -Werror=main: YES 
+Compiler for C supports arguments -Werror=missing-braces: YES 
+Compiler for C supports arguments -Werror=missing-declarations: YES 
+Compiler for C supports arguments -Werror=missing-prototypes: YES 
+Compiler for C supports arguments -Werror=nonnull: YES 
+Compiler for C supports arguments -Werror=pointer-to-int-cast: YES 
+Compiler for C supports arguments -Werror=redundant-decls: YES 
+Compiler for C supports arguments -Werror=return-type: YES 
+Compiler for C supports arguments -Werror=sequence-point: YES 
+Compiler for C supports arguments -Werror=trigraphs: YES 
+Compiler for C supports arguments -Werror=vla: YES 
+Compiler for C supports arguments -Werror=write-strings: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -Wpointer-arith: YES (cached)
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wformat=2: YES (cached)
+Compiler for C supports arguments -Wformat-nonliteral: YES (cached)
+Compiler for C supports arguments -Wformat-security: YES (cached)
+Compiler for C supports arguments -Wunused: YES (cached)
+Compiler for C supports arguments -Wcast-align: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES (cached)
+Compiler for C supports arguments -Wmissing-format-attribute: YES (cached)
+Compiler for C supports arguments -Wmissing-include-dirs: YES (cached)
+Compiler for C supports arguments -Wlogical-op: NO (cached)
+Compiler for C supports arguments -Wno-uninitialized: YES 
+Compiler for C supports arguments -Wno-shadow: YES 
+Compiler for C supports arguments -Werror=implicit-fallthrough: YES (cached)
+Compiler for C supports arguments -Werror=nonnull: YES (cached)
+Compiler for C supports arguments -Werror=init-self: YES (cached)
+Compiler for C supports arguments -Werror=main: YES (cached)
+Compiler for C supports arguments -Werror=missing-braces: YES (cached)
+Compiler for C supports arguments -Werror=sequence-point: YES (cached)
+Compiler for C supports arguments -Werror=return-type: YES (cached)
+Compiler for C supports arguments -Werror=trigraphs: YES (cached)
+Compiler for C supports arguments -Werror=write-strings: YES (cached)
+Compiler for C supports arguments -Werror=address: YES (cached)
+Compiler for C supports arguments -Werror=int-to-pointer-cast: YES (cached)
+Compiler for C supports arguments -Werror=empty-body: YES (cached)
+Compiler for C supports arguments -Werror=write-strings: YES (cached)
+Compiler for C supports arguments -Werror=unused-but-set-variable: YES 
+Compiler for C supports arguments -Wundef: YES (cached)
+Compiler for C supports arguments -Werror=redundant-decls: YES (cached)
+Message: Disabling cast checks
+Library m found: YES
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency glib-2.0 found: YES 2.82.4
+Run-time dependency gobject-2.0 found: YES 2.82.4
+Run-time dependency gio-2.0 found: YES 2.82.4
+Found CMake: NO
+Run-time dependency gobject-introspection-1.0 found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency fribidi found: YES 1.0.16
+Run-time dependency libthai found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency harfbuzz found: YES 14.2.1
+Dependency fontconfig for host machine found: NO. Found 2.15.0 but need: '>= 2.17.0'
+Run-time dependency fontconfig found: NO  (tried pkg-config, framework and cmake)
+Looking for a fallback subproject for the dependency fontconfig
+
+Executing subproject fontconfig 
+
+fontconfig| DEPRECATION: WrapDB v1 is deprecated, updated using `meson wrap update libpng`
+fontconfig| DEPRECATION: WrapDB v1 is deprecated, updated using `meson wrap update zlib`
+fontconfig| DEPRECATION: WrapDB v1 is deprecated, updated using `meson wrap update expat`
+fontconfig| Project name: fontconfig
+fontconfig| Project version: 2.17.1
+fontconfig| C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+fontconfig| C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+fontconfig| C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+fontconfig| C linker for the build machine: cc ld64 1167.5
+fontconfig| Library m found: YES
+fontconfig| Run-time dependency freetype2 found: YES 26.2.20
+fontconfig| Run-time dependency json-c found: NO  (tried pkg-config, framework and cmake)
+fontconfig| Run-time dependency expat found: YES 2.6.4
+fontconfig| Program python3 found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14)
+fontconfig| Program pytest found: NO
+fontconfig| Run-time dependency intl found: NO  (tried builtin and system)
+fontconfig| Looking for a fallback subproject for the dependency intl
+
+Executing subproject fontconfig:libintl
+
+libintl| Project name: libintl
+libintl| Project version: undefined
+libintl| C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+libintl| C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+libintl| C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+libintl| C linker for the build machine: cc ld64 1167.5
+
+libintl| pango-src/subprojects/fontconfig/subprojects/libintl/meson.build:4:14: Exception: Include dir /usr/local/include does not exist.
+
+fontconfig| Subproject subprojects/fontconfig/subprojects/libintl is buildable: NO (disabling)
+fontconfig| Dependency intl for host machine from subproject libintl found: NO (subproject failed to configure)
+fontconfig| Has header "dirent.h" : YES
+fontconfig| Has header "dlfcn.h" : YES
+fontconfig| Has header "fcntl.h" : YES
+fontconfig| Has header "inttypes.h" : YES
+fontconfig| Has header "stdint.h" : YES
+fontconfig| Has header "stdio.h" : YES
+fontconfig| Has header "stdlib.h" : YES
+fontconfig| Has header "strings.h" : YES
+fontconfig| Has header "string.h" : YES
+fontconfig| Has header "unistd.h" : YES
+fontconfig| Has header "sys/statvfs.h" : YES
+fontconfig| Has header "sys/vfs.h" : NO
+fontconfig| Has header "sys/statfs.h" : NO
+fontconfig| Has header "sys/stat.h" : YES
+fontconfig| Has header "sys/types.h" : YES
+fontconfig| Has header "sys/param.h" : YES
+fontconfig| Has header "sys/mount.h" : YES
+fontconfig| Has header "time.h" : YES
+fontconfig| Has header "wchar.h" : YES
+fontconfig| Checking for function "link" : YES
+fontconfig| Checking for function "mkstemp" : YES
+fontconfig| Checking for function "mkostemp" : YES
+fontconfig| Checking for function "_mktemp_s" : NO
+fontconfig| Checking for function "mkdtemp" : YES
+fontconfig| Checking for function "getopt" : YES
+fontconfig| Checking for function "getopt_long" : YES
+fontconfig| Checking for function "getprogname" : YES
+fontconfig| Checking for function "getexecname" : NO
+fontconfig| Checking for function "rand" : YES
+fontconfig| Checking for function "random" : YES
+fontconfig| Checking for function "lrand48" : YES
+fontconfig| Checking for function "random_r" : NO
+fontconfig| Checking for function "rand_r" : YES
+fontconfig| Checking for function "readlink" : YES
+fontconfig| Checking for function "fstatvfs" : YES
+fontconfig| Checking for function "fstatfs" : YES
+fontconfig| Checking for function "lstat" : YES
+fontconfig| Checking for function "strerror" : YES
+fontconfig| Checking for function "strerror_r" : YES
+fontconfig| Checking for function "mmap" : YES
+fontconfig| Checking for function "vprintf" : YES
+fontconfig| Checking for function "vsnprintf" : YES
+fontconfig| Checking for function "vsprintf" : YES
+fontconfig| Checking for function "getpagesize" : YES
+fontconfig| Checking for function "getpid" : YES
+fontconfig| Checking for function "dcgettext" : NO
+fontconfig| Checking for function "gettext" : NO
+fontconfig| Checking for function "localtime_r" : YES
+fontconfig| Checking for function "FT_Get_BDF_Property" with dependency freetype2: YES
+fontconfig| Checking for function "FT_Get_PS_Font_Info" with dependency freetype2: YES
+fontconfig| Checking for function "FT_Has_PS_Glyph_Names" with dependency freetype2: YES
+fontconfig| Checking for function "FT_Get_X11_Font_Format" with dependency freetype2: YES
+fontconfig| Checking for function "FT_Done_MM_Var" with dependency freetype2: YES
+fontconfig| Header "fcntl.h" has symbol "posix_fadvise" : NO
+fontconfig| Checking whether type "struct statvfs" has member "f_basetype" : NO
+fontconfig| Checking whether type "struct statvfs" has member "f_fstypename" : NO
+fontconfig| Checking whether type "struct statfs" has member "f_flags" : NO
+fontconfig| Checking whether type "struct statfs" has member "f_fstypename" : NO
+fontconfig| Checking whether type "struct stat" has member "st_mtim" : NO
+fontconfig| Checking whether type "struct dirent" has member "d_type" : YES
+fontconfig| Checking for size of "void *" : 8
+fontconfig| Checking for alignment of "void *" : 8
+fontconfig| Checking for alignment of "double" : 8
+fontconfig| Checking if "stdatomic.h atomics" links: YES
+fontconfig| Checking if "Intel atomics" links: YES
+fontconfig| Checking if "Solaris atomic ops" links: NO
+fontconfig| Run-time dependency threads found: YES
+fontconfig| Has header "pthread.h" : YES
+fontconfig| Program gperf found: YES (/usr/bin/gperf)
+fontconfig| Message: gperf len type is unsigned
+fontconfig| Checking for type "uint64_t" : YES
+fontconfig| Checking for type "int32_t" : YES
+fontconfig| Checking for type "uintptr_t" : YES
+fontconfig| Checking for type "intptr_t" : YES
+fontconfig| Configuring fontconfig.h using configuration
+fontconfig| Program fc-case.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/subprojects/fontconfig/fc-case/fc-case.py)
+fontconfig| Program fc-lang.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/subprojects/fontconfig/fc-lang/fc-lang.py)
+fontconfig| WARNING: Build target preprocessor_0 has no sources. This was never supposed to be allowed but did because of a bug, support will be removed in a future release of Meson
+fontconfig| Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+fontconfig| Dependency threads for host machine found: YES unknown (cached)
+fontconfig| Dependency threads for host machine found: YES unknown (cached)
+fontconfig| Program run-test.sh found: YES (/bin/bash /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/subprojects/fontconfig/test/run-test.sh)
+fontconfig| Program write-35-lang-normalize-conf.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/subprojects/fontconfig/conf.d/write-35-lang-normalize-conf.py)
+fontconfig| Configuring README using configuration
+fontconfig| Program xgettext skipped: feature nls disabled
+fontconfig| Program check-whitespace-in-args.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/subprojects/fontconfig/doc/check-whitespace-in-args.py)
+fontconfig| Program docbook2man found: NO
+fontconfig| Program docbook2txt found: NO
+fontconfig| Program docbook2pdf found: NO
+fontconfig| Program docbook2html found: NO
+fontconfig| Program run-quiet.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/subprojects/fontconfig/doc/run-quiet.py)
+fontconfig| Program extract-man-list.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/subprojects/fontconfig/doc/extract-man-list.py)
+fontconfig| Program edit-sgml.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/subprojects/fontconfig/doc/edit-sgml.py)
+fontconfig| Configuring cache-version.sgml using configuration
+fontconfig| Configuring version.sgml using configuration
+fontconfig| Configuring confdir.sgml using configuration
+fontconfig| Program check-missing-doc.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/subprojects/fontconfig/doc/check-missing-doc.py)
+fontconfig| Configuring meson-config.h using configuration
+fontconfig| Configuring fonts.conf using configuration
+fontconfig| Build targets in project: 62
+fontconfig| Subproject fontconfig finished.
+
+Dependency fontconfig for host machine from subproject subprojects/fontconfig found: YES 2.17.1
+Run-time dependency freetype2 found: YES 26.2.20
+Run-time dependency xft found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency cairo found: YES 1.18.4
+Run-time dependency cairo-ft found: YES 1.18.4
+Checking if "Cairo is built with FreeType and FontConfig support" with dependency cairo-ft links: YES 
+Run-time dependency cairo-win32 found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency cairo-quartz found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency cairo-png found: YES 1.18.4
+Run-time dependency cairo-ps found: YES 1.18.4
+Run-time dependency cairo-pdf found: YES 1.18.4
+Run-time dependency cairo-xlib found: NO  (tried pkg-config, framework and cmake)
+Program g-ir-scanner skipped: feature introspection disabled
+Dependency sysprof-capture-4 for host machine skipped: feature sysprof disabled
+Configuring config.h using configuration
+Configuring pango-features.h using configuration
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build-time dependency glib-2.0 found: YES 2.82.4
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.82.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Program gi-docgen found: NO
+Program rst2man rst2man.py found: NO
+Program rst2html5 rst2html5.py found: NO
+Build targets in project: 100
+
+fontconfig 2.17.1
+
+  General
+    Documentation              : NO
+    NLS                        : NO
+    Tests                      : YES
+    Pytest                     : NO
+    Tools                      : YES
+    iconv                      : NO
+    XML backend                : expat
+    Fontations support         : disabled
+
+  Defaults
+    Hinting                    : slight
+    Sub Pixel Rendering        : none
+    Bitmap                     : no-except-emoji
+    Font directories           : /System/Library/Fonts, /Library/Fonts,
+                                 ~/Library/Fonts,
+                                 /System/Library/Assets/com_apple_MobileAsset_Font3,
+                                 /System/Library/Assets/com_apple_MobileAsset_Font4
+    Additional font directories:
+
+  Paths
+    Cache directory            : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/var/cache/fontconfig
+    Template directory         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+    Base config directory      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/etc/fonts
+    Config directory           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/etc/fonts/conf.d
+    XML directory              : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/xml/fontconfig
+
+pango 1.58.0
+
+  Font backends
+    Fontconfig     : true
+    DirectWrite    : false
+    CoreText       : false
+
+  Features
+    Cairo          : true
+    Thai           : false
+    Sysprof        : false
+
+  Toolchain
+    Compiler       : clang
+    Linker         : ld64
+
+  Build
+    Debugging      : false
+    Optimization   : 3
+    Introspection  : false
+    Documentation  : false
+    Man pages      : false
+    Tests          : true
+    Examples       : true
+
+  Directories
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    includedir     : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+    libdir         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+    datadir        : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share
+
+  Subprojects
+    fontconfig     : YES 1 warnings
+    libintl        : NO Include dir /usr/local/include does not exist.
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-arm64-cross.txt
+    buildtype      : release
+    cairo          : enabled
+    default_library: static
+    fontconfig     : enabled
+    freetype       : enabled
+    gtk_doc        : false
+    introspection  : disabled
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `pango-build'
+[1/223] Compiling C object subprojects/fontconfig/src/preprocessor_0.p/fcobjshash.gperf.h.i
+[2/223] Copying file subprojects/fontconfig/fcstdint.h
+[3/223] Generating subprojects/fontconfig/alias_headers with a custom command
+[4/223] Generating subprojects/fontconfig/src/fcobjshash.gperf with a custom command
+[5/223] Generating subprojects/fontconfig/ft_alias_headers with a custom command
+[6/223] Generating subprojects/fontconfig/src/fcobjshash.h with a custom command
+[7/223] Generating subprojects/fontconfig/fc-case/fccase.h with a custom command
+[8/223] Compiling C object subprojects/fontconfig/fc-conflist/fc-conflist.p/fc-conflist.c.o
+[9/223] Compiling C object subprojects/fontconfig/fc-cache/fc-cache.p/fc-cache.c.o
+[10/223] Compiling C object subprojects/fontconfig/fc-cat/fc-cat.p/fc-cat.c.o
+../pango-src/subprojects/fontconfig/fc-cat/fc-cat.c:257:16: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  257 |     int        ret = 0;
+      |                ^
+1 warning generated.
+[11/223] Compiling C object subprojects/fontconfig/fc-pattern/fc-pattern.p/fc-pattern.c.o
+[12/223] Compiling C object subprojects/fontconfig/fc-list/fc-list.p/fc-list.c.o
+[13/223] Compiling C object subprojects/fontconfig/fc-match/fc-match.p/fc-match.c.o
+[14/223] Compiling C object subprojects/fontconfig/fc-scan/fc-scan.p/fc-scan.c.o
+[15/223] Compiling C object subprojects/fontconfig/fc-query/fc-query.p/fc-query.c.o
+[16/223] Compiling C object subprojects/fontconfig/fc-validate/fc-validate.p/fc-validate.c.o
+[17/223] Generating subprojects/fontconfig/conf.d/35-lang-normalize.conf with a custom command
+[18/223] Copying file subprojects/fontconfig/test/out.expected
+[19/223] Copying file subprojects/fontconfig/doc/fontconfig-devel.sgml
+[20/223] Copying file subprojects/fontconfig/doc/fontconfig-user.sgml
+[21/223] Generating GObject enum file pango/pango-enum-types.h (wrapped by meson to capture output)
+[22/223] Generating GObject enum file pango/pango-enum-types.c (wrapped by meson to capture output)
+[23/223] Compiling C object pango/libpango-1.0.a.p/ellipsize.c.o
+[24/223] Compiling C object pango/libpango-1.0.a.p/meson-generated_.._pango-enum-types.c.o
+[25/223] Compiling C object pango/libpango-1.0.a.p/glyphstring.c.o
+[26/223] Compiling C object pango/libpango-1.0.a.p/modules.c.o
+[27/223] Compiling C object pango/libpango-1.0.a.p/fonts.c.o
+[28/223] Compiling C object pango/libpango-1.0.a.p/itemize.c.o
+[29/223] Compiling C object pango/libpango-1.0.a.p/pango-bidi-type.c.o
+[30/223] Compiling C object pango/libpango-1.0.a.p/pango-color.c.o
+[31/223] Compiling C object pango/libpango-1.0.a.p/pango-context.c.o
+[32/223] Compiling C object pango/libpango-1.0.a.p/pango-coverage.c.o
+[33/223] Compiling C object pango/libpango-1.0.a.p/pango-engine.c.o
+[34/223] Compiling C object pango/libpango-1.0.a.p/pango-emoji.c.o
+[35/223] Compiling C object pango/libpango-1.0.a.p/pango-attributes.c.o
+[36/223] Compiling C object pango/libpango-1.0.a.p/pango-fontset.c.o
+[37/223] Generating subprojects/fontconfig/fc-lang/fclang.h with a custom command
+[38/223] Compiling C object pango/libpango-1.0.a.p/pango-fontset-simple.c.o
+[39/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcatomic.c.o
+[40/223] Compiling C object pango/libpango-1.0.a.p/pango-fontmap.c.o
+[41/223] Compiling C object pango/libpango-1.0.a.p/pango-glyph-item.c.o
+[42/223] Compiling C object subprojects/fontconfig/src/libpatternlib_internal.a.p/fcpat.c.o
+[43/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fccompat.c.o
+[44/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fccache.c.o
+[45/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fccharset.c.o
+[46/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcdefault.c.o
+[47/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcdbg.c.o
+[48/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fccfg.c.o
+[49/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcdir.c.o
+[50/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcptrlist.c.o
+[51/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcfs.c.o
+[52/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcinit.c.o
+[53/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fchash.c.o
+[54/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcformat.c.o
+[55/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fclist.c.o
+[56/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcmatrix.c.o
+[57/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcfreetype.c.o
+../pango-src/subprojects/fontconfig/src/fcfreetype.c:687:14: warning: unused variable 'redecoded' [-Wunused-variable]
+  687 |     FcBool   redecoded = FcFalse;
+      |              ^~~~~~~~~
+1 warning generated.
+[58/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fclang.c.o
+[59/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcobjs.c.o
+[60/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcrange.c.o
+[61/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcmatch.c.o
+[62/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcname.c.o
+[63/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcstat.c.o
+[64/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcserialize.c.o
+[65/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcweight.c.o
+[66/223] Compiling C object pango/libpango-1.0.a.p/pango-gravity.c.o
+[67/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_ftglue.c.o
+[68/223] Compiling C object pango/libpango-1.0.a.p/pango-item.c.o
+[69/223] Compiling C object pango/libpango-1.0.a.p/pango-language.c.o
+[70/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcstr.c.o
+[71/223] Compiling C object pango/libpango-1.0.a.p/pango-matrix.c.o
+[72/223] Compiling C object subprojects/fontconfig/libfontconfig.a.p/src_fcxml.c.o
+[73/223] Compiling C object pango/libpango-1.0.a.p/pango-script.c.o
+[74/223] Compiling C object pango/libpango-1.0.a.p/break.c.o
+[75/223] Compiling C object pango/libpango-1.0.a.p/pango-tabs.c.o
+[76/223] Compiling C object pango/libpango-1.0.a.p/pango-renderer.c.o
+[77/223] Compiling C object pango/libpango-1.0.a.p/reorder-items.c.o
+[78/223] Compiling C object pango/libpango-1.0.a.p/pango-utils.c.o
+[79/223] Compiling C object pango/libpango-1.0.a.p/shape.c.o
+[80/223] Compiling C object pango/libpango-1.0.a.p/json_gtkjsonprinter.c.o
+[81/223] Compiling C object pango/libpango-1.0.a.p/serializer.c.o
+[82/223] Compiling C object pango/libpango-1.0.a.p/json_gtkjsonparser.c.o
+[83/223] Compiling C object pango/libpangoft2-1.0.a.p/pangofc-font.c.o
+[84/223] Compiling C object pango/libpangoft2-1.0.a.p/pangofc-decoder.c.o
+[85/223] Compiling C object pango/libpangoft2-1.0.a.p/pango-trace.c.o
+[86/223] Compiling C object pango/libpangoft2-1.0.a.p/pango-ot-buffer.c.o
+[87/223] Compiling C object pango/libpangoft2-1.0.a.p/pango-ot-info.c.o
+[88/223] Compiling C object pango/libpangoft2-1.0.a.p/pango-ot-ruleset.c.o
+[89/223] Compiling C object pango/libpangoft2-1.0.a.p/pango-ot-tag.c.o
+[90/223] Compiling C object pango/libpangoft2-1.0.a.p/pangoft2-fontmap.c.o
+In file included from ../pango-src/pango/pangoft2-fontmap.c:34:
+In file included from ../pango-src/pango/pangoft2-private.h:26:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/pango/pangoft2-fontmap.c:34:
+In file included from ../pango-src/pango/pangoft2-private.h:26:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[91/223] Compiling C object pango/libpango-1.0.a.p/pango-markup.c.o
+[92/223] Compiling C object pango/libpangoft2-1.0.a.p/pangoft2-render.c.o
+In file included from ../pango-src/pango/pangoft2-render.c:27:
+In file included from ../pango-src/pango/pangoft2-private.h:26:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/pango/pangoft2-render.c:27:
+In file included from ../pango-src/pango/pangoft2-private.h:26:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[93/223] Compiling C object pango/libpangoft2-1.0.a.p/pangoft2.c.o
+In file included from ../pango-src/pango/pangoft2.c:31:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:7: warning: 'MAC_OS_X_VERSION_10_5' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |       ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/AvailabilityMacros.h:106:51: note: expanded from macro 'MAC_OS_X_VERSION_MIN_REQUIRED'
+  106 |             #define MAC_OS_X_VERSION_MIN_REQUIRED MAC_OS_X_VERSION_10_5
+      |                                                   ^
+In file included from ../pango-src/pango/pangoft2.c:31:
+In file included from ../pango-src/pango/pangoft2.h:29:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/freetype.h:24:
+In file included from /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/ftconfig.h:46:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config/mac-support.h:36:40: warning: 'MAC_OS_X_VERSION_10_4' is not defined, evaluates to 0 [-Wundef]
+   36 |     ( MAC_OS_X_VERSION_MIN_REQUIRED <= MAC_OS_X_VERSION_10_4 )
+      |                                        ^
+2 warnings generated.
+[94/223] Compiling C object pango/libpangocairo-1.0.a.p/pangocairo-context.c.o
+[95/223] Compiling C object pango/libpango-1.0.a.p/pango-layout.c.o
+[96/223] Compiling C object pango/libpangocairo-1.0.a.p/pangocairo-fontmap.c.o
+[97/223] Compiling C object pango/libpangoft2-1.0.a.p/pangofc-fontmap.c.o
+../pango-src/pango/pangofc-fontmap.c:3416:17: warning: cast from 'gchar *' (aka 'char *') to 'int *' increases required alignment from 1 to 4 [-Wcast-align]
+ 3416 |               *sizes = (int *) size_array->data;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[98/223] Compiling C object pango/libpangocairo-1.0.a.p/pangocairo-font.c.o
+[99/223] Compiling C object subprojects/fontconfig/test/test_bz89617.p/test-bz89617.c.o
+[100/223] Linking static target subprojects/fontconfig/libfontconfig.a
+[101/223] Compiling C object subprojects/fontconfig/test/test_bz96676.p/test-bz96676.c.o
+[102/223] Compiling C object subprojects/fontconfig/test/test_bz131804.p/test-bz131804.c.o
+[103/223] Compiling C object pango/libpangocairo-1.0.a.p/pangocairo-fcfontmap.c.o
+[104/223] Compiling C object pango/libpangocairo-1.0.a.p/pangocairo-fcfont.c.o
+[105/223] Compiling C object subprojects/fontconfig/test/test_bz106618.p/test-bz106618.c.o
+[106/223] Compiling C object subprojects/fontconfig/test/test_name_parse.p/test-name-parse.c.o
+[107/223] Compiling C object subprojects/fontconfig/test/test_bz1744377.p/test-bz1744377.c.o
+[108/223] Compiling C object subprojects/fontconfig/test/test_family_matching.p/test-family-matching.c.o
+[109/223] Compiling C object subprojects/fontconfig/test/test_issue180.p/test-issue180.c.o
+[110/223] Compiling C object subprojects/fontconfig/test/test_bz106632.p/test-bz106632.c.o
+FAILED: [code=1] subprojects/fontconfig/test/test_bz106632.p/test-bz106632.c.o 
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/fontconfig/test/test_bz106632.p -Isubprojects/fontconfig/test -I../pango-src/subprojects/fontconfig/test -Isubprojects/fontconfig -I../pango-src/subprojects/fontconfig -Isubprojects/fontconfig/fc-lang -I../pango-src/subprojects/fontconfig/fc-lang -fdiagnostics-color=always -Wall -Winvalid-pch -std=c11 -O3 -DHAVE_CONFIG_H -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 '-DFONTFILE="/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pango-src/subprojects/fontconfig/test/4x6.pcf"' -MD -MQ subprojects/fontconfig/test/test_bz106632.p/test-bz106632.c.o -MF subprojects/fontconfig/test/test_bz106632.p/test-bz106632.c.o.d -o subprojects/fontconfig/test/test_bz106632.p/test-bz106632.c.o -c ../pango-src/subprojects/fontconfig/test/test-bz106632.c
+../pango-src/subprojects/fontconfig/test/test-bz106632.c:189:11: error: 'system' is unavailable: not available on iOS
+  189 |     (void)system (cmd);
+      |           ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/_stdlib.h:203:6: note: 'system' has been explicitly marked unavailable here
+  203 | int      system(const char *) __DARWIN_ALIAS_C(system);
+      |          ^
+../pango-src/subprojects/fontconfig/test/test-bz106632.c:216:11: error: 'system' is unavailable: not available on iOS
+  216 |     (void)system (cmd);
+      |           ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/_stdlib.h:203:6: note: 'system' has been explicitly marked unavailable here
+  203 | int      system(const char *) __DARWIN_ALIAS_C(system);
+      |          ^
+../pango-src/subprojects/fontconfig/test/test-bz106632.c:258:11: error: 'system' is unavailable: not available on iOS
+  258 |     (void)system (cmd);
+      |           ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/_stdlib.h:203:6: note: 'system' has been explicitly marked unavailable here
+  203 | int      system(const char *) __DARWIN_ALIAS_C(system);
+      |          ^
+3 errors generated.
+[111/223] Compiling C object subprojects/fontconfig/test/test_issue107.p/test-issue107.c.o
+[112/223] Compiling C object subprojects/fontconfig/test/test_issue110.p/test-issue110.c.o
+../pango-src/subprojects/fontconfig/test/test-issue110.c:201:29: warning: passing 'char *' to parameter of type 'const FcChar8 *' (aka 'const unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  201 |     s = FcStrBuildFilename (basedir, ".fonts.conf", NULL);
+      |                             ^~~~~~~
+subprojects/fontconfig/fontconfig/fontconfig.h:1129:36: note: passing argument to parameter 'path' here
+ 1129 | FcStrBuildFilename (const FcChar8 *path,
+      |                                    ^
+../pango-src/subprojects/fontconfig/test/test-issue110.c:206:22: warning: passing 'FcChar8 *' (aka 'unsigned char *') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  206 |     if ((fp = fopen (s, "wb")) == NULL)
+      |                      ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/_stdio.h:243:37: note: passing argument to parameter '__filename' here
+  243 | FILE    *fopen(const char * __restrict __filename, const char * __restrict __mode) __DARWIN_ALIAS_STARTING(__MAC_10_6, __IPHONE_2_0, __DARWIN_ALIAS(fopen));
+      |                                        ^
+../pango-src/subprojects/fontconfig/test/test-issue110.c:212:38: warning: passing 'char[14]' to parameter of type 'FcChar8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  212 |     ret = FcConfigRealFilename (cfg, "~/.fonts.conf");
+      |                                      ^~~~~~~~~~~~~~~
+../pango-src/subprojects/fontconfig/test/test-issue110.c:69:44: note: passing argument to parameter here
+   69 | FcConfigRealFilename (FcConfig *, FcChar8 *);
+      |                                            ^
+../pango-src/subprojects/fontconfig/test/test-issue110.c:226:29: warning: passing 'char *' to parameter of type 'const FcChar8 *' (aka 'const unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  226 |     d = FcStrBuildFilename (sysroot, basedir, NULL);
+      |                             ^~~~~~~
+subprojects/fontconfig/fontconfig/fontconfig.h:1129:36: note: passing argument to parameter 'path' here
+ 1129 | FcStrBuildFilename (const FcChar8 *path,
+      |                                    ^
+../pango-src/subprojects/fontconfig/test/test-issue110.c:228:14: warning: passing 'FcChar8 *' (aka 'unsigned char *') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  228 |     mkdir_p (d);
+      |              ^
+../pango-src/subprojects/fontconfig/test/test-issue110.c:85:22: note: passing argument to parameter 'dir' here
+   85 | mkdir_p (const char *dir)
+      |                      ^
+../pango-src/subprojects/fontconfig/test/test-issue110.c:230:29: warning: passing 'char *' to parameter of type 'const FcChar8 *' (aka 'const unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  230 |     s = FcStrBuildFilename (sysroot, basedir, ".fonts.conf", NULL);
+      |                             ^~~~~~~
+subprojects/fontconfig/fontconfig/fontconfig.h:1129:36: note: passing argument to parameter 'path' here
+ 1129 | FcStrBuildFilename (const FcChar8 *path,
+      |                                    ^
+../pango-src/subprojects/fontconfig/test/test-issue110.c:235:22: warning: passing 'FcChar8 *' (aka 'unsigned char *') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  235 |     if ((fp = fopen (s, "wb")) == NULL)
+      |                      ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/_stdio.h:243:37: note: passing argument to parameter '__filename' here
+  243 | FILE    *fopen(const char * __restrict __filename, const char * __restrict __mode) __DARWIN_ALIAS_STARTING(__MAC_10_6, __IPHONE_2_0, __DARWIN_ALIAS(fopen));
+      |                                        ^
+../pango-src/subprojects/fontconfig/test/test-issue110.c:241:38: warning: passing 'char[14]' to parameter of type 'FcChar8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  241 |     ret = FcConfigRealFilename (cfg, "~/.fonts.conf");
+      |                                      ^~~~~~~~~~~~~~~
+../pango-src/subprojects/fontconfig/test/test-issue110.c:69:44: note: passing argument to parameter here
+   69 | FcConfigRealFilename (FcConfig *, FcChar8 *);
+      |                                            ^
+8 warnings generated.
+[113/223] Compiling C object subprojects/fontconfig/test/test_ptrlist.p/test-ptrlist.c.o
+[114/223] Compiling C object pango/libpangocairo-1.0.a.p/pangocairo-render.c.o
+ninja: build stopped: subcommand failed.
