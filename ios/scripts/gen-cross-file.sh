@@ -38,6 +38,21 @@ EXE_WRAPPER="${EXE_WRAPPER:-}"
 
 CC_PATH="$(xcrun --sdk "${IOS_SDK}" --find clang)"
 CXX_PATH="$(xcrun --sdk "${IOS_SDK}" --find clang++)"
+
+# Compiler WRAPPERS with the target flags baked in. Tools that take the
+# compiler from the cross file but not its [built-in options] c_args —
+# notably g-ir-scanner, which preprocesses/compiles/links its dumper via
+# the CC env var — would otherwise invoke bare clang without -isysroot
+# and fail with "time.h not found". The duplicate flags for regular
+# meson targets (which also pass c_args) are harmless.
+WRAP_DIR="$(cd "$(dirname "${OUT}")" && pwd)"
+CC_WRAP="${WRAP_DIR}/ios-cc-${IOS_SDK}.sh"
+CXX_WRAP="${WRAP_DIR}/ios-cxx-${IOS_SDK}.sh"
+printf '#!/bin/bash\nexec "%s" -arch arm64 -isysroot "%s" %s "$@"\n' \
+  "${CC_PATH}" "${SDKROOT}" "${MIN_FLAG}" > "${CC_WRAP}"
+printf '#!/bin/bash\nexec "%s" -arch arm64 -isysroot "%s" %s "$@"\n' \
+  "${CXX_PATH}" "${SDKROOT}" "${MIN_FLAG}" > "${CXX_WRAP}"
+chmod +x "${CC_WRAP}" "${CXX_WRAP}"
 AR_PATH="$(xcrun --sdk "${IOS_SDK}" --find ar)"
 STRIP_PATH="$(xcrun --sdk "${IOS_SDK}" --find strip)"
 echo "[gen-cross-file] clang=${CC_PATH}"
@@ -58,10 +73,10 @@ ios_min = '${MIN_FLAG}'
 common_flags = ['-arch', 'arm64', '-isysroot', sdkroot, ios_min]
 
 [binaries]
-c = '${CC_PATH}'
-cpp = '${CXX_PATH}'
-objc = '${CC_PATH}'
-objcpp = '${CXX_PATH}'
+c = '${CC_WRAP}'
+cpp = '${CXX_WRAP}'
+objc = '${CC_WRAP}'
+objcpp = '${CXX_WRAP}'
 ar = '${AR_PATH}'
 strip = '${STRIP_PATH}'
 pkg-config = 'pkg-config'
