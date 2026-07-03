@@ -91,6 +91,31 @@ jobs:
           set -euxo pipefail
           chmod +x ios/scripts/gen-cross-file.sh ios/scripts/build-base-stack.sh ios/scripts/sim-run.sh
           export INTROSPECTION=enabled
+
+          # Synthetic gobject-introspection-1.0.pc: glib/pango/gtk look this
+          # up as a HOST dependency to locate the scanner/compiler tools and
+          # to version-check. Point it at the brew tools but keep it free of
+          # Requires:/Libs:/Cflags: so no host libraries leak into the cross
+          # build.
+          GI_PREFIX="$(brew --prefix gobject-introspection)"
+          GI_VER="$(PKG_CONFIG_LIBDIR="$(brew --prefix)/lib/pkgconfig" pkg-config --modversion gobject-introspection-1.0)"
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          mkdir -p "${PREFIX}/lib/pkgconfig"
+          PC="${PREFIX}/lib/pkgconfig/gobject-introspection-1.0.pc"
+          : > "$PC"
+          echo "prefix=${GI_PREFIX}" >> "$PC"
+          echo "bindir=\${prefix}/bin" >> "$PC"
+          echo "g_ir_scanner=\${bindir}/g-ir-scanner" >> "$PC"
+          echo "g_ir_compiler=\${bindir}/g-ir-compiler" >> "$PC"
+          echo "g_ir_generate=\${bindir}/g-ir-generate" >> "$PC"
+          echo "gidatadir=\${prefix}/share/gobject-introspection-1.0" >> "$PC"
+          echo "girdir=\${prefix}/share/gir-1.0" >> "$PC"
+          echo "typelibdir=\${prefix}/lib/girepository-1.0" >> "$PC"
+          echo "" >> "$PC"
+          echo "Name: gobject-introspection" >> "$PC"
+          echo "Description: synthetic host-tool shim for iOS cross build" >> "$PC"
+          echo "Version: ${GI_VER}" >> "$PC"
+          cat "$PC"
           export PREFIX="${GITHUB_WORKSPACE}/ios-out"
           export CROSS_ISO="${GITHUB_WORKSPACE}/cross-iso.txt"
           export CROSS_PFX="${GITHUB_WORKSPACE}/cross-pfx.txt"
