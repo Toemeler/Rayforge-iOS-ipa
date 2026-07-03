@@ -221,7 +221,7 @@ jobs:
             --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
             --cross-file="${GITHUB_WORKSPACE}/cross-python.txt" \
             --prefix="${PYSTAGE}" --buildtype=release \
-            -Dpython="${PY313}" -Dtests=disabled \
+            -Dpython="${PY313}" -Dtests=false \
             2>&1 | tee "${GITHUB_WORKSPACE}/pycairo-setup.log"
           ninja -C pycairo-build 2>&1 | tee "${GITHUB_WORKSPACE}/pycairo-build.log"
           ninja -C pycairo-build install 2>&1 | tee -a "${GITHUB_WORKSPACE}/pycairo-build.log"
@@ -376,10 +376,46 @@ jobs:
             install_name_tool -add_rpath "@loader_path/../../../../../Frameworks" "$so" 2>/dev/null || true
           done
 
-          # Copy every typelib produced by Step 9 into the bundle.
-          cp "${PREFIX}/lib/girepository-1.0/"*.typelib "$APP/lib/girepository-1.0/" 2>/dev/null || true
+          # Typelibs record each namespace's shared-library as the ABSOLUTE
+          # prefix install name from scan time. girepository g_module_open()s
+          # that string, so at runtime dyld would load the PREFIX dylibs on
+          # top of the already-loaded bundle copies -> two libgobject
+          # instances -> GType registry chaos (rule 15). Rewrite the .gir
+          # XMLs to @rpath/<leaf> (resolved through the executable's rpath,
+          # deduped by dyld onto the loaded bundle copies) and recompile the
+          # typelibs with the host g-ir-compiler. Namespaces whose gir we do
+          # not have (pseudo girs already leaf-named) are copied as-is.
+          GIRC="$(brew --prefix gobject-introspection)/bin/g-ir-compiler"
+          BREW_GIRDIR="$(brew --prefix gobject-introspection)/share/gir-1.0"
+          mkdir -p gir-fixed
+          for gir in "${PREFIX}/share/gir-1.0/"*.gir; do
+            [ -f "$gir" ] || continue
+            base=$(basename "$gir")
+            python3 ios/scripts/fix-gir-sharedlib.py "$gir" "gir-fixed/$base"
+          done
+          ls gir-fixed/ | head -30
+          for gir in gir-fixed/*.gir; do
+            base=$(basename "$gir" .gir)
+            "$GIRC" \
+              --includedir=gir-fixed \
+              --includedir="${PREFIX}/share/gir-1.0" \
+              --includedir="$BREW_GIRDIR" \
+              "$gir" -o "$APP/lib/girepository-1.0/${base}.typelib" \
+              || { echo "::warning::recompile failed for $base, copying original"; \
+                   cp "${PREFIX}/lib/girepository-1.0/${base}.typelib" "$APP/lib/girepository-1.0/" 2>/dev/null || true; }
+          done
+          # Namespaces present only as typelib (no gir in prefix): copy as-is.
+          for tl in "${PREFIX}/lib/girepository-1.0/"*.typelib; do
+            base=$(basename "$tl")
+            [ -f "$APP/lib/girepository-1.0/$base" ] || cp "$tl" "$APP/lib/girepository-1.0/"
+          done
           echo "== bundled typelibs:"
           ls -1 "$APP/lib/girepository-1.0/" | head -40
+          # spot-check: no absolute prefix paths left in a core gir
+          if grep -q "${PREFIX}" gir-fixed/Gtk-4.0.gir; then
+            echo "::warning::prefix path still present in Gtk gir after rewrite"
+            grep -o "shared-library=\"[^\"]*\"" gir-fixed/Gtk-4.0.gir | head -3
+          fi
 
           # GSettings schemas (GTK's own), compiled with the host tool.
           mkdir -p "$APP/share/glib-2.0/schemas"
