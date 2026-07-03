@@ -33,7 +33,7 @@ env:
   IOS_SDK: "iphonesimulator"
   BUNDLE_ID: "org.rayforge.pygitest"
   PY_SUPPORT_URL: "https://github.com/beeware/Python-Apple-support/releases/download/3.13-b14/Python-3.13-iOS-support.b14.tar.gz"
-  LIBFFI_VERSION: "3.4.6"
+  LIBFFI_VERSION: "3.5.2"
   PYCAIRO_VERSION: "1.29.0"
   PYGOBJECT_VERSION: "3.56.3"
 
@@ -122,6 +122,9 @@ jobs:
           # closure path (no JIT) needed on iOS.
           export CC="${CC} -arch arm64 -isysroot ${SDK} -mios-simulator-version-min=${IOS_MIN}"
           export CFLAGS="-arch arm64 -isysroot ${SDK} -mios-simulator-version-min=${IOS_MIN} -O2 -fPIC"
+          # Belt & suspenders vs the Xcode-16 assembler CFI rejection
+          # (fixed upstream in >=3.4.7, cache var disables CFI if it recurs).
+          export libffi_cv_as_cfi_pseudo_op=no
           ./configure --host=aarch64-apple-darwin --prefix="${PREFIX}" \
             --enable-static --disable-shared --disable-docs \
             2>&1 | tee "${GITHUB_WORKSPACE}/libffi.log"
