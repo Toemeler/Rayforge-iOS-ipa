@@ -91,6 +91,7 @@ jobs:
           set -euxo pipefail
           chmod +x ios/scripts/gen-cross-file.sh ios/scripts/build-base-stack.sh ios/scripts/sim-run.sh
           export INTROSPECTION=enabled
+          export LIB_MODE=shared
 
           # Synthetic gobject-introspection-1.0.pc: glib/pango/gtk look this
           # up as a HOST dependency to locate the scanner/compiler tools and
@@ -152,7 +153,7 @@ jobs:
           mkdir -p graphene-src && tar xf graphene.tar.gz --strip-components=1 -C graphene-src
           meson setup graphene-build graphene-src \
             --cross-file="${CROSS}" \
-            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --default-library=shared --prefix="${PREFIX}" --buildtype=release \
             -Dtests=false -Dinstalled_tests=false -Dintrospection=enabled \
             -Dgtk_doc=false -Dgobject_types=true -Dsse2=false -Darm_neon=true \
             2>&1 | tee graphene.log
@@ -164,7 +165,7 @@ jobs:
           mkdir -p pixbuf-src && tar xf gdk-pixbuf.tar.xz --strip-components=1 -C pixbuf-src
           meson setup pixbuf-build pixbuf-src \
             --cross-file="${CROSS}" \
-            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --default-library=shared --prefix="${PREFIX}" --buildtype=release \
             --wrap-mode=nofallback \
             -Dpng=enabled -Djpeg=enabled -Dtiff=disabled -Dgif=enabled \
             -Dglycin=disabled -Dandroid=disabled -Dothers=disabled \
@@ -308,7 +309,7 @@ jobs:
 
           meson setup adw-build adw-src \
             --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
-            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --default-library=shared --prefix="${PREFIX}" --buildtype=release \
             --wrap-mode=nofallback \
             -Dintrospection=enabled -Dvapi=false \
             -Dtests=false -Dexamples=false -Ddocumentation=false \

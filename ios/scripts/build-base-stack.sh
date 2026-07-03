@@ -40,6 +40,14 @@ set -euxo pipefail
 # gen-cross-file.sh + a booted simulator; see sim-run.sh).
 GI="${INTROSPECTION:-disabled}"
 
+# LIB_MODE=shared builds the GLib/HarfBuzz/Cairo/Pango layer as dylibs.
+# Required whenever introspection is enabled: typelibs record shared
+# library names which libgirepository dlopens at runtime — a fully
+# static stack cannot serve PyGObject. Leaf deps without gir data
+# (pixman, freetype, fribidi, fontconfig, png/expat via cmake) stay
+# static and get absorbed into the dylibs.
+LIB_MODE="${LIB_MODE:-static}"
+
 GLIB_VERSION="${GLIB_VERSION:-2.84.4}"
 PIXMAN_VERSION="${PIXMAN_VERSION:-0.44.2}"
 LIBPNG_VERSION="${LIBPNG_VERSION:-1.6.44}"
@@ -90,7 +98,7 @@ curl -fL --retry 3 -o glib.tar.xz \
 mkdir -p glib-src && tar xf glib.tar.xz --strip-components=1 -C glib-src
 meson setup glib-build glib-src \
   --cross-file="${CROSS_ISO}" \
-  --default-library=static --prefix="${PREFIX}" --buildtype=release \
+  --default-library="${LIB_MODE}" --prefix="${PREFIX}" --buildtype=release \
   --force-fallback-for=pcre2,libffi \
   -Dtests=false -Dintrospection="${GI}" -Dlibmount=disabled \
   -Dselinux=disabled -Dxattr=false -Dman-pages=disabled -Dnls=disabled \
@@ -154,7 +162,7 @@ curl -fL --retry 3 -o harfbuzz.tar.xz \
 mkdir -p harfbuzz-src && tar xf harfbuzz.tar.xz --strip-components=1 -C harfbuzz-src
 meson setup hb-build harfbuzz-src \
   --cross-file="${CROSS_PFX}" \
-  --default-library=static --prefix="${PREFIX}" --buildtype=release \
+  --default-library="${LIB_MODE}" --prefix="${PREFIX}" --buildtype=release \
   -Dtests=disabled -Ddocs=disabled -Dutilities=disabled \
   -Dfreetype=enabled -Dglib=enabled -Dgobject=enabled -Dcairo=disabled \
   -Dintrospection="${GI}" \
@@ -218,7 +226,7 @@ curl -fL --retry 3 -o cairo.tar.xz \
 mkdir -p cairo-src && tar xf cairo.tar.xz --strip-components=1 -C cairo-src
 meson setup cairo-build cairo-src \
   --cross-file="${CROSS_PFX}" \
-  --default-library=static --prefix="${PREFIX}" --buildtype=release \
+  --default-library="${LIB_MODE}" --prefix="${PREFIX}" --buildtype=release \
   -Dtests=disabled -Dxlib=disabled -Dxcb=disabled \
   -Dquartz=disabled -Dfreetype=enabled -Dfontconfig=enabled \
   -Dpng=enabled -Dzlib=enabled -Dglib=enabled \
@@ -233,7 +241,7 @@ curl -fL --retry 3 -o pango.tar.xz \
 mkdir -p pango-src && tar xf pango.tar.xz --strip-components=1 -C pango-src
 meson setup pango-build pango-src \
   --cross-file="${CROSS_PFX}" \
-  --default-library=static --prefix="${PREFIX}" --buildtype=release \
+  --default-library="${LIB_MODE}" --prefix="${PREFIX}" --buildtype=release \
   --wrap-mode=nofallback \
   -Dintrospection="${GI}" -Dgtk_doc=false \
   -Dfontconfig=enabled -Dfreetype=enabled -Dcairo=enabled \
