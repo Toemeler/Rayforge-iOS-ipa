@@ -262,7 +262,7 @@ jobs:
             2>&1 | tee gtk-setup.log
           # First pass may fail on the gir dumper link race (undeclared
           # in-tree lib deps); the install pass retries with all libs built.
-          ninja -C gtk-build 2>&1 | tee gtk-build.log || true
+          ninja -k0 -C gtk-build 2>&1 | tee gtk-build.log || true
           ninja -C gtk-build install 2>&1 | tee gtk-install.log
 
 
@@ -313,7 +313,7 @@ jobs:
             -Dintrospection=enabled -Dvapi=false \
             -Dtests=false -Dexamples=false -Ddocumentation=false \
             2>&1 | tee adw-setup.log
-          ninja -C adw-build 2>&1 | tee adw-build.log || true
+          ninja -k0 -C adw-build 2>&1 | tee adw-build.log || true
           ninja -C adw-build install 2>&1 | tee adw-install.log
           ls -la "${PREFIX}/lib/" | grep -i adw
 

@@ -103,7 +103,7 @@ meson setup glib-build glib-src \
 # builds everything it can (the gir link may fail), the second pass
 # retries the gir targets with all libraries present.
 if [ "${GI}" = "enabled" ]; then
-  ninja -C glib-build 2>&1 | tee glib-pass1.log || true
+  ninja -k0 -C glib-build 2>&1 | tee glib-pass1.log || true
 fi
 ninja -C glib-build install 2>&1 | tee glib-install.log
 
@@ -240,7 +240,7 @@ meson setup pango-build pango-src \
   2>&1 | tee pango.log
 if [ "${GI}" = "enabled" ]; then
   # Same gir dumper link race as glib: two-pass build.
-  ninja -C pango-build 2>&1 | tee pango-pass1.log || true
+  ninja -k0 -C pango-build 2>&1 | tee pango-pass1.log || true
 fi
 ninja -C pango-build install 2>&1 | tee -a pango.log
 
