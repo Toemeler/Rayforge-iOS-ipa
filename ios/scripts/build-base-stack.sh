@@ -44,7 +44,8 @@ FONTCONFIG_VERSION="${FONTCONFIG_VERSION:-2.17.1}"
 CAIRO_VERSION="${CAIRO_VERSION:-1.18.4}"
 PANGO_VERSION="${PANGO_VERSION:-1.58.0}"
 
-SDK="$(xcrun --sdk iphoneos --show-sdk-path)"
+IOS_SDK="${IOS_SDK:-iphoneos}"
+SDK="$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)"
 WORK="$(pwd)"
 
 log() { echo "[base-stack] $*"; }

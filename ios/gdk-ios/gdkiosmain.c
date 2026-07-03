@@ -493,12 +493,46 @@ deliver_key (GdkEventType type, UIKey *key)
 
 @end
 
+/* Point the GLib/GTK/fontconfig stack at the app bundle and sandbox.
+ * iOS apps launch with an empty environment: without this, GSettings
+ * finds no compiled schemas, fontconfig finds no configuration (and
+ * pango therefore no fonts), and caches would target invalid paths. */
+static void
+gdk_ios_bootstrap_environment (void)
+{
+  NSString *res = [[NSBundle mainBundle] resourcePath];
+  NSString *caches = NSSearchPathForDirectoriesInDomains (
+      NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+  NSString *share = [res stringByAppendingPathComponent:@"share"];
+
+  g_setenv ("XDG_DATA_DIRS", share.UTF8String, FALSE);
+  g_setenv ("GSETTINGS_SCHEMA_DIR",
+            [share stringByAppendingPathComponent:@"glib-2.0/schemas"].UTF8String,
+            FALSE);
+  g_setenv ("XDG_CACHE_HOME", caches.UTF8String, FALSE);
+  g_setenv ("XDG_CONFIG_HOME",
+            [caches stringByAppendingPathComponent:@"config"].UTF8String,
+            FALSE);
+  g_setenv ("XDG_DATA_HOME",
+            [caches stringByAppendingPathComponent:@"data"].UTF8String,
+            FALSE);
+
+  NSString *fontsconf =
+    [res stringByAppendingPathComponent:@"etc/fonts/fonts.conf"];
+  if ([[NSFileManager defaultManager] fileExistsAtPath:fontsconf])
+    g_setenv ("FONTCONFIG_FILE", fontsconf.UTF8String, FALSE);
+
+  g_message ("gdk-ios: bundle resources at %s", res.UTF8String);
+}
+
 int
 gdk_ios_main (int argc, char **argv,
               GdkIOSMainFunc main_func, gpointer user_data)
 {
   user_main_func = main_func;
   user_main_data = user_data;
+
+  gdk_ios_bootstrap_environment ();
 
   /* The GL renderer is unavailable; skip GSK probing noise. */
   g_setenv ("GSK_RENDERER", "cairo", FALSE);
