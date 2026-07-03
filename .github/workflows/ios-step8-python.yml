@@ -290,19 +290,28 @@ jobs:
           mkdir -p py-support && tar xf py-support.tar.gz -C py-support
           echo "== support package layout (top 3 levels)"
           find py-support -maxdepth 3 | head -40
+          find py-support -maxdepth 4 > py-layout.txt
           SIM_SLICE=$(find py-support -maxdepth 2 -type d -name "*simulator*" -path "*Python.xcframework*" | head -1)
           echo "SIM_SLICE=${SIM_SLICE}"
           test -n "${SIM_SLICE}"
           test -d "${SIM_SLICE}/Python.framework"
-          STDLIB=$(find "${SIM_SLICE}" -maxdepth 3 -type d -name "python3.*" | head -1)
-          if [ -z "${STDLIB}" ]; then
-            STDLIB=$(find py-support -maxdepth 4 -type d -name "python3.*" | head -1)
-          fi
+          # Shared (SDK-independent) stdlib lives at the xcframework ROOT:
+          # Python.xcframework/lib/python3.X (no lib-dynload — that is
+          # per-slice, per-arch).
+          STDLIB=$(find py-support -maxdepth 3 -type d -name "python3.*" -path "*Python.xcframework/lib/*" | head -1)
           echo "STDLIB=${STDLIB}"
           test -n "${STDLIB}"
-          ls "${STDLIB}" | head -20
+          test -f "${STDLIB}/encodings/__init__.py"
+          DYNLOAD=$(find "${SIM_SLICE}" -maxdepth 4 -type d -name "lib-dynload" -path "*arm64*" | head -1)
+          if [ -z "${DYNLOAD}" ]; then
+            DYNLOAD=$(find "${SIM_SLICE}" -maxdepth 4 -type d -name "lib-dynload" | head -1)
+          fi
+          echo "DYNLOAD=${DYNLOAD}"
+          ls "${STDLIB}" | head -10
+          if [ -n "${DYNLOAD}" ]; then ls "${DYNLOAD}" | head -10; fi
           echo "SIM_SLICE=${GITHUB_WORKSPACE}/${SIM_SLICE}" >> "$GITHUB_ENV"
           echo "PY_STDLIB=${GITHUB_WORKSPACE}/${STDLIB}" >> "$GITHUB_ENV"
+          echo "PY_DYNLOAD=${GITHUB_WORKSPACE}/${DYNLOAD}" >> "$GITHUB_ENV"
 
       - name: "[10/13] Link Python/Adw testapp + assemble .app bundle"
         run: |
@@ -361,7 +370,13 @@ jobs:
           cp -R "${SIM_SLICE}/Python.framework" "$APP/Frameworks/"
           mkdir -p "$APP/python/lib"
           cp -R "${PY_STDLIB}" "$APP/python/lib/"
+          PYVER_DIR=$(basename "${PY_STDLIB}")
+          if [ -n "${PY_DYNLOAD}" ] && [ -d "${PY_DYNLOAD}" ]; then
+            cp -R "${PY_DYNLOAD}" "$APP/python/lib/${PYVER_DIR}/lib-dynload"
+          fi
           du -sh "$APP/python" "$APP/Frameworks/Python.framework"
+          find "$APP/python" -maxdepth 3 -type d > bundle-layout.txt
+          ls "$APP/python/lib/${PYVER_DIR}/encodings/__init__.py"
 
           # GSettings schemas (GTK's own), compiled with the host tool.
           mkdir -p "$APP/share/glib-2.0/schemas"
@@ -507,7 +522,7 @@ jobs:
           for f in base-stack.log gtk-setup.log gtk-build.log adw-stub.log \
                    adw-setup.log adw-build.log adw-install.log testapp-link.log \
                    launch-cmd.log app-console.log app-syslog.log app-syslog-extra.log \
-                   simulator-screenshot.png; do
+                   py-layout.txt bundle-layout.txt simulator-screenshot.png; do
             [ -f "$f" ] && cp "$f" "_cilogs/${OUT}/$(echo "$f" | tr '/' '_')" || true
           done
           if [ -d crash-reports ]; then cp crash-reports/* "_cilogs/${OUT}/" 2>/dev/null || true; fi

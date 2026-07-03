@@ -42,15 +42,43 @@ static char *
 init_python (void)
 {
   PyStatus status;
+  PyPreConfig preconfig;
   PyConfig config;
   char *res = bundle_resource_path ();
   char *home = g_build_filename (res, "python", NULL);
-  char *result;
+  char *stdlib_path = g_strdup_printf ("%s/lib/python%d.%d", home,
+                                       PY_MAJOR_VERSION, PY_MINOR_VERSION);
+  char *dynload_path = g_strdup_printf ("%s/lib-dynload", stdlib_path);
+  char *result = NULL;
+  wchar_t *w;
 
   g_message ("python home: %s", home);
+  g_message ("python stdlib: %s", stdlib_path);
 
   PyConfig_InitIsolatedConfig (&config);
+
+  PyPreConfig_InitIsolatedConfig (&preconfig);
+  preconfig.utf8_mode = 1;
+  status = Py_PreInitialize (&preconfig);
+  if (PyStatus_Exception (status))
+    goto fail;
+
   status = PyConfig_SetBytesString (&config, &config.home, home);
+  if (PyStatus_Exception (status))
+    goto fail;
+
+  /* iOS: automatic path computation from `home` is not reliable in an
+   * isolated config — Briefcase's reference bootstrap sets the module
+   * search path explicitly (stdlib + lib-dynload). */
+  config.module_search_paths_set = 1;
+  w = Py_DecodeLocale (stdlib_path, NULL);
+  status = PyWideStringList_Append (&config.module_search_paths, w);
+  PyMem_RawFree (w);
+  if (PyStatus_Exception (status))
+    goto fail;
+  w = Py_DecodeLocale (dynload_path, NULL);
+  status = PyWideStringList_Append (&config.module_search_paths, w);
+  PyMem_RawFree (w);
   if (PyStatus_Exception (status))
     goto fail;
 
@@ -70,18 +98,20 @@ init_python (void)
     "print('sys.path =', sys.path)\n");
 
   result = g_strdup_printf ("CPython %s initialized", Py_GetVersion ());
-  g_free (res);
-  g_free (home);
-  return result;
 
 fail:
-  g_critical ("python init failed: %s",
-              status.err_msg != NULL ? status.err_msg : "unknown");
-  result = g_strdup_printf ("Python init FAILED: %s",
-                            status.err_msg != NULL ? status.err_msg : "?");
-  PyConfig_Clear (&config);
+  if (result == NULL)
+    {
+      g_critical ("python init failed: %s",
+                  status.err_msg != NULL ? status.err_msg : "unknown");
+      result = g_strdup_printf ("Python init FAILED: %s",
+                                status.err_msg != NULL ? status.err_msg : "?");
+      PyConfig_Clear (&config);
+    }
   g_free (res);
   g_free (home);
+  g_free (stdlib_path);
+  g_free (dynload_path);
   return result;
 }
 
