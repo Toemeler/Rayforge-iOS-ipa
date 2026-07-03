@@ -380,24 +380,54 @@ jobs:
           xcrun simctl bootstatus "$UDID" -b
           xcrun simctl install "$UDID" RayforgeAdw.app
 
-          # Launch with console capture in the background; give the app
-          # time to render, then take the screenshot.
-          (xcrun simctl launch --console-pty "$UDID" "${BUNDLE_ID}" \
-             > app-console.log 2>&1 || true) &
-          LAUNCH_PID=$!
+          # Launch with stdout/stderr redirected to files (console-pty is
+          # flaky: "Mach error -308" kills the attach and hides the real
+          # state). G_MESSAGES_DEBUG for full GLib logging.
+          LAUNCH_OUT="$PWD/app-console.log"
+          xcrun simctl launch \
+            --stdout="$LAUNCH_OUT" --stderr="$LAUNCH_OUT" \
+            "$UDID" "${BUNDLE_ID}" \
+            SIMCTL_CHILD_G_MESSAGES_DEBUG=all | tee launch-cmd.log
+          LAUNCHED_PID=$(awk -F': ' '{print $2}' launch-cmd.log | tr -d '[:space:]')
+          echo "launched pid: ${LAUNCHED_PID}"
           sleep 25
+
+          # Liveness check BEFORE the screenshot so the verdict is honest.
+          APP_ALIVE=1
+          xcrun simctl spawn "$UDID" launchctl list 2>/dev/null \
+            | grep -q "${BUNDLE_ID}" || APP_ALIVE=0
+          echo "app alive: ${APP_ALIVE}"
+
           xcrun simctl io "$UDID" screenshot simulator-screenshot.png
           ls -la simulator-screenshot.png
 
-          # App system log for diagnosis.
-          xcrun simctl spawn "$UDID" log show --last 3m \
+          # Full app system log + crash reports for diagnosis.
+          xcrun simctl spawn "$UDID" log show --last 4m \
             --predicate 'process == "rayforge-adwtest"' \
             > app-syslog.log 2>&1 || true
-          kill $LAUNCH_PID 2>/dev/null || true
+          xcrun simctl spawn "$UDID" log show --last 4m \
+            --predicate 'eventMessage CONTAINS "rayforge" OR process == "SpringBoard" AND eventMessage CONTAINS[c] "adwtest"' \
+            > app-syslog-extra.log 2>&1 || true
+          mkdir -p crash-reports
+          find "$HOME/Library/Logs/DiagnosticReports" -name '*rayforge*' -newer RayforgeAdw.app/Info.plist \
+            -exec cp {} crash-reports/ \; 2>/dev/null || true
+          ls -la crash-reports/ || true
+          for c in crash-reports/*; do
+            [ -f "$c" ] || continue
+            echo "===== crash report: $c (first 120 lines)"
+            head -120 "$c"
+          done
+
           xcrun simctl shutdown "$UDID" || true
 
-          echo "===== app console (first 60 lines) ====="
-          head -60 app-console.log || true
+          echo "===== app console ====="
+          cat app-console.log || true
+          echo "===== app syslog (first 80) ====="
+          head -80 app-syslog.log || true
+
+          # Hard verdict: the app process must still be running at
+          # screenshot time.
+          test "${APP_ALIVE}" = "1"
 
       - name: "[12/13] Upload artifacts"
         if: always()
@@ -422,9 +452,11 @@ jobs:
           rm -rf _cilogs && mkdir -p "_cilogs/${OUT}"
           for f in base-stack.log gtk-setup.log gtk-build.log adw-stub.log \
                    adw-setup.log adw-build.log adw-install.log testapp-link.log \
-                   app-console.log app-syslog.log simulator-screenshot.png; do
+                   launch-cmd.log app-console.log app-syslog.log app-syslog-extra.log \
+                   simulator-screenshot.png; do
             [ -f "$f" ] && cp "$f" "_cilogs/${OUT}/$(echo "$f" | tr '/' '_')" || true
           done
+          if [ -d crash-reports ]; then cp crash-reports/* "_cilogs/${OUT}/" 2>/dev/null || true; fi
           SUMMARY="_cilogs/${OUT}/SUMMARY.txt"
           {
             echo "Run ID: ${RUN_ID}"
