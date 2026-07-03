@@ -93,6 +93,7 @@ jobs:
           key: gi-sim-v2-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}-run${{ github.run_id }}
           restore-keys: |
             gi-sim-v2-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}-
+            gi-sim-v2-
 
       - name: "[5/13] Build base stack for simulator (resumes from cache)"
         run: |
