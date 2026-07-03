@@ -96,15 +96,14 @@ meson setup glib-build glib-src \
   -Dselinux=disabled -Dxattr=false -Dman-pages=disabled -Dnls=disabled \
   -Dpcre2:jit=disabled \
   2>&1 | tee glib-setup.log
-# When introspection is enabled, the GLib-2.0 gir dumper links
-# -lgio-2.0 but glib's gir target does not fully declare that dependency
-# — under parallel ninja the dumper link can race ahead of
-# libgio-2.0.a. Force the core libraries first.
+# When introspection is enabled, glib's gir dumper links against
+# in-tree libs (-lgio-2.0, -lintl, -lffi, ...) whose targets the gir
+# rule does not fully declare as dependencies, so under parallel ninja
+# the dumper link races ahead of them. Two-pass build: the first pass
+# builds everything it can (the gir link may fail), the second pass
+# retries the gir targets with all libraries present.
 if [ "${GI}" = "enabled" ]; then
-  ninja -C glib-build \
-    glib/libglib-2.0.a gobject/libgobject-2.0.a \
-    gmodule/libgmodule-2.0.a gio/libgio-2.0.a \
-    2>&1 | tee glib-prelibs.log
+  ninja -C glib-build 2>&1 | tee glib-pass1.log || true
 fi
 ninja -C glib-build install 2>&1 | tee glib-install.log
 
@@ -239,6 +238,10 @@ meson setup pango-build pango-src \
   -Dintrospection="${GI}" -Dgtk_doc=false \
   -Dfontconfig=enabled -Dfreetype=enabled -Dcairo=enabled \
   2>&1 | tee pango.log
+if [ "${GI}" = "enabled" ]; then
+  # Same gir dumper link race as glib: two-pass build.
+  ninja -C pango-build 2>&1 | tee pango-pass1.log || true
+fi
 ninja -C pango-build install 2>&1 | tee -a pango.log
 
 log "base stack complete in ${PREFIX}"
