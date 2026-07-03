@@ -48,6 +48,16 @@ PATCHES = [
         "#if defined(__APPLE__) && !defined(GDK_WINDOWING_IOS) && 0 /* iOS: portal fallback */\n"
         "  self->platform_impl = adw_settings_impl_macos_new",
     ),
+    # P4: the private header declares the macOS impl on __APPLE__ and the
+    # portal impl only in the #else branch; force the portal declaration
+    # on iOS so adw-settings.c (P3) and adw-settings-impl-portal.c compile.
+    (
+        "src/adw-settings-impl-private.h",
+        "#ifdef __APPLE__\n"
+        "#define ADW_TYPE_SETTINGS_IMPL_MACOS",
+        "#if defined(__APPLE__) && 0 /* iOS: declare the portal impl instead */\n"
+        "#define ADW_TYPE_SETTINGS_IMPL_MACOS",
+    ),
 ]
 
 
