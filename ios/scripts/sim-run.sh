@@ -1,15 +1,19 @@
 #!/usr/bin/env bash
 # sim-run.sh — meson exe_wrapper for the iOS *simulator* cross build.
 #
-# g-ir-scanner (GObject-Introspection) compiles small "dumper" binaries
-# for the target and must RUN them to extract type information. On the
-# iOS simulator this is actually possible: `simctl spawn` executes any
-# simulator-arch binary inside a booted simulator, sharing the host
-# filesystem, so the dumper can read/write build-tree files directly.
+# Simulator CLI binaries execute natively on macOS when DYLD_ROOT_PATH
+# points at the simulator runtime root — no simctl needed. Direct
+# execution preserves the working directory (build tools like
+# gi-compile-repository are invoked with relative paths) and the full
+# environment, which `simctl spawn` does not.
 #
-# Requirements (exported by the workflow):
-#   SIM_UDID                          — a *booted* simulator's UDID
-#   SIMCTL_CHILD_DYLD_LIBRARY_PATH    — so dumpers find libgtk-4.dylib etc.
+# DYLD_ROOT_PATH is normally exported by the workflow; as a fallback we
+# derive it from the newest available iOS runtime.
 set -euo pipefail
-: "${SIM_UDID:?SIM_UDID must be set to a booted simulator UDID}"
-exec xcrun simctl spawn "${SIM_UDID}" "$@"
+
+if [ -z "${DYLD_ROOT_PATH:-}" ]; then
+  DYLD_ROOT_PATH=$(xcrun simctl list runtimes -j | python3 -c "import json,sys; rs=[r for r in json.load(sys.stdin)['runtimes'] if r.get('platform')=='iOS' and r.get('isAvailable')]; print(rs[-1]['runtimeRoot'])")
+  export DYLD_ROOT_PATH
+fi
+
+exec "$@"
