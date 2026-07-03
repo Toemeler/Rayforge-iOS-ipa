@@ -38,7 +38,9 @@ GTK4 has no iOS backend upstream, so the port is built bottom-up:
 | 2 | `ios-step2-cairo-pango.yml` | `cairo-pango-ios-arm64` (full rendering+text stack) | ✅ done |
 | 3 | `ios-step3-pixbuf-graphene.yml` | `gtk-deps-ios-arm64` (+jpeg-turbo, graphene, gdk-pixbuf) | ✅ done |
 | 4 | `ios-step4-gtk.yml` | `gtk4-ios-arm64` — **GTK 4.22.4 (libgtk-4.1.dylib) built for iOS arm64** | ✅ done |
-| 5 | GDK iOS backend (UIKit surface, touch/pointer/keyboard input, cairo renderer) | | 🔜 next |
+| 5 | `ios-step5-gtk-ios-backend.yml` | GDK iOS backend (UIKit surface, touch/pointer/keyboard input, cairo renderer) compiled + linked into libgtk | ✅ done |
+| 6 | `ios-step6-simulator-test.yml` | **GTK 4 app running in the iOS simulator** (.app bundle, launch, screenshot) — a world first | ✅ done |
+| 7 | `ios-step7-libadwaita.yml` | Libadwaita 1.9 for iOS + AdwApplication via `gdk_ios_application_run()` | 🔨 in progress |
 
 Key fixes encoded along the way: pkg-config sysroot isolation
 (`PKG_CONFIG_SYSROOT_DIR=`), SDK zlib via synthesized `zlib.pc`, libpng/expat/

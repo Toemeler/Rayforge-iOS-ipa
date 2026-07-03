@@ -525,6 +525,36 @@ gdk_ios_bootstrap_environment (void)
   g_message ("gdk-ios: bundle resources at %s", res.UTF8String);
 }
 
+/* Replacement for g_application_run() on iOS. g_application_run()'s
+ * blocking GMainLoop would stall the UIKit run loop, so instead we
+ * register + activate the application and let the CADisplayLink pump
+ * (which drives the GLib default context) deliver everything after
+ * that. GtkApplication/AdwApplication perform their real init (gtk_init,
+ * adw_init, stylesheet, window tracking) in ::startup, which
+ * g_application_register() emits, so full Application semantics are
+ * preserved. A reference is kept so the application object stays alive
+ * for the lifetime of the process. */
+int
+gdk_ios_application_run (GApplication *app)
+{
+  GError *error = NULL;
+
+  g_return_val_if_fail (G_IS_APPLICATION (app), 1);
+
+  if (!g_application_register (app, NULL, &error))
+    {
+      g_critical ("gdk-ios: failed to register application: %s",
+                  error != NULL ? error->message : "unknown error");
+      g_clear_error (&error);
+      return 1;
+    }
+
+  g_application_activate (app);
+  g_object_ref (app);
+
+  return 0;
+}
+
 int
 gdk_ios_main (int argc, char **argv,
               GdkIOSMainFunc main_func, gpointer user_data)

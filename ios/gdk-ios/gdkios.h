@@ -14,6 +14,7 @@
 #pragma once
 
 #include <glib.h>
+#include <gio/gio.h>
 
 G_BEGIN_DECLS
 
@@ -21,5 +22,11 @@ typedef void (*GdkIOSMainFunc) (gpointer user_data);
 
 int gdk_ios_main (int argc, char **argv,
                   GdkIOSMainFunc main_func, gpointer user_data);
+
+/* Use instead of g_application_run(): registers + activates the
+ * application; the backend's UIKit-driven pump replaces the blocking
+ * main loop. Returns 0 on success (immediately; the process keeps
+ * running under UIApplicationMain). */
+int gdk_ios_application_run (GApplication *app);
 
 G_END_DECLS
