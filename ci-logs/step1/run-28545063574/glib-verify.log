@@ -1,0 +1,106 @@
++ echo '===== INSTALLED STATIC LIBS (.a) ====='
+===== INSTALLED STATIC LIBS (.a) =====
++ find ios-out -name '*.a' -exec ls -la '{}' ';'
+-rw-r--r--  1 runner  staff  15576 Jul  1 20:17 ios-out/lib/libgmodule-2.0.a
+-rw-r--r--  1 runner  staff  773192 Jul  1 20:17 ios-out/lib/libgobject-2.0.a
+-rw-r--r--  1 runner  staff  4776 Jul  1 20:17 ios-out/lib/libpcre2-posix.a
+-rw-r--r--  1 runner  staff  364216 Jul  1 20:17 ios-out/lib/libpcre2-16.a
+-rw-r--r--  1 runner  staff  2345320 Jul  1 20:17 ios-out/lib/libglib-2.0.a
+-rw-r--r--  1 runner  staff  389920 Jul  1 20:17 ios-out/lib/libpcre2-8.a
+-rw-r--r--  1 runner  staff  652496 Jul  1 20:17 ios-out/lib/libgirepository-2.0.a
+-rw-r--r--  1 runner  staff  361000 Jul  1 20:17 ios-out/lib/libpcre2-32.a
+-rw-r--r--  1 runner  staff  4478176 Jul  1 20:17 ios-out/lib/libgio-2.0.a
+-rw-r--r--  1 runner  staff  2904 Jul  1 20:17 ios-out/lib/libintl.a
+-rw-r--r--  1 runner  staff  1856 Jul  1 20:17 ios-out/lib/libgthread-2.0.a
+-rw-r--r--  1 runner  staff  51576 Jul  1 20:17 ios-out/lib/libffi.a
++ echo
+
++ echo '===== SHARED LIBS (.so/.dylib) — should be NONE for iOS ====='
+===== SHARED LIBS (.so/.dylib) — should be NONE for iOS =====
++ find ios-out '(' -name '*.so*' -o -name '*.dylib' ')' -not -name '*-gdb.py'
++ echo '(the *-gdb.py pretty-printer scripts are harmless)'
+(the *-gdb.py pretty-printer scripts are harmless)
++ echo
+
++ echo '===== ARCHITECTURE CHECK (must be arm64) ====='
+===== ARCHITECTURE CHECK (must be arm64) =====
+++ find ios-out -name '*.a'
++ for lib in '$(find ios-out -name '\''*.a'\'')'
++ echo '--- ios-out/lib/libgmodule-2.0.a ---'
+--- ios-out/lib/libgmodule-2.0.a ---
++ lipo -info ios-out/lib/libgmodule-2.0.a
+Non-fat file: ios-out/lib/libgmodule-2.0.a is architecture: arm64
++ for lib in '$(find ios-out -name '\''*.a'\'')'
++ echo '--- ios-out/lib/libgobject-2.0.a ---'
+--- ios-out/lib/libgobject-2.0.a ---
++ lipo -info ios-out/lib/libgobject-2.0.a
+Non-fat file: ios-out/lib/libgobject-2.0.a is architecture: arm64
++ for lib in '$(find ios-out -name '\''*.a'\'')'
++ echo '--- ios-out/lib/libpcre2-posix.a ---'
+--- ios-out/lib/libpcre2-posix.a ---
++ lipo -info ios-out/lib/libpcre2-posix.a
+Non-fat file: ios-out/lib/libpcre2-posix.a is architecture: arm64
++ for lib in '$(find ios-out -name '\''*.a'\'')'
++ echo '--- ios-out/lib/libpcre2-16.a ---'
+--- ios-out/lib/libpcre2-16.a ---
++ lipo -info ios-out/lib/libpcre2-16.a
+Non-fat file: ios-out/lib/libpcre2-16.a is architecture: arm64
++ for lib in '$(find ios-out -name '\''*.a'\'')'
++ echo '--- ios-out/lib/libglib-2.0.a ---'
+--- ios-out/lib/libglib-2.0.a ---
++ lipo -info ios-out/lib/libglib-2.0.a
+Non-fat file: ios-out/lib/libglib-2.0.a is architecture: arm64
++ for lib in '$(find ios-out -name '\''*.a'\'')'
++ echo '--- ios-out/lib/libpcre2-8.a ---'
+--- ios-out/lib/libpcre2-8.a ---
++ lipo -info ios-out/lib/libpcre2-8.a
+Non-fat file: ios-out/lib/libpcre2-8.a is architecture: arm64
++ for lib in '$(find ios-out -name '\''*.a'\'')'
++ echo '--- ios-out/lib/libgirepository-2.0.a ---'
+--- ios-out/lib/libgirepository-2.0.a ---
++ lipo -info ios-out/lib/libgirepository-2.0.a
+Non-fat file: ios-out/lib/libgirepository-2.0.a is architecture: arm64
++ for lib in '$(find ios-out -name '\''*.a'\'')'
++ echo '--- ios-out/lib/libpcre2-32.a ---'
+--- ios-out/lib/libpcre2-32.a ---
++ lipo -info ios-out/lib/libpcre2-32.a
+Non-fat file: ios-out/lib/libpcre2-32.a is architecture: arm64
++ for lib in '$(find ios-out -name '\''*.a'\'')'
++ echo '--- ios-out/lib/libgio-2.0.a ---'
+--- ios-out/lib/libgio-2.0.a ---
++ lipo -info ios-out/lib/libgio-2.0.a
+Non-fat file: ios-out/lib/libgio-2.0.a is architecture: arm64
++ for lib in '$(find ios-out -name '\''*.a'\'')'
++ echo '--- ios-out/lib/libintl.a ---'
+--- ios-out/lib/libintl.a ---
++ lipo -info ios-out/lib/libintl.a
+Non-fat file: ios-out/lib/libintl.a is architecture: arm64
++ for lib in '$(find ios-out -name '\''*.a'\'')'
++ echo '--- ios-out/lib/libgthread-2.0.a ---'
+--- ios-out/lib/libgthread-2.0.a ---
++ lipo -info ios-out/lib/libgthread-2.0.a
+Non-fat file: ios-out/lib/libgthread-2.0.a is architecture: arm64
++ for lib in '$(find ios-out -name '\''*.a'\'')'
++ echo '--- ios-out/lib/libffi.a ---'
+--- ios-out/lib/libffi.a ---
++ lipo -info ios-out/lib/libffi.a
+Non-fat file: ios-out/lib/libffi.a is architecture: arm64
++ echo
+
++ echo '===== pkgconfig files ====='
+===== pkgconfig files =====
++ find ios-out -name '*.pc'
++ sort
+ios-out/lib/pkgconfig/gio-2.0.pc
+ios-out/lib/pkgconfig/gio-unix-2.0.pc
+ios-out/lib/pkgconfig/girepository-2.0.pc
+ios-out/lib/pkgconfig/glib-2.0.pc
+ios-out/lib/pkgconfig/gmodule-2.0.pc
+ios-out/lib/pkgconfig/gmodule-export-2.0.pc
+ios-out/lib/pkgconfig/gmodule-no-export-2.0.pc
+ios-out/lib/pkgconfig/gobject-2.0.pc
+ios-out/lib/pkgconfig/gthread-2.0.pc
+ios-out/lib/pkgconfig/libffi.pc
+ios-out/lib/pkgconfig/libpcre2-16.pc
+ios-out/lib/pkgconfig/libpcre2-32.pc
+ios-out/lib/pkgconfig/libpcre2-8.pc
