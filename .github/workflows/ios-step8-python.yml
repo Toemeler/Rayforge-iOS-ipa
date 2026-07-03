@@ -494,9 +494,11 @@ jobs:
           head -80 app-syslog.log || true
 
           # Hard verdict: process alive at screenshot time AND Python
-          # initialized (marker printed by the app).
+          # initialized. BeeWare's iOS CPython redirects sys.stdout to
+          # os_log, so the marker may be in the syslog instead of the
+          # stdout capture.
           test "${APP_ALIVE}" = "1"
-          grep -q "PYTHON OK" app-console.log
+          grep -q "PYTHON OK" app-console.log app-syslog.log
 
       - name: "[12/13] Upload artifacts"
         if: always()
