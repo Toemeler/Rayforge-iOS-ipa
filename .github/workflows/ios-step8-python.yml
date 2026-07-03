@@ -1,0 +1,539 @@
+name: iOS Step 8 - CPython on iOS
+
+# Builds on the green Step 7 (GTK + GDK iOS backend + Libadwaita) and
+# embeds CPython via the BeeWare Python-Apple-support framework: the
+# Adw testapp initializes an isolated Python with PYTHONHOME inside the
+# app bundle and prints sys.version ("PYTHON OK" in the console log is
+# the success marker, plus the liveness check + screenshot). A second
+# cache layer (deps + GTK + Adw prefix) makes Python iterations cheap.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ios_min:
+        description: "Minimum iOS deployment version"
+        required: false
+        default: "17.0"
+
+permissions:
+  contents: write
+
+env:
+  IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
+  IOS_SDK: "iphonesimulator"
+  DEPS_KEY: "gtk-deps-sim-v1"
+  JPEG_TURBO_VERSION: "3.2.0"
+  GRAPHENE_VERSION: "1.10.8"
+  GDK_PIXBUF_VERSION: "2.44.7"
+  TIFF_VERSION: "4.7.0"
+  EPOXY_VERSION: "1.5.10"
+  GTK_VERSION: "4.22.4"
+  ADW_VERSION: "1.9.1"
+  PY_SUPPORT_URL: "https://github.com/beeware/Python-Apple-support/releases/download/3.13-b14/Python-3.13-iOS-support.b14.tar.gz"
+  BUNDLE_ID: "org.rayforge.pytest"
+
+jobs:
+  python-test:
+    name: Embed CPython + run Python/Adw smoke test in simulator
+    runs-on: macos-15
+    timeout-minutes: 180
+
+    steps:
+      - name: "[1/13] Toolchain + simulator inventory"
+        run: |
+          set -x
+          sw_vers || true
+          xcodebuild -version || true
+          xcrun --sdk iphonesimulator --show-sdk-version || true
+          xcrun simctl list runtimes || true
+          xcrun simctl list devices available | head -30 || true
+
+      - name: "[2/13] Checkout repo"
+        uses: actions/checkout@v4
+
+      - name: "[3/13] Install build tools"
+        run: |
+          set -euxo pipefail
+          brew list meson >/dev/null 2>&1 || brew install meson
+          brew list ninja >/dev/null 2>&1 || brew install ninja
+          brew list pkg-config >/dev/null 2>&1 || brew install pkg-config
+          brew list glib >/dev/null 2>&1 || brew install glib
+          brew list sassc >/dev/null 2>&1 || brew install sassc
+          brew list gettext >/dev/null 2>&1 || brew install gettext
+          echo "$(brew --prefix gettext)/bin" >> "$GITHUB_PATH"
+
+
+      - name: "[4a/13] Restore cached FULL prefix (deps + GTK + Adw)"
+        id: cache-full
+        uses: actions/cache@v4
+        with:
+          path: ios-out
+          key: gtkadw-sim-v1-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/patch-gtk-ios.py', 'ios/scripts/patch-adw-ios.py', 'ios/scripts/build-base-stack.sh', 'ios/scripts/gen-cross-file.sh') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}
+
+      - name: "[4/13] Restore cached simulator deps prefix"
+        if: steps.cache-full.outputs.cache-hit != 'true'
+        id: cache-deps
+        uses: actions/cache@v4
+        with:
+          path: ios-out
+          key: ${{ env.DEPS_KEY }}-${{ hashFiles('ios/scripts/build-base-stack.sh', 'ios/scripts/gen-cross-file.sh') }}-jpeg${{ env.JPEG_TURBO_VERSION }}-gr${{ env.GRAPHENE_VERSION }}-pb${{ env.GDK_PIXBUF_VERSION }}-tiff${{ env.TIFF_VERSION }}-ep${{ env.EPOXY_VERSION }}
+
+      - name: "[5/13] Build base stack for simulator (cache miss only)"
+        if: steps.cache-full.outputs.cache-hit != 'true' && steps.cache-deps.outputs.cache-hit != 'true'
+        run: |
+          set -euxo pipefail
+          chmod +x ios/scripts/gen-cross-file.sh ios/scripts/build-base-stack.sh
+          export PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          export CROSS_ISO="${GITHUB_WORKSPACE}/cross-iso.txt"
+          export CROSS_PFX="${GITHUB_WORKSPACE}/cross-pfx.txt"
+          export SCRIPT_DIR="${GITHUB_WORKSPACE}/ios/scripts"
+          bash ios/scripts/build-base-stack.sh 2>&1 | tee base-stack.log
+          tail -3 base-stack.log
+
+      - name: "[6/13] Build jpeg/graphene/pixbuf/tiff/epoxy for simulator (cache miss only)"
+        if: steps.cache-full.outputs.cache-hit != 'true' && steps.cache-deps.outputs.cache-hit != 'true'
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig"
+          export PKG_CONFIG_LIBDIR="${PREFIX}/lib/pkgconfig"
+          export PKG_CONFIG_SYSROOT_DIR=
+          SDK=$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)
+          CROSS="${GITHUB_WORKSPACE}/cross-pfx.txt"
+
+          curl -fL --retry 3 -o jpeg.tar.gz \
+            "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/${JPEG_TURBO_VERSION}/libjpeg-turbo-${JPEG_TURBO_VERSION}.tar.gz"
+          mkdir -p jpeg-src && tar xf jpeg.tar.gz --strip-components=1 -C jpeg-src
+          cmake -S jpeg-src -B jpeg-build \
+            -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_SYSTEM_PROCESSOR=aarch64 \
+            -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_OSX_SYSROOT="$SDK" -DCMAKE_OSX_DEPLOYMENT_TARGET="${IOS_MIN}" \
+            -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
+            -DENABLE_SHARED=OFF -DENABLE_STATIC=ON -DWITH_TURBOJPEG=OFF \
+            2>&1 | tee jpeg.log
+          cmake --build jpeg-build --config Release 2>&1 | tee -a jpeg.log
+          cmake --install jpeg-build --config Release 2>&1 | tee -a jpeg.log
+
+          curl -fL --retry 3 -o graphene.tar.gz \
+            "https://github.com/ebassi/graphene/archive/refs/tags/${GRAPHENE_VERSION}.tar.gz"
+          mkdir -p graphene-src && tar xf graphene.tar.gz --strip-components=1 -C graphene-src
+          meson setup graphene-build graphene-src \
+            --cross-file="${CROSS}" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dtests=false -Dinstalled_tests=false -Dintrospection=disabled \
+            -Dgtk_doc=false -Dgobject_types=true -Dsse2=false -Darm_neon=true \
+            2>&1 | tee graphene.log
+          ninja -C graphene-build install 2>&1 | tee -a graphene.log
+
+          PIXBUF_MAJMIN="$(echo "${GDK_PIXBUF_VERSION}" | cut -d. -f1,2)"
+          curl -fL --retry 3 -o gdk-pixbuf.tar.xz \
+            "https://download.gnome.org/sources/gdk-pixbuf/${PIXBUF_MAJMIN}/gdk-pixbuf-${GDK_PIXBUF_VERSION}.tar.xz"
+          mkdir -p pixbuf-src && tar xf gdk-pixbuf.tar.xz --strip-components=1 -C pixbuf-src
+          meson setup pixbuf-build pixbuf-src \
+            --cross-file="${CROSS}" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --wrap-mode=nofallback \
+            -Dpng=enabled -Djpeg=enabled -Dtiff=disabled -Dgif=enabled \
+            -Dglycin=disabled -Dandroid=disabled -Dothers=disabled \
+            -Dbuiltin_loaders=png,jpeg,gif,bmp,ico,ani \
+            -Dtests=false -Dinstalled_tests=false \
+            -Dman=false -Ddocumentation=false \
+            -Dthumbnailer=disabled -Dintrospection=disabled \
+            -Drelocatable=true \
+            2>&1 | tee pixbuf.log
+          ninja -C pixbuf-build install 2>&1 | tee -a pixbuf.log
+
+          curl -fL --retry 3 -o tiff.tar.gz \
+            "https://download.osgeo.org/libtiff/tiff-${TIFF_VERSION}.tar.gz"
+          mkdir -p tiff-src && tar xf tiff.tar.gz --strip-components=1 -C tiff-src
+          cmake -S tiff-src -B tiff-build \
+            -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_SYSTEM_PROCESSOR=aarch64 \
+            -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_OSX_SYSROOT="$SDK" -DCMAKE_OSX_DEPLOYMENT_TARGET="${IOS_MIN}" \
+            -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
+            -DBUILD_SHARED_LIBS=OFF \
+            -Dtiff-tools=OFF -Dtiff-tests=OFF -Dtiff-docs=OFF -Dtiff-contrib=OFF \
+            -Dwebp=OFF -Dzstd=OFF -Dlzma=OFF -Djbig=OFF -Dlerc=OFF \
+            -DZLIB_LIBRARY="${SDK}/usr/lib/libz.tbd" \
+            -DZLIB_INCLUDE_DIR="${SDK}/usr/include" \
+            -DJPEG_LIBRARY="${PREFIX}/lib/libjpeg.a" \
+            -DJPEG_INCLUDE_DIR="${PREFIX}/include" \
+            2>&1 | tee tiff.log
+          cmake --build tiff-build --config Release 2>&1 | tee -a tiff.log
+          cmake --install tiff-build --config Release 2>&1 | tee -a tiff.log
+
+          curl -fL --retry 3 -o epoxy.tar.gz \
+            "https://github.com/anholt/libepoxy/archive/refs/tags/${EPOXY_VERSION}.tar.gz"
+          mkdir -p epoxy-src && tar xf epoxy.tar.gz --strip-components=1 -C epoxy-src
+          meson setup epoxy-build epoxy-src \
+            --cross-file="${CROSS}" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            -Dglx=no -Degl=no -Dx11=false -Dtests=false -Ddocs=false \
+            2>&1 | tee epoxy.log
+          ninja -C epoxy-build install 2>&1 | tee -a epoxy.log
+
+      - name: "[7/13] Export env + host-tool fixup"
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          echo "PREFIX=${PREFIX}" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_LIBDIR=${PREFIX}/lib/pkgconfig" >> "$GITHUB_ENV"
+          echo "PKG_CONFIG_SYSROOT_DIR=" >> "$GITHUB_ENV"
+          chmod +x ios/scripts/gen-cross-file.sh
+          ios/scripts/gen-cross-file.sh \
+            "${GITHUB_WORKSPACE}/cross-pfx.txt" "${IOS_MIN}" \
+            "${PREFIX}/lib/pkgconfig"
+          BREW_BIN="$(brew --prefix)/bin"
+          for f in "${PREFIX}/bin/"*; do
+            [ -f "$f" ] || continue
+            if file "$f" | grep -q "Mach-O"; then rm -v "$f"; fi
+          done
+          for pc in "${PREFIX}/lib/pkgconfig/gio-2.0.pc" \
+                    "${PREFIX}/lib/pkgconfig/glib-2.0.pc"; do
+            sed -i '' \
+              -e "s|^glib_compile_resources=.*|glib_compile_resources=${BREW_BIN}/glib-compile-resources|" \
+              -e "s|^glib_compile_schemas=.*|glib_compile_schemas=${BREW_BIN}/glib-compile-schemas|" \
+              "$pc" || true
+          done
+
+      - name: "[8/13] Build GTK with the GDK iOS backend (simulator, full-cache miss only)"
+        if: steps.cache-full.outputs.cache-hit != 'true'
+        run: |
+          set -euxo pipefail
+          GTK_MAJMIN="$(echo "${GTK_VERSION}" | cut -d. -f1,2)"
+          curl -fL --retry 3 -o gtk.tar.xz \
+            "https://download.gnome.org/sources/gtk/${GTK_MAJMIN}/gtk-${GTK_VERSION}.tar.xz"
+          mkdir -p gtk-src && tar xf gtk.tar.xz --strip-components=1 -C gtk-src
+          sed -i '' 's/#if __MAC_OS_X_VERSION_MIN_REQUIRED < 101500L/#if !defined(__IPHONE_OS_VERSION_MIN_REQUIRED) \&\& __MAC_OS_X_VERSION_MIN_REQUIRED < 101500L/' gtk-src/meson.build
+          grep -q '__IPHONE_OS_VERSION_MIN_REQUIRED' gtk-src/meson.build || { echo "::error::patch P1 failed"; exit 1; }
+          sed -i '' 's/#elif defined (__APPLE__)/#elif defined (GDK_WINDOWING_MACOS)/' gtk-src/gtk/gtkcolorpicker.c
+          grep -q 'GDK_WINDOWING_MACOS' gtk-src/gtk/gtkcolorpicker.c || { echo "::error::patch P2 failed"; exit 1; }
+          python3 ios/scripts/patch-gtk-ios.py gtk-src ios/gdk-ios
+
+          meson setup gtk-build gtk-src \
+            --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --wrap-mode=nofallback \
+            -Dios-backend=true \
+            -Dx11-backend=false -Dwayland-backend=false -Dwin32-backend=false \
+            -Dmacos-backend=false -Dandroid-backend=false -Dbroadway-backend=false \
+            -Dmedia-gstreamer=disabled -Dprint-cpdb=disabled -Dprint-cups=disabled \
+            -Dvulkan=disabled -Dcloudproviders=disabled -Dsysprof=disabled \
+            -Dtracker=disabled -Dcolord=disabled -Daccesskit=disabled \
+            -Df16c=disabled \
+            -Dintrospection=disabled -Ddocumentation=false -Dman-pages=false \
+            -Dscreenshots=false \
+            -Dbuild-demos=false -Dbuild-testsuite=false -Dbuild-examples=false \
+            -Dbuild-tests=false \
+            2>&1 | tee gtk-setup.log
+          ninja -C gtk-build 2>&1 | tee gtk-build.log
+          ninja -C gtk-build install 2>&1 | tee gtk-install.log
+
+
+      - name: "[9/13] Build appstream stub + libadwaita (simulator, full-cache miss only)"
+        if: steps.cache-full.outputs.cache-hit != 'true'
+        run: |
+          set -euxo pipefail
+          SDK=$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)
+
+          # --- appstream stub: satisfies libadwaita's appstream dependency
+          # (only used by adw_about_*_new_from_appdata) without cross-
+          # compiling real appstream + libxmlb + libcurl for iOS.
+          mkdir -p "${PREFIX}/include/appstream-stub"
+          cp ios/adw-shims/appstream.h "${PREFIX}/include/appstream-stub/"
+          xcrun --sdk "${IOS_SDK}" clang -c \
+            -arch arm64 -isysroot "$SDK" \
+            -mios-simulator-version-min="${IOS_MIN}" \
+            ios/adw-shims/appstream-stub.c \
+            $(pkg-config --cflags glib-2.0 gio-2.0) \
+            -o appstream-stub.o 2>&1 | tee adw-stub.log
+          xcrun libtool -static -o "${PREFIX}/lib/libappstream-stub.a" appstream-stub.o
+          PC="${PREFIX}/lib/pkgconfig/appstream.pc"
+          : > "$PC"
+          echo "prefix=${PREFIX}" >> "$PC"
+          echo "libdir=\${prefix}/lib" >> "$PC"
+          echo "includedir=\${prefix}/include/appstream-stub" >> "$PC"
+          echo "" >> "$PC"
+          echo "Name: appstream" >> "$PC"
+          echo "Description: appstream stub for iOS (about-dialog appdata parsing disabled)" >> "$PC"
+          echo "Version: 1.0.99" >> "$PC"
+          echo "Requires: glib-2.0 gio-2.0" >> "$PC"
+          echo "Cflags: -I\${includedir}" >> "$PC"
+          echo "Libs: -L\${libdir} -lappstream-stub" >> "$PC"
+          cat "$PC"
+          pkg-config --exists --print-errors appstream
+
+          # --- libadwaita, patched for iOS (no AppKit, portal settings)
+          ADW_MAJMIN="$(echo "${ADW_VERSION}" | cut -d. -f1,2)"
+          curl -fL --retry 3 -o adw.tar.xz \
+            "https://download.gnome.org/sources/libadwaita/${ADW_MAJMIN}/libadwaita-${ADW_VERSION}.tar.xz"
+          mkdir -p adw-src && tar xf adw.tar.xz --strip-components=1 -C adw-src
+          python3 ios/scripts/patch-adw-ios.py adw-src
+
+          meson setup adw-build adw-src \
+            --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
+            --default-library=static --prefix="${PREFIX}" --buildtype=release \
+            --wrap-mode=nofallback \
+            -Dintrospection=disabled -Dvapi=false \
+            -Dtests=false -Dexamples=false -Ddocumentation=false \
+            2>&1 | tee adw-setup.log
+          ninja -C adw-build 2>&1 | tee adw-build.log
+          ninja -C adw-build install 2>&1 | tee adw-install.log
+          ls -la "${PREFIX}/lib/" | grep -i adw
+
+
+      - name: "[9b/13] Download CPython iOS support package"
+        run: |
+          set -euxo pipefail
+          curl -fL --retry 3 -o py-support.tar.gz "${PY_SUPPORT_URL}"
+          mkdir -p py-support && tar xf py-support.tar.gz -C py-support
+          echo "== support package layout (top 3 levels)"
+          find py-support -maxdepth 3 | head -40
+          SIM_SLICE=$(find py-support -maxdepth 2 -type d -name "*simulator*" -path "*Python.xcframework*" | head -1)
+          echo "SIM_SLICE=${SIM_SLICE}"
+          test -n "${SIM_SLICE}"
+          test -d "${SIM_SLICE}/Python.framework"
+          STDLIB=$(find "${SIM_SLICE}" -maxdepth 3 -type d -name "python3.*" | head -1)
+          if [ -z "${STDLIB}" ]; then
+            STDLIB=$(find py-support -maxdepth 4 -type d -name "python3.*" | head -1)
+          fi
+          echo "STDLIB=${STDLIB}"
+          test -n "${STDLIB}"
+          ls "${STDLIB}" | head -20
+          echo "SIM_SLICE=${GITHUB_WORKSPACE}/${SIM_SLICE}" >> "$GITHUB_ENV"
+          echo "PY_STDLIB=${GITHUB_WORKSPACE}/${STDLIB}" >> "$GITHUB_ENV"
+
+      - name: "[10/13] Link Python/Adw testapp + assemble .app bundle"
+        run: |
+          set -euxo pipefail
+          SDK=$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)
+
+          # Link ONLY against the gtk dylib: it contains (and exports) the
+          # statically-linked glib/pango/etc. Linking the static deps into
+          # the executable as well would create a second GLib copy at
+          # runtime (duplicate GType registrations -> crashes).
+          # libadwaita is a static lib resolving its GTK/GLib symbols from
+          # the gtk dylib (single GLib copy). -force_load is REQUIRED: the
+          # GResource bundles (UI templates, stylesheet, icons) register
+          # via __attribute__((constructor)) in objects no symbol refers
+          # to — plain -ladwaita-1 drops them and every composite-template
+          # widget crashes at runtime.
+          PYINC=$(find "${SIM_SLICE}/Python.framework" -maxdepth 3 -name "Python.h" -exec dirname {} \; | head -1)
+          echo "python headers: ${PYINC}"
+          test -n "${PYINC}"
+          xcrun --sdk "${IOS_SDK}" clang \
+            -arch arm64 -isysroot "$SDK" \
+            -mios-simulator-version-min="${IOS_MIN}" \
+            ios/testapp/main-py-adw.c \
+            -o rayforge-pytest \
+            $(pkg-config --cflags libadwaita-1 gtk4) \
+            -I"${PYINC}" \
+            -L"${PREFIX}/lib" \
+            -Wl,-force_load,"${PREFIX}/lib/libadwaita-1.a" \
+            -lappstream-stub -lgtk-4 \
+            -F"${SIM_SLICE}" -framework Python \
+            -framework CoreFoundation \
+            2>&1 | tee testapp-link.log
+
+          APP="RayforgePy.app"
+          rm -rf "$APP"
+          mkdir -p "$APP/Frameworks" "$APP/share" "$APP/etc/fonts"
+
+          cp rayforge-pytest "$APP/rayforge-pytest"
+          cp "${PREFIX}/lib/libgtk-4.1.dylib" "$APP/Frameworks/"
+
+          # install-name fixup: dylib id -> @rpath, executable reference ->
+          # @rpath, rpath -> the bundle's Frameworks dir.
+          install_name_tool -id "@rpath/libgtk-4.1.dylib" \
+            "$APP/Frameworks/libgtk-4.1.dylib"
+          OLD_REF=$(otool -L "$APP/rayforge-pytest" | awk '/libgtk-4/{print $1; exit}')
+          echo "old gtk dylib reference: ${OLD_REF}"
+          install_name_tool -change "${OLD_REF}" "@rpath/libgtk-4.1.dylib" \
+            "$APP/rayforge-pytest"
+          install_name_tool -add_rpath "@executable_path/Frameworks" \
+            "$APP/rayforge-pytest"
+          otool -L "$APP/rayforge-pytest" | head -8
+
+          # Embedded CPython: framework + stdlib. The BeeWare framework's
+          # install name is already @rpath/Python.framework/Python and the
+          # executable's rpath already covers @executable_path/Frameworks.
+          cp -R "${SIM_SLICE}/Python.framework" "$APP/Frameworks/"
+          mkdir -p "$APP/python/lib"
+          cp -R "${PY_STDLIB}" "$APP/python/lib/"
+          du -sh "$APP/python" "$APP/Frameworks/Python.framework"
+
+          # GSettings schemas (GTK's own), compiled with the host tool.
+          mkdir -p "$APP/share/glib-2.0/schemas"
+          cp "${PREFIX}/share/glib-2.0/schemas/"*.xml "$APP/share/glib-2.0/schemas/" || true
+          "$(brew --prefix)/bin/glib-compile-schemas" "$APP/share/glib-2.0/schemas"
+          ls "$APP/share/glib-2.0/schemas/"
+
+          # fontconfig configuration for the iOS system fonts. The cache
+          # dir uses XDG_CACHE_HOME, which gdk_ios_main points at the app
+          # sandbox Caches directory.
+          FC="$APP/etc/fonts/fonts.conf"
+          : > "$FC"
+          echo '<?xml version="1.0"?>' >> "$FC"
+          echo '<!DOCTYPE fontconfig SYSTEM "fonts.dtd">' >> "$FC"
+          echo '<fontconfig>' >> "$FC"
+          echo '  <dir>/System/Library/Fonts</dir>' >> "$FC"
+          echo '  <dir>/System/Library/Fonts/Core</dir>' >> "$FC"
+          echo '  <dir>/System/Library/Fonts/CoreUI</dir>' >> "$FC"
+          echo '  <cachedir prefix="xdg">fontconfig</cachedir>' >> "$FC"
+          echo '  <match target="pattern">' >> "$FC"
+          echo '    <test qual="any" name="family"><string>sans-serif</string></test>' >> "$FC"
+          echo '    <edit name="family" mode="assign" binding="same"><string>Helvetica</string></edit>' >> "$FC"
+          echo '  </match>' >> "$FC"
+          echo '</fontconfig>' >> "$FC"
+          head -5 "$FC"
+
+          # Info.plist
+          PL="$APP/Info.plist"
+          : > "$PL"
+          echo '<?xml version="1.0" encoding="UTF-8"?>' >> "$PL"
+          echo '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">' >> "$PL"
+          echo '<plist version="1.0"><dict>' >> "$PL"
+          echo '  <key>CFBundleExecutable</key><string>rayforge-pytest</string>' >> "$PL"
+          echo '  <key>CFBundleIdentifier</key><string>org.rayforge.pytest</string>' >> "$PL"
+          echo '  <key>CFBundleName</key><string>RayforgePy</string>' >> "$PL"
+          echo '  <key>CFBundlePackageType</key><string>APPL</string>' >> "$PL"
+          echo '  <key>CFBundleShortVersionString</key><string>0.1</string>' >> "$PL"
+          echo '  <key>CFBundleVersion</key><string>1</string>' >> "$PL"
+          echo '  <key>MinimumOSVersion</key><string>17.0</string>' >> "$PL"
+          echo '  <key>UIDeviceFamily</key><array><integer>1</integer><integer>2</integer></array>' >> "$PL"
+          echo '  <key>UILaunchScreen</key><dict/>' >> "$PL"
+          echo '  <key>UIFileSharingEnabled</key><true/>' >> "$PL"
+          echo '  <key>LSSupportsOpeningDocumentsInPlace</key><true/>' >> "$PL"
+          echo '</dict></plist>' >> "$PL"
+          plutil -lint "$PL"
+
+          # Ad-hoc code signing (sufficient for the simulator).
+          codesign --force --sign - "$APP/Frameworks/libgtk-4.1.dylib"
+          codesign --force --deep --sign - "$APP/Frameworks/Python.framework"
+          codesign --force --sign - "$APP"
+          codesign -dv "$APP" 2>&1 | head -5
+
+      - name: "[11/13] Boot simulator, install, launch, screenshot"
+        run: |
+          set -euxo pipefail
+          # Pick the newest available iPad device type + runtime.
+          RUNTIME=$(xcrun simctl list runtimes | awk '/iOS/{id=$NF} END{print id}')
+          echo "runtime: $RUNTIME"
+          UDID=$(xcrun simctl create "py-ios-test" \
+            "com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M4-8GB" \
+            "$RUNTIME" 2>/dev/null) || \
+          UDID=$(xcrun simctl create "py-ios-test" \
+            "iPad Pro 11-inch (M4)" "$RUNTIME" 2>/dev/null) || \
+          UDID=$(xcrun simctl list devices available | awk -F '[()]' '/iPad/{print $2; exit}')
+          echo "UDID=$UDID"
+          test -n "$UDID"
+
+          xcrun simctl boot "$UDID" || true
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl install "$UDID" RayforgePy.app
+
+          # Launch with stdout/stderr redirected to files (console-pty is
+          # flaky: "Mach error -308" kills the attach and hides the real
+          # state). G_MESSAGES_DEBUG for full GLib logging.
+          LAUNCH_OUT="$PWD/app-console.log"
+          xcrun simctl launch \
+            --stdout="$LAUNCH_OUT" --stderr="$LAUNCH_OUT" \
+            "$UDID" "${BUNDLE_ID}" \
+            SIMCTL_CHILD_G_MESSAGES_DEBUG=all | tee launch-cmd.log
+          LAUNCHED_PID=$(awk -F': ' '{print $2}' launch-cmd.log | tr -d '[:space:]')
+          echo "launched pid: ${LAUNCHED_PID}"
+          sleep 25
+
+          # Liveness check BEFORE the screenshot so the verdict is honest.
+          APP_ALIVE=1
+          xcrun simctl spawn "$UDID" launchctl list 2>/dev/null \
+            | grep -q "${BUNDLE_ID}" || APP_ALIVE=0
+          echo "app alive: ${APP_ALIVE}"
+
+          xcrun simctl io "$UDID" screenshot simulator-screenshot.png
+          ls -la simulator-screenshot.png
+
+          # Full app system log + crash reports for diagnosis.
+          xcrun simctl spawn "$UDID" log show --last 4m \
+            --predicate 'process == "rayforge-pytest"' \
+            > app-syslog.log 2>&1 || true
+          xcrun simctl spawn "$UDID" log show --last 4m \
+            --predicate 'eventMessage CONTAINS "rayforge" OR process == "SpringBoard" AND eventMessage CONTAINS[c] "pytest"' \
+            > app-syslog-extra.log 2>&1 || true
+          mkdir -p crash-reports
+          find "$HOME/Library/Logs/DiagnosticReports" -name '*rayforge*' -newer RayforgePy.app/Info.plist \
+            -exec cp {} crash-reports/ \; 2>/dev/null || true
+          ls -la crash-reports/ || true
+          for c in crash-reports/*; do
+            [ -f "$c" ] || continue
+            echo "===== crash report: $c (first 120 lines)"
+            head -120 "$c"
+          done
+
+          xcrun simctl shutdown "$UDID" || true
+
+          echo "===== app console ====="
+          cat app-console.log || true
+          echo "===== app syslog (first 80) ====="
+          head -80 app-syslog.log || true
+
+          # Hard verdict: process alive at screenshot time AND Python
+          # initialized (marker printed by the app).
+          test "${APP_ALIVE}" = "1"
+          grep -q "PYTHON OK" app-console.log
+
+      - name: "[12/13] Upload artifacts"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-test-results
+          path: |
+            simulator-screenshot.png
+            app-console.log
+            app-syslog.log
+            RayforgePy.app
+          if-no-files-found: warn
+
+      - name: Publish diagnostics to ci-logs branch (always)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uxo pipefail
+          RUN_ID="${GITHUB_RUN_ID}"
+          OUT="ci-logs/step8/run-${RUN_ID}"
+          rm -rf _cilogs && mkdir -p "_cilogs/${OUT}"
+          for f in base-stack.log gtk-setup.log gtk-build.log adw-stub.log \
+                   adw-setup.log adw-build.log adw-install.log testapp-link.log \
+                   launch-cmd.log app-console.log app-syslog.log app-syslog-extra.log \
+                   simulator-screenshot.png; do
+            [ -f "$f" ] && cp "$f" "_cilogs/${OUT}/$(echo "$f" | tr '/' '_')" || true
+          done
+          if [ -d crash-reports ]; then cp crash-reports/* "_cilogs/${OUT}/" 2>/dev/null || true; fi
+          SUMMARY="_cilogs/${OUT}/SUMMARY.txt"
+          {
+            echo "Run ID: ${RUN_ID}"
+            echo "Commit: ${GITHUB_SHA}"
+            echo "Date: $(date -u)"
+            echo
+            for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log; do
+              echo "===================== TAIL: $f ====================="
+              if [ -f "$f" ]; then tail -60 "$f"; else echo "(not produced)"; fi
+              echo
+            done
+          } > "${SUMMARY}" 2>&1 || true
+          cd _cilogs
+          git init -q
+          git config user.email "ci@rayforge.local"
+          git config user.name "Rayforge CI Logs"
+          git checkout -q -b ci-logs
+          git add -A
+          git commit -q -m "step8 diagnostics for run ${RUN_ID}" || echo "nothing to commit"
+          REMOTE="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git ls-remote --exit-code "${REMOTE}" ci-logs >/dev/null 2>&1; then
+            git fetch -q "${REMOTE}" ci-logs || true
+            git merge -q --allow-unrelated-histories -m "merge" FETCH_HEAD || true
+          fi
+          git push -q "${REMOTE}" ci-logs:ci-logs || git push -q -f "${REMOTE}" ci-logs:ci-logs
+          echo "Diagnostics pushed under ${OUT}"
