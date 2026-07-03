@@ -1,0 +1,1171 @@
+ninja: Entering directory `glib-build'
+[1/659] Copying file gio/gdbus-2.0/codegen/codegen.py
+[2/659] Copying file gio/gdbus-2.0/codegen/codegen_main.py
+[3/659] Copying file gio/gdbus-2.0/codegen/codegen_docbook.py
+[4/659] Copying file gio/gdbus-2.0/codegen/__init__.py
+[5/659] Copying file gio/gdbus-2.0/codegen/codegen_rst.py
+[6/659] Copying file gio/gdbus-2.0/codegen/codegen_md.py
+[7/659] Copying file gio/gdbus-2.0/codegen/dbustypes.py
+[8/659] Copying file gio/gdbus-2.0/codegen/utils.py
+[9/659] Copying file gio/gdbus-2.0/codegen/parser.py
+[10/659] Generating glib/gversionmacros.h with a custom command
+[11/659] Generating glib/glib-visibility.h with a custom command
+[12/659] Generating gobject/gobject-visibility.h with a custom command
+[13/659] Generating gmodule/gmodule-visibility.h with a custom command
+[14/659] Generating gio/gio-visibility.h with a custom command
+[15/659] Generating gobject/glib_enumtypes_h with a custom command (wrapped by meson to capture output)
+[16/659] Generating girepository/gi-visibility.h with a custom command
+[17/659] Generating gio/gdbus-daemon-generated with a custom command
+[18/659] Generating gio/xdp-dbus with a custom command
+[19/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_config.c.o
+[20/659] Generating gobject/glib_enumtypes_c with a custom command (wrapped by meson to capture output)
+[21/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_context.c.o
+[22/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_auto_possess.c.o
+[23/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_error.c.o
+../glib-src/subprojects/pcre2-10.42/src/pcre2_error.c:66:3: warning: string literal of length 4380 exceeds maximum length 4095 that ISO C99 compilers are required to support [-Woverlength-strings]
+   66 |   "no error\0"
+      |   ^~~~~~~~~~~~
+   67 |   "\\ at end of pattern\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |   "\\c at end of pattern\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |   "unrecognized character follows \\\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70 |   "numbers out of order in {} quantifier\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   71 |   /* 5 */
+      |   ~~~~~~~
+   72 |   "number too big in {} quantifier\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   73 |   "missing terminating ] for character class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   74 |   "escape sequence is invalid in character class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   75 |   "range out of order in character class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   76 |   "quantifier does not follow a repeatable item\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   77 |   /* 10 */
+      |   ~~~~~~~~
+   78 |   "internal error: unexpected repeat\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   79 |   "unrecognized character after (? or (?-\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   80 |   "POSIX named classes are supported only within a class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   81 |   "POSIX collating elements are not supported\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[24/659] Generating gio/gioenumtypes_h with a custom command (wrapped by meson to capture output)
+[25/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_extuni.c.o
+[26/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_find_bracket.c.o
+[27/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_jit_compile.c.o
+[28/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_maketables.c.o
+[29/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_convert.c.o
+[30/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_match_data.c.o
+[31/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_newline.c.o
+[32/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_ord2utf.c.o
+[33/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_pattern_info.c.o
+[34/659] Generating gio/gioenumtypes_c with a custom command (wrapped by meson to capture output)
+[35/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_script_run.c.o
+[36/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_serialize.c.o
+[37/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_string_utils.c.o
+[38/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_study.c.o
+[39/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_substitute.c.o
+[40/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_tables.c.o
+[41/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_substring.c.o
+[42/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_ucd.c.o
+[43/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_valid_utf.c.o
+[44/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_xclass.c.o
+[45/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/meson-generated_.._pcre2_chartables.c.o
+[46/659] Compiling C object subprojects/libffi/src/libffi.a.p/types.c.o
+[47/659] Compiling C object subprojects/libffi/src/libffi.a.p/prep_cif.c.o
+[48/659] Compiling C object subprojects/libffi/src/libffi.a.p/java_raw_api.c.o
+[49/659] Compiling C object subprojects/libffi/src/libffi.a.p/raw_api.c.o
+[50/659] Compiling C object subprojects/libffi/src/libffi.a.p/aarch64_ffi.c.o
+[51/659] Compiling C object subprojects/libffi/src/libffi.a.p/closures.c.o
+[52/659] Compiling C object subprojects/libffi/src/libffi.a.p/aarch64_sysv.S.o
+[53/659] Compiling C object subprojects/proxy-libintl/libintl.a.p/libintl.c.o
+[54/659] Compiling C object glib/libcharset/libcharset.a.p/localcharset.c.o
+[55/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_dfa_match.c.o
+[56/659] Compiling C object glib/libglib-2.0.a.p/deprecated_gallocator.c.o
+[57/659] Compiling C object glib/libglib-2.0.a.p/deprecated_gcache.c.o
+[58/659] Compiling C object glib/libglib-2.0.a.p/deprecated_gcompletion.c.o
+[59/659] Compiling C object glib/libglib-2.0.a.p/deprecated_grel.c.o
+[60/659] Compiling C object glib/libglib-2.0.a.p/garcbox.c.o
+[61/659] Compiling C object glib/libglib-2.0.a.p/deprecated_gthread-deprecated.c.o
+[62/659] Compiling C object glib/libglib-2.0.a.p/gasyncqueue.c.o
+[63/659] Compiling C object glib/libglib-2.0.a.p/gatomic.c.o
+[64/659] Compiling C object glib/libglib-2.0.a.p/gbacktrace.c.o
+[65/659] Compiling C object glib/libglib-2.0.a.p/gbase64.c.o
+[66/659] Compiling C object glib/libglib-2.0.a.p/gbitlock.c.o
+[67/659] Compiling C object glib/libglib-2.0.a.p/gbytes.c.o
+[68/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_compile.c.o
+[69/659] Compiling C object glib/libglib-2.0.a.p/garray.c.o
+[70/659] Compiling C object glib/libglib-2.0.a.p/gcharset.c.o
+[71/659] Compiling C object glib/libglib-2.0.a.p/gdataset.c.o
+[72/659] Compiling C object glib/libglib-2.0.a.p/gconvert.c.o
+[73/659] Compiling C object glib/libglib-2.0.a.p/gdate.c.o
+[74/659] Compiling C object glib/libglib-2.0.a.p/gchecksum.c.o
+[75/659] Compiling C object glib/libglib-2.0.a.p/gdatetime-private.c.o
+[76/659] Compiling C object glib/libglib-2.0.a.p/gbookmarkfile.c.o
+[77/659] Compiling C object glib/libglib-2.0.a.p/gdir.c.o
+[78/659] Compiling C object glib/libglib-2.0.a.p/genviron.c.o
+[79/659] Compiling C object glib/libglib-2.0.a.p/gerror.c.o
+[80/659] Compiling C object glib/libglib-2.0.a.p/ggettext.c.o
+[81/659] Compiling C object glib/libglib-2.0.a.p/ghmac.c.o
+[82/659] Compiling C object glib/libglib-2.0.a.p/gdatetime.c.o
+[83/659] Compiling C object glib/libglib-2.0.a.p/ghook.c.o
+[84/659] Compiling C object glib/libglib-2.0.a.p/gfileutils.c.o
+[85/659] Compiling C object glib/libglib-2.0.a.p/ghash.c.o
+[86/659] Compiling C object glib/libglib-2.0.a.p/ghostutils.c.o
+[87/659] Compiling C object glib/libglib-2.0.a.p/glib-private.c.o
+[88/659] Compiling C object glib/libglib-2.0.a.p/glib-init.c.o
+[89/659] Compiling C object glib/libglib-2.0.a.p/giochannel.c.o
+[90/659] Compiling C object glib/libglib-2.0.a.p/glist.c.o
+[91/659] Compiling C object glib/libglib-2.0.a.p/gmappedfile.c.o
+[92/659] Compiling C object glib/libglib-2.0.a.p/gmem.c.o
+[93/659] Compiling C object glib/libglib-2.0.a.p/gkeyfile.c.o
+[94/659] Compiling C object glib/libglib-2.0.a.p/gmessages.c.o
+[95/659] Compiling C object glib/libglib-2.0.a.p/gmarkup.c.o
+[96/659] Compiling C object glib/libglib-2.0.a.p/gnode.c.o
+[97/659] Compiling C object glib/libglib-2.0.a.p/gpathbuf.c.o
+[98/659] Compiling C object glib/libglib-2.0.a.p/gpattern.c.o
+[99/659] Compiling C object glib/libglib-2.0.a.p/gpoll.c.o
+[100/659] Compiling C object glib/libglib-2.0.a.p/gprimes.c.o
+[101/659] Compiling C object glib/libglib-2.0.a.p/gqsort.c.o
+[102/659] Compiling C object glib/libglib-2.0.a.p/gquark.c.o
+[103/659] Compiling C object glib/libglib-2.0.a.p/gmain.c.o
+[104/659] Compiling C object glib/libglib-2.0.a.p/gqueue.c.o
+[105/659] Compiling C object glib/libglib-2.0.a.p/grand.c.o
+[106/659] Compiling C object glib/libglib-2.0.a.p/grcbox.c.o
+[107/659] Compiling C object glib/libglib-2.0.a.p/grefcount.c.o
+[108/659] Compiling C object glib/libglib-2.0.a.p/grefstring.c.o
+[109/659] Compiling C object glib/libglib-2.0.a.p/goption.c.o
+[110/659] Compiling C object glib/libglib-2.0.a.p/gscanner.c.o
+[111/659] Compiling C object glib/libglib-2.0.a.p/gsequence.c.o
+[112/659] Compiling C object glib/libglib-2.0.a.p/gshell.c.o
+[113/659] Compiling C object glib/libglib-2.0.a.p/gslice.c.o
+[114/659] Compiling C object glib/libglib-2.0.a.p/gslist.c.o
+[115/659] Compiling C object glib/libglib-2.0.a.p/gspawn.c.o
+[116/659] Compiling C object glib/libglib-2.0.a.p/gstdio.c.o
+[117/659] Compiling C object glib/libglib-2.0.a.p/gstringchunk.c.o
+[118/659] Compiling C object glib/libglib-2.0.a.p/gregex.c.o
+[119/659] Compiling C object glib/libglib-2.0.a.p/gstrvbuilder.c.o
+[120/659] Compiling C object glib/libglib-2.0.a.p/gstring.c.o
+[121/659] Compiling C object glib/libglib-2.0.a.p/gthreadpool.c.o
+[122/659] Compiling C object glib/libglib-2.0.a.p/gthread.c.o
+[123/659] Compiling C object glib/libglib-2.0.a.p/gtimer.c.o
+[124/659] Compiling C object glib/libglib-2.0.a.p/gstrfuncs.c.o
+[125/659] Compiling C object glib/libglib-2.0.a.p/gtrace.c.o
+[126/659] Compiling C object glib/libglib-2.0.a.p/gtrashstack.c.o
+[127/659] Compiling C object glib/libglib-2.0.a.p/gtranslit.c.o
+[128/659] Compiling C object glib/libglib-2.0.a.p/gtree.c.o
+[129/659] Compiling C object glib/libglib-2.0.a.p/gtimezone.c.o
+[130/659] Compiling C object glib/libglib-2.0.a.p/gtestutils.c.o
+[131/659] Compiling C object glib/libglib-2.0.a.p/guniprop.c.o
+[132/659] Compiling C object glib/libglib-2.0.a.p/gunibreak.c.o
+[133/659] Compiling C object glib/libglib-2.0.a.p/gunicollate.c.o
+[134/659] Compiling C object subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_match.c.o
+[135/659] Compiling C object glib/libglib-2.0.a.p/guuid.c.o
+[136/659] Compiling C object glib/libglib-2.0.a.p/gutf8.c.o
+[137/659] Compiling C object glib/libglib-2.0.a.p/gunidecomp.c.o
+[138/659] Compiling C object glib/libglib-2.0.a.p/gutils.c.o
+[139/659] Compiling C object glib/libglib-2.0.a.p/gvariant-core.c.o
+[140/659] Compiling C object glib/libglib-2.0.a.p/gvarianttypeinfo.c.o
+[141/659] Compiling C object glib/libglib-2.0.a.p/gvarianttype.c.o
+[142/659] Compiling C object glib/libglib-2.0.a.p/guri.c.o
+[143/659] Compiling C object glib/libglib-2.0.a.p/gversion.c.o
+[144/659] Compiling C object glib/libglib-2.0.a.p/gvariant-serialiser.c.o
+[145/659] Compiling C object glib/libglib-2.0.a.p/gwakeup.c.o
+[146/659] Compiling C object glib/libglib-2.0.a.p/gprintf.c.o
+[147/659] Compiling C object glib/libglib-2.0.a.p/glib-unix.c.o
+[148/659] Compiling C object glib/libglib-2.0.a.p/gvariant-parser.c.o
+[149/659] Compiling C object glib/libglib-2.0.a.p/giounix.c.o
+[150/659] Compiling C object gobject/libgobject-2.0.a.p/meson-generated_.._glib-enumtypes.c.o
+[151/659] Compiling C object gobject/libgobject-2.0.a.p/gatomicarray.c.o
+[152/659] Compiling C object gobject/libgobject-2.0.a.p/gbindinggroup.c.o
+[153/659] Compiling C object gobject/libgobject-2.0.a.p/gbinding.c.o
+[154/659] Compiling C object glib/libglib-2.0.a.p/gvariant.c.o
+[155/659] Compiling C object gobject/libgobject-2.0.a.p/gboxed.c.o
+[156/659] Compiling C object gobject/libgobject-2.0.a.p/gmarshal.c.o
+[157/659] Compiling C object gobject/libgobject-2.0.a.p/genums.c.o
+[158/659] Compiling C object glib/libglib-2.0.a.p/gspawn-posix.c.o
+[159/659] Compiling C object gobject/libgobject-2.0.a.p/gclosure.c.o
+[160/659] Compiling C object gobject/libgobject-2.0.a.p/gparam.c.o
+[161/659] Compiling C object gobject/libgobject-2.0.a.p/gparamspecs.c.o
+[162/659] Compiling C object gobject/libgobject-2.0.a.p/gsourceclosure.c.o
+[163/659] Compiling C object gobject/libgobject-2.0.a.p/gsignalgroup.c.o
+[164/659] Compiling C object gobject/libgobject-2.0.a.p/gtypemodule.c.o
+[165/659] Compiling C object gobject/libgobject-2.0.a.p/gtypeplugin.c.o
+[166/659] Compiling C object gobject/libgobject-2.0.a.p/gvaluearray.c.o
+[167/659] Compiling C object gobject/libgobject-2.0.a.p/gvalue.c.o
+[168/659] Compiling C object gobject/libgobject-2.0.a.p/gvaluetransform.c.o
+[169/659] Compiling C object gobject/libgobject-2.0.a.p/gvaluetypes.c.o
+[170/659] Compiling C object gmodule/libgmodule-2.0.a.p/gmodule.c.o
+../glib-src/gmodule/gmodule.c:603:37: warning: Deprecated pre-processor symbol [-W#pragma-messages]
+  603 |         name = g_strconcat (file_name, "." G_MODULE_SUFFIX, NULL);
+      |                                            ^
+glib/glibconfig.h:195:30: note: expanded from macro 'G_MODULE_SUFFIX'
+  195 | #define G_MODULE_SUFFIX "so" GLIB_DEPRECATED_MACRO_IN_2_76
+      |                              ^
+./glib/glib-visibility.h:889:39: note: expanded from macro 'GLIB_DEPRECATED_MACRO_IN_2_76'
+  889 | #define GLIB_DEPRECATED_MACRO_IN_2_76 GLIB_DEPRECATED_MACRO
+      |                                       ^
+../glib-src/glib/gmacros.h:1302:31: note: expanded from macro 'GLIB_DEPRECATED_MACRO'
+ 1302 | #define GLIB_DEPRECATED_MACRO _GLIB_GNUC_DO_PRAGMA(GCC warning "Deprecated pre-processor symbol")
+      |                               ^
+../glib-src/glib/gmacros.h:1301:33: note: expanded from macro '_GLIB_GNUC_DO_PRAGMA'
+ 1301 | #define _GLIB_GNUC_DO_PRAGMA(x) _Pragma(G_STRINGIFY (x))
+      |                                 ^
+<scratch space>:31:6: note: expanded from here
+   31 |  GCC warning "Deprecated pre-processor symbol"
+      |      ^
+1 warning generated.
+[171/659] Compiling C object gmodule/libgmodule-2.0.a.p/gmodule-deprecated.c.o
+[172/659] Compiling C object gio/xdgmime/libxdgmime.a.p/xdgmimealias.c.o
+[173/659] Compiling C object gio/xdgmime/libxdgmime.a.p/xdgmime.c.o
+[174/659] Compiling C object gio/xdgmime/libxdgmime.a.p/xdgmimeglob.c.o
+[175/659] Compiling C object gobject/libgobject-2.0.a.p/gsignal.c.o
+[176/659] Compiling C object gobject/libgobject-2.0.a.p/gobject.c.o
+[177/659] Compiling C object gio/xdgmime/libxdgmime.a.p/xdgmimeicon.c.o
+[178/659] Compiling C object gio/xdgmime/libxdgmime.a.p/xdgmimeint.c.o
+[179/659] Compiling C object gio/xdgmime/libxdgmime.a.p/xdgmimeparent.c.o
+[180/659] Compiling C object gio/xdgmime/libxdgmime.a.p/xdgmimemagic.c.o
+[181/659] Compiling C object gio/xdgmime/libxdgmime.a.p/xdgmimecache.c.o
+[182/659] Compiling C object gio/kqueue/libkqueue.a.p/kqueue-helper.c.o
+[183/659] Compiling C object gio/kqueue/libkqueue.a.p/gkqueuefilemonitor.c.o
+[184/659] Compiling C object gio/kqueue/libkqueue.a.p/kqueue-missing.c.o
+[185/659] Compiling C object gio/kqueue/libkqueue.a.p/dep-list.c.o
+[186/659] Compiling C object gobject/libgobject-2.0.a.p/gtype.c.o
+[187/659] Compiling C object gio/libgio-2.0.a.p/meson-generated_.._gioenumtypes.c.o
+[188/659] Compiling C object gio/libgio-2.0.a.p/gasynchelper.c.o
+[189/659] Compiling C object gio/libgio-2.0.a.p/meson-generated_.._gdbus-daemon-generated.c.o
+[190/659] Compiling C object gio/libgio-2.0.a.p/gasyncinitable.c.o
+[191/659] Compiling C object gio/libgio-2.0.a.p/gasyncresult.c.o
+[192/659] Compiling C object gio/libgio-2.0.a.p/gbytesicon.c.o
+[193/659] Compiling C object gio/libgio-2.0.a.p/gbufferedinputstream.c.o
+[194/659] Compiling C object gio/libgio-2.0.a.p/gbufferedoutputstream.c.o
+[195/659] Compiling C object gio/libgio-2.0.a.p/gcharsetconverter.c.o
+[196/659] Compiling C object gio/libgio-2.0.a.p/gappinfo.c.o
+[197/659] Compiling C object gio/libgio-2.0.a.p/gcontenttype.c.o
+[198/659] Compiling C object gio/libgio-2.0.a.p/gcancellable.c.o
+[199/659] Compiling C object gio/libgio-2.0.a.p/gconverter.c.o
+[200/659] Compiling C object gio/libgio-2.0.a.p/gcontextspecificgroup.c.o
+[201/659] Compiling C object gio/libgio-2.0.a.p/gconverterinputstream.c.o
+[202/659] Compiling C object gio/libgio-2.0.a.p/gcredentials.c.o
+[203/659] Compiling C object gio/libgio-2.0.a.p/gconverteroutputstream.c.o
+[204/659] Compiling C object gio/libgio-2.0.a.p/gdebugcontroller.c.o
+[205/659] Compiling C object gio/libgio-2.0.a.p/gdataoutputstream.c.o
+[206/659] Compiling C object gio/libgio-2.0.a.p/gdatagrambased.c.o
+[207/659] Compiling C object gio/libgio-2.0.a.p/gdatainputstream.c.o
+[208/659] Compiling C object gio/libgio-2.0.a.p/gdrive.c.o
+[209/659] Compiling C object gio/libgio-2.0.a.p/gdebugcontrollerdbus.c.o
+[210/659] Compiling C object gio/libgio-2.0.a.p/gdummyproxyresolver.c.o
+[211/659] Compiling C object gio/libgio-2.0.a.p/gdummytlsbackend.c.o
+[212/659] Compiling C object gio/libgio-2.0.a.p/gemblem.c.o
+[213/659] Compiling C object gio/libgio-2.0.a.p/gdummyfile.c.o
+[214/659] Compiling C object gio/libgio-2.0.a.p/gemblemedicon.c.o
+[215/659] Compiling C object gio/libgio-2.0.a.p/gfileicon.c.o
+[216/659] Compiling C object gio/libgio-2.0.a.p/meson-generated_.._xdp-dbus.c.o
+[217/659] Compiling C object gio/libgio-2.0.a.p/gfileattribute.c.o
+[218/659] Compiling C object gio/libgio-2.0.a.p/gfileinputstream.c.o
+[219/659] Compiling C object gio/libgio-2.0.a.p/gfilemonitor.c.o
+[220/659] Compiling C object gio/libgio-2.0.a.p/gfileenumerator.c.o
+[221/659] Compiling C object gio/libgio-2.0.a.p/gfilenamecompleter.c.o
+[222/659] Compiling C object gio/libgio-2.0.a.p/gfileoutputstream.c.o
+[223/659] Compiling C object gio/libgio-2.0.a.p/gfileiostream.c.o
+[224/659] Compiling C object gio/libgio-2.0.a.p/gfilterinputstream.c.o
+[225/659] Compiling C object gio/libgio-2.0.a.p/gfilteroutputstream.c.o
+[226/659] Compiling C object gio/libgio-2.0.a.p/gicon.c.o
+[227/659] Compiling C object gio/libgio-2.0.a.p/ginetaddress.c.o
+[228/659] Compiling C object gio/libgio-2.0.a.p/ginetaddressmask.c.o
+[229/659] Compiling C object gio/libgio-2.0.a.p/ginitable.c.o
+[230/659] Compiling C object gio/libgio-2.0.a.p/ginetsocketaddress.c.o
+[231/659] Compiling C object gio/libgio-2.0.a.p/gioerror.c.o
+[232/659] Compiling C object gio/libgio-2.0.a.p/giomodule-priv.c.o
+[233/659] Compiling C object gio/libgio-2.0.a.p/gioscheduler.c.o
+[234/659] Compiling C object gio/libgio-2.0.a.p/giostream.c.o
+[235/659] Compiling C object gio/libgio-2.0.a.p/ginputstream.c.o
+[236/659] Compiling C object gio/libgio-2.0.a.p/gloadableicon.c.o
+[237/659] Compiling C object gio/libgio-2.0.a.p/giomodule.c.o
+[238/659] Compiling C object gio/libgio-2.0.a.p/gmemorymonitor.c.o
+[239/659] Compiling C object gio/libgio-2.0.a.p/gfileinfo.c.o
+[240/659] Compiling C object gio/libgio-2.0.a.p/gmount.c.o
+[241/659] Compiling C object gio/libgio-2.0.a.p/gmemorymonitordbus.c.o
+[242/659] Compiling C object gio/libgio-2.0.a.p/gmarshal-internal.c.o
+[243/659] Compiling C object gio/libgio-2.0.a.p/gmountoperation.c.o
+[244/659] Compiling C object gio/libgio-2.0.a.p/gnativesocketaddress.c.o
+[245/659] Compiling C object gio/libgio-2.0.a.p/gmemoryinputstream.c.o
+[246/659] Compiling C object gio/libgio-2.0.a.p/gnativevolumemonitor.c.o
+[247/659] Compiling C object gio/libgio-2.0.a.p/gnetworking.c.o
+[248/659] Compiling C object gio/libgio-2.0.a.p/gnetworkmonitor.c.o
+[249/659] Compiling C object gio/libgio-2.0.a.p/gmemoryoutputstream.c.o
+[250/659] Compiling C object gio/libgio-2.0.a.p/gfile.c.o
+[251/659] Compiling C object gio/libgio-2.0.a.p/gnetworkmonitorbase.c.o
+[252/659] Compiling C object gio/libgio-2.0.a.p/gnetworkaddress.c.o
+[253/659] Compiling C object gio/libgio-2.0.a.p/gpermission.c.o
+[254/659] Compiling C object gio/libgio-2.0.a.p/gnetworkservice.c.o
+[255/659] Compiling C object gio/libgio-2.0.a.p/gpollableinputstream.c.o
+[256/659] Compiling C object gio/libgio-2.0.a.p/gpollableutils.c.o
+[257/659] Compiling C object gio/libgio-2.0.a.p/gpollfilemonitor.c.o
+[258/659] Compiling C object gio/libgio-2.0.a.p/gpollableoutputstream.c.o
+[259/659] Compiling C object gio/libgio-2.0.a.p/gpowerprofilemonitor.c.o
+[260/659] Compiling C object gio/libgio-2.0.a.p/gproxy.c.o
+[261/659] Compiling C object gio/libgio-2.0.a.p/gproxyaddress.c.o
+[262/659] Compiling C object gio/libgio-2.0.a.p/gpowerprofilemonitordbus.c.o
+[263/659] Compiling C object gio/libgio-2.0.a.p/gproxyresolver.c.o
+[264/659] Compiling C object gio/libgio-2.0.a.p/gproxyaddressenumerator.c.o
+[265/659] Compiling C object gio/libgio-2.0.a.p/gseekable.c.o
+[266/659] Compiling C object gio/libgio-2.0.a.p/gresource.c.o
+[267/659] Compiling C object gio/libgio-2.0.a.p/goutputstream.c.o
+[268/659] Compiling C object gio/libgio-2.0.a.p/gsimpleiostream.c.o
+[269/659] Compiling C object gio/libgio-2.0.a.p/gsimplepermission.c.o
+[270/659] Compiling C object gio/libgio-2.0.a.p/gsimpleasyncresult.c.o
+[271/659] Compiling C object gio/libgio-2.0.a.p/gresourcefile.c.o
+[272/659] Compiling C object gio/libgio-2.0.a.p/gresolver.c.o
+[273/659] Compiling C object gio/libgio-2.0.a.p/gsimpleproxyresolver.c.o
+[274/659] Compiling C object gio/libgio-2.0.a.p/gsocketaddressenumerator.c.o
+[275/659] Compiling C object gio/libgio-2.0.a.p/gsocketaddress.c.o
+[276/659] Compiling C object gio/libgio-2.0.a.p/gsocketconnectable.c.o
+[277/659] Compiling C object gio/libgio-2.0.a.p/gsocketclient.c.o
+[278/659] Compiling C object gio/libgio-2.0.a.p/gsocketcontrolmessage.c.o
+[279/659] Compiling C object gio/libgio-2.0.a.p/gsocketinputstream.c.o
+[280/659] Compiling C object gio/libgio-2.0.a.p/gsocketconnection.c.o
+[281/659] Compiling C object gio/libgio-2.0.a.p/gsrvtarget.c.o
+[282/659] Compiling C object gio/libgio-2.0.a.p/gsocketoutputstream.c.o
+[283/659] Compiling C object gio/libgio-2.0.a.p/gsocketlistener.c.o
+[284/659] Compiling C object gio/libgio-2.0.a.p/gsocketservice.c.o
+[285/659] Compiling C object gio/libgio-2.0.a.p/gsubprocesslauncher.c.o
+[286/659] Compiling C object gio/libgio-2.0.a.p/gtcpconnection.c.o
+[287/659] Compiling C object gio/libgio-2.0.a.p/gtcpwrapperconnection.c.o
+[288/659] Compiling C object gio/libgio-2.0.a.p/gsocket.c.o
+[289/659] Compiling C object gio/libgio-2.0.a.p/gthreadedsocketservice.c.o
+[290/659] Compiling C object gio/libgio-2.0.a.p/gthemedicon.c.o
+[291/659] Compiling C object gio/libgio-2.0.a.p/gtlsbackend.c.o
+[292/659] Compiling C object gio/libgio-2.0.a.p/gtask.c.o
+[293/659] Compiling C object gio/libgio-2.0.a.p/gtlscertificate.c.o
+[294/659] Compiling C object gio/libgio-2.0.a.p/gtlsclientconnection.c.o
+[295/659] Compiling C object gio/libgio-2.0.a.p/gsubprocess.c.o
+[296/659] Compiling C object gio/libgio-2.0.a.p/gtlsfiledatabase.c.o
+[297/659] Compiling C object gio/libgio-2.0.a.p/gtlsconnection.c.o
+[298/659] Compiling C object gio/libgio-2.0.a.p/gtlsinteraction.c.o
+[299/659] Compiling C object gio/libgio-2.0.a.p/gtlspassword.c.o
+[300/659] Compiling C object gio/libgio-2.0.a.p/gtlsdatabase.c.o
+[301/659] Compiling C object gio/libgio-2.0.a.p/gtlsserverconnection.c.o
+[302/659] Compiling C object gio/libgio-2.0.a.p/gthreadedresolver.c.o
+[303/659] Compiling C object gio/libgio-2.0.a.p/gdtlsserverconnection.c.o
+[304/659] Compiling C object gio/libgio-2.0.a.p/gdtlsclientconnection.c.o
+[305/659] Compiling C object gio/libgio-2.0.a.p/gunionvolumemonitor.c.o
+[306/659] Compiling C object gio/libgio-2.0.a.p/gdtlsconnection.c.o
+[307/659] Compiling C object gio/libgio-2.0.a.p/gunixconnection.c.o
+[308/659] Compiling C object gio/libgio-2.0.a.p/gunixcredentialsmessage.c.o
+[309/659] Compiling C object gio/libgio-2.0.a.p/gunixsocketaddress.c.o
+[310/659] Compiling C object gio/libgio-2.0.a.p/gvfs.c.o
+[311/659] Compiling C object gio/libgio-2.0.a.p/gvolumemonitor.c.o
+[312/659] Compiling C object gio/libgio-2.0.a.p/gunixfdlist.c.o
+[313/659] Compiling C object gio/libgio-2.0.a.p/gzlibcompressor.c.o
+[314/659] Compiling C object gio/libgio-2.0.a.p/glistmodel.c.o
+[315/659] Compiling C object gio/libgio-2.0.a.p/gzlibdecompressor.c.o
+[316/659] Compiling C object gio/libgio-2.0.a.p/gvolume.c.o
+[317/659] Compiling C object gio/libgio-2.0.a.p/gliststore.c.o
+[318/659] Compiling C object gio/libgio-2.0.a.p/gfiledescriptorbased.c.o
+[319/659] Compiling C object gio/libgio-2.0.a.p/giounix-private.c.o
+[320/659] Compiling C object gio/libgio-2.0.a.p/gcontenttype-fdo.c.o
+[321/659] Compiling C object gio/libgio-2.0.a.p/gunixfdmessage.c.o
+[322/659] Compiling C object gio/libgio-2.0.a.p/gunixmount.c.o
+[323/659] Compiling C object gio/libgio-2.0.a.p/gunixvolume.c.o
+[324/659] Compiling C object gio/libgio-2.0.a.p/gunixvolumemonitor.c.o
+[325/659] Compiling C object gio/libgio-2.0.a.p/gdbusdaemon.c.o
+[326/659] Compiling C object gio/libgio-2.0.a.p/gunixinputstream.c.o
+[327/659] Compiling C object gio/libgio-2.0.a.p/ggtknotificationbackend.c.o
+[328/659] Compiling C object gio/libgio-2.0.a.p/gfdonotificationbackend.c.o
+[329/659] Compiling C object gio/libgio-2.0.a.p/gunixoutputstream.c.o
+[330/659] Compiling C object gio/libgio-2.0.a.p/gunixmounts.c.o
+[331/659] Compiling C object gio/libgio-2.0.a.p/gactiongroup.c.o
+[332/659] Compiling C object gio/libgio-2.0.a.p/gapplicationcommandline.c.o
+[333/659] Compiling C object gio/libgio-2.0.a.p/gactionmap.c.o
+[334/659] Compiling C object gio/libgio-2.0.a.p/gsimpleactiongroup.c.o
+[335/659] Compiling C object gio/libgio-2.0.a.p/gapplicationimpl-dbus.c.o
+[336/659] Compiling C object gio/libgio-2.0.a.p/gremoteactiongroup.c.o
+[337/659] Compiling C object gio/libgio-2.0.a.p/gactiongroupexporter.c.o
+[338/659] Compiling C object gio/libgio-2.0.a.p/gdbusactiongroup.c.o
+[339/659] Compiling C object gio/libgio-2.0.a.p/gaction.c.o
+[340/659] Compiling C object gio/libgio-2.0.a.p/gsimpleaction.c.o
+[341/659] Compiling C object gio/libgio-2.0.a.p/gpropertyaction.c.o
+[342/659] Compiling C object gio/libgio-2.0.a.p/gapplication.c.o
+[343/659] Compiling C object gio/libgio-2.0.a.p/gmenumodel.c.o
+[344/659] Compiling C object gio/libgio-2.0.a.p/gdbusmenumodel.c.o
+[345/659] Compiling C object gio/libgio-2.0.a.p/gmenuexporter.c.o
+[346/659] Compiling C object gio/libgio-2.0.a.p/gnotificationbackend.c.o
+[347/659] Compiling C object gio/libgio-2.0.a.p/gmenu.c.o
+[348/659] Compiling C object gio/libgio-2.0.a.p/gdelayedsettingsbackend.c.o
+[349/659] Compiling C object gio/libgio-2.0.a.p/gnotification.c.o
+[350/659] Compiling C object gio/libgio-2.0.a.p/gmemorysettingsbackend.c.o
+[351/659] Compiling C object gio/libgio-2.0.a.p/gnullsettingsbackend.c.o
+[352/659] Compiling C object gio/libgio-2.0.a.p/gsettingsbackend.c.o
+[353/659] Compiling C object gio/libgio-2.0.a.p/gkeyfilesettingsbackend.c.o
+[354/659] Compiling C object gio/libgio-2.0.a.p/gsettings-mapping.c.o
+[355/659] Compiling C object gio/libgio-2.0.a.p/gdbusutils.c.o
+[356/659] Compiling C object gio/libgio-2.0.a.p/gdbusauthobserver.c.o
+[357/659] Compiling C object gio/libgio-2.0.a.p/gsettingsschema.c.o
+[358/659] Compiling C object gio/libgio-2.0.a.p/gdesktopappinfo.c.o
+[359/659] Compiling C object gio/libgio-2.0.a.p/gdbusaddress.c.o
+[360/659] Compiling C object gio/libgio-2.0.a.p/gdbusauthmechanism.c.o
+[361/659] Compiling C object gio/libgio-2.0.a.p/gdbusauthmechanismanon.c.o
+[362/659] Compiling C object gio/libgio-2.0.a.p/gdbusauthmechanismexternal.c.o
+[363/659] Compiling C object gio/libgio-2.0.a.p/gsettings.c.o
+[364/659] Compiling C object gio/libgio-2.0.a.p/gdbuserror.c.o
+[365/659] Compiling C object gio/libgio-2.0.a.p/gdbusauthmechanismsha1.c.o
+[366/659] Compiling C object gio/libgio-2.0.a.p/gdbusnameowning.c.o
+[367/659] Compiling C object gio/libgio-2.0.a.p/gdbusauth.c.o
+[368/659] Compiling C object gio/libgio-2.0.a.p/gdbusnamewatching.c.o
+[369/659] Compiling C object gio/libgio-2.0.a.p/gdbusintrospection.c.o
+[370/659] Compiling C object gio/libgio-2.0.a.p/gdbusproxy.c.o
+[371/659] Compiling C object gio/libgio-2.0.a.p/gdbusprivate.c.o
+[372/659] Compiling C object gio/libgio-2.0.a.p/gdbusinterface.c.o
+[373/659] Compiling C object gio/libgio-2.0.a.p/gdbusmessage.c.o
+[374/659] Compiling C object gio/libgio-2.0.a.p/gdbusobject.c.o
+[375/659] Compiling C object gio/libgio-2.0.a.p/gdbusinterfaceskeleton.c.o
+[376/659] Compiling C object gio/libgio-2.0.a.p/gdbusmethodinvocation.c.o
+[377/659] Compiling C object gio/libgio-2.0.a.p/gdbusobjectskeleton.c.o
+[378/659] Compiling C object gio/libgio-2.0.a.p/gdbusobjectmanager.c.o
+[379/659] Compiling C object gio/libgio-2.0.a.p/gdbusobjectproxy.c.o
+[380/659] Compiling C object gio/libgio-2.0.a.p/gdbusserver.c.o
+[381/659] Compiling C object gio/libgio-2.0.a.p/gtestdbus.c.o
+[382/659] Compiling C object gio/libgio-2.0.a.p/gdbusobjectmanagerserver.c.o
+[383/659] Compiling C object gio/libgio-2.0.a.p/gdocumentportal.c.o
+[384/659] Compiling C object gio/libgio-2.0.a.p/gdbusobjectmanagerclient.c.o
+[385/659] Compiling C object gio/libgio-2.0.a.p/gopenuriportal.c.o
+[386/659] Compiling C object gio/libgio-2.0.a.p/gmemorymonitorportal.c.o
+[387/659] Compiling C object gio/libgio-2.0.a.p/gpowerprofilemonitorportal.c.o
+[388/659] Compiling C object gio/libgio-2.0.a.p/gdbusconnection.c.o
+[389/659] Compiling C object gio/libgio-2.0.a.p/gtrashportal.c.o
+[390/659] Compiling C object gio/libgio-2.0.a.p/gnetworkmonitorportal.c.o
+[391/659] Compiling C object gio/libgio-2.0.a.p/gportalnotificationbackend.c.o
+[392/659] Compiling C object gio/libgio-2.0.a.p/gproxyresolverportal.c.o
+[393/659] Compiling C object gio/libgio-2.0.a.p/ghttpproxy.c.o
+[394/659] Compiling C object gio/libgio-2.0.a.p/gportalsupport.c.o
+[395/659] Compiling C object gio/libgio-2.0.a.p/gsandbox.c.o
+[396/659] Compiling C object gio/libgio-2.0.a.p/glocalfileenumerator.c.o
+[397/659] Compiling C object gio/libgio-2.0.a.p/glocalfileinputstream.c.o
+[398/659] Compiling C object gio/libgio-2.0.a.p/glocalfileinfo.c.o
+[399/659] Compiling C object gio/libgio-2.0.a.p/glocalfilemonitor.c.o
+[400/659] Compiling C object gio/libgio-2.0.a.p/glocalfileiostream.c.o
+[401/659] Compiling C object gio/libgio-2.0.a.p/gsocks4proxy.c.o
+[402/659] Compiling C object gio/libgio-2.0.a.p/glocalvfs.c.o
+[403/659] Compiling C object gio/libgio-2.0.a.p/gsocks4aproxy.c.o
+[404/659] Compiling C object gio/libgio-2.0.a.p/glocalfileoutputstream.c.o
+[405/659] Compiling C object gio/libgio-2.0.a.p/thumbnail-verify.c.o
+[406/659] Compiling C object gio/libgio-2.0.a.p/glocalfile.c.o
+[407/659] Compiling C object gio/libgio-2.0.a.p/gsocks5proxy.c.o
+[408/659] Generating gio/gconstructor_as_data.h with a custom command
+[409/659] Compiling C object gio/libgio-2.0.a.p/.._subprojects_gvdb_gvdb_gvdb-reader.c.o
+[410/659] Compiling C object gio/libgio-2.0.a.p/.._subprojects_gvdb_gvdb_gvdb-builder.c.o
+[411/659] Compiling C object girepository/cmph/libcmph.a.p/bmz.c.o
+[412/659] Compiling C object girepository/cmph/libcmph.a.p/bdz_ph.c.o
+[413/659] Compiling C object girepository/cmph/libcmph.a.p/bmz8.c.o
+[414/659] Compiling C object girepository/cmph/libcmph.a.p/buffer_manager.c.o
+[415/659] Compiling C object girepository/cmph/libcmph.a.p/buffer_entry.c.o
+[416/659] Compiling C object girepository/cmph/libcmph.a.p/chd.c.o
+[417/659] Compiling C object girepository/cmph/libcmph.a.p/bdz.c.o
+[418/659] Compiling C object girepository/cmph/libcmph.a.p/chm.c.o
+[419/659] Compiling C object girepository/cmph/libcmph.a.p/cmph.c.o
+[420/659] Compiling C object girepository/cmph/libcmph.a.p/cmph_structs.c.o
+[421/659] Compiling C object girepository/cmph/libcmph.a.p/compressed_rank.c.o
+[422/659] Compiling C object girepository/cmph/libcmph.a.p/compressed_seq.c.o
+[423/659] Compiling C object girepository/cmph/libcmph.a.p/fch_buckets.c.o
+[424/659] Compiling C object girepository/cmph/libcmph.a.p/brz.c.o
+[425/659] Compiling C object girepository/cmph/libcmph.a.p/hash.c.o
+[426/659] Compiling C object girepository/cmph/libcmph.a.p/fch.c.o
+[427/659] Compiling C object girepository/cmph/libcmph.a.p/miller_rabin.c.o
+[428/659] Compiling C object girepository/cmph/libcmph.a.p/graph.c.o
+[429/659] Compiling C object girepository/cmph/libcmph.a.p/jenkins_hash.c.o
+[430/659] Compiling C object girepository/cmph/libcmph.a.p/vqueue.c.o
+[431/659] Compiling C object girepository/cmph/libcmph.a.p/vstack.c.o
+[432/659] Compiling C object girepository/cmph/libcmph.a.p/chd_ph.c.o
+[433/659] Compiling C object girepository/cmph/libcmph.a.p/select.c.o
+[434/659] Compiling C object girepository/libgirepository-gthash.a.p/gthash.c.o
+[435/659] Compiling C object girepository/libgirepository-internals.a.p/giroffsets.c.o
+[436/659] Compiling C object girepository/libgirepository-internals.a.p/girmodule.c.o
+[437/659] Compiling C object girepository/libgirepository-2.0.a.p/giarginfo.c.o
+[438/659] Compiling C object girepository/libgirepository-2.0.a.p/gdump.c.o
+[439/659] Compiling C object girepository/libgirepository-internals.a.p/girwriter.c.o
+[440/659] Compiling C object girepository/libgirepository-2.0.a.p/gicallbackinfo.c.o
+[441/659] Compiling C object girepository/libgirepository-2.0.a.p/gicallableinfo.c.o
+[442/659] Compiling C object girepository/libgirepository-2.0.a.p/gibaseinfo.c.o
+[443/659] Compiling C object girepository/libgirepository-2.0.a.p/giconstantinfo.c.o
+[444/659] Compiling C object girepository/libgirepository-2.0.a.p/gienuminfo.c.o
+[445/659] Compiling C object girepository/libgirepository-2.0.a.p/gifieldinfo.c.o
+[446/659] Compiling C object girepository/libgirepository-2.0.a.p/giflagsinfo.c.o
+[447/659] Compiling C object girepository/libgirepository-2.0.a.p/gifunctioninfo.c.o
+[448/659] Compiling C object girepository/libgirepository-2.0.a.p/ginvoke.c.o
+[449/659] Compiling C object girepository/libgirepository-2.0.a.p/giinterfaceinfo.c.o
+[450/659] Compiling C object girepository/libgirepository-internals.a.p/girnode.c.o
+[451/659] Compiling C object girepository/libgirepository-2.0.a.p/gipropertyinfo.c.o
+[452/659] Compiling C object girepository/libgirepository-2.0.a.p/giregisteredtypeinfo.c.o
+[453/659] Compiling C object girepository/libgirepository-2.0.a.p/girffi.c.o
+[454/659] Compiling C object girepository/libgirepository-2.0.a.p/gisignalinfo.c.o
+[455/659] Compiling C object girepository/libgirepository-2.0.a.p/giobjectinfo.c.o
+[456/659] Compiling C object girepository/libgirepository-2.0.a.p/gistructinfo.c.o
+[457/659] Compiling C object girepository/libgirepository-2.0.a.p/gitypeinfo.c.o
+[458/659] Compiling C object girepository/libgirepository-2.0.a.p/giunioninfo.c.o
+[459/659] Compiling C object girepository/libgirepository-2.0.a.p/giunresolvedinfo.c.o
+[460/659] Compiling C object girepository/libgirepository-2.0.a.p/givalueinfo.c.o
+[461/659] Compiling C object girepository/libgirepository-2.0.a.p/girepository.c.o
+[462/659] Compiling C object girepository/libgirepository-internals.a.p/girparser.c.o
+[463/659] Compiling C object girepository/libgirepository-2.0.a.p/givfuncinfo.c.o
+[464/659] Compiling C object subprojects/pcre2-10.42/libpcre2-posix.a.p/src_pcre2posix.c.o
+[465/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_config.c.o
+[466/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_auto_possess.c.o
+[467/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_context.c.o
+[468/659] Compiling C object girepository/libgirepository-2.0.a.p/gitypelib.c.o
+[469/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_error.c.o
+../glib-src/subprojects/pcre2-10.42/src/pcre2_error.c:66:3: warning: string literal of length 4381 exceeds maximum length 4095 that ISO C99 compilers are required to support [-Woverlength-strings]
+   66 |   "no error\0"
+      |   ^~~~~~~~~~~~
+   67 |   "\\ at end of pattern\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |   "\\c at end of pattern\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |   "unrecognized character follows \\\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70 |   "numbers out of order in {} quantifier\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   71 |   /* 5 */
+      |   ~~~~~~~
+   72 |   "number too big in {} quantifier\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   73 |   "missing terminating ] for character class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   74 |   "escape sequence is invalid in character class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   75 |   "range out of order in character class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   76 |   "quantifier does not follow a repeatable item\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   77 |   /* 10 */
+      |   ~~~~~~~~
+   78 |   "internal error: unexpected repeat\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   79 |   "unrecognized character after (? or (?-\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   80 |   "POSIX named classes are supported only within a class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   81 |   "POSIX collating elements are not supported\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[470/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_extuni.c.o
+[471/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_find_bracket.c.o
+[472/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_jit_compile.c.o
+[473/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_convert.c.o
+[474/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_maketables.c.o
+[475/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_match_data.c.o
+[476/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_newline.c.o
+[477/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_ord2utf.c.o
+[478/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_pattern_info.c.o
+[479/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_script_run.c.o
+[480/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_serialize.c.o
+[481/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_string_utils.c.o
+[482/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_study.c.o
+[483/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_substitute.c.o
+[484/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_substring.c.o
+[485/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_tables.c.o
+[486/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_dfa_match.c.o
+[487/659] Linking static target subprojects/pcre2-10.42/libpcre2-8.a
+[488/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_valid_utf.c.o
+[489/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_ucd.c.o
+[490/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/meson-generated_.._pcre2_chartables.c.o
+[491/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_xclass.c.o
+[492/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_config.c.o
+[493/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_context.c.o
+[494/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_auto_possess.c.o
+[495/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_convert.c.o
+[496/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_error.c.o
+../glib-src/subprojects/pcre2-10.42/src/pcre2_error.c:66:3: warning: string literal of length 4381 exceeds maximum length 4095 that ISO C99 compilers are required to support [-Woverlength-strings]
+   66 |   "no error\0"
+      |   ^~~~~~~~~~~~
+   67 |   "\\ at end of pattern\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |   "\\c at end of pattern\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |   "unrecognized character follows \\\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70 |   "numbers out of order in {} quantifier\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   71 |   /* 5 */
+      |   ~~~~~~~
+   72 |   "number too big in {} quantifier\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   73 |   "missing terminating ] for character class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   74 |   "escape sequence is invalid in character class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   75 |   "range out of order in character class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   76 |   "quantifier does not follow a repeatable item\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   77 |   /* 10 */
+      |   ~~~~~~~~
+   78 |   "internal error: unexpected repeat\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   79 |   "unrecognized character after (? or (?-\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   80 |   "POSIX named classes are supported only within a class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   81 |   "POSIX collating elements are not supported\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[497/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_extuni.c.o
+[498/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_compile.c.o
+[499/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_find_bracket.c.o
+[500/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_jit_compile.c.o
+[501/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_maketables.c.o
+[502/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_match_data.c.o
+[503/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_newline.c.o
+[504/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_ord2utf.c.o
+[505/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_pattern_info.c.o
+[506/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_script_run.c.o
+[507/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_serialize.c.o
+[508/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_string_utils.c.o
+[509/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_study.c.o
+[510/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_substitute.c.o
+[511/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_substring.c.o
+[512/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_dfa_match.c.o
+[513/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_tables.c.o
+[514/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_valid_utf.c.o
+[515/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_ucd.c.o
+[516/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_xclass.c.o
+[517/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/meson-generated_.._pcre2_chartables.c.o
+[518/659] Linking static target subprojects/libffi/src/libffi.a
+[519/659] Linking static target subprojects/proxy-libintl/libintl.a
+[520/659] Linking static target glib/libglib-2.0.a
+[521/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_compile.c.o
+[522/659] Compiling C object glib/gtester.p/gtester.c.o
+[523/659] Compiling C object subprojects/pcre2-10.42/pcre2grep.p/src_pcre2grep.c.o
+[524/659] Linking static target gobject/libgobject-2.0.a
+[525/659] Linking static target gmodule/libgmodule-2.0.a
+[526/659] Compiling C object gthread/libgthread-2.0.a.p/gthread-impl.c.o
+[527/659] Compiling C object gobject/gobject-query.p/gobject-query.c.o
+[528/659] Compiling C object gio/gio-launch-desktop.p/gio-launch-desktop.c.o
+[529/659] Compiling C object gio/gio.p/gio-tool.c.o
+[530/659] Compiling C object gio/gio.p/gio-tool-cat.c.o
+[531/659] Compiling C object subprojects/pcre2-10.42/libpcre2-16.a.p/src_pcre2_match.c.o
+[532/659] Linking static target gio/libgio-2.0.a
+[533/659] Compiling C object gio/gio.p/gio-tool-launch.c.o
+[534/659] Compiling C object gio/gio.p/gio-tool-copy.c.o
+[535/659] Compiling C object gio/gio.p/gio-tool-info.c.o
+[536/659] Compiling C object gio/gio.p/gio-tool-list.c.o
+[537/659] Compiling C object gio/gio.p/gio-tool-mime.c.o
+[538/659] Compiling C object gio/gio.p/gio-tool-mkdir.c.o
+[539/659] Compiling C object gio/gio.p/gio-tool-monitor.c.o
+[540/659] Compiling C object gio/gio.p/gio-tool-move.c.o
+[541/659] Compiling C object gio/gio.p/gio-tool-open.c.o
+[542/659] Compiling C object gio/gio.p/gio-tool-rename.c.o
+[543/659] Compiling C object gio/gio.p/gio-tool-remove.c.o
+[544/659] Compiling C object gio/gio.p/gio-tool-save.c.o
+[545/659] Compiling C object gio/gio.p/gio-tool-set.c.o
+[546/659] Compiling C object gio/gio.p/gio-tool-mount.c.o
+[547/659] Compiling C object gio/gio.p/gio-tool-trash.c.o
+[548/659] Compiling C object gio/gio-querymodules.p/giomodule-priv.c.o
+[549/659] Compiling C object gio/gio.p/gio-tool-tree.c.o
+[550/659] Compiling C object gio/gio-querymodules.p/gio-querymodules.c.o
+[551/659] Compiling C object gio/gresource.p/gresource-tool.c.o
+[552/659] Compiling C object gio/glib-compile-schemas.p/.._subprojects_gvdb_gvdb_gvdb-reader.c.o
+[553/659] Compiling C object gio/glib-compile-schemas.p/.._subprojects_gvdb_gvdb_gvdb-builder.c.o
+[554/659] Compiling C object gio/glib-compile-resources.p/.._subprojects_gvdb_gvdb_gvdb-reader.c.o
+[555/659] Compiling C object gio/glib-compile-resources.p/.._subprojects_gvdb_gvdb_gvdb-builder.c.o
+[556/659] Compiling C object gio/glib-compile-resources.p/glib-compile-resources.c.o
+[557/659] Compiling C object gio/gsettings.p/gsettings-tool.c.o
+[558/659] Compiling C object gio/glib-compile-schemas.p/glib-compile-schemas.c.o
+[559/659] Compiling C object gio/gapplication.p/gapplication-tool.c.o
+[560/659] Compiling C object subprojects/pcre2-10.42/libpcre2-32.a.p/src_pcre2_match.c.o
+[561/659] Linking static target girepository/libgirepository-gthash.a
+[562/659] Linking static target girepository/libgirepository-internals.a
+[563/659] Linking static target girepository/cmph/libcmph.a
+[564/659] Compiling C object gio/gdbus.p/gdbus-tool.c.o
+[565/659] Compiling C object girepository/gi-dump-types.p/gi-dump-types.c.o
+[566/659] Compiling C object girepository/decompiler/gi-decompile-typelib.p/decompiler.c.o
+[567/659] Compiling C object girepository/inspector/gi-inspect-typelib.p/inspector.c.o
+[568/659] Linking static target girepository/libgirepository-2.0.a
+[569/659] Compiling C object fuzzing/fuzz_bookmark.p/driver.c.o
+[570/659] Compiling C object fuzzing/fuzz_canonicalize_filename.p/driver.c.o
+[571/659] Compiling C object girepository/compiler/gi-compile-repository.p/compiler.c.o
+[572/659] Compiling C object fuzzing/fuzz_date_parse.p/driver.c.o
+[573/659] Compiling C object fuzzing/fuzz_date_time_new_from_iso8601.p/driver.c.o
+[574/659] Compiling C object fuzzing/fuzz_dbus_message.p/driver.c.o
+[575/659] Compiling C object fuzzing/fuzz_date_time_new_from_iso8601.p/fuzz_date_time_new_from_iso8601.c.o
+[576/659] Compiling C object fuzzing/fuzz_bookmark.p/fuzz_bookmark.c.o
+[577/659] Compiling C object fuzzing/fuzz_canonicalize_filename.p/fuzz_canonicalize_filename.c.o
+[578/659] Compiling C object fuzzing/fuzz_inet_address_mask_new_from_string.p/driver.c.o
+[579/659] Compiling C object fuzzing/fuzz_dbus_message.p/fuzz_dbus_message.c.o
+[580/659] Compiling C object fuzzing/fuzz_inet_address_new_from_string.p/driver.c.o
+[581/659] Compiling C object fuzzing/fuzz_date_parse.p/fuzz_date_parse.c.o
+[582/659] Compiling C object fuzzing/fuzz_inet_socket_address_new_from_string.p/driver.c.o
+[583/659] Compiling C object fuzzing/fuzz_inet_address_mask_new_from_string.p/fuzz_inet_address_mask_new_from_string.c.o
+[584/659] Compiling C object fuzzing/fuzz_inet_address_new_from_string.p/fuzz_inet_address_new_from_string.c.o
+[585/659] Compiling C object fuzzing/fuzz_key.p/driver.c.o
+[586/659] Compiling C object fuzzing/fuzz_network_address_parse.p/driver.c.o
+[587/659] Compiling C object fuzzing/fuzz_network_address_parse_uri.p/driver.c.o
+[588/659] Compiling C object fuzzing/fuzz_paths.p/driver.c.o
+[589/659] Compiling C object fuzzing/fuzz_inet_socket_address_new_from_string.p/fuzz_inet_socket_address_new_from_string.c.o
+[590/659] Compiling C object fuzzing/fuzz_key.p/fuzz_key.c.o
+[591/659] Compiling C object fuzzing/fuzz_network_address_parse.p/fuzz_network_address_parse.c.o
+[592/659] Compiling C object fuzzing/fuzz_resolver.p/driver.c.o
+[593/659] Compiling C object fuzzing/fuzz_uri_escape.p/driver.c.o
+[594/659] Compiling C object fuzzing/fuzz_paths.p/fuzz_paths.c.o
+[595/659] Compiling C object fuzzing/fuzz_uri_parse.p/driver.c.o
+[596/659] Compiling C object fuzzing/fuzz_resolver.p/fuzz_resolver.c.o
+[597/659] Compiling C object fuzzing/fuzz_uri_parse_params.p/driver.c.o
+[598/659] Compiling C object fuzzing/fuzz_utf8_normalize.p/driver.c.o
+[599/659] Compiling C object fuzzing/fuzz_network_address_parse_uri.p/fuzz_network_address_parse_uri.c.o
+[600/659] Compiling C object fuzzing/fuzz_utf8_validate.p/driver.c.o
+[601/659] Compiling C object fuzzing/fuzz_uri_escape.p/fuzz_uri_escape.c.o
+[602/659] Compiling C object fuzzing/fuzz_uri_parse.p/fuzz_uri_parse.c.o
+[603/659] Compiling C object fuzzing/fuzz_uri_parse_params.p/fuzz_uri_parse_params.c.o
+[604/659] Compiling C object fuzzing/fuzz_uuid_string_is_valid.p/driver.c.o
+[605/659] Compiling C object fuzzing/fuzz_variant_binary.p/driver.c.o
+[606/659] Compiling C object fuzzing/fuzz_variant_binary_byteswap.p/driver.c.o
+[607/659] Compiling C object fuzzing/fuzz_utf8_normalize.p/fuzz_utf8_normalize.c.o
+[608/659] Compiling C object fuzzing/fuzz_variant_text.p/driver.c.o
+[609/659] Compiling C object fuzzing/fuzz_variant_binary.p/fuzz_variant_binary.c.o
+[610/659] Compiling C object fuzzing/fuzz_uuid_string_is_valid.p/fuzz_uuid_string_is_valid.c.o
+[611/659] Linking static target subprojects/pcre2-10.42/libpcre2-posix.a
+[612/659] Compiling C object fuzzing/fuzz_variant_binary_byteswap.p/fuzz_variant_binary_byteswap.c.o
+[613/659] Compiling C object fuzzing/fuzz_utf8_validate.p/fuzz_utf8_validate.c.o
+[614/659] Linking static target glib/libcharset/libcharset.a
+[615/659] Compiling C object fuzzing/fuzz_variant_text.p/fuzz_variant_text.c.o
+[616/659] Linking static target subprojects/pcre2-10.42/libpcre2-16.a
+[617/659] Linking target subprojects/pcre2-10.42/pcre2grep
+[618/659] Linking static target subprojects/pcre2-10.42/libpcre2-32.a
+[619/659] Linking static target gthread/libgthread-2.0.a
+[620/659] Linking target gio/gio-launch-desktop
+[621/659] Linking target glib/gtester
+[622/659] Linking target gobject/gobject-query
+[623/659] Linking static target gio/xdgmime/libxdgmime.a
+[624/659] Linking static target gio/kqueue/libkqueue.a
+[625/659] Linking target gio/gio-querymodules
+[626/659] Linking target gio/gresource
+[627/659] Linking target gio/gio
+[628/659] Linking target gio/glib-compile-resources
+[629/659] Linking target gio/glib-compile-schemas
+[630/659] Linking target girepository/gi-dump-types
+[631/659] Linking target girepository/compiler/gi-compile-repository
+[632/659] Linking target gio/gdbus
+[633/659] Linking target gio/gsettings
+[634/659] Linking target fuzzing/fuzz_canonicalize_filename
+[635/659] Linking target girepository/inspector/gi-inspect-typelib
+[636/659] Linking target gio/gapplication
+[637/659] Linking target fuzzing/fuzz_bookmark
+[638/659] Linking target girepository/decompiler/gi-decompile-typelib
+[639/659] Linking target fuzzing/fuzz_date_parse
+[640/659] Linking target fuzzing/fuzz_dbus_message
+[641/659] Linking target fuzzing/fuzz_date_time_new_from_iso8601
+[642/659] Linking target fuzzing/fuzz_inet_address_mask_new_from_string
+[643/659] Linking target fuzzing/fuzz_network_address_parse
+[644/659] Linking target fuzzing/fuzz_key
+[645/659] Linking target fuzzing/fuzz_inet_address_new_from_string
+[646/659] Linking target fuzzing/fuzz_paths
+[647/659] Linking target fuzzing/fuzz_inet_socket_address_new_from_string
+[648/659] Linking target fuzzing/fuzz_uri_parse_params
+[649/659] Linking target fuzzing/fuzz_uri_escape
+[650/659] Linking target fuzzing/fuzz_uri_parse
+[651/659] Linking target fuzzing/fuzz_network_address_parse_uri
+[652/659] Linking target fuzzing/fuzz_resolver
+[653/659] Linking target fuzzing/fuzz_variant_binary
+[654/659] Linking target fuzzing/fuzz_utf8_validate
+[655/659] Linking target fuzzing/fuzz_uuid_string_is_valid
+[656/659] Linking target fuzzing/fuzz_variant_text
+[657/659] Linking target fuzzing/fuzz_utf8_normalize
+[658/659] Linking target fuzzing/fuzz_variant_binary_byteswap
+[658/659] Installing files
+Installing subprojects/pcre2-10.42/libpcre2-8.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing subprojects/pcre2-10.42/libpcre2-posix.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing subprojects/pcre2-10.42/libpcre2-16.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing subprojects/pcre2-10.42/libpcre2-32.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing subprojects/pcre2-10.42/pcre2grep to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing subprojects/libffi/src/libffi.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing subprojects/proxy-libintl/libintl.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing glib/gversionmacros.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing glib/glib-visibility.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing glib/libglib-2.0.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing glib/gtester to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing gobject/gobject-visibility.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing gobject/glib-enumtypes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing gobject/libgobject-2.0.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing gobject/gobject-query to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing gthread/libgthread-2.0.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing gmodule/gmodule-visibility.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gmodule
+Installing gmodule/libgmodule-2.0.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing gio/gdbus-2.0/codegen/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/codegen
+Installing gio/gdbus-2.0/codegen/codegen.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/codegen
+Installing gio/gdbus-2.0/codegen/codegen_main.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/codegen
+Installing gio/gdbus-2.0/codegen/codegen_docbook.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/codegen
+Installing gio/gdbus-2.0/codegen/codegen_md.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/codegen
+Installing gio/gdbus-2.0/codegen/codegen_rst.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/codegen
+Installing gio/gdbus-2.0/codegen/dbustypes.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/codegen
+Installing gio/gdbus-2.0/codegen/parser.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/codegen
+Installing gio/gdbus-2.0/codegen/utils.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/codegen
+Installing gio/gio-launch-desktop to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/libexec
+Installing gio/gio-visibility.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing gio/gioenumtypes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing gio/libgio-2.0.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing gio/gio to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing gio/gresource to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing gio/gio-querymodules to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing gio/glib-compile-schemas to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing gio/glib-compile-resources to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing gio/gsettings to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing gio/gdbus to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing gio/gapplication to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing girepository/gi-visibility.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing girepository/libgirepository-2.0.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing girepository/compiler/gi-compile-repository to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing girepository/decompiler/gi-decompile-typelib to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing girepository/inspector/gi-inspect-typelib to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/subprojects/pcre2-10.42/pcre2.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/subprojects/pcre2-10.42/src/pcre2posix.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/subprojects/proxy-libintl/libintl.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/glib.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/glib-object.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/glib-unix.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/deprecated/gallocator.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/deprecated
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/deprecated/gcache.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/deprecated
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/deprecated/gcompletion.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/deprecated
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/deprecated/gmain.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/deprecated
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/deprecated/grel.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/deprecated
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/deprecated/gthread.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/deprecated
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/glib-autocleanups.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/glib-typeof.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/galloca.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/garray.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gasyncqueue.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gatomic.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gbacktrace.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gbase64.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gbitlock.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gbookmarkfile.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gbytes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gcharset.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gchecksum.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gconvert.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gdataset.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gdate.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gdatetime.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gdir.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/genviron.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gerror.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gfileutils.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/ggettext.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/ghash.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/ghmac.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/ghook.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/ghostutils.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gi18n.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gi18n-lib.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/giochannel.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gkeyfile.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/glist.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gmacros.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gmain.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gmappedfile.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gmarkup.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gmem.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gmessages.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gnode.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/goption.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gpathbuf.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gpattern.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gpoll.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gprimes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gqsort.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gquark.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gqueue.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/grand.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/grcbox.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/grefcount.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/grefstring.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gregex.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gscanner.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gsequence.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gshell.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gslice.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gslist.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gspawn.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gstdio.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gstrfuncs.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gstrvbuilder.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gtestutils.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gstring.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gstringchunk.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gthread.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gthreadpool.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gtimer.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gtimezone.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gtrashstack.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gtree.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gtypes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/guuid.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gunicode.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/guri.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gutils.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gvarianttype.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gvariant.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gversion.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/gprintf.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gobject-autocleanups.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/glib-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gbinding.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gbindinggroup.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gboxed.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gclosure.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/genums.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gmarshal.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gobject.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gparam.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gparamspecs.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gsignal.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gsignalgroup.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gsourceclosure.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gtype.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gtypemodule.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gtypeplugin.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gvalue.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gvaluearray.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gvaluecollector.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gvaluetypes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gobjectnotifyqueue.c to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gmodule/gmodule.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfiledescriptorbased.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gunixmounts.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gunixfdmessage.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gunixinputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gunixoutputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdesktopappinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gappinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gasyncinitable.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gasyncresult.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gbufferedinputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gbufferedoutputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gbytesicon.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gcancellable.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gcontenttype.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gcharsetconverter.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gconverter.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gconverterinputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gconverteroutputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdatagrambased.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdatainputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdataoutputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdebugcontroller.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdebugcontrollerdbus.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdrive.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gemblem.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gemblemedicon.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfile.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfileattribute.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfileenumerator.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfileicon.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfileinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfileinputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfilemonitor.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfilenamecompleter.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfileoutputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfileiostream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfilterinputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gfilteroutputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gicon.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/ginetaddress.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/ginetaddressmask.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/ginetsocketaddress.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/ginitable.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/ginputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gio.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gio-autocleanups.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gioenums.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gioerror.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/giomodule.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gioscheduler.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/giostream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/giotypes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gloadableicon.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gmount.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gmemoryinputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gmemorymonitor.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gmemoryoutputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gmountoperation.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gnativesocketaddress.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gnativevolumemonitor.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gnetworkaddress.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gnetworkmonitor.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gnetworkservice.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/goutputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gpermission.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gpollableinputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gpollableoutputstream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gpollableutils.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gpowerprofilemonitor.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gproxy.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gproxyaddress.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gproxyaddressenumerator.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gproxyresolver.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gresolver.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gresource.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gseekable.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsimpleasyncresult.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsimpleiostream.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsimplepermission.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsimpleproxyresolver.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsocket.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsocketaddress.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsocketaddressenumerator.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsocketclient.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsocketconnectable.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsocketconnection.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsocketcontrolmessage.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsocketlistener.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsocketservice.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsrvtarget.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsubprocess.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsubprocesslauncher.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtask.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtcpconnection.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtcpwrapperconnection.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gthemedicon.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gthreadedsocketservice.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtlsbackend.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtlscertificate.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtlsclientconnection.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtlsconnection.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtlsdatabase.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtlsfiledatabase.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtlsinteraction.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtlspassword.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtlsserverconnection.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdtlsconnection.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdtlsclientconnection.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdtlsserverconnection.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gunixconnection.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gunixcredentialsmessage.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gunixfdlist.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gunixsocketaddress.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gvfs.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gvolume.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gvolumemonitor.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gzlibcompressor.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gzlibdecompressor.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/glistmodel.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gliststore.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gapplication.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gapplicationcommandline.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gactiongroup.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gactionmap.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsimpleactiongroup.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gremoteactiongroup.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gactiongroupexporter.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusactiongroup.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gaction.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gpropertyaction.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsimpleaction.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gmenumodel.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gmenu.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gmenuexporter.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusmenumodel.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gnotification.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsettingsbackend.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsettingsschema.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gsettings.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusauthobserver.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gcredentials.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusutils.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbuserror.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusaddress.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusconnection.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusmessage.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusnameowning.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusnamewatching.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusproxy.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusintrospection.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusmethodinvocation.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusserver.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusinterface.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusinterfaceskeleton.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusobject.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusobjectskeleton.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusobjectproxy.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusobjectmanager.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusobjectmanagerclient.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gdbusobjectmanagerserver.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gtestdbus.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/giarginfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/gibaseinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/gicallableinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/gicallbackinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/giconstantinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/gienuminfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/gifieldinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/giflagsinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/gifunctioninfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/giinterfaceinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/giobjectinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/gipropertyinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/giregisteredtypeinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/girepository.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/girepository-autocleanups.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/gisignalinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/gistructinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/gitypeinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/gitypelib.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/gitypes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/giunioninfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/giunresolvedinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/givalueinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/givfuncinfo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/girepository/girffi.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/girepository
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/subprojects/libffi/man/ffi.3 to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man/man3
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/subprojects/libffi/man/ffi_call.3 to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man/man3
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/subprojects/libffi/man/ffi_prep_cif.3 to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man/man3
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/subprojects/libffi/man/ffi_prep_cif_var.3 to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man/man3
+Installing new directory /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/gio/modules
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/libpcre2-8.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/libpcre2-16.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/libpcre2-32.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/subprojects/libffi/include/ffi-aarch64.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/subprojects/libffi/include/ffitarget-aarch64.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/subprojects/libffi/include/ffitarget.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/subprojects/libffi/include/ffi.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/libffi.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/tools/glib-gettextize to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/tools/glib.supp to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/valgrind
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/glib/glibconfig.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/glib-2.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/glib/gtester-report to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/glib/glib_gdb.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/gdb
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/glib/libglib-2.0.so.0.8200.4-gdb.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/gdb/auto-load/.//Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/gobject/glib-genmarshal to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/gobject/glib-mkenums to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/gobject-2.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gobject/gobject_gdb.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/gdb
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/gobject/libgobject-2.0.so.0.8200.4-gdb.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/gdb/auto-load/.//Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/gthread-2.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/gmodule-no-export-2.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/gmodule-export-2.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/gmodule-2.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/gio/gnetworking.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gio
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/gio/gdbus-2.0/codegen/gdbus-codegen to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/gio/gdbus-2.0/codegen/config.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/codegen
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/completion/gapplication to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/bash-completion/completions
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/completion/gdbus to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/bash-completion/completions
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/completion/gio to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/bash-completion/completions
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/completion/gsettings to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/bash-completion/completions
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/completion/gresource to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/bash-completion/completions
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/gio-2.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/gio-unix-2.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gresource.dtd to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/dtds
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gschema.dtd to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0/schemas
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gschema.loc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/gettext/its
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/gio/gschema.its to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/gettext/its
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-build/meson-private/girepository-2.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/m4macros/glib-2.0.m4 to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/aclocal
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/m4macros/glib-gettext.m4 to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/aclocal
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/m4macros/gsettings.m4 to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/aclocal
