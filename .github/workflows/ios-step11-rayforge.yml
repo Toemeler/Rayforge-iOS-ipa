@@ -300,8 +300,21 @@ jobs:
           MATURIN="$("$PY313" -c 'import shutil;print(shutil.which("maturin") or "")')"
           [ -n "$MATURIN" ] || MATURIN="$(dirname "$PY313")/maturin"
 
+          # maturin treats ios-sim on an arm64 mac as "not cross" and then
+          # insists the interpreter's platform matches the target. BeeWare's
+          # cross venv patches platform/sysconfig to report iOS — exactly
+          # what maturin needs via -i.
+          PLATCFG=$(find "${SIM_SLICE}" -maxdepth 2 -type d -name "arm64-iphonesimulator" -path "*platform-config*" | head -1)
+          test -n "$PLATCFG"
+          "$PY313" -m venv cross-venv
+          python3 "${PLATCFG}/make_cross_venv.py" "$(pwd)/cross-venv" "${PLATCFG}" \
+            || "$PY313" "${PLATCFG}/make_cross_venv.py" "$(pwd)/cross-venv" "${PLATCFG}"
+          CROSS_PY="$(pwd)/cross-venv/bin/python"
+          "$CROSS_PY" -c "import platform,sysconfig; print(platform.system(), sysconfig.get_platform())"
+
           git clone -q --depth 1 --branch "${RAYGEO_TAG}" https://github.com/barebaric/raygeo.git raygeo-src
           (cd raygeo-src && "$MATURIN" build --release \
+             -i "$CROSS_PY" \
              --target aarch64-apple-ios-sim \
              --out "${GITHUB_WORKSPACE}/rust-wheels" \
              2>&1 | tee "${GITHUB_WORKSPACE}/raygeo-build.log")
@@ -310,6 +323,7 @@ jobs:
             -d vtracer-sdist "vtracer==${VTRACER_VERSION}"
           mkdir -p vtracer-src && tar xf vtracer-sdist/vtracer-*.tar.gz --strip-components=1 -C vtracer-src
           (cd vtracer-src && "$MATURIN" build --release \
+             -i "$CROSS_PY" \
              --target aarch64-apple-ios-sim \
              --out "${GITHUB_WORKSPACE}/rust-wheels" \
              2>&1 | tee "${GITHUB_WORKSPACE}/vtracer-build.log")
