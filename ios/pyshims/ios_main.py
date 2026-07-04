@@ -47,6 +47,18 @@ def main() -> None:
     sys.modules["multiprocessing.shared_memory"] = rayforge_ios_shm
     multiprocessing.shared_memory = rayforge_ios_shm
 
+    # pyserial's list_ports platform dispatch does not know iOS and
+    # raises ImportError at module import time. Serial hardware is
+    # unavailable on iOS anyway (no USB serial without MFi), so an
+    # empty-port implementation is the correct behavior, not a stub.
+    import types
+
+    _lp = types.ModuleType("serial.tools.list_ports")
+    _lp.comports = lambda *a, **kw: []
+    _lp.grep = lambda *a, **kw: iter(())
+    _lp.main = lambda *a, **kw: None
+    sys.modules["serial.tools.list_ports"] = _lp
+
     def _ios_run(self, argv=None):
         # Equivalent of g_application_run() minus the blocking loop:
         # ::startup (adw_init etc.) fires during register, ::activate
