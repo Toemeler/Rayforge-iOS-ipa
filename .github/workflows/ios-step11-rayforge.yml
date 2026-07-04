@@ -338,14 +338,10 @@ jobs:
              --out "${GITHUB_WORKSPACE}/rust-wheels" \
              2>&1 | tee "${GITHUB_WORKSPACE}/raygeo-build.log")
 
-          "$PY313" -m pip -q download --no-binary :all: --no-deps \
-            -d vtracer-sdist "vtracer==${VTRACER_VERSION}"
-          mkdir -p vtracer-src && tar xf vtracer-sdist/vtracer-*.tar.gz --strip-components=1 -C vtracer-src
-          (cd vtracer-src && "$MATURIN" build --release \
-             -i "$CROSS_PY" \
-             --target aarch64-apple-ios-sim \
-             --out "${GITHUB_WORKSPACE}/rust-wheels" \
-             2>&1 | tee "${GITHUB_WORKSPACE}/vtracer-build.log")
+          # vtracer: deliberately NOT built in Phase 1 — it is only used
+          # by raster tracing, which the cv2 stub already disables, and
+          # its released pyo3 pin predates iOS target support. A stub is
+          # bundled instead; the real build lands with OpenCV in Phase 2.
           ls -la rust-wheels/
 
       - name: "[10e/16] Collect python dependencies (BeeWare wheels + pure)"
@@ -407,6 +403,7 @@ jobs:
           cp -R rayforge-src/rayforge "$STAGE/rayforge"
           cp -R ios/pyshims/scipy "$STAGE/scipy"
           cp -R ios/pyshims/cv2 "$STAGE/cv2"
+          cp -R ios/pyshims/vtracer "$STAGE/vtracer"
           cp ios/pyshims/rayforge_ios_pool.py "$STAGE/"
           cp ios/pyshims/ios_main.py "$STAGE/"
           du -sh "$STAGE"
