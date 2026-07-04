@@ -331,12 +331,24 @@ jobs:
           CROSS_PY="$(pwd)/cross-venv/bin/python"
           "$CROSS_PY" -c "import platform,sysconfig; print(platform.system(), sysconfig.get_platform())"
 
+          # crates.io on CI occasionally drops connections (broken pipe);
+          # retry and disable HTTP multiplexing (known workaround).
+          export CARGO_NET_RETRY=10
+          export CARGO_HTTP_MULTIPLEXING=false
           git clone -q --depth 1 --branch "${RAYGEO_TAG}" https://github.com/barebaric/raygeo.git raygeo-src
-          (cd raygeo-src && "$MATURIN" build --release \
-             -i "$CROSS_PY" \
-             --target aarch64-apple-ios-sim \
-             --out "${GITHUB_WORKSPACE}/rust-wheels" \
-             2>&1 | tee "${GITHUB_WORKSPACE}/raygeo-build.log")
+          BUILT=0
+          for attempt in 1 2 3; do
+            if (cd raygeo-src && "$MATURIN" build --release \
+                 -i "$CROSS_PY" \
+                 --target aarch64-apple-ios-sim \
+                 --out "${GITHUB_WORKSPACE}/rust-wheels" \
+                 2>&1 | tee "${GITHUB_WORKSPACE}/raygeo-build.log"); then
+              BUILT=1; break
+            fi
+            echo "maturin attempt $attempt failed; retrying in 15s"
+            sleep 15
+          done
+          test "$BUILT" = "1"
 
           # vtracer: deliberately NOT built in Phase 1 — it is only used
           # by raster tracing, which the cv2 stub already disables, and
