@@ -702,6 +702,8 @@ jobs:
           rm -rf _cilogs && mkdir -p "_cilogs/${OUT}"
           for f in libffi.log pycairo-setup.log pycairo-build.log pycairo-files.txt \
                    pygobject-setup.log pygobject-build.log pygobject-files.txt \
+                   raygeo-build.log beeware-dl.log pure-dl.log rayforge-sha.txt \
+                   bundle-step.log launch-step.log \
                    testapp-link.log launch-cmd.log app-console.log app-syslog.log \
                    simulator-screenshot.png; do
             [ -f "$f" ] && cp "$f" "_cilogs/${OUT}/$(echo "$f" | tr '/' '_')" || true
