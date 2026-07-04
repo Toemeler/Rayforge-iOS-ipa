@@ -300,8 +300,15 @@ jobs:
           SYSCFG=$(find "${SIM_SLICE}" -name "_sysconfigdata__*.py" -path "*arm64*" | head -1)
           [ -n "$SYSCFG" ] || SYSCFG=$(find "${SIM_SLICE}" -name "_sysconfigdata__*.py" | head -1)
           test -n "$SYSCFG"
-          export PYO3_CROSS_LIB_DIR="$(dirname "$(dirname "$SYSCFG")")"
+          # pyo3 accepts LIB_DIR/_sysconfigdata*.py or LIB_DIR/pythonX.Y/…
+          # — derive LIB_DIR from where the file actually sits.
+          PARENT="$(dirname "$SYSCFG")"
+          case "$(basename "$PARENT")" in
+            python3.*) export PYO3_CROSS_LIB_DIR="$(dirname "$PARENT")";;
+            *)         export PYO3_CROSS_LIB_DIR="$PARENT";;
+          esac
           echo "PYO3_CROSS_LIB_DIR=$PYO3_CROSS_LIB_DIR"
+          ls "$PYO3_CROSS_LIB_DIR" | head -5
           export IPHONEOS_DEPLOYMENT_TARGET="${IOS_MIN}"
           MATURIN="$("$PY313" -c 'import shutil;print(shutil.which("maturin") or "")')"
           [ -n "$MATURIN" ] || MATURIN="$(dirname "$PY313")/maturin"
