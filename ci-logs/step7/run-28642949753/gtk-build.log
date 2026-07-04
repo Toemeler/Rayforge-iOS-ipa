@@ -1,0 +1,1164 @@
+ninja: Entering directory `gtk-build'
+[1/1130] Generating gsk/gpu/shaders/gskgpublendmodeinstance.glsl with a custom command (wrapped by meson to capture output)
+[2/1130] Generating gsk/gpu/shaders/gskgpublurinstance.glsl with a custom command (wrapped by meson to capture output)
+[3/1130] Generating gsk/gpu/shaders/gskgpuarithmeticinstance.glsl with a custom command (wrapped by meson to capture output)
+[4/1130] Generating gsk/gpu/shaders/gskgpuborderinstance.glsl with a custom command (wrapped by meson to capture output)
+[5/1130] Generating gsk/gpu/shaders/gskgpuboxshadowinstance.glsl with a custom command (wrapped by meson to capture output)
+[6/1130] Generating gsk/gpu/shaders/gskgpucolorizeinstance.glsl with a custom command (wrapped by meson to capture output)
+[7/1130] Generating gsk/gpu/shaders/gskgpucomponenttransferinstance.glsl with a custom command (wrapped by meson to capture output)
+[8/1130] Generating gsk/gpu/shaders/gskgpucolorinstance.glsl with a custom command (wrapped by meson to capture output)
+[9/1130] Generating gsk/gpu/shaders/gskgpucolormatrixinstance.glsl with a custom command (wrapped by meson to capture output)
+[10/1130] Generating gsk/gpu/shaders/gskgpucompositeinstance.glsl with a custom command (wrapped by meson to capture output)
+[11/1130] Generating gsk/gpu/shaders/gskgpuconvertinstance.glsl with a custom command (wrapped by meson to capture output)
+[12/1130] Generating gsk/gpu/shaders/gskgpuconvertbuiltininstance.glsl with a custom command (wrapped by meson to capture output)
+[13/1130] Generating gsk/gpu/shaders/gskgpuconicgradientinstance.glsl with a custom command (wrapped by meson to capture output)
+[14/1130] Generating gsk/gpu/shaders/gskgpuconvertcicpinstance.glsl with a custom command (wrapped by meson to capture output)
+[15/1130] Generating gsk/gpu/shaders/gskgpucrossfadeinstance.glsl with a custom command (wrapped by meson to capture output)
+[16/1130] Generating gsk/gpu/shaders/gskgpudisplacementinstance.glsl with a custom command (wrapped by meson to capture output)
+[17/1130] Generating gsk/gpu/shaders/gskgpuroundedcolorinstance.glsl with a custom command (wrapped by meson to capture output)
+[18/1130] Generating gsk/gpu/shaders/gskgpumaskinstance.glsl with a custom command (wrapped by meson to capture output)
+[19/1130] Generating gsk/gpu/shaders/gskgpuradialgradientinstance.glsl with a custom command (wrapped by meson to capture output)
+[20/1130] Generating gsk/gpu/shaders/gskgpulineargradientinstance.glsl with a custom command (wrapped by meson to capture output)
+[21/1130] Generating gsk/gpu/shaders/gskgputextureinstance.glsl with a custom command (wrapped by meson to capture output)
+[22/1130] Generating gsk/gpu/shaders/gskgpublur.glsl with a custom command (wrapped by meson to capture output)
+[23/1130] Generating gsk/gpu/shaders/gskgpublendmode.glsl with a custom command (wrapped by meson to capture output)
+[24/1130] Generating gsk/gpu/shaders/gskgpuarithmetic.glsl with a custom command (wrapped by meson to capture output)
+[25/1130] Generating gsk/gpu/shaders/gskgpuborder.glsl with a custom command (wrapped by meson to capture output)
+[26/1130] Generating gsk/gpu/shaders/gskgpucolor.glsl with a custom command (wrapped by meson to capture output)
+[27/1130] Generating gsk/gpu/shaders/gskgpuboxshadow.glsl with a custom command (wrapped by meson to capture output)
+[28/1130] Generating gsk/gpu/shaders/gskgpucolorize.glsl with a custom command (wrapped by meson to capture output)
+[29/1130] Generating gsk/gpu/shaders/gskgpucomponenttransfer.glsl with a custom command (wrapped by meson to capture output)
+[30/1130] Generating gsk/gpu/shaders/gskgpucolormatrix.glsl with a custom command (wrapped by meson to capture output)
+[31/1130] Generating gsk/gpu/shaders/gskgpucomposite.glsl with a custom command (wrapped by meson to capture output)
+[32/1130] Generating gsk/gpu/shaders/gskgpuconicgradient.glsl with a custom command (wrapped by meson to capture output)
+[33/1130] Generating gsk/gpu/shaders/gskgpuconvert.glsl with a custom command (wrapped by meson to capture output)
+[34/1130] Generating gsk/gpu/shaders/gskgpuconvertbuiltin.glsl with a custom command (wrapped by meson to capture output)
+[35/1130] Generating gsk/gpu/shaders/gskgpuconvertcicp.glsl with a custom command (wrapped by meson to capture output)
+[36/1130] Generating gsk/gpu/shaders/gskgpudisplacement.glsl with a custom command (wrapped by meson to capture output)
+[37/1130] Generating gsk/gpu/shaders/gskgpucrossfade.glsl with a custom command (wrapped by meson to capture output)
+[38/1130] Generating gsk/gpu/shaders/gskgpumask.glsl with a custom command (wrapped by meson to capture output)
+[39/1130] Generating gsk/gpu/shaders/gskgpulineargradient.glsl with a custom command (wrapped by meson to capture output)
+[40/1130] Generating gsk/gpu/shaders/gskgpuroundedcolor.glsl with a custom command (wrapped by meson to capture output)
+[41/1130] Generating gsk/gpu/shaders/gskgpuradialgradient.glsl with a custom command (wrapped by meson to capture output)
+[42/1130] Generating gsk/gpu/shaders/gskgputexture.glsl with a custom command (wrapped by meson to capture output)
+[43/1130] Generating glib marshaller header gdk/gdkmarshalers_h
+[44/1130] Generating gsk/gsk.resources.xml with a custom command
+[45/1130] Generating GObject enum file gtk/css/gtkcssenumtypes.h (wrapped by meson to capture output)
+[46/1130] Generating glib marshaller header gtk/gtkmarshalers_h
+[47/1130] Generating GObject enum file gdk/gdkenumtypes.h (wrapped by meson because command contains newlines, to capture output)
+[48/1130] Generating GObject enum file gsk/gskenumtypes.h (wrapped by meson to capture output)
+[49/1130] Generating profile-conf with a custom command (wrapped by meson to capture output)
+[50/1130] Generating GObject enum file gtk/gtkprivatetypebuiltins.h (wrapped by meson to capture output)
+[51/1130] Generating gdk/version/gdkversionmacros.h with a custom command
+[52/1130] Generating gdk/gdkresources_c with a custom command
+[53/1130] Generating gdk/gdkresources_h with a custom command
+[54/1130] Generating gdk/version/gdk-visibility.h with a custom command
+[55/1130] Generating glib marshaller source gdk/gdkmarshalers_c
+[56/1130] Generating GObject enum file gtk/css/gtkcssenumtypes.c (wrapped by meson to capture output)
+[57/1130] Generating gsk/gpu/shaders/gskgpuarithmeticop.c with a custom command (wrapped by meson to capture output)
+[58/1130] Generating gsk/gpu/shaders/gskgpuarithmeticopprivate.h with a custom command (wrapped by meson to capture output)
+[59/1130] Generating gsk/gpu/shaders/gskgpublendmodeop.c with a custom command (wrapped by meson to capture output)
+[60/1130] Generating gsk/gpu/shaders/gskgpublendmodeopprivate.h with a custom command (wrapped by meson to capture output)
+[61/1130] Generating gsk/gpu/shaders/gskgpublurop.c with a custom command (wrapped by meson to capture output)
+[62/1130] Generating GObject enum file gdk/gdkenumtypes.c (wrapped by meson because command contains newlines, to capture output)
+[63/1130] Generating gsk/gpu/shaders/gskgpubluropprivate.h with a custom command (wrapped by meson to capture output)
+[64/1130] Generating gsk/gpu/shaders/gskgpuboxshadowop.c with a custom command (wrapped by meson to capture output)
+[65/1130] Generating gsk/gpu/shaders/gskgpuborderop.c with a custom command (wrapped by meson to capture output)
+[66/1130] Generating gsk/gpu/shaders/gskgpuborderopprivate.h with a custom command (wrapped by meson to capture output)
+[67/1130] Generating gsk/gpu/shaders/gskgpuboxshadowopprivate.h with a custom command (wrapped by meson to capture output)
+[68/1130] Generating gsk/gpu/shaders/gskgpucolorop.c with a custom command (wrapped by meson to capture output)
+[69/1130] Generating GObject enum file gtk/gtktypebuiltins.h (wrapped by meson to capture output)
+[70/1130] Generating gsk/gpu/shaders/gskgpucolorizeop.c with a custom command (wrapped by meson to capture output)
+[71/1130] Generating gsk/gpu/shaders/gskgpucoloropprivate.h with a custom command (wrapped by meson to capture output)
+[72/1130] Generating gsk/gpu/shaders/gskgpucolorizeopprivate.h with a custom command (wrapped by meson to capture output)
+[73/1130] Generating gsk/gpu/shaders/gskgpucomponenttransferop.c with a custom command (wrapped by meson to capture output)
+[74/1130] Generating gsk/gpu/shaders/gskgpucolormatrixop.c with a custom command (wrapped by meson to capture output)
+[75/1130] Generating gsk/gpu/shaders/gskgpucomponenttransferopprivate.h with a custom command (wrapped by meson to capture output)
+[76/1130] Generating gsk/gpu/shaders/gskgpucolormatrixopprivate.h with a custom command (wrapped by meson to capture output)
+[77/1130] Generating gsk/gpu/shaders/gskgpucompositeop.c with a custom command (wrapped by meson to capture output)
+[78/1130] Generating gsk/gpu/shaders/gskgpucompositeopprivate.h with a custom command (wrapped by meson to capture output)
+[79/1130] Generating gsk/gpu/shaders/gskgpuconicgradientop.c with a custom command (wrapped by meson to capture output)
+[80/1130] Generating gsk/gpu/shaders/gskgpuconicgradientopprivate.h with a custom command (wrapped by meson to capture output)
+[81/1130] Generating gsk/gpu/shaders/gskgpuconvertop.c with a custom command (wrapped by meson to capture output)
+[82/1130] Generating gsk/gpu/shaders/gskgpuconvertopprivate.h with a custom command (wrapped by meson to capture output)
+[83/1130] Generating gsk/gpu/shaders/gskgpuconvertbuiltinopprivate.h with a custom command (wrapped by meson to capture output)
+[84/1130] Generating gsk/gpu/shaders/gskgpuconvertcicpopprivate.h with a custom command (wrapped by meson to capture output)
+[85/1130] Generating gsk/gpu/shaders/gskgpuconvertbuiltinop.c with a custom command (wrapped by meson to capture output)
+[86/1130] Generating gsk/gpu/shaders/gskgpuconvertcicpop.c with a custom command (wrapped by meson to capture output)
+[87/1130] Generating gsk/gpu/shaders/gskgpudisplacementopprivate.h with a custom command (wrapped by meson to capture output)
+[88/1130] Generating gsk/gpu/shaders/gskgpudisplacementop.c with a custom command (wrapped by meson to capture output)
+[89/1130] Generating gsk/gpu/shaders/gskgpucrossfadeop.c with a custom command (wrapped by meson to capture output)
+[90/1130] Generating gsk/gpu/shaders/gskgpucrossfadeopprivate.h with a custom command (wrapped by meson to capture output)
+[91/1130] Generating gsk/gpu/shaders/gskgpulineargradientopprivate.h with a custom command (wrapped by meson to capture output)
+[92/1130] Generating gsk/gpu/shaders/gskgpulineargradientop.c with a custom command (wrapped by meson to capture output)
+[93/1130] Generating gsk/gpu/shaders/gskgpumaskop.c with a custom command (wrapped by meson to capture output)
+[94/1130] Generating gsk/gpu/shaders/gskgpumaskopprivate.h with a custom command (wrapped by meson to capture output)
+[95/1130] Generating gsk/gpu/shaders/gskgpuradialgradientop.c with a custom command (wrapped by meson to capture output)
+[96/1130] Generating gsk/gpu/shaders/gskgpuroundedcolorop.c with a custom command (wrapped by meson to capture output)
+[97/1130] Generating gsk/gpu/shaders/gskgpuradialgradientopprivate.h with a custom command (wrapped by meson to capture output)
+[98/1130] Generating gsk/gpu/shaders/gskgputextureop.c with a custom command (wrapped by meson to capture output)
+[99/1130] Generating gsk/gskresources_h with a custom command
+[100/1130] Generating gsk/gpu/shaders/gskgputextureopprivate.h with a custom command (wrapped by meson to capture output)
+[101/1130] Generating gsk/gpu/shaders/gskgpuroundedcoloropprivate.h with a custom command (wrapped by meson to capture output)
+[102/1130] Generating gtk/a11y/atspi/atspi-accessible-hdr with a custom command
+[103/1130] Generating gsk/gskresources_c with a custom command
+[104/1130] Generating gtk/a11y/atspi/atspi-accessible-src with a custom command
+[105/1130] Generating gtk/a11y/atspi/atspi-action-hdr with a custom command
+[106/1130] Generating gtk/a11y/atspi/atspi-action-src with a custom command
+[107/1130] Generating gtk/a11y/atspi/atspi-application-hdr with a custom command
+[108/1130] Generating gtk/a11y/atspi/atspi-application-src with a custom command
+[109/1130] Generating gtk/a11y/atspi/atspi-cache-hdr with a custom command
+[110/1130] Generating gtk/a11y/atspi/atspi-cache-src with a custom command
+[111/1130] Generating GObject enum file gsk/gskenumtypes.c (wrapped by meson to capture output)
+[112/1130] Generating gtk/a11y/atspi/atspi-collection-src with a custom command
+[113/1130] Generating gtk/a11y/atspi/atspi-collection-hdr with a custom command
+[114/1130] Generating gtk/a11y/atspi/atspi-component-hdr with a custom command
+[115/1130] Generating gtk/a11y/atspi/atspi-component-src with a custom command
+[116/1130] Generating gtk/a11y/atspi/atspi-deviceeventlistener-src with a custom command
+[117/1130] Generating gtk/a11y/atspi/atspi-deviceeventcontroller-hdr with a custom command
+[118/1130] Generating gtk/a11y/atspi/atspi-deviceeventlistener-hdr with a custom command
+[119/1130] Generating gtk/a11y/atspi/atspi-deviceeventcontroller-src with a custom command
+[120/1130] Generating gtk/a11y/atspi/atspi-document-hdr with a custom command
+[121/1130] Generating gtk/a11y/atspi/atspi-document-src with a custom command
+[122/1130] Generating gtk/a11y/atspi/atspi-editabletext-hdr with a custom command
+[123/1130] Generating gtk/a11y/atspi/atspi-editabletext-src with a custom command
+[124/1130] Generating gtk/a11y/atspi/atspi-event-hdr with a custom command
+[125/1130] Generating gtk/a11y/atspi/atspi-hyperlink-src with a custom command
+[126/1130] Generating gtk/a11y/atspi/atspi-hyperlink-hdr with a custom command
+[127/1130] Generating gtk/a11y/atspi/atspi-hypertext-hdr with a custom command
+[128/1130] Generating gtk/a11y/atspi/atspi-image-hdr with a custom command
+[129/1130] Generating gtk/a11y/atspi/atspi-event-src with a custom command
+[130/1130] Generating gtk/a11y/atspi/atspi-hypertext-src with a custom command
+[131/1130] Generating gtk/a11y/atspi/atspi-registry-hdr with a custom command
+[132/1130] Generating gtk/a11y/atspi/atspi-image-src with a custom command
+[133/1130] Generating gtk/a11y/atspi/atspi-selection-src with a custom command
+[134/1130] Generating gtk/a11y/atspi/atspi-registry-src with a custom command
+[135/1130] Generating gtk/a11y/atspi/atspi-socket-hdr with a custom command
+[136/1130] Generating gtk/a11y/atspi/atspi-selection-hdr with a custom command
+[137/1130] Generating gtk/a11y/atspi/atspi-table-src with a custom command
+[138/1130] Generating gtk/a11y/atspi/atspi-table-hdr with a custom command
+[139/1130] Generating gtk/a11y/atspi/atspi-tablecell-hdr with a custom command
+[140/1130] Generating gtk/a11y/atspi/atspi-socket-src with a custom command
+[141/1130] Generating gtk/a11y/atspi/atspi-text-src with a custom command
+[142/1130] Generating gtk/a11y/atspi/atspi-tablecell-src with a custom command
+[143/1130] Generating gtk/a11y/atspi/atspi-value-hdr with a custom command
+[144/1130] Generating gtk/a11y/atspi/atspi-text-hdr with a custom command
+[145/1130] Generating gtk/a11y/atspi/atspi-value-src with a custom command
+[146/1130] Generating gdbus source gtk/gtkdbusgenerated.c
+[147/1130] Generating gdbus header gtk/gtkdbusgenerated.h
+[148/1130] Generating glib marshaller source gtk/gtkmarshalers_c
+[149/1130] Generating GObject enum file gtk/gtkprivatetypebuiltins.c (wrapped by meson to capture output)
+[150/1130] Generating gtk/gtktypefuncs.inc with a custom command
+[151/1130] Generating gdbus source gtk/xdp-dbus.c
+[152/1130] Generating gdbus header gtk/xdp-dbus.h
+[153/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcsserror.c.o
+[154/1130] Compiling C object gtk/css/libgtk_css.a.p/meson-generated_.._gtkcssenumtypes.c.o
+[155/1130] Generating gtk/gtkresources_h with a custom command
+[156/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcsssection.c.o
+[157/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcssserializer.c.o
+[158/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcssdataurl.c.o
+[159/1130] Generating GObject enum file gtk/gtktypebuiltins.c (wrapped by meson to capture output)
+[160/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcssvariablevalue.c.o
+[161/1130] Generating gtk/gtkresources_c with a custom command
+[162/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcsstokenizer.c.o
+[163/1130] Compiling C object gtk/css/libgtk_css.a.p/gtkcssparser.c.o
+[164/1130] Compiling C object gdk/libgdk.a.p/meson-generated_.._gdkenumtypes.c.o
+[165/1130] Compiling C object gdk/ios/libgdk-ios.a.p/gdkiosdisplay.c.o
+[166/1130] Compiling C object gdk/libgdk.a.p/meson-generated_.._gdkmarshalers.c.o
+[167/1130] Compiling C object gdk/libgdk.a.p/meson-generated_.._gdkresources.c.o
+[168/1130] Compiling C object gdk/libgdk.a.p/gdkapplaunchcontext.c.o
+[169/1130] Compiling C object gdk/ios/libgdk-ios.a.p/gdkioscairocontext.c.o
+[170/1130] Compiling C object gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o
+[171/1130] Compiling C object gdk/libgdk.a.p/gdk.c.o
+[172/1130] Compiling C object gdk/libgdk.a.p/gdkcairo.c.o
+[173/1130] Compiling C object gdk/libgdk.a.p/gdkcicpparams.c.o
+[174/1130] Compiling C object gdk/libgdk.a.p/gdkcolor.c.o
+[175/1130] Compiling C object gdk/libgdk.a.p/gdkclipboard.c.o
+[176/1130] Compiling C object gdk/libgdk.a.p/gdkcairocontext.c.o
+[177/1130] Compiling C object gdk/ios/libgdk-ios.a.p/gdkiosmain.c.o
+../gtk-src/gdk/ios/gdkiosmain.c:234:11: warning: 137 enumeration values not explicitly handled in switch: 'UIKeyboardHIDUsageKeyboardErrorRollOver', 'UIKeyboardHIDUsageKeyboardPOSTFail', 'UIKeyboardHIDUsageKeyboardErrorUndefined'... [-Wswitch-enum]
+  234 |   switch (key.keyCode)
+      |           ^~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosmain.c:234:11: note: add missing switch cases
+  234 |   switch (key.keyCode)
+      |           ^
+1 warning generated.
+[178/1130] Compiling C object gdk/libgdk.a.p/gdkcontentdeserializer.c.o
+[179/1130] Compiling C object gdk/libgdk.a.p/gdkcontentprovider.c.o
+[180/1130] Compiling C object gdk/libgdk.a.p/gdkcontentproviderimpl.c.o
+[181/1130] Compiling C object gdk/libgdk.a.p/gdkcontentformats.c.o
+[182/1130] Compiling C object gdk/libgdk.a.p/gdkcursor.c.o
+[183/1130] Compiling C object gdk/libgdk.a.p/gdkdevicepad.c.o
+[184/1130] Compiling C object gdk/libgdk.a.p/gdkdihedral.c.o
+[185/1130] Compiling C object gdk/libgdk.a.p/gdkdevicetool.c.o
+[186/1130] Compiling C object gdk/libgdk.a.p/gdkcontentserializer.c.o
+[187/1130] Compiling C object gdk/libgdk.a.p/gdkcolorstate.c.o
+[188/1130] Compiling C object gdk/libgdk.a.p/gdkdmabufdownloader.c.o
+[189/1130] Compiling C object gdk/libgdk.a.p/gdkdevice.c.o
+[190/1130] Compiling C object gdk/libgdk.a.p/gdkdmabuf.c.o
+[191/1130] Compiling C object gdk/libgdk.a.p/gdkdmabufformats.c.o
+[192/1130] Compiling C object gdk/libgdk.a.p/gdkdmabufformatsbuilder.c.o
+[193/1130] Compiling C object gdk/libgdk.a.p/gdkdisplaymanager.c.o
+[194/1130] Compiling C object gdk/libgdk.a.p/gdkdisplay.c.o
+[195/1130] Compiling C object gdk/libgdk.a.p/gdkdmabuftexturebuilder.c.o
+[196/1130] Compiling C object gdk/libgdk.a.p/gdkdmabufegl.c.o
+[197/1130] Compiling C object gdk/libgdk.a.p/gdkdrag.c.o
+[198/1130] Compiling C object gdk/libgdk.a.p/gdkdmabuftexture.c.o
+[199/1130] Compiling C object gdk/libgdk.a.p/gdkdragsurfacesize.c.o
+[200/1130] Compiling C object gdk/libgdk.a.p/gdkdragsurface.c.o
+[201/1130] Compiling C object gdk/libgdk.a.p/gdkdrop.c.o
+[202/1130] Compiling C object gdk/libgdk.a.p/filetransferportal.c.o
+[203/1130] Compiling C object gdk/libgdk.a.p/gdkframeclock.c.o
+[204/1130] Compiling C object gdk/libgdk.a.p/gdkframetimings.c.o
+[205/1130] Compiling C object gdk/libgdk.a.p/gdkdrawcontext.c.o
+[206/1130] Compiling C object gdk/libgdk.a.p/gdkframeclockidle.c.o
+[207/1130] Compiling C object gdk/libgdk.a.p/gdkglobals.c.o
+[208/1130] Compiling C object gdk/libgdk.a.p/gdkgl.c.o
+[209/1130] Compiling C object gdk/libgdk.a.p/gdkevents.c.o
+[210/1130] Compiling C object gdk/libgdk.a.p/gdkhsla.c.o
+[211/1130] Compiling C object gdk/libgdk.a.p/gdkgltexturebuilder.c.o
+[212/1130] Compiling C object gdk/libgdk.a.p/gdkgltexture.c.o
+[213/1130] Compiling C object gdk/libgdk.a.p/gdkkeyuni.c.o
+[214/1130] Compiling C object gdk/libgdk.a.p/gdkkeys.c.o
+[215/1130] Compiling C object gdk/libgdk.a.p/gdkglcontext.c.o
+[216/1130] Compiling C object gdk/libgdk.a.p/gdkmemorylayout.c.o
+[217/1130] Compiling C object gdk/libgdk.a.p/gdkmemorytexture.c.o
+[218/1130] Compiling C object gdk/libgdk.a.p/gdkpango.c.o
+[219/1130] Compiling C object gdk/libgdk.a.p/gdkmonitor.c.o
+[220/1130] Compiling C object gdk/libgdk.a.p/gdkmemorytexturebuilder.c.o
+[221/1130] Compiling C object gdk/libgdk.a.p/gdkparalleltask.c.o
+[222/1130] Compiling C object gdk/libgdk.a.p/gdkpopup.c.o
+[223/1130] Compiling C object gdk/libgdk.a.p/gdkpipeiostream.c.o
+[224/1130] Compiling C object gdk/libgdk.a.p/gdkpaintable.c.o
+[225/1130] Compiling C object gdk/libgdk.a.p/gdkprofiler.c.o
+[226/1130] Compiling C object gdk/libgdk.a.p/gdkrectangle.c.o
+[227/1130] Compiling C object gdk/libgdk.a.p/gdkpopuplayout.c.o
+[228/1130] Compiling C object gdk/libgdk.a.p/gdkrgba.c.o
+[229/1130] Compiling C object gdk/libgdk.a.p/gdkseat.c.o
+[230/1130] Compiling C object gdk/libgdk.a.p/gdkseatdefault.c.o
+[231/1130] Compiling C object gdk/libgdk.a.p/gdksnapshot.c.o
+[232/1130] Compiling C object gdk/libgdk.a.p/gdktexturedownloader.c.o
+[233/1130] Compiling C object gdk/libgdk.a.p/gdktoplevellayout.c.o
+[234/1130] Compiling C object gdk/libgdk.a.p/gdktexture.c.o
+[235/1130] Compiling C object gdk/libgdk.a.p/gdksubsurface.c.o
+[236/1130] Compiling C object gdk/libgdk.a.p/gdktoplevelsize.c.o
+[237/1130] Compiling C object gdk/libgdk.a.p/gdksurface.c.o
+[238/1130] Compiling C object gdk/libgdk.a.p/gdktoplevel.c.o
+[239/1130] Compiling C object gdk/libgdk.a.p/loaders_gdkpng.c.o
+[240/1130] Compiling C object gdk/libgdk.a.p/gdkvulkancontext.c.o
+[241/1130] Compiling C object gsk/libgsk_f16c.a.p/gl_fp16i.c.o
+[242/1130] Compiling C object gdk/libgdk.a.p/loaders_gdktiff.c.o
+[243/1130] Compiling C object gdk/libgdk.a.p/deprecated_gdkpixbuf.c.o
+[244/1130] Compiling C object gdk/libgdk.a.p/loaders_gdkjpeg.c.o
+[245/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gskresources.c.o
+[246/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gskenumtypes.c.o
+[247/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpuarithmeticop.c.o
+[248/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpublendmodeop.c.o
+[249/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpublurop.c.o
+[250/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpuborderop.c.o
+[251/1130] Compiling C object gdk/libgdk.a.p/gdkmemoryformat.c.o
+[252/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpuboxshadowop.c.o
+[253/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpucolorop.c.o
+[254/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpucolorizeop.c.o
+[255/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpucolormatrixop.c.o
+[256/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpucompositeop.c.o
+[257/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpucomponenttransferop.c.o
+[258/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpuconicgradientop.c.o
+[259/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpuconvertop.c.o
+[260/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpuconvertbuiltinop.c.o
+[261/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpuconvertcicpop.c.o
+[262/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpudisplacementop.c.o
+[263/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpucrossfadeop.c.o
+[264/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpulineargradientop.c.o
+[265/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpumaskop.c.o
+[266/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpuroundedcolorop.c.o
+[267/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgputextureop.c.o
+[268/1130] Compiling C object gsk/libgsk.a.p/meson-generated_.._gpu_shaders_gskgpuradialgradientop.c.o
+[269/1130] Compiling C object gsk/libgsk.a.p/gskblendnode.c.o
+[270/1130] Compiling C object gsk/libgsk.a.p/gskarithmeticnode.c.o
+[271/1130] Compiling C object gsk/libgsk.a.p/gskblurnode.c.o
+[272/1130] Compiling C object gsk/libgsk.a.p/gskbordernode.c.o
+[273/1130] Compiling C object gsk/libgsk.a.p/gskcaironode.c.o
+[274/1130] Compiling C object gsk/libgsk.a.p/gskcairorenderer.c.o
+[275/1130] Compiling C object gsk/libgsk.a.p/gskclipnode.c.o
+[276/1130] Compiling C object gsk/libgsk.a.p/gskcolornode.c.o
+[277/1130] Compiling C object gsk/libgsk.a.p/gskcomponenttransfer.c.o
+[278/1130] Compiling C object gsk/libgsk.a.p/gskcolormatrixnode.c.o
+[279/1130] Compiling C object gsk/libgsk.a.p/gskcompositenode.c.o
+[280/1130] Compiling C object gsk/libgsk.a.p/gskcomponenttransfernode.c.o
+[281/1130] Compiling C object gsk/libgsk.a.p/gskcontainernode.c.o
+[282/1130] Compiling C object gsk/libgsk.a.p/gskcopynode.c.o
+[283/1130] Compiling C object gsk/libgsk.a.p/gskconicgradientnode.c.o
+[284/1130] Compiling C object gsk/libgsk.a.p/gskdiff.c.o
+[285/1130] Compiling C object gsk/libgsk.a.p/gskcopypasteutils.c.o
+[286/1130] Compiling C object gsk/libgsk.a.p/gskcrossfadenode.c.o
+[287/1130] Compiling C object gsk/libgsk.a.p/gskdebugnode.c.o
+[288/1130] Compiling C object gsk/libgsk.a.p/gskdisplacementnode.c.o
+[289/1130] Compiling C object gsk/libgsk.a.p/gskfillnode.c.o
+[290/1130] Compiling C object gsk/libgsk.a.p/gskglshader.c.o
+[291/1130] Compiling C object gsk/libgsk.a.p/gskglshadernode.c.o
+[292/1130] Compiling C object gsk/libgsk.a.p/gskinsetshadownode.c.o
+[293/1130] Compiling C object gsk/libgsk.a.p/gskisolationnode.c.o
+[294/1130] Compiling C object gsk/libgsk.a.p/gskgradient.c.o
+[295/1130] Compiling C object gsk/libgsk.a.p/gskmasknode.c.o
+[296/1130] Compiling C object gsk/libgsk.a.p/gsklineargradientnode.c.o
+[297/1130] Compiling C object gsk/libgsk.a.p/gskoutsetshadownode.c.o
+[298/1130] Compiling C object gsk/libgsk.a.p/gskopacitynode.c.o
+[299/1130] Compiling C object gsk/libgsk.a.p/gskoffload.c.o
+[300/1130] Compiling C object gsk/libgsk.a.p/gskpastenode.c.o
+[301/1130] Compiling C object gsk/libgsk.a.p/gskpath.c.o
+[302/1130] Compiling C object gsk/libgsk.a.p/gskpathmeasure.c.o
+[303/1130] Compiling C object gsk/libgsk.a.p/gskpathbuilder.c.o
+[304/1130] Compiling C object gsk/libgsk.a.p/gskpathintersect.c.o
+[305/1130] Compiling C object gsk/libgsk.a.p/gskpathpoint.c.o
+[306/1130] Compiling C object gsk/libgsk.a.p/gskpathparser.c.o
+[307/1130] Compiling C object gsk/libgsk.a.p/gskradialgradientnode.c.o
+[308/1130] Compiling C object gsk/libgsk.a.p/gskrendernodeimpl.c.o
+[309/1130] Compiling C object gsk/libgsk.a.p/gskrenderer.c.o
+[310/1130] Compiling C object gsk/libgsk.a.p/gskrendernode.c.o
+[311/1130] Compiling C object gsk/libgsk.a.p/gskrenderreplay.c.o
+[312/1130] Compiling C object gsk/libgsk.a.p/gskroundedclipnode.c.o
+[313/1130] Compiling C object gsk/libgsk.a.p/gskrepeatnode.c.o
+[314/1130] Compiling C object gsk/libgsk.a.p/gskroundedrect.c.o
+[315/1130] Compiling C object gsk/libgsk.a.p/gskstroke.c.o
+[316/1130] Compiling C object gsk/libgsk.a.p/gskshadownode.c.o
+[317/1130] Compiling C object gsk/libgsk.a.p/gskstrokenode.c.o
+[318/1130] Compiling C object gsk/libgsk.a.p/gsktextnode.c.o
+[319/1130] Compiling C object gsk/libgsk.a.p/gsksubsurfacenode.c.o
+[320/1130] Compiling C object gsk/libgsk.a.p/gsktexturescalenode.c.o
+[321/1130] Compiling C object gsk/libgsk.a.p/gsktexturenode.c.o
+[322/1130] Compiling C object gsk/libgsk.a.p/gskrendernodeparser.c.o
+[323/1130] Compiling C object gsk/libgsk.a.p/gsktransformnode.c.o
+[324/1130] Compiling C object gsk/libgsk.a.p/gpu_gskglrenderer.c.o
+[325/1130] Compiling C object gsk/libgsk.a.p/gsktransform.c.o
+[326/1130] Compiling C object gsk/libgsk.a.p/gpu_gskvulkanrenderer.c.o
+[327/1130] Compiling C object gsk/libgsk.a.p/gskcairoblur.c.o
+[328/1130] Compiling C object gsk/libgsk.a.p/gskcairogradient.c.o
+[329/1130] Compiling C object gsk/libgsk.a.p/gskdebug.c.o
+[330/1130] Compiling C object gsk/libgsk.a.p/gskcairoshadow.c.o
+[331/1130] Compiling C object gsk/libgsk.a.p/gl_fp16.c.o
+[332/1130] Compiling C object gsk/libgsk.a.p/gskprivate.c.o
+[333/1130] Compiling C object gsk/libgsk.a.p/gskcurve.c.o
+[334/1130] Compiling C object gsk/libgsk.a.p/gskcontour.c.o
+[335/1130] Compiling C object gsk/libgsk.a.p/gskcurveintersect.c.o
+[336/1130] Compiling C object gsk/libgsk.a.p/gpu_gskglbuffer.c.o
+[337/1130] Compiling C object gsk/libgsk.a.p/gpu_gskglframe.c.o
+[338/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgldevice.c.o
+[339/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpublendop.c.o
+[340/1130] Compiling C object gsk/libgsk.a.p/gpu_gskglimage.c.o
+[341/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpublitop.c.o
+[342/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpubuffer.c.o
+[343/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpucachedfill.c.o
+[344/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpucachedglyph.c.o
+[345/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpucache.c.o
+[346/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpucachedstroke.c.o
+[347/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpuclearop.c.o
+[348/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpuclip.c.o
+[349/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpudevice.c.o
+[350/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpudownloadop.c.o
+[351/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpuframe.c.o
+[352/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpuglobalsop.c.o
+[353/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpumipmapop.c.o
+[354/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpuimage.c.o
+[355/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpuop.c.o
+[356/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpuprint.c.o
+[357/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpurenderpassop.c.o
+[358/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpurenderer.c.o
+[359/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpunodeprocessor.c.o
+[360/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpushaderop.c.o
+[361/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpuscissorop.c.o
+[362/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpuutils.c.o
+[363/1130] Compiling C object gsk/libgsk.a.p/gpu_gskgpuuploadop.c.o
+[364/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-accessible.c.o
+[365/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-action.c.o
+[366/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-application.c.o
+[367/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-deviceeventcontroller.c.o
+[368/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-component.c.o
+[369/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-collection.c.o
+[370/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-cache.c.o
+[371/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-deviceeventlistener.c.o
+[372/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-document.c.o
+[373/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-editabletext.c.o
+[374/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-event.c.o
+[375/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-hyperlink.c.o
+[376/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-hypertext.c.o
+[377/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-image.c.o
+[378/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-registry.c.o
+[379/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-selection.c.o
+[380/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-socket.c.o
+[381/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-tablecell.c.o
+[382/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-value.c.o
+[383/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-table.c.o
+[384/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._a11y_atspi_atspi-text.c.o
+[385/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._gtkdbusgenerated.c.o
+[386/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._gtkresources.c.o
+[387/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._xdp-dbus.c.o
+[388/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._gtkmarshalers.c.o
+[389/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._gtkprivatetypebuiltins.c.o
+[390/1130] Compiling C object gtk/libgtk.a.p/meson-generated_.._gtktypebuiltins.c.o
+[391/1130] Compiling C object gtk/libgtk.a.p/gskpango.c.o
+[392/1130] Compiling C object gtk/libgtk.a.p/gtkaccelgroup.c.o
+[393/1130] Compiling C object gtk/libgtk.a.p/gtkaboutdialog.c.o
+[394/1130] Compiling C object gtk/libgtk.a.p/gtkaccessible.c.o
+[395/1130] Compiling C object gtk/libgtk.a.p/gtkaccessiblerange.c.o
+[396/1130] Compiling C object gtk/libgtk.a.p/gtkaccessiblehypertext.c.o
+[397/1130] Compiling C object gtk/libgtk.a.p/gtkaccessibletext.c.o
+[398/1130] Compiling C object gtk/libgtk.a.p/gtkactionable.c.o
+[399/1130] Compiling C object gtk/libgtk.a.p/gtkactionbar.c.o
+[400/1130] Compiling C object gtk/libgtk.a.p/gtkaccessiblevalue.c.o
+[401/1130] Compiling C object gtk/libgtk.a.p/gtkadjustment.c.o
+[402/1130] Compiling C object gtk/libgtk.a.p/gtkalertdialog.c.o
+[403/1130] Compiling C object gtk/libgtk.a.p/gtkapplication.c.o
+[404/1130] Compiling C object gtk/libgtk.a.p/gtkaspectframe.c.o
+[405/1130] Compiling C object gtk/libgtk.a.p/gtkapplicationwindow.c.o
+[406/1130] Compiling C object gtk/libgtk.a.p/gtkbinlayout.c.o
+[407/1130] Compiling C object gtk/libgtk.a.p/gtkboolfilter.c.o
+[408/1130] Compiling C object gtk/libgtk.a.p/gtkborder.c.o
+[409/1130] Compiling C object gtk/libgtk.a.p/gtkatcontext.c.o
+[410/1130] Compiling C object gtk/libgtk.a.p/gtkbookmarklist.c.o
+[411/1130] Compiling C object gtk/libgtk.a.p/gtkbox.c.o
+[412/1130] Compiling C object gtk/libgtk.a.p/gtkboxlayout.c.o
+[413/1130] Compiling C object gtk/libgtk.a.p/gtkbuildable.c.o
+[414/1130] Compiling C object gtk/libgtk.a.p/gtkbuilderlistitemfactory.c.o
+[415/1130] Compiling C object gtk/libgtk.a.p/gtkbuilder.c.o
+[416/1130] Compiling C object gtk/libgtk.a.p/gtkbuilderscope.c.o
+[417/1130] Compiling C object gtk/libgtk.a.p/gtkbuilderparser.c.o
+[418/1130] Compiling C object gtk/libgtk.a.p/gtkbutton.c.o
+[419/1130] Compiling C object gtk/libgtk.a.p/gtkcenterbox.c.o
+[420/1130] Compiling C object gtk/libgtk.a.p/gtkcalendar.c.o
+[421/1130] Compiling C object gtk/libgtk.a.p/gtkcenterlayout.c.o
+[422/1130] Compiling C object gtk/libgtk.a.p/gtkcolorchooserdialog.c.o
+[423/1130] Compiling C object gtk/libgtk.a.p/gtkcheckbutton.c.o
+[424/1130] Compiling C object gtk/libgtk.a.p/gtkcoloreditor.c.o
+[425/1130] Compiling C object gtk/libgtk.a.p/gtkcolorutils.c.o
+[426/1130] Compiling C object gtk/libgtk.a.p/gtkcolordialog.c.o
+[427/1130] Compiling C object gtk/libgtk.a.p/gtkcolorchooserwidget.c.o
+[428/1130] Compiling C object gtk/libgtk.a.p/gtkcolordialogbutton.c.o
+[429/1130] Compiling C object gtk/libgtk.a.p/gtkcolumnviewcell.c.o
+[430/1130] Compiling C object gtk/libgtk.a.p/gtkcolumnviewrow.c.o
+[431/1130] Compiling C object gtk/libgtk.a.p/gtkcolumnviewcolumn.c.o
+[432/1130] Compiling C object gtk/libgtk.a.p/gtkcolumnview.c.o
+[433/1130] Compiling C object gtk/libgtk.a.p/gtkbitset.c.o
+[434/1130] Compiling C object gtk/libgtk.a.p/gtkcolumnviewsorter.c.o
+[435/1130] Compiling C object gtk/libgtk.a.p/gtkconstraintguide.c.o
+[436/1130] Compiling C object gtk/libgtk.a.p/gtkconstraint.c.o
+[437/1130] Compiling C object gtk/libgtk.a.p/gtkcustomfilter.c.o
+[438/1130] Compiling C object gtk/libgtk.a.p/gtkcomposetable.c.o
+[439/1130] Compiling C object gtk/libgtk.a.p/gtkconstraintlayout.c.o
+[440/1130] Compiling C object gtk/libgtk.a.p/gtkdialogerror.c.o
+[441/1130] Compiling C object gtk/libgtk.a.p/gtkcustomsorter.c.o
+[442/1130] Compiling C object gtk/libgtk.a.p/gtkcustomlayout.c.o
+[443/1130] Compiling C object gtk/libgtk.a.p/gtkcssprovider.c.o
+[444/1130] Compiling C object gtk/libgtk.a.p/gtkdirectorylist.c.o
+[445/1130] Compiling C object gtk/libgtk.a.p/gtkdragsource.c.o
+[446/1130] Compiling C object gtk/libgtk.a.p/gtkdragicon.c.o
+[447/1130] Compiling C object gtk/libgtk.a.p/gtkdrawingarea.c.o
+[448/1130] Compiling C object gtk/libgtk.a.p/gtkdropcontrollermotion.c.o
+[449/1130] Compiling C object gtk/libgtk.a.p/gtkdroptarget.c.o
+[450/1130] Compiling C object gtk/libgtk.a.p/gtkdroptargetasync.c.o
+[451/1130] Compiling C object gtk/libgtk.a.p/gtkeditable.c.o
+[452/1130] Compiling C object gtk/libgtk.a.p/gtkdropdown.c.o
+[453/1130] Compiling C object gtk/libgtk.a.p/gtkeditablelabel.c.o
+[454/1130] Compiling C object gtk/libgtk.a.p/gtkemojicompletion.c.o
+[455/1130] Compiling C object gtk/libgtk.a.p/gtkemojichooser.c.o
+[456/1130] Compiling C object gtk/libgtk.a.p/gtkentrybuffer.c.o
+[457/1130] Compiling C object gtk/libgtk.a.p/gtkeventcontrollerfocus.c.o
+[458/1130] Compiling C object gtk/libgtk.a.p/gtkeventcontroller.c.o
+[459/1130] Compiling C object gtk/libgtk.a.p/gtkeventcontrollerlegacy.c.o
+[460/1130] Compiling C object gtk/libgtk.a.p/gtkentry.c.o
+[461/1130] Compiling C object gtk/libgtk.a.p/gtkeventcontrollerkey.c.o
+[462/1130] Compiling C object gtk/libgtk.a.p/gtkeventcontrollerscroll.c.o
+[463/1130] Compiling C object gtk/libgtk.a.p/gtkeventcontrollermotion.c.o
+[464/1130] Compiling C object gtk/libgtk.a.p/gtkexpander.c.o
+[465/1130] Compiling C object gtk/libgtk.a.p/gtkfilechooserdialog.c.o
+[466/1130] Compiling C object gtk/libgtk.a.p/gtkexpression.c.o
+[467/1130] Compiling C object gtk/libgtk.a.p/gtkfilechoosernative.c.o
+[468/1130] Compiling C object gtk/libgtk.a.p/gtkfilelauncher.c.o
+[469/1130] Compiling C object gtk/libgtk.a.p/gtkfilter.c.o
+[470/1130] Compiling C object gtk/libgtk.a.p/gtkfilefilter.c.o
+[471/1130] Compiling C object gtk/libgtk.a.p/gtkfiledialog.c.o
+[472/1130] Compiling C object gtk/libgtk.a.p/gtkflattenlistmodel.c.o
+[473/1130] Compiling C object gtk/libgtk.a.p/gtkfilechooserwidget.c.o
+[474/1130] Compiling C object gtk/libgtk.a.p/gtkfixed.c.o
+[475/1130] Compiling C object gtk/libgtk.a.p/gtkfixedlayout.c.o
+[476/1130] Compiling C object gtk/libgtk.a.p/gtkfilterlistmodel.c.o
+[477/1130] Compiling C object gtk/libgtk.a.p/gtkfontchooserdialog.c.o
+[478/1130] Compiling C object gtk/libgtk.a.p/gtkfontchooserutils.c.o
+[479/1130] Compiling C object gtk/libgtk.a.p/gtkfontdialog.c.o
+[480/1130] Compiling C object gtk/libgtk.a.p/gtkfontdialogbutton.c.o
+[481/1130] Compiling C object gtk/libgtk.a.p/gtkflowbox.c.o
+[482/1130] Compiling C object gtk/libgtk.a.p/gtkfontchooserwidget.c.o
+[483/1130] Compiling C object gtk/libgtk.a.p/gtkframe.c.o
+[484/1130] Compiling C object gtk/libgtk.a.p/gtkgesture.c.o
+[485/1130] Compiling C object gtk/libgtk.a.p/gtkgesturedrag.c.o
+[486/1130] Compiling C object gtk/libgtk.a.p/gtkgesturelongpress.c.o
+[487/1130] Compiling C object gtk/libgtk.a.p/gtkgestureclick.c.o
+[488/1130] Compiling C object gtk/libgtk.a.p/gtkgesturepan.c.o
+[489/1130] Compiling C object gtk/libgtk.a.p/gtkgesturerotate.c.o
+[490/1130] Compiling C object gtk/libgtk.a.p/gtkgesturesingle.c.o
+[491/1130] Compiling C object gtk/libgtk.a.p/gtkgesturestylus.c.o
+[492/1130] Compiling C object gtk/libgtk.a.p/gtkgestureswipe.c.o
+[493/1130] Compiling C object gtk/libgtk.a.p/gtkgesturezoom.c.o
+[494/1130] Compiling C object gtk/libgtk.a.p/gtkgraphicsoffload.c.o
+[495/1130] Compiling C object gtk/libgtk.a.p/gtkglarea.c.o
+[496/1130] Compiling C object gtk/libgtk.a.p/gtkgridview.c.o
+[497/1130] Compiling C object gtk/libgtk.a.p/gtkgridlayout.c.o
+[498/1130] Compiling C object gtk/libgtk.a.p/gtkgrid.c.o
+[499/1130] Compiling C object gtk/libgtk.a.p/gtkheaderbar.c.o
+[500/1130] Compiling C object gtk/libgtk.a.p/gtkiconpaintable.c.o
+[501/1130] Compiling C object gtk/libgtk.a.p/gtkimagedefinition.c.o
+[502/1130] Compiling C object gtk/libgtk.a.p/gtkimcontext.c.o
+[503/1130] Compiling C object gtk/libgtk.a.p/gtkimage.c.o
+[504/1130] Compiling C object gtk/libgtk.a.p/gtkicontheme.c.o
+[505/1130] Compiling C object gtk/libgtk.a.p/gtkimcontextsimple.c.o
+[506/1130] Compiling C object gtk/libgtk.a.p/gtkimmodule.c.o
+[507/1130] Compiling C object gtk/libgtk.a.p/gtkinscription.c.o
+[508/1130] Compiling C object gtk/libgtk.a.p/gtkimmulticontext.c.o
+[509/1130] Compiling C object gtk/libgtk.a.p/gtklayoutchild.c.o
+[510/1130] Compiling C object gtk/libgtk.a.p/gtklayoutmanager.c.o
+[511/1130] Compiling C object gtk/libgtk.a.p/gtklevelbar.c.o
+[512/1130] Compiling C object gtk/libgtk.a.p/gtklistbase.c.o
+[513/1130] Compiling C object gtk/libgtk.a.p/gtklinkbutton.c.o
+[514/1130] Compiling C object gtk/libgtk.a.p/gtklistfactorywidget.c.o
+[515/1130] Compiling C object gtk/libgtk.a.p/gtklistheaderbase.c.o
+[516/1130] Compiling C object gtk/libgtk.a.p/gtklistheader.c.o
+[517/1130] Compiling C object gtk/libgtk.a.p/gtklabel.c.o
+[518/1130] Compiling C object gtk/libgtk.a.p/gtklistbox.c.o
+[519/1130] Compiling C object gtk/libgtk.a.p/gtklistitem.c.o
+[520/1130] Compiling C object gtk/libgtk.a.p/gtklistheaderwidget.c.o
+[521/1130] Compiling C object gtk/libgtk.a.p/gtklistitembase.c.o
+[522/1130] Compiling C object gtk/libgtk.a.p/gtklistlistmodel.c.o
+[523/1130] Compiling C object gtk/libgtk.a.p/gtklistitemfactory.c.o
+[524/1130] Compiling C object gtk/libgtk.a.p/gtklistitemwidget.c.o
+[525/1130] Compiling C object gtk/libgtk.a.p/gtkmaplistmodel.c.o
+[526/1130] Compiling C object gtk/libgtk.a.p/gtklistview.c.o
+[527/1130] Compiling C object gtk/libgtk.a.p/gtklistitemmanager.c.o
+[528/1130] Compiling C object gtk/libgtk.a.p/gtkmediafile.c.o
+[529/1130] Compiling C object gtk/libgtk.a.p/gtkmediacontrols.c.o
+[530/1130] Compiling C object gtk/libgtk.a.p/gtkmediastream.c.o
+[531/1130] Compiling C object gtk/libgtk.a.p/gtkmain.c.o
+[532/1130] Compiling C object gtk/libgtk.a.p/gtkmessagedialog.c.o
+[533/1130] Compiling C object gtk/libgtk.a.p/gtkmodules.c.o
+[534/1130] Compiling C object gtk/libgtk.a.p/gtkmenubutton.c.o
+[535/1130] Compiling C object gtk/libgtk.a.p/gtkmultiselection.c.o
+[536/1130] Compiling C object gtk/libgtk.a.p/gtkmodelbutton.c.o
+[537/1130] Compiling C object gtk/libgtk.a.p/gtknomediafile.c.o
+[538/1130] Compiling C object gtk/libgtk.a.p/gtkmountoperation.c.o
+[539/1130] Compiling C object gtk/libgtk.a.p/gtkmultifilter.c.o
+[540/1130] Compiling C object gtk/libgtk.a.p/gtknoselection.c.o
+[541/1130] Compiling C object gtk/libgtk.a.p/gtkmultisorter.c.o
+[542/1130] Compiling C object gtk/libgtk.a.p/gtknativedialog.c.o
+[543/1130] Compiling C object gtk/libgtk.a.p/gtknumericsorter.c.o
+[544/1130] Compiling C object gtk/libgtk.a.p/gtkorientable.c.o
+[545/1130] Compiling C object gtk/libgtk.a.p/gtkoverlay.c.o
+[546/1130] Compiling C object gtk/libgtk.a.p/gtkpadcontroller.c.o
+[547/1130] Compiling C object gtk/libgtk.a.p/gtkoverlaylayout.c.o
+[548/1130] Compiling C object gtk/libgtk.a.p/gtkpasswordentrybuffer.c.o
+[549/1130] Compiling C object gtk/libgtk.a.p/gtkpasswordentry.c.o
+[550/1130] Compiling C object gtk/libgtk.a.p/gtkpaned.c.o
+[551/1130] Compiling C object gtk/libgtk.a.p/gtknotebook.c.o
+[552/1130] Compiling C object gtk/libgtk.a.p/gtkpicture.c.o
+[553/1130] Compiling C object gtk/libgtk.a.p/gtkpopover.c.o
+[554/1130] Compiling C object gtk/libgtk.a.p/gtkpopoverbin.c.o
+[555/1130] Compiling C object gtk/libgtk.a.p/gtkpopovermenu.c.o
+[556/1130] Compiling C object gtk/libgtk.a.p/gtkpopovermenubar.c.o
+[557/1130] Compiling C object gtk/libgtk.a.p/gtkpropertylookuplistmodel.c.o
+[558/1130] Compiling C object gtk/libgtk.a.p/gtkprintdialog.c.o
+[559/1130] Compiling C object gtk/libgtk.a.p/gtkprogressbar.c.o
+[560/1130] Compiling C object gtk/libgtk.a.p/gtkrecentmanager.c.o
+[561/1130] Compiling C object gtk/libgtk.a.p/gtkrendericon.c.o
+[562/1130] Compiling C object gtk/libgtk.a.p/gtkrenderbackground.c.o
+[563/1130] Compiling C object gtk/libgtk.a.p/gtkrange.c.o
+[564/1130] Compiling C object gtk/libgtk.a.p/gtkrenderborder.c.o
+[565/1130] Compiling C object gtk/libgtk.a.p/gtkrendernodepaintable.c.o
+[566/1130] Compiling C object gtk/libgtk.a.p/gtkrenderlayout.c.o
+[567/1130] Compiling C object gtk/libgtk.a.p/gtkroot.c.o
+[568/1130] Compiling C object gtk/libgtk.a.p/gtkrevealer.c.o
+[569/1130] Compiling C object gtk/libgtk.a.p/gtknative.c.o
+[570/1130] Compiling C object gtk/libgtk.a.p/gtkroundedbox.c.o
+[571/1130] Compiling C object gtk/libgtk.a.p/gtkscrollable.c.o
+[572/1130] Compiling C object gtk/libgtk.a.p/gtkscalebutton.c.o
+[573/1130] Compiling C object gtk/libgtk.a.p/gtkscale.c.o
+[574/1130] Compiling C object gtk/libgtk.a.p/gtkscrollinfo.c.o
+[575/1130] Compiling C object gtk/libgtk.a.p/gtkscrollbar.c.o
+[576/1130] Compiling C object gtk/libgtk.a.p/gtksectionmodel.c.o
+[577/1130] Compiling C object gtk/libgtk.a.p/gtkselectionmodel.c.o
+[578/1130] Compiling C object gtk/libgtk.a.p/gtkselectionfiltermodel.c.o
+[579/1130] Compiling C object gtk/libgtk.a.p/gtksearchbar.c.o
+[580/1130] Compiling C object gtk/libgtk.a.p/gtksearchentry.c.o
+[581/1130] Compiling C object gtk/libgtk.a.p/gtkshortcut.c.o
+[582/1130] Compiling C object gtk/libgtk.a.p/gtkseparator.c.o
+[583/1130] Compiling C object gtk/libgtk.a.p/gtkscrolledwindow.c.o
+[584/1130] Compiling C object gtk/libgtk.a.p/gtksettings.c.o
+[585/1130] Compiling C object gtk/libgtk.a.p/gtkshortcutaction.c.o
+[586/1130] Compiling C object gtk/libgtk.a.p/gtkshortcutmanager.c.o
+[587/1130] Compiling C object gtk/libgtk.a.p/gtkshortcutcontroller.c.o
+[588/1130] Compiling C object gtk/libgtk.a.p/gtkshortcuttrigger.c.o
+[589/1130] Compiling C object gtk/libgtk.a.p/gtksingleselection.c.o
+[590/1130] Compiling C object gtk/libgtk.a.p/gtksignallistitemfactory.c.o
+[591/1130] Compiling C object gtk/libgtk.a.p/gtksidebarrow.c.o
+[592/1130] Compiling C object gtk/libgtk.a.p/gtkslicelistmodel.c.o
+[593/1130] Compiling C object gtk/libgtk.a.p/gtksizegroup.c.o
+[594/1130] Compiling C object gtk/libgtk.a.p/gtksorter.c.o
+[595/1130] Compiling C object gtk/libgtk.a.p/gtksizerequest.c.o
+[596/1130] Compiling C object gtk/libgtk.a.p/gtkspinner.c.o
+[597/1130] Compiling C object gtk/libgtk.a.p/gtksortlistmodel.c.o
+[598/1130] Compiling C object gtk/libgtk.a.p/gtksnapshot.c.o
+[599/1130] Compiling C object gtk/libgtk.a.p/gtkspinbutton.c.o
+[600/1130] Compiling C object gtk/libgtk.a.p/gtkstringfilter.c.o
+[601/1130] Compiling C object gtk/libgtk.a.p/gtkstringsorter.c.o
+[602/1130] Compiling C object gtk/libgtk.a.p/gtkstacksidebar.c.o
+[603/1130] Compiling C object gtk/libgtk.a.p/gtkstackswitcher.c.o
+[604/1130] Compiling C object gtk/libgtk.a.p/gtkstringlist.c.o
+[605/1130] Compiling C object gtk/libgtk.a.p/gtkstack.c.o
+[606/1130] Compiling C object gtk/libgtk.a.p/gtkstyleprovider.c.o
+[607/1130] Compiling C object gtk/libgtk.a.p/gtksymbolicpaintable.c.o
+[608/1130] Compiling C object gtk/libgtk.a.p/gtkswitch.c.o
+[609/1130] Compiling C object gtk/libgtk.a.p/gtktestatcontext.c.o
+[610/1130] Compiling C object gtk/libgtk.a.p/gtktestutils.c.o
+[611/1130] Compiling C object gtk/libgtk.a.p/gtktextattributes.c.o
+[612/1130] Compiling C object gtk/libgtk.a.p/gtktext.c.o
+[613/1130] Compiling C object gtk/libgtk.a.p/gtktextchild.c.o
+[614/1130] Compiling C object gtk/libgtk.a.p/gtktextbtree.c.o
+[615/1130] Compiling C object gtk/libgtk.a.p/gtktextbuffer.c.o
+../gtk-src/gtk/gtktextbuffer.c:4745:15: warning: enumeration value 'PANGO_ATTR_WIDTH' not explicitly handled in switch [-Wswitch-enum]
+ 4745 |       switch (attr->klass->type)
+      |               ^~~~~~~~~~~~~~~~~
+../gtk-src/gtk/gtktextbuffer.c:4745:15: note: add missing switch cases
+ 4745 |       switch (attr->klass->type)
+      |               ^
+1 warning generated.
+[616/1130] Compiling C object gtk/libgtk.a.p/gtktexthandle.c.o
+[617/1130] Compiling C object gtk/libgtk.a.p/gtktextlinedisplaycache.c.o
+[618/1130] Compiling C object gtk/libgtk.a.p/gtktextmark.c.o
+[619/1130] Compiling C object gtk/libgtk.a.p/gtktextiter.c.o
+[620/1130] Compiling C object gtk/libgtk.a.p/gtktextsegment.c.o
+[621/1130] Compiling C object gtk/libgtk.a.p/gtktextlayout.c.o
+[622/1130] Compiling C object gtk/libgtk.a.p/gtktexttag.c.o
+[623/1130] Compiling C object gtk/libgtk.a.p/gtktexttagtable.c.o
+[624/1130] Compiling C object gtk/libgtk.a.p/gtktexttypes.c.o
+[625/1130] Compiling C object gtk/libgtk.a.p/gtktogglebutton.c.o
+[626/1130] Compiling C object gtk/libgtk.a.p/gtktextutil.c.o
+[627/1130] Compiling C object gtk/libgtk.a.p/gtktooltip.c.o
+[628/1130] Compiling C object gtk/libgtk.a.p/gtktreeexpander.c.o
+[629/1130] Compiling C object gtk/libgtk.a.p/gtktooltipwindow.c.o
+[630/1130] Compiling C object gtk/libgtk.a.p/gtktreelistrowsorter.c.o
+[631/1130] Compiling C object gtk/libgtk.a.p/gtkurilauncher.c.o
+[632/1130] Compiling C object gtk/libgtk.a.p/gtktreelistmodel.c.o
+[633/1130] Compiling C object gtk/libgtk.a.p/gtkversion.c.o
+[634/1130] Compiling C object gtk/libgtk.a.p/gtkviewport.c.o
+[635/1130] Compiling C object gtk/libgtk.a.p/gtkvideo.c.o
+[636/1130] Compiling C object gtk/libgtk.a.p/gtktextview.c.o
+[637/1130] Compiling C object gtk/libgtk.a.p/gtkwidgetfocus.c.o
+[638/1130] Compiling C object gtk/libgtk.a.p/gtkwidgetpaintable.c.o
+[639/1130] Compiling C object gtk/libgtk.a.p/gtkwindowgroup.c.o
+[640/1130] Compiling C object gtk/libgtk.a.p/gtkwindowcontrols.c.o
+[641/1130] Compiling C object gtk/libgtk.a.p/gtkwindowhandle.c.o
+[642/1130] Compiling C object gtk/libgtk.a.p/print_gtkpagesetup.c.o
+[643/1130] Compiling C object gtk/libgtk.a.p/gtkwindow.c.o
+[644/1130] Compiling C object gtk/libgtk.a.p/gtksvg.c.o
+[645/1130] Compiling C object gtk/libgtk.a.p/gtkwidget.c.o
+[646/1130] Compiling C object gtk/libgtk.a.p/print_gtkpapersize.c.o
+[647/1130] Compiling C object gtk/libgtk.a.p/print_gtkprintcontext.c.o
+[648/1130] Compiling C object gtk/libgtk.a.p/print_gtkprintutils.c.o
+[649/1130] Compiling C object gtk/libgtk.a.p/print_gtkprintoperationpreview.c.o
+[650/1130] Compiling C object gtk/libgtk.a.p/gsettings-mapping.c.o
+[651/1130] Compiling C object gtk/libgtk.a.p/fnmatch.c.o
+[652/1130] Compiling C object gtk/libgtk.a.p/print_gtkprintoperation.c.o
+[653/1130] Compiling C object gtk/libgtk.a.p/gtkaccessibleattributeset.c.o
+[654/1130] Compiling C object gtk/libgtk.a.p/print_gtkprintsettings.c.o
+[655/1130] Compiling C object gtk/libgtk.a.p/gdktextureutils.c.o
+[656/1130] Compiling C object gtk/libgtk.a.p/gtkactionobservable.c.o
+[657/1130] Compiling C object gtk/libgtk.a.p/gtkaccessiblevaluestatic.c.o
+[658/1130] Compiling C object gtk/libgtk.a.p/gtkactionobserver.c.o
+[659/1130] Compiling C object gtk/libgtk.a.p/gtkactionhelper.c.o
+[660/1130] Compiling C object gtk/libgtk.a.p/gtkapplicationimpl.c.o
+[661/1130] Compiling C object gtk/libgtk.a.p/gtkapplicationaccels.c.o
+[662/1130] Compiling C object gtk/libgtk.a.p/gtkallocatedbitmask.c.o
+[663/1130] Compiling C object gtk/libgtk.a.p/gtkactionmuxer.c.o
+[664/1130] Compiling C object gtk/libgtk.a.p/gtkbookmarksmanager.c.o
+[665/1130] Compiling C object gtk/libgtk.a.p/gtkbuilder-menus.c.o
+[666/1130] Compiling C object gtk/libgtk.a.p/gtkcolorplane.c.o
+[667/1130] Compiling C object gtk/libgtk.a.p/gtkbuiltinicon.c.o
+[668/1130] Compiling C object gtk/libgtk.a.p/gtkbuilderprecompile.c.o
+[669/1130] Compiling C object gtk/libgtk.a.p/gtkcolorpicker.c.o
+[670/1130] Compiling C object gtk/libgtk.a.p/gtkcolorpickerkwin.c.o
+[671/1130] Compiling C object gtk/libgtk.a.p/gtkcolorpickerportal.c.o
+[672/1130] Compiling C object gtk/libgtk.a.p/gtkcolorpickershell.c.o
+[673/1130] Compiling C object gtk/libgtk.a.p/gtkcolorscale.c.o
+[674/1130] Compiling C object gtk/libgtk.a.p/gtkcolorswatch.c.o
+[675/1130] Compiling C object gtk/libgtk.a.p/gtkcolumnviewcellwidget.c.o
+[676/1130] Compiling C object gtk/libgtk.a.p/gtkconstraintexpression.c.o
+[677/1130] Compiling C object gtk/libgtk.a.p/gtkcolumnviewrowwidget.c.o
+[678/1130] Compiling C object gtk/libgtk.a.p/gtkcolumnviewtitle.c.o
+[679/1130] Compiling C object gtk/libgtk.a.p/gtkconstraintvflparser.c.o
+[680/1130] Compiling C object gtk/libgtk.a.p/gtkconstraintsolver.c.o
+[681/1130] Compiling C object gtk/libgtk.a.p/gtkcssanimation.c.o
+[682/1130] Compiling C object gtk/libgtk.a.p/gtkcssarrayvalue.c.o
+[683/1130] Compiling C object gtk/libgtk.a.p/gtkcssbgsizevalue.c.o
+[684/1130] Compiling C object gtk/libgtk.a.p/gtkcssanimatedstyle.c.o
+[685/1130] Compiling C object gtk/libgtk.a.p/gtkcssbordervalue.c.o
+[686/1130] Compiling C object gtk/libgtk.a.p/gtkcsscustompropertypool.c.o
+[687/1130] Compiling C object gtk/libgtk.a.p/gtkcsscalcvalue.c.o
+[688/1130] Compiling C object gtk/libgtk.a.p/gtkcsscolor.c.o
+[689/1130] Compiling C object gtk/libgtk.a.p/gtkcsscornervalue.c.o
+[690/1130] Compiling C object gtk/libgtk.a.p/gtkcssdynamic.c.o
+[691/1130] Compiling C object gtk/libgtk.a.p/gtkcssdimensionvalue.c.o
+[692/1130] Compiling C object gtk/libgtk.a.p/gtkcsscolorvalue.c.o
+[693/1130] Compiling C object gtk/libgtk.a.p/gtkcsseasevalue.c.o
+[694/1130] Compiling C object gtk/libgtk.a.p/gtkcssfontfeaturesvalue.c.o
+[695/1130] Compiling C object gtk/libgtk.a.p/gtkcssenumvalue.c.o
+[696/1130] Compiling C object gtk/libgtk.a.p/gtkcssfiltervalue.c.o
+[697/1130] Compiling C object gtk/libgtk.a.p/gtkcssfontvariationsvalue.c.o
+[698/1130] Compiling C object gtk/libgtk.a.p/gtkcssimage.c.o
+[699/1130] Compiling C object gtk/libgtk.a.p/gtkcssimageconic.c.o
+[700/1130] Compiling C object gtk/libgtk.a.p/gtkcssimagecrossfade.c.o
+[701/1130] Compiling C object gtk/libgtk.a.p/gtkcssimagefallback.c.o
+[702/1130] Compiling C object gtk/libgtk.a.p/gtkcssimageicontheme.c.o
+[703/1130] Compiling C object gtk/libgtk.a.p/gtkcssimageinvalid.c.o
+[704/1130] Compiling C object gtk/libgtk.a.p/gtkcssimagepaintable.c.o
+[705/1130] Compiling C object gtk/libgtk.a.p/gtkcssimagescaled.c.o
+[706/1130] Compiling C object gtk/libgtk.a.p/gtkcssimagerecolor.c.o
+[707/1130] Compiling C object gtk/libgtk.a.p/gtkcssimagelinear.c.o
+[708/1130] Compiling C object gtk/libgtk.a.p/gtkcssimageradial.c.o
+[709/1130] Compiling C object gtk/libgtk.a.p/gtkcssimageurl.c.o
+[710/1130] Compiling C object gtk/libgtk.a.p/gtkcssimagevalue.c.o
+[711/1130] Compiling C object gtk/libgtk.a.p/gtkcssinheritvalue.c.o
+[712/1130] Compiling C object gtk/libgtk.a.p/gtkcssinitialvalue.c.o
+[713/1130] Compiling C object gtk/libgtk.a.p/gtkcssmediaquery.c.o
+[714/1130] Compiling C object gtk/libgtk.a.p/gtkcsslineheightvalue.c.o
+[715/1130] Compiling C object gtk/libgtk.a.p/gtkcsslookup.c.o
+[716/1130] Compiling C object gtk/libgtk.a.p/gtkcsskeyframes.c.o
+[717/1130] Compiling C object gtk/libgtk.a.p/gtkcssnodedeclaration.c.o
+[718/1130] Compiling C object gtk/libgtk.a.p/gtkcssnodestylecache.c.o
+[719/1130] Compiling C object gtk/libgtk.a.p/gtkcssnode.c.o
+[720/1130] Compiling C object gtk/libgtk.a.p/gtkcsspalettevalue.c.o
+[721/1130] Compiling C object gtk/libgtk.a.p/gtkcssreferencevalue.c.o
+[722/1130] Compiling C object gtk/libgtk.a.p/gtkcsspositionvalue.c.o
+[723/1130] Compiling C object gtk/libgtk.a.p/gtkcssnumbervalue.c.o
+[724/1130] Compiling C object gtk/libgtk.a.p/gtkcssrepeatvalue.c.o
+[725/1130] Compiling C object gtk/libgtk.a.p/gtkcssshorthandproperty.c.o
+[726/1130] Compiling C object gtk/libgtk.a.p/gtkcssshadowvalue.c.o
+[727/1130] Compiling C object gtk/libgtk.a.p/gtkcssselector.c.o
+[728/1130] Compiling C object gtk/libgtk.a.p/gtkcssshorthandpropertyimpl.c.o
+[729/1130] Compiling C object gtk/libgtk.a.p/gtkcssstringvalue.c.o
+[730/1130] Compiling C object gtk/libgtk.a.p/gtkcssstaticstyle.c.o
+[731/1130] Compiling C object gtk/libgtk.a.p/gtkcssstylechange.c.o
+[732/1130] Compiling C object gtk/libgtk.a.p/gtkcssstyleproperty.c.o
+[733/1130] Compiling C object gtk/libgtk.a.p/gtkcssstyle.c.o
+[734/1130] Compiling C object gtk/libgtk.a.p/gtkcsstransition.c.o
+[735/1130] Compiling C object gtk/libgtk.a.p/gtkcssstylepropertyimpl.c.o
+[736/1130] Compiling C object gtk/libgtk.a.p/gtkcsstransientnode.c.o
+[737/1130] Compiling C object gtk/libgtk.a.p/gtkcssvariableset.c.o
+[738/1130] Compiling C object gtk/libgtk.a.p/gtkcssunsetvalue.c.o
+[739/1130] Compiling C object gtk/libgtk.a.p/gtkcsstransformvalue.c.o
+[740/1130] Compiling C object gtk/libgtk.a.p/gtkcssvalue.c.o
+[741/1130] Compiling C object gtk/libgtk.a.p/gtkcsstypes.c.o
+[742/1130] Compiling C object gtk/libgtk.a.p/gtkdrop.c.o
+[743/1130] Compiling C object gtk/libgtk.a.p/gtkcsswidgetnode.c.o
+[744/1130] Compiling C object gtk/libgtk.a.p/gtkfilechoosererrorstack.c.o
+[745/1130] Compiling C object gtk/libgtk.a.p/gtkfilechooserentry.c.o
+[746/1130] Compiling C object gtk/libgtk.a.p/gtkfilechoosernativeportal.c.o
+[747/1130] Compiling C object gtk/libgtk.a.p/gtkfilechooserutils.c.o
+[748/1130] Compiling C object gtk/libgtk.a.p/gtkfilechoosercell.c.o
+[749/1130] Compiling C object gtk/libgtk.a.p/gtkfilethumbnail.c.o
+[750/1130] Compiling C object gtk/libgtk.a.p/gtkfontfilter.c.o
+[751/1130] Compiling C object gtk/libgtk.a.p/gtkfilesystemmodel.c.o
+[752/1130] Compiling C object gtk/libgtk.a.p/gtkgizmo.c.o
+[753/1130] Compiling C object gtk/libgtk.a.p/gtkiconcachevalidator.c.o
+[754/1130] Compiling C object gtk/libgtk.a.p/gtkjoinedmenu.c.o
+[755/1130] Compiling C object gtk/libgtk.a.p/gtkiconcache.c.o
+[756/1130] Compiling C object gtk/libgtk.a.p/gtkkineticscrolling.c.o
+[757/1130] Compiling C object gtk/libgtk.a.p/gtkmenutracker.c.o
+[758/1130] Compiling C object gtk/libgtk.a.p/gtkiconhelper.c.o
+[759/1130] Compiling C object gtk/libgtk.a.p/gtkmenutrackeritem.c.o
+[760/1130] Compiling C object gtk/libgtk.a.p/gtkmenusectionbox.c.o
+[761/1130] Compiling C object gtk/libgtk.a.p/gtkpanedhandle.c.o
+[762/1130] Compiling C object gtk/libgtk.a.p/gtkmagnifier.c.o
+[763/1130] Compiling C object gtk/libgtk.a.p/gtkpango.c.o
+../gtk-src/gtk/gtkpango.c:81:11: warning: enumeration value 'PANGO_ATTR_WIDTH' not explicitly handled in switch [-Wswitch-enum]
+   81 |   switch (type)
+      |           ^~~~
+../gtk-src/gtk/gtkpango.c:81:11: note: add missing switch cases
+   81 |   switch (type)
+      |           ^
+1 warning generated.
+[764/1130] Compiling C object gtk/libgtk.a.p/gtkpathbar.c.o
+[765/1130] Compiling C object gtk/libgtk.a.p/gtkplacesviewrow.c.o
+[766/1130] Compiling C object gtk/libgtk.a.p/gtkpointerfocus.c.o
+[767/1130] Compiling C object gtk/libgtk.a.p/gtkprivate.c.o
+[768/1130] Compiling C object gtk/libgtk.a.p/gtkplacesview.c.o
+[769/1130] Compiling C object gtk/libgtk.a.p/gtkplacessidebar.c.o
+[770/1130] Compiling C object gtk/libgtk.a.p/gtkquery.c.o
+[771/1130] Compiling C object gtk/libgtk.a.p/gtkpopovercontent.c.o
+[772/1130] Compiling C object gtk/libgtk.a.p/gtkprogresstracker.c.o
+[773/1130] Compiling C object gtk/libgtk.a.p/gtkrbtree.c.o
+[774/1130] Compiling C object gtk/libgtk.a.p/gtksecurememory.c.o
+[775/1130] Compiling C object gtk/libgtk.a.p/gtksizerequestcache.c.o
+[776/1130] Compiling C object gtk/libgtk.a.p/gtkscaler.c.o
+[777/1130] Compiling C object gtk/libgtk.a.p/gtkstringpair.c.o
+[778/1130] Compiling C object gtk/libgtk.a.p/gtksearchengine.c.o
+[779/1130] Compiling C object gtk/libgtk.a.p/gtksearchenginemodel.c.o
+[780/1130] Compiling C object gtk/libgtk.a.p/gtktextencoding.c.o
+[781/1130] Compiling C object gtk/libgtk.a.p/gtksortkeys.c.o
+[782/1130] Compiling C object gtk/libgtk.a.p/gtkstyleanimation.c.o
+[783/1130] Compiling C object gtk/libgtk.a.p/gtktexthistory.c.o
+[784/1130] Compiling C object gtk/libgtk.a.p/gtkstylecascade.c.o
+[785/1130] Compiling C object gtk/libgtk.a.p/gtkstyleproperty.c.o
+[786/1130] Compiling C object gtk/libgtk.a.p/gtktextviewchild.c.o
+[787/1130] Compiling C object gtk/libgtk.a.p/gtktrashmonitor.c.o
+[788/1130] Compiling C object gtk/libgtk.a.p/timsort_gtktimsort.c.o
+[789/1130] Compiling C object gtk/libgtk.a.p/print_backends_gtkprintbackendfile.c.o
+[790/1130] Compiling C object gtk/libgtk.a.p/print_gtkcustompaperunixdialog.c.o
+[791/1130] Compiling C object gtk/libgtk.a.p/print_gtkprinteroption.c.o
+[792/1130] Compiling C object gtk/libgtk.a.p/print_gtkpagethumbnail.c.o
+[793/1130] Compiling C object gtk/libgtk.a.p/print_gtkpagesetupunixdialog.c.o
+[794/1130] Compiling C object gtk/libgtk.a.p/print_gtkprinteroptionset.c.o
+[795/1130] Compiling C object gtk/libgtk.a.p/print_gtkprintbackend.c.o
+[796/1130] Compiling C object gtk/libgtk.a.p/print_gtkprinter.c.o
+[797/1130] Compiling C object gtk/libgtk.a.p/print_gtkprintjob.c.o
+[798/1130] Compiling C object gtk/libgtk.a.p/print_gtkprinteroptionwidget.c.o
+[799/1130] Compiling C object gtk/libgtk.a.p/gtkmountoperation-stub.c.o
+[800/1130] Compiling C object gtk/libgtk.a.p/print_gtkprintoperation-unix.c.o
+[801/1130] Compiling C object gtk/libgtk.a.p/print_gtkprintoperation-portal.c.o
+[802/1130] Compiling C object gtk/libgtk.a.p/gtkopenuriportal.c.o
+[803/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspicache.c.o
+[804/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspiaction.c.o
+[805/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspicomponent.c.o
+[806/1130] Compiling C object gtk/libgtk.a.p/print_gtkprintunixdialog.c.o
+[807/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspieditabletext.c.o
+[808/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspicontext.c.o
+[809/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspiroot.c.o
+[810/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspisocket.c.o
+[811/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspiselection.c.o
+[812/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspipango.c.o
+[813/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspivalue.c.o
+[814/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspiutils.c.o
+[815/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspihypertext.c.o
+[816/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspitextbuffer.c.o
+[817/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspihyperlink.c.o
+[818/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkappchooser.c.o
+[819/1130] Compiling C object gtk/libgtk.a.p/a11y_gtkatspitext.c.o
+[820/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkappchooserdialog.c.o
+[821/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkappchooserbutton.c.o
+[822/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkappchooserwidget.c.o
+[823/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellareacontext.c.o
+[824/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkassistant.c.o
+[825/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellarea.c.o
+[826/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellareabox.c.o
+[827/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcelleditable.c.o
+[828/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcelllayout.c.o
+[829/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellareaboxcontext.c.o
+[830/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellrendereraccel.c.o
+[831/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellrenderercombo.c.o
+[832/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellrenderer.c.o
+[833/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellrendererprogress.c.o
+[834/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellrendererpixbuf.c.o
+[835/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellrendererspin.c.o
+[836/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellrendererspinner.c.o
+[837/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellrenderertoggle.c.o
+[838/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellview.c.o
+[839/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcellrenderertext.c.o
+[840/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcolorchooser.c.o
+[841/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcolorbutton.c.o
+[842/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcomboboxtext.c.o
+[843/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkdialog.c.o
+[844/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkfilechooser.c.o
+[845/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkentrycompletion.c.o
+[846/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkcombobox.c.o
+[847/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkfontchooser.c.o
+[848/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkfontbutton.c.o
+[849/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtklockbutton.c.o
+[850/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkinfobar.c.o
+[851/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkrender.c.o
+[852/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkliststore.c.o
+[853/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkshortcutsgroup.c.o
+[854/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkshortcutlabel.c.o
+[855/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkshortcutssection.c.o
+[856/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkiconview.c.o
+[857/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkshortcutsshortcut.c.o
+[858/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkshow.c.o
+[859/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtktreedatalist.c.o
+[860/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkshortcutswindow.c.o
+[861/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkstatusbar.c.o
+[862/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtktreednd.c.o
+[863/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkstylecontext.c.o
+[864/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtktreemodel.c.o
+[865/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtktreerbtree.c.o
+[866/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtktreemodelsort.c.o
+[867/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtktreemodelfilter.c.o
+[868/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtktreeselection.c.o
+[869/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtktreesortable.c.o
+[870/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtkvolumebutton.c.o
+[871/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtktreepopover.c.o
+[872/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtktreestore.c.o
+[873/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtktreeviewcolumn.c.o
+[874/1130] Compiling C object gtk/libgtk.a.p/inspector_a11y.c.o
+[875/1130] Compiling C object gtk/libgtk.a.p/inspector_action-editor.c.o
+[876/1130] Compiling C object gtk/libgtk.a.p/inspector_a11yoverlay.c.o
+[877/1130] Compiling C object gtk/libgtk.a.p/inspector_clipboard.c.o
+[878/1130] Compiling C object gtk/libgtk.a.p/inspector_action-holder.c.o
+[879/1130] Compiling C object gtk/libgtk.a.p/inspector_baselineoverlay.c.o
+[880/1130] Compiling C object gtk/libgtk.a.p/inspector_actions.c.o
+[881/1130] Compiling C object gtk/libgtk.a.p/inspector_css-editor.c.o
+[882/1130] Compiling C object gtk/libgtk.a.p/inspector_controllers.c.o
+[883/1130] Compiling C object gtk/libgtk.a.p/inspector_eventrecording.c.o
+[884/1130] Compiling C object gtk/libgtk.a.p/inspector_fpsoverlay.c.o
+[885/1130] Compiling C object gtk/libgtk.a.p/inspector_focusoverlay.c.o
+[886/1130] Compiling C object gtk/libgtk.a.p/inspector_css-node-tree.c.o
+[887/1130] Compiling C object gtk/libgtk.a.p/inspector_graphdata.c.o
+[888/1130] Compiling C object gtk/libgtk.a.p/inspector_graphrenderer.c.o
+[889/1130] Compiling C object gtk/libgtk.a.p/inspector_gtkdataviewer.c.o
+[890/1130] Compiling C object gtk/libgtk.a.p/deprecated_gtktreeview.c.o
+[891/1130] Compiling C object gtk/libgtk.a.p/inspector_highlightoverlay.c.o
+[892/1130] Compiling C object gtk/libgtk.a.p/inspector_inspectoroverlay.c.o
+[893/1130] Compiling C object gtk/libgtk.a.p/inspector_general.c.o
+[894/1130] Compiling C object gtk/libgtk.a.p/inspector_inspect-button.c.o
+[895/1130] Compiling C object gtk/libgtk.a.p/inspector_list-data.c.o
+[896/1130] Compiling C object gtk/libgtk.a.p/inspector_init.c.o
+[897/1130] Compiling C object gtk/libgtk.a.p/inspector_magnifier.c.o
+[898/1130] Compiling C object gtk/libgtk.a.p/inspector_logs.c.o
+[899/1130] Compiling C object gtk/libgtk.a.p/inspector_layoutoverlay.c.o
+[900/1130] Compiling C object gtk/libgtk.a.p/inspector_menu.c.o
+[901/1130] Compiling C object gtk/libgtk.a.p/inspector_measuregraph.c.o
+[902/1130] Compiling C object gtk/libgtk.a.p/inspector_object-tree.c.o
+[903/1130] Compiling C object gtk/libgtk.a.p/inspector_nodewrapper.c.o
+[904/1130] Compiling C object gtk/libgtk.a.p/inspector_misc-info.c.o
+[905/1130] Compiling C object gtk/libgtk.a.p/inspector_prop-holder.c.o
+[906/1130] Compiling C object gtk/libgtk.a.p/inspector_recording.c.o
+[907/1130] Compiling C object gtk/libgtk.a.p/inspector_recorderrow.c.o
+[908/1130] Compiling C object gtk/libgtk.a.p/inspector_prop-editor.c.o
+[909/1130] Compiling C object gtk/libgtk.a.p/inspector_prop-list.c.o
+[910/1130] Compiling C object gtk/libgtk.a.p/inspector_renderrecording.c.o
+[911/1130] Compiling C object gtk/libgtk.a.p/inspector_resource-holder.c.o
+[912/1130] Compiling C object gtk/libgtk.a.p/inspector_shortcuts.c.o
+[913/1130] Compiling C object gtk/libgtk.a.p/inspector_recorder.c.o
+[914/1130] Compiling C object gtk/libgtk.a.p/inspector_size-groups.c.o
+[915/1130] Compiling C object gtk/libgtk.a.p/inspector_startrecording.c.o
+[916/1130] Compiling C object gtk/libgtk.a.p/inspector_resource-list.c.o
+[917/1130] Compiling C object gtk/libgtk.a.p/inspector_statistics.c.o
+[918/1130] Compiling C object gtk/libgtk.a.p/inspector_strv-editor.c.o
+[919/1130] Compiling C object gtk/libgtk.a.p/inspector_subsurfaceoverlay.c.o
+[920/1130] Compiling C object gtk/libgtk.a.p/inspector_tree-data.c.o
+[921/1130] Compiling C object gtk/libgtk.a.p/inspector_variant-editor.c.o
+[922/1130] Compiling C object gtk/libgtk.a.p/inspector_type-info.c.o
+[923/1130] Compiling C object gtk/libgtk.a.p/inspector_updatesoverlay.c.o
+[924/1130] Compiling C object gtk/libgtk.a.p/language-names.c.o
+[925/1130] Compiling C object gtk/libgtk.a.p/inspector_visual.c.o
+[926/1130] Compiling C object gtk/libgtk.a.p/inspector_window.c.o
+[927/1130] Linking static target gsk/libgsk_f16c.a
+warning: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib: archive library: gsk/libgsk_f16c.a the table of contents is empty (no object file members in the library define global symbols)
+warning: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib: archive library: gsk/libgsk_f16c.a the table of contents is empty (no object file members in the library define global symbols)
+[928/1130] Linking static target gtk/css/libgtk_css.a
+[929/1130] Linking static target gdk/libgdk.a
+[930/1130] Linking static target gsk/libgsk.a
+[931/1130] Linking static target gtk/libgtk.a
+[932/1130] Linking target gtk/libgtk-4.1.dylib
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[933/1130] Compiling C object tools/gtk4-path-tool.p/gtk-path-tool-decompose.c.o
+[934/1130] Compiling C object gtk/compose/compose-parse.p/compose-parse.c.o
+[935/1130] Compiling C object tools/gtk4-path-tool.p/gtk-path-tool.c.o
+[936/1130] Compiling C object tools/gtk4-path-tool.p/gtk-path-tool-info.c.o
+[937/1130] Generating symbol file gtk/libgtk-4.1.dylib.p/libgtk-4.1.dylib.symbols
+[938/1130] Compiling C object tools/gtk4-path-tool.p/gtk-path-tool-reverse.c.o
+[939/1130] Compiling C object tools/gtk4-path-tool.p/gtk-path-tool-show.c.o
+[940/1130] Compiling C object tools/gtk4-path-tool.p/gtk-path-tool-restrict.c.o
+[941/1130] Compiling C object tools/gtk4-path-tool.p/gtk-path-tool-render.c.o
+[942/1130] Compiling C object tools/gtk4-path-tool.p/gtk-path-tool-utils.c.o
+[943/1130] Compiling C object tools/gtk4-builder-tool.p/gtk-builder-tool.c.o
+[944/1130] Compiling C object tools/gtk4-query-settings.p/gtk-query-settings.c.o
+[945/1130] Compiling C object tools/gtk4-path-tool.p/path-view.c.o
+[946/1130] Compiling C object tools/gtk4-builder-tool.p/gtk-builder-tool-validate.c.o
+[947/1130] Compiling C object tools/gtk4-builder-tool.p/gtk-builder-tool-enumerate.c.o
+[948/1130] Compiling C object tools/gtk4-builder-tool.p/gtk-builder-tool-preview.c.o
+[949/1130] Compiling C object tools/gtk4-builder-tool.p/gtk-builder-tool-screenshot.c.o
+[950/1130] Compiling C object tools/gtk4-builder-tool.p/gtk-builder-tool-simplify.c.o
+[951/1130] Compiling C object tools/gtk4-builder-tool.p/fake-scope.c.o
+[952/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-tool.c.o
+[953/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-filter-strip.c.o
+[954/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-filter-copypaste.c.o
+[955/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-filter-texture.c.o
+[956/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-tool-benchmark.c.o
+[957/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-tool-compare.c.o
+[958/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-tool-convert.c.o
+[959/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-tool-extract.c.o
+[960/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-tool-filter.c.o
+[961/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-tool-info.c.o
+[962/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-tool-match.c.o
+[963/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-tool-show.c.o
+[964/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-rendernode-tool-render.c.o
+[965/1130] Compiling C object tools/gtk4-rendernode-tool.p/gtk-tool-utils.c.o
+[966/1130] Compiling C object tools/gtk4-rendernode-tool.p/.._testsuite_reftests_reftest-compare.c.o
+[967/1130] Compiling C object tools/gtk4-image-tool.p/gtk-image-tool.c.o
+[968/1130] Compiling C object tools/gtk4-image-tool.p/gtk-image-tool-info.c.o
+[969/1130] Compiling C object tools/gtk4-image-tool.p/gtk-image-tool-compare.c.o
+[970/1130] Compiling C object tools/gtk4-image-tool.p/gtk-image-tool-convert.c.o
+[971/1130] Compiling C object tools/gtk4-image-tool.p/gtk-image-tool-play.c.o
+[972/1130] Compiling C object tools/gtk4-image-tool.p/gtk-image-tool-relabel.c.o
+[973/1130] Compiling C object tools/gtk4-update-icon-cache.p/.._gtk_gtkiconcachevalidator.c.o
+[974/1130] Compiling C object tools/gtk4-image-tool.p/gtk-image-tool-show.c.o
+[975/1130] Compiling C object tools/gtk4-image-tool.p/gtk-tool-utils.c.o
+[976/1130] Linking static target gdk/ios/libgdk-ios.a
+[977/1130] Generating gtk/bn_gresource with a custom command
+[978/1130] Generating gtk/de_gresource with a custom command
+[979/1130] Generating gtk/da_gresource with a custom command
+[980/1130] Generating gtk/fr_gresource with a custom command
+[981/1130] Generating gtk/es_gresource with a custom command
+[982/1130] Generating gtk/et_gresource with a custom command
+[983/1130] Generating gtk/fi_gresource with a custom command
+[984/1130] Compiling C object tools/gtk4-update-icon-cache.p/updateiconcache.c.o
+[985/1130] Generating gtk/hi_gresource with a custom command
+[986/1130] Generating gtk/hu_gresource with a custom command
+[987/1130] Generating gtk/it_gresource with a custom command
+[988/1130] Compiling C object tools/gtk4-encode-symbolic-svg.p/encodesymbolic.c.o
+[989/1130] Generating gtk/ko_gresource with a custom command
+[990/1130] Generating gtk/ja_gresource with a custom command
+[991/1130] Generating gtk/lt_gresource with a custom command
+[992/1130] Generating gtk/ms_gresource with a custom command
+[993/1130] Generating gtk/nb_gresource with a custom command
+[994/1130] Generating gtk/nl_gresource with a custom command
+[995/1130] Generating gtk/pl_gresource with a custom command
+[996/1130] Generating gtk/pt_gresource with a custom command
+[997/1130] Compiling C object tools/gtk4-image-tool.p/.._testsuite_reftests_reftest-compare.c.o
+[998/1130] Generating gtk/ru_gresource with a custom command
+[999/1130] Generating gtk/sv_gresource with a custom command
+[1000/1130] Generating gtk/th_gresource with a custom command
+[1001/1130] Generating gtk/uk_gresource with a custom command
+[1002/1130] Generating gtk/zh_gresource with a custom command
+[1003/1130] Compiling gschemas gtk/gsettings-compile-gtk
+[1004/1130] Linking target tools/gtk4-path-tool
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[1005/1130] Linking target tools/gtk4-query-settings
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[1006/1130] Linking target tools/gtk4-builder-tool
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[1007/1130] Compiling C object tools/gtk4-launch.p/gtk-launch.c.o
+[1008/1130] Linking target tools/gtk4-rendernode-tool
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[1009/1130] Linking target tools/gtk4-update-icon-cache
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[1010/1130] Linking target tools/gtk4-image-tool
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[1011/1130] Linking target gtk/compose/compose-parse
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[1012/1130] Building translation po/ab/LC_MESSAGES/gtk40-ab.mo
+[1013/1130] Building translation po/am/LC_MESSAGES/gtk40-am.mo
+[1014/1130] Building translation po/af/LC_MESSAGES/gtk40-af.mo
+[1015/1130] Building translation po/an/LC_MESSAGES/gtk40-an.mo
+[1016/1130] Building translation po/ang/LC_MESSAGES/gtk40-ang.mo
+[1017/1130] Building translation po/ar/LC_MESSAGES/gtk40-ar.mo
+[1018/1130] Building translation po/as/LC_MESSAGES/gtk40-as.mo
+[1019/1130] Building translation po/ast/LC_MESSAGES/gtk40-ast.mo
+[1020/1130] Building translation po/az_IR/LC_MESSAGES/gtk40-az_IR.mo
+[1021/1130] Building translation po/az/LC_MESSAGES/gtk40-az.mo
+[1022/1130] Building translation po/be@latin/LC_MESSAGES/gtk40-be@latin.mo
+[1023/1130] Building translation po/be/LC_MESSAGES/gtk40-be.mo
+[1024/1130] Building translation po/bg/LC_MESSAGES/gtk40-bg.mo
+[1025/1130] Building translation po/bn/LC_MESSAGES/gtk40-bn.mo
+[1026/1130] Building translation po/bn_IN/LC_MESSAGES/gtk40-bn_IN.mo
+[1027/1130] Building translation po/br/LC_MESSAGES/gtk40-br.mo
+[1028/1130] Linking target tools/gtk4-launch
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[1029/1130] Building translation po/bs/LC_MESSAGES/gtk40-bs.mo
+[1030/1130] Building translation po/ca/LC_MESSAGES/gtk40-ca.mo
+[1031/1130] Building translation po/ca@valencia/LC_MESSAGES/gtk40-ca@valencia.mo
+[1032/1130] Building translation po/crh/LC_MESSAGES/gtk40-crh.mo
+[1033/1130] Building translation po/cs/LC_MESSAGES/gtk40-cs.mo
+[1034/1130] Building translation po/cy/LC_MESSAGES/gtk40-cy.mo
+[1035/1130] Building translation po/da/LC_MESSAGES/gtk40-da.mo
+[1036/1130] Building translation po/de/LC_MESSAGES/gtk40-de.mo
+[1037/1130] Building translation po/dz/LC_MESSAGES/gtk40-dz.mo
+[1038/1130] Building translation po/en/LC_MESSAGES/gtk40-en.mo
+[1039/1130] Linking target tools/gtk4-encode-symbolic-svg
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[1040/1130] Building translation po/el/LC_MESSAGES/gtk40-el.mo
+[1041/1130] Building translation po/en_CA/LC_MESSAGES/gtk40-en_CA.mo
+[1042/1130] Building translation po/en_GB/LC_MESSAGES/gtk40-en_GB.mo
+[1043/1130] Building translation po/en@shaw/LC_MESSAGES/gtk40-en@shaw.mo
+[1044/1130] Building translation po/eo/LC_MESSAGES/gtk40-eo.mo
+[1045/1130] Building translation po/et/LC_MESSAGES/gtk40-et.mo
+[1046/1130] Building translation po/eu/LC_MESSAGES/gtk40-eu.mo
+[1047/1130] Building translation po/fa/LC_MESSAGES/gtk40-fa.mo
+[1048/1130] Building translation po/es/LC_MESSAGES/gtk40-es.mo
+[1049/1130] Building translation po/fi/LC_MESSAGES/gtk40-fi.mo
+[1050/1130] Building translation po/fr/LC_MESSAGES/gtk40-fr.mo
+[1051/1130] Building translation po/ga/LC_MESSAGES/gtk40-ga.mo
+[1052/1130] Building translation po/gd/LC_MESSAGES/gtk40-gd.mo
+[1053/1130] Building translation po/gu/LC_MESSAGES/gtk40-gu.mo
+[1054/1130] Building translation po/gl/LC_MESSAGES/gtk40-gl.mo
+[1055/1130] Building translation po/fur/LC_MESSAGES/gtk40-fur.mo
+[1056/1130] Building translation po/hy/LC_MESSAGES/gtk40-hy.mo
+[1057/1130] Building translation po/hi/LC_MESSAGES/gtk40-hi.mo
+[1058/1130] Building translation po/hr/LC_MESSAGES/gtk40-hr.mo
+[1059/1130] Building translation po/hu/LC_MESSAGES/gtk40-hu.mo
+[1060/1130] Building translation po/io/LC_MESSAGES/gtk40-io.mo
+[1061/1130] Building translation po/id/LC_MESSAGES/gtk40-id.mo
+[1062/1130] Building translation po/ie/LC_MESSAGES/gtk40-ie.mo
+[1063/1130] Building translation po/he/LC_MESSAGES/gtk40-he.mo
+[1064/1130] Building translation po/ia/LC_MESSAGES/gtk40-ia.mo
+[1065/1130] Building translation po/it/LC_MESSAGES/gtk40-it.mo
+[1066/1130] Building translation po/kab/LC_MESSAGES/gtk40-kab.mo
+[1067/1130] Building translation po/ja/LC_MESSAGES/gtk40-ja.mo
+[1068/1130] Building translation po/is/LC_MESSAGES/gtk40-is.mo
+[1069/1130] Building translation po/km/LC_MESSAGES/gtk40-km.mo
+[1070/1130] Building translation po/ka/LC_MESSAGES/gtk40-ka.mo
+[1071/1130] Building translation po/ky/LC_MESSAGES/gtk40-ky.mo
+[1072/1130] Building translation po/kn/LC_MESSAGES/gtk40-kn.mo
+[1073/1130] Building translation po/ku/LC_MESSAGES/gtk40-ku.mo
+[1074/1130] Building translation po/ko/LC_MESSAGES/gtk40-ko.mo
+[1075/1130] Building translation po/kk/LC_MESSAGES/gtk40-kk.mo
+[1076/1130] Building translation po/li/LC_MESSAGES/gtk40-li.mo
+[1077/1130] Building translation po/lg/LC_MESSAGES/gtk40-lg.mo
+[1078/1130] Building translation po/mai/LC_MESSAGES/gtk40-mai.mo
+[1079/1130] Building translation po/lv/LC_MESSAGES/gtk40-lv.mo
+[1080/1130] Building translation po/mjw/LC_MESSAGES/gtk40-mjw.mo
+[1081/1130] Building translation po/mi/LC_MESSAGES/gtk40-mi.mo
+[1082/1130] Building translation po/mk/LC_MESSAGES/gtk40-mk.mo
+[1083/1130] Building translation po/mn/LC_MESSAGES/gtk40-mn.mo
+[1084/1130] Building translation po/ml/LC_MESSAGES/gtk40-ml.mo
+[1085/1130] Building translation po/mr/LC_MESSAGES/gtk40-mr.mo
+[1086/1130] Building translation po/lt/LC_MESSAGES/gtk40-lt.mo
+[1087/1130] Building translation po/nds/LC_MESSAGES/gtk40-nds.mo
+[1088/1130] Building translation po/my/LC_MESSAGES/gtk40-my.mo
+[1089/1130] Building translation po/ms/LC_MESSAGES/gtk40-ms.mo
+[1090/1130] Building translation po/nb/LC_MESSAGES/gtk40-nb.mo
+[1091/1130] Building translation po/nn/LC_MESSAGES/gtk40-nn.mo
+[1092/1130] Building translation po/nso/LC_MESSAGES/gtk40-nso.mo
+[1093/1130] Building translation po/nl/LC_MESSAGES/gtk40-nl.mo
+[1094/1130] Building translation po/oc/LC_MESSAGES/gtk40-oc.mo
+[1095/1130] Building translation po/or/LC_MESSAGES/gtk40-or.mo
+[1096/1130] Building translation po/ne/LC_MESSAGES/gtk40-ne.mo
+[1097/1130] Building translation po/ps/LC_MESSAGES/gtk40-ps.mo
+[1098/1130] Building translation po/pl/LC_MESSAGES/gtk40-pl.mo
+[1099/1130] Building translation po/pa/LC_MESSAGES/gtk40-pa.mo
+[1100/1130] Building translation po/pt/LC_MESSAGES/gtk40-pt.mo
+[1101/1130] Building translation po/pt_BR/LC_MESSAGES/gtk40-pt_BR.mo
+[1102/1130] Building translation po/ro/LC_MESSAGES/gtk40-ro.mo
+[1103/1130] Building translation po/rw/LC_MESSAGES/gtk40-rw.mo
+[1104/1130] Building translation po/si/LC_MESSAGES/gtk40-si.mo
+[1105/1130] Building translation po/sl/LC_MESSAGES/gtk40-sl.mo
+[1106/1130] Building translation po/sq/LC_MESSAGES/gtk40-sq.mo
+[1107/1130] Building translation po/ru/LC_MESSAGES/gtk40-ru.mo
+[1108/1130] Building translation po/sk/LC_MESSAGES/gtk40-sk.mo
+[1109/1130] Building translation po/sr@ije/LC_MESSAGES/gtk40-sr@ije.mo
+[1110/1130] Building translation po/sr/LC_MESSAGES/gtk40-sr.mo
+[1111/1130] Building translation po/sr@latin/LC_MESSAGES/gtk40-sr@latin.mo
+[1112/1130] Building translation po/sv/LC_MESSAGES/gtk40-sv.mo
+[1113/1130] Building translation po/te/LC_MESSAGES/gtk40-te.mo
+[1114/1130] Building translation po/ta/LC_MESSAGES/gtk40-ta.mo
+[1115/1130] Building translation po/tt/LC_MESSAGES/gtk40-tt.mo
+[1116/1130] Building translation po/tg/LC_MESSAGES/gtk40-tg.mo
+[1117/1130] Building translation po/tr/LC_MESSAGES/gtk40-tr.mo
+[1118/1130] Building translation po/ur/LC_MESSAGES/gtk40-ur.mo
+[1119/1130] Building translation po/th/LC_MESSAGES/gtk40-th.mo
+[1120/1130] Building translation po/ug/LC_MESSAGES/gtk40-ug.mo
+[1121/1130] Building translation po/uk/LC_MESSAGES/gtk40-uk.mo
+[1122/1130] Building translation po/uz@cyrillic/LC_MESSAGES/gtk40-uz@cyrillic.mo
+[1123/1130] Building translation po/wa/LC_MESSAGES/gtk40-wa.mo
+[1124/1130] Building translation po/uz/LC_MESSAGES/gtk40-uz.mo
+[1125/1130] Building translation po/xh/LC_MESSAGES/gtk40-xh.mo
+[1126/1130] Building translation po/yi/LC_MESSAGES/gtk40-yi.mo
+[1127/1130] Building translation po/vi/LC_MESSAGES/gtk40-vi.mo
+[1128/1130] Building translation po/zh_HK/LC_MESSAGES/gtk40-zh_HK.mo
+[1129/1130] Building translation po/zh_CN/LC_MESSAGES/gtk40-zh_CN.mo
+[1130/1130] Building translation po/zh_TW/LC_MESSAGES/gtk40-zh_TW.mo
