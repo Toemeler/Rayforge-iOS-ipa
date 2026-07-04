@@ -37,7 +37,7 @@ gdk_ios_surface_attach_layer (GdkIOSSurface *self)
 
   g_message ("gdk-ios: attach_layer surface=%p layer=%p root=%p "
              "root.bounds=%.0fx%.0f root.sublayers=%lu scale=%.2f",
-             (void *) self, (void *) layer, (void *) root,
+             (void *) self, (__bridge void *) layer, (__bridge void *) root,
              (double) root.bounds.size.width,
              (double) root.bounds.size.height,
              (unsigned long) root.sublayers.count, (double) self->scale);

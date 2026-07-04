@@ -150,11 +150,11 @@ gdk_ios_cairo_context_end_frame (GdkDrawContext *draw_context,
   g_message ("gdk-ios: presented layer=%p frame=(%.0f,%.0f,%.0fx%.0f) "
              "contentsScale=%.2f opacity=%.2f hidden=%d super=%p "
              "hasContents=%d",
-             (void *) layer,
+             (__bridge void *) layer,
              (double) layer.frame.origin.x, (double) layer.frame.origin.y,
              (double) layer.frame.size.width, (double) layer.frame.size.height,
              (double) layer.contentsScale, (double) layer.opacity,
-             (int) layer.hidden, (void *) layer.superlayer,
+             (int) layer.hidden, (__bridge void *) layer.superlayer,
              (int) (layer.contents != nil));
 
   /* Ownership moved into the CGImage's data provider. */
