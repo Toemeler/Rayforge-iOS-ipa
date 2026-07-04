@@ -1,0 +1,19 @@
+===== GTK LIBS =====
+
+===== ARCHITECTURE =====
+
+===== gtk4.pc =====
+prefix=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+targets=broadway
+gtk_binary_version=4.0.0
+gtk_host=aarch64-darwin
+
+Name: GTK
+Description: GTK Graphical UI Library
+Version: 4.22.4
+Requires: pango >=  1.56, pangocairo >=  1.56, gdk-pixbuf-2.0 >=  2.30.0, cairo >=  1.18.2, cairo-gobject >=  1.18.2, graphene-gobject-1.0 >=  1.10.0, gio-2.0 >=  2.84
+Libs: -L${libdir} -lgtk-4
+Cflags: -I${includedir}/gtk-4.0
