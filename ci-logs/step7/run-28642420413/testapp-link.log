@@ -1,0 +1,6 @@
+Undefined symbols for architecture arm64:
+  "_as_launchable_get_entries", referenced from:
+      _adw_about_dialog_constructed in libadwaita-1.a[8](adw-about-dialog.c.o)
+      _adw_about_window_new_from_appdata in libadwaita-1.a[9](adw-about-window.c.o)
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
