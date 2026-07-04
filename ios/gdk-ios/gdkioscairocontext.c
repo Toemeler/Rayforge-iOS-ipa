@@ -56,6 +56,9 @@ gdk_ios_cairo_context_begin_frame (GdkDrawContext *draw_context,
   int pixel_w = (int) ceil (surface->width * scale);
   int pixel_h = (int) ceil (surface->height * scale);
 
+  g_message ("gdk-ios: begin_frame surface=%dx%d scale=%.2f pixels=%dx%d",
+             surface->width, surface->height, (double) scale, pixel_w, pixel_h);
+
   /* Repaint the full surface each frame; the whole image becomes the
    * layer contents. Partial-damage upload is a later optimization. */
   cairo_rectangle_int_t bounds = { 0, 0, surface->width, surface->height };
@@ -96,9 +99,31 @@ gdk_ios_cairo_context_end_frame (GdkDrawContext *draw_context,
 
   if (width <= 0 || height <= 0 || data == NULL || surface_impl->layer == NULL)
     {
+      g_message ("gdk-ios: end_frame ABORT w=%d h=%d data=%p layer=%p",
+                 width, height, (void *) data,
+                 (void *) surface_impl->layer);
       g_clear_pointer (&self->active_surface, cairo_surface_destroy);
       return;
     }
+
+  /* Sample the cairo buffer itself (premultiplied BGRA). This is the
+   * ground-truth test: if these are non-zero the app IS painting and any
+   * black screen is a presentation/geometry bug; if they are 0x00000000
+   * the paint never reached this surface. */
+  {
+    const guint32 *px = (const guint32 *) data;
+    int row = stride / 4;
+    guint32 center = px[(height / 2) * row + (width / 2)];
+    guint32 tl = px[0];
+    guint32 tr = px[width - 1];
+    guint32 bl = px[(height - 1) * row];
+    guint32 br = px[(height - 1) * row + (width - 1)];
+    g_message ("gdk-ios: end_frame %dx%d stride=%d data=%p layer=%p "
+               "center=0x%08X tl=0x%08X tr=0x%08X bl=0x%08X br=0x%08X",
+               width, height, stride, (void *) data,
+               (void *) surface_impl->layer,
+               center, tl, tr, bl, br);
+  }
 
   /* Hand pixel ownership to the CGImage; the release callback destroys
    * the cairo surface when CoreAnimation is done with the frame. */
@@ -121,6 +146,16 @@ gdk_ios_cairo_context_end_frame (GdkDrawContext *draw_context,
   [CATransaction setDisableActions:YES];
   layer.contents = (__bridge_transfer id) image;
   [CATransaction commit];
+
+  g_message ("gdk-ios: presented layer=%p frame=(%.0f,%.0f,%.0fx%.0f) "
+             "contentsScale=%.2f opacity=%.2f hidden=%d super=%p "
+             "hasContents=%d",
+             (void *) layer,
+             (double) layer.frame.origin.x, (double) layer.frame.origin.y,
+             (double) layer.frame.size.width, (double) layer.frame.size.height,
+             (double) layer.contentsScale, (double) layer.opacity,
+             (int) layer.hidden, (void *) layer.superlayer,
+             (int) (layer.contents != nil));
 
   /* Ownership moved into the CGImage's data provider. */
   self->active_surface = NULL;

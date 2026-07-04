@@ -252,10 +252,14 @@ jobs:
       - name: "[8/13] Build GTK with the GDK iOS backend (resumes from cache)"
         run: |
           set -euxo pipefail
-          if [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/Gtk-4.0.typelib" ]; then
-            echo "GTK with introspection already in prefix — skipping"
+          BACKEND_HASH="$(git -C "${GITHUB_WORKSPACE}" ls-files -s ios/gdk-ios ios/scripts | shasum | cut -c1-40)"
+          STAMP="${GITHUB_WORKSPACE}/ios-out/.gdk-ios-backend-hash"
+          echo "GTK rebuild check: backend_hash=${BACKEND_HASH}"
+          if [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/Gtk-4.0.typelib" ] && [ -f "${STAMP}" ] && [ "$(cat "${STAMP}")" = "${BACKEND_HASH}" ]; then
+            echo "GTK with introspection (backend ${BACKEND_HASH}) already in prefix — skipping"
             exit 0
           fi
+          echo "GTK missing or backend changed — (re)building libgtk with gdk-ios backend"
           GTK_MAJMIN="$(echo "${GTK_VERSION}" | cut -d. -f1,2)"
           curl -fL --retry 3 -o gtk.tar.xz \
             "https://download.gnome.org/sources/gtk/${GTK_MAJMIN}/gtk-${GTK_VERSION}.tar.xz"
@@ -303,6 +307,7 @@ jobs:
           # in-tree lib deps); the install pass retries with all libs built.
           ninja -k0 -C gtk-build 2>&1 | tee gtk-build.log || true
           ninja -C gtk-build install 2>&1 | tee gtk-install.log
+          echo "${BACKEND_HASH}" > "${STAMP}"
 
 
       - name: "[9/13] Build appstream stub + libadwaita (resumes from cache)"

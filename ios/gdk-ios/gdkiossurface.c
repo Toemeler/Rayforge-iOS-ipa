@@ -34,6 +34,13 @@ gdk_ios_surface_attach_layer (GdkIOSSurface *self)
   [CATransaction setDisableActions:YES];
   [root addSublayer:layer];
   [CATransaction commit];
+
+  g_message ("gdk-ios: attach_layer surface=%p layer=%p root=%p "
+             "root.bounds=%.0fx%.0f root.sublayers=%lu scale=%.2f",
+             (void *) self, (void *) layer, (void *) root,
+             (double) root.bounds.size.width,
+             (double) root.bounds.size.height,
+             (unsigned long) root.sublayers.count, (double) self->scale);
 }
 
 void
@@ -67,6 +74,13 @@ gdk_ios_surface_apply_frame (GdkIOSSurface *self,
       [CATransaction setDisableActions:YES];
       layer.frame = CGRectMake (x, y, width, height);
       [CATransaction commit];
+
+      g_message ("gdk-ios: apply_frame surface=%p req=(%d,%d,%dx%d) "
+                 "layer.frame=(%.0f,%.0f,%.0fx%.0f)",
+                 (void *) self, x, y, width, height,
+                 (double) layer.frame.origin.x, (double) layer.frame.origin.y,
+                 (double) layer.frame.size.width,
+                 (double) layer.frame.size.height);
     }
 
   _gdk_surface_update_size (surface);
@@ -252,6 +266,8 @@ gdk_ios_toplevel_present (GdkToplevel *toplevel,
    * the iPad application model is one fullscreen window. */
   int bounds_w = 0, bounds_h = 0;
   gdk_ios_shell_get_bounds (&bounds_w, &bounds_h);
+
+  g_message ("gdk-ios: toplevel_present shell_bounds=%dx%d", bounds_w, bounds_h);
 
   GdkToplevelSize size;
   gdk_toplevel_size_init (&size, bounds_w, bounds_h);

@@ -453,9 +453,17 @@ deliver_key (GdkEventType type, UIKey *key)
 
 - (void)pumpGLib:(CADisplayLink *)link
 {
+  static unsigned long frames = 0;
+  static unsigned long iterations = 0;
   GMainContext *context = g_main_context_default ();
   while (g_main_context_pending (context))
-    g_main_context_iteration (context, FALSE);
+    {
+      g_main_context_iteration (context, FALSE);
+      iterations++;
+    }
+  if ((++frames % 120) == 0)
+    g_message ("gdk-ios: pump alive frame=%lu total_iterations=%lu",
+               frames, iterations);
 }
 
 - (BOOL)application:(UIApplication *)application
@@ -475,6 +483,13 @@ deliver_key (GdkEventType type, UIKey *key)
   shell_view = view;
   shell_ready = TRUE;
 
+  g_message ("gdk-ios: shell ready window=%.0fx%.0f view=%.0fx%.0f scale=%.2f",
+             (double) self.window.bounds.size.width,
+             (double) self.window.bounds.size.height,
+             (double) view.bounds.size.width,
+             (double) view.bounds.size.height,
+             (double) shell_window.screen.scale);
+
   /* Pump the GLib default main context at display refresh rate; GTK and
    * the application run entirely on the UIKit main thread. */
   self.displayLink = [CADisplayLink displayLinkWithTarget:self
@@ -484,8 +499,10 @@ deliver_key (GdkEventType type, UIKey *key)
 
   /* Enter the application's real main after UIKit is fully up. */
   dispatch_async (dispatch_get_main_queue (), ^{
+    g_message ("gdk-ios: entering user main");
     if (user_main_func != NULL)
       user_main_func (user_main_data);
+    g_message ("gdk-ios: user main returned");
   });
 
   return YES;

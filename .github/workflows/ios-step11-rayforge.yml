@@ -78,10 +78,10 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ios-out
-          key: pygobject-sim-v1-${{ hashFiles('ios/testapp/main-rayforge.c') }}-run${{ github.run_id }}
+          key: pygobject-sim-v2-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**', 'ios/testapp/main-rayforge.c') }}-run${{ github.run_id }}
           restore-keys: |
-            pygobject-sim-v1-
-            gi-sim-v2-
+            pygobject-sim-v2-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**') }}-
+            gi-sim-v2-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**') }}-
 
       - name: "[5/14] Verify prefix has the Step-9 outputs"
         run: |
