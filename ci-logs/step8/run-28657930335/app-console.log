@@ -1,0 +1,4 @@
+Gdk-Message: 11:41:01.337: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/9FBCD544-302A-429F-B09D-BCEF862188F4/data/Containers/Bundle/Application/06E55160-61A1-49DC-B912-89350252F794/RayforgePy.app
+** Message: 11:41:02.282: python home: /Users/runner/Library/Developer/CoreSimulator/Devices/9FBCD544-302A-429F-B09D-BCEF862188F4/data/Containers/Bundle/Application/06E55160-61A1-49DC-B912-89350252F794/RayforgePy.app/python
+** Message: 11:41:02.283: python stdlib: /Users/runner/Library/Developer/CoreSimulator/Devices/9FBCD544-302A-429F-B09D-BCEF862188F4/data/Containers/Bundle/Application/06E55160-61A1-49DC-B912-89350252F794/RayforgePy.app/python/lib/python3.13
+** Message: 11:41:04.970: python smoke test UI presented
