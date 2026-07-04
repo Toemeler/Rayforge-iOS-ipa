@@ -309,6 +309,12 @@ jobs:
           esac
           echo "PYO3_CROSS_LIB_DIR=$PYO3_CROSS_LIB_DIR"
           ls "$PYO3_CROSS_LIB_DIR" | head -5
+          # pyo3 links -lpython3.13 on iOS targets (dynamic_lookup is not
+          # allowed there); the dylib symlink lives in the slice's lib/.
+          # Its install name is @rpath/Python.framework/... which the app
+          # bundle's rpath already covers.
+          export RUSTFLAGS="-L ${SIM_SLICE}/lib${RUSTFLAGS:+ ${RUSTFLAGS}}"
+          ls "${SIM_SLICE}/lib" | grep -i python | head -3
           export IPHONEOS_DEPLOYMENT_TARGET="${IOS_MIN}"
           MATURIN="$("$PY313" -c 'import shutil;print(shutil.which("maturin") or "")')"
           [ -n "$MATURIN" ] || MATURIN="$(dirname "$PY313")/maturin"
