@@ -1,0 +1,70 @@
++ echo 'Run ID: 28567509079'
+Run ID: 28567509079
++ echo 'Commit: 7652cd6776e9b8a23bd6248dc05736bbfb4bcb0e'
+Commit: 7652cd6776e9b8a23bd6248dc05736bbfb4bcb0e
+++ date -u
++ echo 'Date: Thu Jul  2 05:27:29 UTC 2026'
+Date: Thu Jul  2 05:27:29 UTC 2026
++ echo
+
++ for f in jpeg.log graphene.log pixbuf.log stack-verify.log
++ echo '===================== TAIL: jpeg.log ====================='
+===================== TAIL: jpeg.log =====================
++ '[' -f jpeg.log ']'
++ tail -30 jpeg.log
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Performing Test HAVE_BUILTIN_CTZL
+-- Performing Test HAVE_BUILTIN_CTZL - Success
+-- Performing Test HIDDEN_WORKS
+-- Performing Test HIDDEN_WORKS - Success
+-- HIDDEN = __attribute__((visibility("hidden")))
+-- Performing Test INLINE_WORKS
+-- Performing Test INLINE_WORKS - Success
+-- INLINE = __inline__ __attribute__((always_inline)) (FORCE_INLINE = 1)
+-- Performing Test HAVE_THREAD_LOCAL
+-- Performing Test HAVE_THREAD_LOCAL - Success
+-- THREAD_LOCAL = __thread
+-- CMAKE_EXECUTABLE_SUFFIX = 
+-- Performing Test HAVE_VLD1_S16_X3
+-- Performing Test HAVE_VLD1_S16_X3 - Success
+-- Performing Test HAVE_VLD1_U16_X2
+-- Performing Test HAVE_VLD1_U16_X2 - Success
+-- Performing Test HAVE_VLD1Q_U8_X4
+-- Performing Test HAVE_VLD1Q_U8_X4 - Success
+-- SIMD extensions: ARM64 (WITH_SIMD = 1)
+-- System-supplied libspng disabled (WITH_SYSTEM_SPNG = 0)
+-- System-supplied zlib disabled (WITH_SYSTEM_ZLIB = 0)
+-- Looking for fmemopen
+-- Looking for fmemopen - found
+-- FLOATTEST8 = fp-contract
+-- FLOATTEST12 = fp-contract
+-- Configuring incomplete, errors occurred!
++ echo
+
++ for f in jpeg.log graphene.log pixbuf.log stack-verify.log
++ echo '===================== TAIL: graphene.log ====================='
+===================== TAIL: graphene.log =====================
++ '[' -f graphene.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in jpeg.log graphene.log pixbuf.log stack-verify.log
++ echo '===================== TAIL: pixbuf.log ====================='
+===================== TAIL: pixbuf.log =====================
++ '[' -f pixbuf.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in jpeg.log graphene.log pixbuf.log stack-verify.log
++ echo '===================== TAIL: stack-verify.log ====================='
+===================== TAIL: stack-verify.log =====================
++ '[' -f stack-verify.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+

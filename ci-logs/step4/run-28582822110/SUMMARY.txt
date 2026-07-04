@@ -1,0 +1,205 @@
++ echo 'Run ID: 28582822110'
+Run ID: 28582822110
++ echo 'Commit: 1ebd9d699601d2ee5259c8cfe91901585b9e644f'
+Commit: 1ebd9d699601d2ee5259c8cfe91901585b9e644f
+++ date -u
++ echo 'Date: Thu Jul  2 10:26:19 UTC 2026'
+Date: Thu Jul  2 10:26:19 UTC 2026
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: tiff.log ====================='
+===================== TAIL: tiff.log =====================
++ '[' -f tiff.log ']'
++ tail -40 tiff.log
+[ 43%] Building C object libtiff/CMakeFiles/tiff.dir/tif_jpeg_12.c.o
+[ 45%] Building C object libtiff/CMakeFiles/tiff.dir/tif_lerc.c.o
+[ 47%] Building C object libtiff/CMakeFiles/tiff.dir/tif_luv.c.o
+[ 50%] Building C object libtiff/CMakeFiles/tiff.dir/tif_lzma.c.o
+[ 52%] Building C object libtiff/CMakeFiles/tiff.dir/tif_lzw.c.o
+[ 54%] Building C object libtiff/CMakeFiles/tiff.dir/tif_next.c.o
+[ 56%] Building C object libtiff/CMakeFiles/tiff.dir/tif_ojpeg.c.o
+[ 58%] Building C object libtiff/CMakeFiles/tiff.dir/tif_open.c.o
+[ 60%] Building C object libtiff/CMakeFiles/tiff.dir/tif_packbits.c.o
+[ 63%] Building C object libtiff/CMakeFiles/tiff.dir/tif_pixarlog.c.o
+[ 65%] Building C object libtiff/CMakeFiles/tiff.dir/tif_predict.c.o
+[ 67%] Building C object libtiff/CMakeFiles/tiff.dir/tif_print.c.o
+[ 69%] Building C object libtiff/CMakeFiles/tiff.dir/tif_read.c.o
+[ 71%] Building C object libtiff/CMakeFiles/tiff.dir/tif_strip.c.o
+[ 73%] Building C object libtiff/CMakeFiles/tiff.dir/tif_swab.c.o
+[ 76%] Building C object libtiff/CMakeFiles/tiff.dir/tif_thunder.c.o
+[ 78%] Building C object libtiff/CMakeFiles/tiff.dir/tif_tile.c.o
+[ 80%] Building C object libtiff/CMakeFiles/tiff.dir/tif_version.c.o
+[ 82%] Building C object libtiff/CMakeFiles/tiff.dir/tif_warning.c.o
+[ 84%] Building C object libtiff/CMakeFiles/tiff.dir/tif_webp.c.o
+[ 86%] Building C object libtiff/CMakeFiles/tiff.dir/tif_write.c.o
+[ 89%] Building C object libtiff/CMakeFiles/tiff.dir/tif_zip.c.o
+[ 91%] Building C object libtiff/CMakeFiles/tiff.dir/tif_zstd.c.o
+[ 93%] Building C object libtiff/CMakeFiles/tiff.dir/tif_unix.c.o
+[ 95%] Linking C static library libtiff.a
+[ 95%] Built target tiff
+[ 97%] Building CXX object libtiff/CMakeFiles/tiffxx.dir/tif_stream.cxx.o
+[100%] Linking CXX static library libtiffxx.a
+[100%] Built target tiffxx
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libtiff-4.pc
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libtiff.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiff.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffio.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffvers.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffconf.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/tiff/TiffTargets.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/tiff/TiffConfigVersion.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/tiff/TiffConfig.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libtiffxx.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffio.hxx
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: epoxy.log ====================='
+===================== TAIL: epoxy.log =====================
++ '[' -f epoxy.log ']'
++ tail -40 epoxy.log
+Run-time dependency gl found: YES
+Found CMake: NO
+Run-time dependency egl found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency x11 found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency glesv2 found: NO  (tried pkg-config, framework and cmake)
+Library libGLESv2 found: NO
+Run-time dependency glesv1_cm found: NO  (tried pkg-config, framework and cmake)
+Library libGLESv1_CM found: NO
+Program src/gen_dispatch.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-src/src/gen_dispatch.py)
+Configuring config.h using configuration
+WARNING: Required dependency was found to be an empty string. Did you mean to pass an empty array?
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build targets in project: 3
+
+libepoxy 1.5.10
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    buildtype      : release
+    default_library: static
+    docs           : false
+    egl            : no
+    glx            : no
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    tests          : false
+    x11            : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `epoxy-build'
+[1/6] Generating include/epoxy/gl_generated.h with a custom command
+[2/6] Generating src/gl_generated_dispatch.c with a custom command
+[3/6] Compiling C object src/libepoxy.a.p/dispatch_common.c.o
+[4/6] Compiling C object src/libepoxy.a.p/meson-generated_.._gl_generated_dispatch.c.o
+[5/6] Linking static target src/libepoxy.a
+[5/6] Installing files
+Installing include/epoxy/gl_generated.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/epoxy
+Installing src/libepoxy.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-src/include/epoxy/common.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/epoxy
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-src/include/epoxy/gl.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/epoxy
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-build/meson-private/epoxy.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-setup.log ====================='
+===================== TAIL: gtk-setup.log =====================
++ '[' -f gtk-setup.log ']'
++ tail -40 gtk-setup.log
+    Examples         : false
+
+  Directories
+    Prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    Includedir       : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+    Libdir           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+    Datadir          : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share
+
+  User defined options
+    Cross files      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    accesskit        : disabled
+    android-backend  : false
+    broadway-backend : true
+    build-demos      : false
+    build-examples   : false
+    build-tests      : false
+    build-testsuite  : false
+    buildtype        : release
+    cloudproviders   : disabled
+    colord           : disabled
+    default_library  : static
+    documentation    : false
+    f16c             : disabled
+    introspection    : disabled
+    macos-backend    : false
+    man-pages        : false
+    media-gstreamer  : disabled
+    prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    print-cpdb       : disabled
+    print-cups       : disabled
+    screenshots      : false
+    sysprof          : disabled
+    tracker          : disabled
+    vulkan           : disabled
+    wayland-backend  : false
+    win32-backend    : false
+    wrap_mode        : nofallback
+    x11-backend      : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ tail -40 gtk-build.log
+[927/1149] Compiling C object gtk/libgtk.a.p/inspector_recorder.c.o
+[928/1149] Compiling C object gtk/libgtk.a.p/inspector_size-groups.c.o
+[929/1149] Compiling C object gtk/libgtk.a.p/inspector_startrecording.c.o
+[930/1149] Compiling C object gtk/libgtk.a.p/inspector_resource-list.c.o
+[931/1149] Compiling C object gtk/libgtk.a.p/inspector_strv-editor.c.o
+[932/1149] Compiling C object gtk/libgtk.a.p/inspector_statistics.c.o
+[933/1149] Compiling C object gtk/libgtk.a.p/inspector_subsurfaceoverlay.c.o
+[934/1149] Compiling C object gtk/libgtk.a.p/inspector_tree-data.c.o
+[935/1149] Compiling C object gtk/libgtk.a.p/inspector_variant-editor.c.o
+[936/1149] Compiling C object gtk/libgtk.a.p/inspector_updatesoverlay.c.o
+[937/1149] Compiling C object gtk/libgtk.a.p/language-names.c.o
+[938/1149] Compiling C object gtk/libgtk.a.p/inspector_type-info.c.o
+[939/1149] Linking static target gtk/css/libgtk_css.a
+[940/1149] Linking static target gsk/libgsk_f16c.a
+warning: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib: archive library: gsk/libgsk_f16c.a the table of contents is empty (no object file members in the library define global symbols)
+warning: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib: archive library: gsk/libgsk_f16c.a the table of contents is empty (no object file members in the library define global symbols)
+[941/1149] Linking static target gdk/libgdk.a
+[942/1149] Compiling C object gtk/libgtk.a.p/inspector_visual.c.o
+[943/1149] Linking static target gsk/libgsk.a
+[944/1149] Compiling C object gtk/libgtk.a.p/inspector_window.c.o
+[945/1149] Compiling C object gdk/broadway/gtk4-broadwayd.p/broadwayd.c.o
+[946/1149] Compiling C object gdk/broadway/gtk4-broadwayd.p/broadway-output.c.o
+[947/1149] Compiling C object gtk/libgtk.a.p/gtkimcontextbroadway.c.o
+[948/1149] Linking static target gtk/libgtk.a
+[949/1149] Compiling C object gdk/broadway/gtk4-broadwayd.p/broadway-server.c.o
+[950/1149] Compiling C object tools/gtk4-path-tool.p/gtk-path-tool.c.o
+[951/1149] Linking target gtk/libgtk-4.1.dylib
+FAILED: [code=1] gtk/libgtk-4.1.dylib 
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -o gtk/libgtk-4.1.dylib  -Wl,-dead_strip_dylibs -Wl,-headerpad_max_install_names -shared -install_name @rpath/libgtk-4.1.dylib -compatibility_version 2201 -current_version 2201.4 -Wl,-force_load gtk/libgtk.a -Wl,-force_load gtk/css/libgtk_css.a -Wl,-force_load gdk/libgdk.a -Wl,-force_load gsk/libgsk.a -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 gsk/libgsk_f16c.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.a -lm /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpcre2-8.a -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libffi.a -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.a -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfribidi.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.a -ldl /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfontconfig.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libexpat.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfreetype.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng16.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpixman-1.a -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-subset.a -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.a -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgdk_pixbuf-2.0.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libjpeg.a -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libepoxy.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgraphene-1.0.a -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libtiff.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-script-interpreter.a -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lz -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -liconv -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib -lresolv -liconv -lz
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+Undefined symbols for architecture arm64:
+  "_gtk_color_picker_quartz_new", referenced from:
+      _gtk_color_picker_new in libgtk.a[307](gtkcolorpicker.c.o)
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+[952/1149] Compiling C object tools/gtk4-path-tool.p/gtk-path-tool-decompose.c.o
+[953/1149] Compiling C object gtk/compose/compose-parse.p/compose-parse.c.o
+[954/1149] Compiling C object tools/gtk4-path-tool.p/gtk-path-tool-info.c.o
+[955/1149] Compiling C object tools/gtk4-path-tool.p/gtk-path-tool-render.c.o
+ninja: build stopped: subcommand failed.
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-verify.log ====================='
+===================== TAIL: gtk-verify.log =====================
++ '[' -f gtk-verify.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
