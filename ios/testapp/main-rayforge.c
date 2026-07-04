@@ -38,7 +38,7 @@ bundle_resource_path (void)
  * iterated without shipping a script; prints a single PYGOBJECT OK line on
  * success and a PYGOBJECT FAIL line (plus traceback) otherwise. */
 static const char *SELFTEST =
-  "import traceback\n"
+  "import runpy, traceback\n"
   "try:\n"
   "    import ios_main\n"
   "    ios_main.main()\n"
@@ -137,46 +137,20 @@ out:
 }
 
 static void
-activate_cb (GApplication *app,
-             gpointer      user_data)
+boot_rayforge (gpointer user_data)
 {
-  GtkWidget *window = adw_application_window_new (GTK_APPLICATION (app));
-  gtk_window_set_title (GTK_WINDOW (window), "Rayforge iOS");
-
-  GtkWidget *toolbar_view = adw_toolbar_view_new ();
-  GtkWidget *header = adw_header_bar_new ();
-  adw_header_bar_set_title_widget (ADW_HEADER_BAR (header),
-                                   adw_window_title_new ("PyGObject on iOS",
-                                                         "gi + cairo bound to the iOS GTK stack"));
-  adw_toolbar_view_add_top_bar (ADW_TOOLBAR_VIEW (toolbar_view), header);
-
-  GtkWidget *page = adw_status_page_new ();
-  adw_status_page_set_title (ADW_STATUS_PAGE (page),
-                             "PyGObject running natively on iOS");
-
-  char *pystatus = init_python ();
-  adw_status_page_set_description (ADW_STATUS_PAGE (page), pystatus);
-  g_free (pystatus);
-
-  adw_toolbar_view_set_content (ADW_TOOLBAR_VIEW (toolbar_view), page);
-  adw_application_window_set_content (ADW_APPLICATION_WINDOW (window),
-                                      toolbar_view);
-  gtk_window_present (GTK_WINDOW (window));
-
-  g_message ("pygobject self-test UI presented");
-}
-
-static void
-build_app (gpointer user_data)
-{
-  AdwApplication *app = adw_application_new ("org.rayforge.app",
-                                             G_APPLICATION_DEFAULT_FLAGS);
-  g_signal_connect (app, "activate", G_CALLBACK (activate_cb), NULL);
-  gdk_ios_application_run (G_APPLICATION (app));
+  /* No app/window here: init_python runs ios_main.main(), which builds
+   * and runs Rayforge's own Adw.Application. ios_main monkeypatches
+   * Adw.Application.run into register()+activate(); ::activate presents
+   * Rayforge's main window into the already-booted GDK iOS surface, and
+   * the CADisplayLink pump (started by gdk_ios_main) drives it. */
+  char *status = init_python ();
+  g_message ("rayforge boot: %s", status);
+  g_free (status);
 }
 
 int
 main (int argc, char **argv)
 {
-  return gdk_ios_main (argc, argv, build_app, NULL);
+  return gdk_ios_main (argc, argv, boot_rayforge, NULL);
 }
