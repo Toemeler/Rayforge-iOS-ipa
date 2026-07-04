@@ -1,0 +1,339 @@
++ echo '===== KEY STATIC LIBS ====='
+===== KEY STATIC LIBS =====
++ for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi libfontconfig libexpat libcairo libcairo-gobject libpango-1.0 libpangocairo-1.0 libpangoft2-1.0
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name libpixman-1.a
+++ head -1
++ f=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpixman-1.a
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpixman-1.a ']'
++ echo 'FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpixman-1.a'
+FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpixman-1.a
++ for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi libfontconfig libexpat libcairo libcairo-gobject libpango-1.0 libpangocairo-1.0 libpangoft2-1.0
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name libpng16.a
+++ head -1
++ f=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng16.a
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng16.a ']'
++ echo 'FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng16.a'
+FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng16.a
++ for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi libfontconfig libexpat libcairo libcairo-gobject libpango-1.0 libpangocairo-1.0 libpangoft2-1.0
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name libfreetype.a
+++ head -1
++ f=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfreetype.a
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfreetype.a ']'
++ echo 'FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfreetype.a'
+FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfreetype.a
++ for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi libfontconfig libexpat libcairo libcairo-gobject libpango-1.0 libpangocairo-1.0 libpangoft2-1.0
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name libharfbuzz.a
+++ head -1
++ f=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.a
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.a ']'
++ echo 'FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.a'
+FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.a
++ for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi libfontconfig libexpat libcairo libcairo-gobject libpango-1.0 libpangocairo-1.0 libpangoft2-1.0
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name libfribidi.a
+++ head -1
++ f=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfribidi.a
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfribidi.a ']'
++ echo 'FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfribidi.a'
+FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfribidi.a
++ for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi libfontconfig libexpat libcairo libcairo-gobject libpango-1.0 libpangocairo-1.0 libpangoft2-1.0
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name libfontconfig.a
+++ head -1
++ f=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfontconfig.a
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfontconfig.a ']'
++ echo 'FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfontconfig.a'
+FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfontconfig.a
++ for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi libfontconfig libexpat libcairo libcairo-gobject libpango-1.0 libpangocairo-1.0 libpangoft2-1.0
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name libexpat.a
+++ head -1
++ f=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libexpat.a
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libexpat.a ']'
++ echo 'FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libexpat.a'
+FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libexpat.a
++ for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi libfontconfig libexpat libcairo libcairo-gobject libpango-1.0 libpangocairo-1.0 libpangoft2-1.0
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name libcairo.a
+++ head -1
++ f=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.a
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.a ']'
++ echo 'FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.a'
+FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.a
++ for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi libfontconfig libexpat libcairo libcairo-gobject libpango-1.0 libpangocairo-1.0 libpangoft2-1.0
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name libcairo-gobject.a
+++ head -1
++ f=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.a
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.a ']'
++ echo 'FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.a'
+FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.a
++ for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi libfontconfig libexpat libcairo libcairo-gobject libpango-1.0 libpangocairo-1.0 libpangoft2-1.0
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name libpango-1.0.a
+++ head -1
++ f=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.a
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.a ']'
++ echo 'FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.a'
+FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.a
++ for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi libfontconfig libexpat libcairo libcairo-gobject libpango-1.0 libpangocairo-1.0 libpangoft2-1.0
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name libpangocairo-1.0.a
+++ head -1
++ f=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.a
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.a ']'
++ echo 'FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.a'
+FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.a
++ for want in libpixman-1 libpng16 libfreetype libharfbuzz libfribidi libfontconfig libexpat libcairo libcairo-gobject libpango-1.0 libpangocairo-1.0 libpangoft2-1.0
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name libpangoft2-1.0.a
+++ head -1
++ f=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.a
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.a ']'
++ echo 'FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.a'
+FOUND /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.a
++ echo
+
++ echo '===== ARCHITECTURE CHECK (must be arm64) ====='
+===== ARCHITECTURE CHECK (must be arm64) =====
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -name '*.a'
+++ sort
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cairo/libcairo-fdr.a
++ printf '%-45s ' libcairo-fdr.a
+libcairo-fdr.a                                + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cairo/libcairo-fdr.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cairo/libcairo-trace.a
++ printf '%-45s ' libcairo-trace.a
+libcairo-trace.a                              + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cairo/libcairo-trace.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.a
++ printf '%-45s ' libcairo-gobject.a
+libcairo-gobject.a                            + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-script-interpreter.a
++ printf '%-45s ' libcairo-script-interpreter.a
+libcairo-script-interpreter.a                 + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-script-interpreter.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.a
++ printf '%-45s ' libcairo.a
+libcairo.a                                    + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libexpat.a
++ printf '%-45s ' libexpat.a
+libexpat.a                                    + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libexpat.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libffi.a
++ printf '%-45s ' libffi.a
+libffi.a                                      + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libffi.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfontconfig.a
++ printf '%-45s ' libfontconfig.a
+libfontconfig.a                               + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfontconfig.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfreetype.a
++ printf '%-45s ' libfreetype.a
+libfreetype.a                                 + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfreetype.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfribidi.a
++ printf '%-45s ' libfribidi.a
+libfribidi.a                                  + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfribidi.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.a
++ printf '%-45s ' libgio-2.0.a
+libgio-2.0.a                                  + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgirepository-2.0.a
++ printf '%-45s ' libgirepository-2.0.a
+libgirepository-2.0.a                         + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgirepository-2.0.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.a
++ printf '%-45s ' libglib-2.0.a
+libglib-2.0.a                                 + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.a
++ printf '%-45s ' libgmodule-2.0.a
+libgmodule-2.0.a                              + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.a
++ printf '%-45s ' libgobject-2.0.a
+libgobject-2.0.a                              + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgthread-2.0.a
++ printf '%-45s ' libgthread-2.0.a
+libgthread-2.0.a                              + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgthread-2.0.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-gobject.a
++ printf '%-45s ' libharfbuzz-gobject.a
+libharfbuzz-gobject.a                         + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-gobject.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-gpu.a
++ printf '%-45s ' libharfbuzz-gpu.a
+libharfbuzz-gpu.a                             + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-gpu.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-raster.a
++ printf '%-45s ' libharfbuzz-raster.a
+libharfbuzz-raster.a                          + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-raster.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-subset.a
++ printf '%-45s ' libharfbuzz-subset.a
+libharfbuzz-subset.a                          + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-subset.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-vector.a
++ printf '%-45s ' libharfbuzz-vector.a
+libharfbuzz-vector.a                          + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-vector.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.a
++ printf '%-45s ' libharfbuzz.a
+libharfbuzz.a                                 + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.a
++ printf '%-45s ' libintl.a
+libintl.a                                     + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.a
++ printf '%-45s ' libpango-1.0.a
+libpango-1.0.a                                + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.a
++ printf '%-45s ' libpangocairo-1.0.a
+libpangocairo-1.0.a                           + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.a
++ printf '%-45s ' libpangoft2-1.0.a
+libpangoft2-1.0.a                             + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpcre2-16.a
++ printf '%-45s ' libpcre2-16.a
+libpcre2-16.a                                 + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpcre2-16.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpcre2-32.a
++ printf '%-45s ' libpcre2-32.a
+libpcre2-32.a                                 + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpcre2-32.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpcre2-8.a
++ printf '%-45s ' libpcre2-8.a
+libpcre2-8.a                                  + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpcre2-8.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpcre2-posix.a
++ printf '%-45s ' libpcre2-posix.a
+libpcre2-posix.a                              + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpcre2-posix.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpixman-1.a
++ printf '%-45s ' libpixman-1.a
+libpixman-1.a                                 + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpixman-1.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng.a
++ printf '%-45s ' libpng.a
+libpng.a                                      + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng.a
++ sed 's/.*architecture: //'
+arm64
++ for lib in '$(find "${PREFIX}/lib" -name '\''*.a'\'' | sort)'
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng16.a
++ printf '%-45s ' libpng16.a
+libpng16.a                                    + lipo -info /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng16.a
++ sed 's/.*architecture: //'
+arm64
++ echo
+
++ echo '===== .pc FILES ====='
+===== .pc FILES =====
++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig -name '*.pc'
++ sort
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/cairo-fc.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/cairo-ft.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/cairo-gobject.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/cairo-pdf.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/cairo-png.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/cairo-ps.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/cairo-script-interpreter.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/cairo-script.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/cairo-svg.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/cairo-tee.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/cairo.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/expat.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/fontconfig.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/freetype2.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/fribidi.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/gio-2.0.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/gio-unix-2.0.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/girepository-2.0.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/glib-2.0.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/gmodule-2.0.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/gmodule-export-2.0.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/gmodule-no-export-2.0.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/gobject-2.0.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/gthread-2.0.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/harfbuzz-gobject.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/harfbuzz-gpu.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/harfbuzz-raster.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/harfbuzz-subset.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/harfbuzz-vector.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/harfbuzz.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libffi.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libpcre2-16.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libpcre2-32.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libpcre2-8.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libpng.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libpng16.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/pango.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/pangocairo.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/pangofc.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/pangoft2.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/pangoot.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/pixman-1.pc
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/zlib.pc
