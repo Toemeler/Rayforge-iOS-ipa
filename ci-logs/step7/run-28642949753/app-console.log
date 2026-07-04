@@ -1,0 +1,2 @@
+An error was encountered processing the command (domain=NSMachErrorDomain, code=-308):
+The operation couldn’t be completed. (Mach error -308 - (ipc/mig) server died)
