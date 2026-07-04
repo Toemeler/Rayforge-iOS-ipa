@@ -554,6 +554,15 @@ jobs:
           echo '  <key>MinimumOSVersion</key><string>17.0</string>' >> "$PL"
           echo '  <key>UIDeviceFamily</key><array><integer>1</integer><integer>2</integer></array>' >> "$PL"
           echo '  <key>UILaunchScreen</key><dict/>' >> "$PL"
+          echo '  <key>UISupportedInterfaceOrientations</key><array>' >> "$PL"
+          echo '    <string>UIInterfaceOrientationLandscapeLeft</string>' >> "$PL"
+          echo '    <string>UIInterfaceOrientationLandscapeRight</string>' >> "$PL"
+          echo '  </array>' >> "$PL"
+          echo '  <key>UISupportedInterfaceOrientations~ipad</key><array>' >> "$PL"
+          echo '    <string>UIInterfaceOrientationLandscapeLeft</string>' >> "$PL"
+          echo '    <string>UIInterfaceOrientationLandscapeRight</string>' >> "$PL"
+          echo '  </array>' >> "$PL"
+          echo '  <key>UIRequiresFullScreen</key><true/>' >> "$PL"
           echo '  <key>UIFileSharingEnabled</key><true/>' >> "$PL"
           echo '  <key>LSSupportsOpeningDocumentsInPlace</key><true/>' >> "$PL"
           echo '</dict></plist>' >> "$PL"
@@ -570,11 +579,15 @@ jobs:
         run: |
           set -euxo pipefail
           RUNTIME=$(xcrun simctl list runtimes | awk '/iOS/{id=$NF} END{print id}')
-          UDID=$(xcrun simctl create "pygi-test" \
-            "com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M4-8GB" \
+          # Target device: iPad Pro 13-inch (M4), per user requirement.
+          UDID=$(xcrun simctl create "rayforge-test" \
+            "com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M4-8GB" \
             "$RUNTIME" 2>/dev/null) || \
-          UDID=$(xcrun simctl create "pygi-test" \
-            "iPad Pro 11-inch (M4)" "$RUNTIME" 2>/dev/null) || \
+          UDID=$(xcrun simctl create "rayforge-test" \
+            "iPad Pro 13-inch (M4)" "$RUNTIME" 2>/dev/null) || \
+          UDID=$(xcrun simctl create "rayforge-test" \
+            "$(xcrun simctl list devicetypes | grep -Eo "com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13[^ )]*" | head -1)" \
+            "$RUNTIME" 2>/dev/null) || \
           UDID=$(xcrun simctl list devices available | awk -F '[()]' '/iPad/{print $2; exit}')
           test -n "$UDID"
           echo "UDID=$UDID"
