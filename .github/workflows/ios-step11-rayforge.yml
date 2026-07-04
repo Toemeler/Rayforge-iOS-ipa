@@ -385,6 +385,7 @@ jobs:
             pypdf==6.12.1 semver==3.0.2 svgelements==1.9.6 trimesh==4.6.8 \
             websockets==14.2 asyncudp==0.11.0 GitPython==3.1.50 gitdb smmap \
             pyserial PyOpenGL==3.1.10 typing_extensions \
+            pyparsing fonttools \
             2>&1 | tee pure-dl.log
 
           for w in ios-wheels/*.whl rust-wheels/*.whl pure-wheels/*.whl; do
