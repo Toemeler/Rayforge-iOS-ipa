@@ -1,0 +1,147 @@
+Gdk-Message: 06:46:46.195: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/91389E54-2E4D-4E26-9D69-1E482D92BD6D/data/Containers/Bundle/Application/3530CCDB-1B78-407C-A9FF-62C517D5ED79/RayforgeAdw.app
+
+(process:14867): Gtk-WARNING **: 06:46:46.491: Theme parser error: <broken file>:1:1: The resource at ?/org/gnome/Adwaita/styles/gtk.css? does not exist
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.543: Unable to load resource for composite template for type 'AdwWindowTitle': The resource at ?/org/gnome/Adwaita/ui/adw-window-title.ui? does not exist
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.543: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.543: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.544: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.544: gtk_widget_init_template: assertion 'template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.544: gtk_label_get_label: assertion 'GTK_IS_LABEL (self)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.544: gtk_label_set_label: assertion 'GTK_IS_LABEL (self)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.544: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.544: gtk_label_get_label: assertion 'GTK_IS_LABEL (self)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.544: gtk_label_set_label: assertion 'GTK_IS_LABEL (self)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.544: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.544: Unable to load resource for composite template for type 'AdwPreferencesPage': The resource at ?/org/gnome/Adwaita/ui/adw-preferences-page.ui? does not exist
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.544: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.544: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.544: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.545: gtk_widget_init_template: assertion 'template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.545: Unable to load resource for composite template for type 'AdwPreferencesGroup': The resource at ?/org/gnome/Adwaita/ui/adw-preferences-group.ui? does not exist
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.545: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.545: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.545: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.545: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.545: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.545: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.545: gtk_widget_class_bind_template_callback_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.545: gtk_widget_init_template: assertion 'template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.545: gtk_label_get_text: assertion 'GTK_IS_LABEL (self)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.545: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_label_get_text: assertion 'GTK_IS_LABEL (self)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_widget_get_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_widget_get_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_widget_get_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_widget_get_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_widget_remove_css_class: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_widget_observe_children: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): GLib-GObject-CRITICAL **: 06:46:46.546: invalid (NULL) pointer instance
+
+(process:14867): GLib-GObject-CRITICAL **: 06:46:46.546: g_signal_connect_object: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_label_get_label: assertion 'GTK_IS_LABEL (self)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_label_set_label: assertion 'GTK_IS_LABEL (self)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_label_get_text: assertion 'GTK_IS_LABEL (self)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.546: gtk_widget_get_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_widget_get_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_widget_get_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_widget_get_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_widget_remove_css_class: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_label_get_label: assertion 'GTK_IS_LABEL (self)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_label_set_label: assertion 'GTK_IS_LABEL (self)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_label_get_text: assertion 'GTK_IS_LABEL (self)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_widget_get_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_widget_get_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_widget_get_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.547: gtk_widget_get_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.548: gtk_widget_remove_css_class: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.548: Unable to load resource for composite template for type 'AdwActionRow': The resource at ?/org/gnome/Adwaita/ui/adw-action-row.ui? does not exist
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.548: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.548: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.548: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.548: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.549: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.549: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.549: gtk_widget_class_bind_template_child_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.549: gtk_widget_class_bind_template_callback_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.549: gtk_widget_class_bind_template_callback_full: assertion 'widget_class->priv->template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.549: gtk_widget_init_template: assertion 'template != NULL' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.549: gtk_box_append: assertion 'GTK_IS_BOX (box)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.549: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(process:14867): Gtk-CRITICAL **: 06:46:46.550: gtk_reference_list_accessible_value_get: assertion 'value->value_class == &GTK_REFERENCE_LIST_ACCESSIBLE_VALUE' failed
