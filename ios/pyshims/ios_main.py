@@ -36,6 +36,17 @@ def main() -> None:
     gi.require_version("Adw", "1")
     from gi.repository import Adw
 
+    # iOS-CPython ships no _posixshmem; in the single-process thread
+    # model shared memory is an in-process registry. Install the shim
+    # BEFORE any rayforge import (pipeline.artifact.store imports
+    # multiprocessing.shared_memory at module level).
+    import multiprocessing
+
+    import rayforge_ios_shm
+
+    sys.modules["multiprocessing.shared_memory"] = rayforge_ios_shm
+    multiprocessing.shared_memory = rayforge_ios_shm
+
     def _ios_run(self, argv=None):
         # Equivalent of g_application_run() minus the blocking loop:
         # ::startup (adw_init etc.) fires during register, ::activate
