@@ -482,7 +482,7 @@ jobs:
             esac
           done
           install_name_tool -add_rpath "@executable_path/Frameworks" "$APP/rayforge-app"
-          otool -L "$APP/rayforge-app" | head -12
+          otool -L "$APP/rayforge-app" | head -12 || true
 
           # Embedded CPython: framework + stdlib + lib-dynload.
           cp -R "${SIM_SLICE}/Python.framework" "$APP/Frameworks/"
@@ -505,7 +505,7 @@ jobs:
           cp -R "${STAGE_DIR}/." "$SITE/"
           # Any pygobject override/_ovreride dirs live under gi/ already.
           echo "== site-packages contents:"
-          find "$SITE" -maxdepth 2 | head -40
+          find "$SITE" -maxdepth 2 | head -40 || true
 
           # Rewrite the extension modules' prefix-deps to @rpath and add an
           # rpath from the .so location back to the bundle Frameworks dir.
