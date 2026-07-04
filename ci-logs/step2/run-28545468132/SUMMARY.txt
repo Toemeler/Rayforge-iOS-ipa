@@ -1,0 +1,122 @@
++ echo 'Run ID: 28545468132'
+Run ID: 28545468132
++ echo 'Commit: ae36f3959c7af806c28b4ffa94cb82409351dc63'
+Commit: ae36f3959c7af806c28b4ffa94cb82409351dc63
+++ date -u
++ echo 'Date: Wed Jul  1 20:25:25 UTC 2026'
+Date: Wed Jul  1 20:25:25 UTC 2026
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: pixman.log ====================='
+===================== TAIL: pixman.log =====================
++ '[' -f pixman.log ']'
++ tail -25 pixman.log
+[17/37] Compiling C object pixman/libpixman-1.a.p/pixman-implementation.c.o
+[18/37] Compiling C object pixman/libpixman-1.a.p/pixman-linear-gradient.c.o
+[19/37] Compiling C object pixman/libpixman-1.a.p/pixman-mips.c.o
+[20/37] Compiling C object pixman/libpixman-1.a.p/pixman-noop.c.o
+[21/37] Compiling C object pixman/libpixman-1.a.p/pixman-matrix.c.o
+[22/37] Compiling C object pixman/libpixman-1.a.p/pixman-ppc.c.o
+[23/37] Compiling C object pixman/libpixman-1.a.p/pixman-radial-gradient.c.o
+[24/37] Compiling C object pixman/libpixman-1.a.p/pixman-region32.c.o
+[25/37] Compiling C object pixman/libpixman-1.a.p/pixman-region16.c.o
+[26/37] Compiling C object pixman/libpixman-1.a.p/pixman-riscv.c.o
+[27/37] Compiling C object pixman/libpixman-1.a.p/pixman-solid-fill.c.o
+[28/37] Compiling C object pixman/libpixman-1.a.p/pixman-timer.c.o
+[29/37] Compiling C object pixman/libpixman-1.a.p/pixman-trap.c.o
+[30/37] Compiling C object pixman/libpixman-1.a.p/pixman-utils.c.o
+[31/37] Compiling C object pixman/libpixman-arm-neon.a.p/pixman-arm-neon.c.o
+[32/37] Compiling C object pixman/libpixman-1.a.p/pixman-x86.c.o
+[33/37] Linking static target pixman/libpixman-arm-neon.a
+[34/37] Compiling C object pixman/libpixman-1.a.p/pixman-combine-float.c.o
+[35/37] Compiling C object pixman/libpixman-1.a.p/pixman-fast-path.c.o
+[36/37] Linking static target pixman/libpixman-1.a
+[36/37] Installing files
+Installing pixman/libpixman-1.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixman-src/pixman/pixman.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixman-build/pixman/pixman-version.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixman-build/meson-private/pixman-1.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: libpng.log ====================='
+===================== TAIL: libpng.log =====================
++ '[' -f libpng.log ']'
++ tail -25 libpng.log
+
+ERROR: Neither source directory 'libpng-build' nor build directory 'libpng-src' contain a build file meson.build.
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: freetype1.log ====================='
+===================== TAIL: freetype1.log =====================
++ '[' -f freetype1.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: harfbuzz.log ====================='
+===================== TAIL: harfbuzz.log =====================
++ '[' -f harfbuzz.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: freetype2.log ====================='
+===================== TAIL: freetype2.log =====================
++ '[' -f freetype2.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: fribidi.log ====================='
+===================== TAIL: fribidi.log =====================
++ '[' -f fribidi.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: expat.log ====================='
+===================== TAIL: expat.log =====================
++ '[' -f expat.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: fontconfig.log ====================='
+===================== TAIL: fontconfig.log =====================
++ '[' -f fontconfig.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: cairo.log ====================='
+===================== TAIL: cairo.log =====================
++ '[' -f cairo.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: pango.log ====================='
+===================== TAIL: pango.log =====================
++ '[' -f pango.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: stack-verify.log ====================='
+===================== TAIL: stack-verify.log =====================
++ '[' -f stack-verify.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+

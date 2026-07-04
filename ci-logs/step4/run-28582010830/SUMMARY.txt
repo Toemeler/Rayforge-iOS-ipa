@@ -1,0 +1,166 @@
++ echo 'Run ID: 28582010830'
+Run ID: 28582010830
++ echo 'Commit: 47d7dd95aa451f07c5e569d07d3debc152064f31'
+Commit: 47d7dd95aa451f07c5e569d07d3debc152064f31
+++ date -u
++ echo 'Date: Thu Jul  2 10:09:44 UTC 2026'
+Date: Thu Jul  2 10:09:44 UTC 2026
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: tiff.log ====================='
+===================== TAIL: tiff.log =====================
++ '[' -f tiff.log ']'
++ tail -40 tiff.log
+[ 43%] Building C object libtiff/CMakeFiles/tiff.dir/tif_jpeg_12.c.o
+[ 45%] Building C object libtiff/CMakeFiles/tiff.dir/tif_lerc.c.o
+[ 47%] Building C object libtiff/CMakeFiles/tiff.dir/tif_luv.c.o
+[ 50%] Building C object libtiff/CMakeFiles/tiff.dir/tif_lzma.c.o
+[ 52%] Building C object libtiff/CMakeFiles/tiff.dir/tif_lzw.c.o
+[ 54%] Building C object libtiff/CMakeFiles/tiff.dir/tif_next.c.o
+[ 56%] Building C object libtiff/CMakeFiles/tiff.dir/tif_ojpeg.c.o
+[ 58%] Building C object libtiff/CMakeFiles/tiff.dir/tif_open.c.o
+[ 60%] Building C object libtiff/CMakeFiles/tiff.dir/tif_packbits.c.o
+[ 63%] Building C object libtiff/CMakeFiles/tiff.dir/tif_pixarlog.c.o
+[ 65%] Building C object libtiff/CMakeFiles/tiff.dir/tif_predict.c.o
+[ 67%] Building C object libtiff/CMakeFiles/tiff.dir/tif_print.c.o
+[ 69%] Building C object libtiff/CMakeFiles/tiff.dir/tif_read.c.o
+[ 71%] Building C object libtiff/CMakeFiles/tiff.dir/tif_strip.c.o
+[ 73%] Building C object libtiff/CMakeFiles/tiff.dir/tif_swab.c.o
+[ 76%] Building C object libtiff/CMakeFiles/tiff.dir/tif_thunder.c.o
+[ 78%] Building C object libtiff/CMakeFiles/tiff.dir/tif_tile.c.o
+[ 80%] Building C object libtiff/CMakeFiles/tiff.dir/tif_version.c.o
+[ 82%] Building C object libtiff/CMakeFiles/tiff.dir/tif_warning.c.o
+[ 84%] Building C object libtiff/CMakeFiles/tiff.dir/tif_webp.c.o
+[ 86%] Building C object libtiff/CMakeFiles/tiff.dir/tif_write.c.o
+[ 89%] Building C object libtiff/CMakeFiles/tiff.dir/tif_zip.c.o
+[ 91%] Building C object libtiff/CMakeFiles/tiff.dir/tif_zstd.c.o
+[ 93%] Building C object libtiff/CMakeFiles/tiff.dir/tif_unix.c.o
+[ 95%] Linking C static library libtiff.a
+[ 95%] Built target tiff
+[ 97%] Building CXX object libtiff/CMakeFiles/tiffxx.dir/tif_stream.cxx.o
+[100%] Linking CXX static library libtiffxx.a
+[100%] Built target tiffxx
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libtiff-4.pc
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libtiff.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiff.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffio.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffvers.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffconf.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/tiff/TiffTargets.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/tiff/TiffConfigVersion.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/tiff/TiffConfig.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libtiffxx.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffio.hxx
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: epoxy.log ====================='
+===================== TAIL: epoxy.log =====================
++ '[' -f epoxy.log ']'
++ tail -40 epoxy.log
+Run-time dependency gl found: YES
+Found CMake: NO
+Run-time dependency egl found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency x11 found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency glesv2 found: NO  (tried pkg-config, framework and cmake)
+Library libGLESv2 found: NO
+Run-time dependency glesv1_cm found: NO  (tried pkg-config, framework and cmake)
+Library libGLESv1_CM found: NO
+Program src/gen_dispatch.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-src/src/gen_dispatch.py)
+Configuring config.h using configuration
+WARNING: Required dependency was found to be an empty string. Did you mean to pass an empty array?
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build targets in project: 3
+
+libepoxy 1.5.10
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    buildtype      : release
+    default_library: static
+    docs           : false
+    egl            : no
+    glx            : no
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    tests          : false
+    x11            : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `epoxy-build'
+[1/6] Generating include/epoxy/gl_generated.h with a custom command
+[2/6] Generating src/gl_generated_dispatch.c with a custom command
+[3/6] Compiling C object src/libepoxy.a.p/dispatch_common.c.o
+[4/6] Compiling C object src/libepoxy.a.p/meson-generated_.._gl_generated_dispatch.c.o
+[5/6] Linking static target src/libepoxy.a
+[5/6] Installing files
+Installing include/epoxy/gl_generated.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/epoxy
+Installing src/libepoxy.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-src/include/epoxy/common.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/epoxy
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-src/include/epoxy/gl.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/epoxy
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-build/meson-private/epoxy.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-setup.log ====================='
+===================== TAIL: gtk-setup.log =====================
++ '[' -f gtk-setup.log ']'
++ tail -40 gtk-setup.log
+stderr:
+usage:  ar -d [-TLsv] archive file ...
+	ar -m [-TLsv] archive file ...
+	ar -m [-abiTLsv] position archive file ...
+	ar -p [-TLsv] archive [file ...]
+	ar -q [-cTLsv] archive file ...
+	ar -r [-cuTLsv] archive file ...
+	ar -r [-abciuTLsv] position archive file ...
+	ar -t [-TLsv] archive [file ...]
+	ar -x [-ouTLsv] archive [file ...]
+-----------
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-build/meson-private/tmpno0mh8t6
+Code:
+
+    #include <Availability.h>
+    #if __MAC_OS_X_VERSION_MIN_REQUIRED < 101500L
+    # error message "Minimal macOS SDK version not met"
+    #endif
+    
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-build/meson-private/tmpno0mh8t6/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-build/meson-private/tmpno0mh8t6/output.obj -c -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=ignored-optimization-argument -std=gnu11` -> 1
+stderr:
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-build/meson-private/tmpno0mh8t6/testfile.c:4:7: error: message "Minimal macOS SDK version not met"
+    4 |     # error message "Minimal macOS SDK version not met"
+      |       ^
+1 error generated.
+-----------
+Checking if "macOS SDK version >= 10.15" compiles: NO 
+
+gtk-src/meson.build:145:4: ERROR: Problem encountered: macOS SDK 10.15 or newer is required to build GTK
+
+::endgroup::
+
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-verify.log ====================='
+===================== TAIL: gtk-verify.log =====================
++ '[' -f gtk-verify.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
