@@ -1,0 +1,351 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-build
+Build type: cross build
+Project name: gtk
+Project version: 4.22.4
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Checking if "macOS SDK version >= 10.15" compiles: YES 
+Has header "dev/evdev/input.h" : NO 
+Has header "ftw.h" : YES 
+Has header "linux/input.h" : NO 
+Has header "sys/mman.h" : YES 
+Has header "sys/sysmacros.h" : NO 
+Has header "sys/time.h" : YES 
+Has header "unistd.h" : YES 
+Library m found: YES
+Checking for function "getpagesize" with dependency -lm: YES 
+Checking for function "getresuid" with dependency -lm: NO 
+Checking for function "madvise" with dependency -lm: YES 
+Checking for function "memfd_create" with dependency -lm: NO 
+Checking for function "mkostemp" with dependency -lm: YES 
+Checking for function "mlock" with dependency -lm: YES 
+Checking for function "mmap" with dependency -lm: YES 
+Checking for function "posix_fallocate" with dependency -lm: NO 
+Checking for function "sincos" with dependency -lm: NO 
+Checking for function "sincosf" with dependency -lm: NO 
+Checking for function "memmem" with dependency -lm: YES 
+Checking if "sigsetjmp" links: YES 
+Checking if "__uint128_t available" compiles: YES 
+Checking for function "backtrace" : YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -Wno-c++11-extensions: YES 
+Compiler for C supports arguments -Wno-missing-include-dirs: YES 
+Compiler for C supports arguments -Wno-typedef-redefinition: YES 
+Compiler for C supports arguments -Wno-tautological-constant-out-of-range-compare: YES 
+Compiler for C supports arguments -Wduplicated-branches: NO 
+Compiler for C supports arguments -Wduplicated-cond: NO 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Wformat-nonliteral: YES 
+Compiler for C supports arguments -Wformat-security: YES 
+Compiler for C supports arguments -Wignored-qualifiers: YES 
+Compiler for C supports arguments -Wimplicit-function-declaration: YES 
+Compiler for C supports arguments -Wlogical-op: NO 
+Compiler for C supports arguments -Wmisleading-indentation: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wswitch-default: YES 
+Compiler for C supports arguments -Wswitch-enum: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wuninitialized: YES 
+Compiler for C supports arguments -Wunused: YES 
+Compiler for C supports arguments -Waddress: YES 
+Compiler for C supports arguments -Warray-bounds: YES 
+Compiler for C supports arguments -Wempty-body: YES 
+Compiler for C supports arguments -Wenum-int-mismatch: NO 
+Compiler for C supports arguments -Wimplicit: YES 
+Compiler for C supports arguments -Wimplicit-fallthrough: YES 
+Compiler for C supports arguments -Wimplicit-fallthrough=5: NO 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wint-to-pointer-cast: YES 
+Compiler for C supports arguments -Wmain: YES 
+Compiler for C supports arguments -Wmissing-braces: YES 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wnonnull: YES 
+Compiler for C supports arguments -Woverride-init: YES 
+Compiler for C supports arguments -Wpointer-to-int-cast: YES 
+Compiler for C supports arguments -Wredundant-decls: YES 
+Compiler for C supports arguments -Wreturn-type: YES 
+Compiler for C supports arguments -Wsequence-point: YES 
+Compiler for C supports arguments -Wtrigraphs: YES 
+Compiler for C supports arguments -Wvla: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports link arguments -Wl,-Bsymbolic: NO 
+Compiler for C supports link arguments -Wl,-z,relro: NO 
+Compiler for C supports link arguments -Wl,-z,now: NO 
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency glib-2.0 found: YES 2.84.4
+Run-time dependency gio-2.0 found: YES 2.84.4
+Found CMake: NO
+Run-time dependency gobject-introspection-1.0 found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency gobject-2.0 found: YES 2.84.4
+Run-time dependency gio-unix-2.0 found: YES 2.84.4
+Run-time dependency gmodule-2.0 found: YES 2.84.4
+Run-time dependency pango found: YES 1.58.0
+Run-time dependency cairo found: YES 1.18.4
+Run-time dependency cairo-gobject found: YES 1.18.4
+Run-time dependency fribidi found: YES 1.0.16
+Run-time dependency harfbuzz found: YES 14.2.1
+Run-time dependency harfbuzz-subset found: YES 14.2.1
+Run-time dependency pangoft2 found: YES 1.58.0
+Run-time dependency pangocairo found: YES 1.58.0
+Run-time dependency gdk-pixbuf-2.0 found: YES 2.44.7
+Run-time dependency libpng found: YES 1.6.44
+Run-time dependency libtiff-4 found: YES 4.7.0
+Run-time dependency libjpeg found: YES 3.2.0
+Run-time dependency epoxy found: YES 1.5.10
+Run-time dependency xkbcommon found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency graphene-gobject-1.0 found: YES 1.10.8
+Run-time dependency iso-codes found: NO  (tried pkg-config, framework and cmake)
+Dependency gstreamer-play-1.0 for host machine skipped: feature media-gstreamer disabled
+Dependency gstreamer-gl-1.0 for host machine skipped: feature media-gstreamer disabled
+Dependency gstreamer-allocators-1.0 for host machine skipped: feature media-gstreamer disabled
+Dependency tracker-sparql-3.0 for host machine skipped: feature tracker disabled
+Dependency colord for host machine skipped: feature colord disabled
+Run-time dependency cairo-script-interpreter found: YES 1.18.4
+Checking for function "ngettext" : NO 
+Library intl found: NO
+Checking for function "bind_textdomain_codeset" with dependency -lintl: NO 
+Not looking for a fallback subproject for the dependency (anonymous) because:
+Use of fallback dependencies is disabled.
+Dependency vulkan for host machine skipped: feature vulkan disabled
+Program glslc skipped: feature vulkan disabled
+Run-time dependency libdrm found: NO  (tried pkg-config, framework and cmake)
+Has header "drm/drm_fourcc.h" : NO 
+Has header "linux/dma-buf.h" : NO 
+Has header "linux/udmabuf.h" : NO 
+Dependency cloudproviders for host machine skipped: feature cloudproviders disabled
+Run-time dependency accesskit-c-0.18 found: NO  (tried pkg-config, framework and cmake)
+Dependency cpdb-frontend for host machine skipped: feature print-cpdb disabled
+cups-config found: NO need ['>=2.0', '<3.0']
+Run-time dependency cups found: NO  (tried pkg-config, config-tool, framework and cmake)
+Run-time dependency cups3 found: NO  (tried pkg-config, framework and cmake)
+Program bash found: YES (/bin/bash)
+Run-time dependency bash-completion found: NO  (tried pkg-config, framework and cmake)
+Message: Found bash-completion but the .pc file did not set 'completionsdir', fallback to a predefined path
+Program g-ir-scanner skipped: feature introspection disabled
+Program glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Program build-aux/meson/gen-visibility-macros.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-src/build-aux/meson/gen-visibility-macros.py)
+Program build-aux/meson/gen-profile-conf.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-src/build-aux/meson/gen-profile-conf.py)
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build-time dependency glib-2.0 found: YES 2.84.4
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Program gen-gdk-gresources-xml.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-src/gdk/gen-gdk-gresources-xml.py)
+Configuring gdk.gresource.xml with command
+Build-time dependency gio-2.0 found: YES 2.84.4
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal)
+Configuring gdkconfig.h using configuration
+Program generate-glsl-interface.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-src/gsk/gpu/shaders/generate-glsl-interface.py)
+Program process-glsl-includes.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-src/gsk/gpu/shaders/process-glsl-includes.py)
+Program gen-gsk-gresources-xml.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-src/gsk/gen-gsk-gresources-xml.py)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Program gdbus-codegen found: YES (/opt/homebrew/bin/gdbus-codegen)
+Program gen-gtk-gresources-xml.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-src/gtk/gen-gtk-gresources-xml.py)
+Configuring gtk.gresources.xml with command
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring bn.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring de.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring da.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring fr.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring es.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring et.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring fi.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring hi.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring hu.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring it.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring ja.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring ko.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring lt.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring ms.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring nb.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring nl.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring pl.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring pt.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring ru.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring sv.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring th.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring uk.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring zh.gresource.xml using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/gdbus-codegen found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/gdbus-codegen)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Program gentypefuncs.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-src/gtk/gentypefuncs.py)
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/gdbus-codegen found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/gdbus-codegen)
+Configuring gtkconfig.h using configuration
+Configuring gtkversion.h using configuration
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-schemas found: YES (/opt/homebrew/bin/glib-compile-schemas)
+Has header "langinfo.h" : YES 
+Header "langinfo.h" has symbol "_NL_MEASUREMENT_MEASUREMENT" : NO 
+Header "langinfo.h" has symbol "_NL_PAPER_HEIGHT" : NO 
+Header "langinfo.h" has symbol "_NL_PAPER_WIDTH" : NO 
+Header "langinfo.h" has symbol "_NL_TIME_FIRST_WEEKDAY" : NO 
+Program msgfmt found: YES (/opt/homebrew/opt/gettext/bin/msgfmt)
+Program msginit found: YES (/opt/homebrew/opt/gettext/bin/msginit)
+Program msgmerge found: YES (/opt/homebrew/opt/gettext/bin/msgmerge)
+Program xgettext found: YES (/opt/homebrew/opt/gettext/bin/xgettext)
+Program gi-docgen found: NO
+Program gtk4-builder-tool found: YES (overridden)
+Program rst2man rst2man.py found: NO
+Program rst2html5 rst2html5.py found: NO
+Configuring config.h using configuration
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Message: Not executing post-install steps automatically when cross compiling
+Build targets in project: 315
+
+gtk 4.22.4
+
+  Components
+    Display backends :
+    Print backends   : file
+    Media backends   :
+
+  Features
+    Vulkan support   : false
+    Cloud support    : false
+    Sysprof support  : false
+    Colord support   : false
+    Tracker support  : false
+    AccessKit support: false
+
+  Toolchain
+    Compiler         : clang
+    Linker           : ld64
+
+  Build
+    Debugging        : false
+    Optimization     : 3
+    Introspection    : false
+    Documentation    : false
+    Man pages        : false
+    Testsuite        : false
+    Tests            : false
+    Demos            : false
+    Examples         : false
+
+  Directories
+    Prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    Includedir       : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+    Libdir           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+    Datadir          : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share
+
+  User defined options
+    Cross files      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    accesskit        : disabled
+    android-backend  : false
+    broadway-backend : false
+    build-demos      : false
+    build-examples   : false
+    build-tests      : false
+    build-testsuite  : false
+    buildtype        : release
+    cloudproviders   : disabled
+    colord           : disabled
+    default_library  : static
+    documentation    : false
+    f16c             : disabled
+    introspection    : disabled
+    ios-backend      : true
+    macos-backend    : false
+    man-pages        : false
+    media-gstreamer  : disabled
+    prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    print-cpdb       : disabled
+    print-cups       : disabled
+    screenshots      : false
+    sysprof          : disabled
+    tracker          : disabled
+    vulkan           : disabled
+    wayland-backend  : false
+    win32-backend    : false
+    wrap_mode        : nofallback
+    x11-backend      : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
