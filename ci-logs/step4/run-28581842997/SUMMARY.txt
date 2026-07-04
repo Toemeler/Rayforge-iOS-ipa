@@ -1,0 +1,49 @@
++ echo 'Run ID: 28581842997'
+Run ID: 28581842997
++ echo 'Commit: 740074d9bb88e2a35154cea29fc2ed09d0dab7d2'
+Commit: 740074d9bb88e2a35154cea29fc2ed09d0dab7d2
+++ date -u
++ echo 'Date: Thu Jul  2 10:04:03 UTC 2026'
+Date: Thu Jul  2 10:04:03 UTC 2026
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: tiff.log ====================='
+===================== TAIL: tiff.log =====================
++ '[' -f tiff.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: epoxy.log ====================='
+===================== TAIL: epoxy.log =====================
++ '[' -f epoxy.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-setup.log ====================='
+===================== TAIL: gtk-setup.log =====================
++ '[' -f gtk-setup.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-verify.log ====================='
+===================== TAIL: gtk-verify.log =====================
++ '[' -f gtk-verify.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
