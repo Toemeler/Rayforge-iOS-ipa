@@ -295,7 +295,13 @@ jobs:
           "$PY313" -m pip -q install --break-system-packages maturin || "$PY313" -m pip -q install maturin
           export PYO3_CROSS=1
           export PYO3_CROSS_PYTHON_VERSION=3.13
-          export PYO3_CROSS_LIB_DIR="${SIM_SLICE}/lib"
+          # sysconfigdata lives per-arch (slice/lib-arm64/python3.13/),
+          # not in slice/lib — locate it and point pyo3 at its grandparent.
+          SYSCFG=$(find "${SIM_SLICE}" -name "_sysconfigdata__*.py" -path "*arm64*" | head -1)
+          [ -n "$SYSCFG" ] || SYSCFG=$(find "${SIM_SLICE}" -name "_sysconfigdata__*.py" | head -1)
+          test -n "$SYSCFG"
+          export PYO3_CROSS_LIB_DIR="$(dirname "$(dirname "$SYSCFG")")"
+          echo "PYO3_CROSS_LIB_DIR=$PYO3_CROSS_LIB_DIR"
           export IPHONEOS_DEPLOYMENT_TARGET="${IOS_MIN}"
           MATURIN="$("$PY313" -c 'import shutil;print(shutil.which("maturin") or "")')"
           [ -n "$MATURIN" ] || MATURIN="$(dirname "$PY313")/maturin"
