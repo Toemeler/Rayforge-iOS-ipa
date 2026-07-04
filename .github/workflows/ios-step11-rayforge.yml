@@ -687,6 +687,14 @@ jobs:
             | grep -q "${BUNDLE_ID}" || APP_ALIVE=0
           echo "app alive: ${APP_ALIVE}  marker seen: ${MARKER_SEEN}"
 
+          # main() blocks the UIKit main thread for its whole duration
+          # (addon loading + window construction), so the CADisplayLink
+          # pump cannot render any frame until main() returns — which is
+          # right AFTER the marker prints. Give the pump time to paint the
+          # first frames before capturing the screenshot.
+          echo "waiting for first rendered frames..."
+          sleep 20
+
           xcrun simctl io "$UDID" screenshot simulator-screenshot.png || true
           ls -la simulator-screenshot.png || true
 
