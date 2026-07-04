@@ -412,6 +412,12 @@ jobs:
           git clone -q --depth 1 https://github.com/barebaric/rayforge.git rayforge-src
           (cd rayforge-src && git rev-parse HEAD | tee "${GITHUB_WORKSPACE}/rayforge-sha.txt")
           python3 ios/scripts/patch-rayforge-ios.py rayforge-src
+          # version.py falls back to `git describe` (subprocess -> ENOTSUP
+          # on iOS, uncaught OSError). Provide the version.txt it checks
+          # FIRST, derived from the checked-out git state on the runner.
+          (cd rayforge-src && git describe --tags --always 2>/dev/null || echo "0.0.0+ios") \
+            > rayforge-src/rayforge/version.txt
+          cat rayforge-src/rayforge/version.txt
           cp -R rayforge-src/rayforge "$STAGE/rayforge"
           cp -R ios/pyshims/scipy "$STAGE/scipy"
           cp -R ios/pyshims/cv2 "$STAGE/cv2"
