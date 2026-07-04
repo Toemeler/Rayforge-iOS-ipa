@@ -1,0 +1,691 @@
+name: iOS Step 11 - Rayforge on iOS
+
+# Cross-compiles pycairo and PyGObject against the Step-9 introspection
+# prefix (glib/gtk/adw + all typelibs, shared dylibs) and the embedded
+# BeeWare CPython, then runs an on-simulator self-test that imports gi,
+# loads Gtk/Adw from the typelibs, instantiates GObjects FROM PYTHON
+# (round-tripping libgirepository + libffi), and exercises pycairo.
+# Success = "PYGOBJECT OK" in the app console/syslog AND the app alive at
+# screenshot time.
+#
+# Meson cannot run the target (iOS) python to introspect it, so we fake
+# the target environment: the host python3.13 (same ABI as the BeeWare
+# 3.13 framework) is pointed at the framework's iOS _sysconfigdata via
+# _PYTHON_SYSCONFIGDATA_NAME + PYTHONPATH, which makes sysconfig report
+# iOS EXT_SUFFIX/paths. The iOS Python headers (whose sysconfig path is
+# stale) are supplied explicitly via -I in the cross file. meson's python
+# module adds `-undefined dynamic_lookup` on Darwin, so the extensions do
+# not link libpython (symbols resolve from the framework at load).
+
+on:
+  workflow_dispatch:
+    inputs:
+      ios_min:
+        description: "Minimum iOS deployment version"
+        required: false
+        default: "17.0"
+
+permissions:
+  contents: write
+
+env:
+  IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
+  IOS_SDK: "iphonesimulator"
+  BUNDLE_ID: "org.rayforge.app"
+  RAYGEO_TAG: "v0.13.2"
+  VTRACER_VERSION: "0.6.11"
+  PY_SUPPORT_URL: "https://github.com/beeware/Python-Apple-support/releases/download/3.13-b14/Python-3.13-iOS-support.b14.tar.gz"
+  LIBFFI_VERSION: "3.5.2"
+  PYCAIRO_VERSION: "1.29.0"
+  PYGOBJECT_VERSION: "3.56.3"
+
+jobs:
+  rayforge:
+    name: Rayforge boot on the iOS simulator
+    runs-on: macos-15
+    timeout-minutes: 120
+
+    steps:
+      - name: "[1/14] Toolchain + simulator inventory"
+        run: |
+          set -x
+          sw_vers || true
+          xcodebuild -version || true
+          xcrun --sdk iphonesimulator --show-sdk-version || true
+          xcrun simctl list runtimes || true
+
+      - name: "[2/14] Checkout repo"
+        uses: actions/checkout@v4
+
+      - name: "[3/14] Install build tools (incl. python@3.13 for ABI match)"
+        run: |
+          set -euxo pipefail
+          brew list meson >/dev/null 2>&1 || brew install meson
+          brew list ninja >/dev/null 2>&1 || brew install ninja
+          brew list pkg-config >/dev/null 2>&1 || brew install pkg-config
+          brew list glib >/dev/null 2>&1 || brew install glib
+          brew list gobject-introspection >/dev/null 2>&1 || brew install gobject-introspection
+          brew list gettext >/dev/null 2>&1 || brew install gettext
+          brew list python@3.13 >/dev/null 2>&1 || brew install python@3.13
+          echo "$(brew --prefix gettext)/bin" >> "$GITHUB_PATH"
+          PY313="$(brew --prefix python@3.13)/bin/python3.13"
+          test -x "$PY313"
+          echo "PY313=${PY313}" >> "$GITHUB_ENV"
+          "$PY313" --version
+
+      - name: "[4/14] Restore Step-9 introspection prefix (shared dylibs + typelibs)"
+        id: cache-gi
+        uses: actions/cache@v4
+        with:
+          path: ios-out
+          key: pygobject-sim-v1-${{ hashFiles('ios/testapp/main-rayforge.c') }}-run${{ github.run_id }}
+          restore-keys: |
+            pygobject-sim-v1-
+            gi-sim-v2-
+
+      - name: "[5/14] Verify prefix has the Step-9 outputs"
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          echo "PREFIX=${PREFIX}" >> "$GITHUB_ENV"
+          MISSING=0
+          for f in \
+            "${PREFIX}/lib/libgtk-4.1.dylib" \
+            "${PREFIX}/lib/girepository-1.0/Gtk-4.0.typelib" \
+            "${PREFIX}/lib/girepository-1.0/Adw-1.typelib" \
+            "${PREFIX}/lib/pkgconfig/girepository-2.0.pc" \
+            "${PREFIX}/lib/pkgconfig/gtk4.pc" \
+            "${PREFIX}/lib/pkgconfig/cairo-gobject.pc"; do
+            if [ ! -f "$f" ]; then echo "::error::missing from cached prefix: $f"; MISSING=1; fi
+          done
+          if [ "$MISSING" != "0" ]; then
+            echo "::error::Step-9 introspection prefix not in cache. Run 'iOS Step 9' to green first (its cache seeds this step)."
+            exit 1
+          fi
+          echo "== shared dylibs in prefix:"
+          ls -1 "${PREFIX}/lib/"*.dylib | head -40 || true
+
+      - name: "[6/14] Build libffi for iOS simulator (PyGObject hard dep)"
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          if [ -f "${PREFIX}/lib/pkgconfig/libffi.pc" ] && [ -f "${PREFIX}/lib/libffi.a" ]; then
+            echo "libffi already in prefix — skipping"
+            exit 0
+          fi
+          SDK=$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)
+          CC="$(xcrun --sdk "${IOS_SDK}" --find clang)"
+          curl -fL --retry 3 -o libffi.tar.gz \
+            "https://github.com/libffi/libffi/releases/download/v${LIBFFI_VERSION}/libffi-${LIBFFI_VERSION}.tar.gz"
+          mkdir -p ffi-src && tar xf libffi.tar.gz --strip-components=1 -C ffi-src
+          cd ffi-src
+          # arm64 iOS simulator: --host generic arm-apple-darwin; simulator
+          # flags in CC/CFLAGS. libffi 3.4.6 has the Apple static-trampoline
+          # closure path (no JIT) needed on iOS.
+          export CC="${CC} -arch arm64 -isysroot ${SDK} -mios-simulator-version-min=${IOS_MIN}"
+          export CFLAGS="-arch arm64 -isysroot ${SDK} -mios-simulator-version-min=${IOS_MIN} -O2 -fPIC"
+          # Belt & suspenders vs the Xcode-16 assembler CFI rejection
+          # (fixed upstream in >=3.4.7, cache var disables CFI if it recurs).
+          export libffi_cv_as_cfi_pseudo_op=no
+          ./configure --host=aarch64-apple-darwin --prefix="${PREFIX}" \
+            --enable-static --disable-shared --disable-docs \
+            2>&1 | tee "${GITHUB_WORKSPACE}/libffi.log"
+          make -j"$(sysctl -n hw.ncpu)" 2>&1 | tee -a "${GITHUB_WORKSPACE}/libffi.log"
+          make install 2>&1 | tee -a "${GITHUB_WORKSPACE}/libffi.log"
+          test -f "${PREFIX}/lib/pkgconfig/libffi.pc"
+          PKG_CONFIG_LIBDIR="${PREFIX}/lib/pkgconfig" PKG_CONFIG_SYSROOT_DIR= \
+            pkg-config --modversion libffi
+
+      - name: "[7/14] Download CPython iOS support package"
+        run: |
+          set -euxo pipefail
+          curl -fL --retry 3 -o py-support.tar.gz "${PY_SUPPORT_URL}"
+          mkdir -p py-support && tar xf py-support.tar.gz -C py-support
+          SIM_SLICE=$(find py-support -maxdepth 2 -type d -name "*simulator*" -path "*Python.xcframework*" | head -1)
+          test -n "${SIM_SLICE}"
+          test -d "${SIM_SLICE}/Python.framework"
+          STDLIB=$(find py-support -maxdepth 3 -type d -name "python3.*" -path "*Python.xcframework/lib/*" | head -1)
+          test -n "${STDLIB}"
+          DYNLOAD=$(find "${SIM_SLICE}" -maxdepth 4 -type d -name "lib-dynload" -path "*arm64*" | head -1)
+          if [ -z "${DYNLOAD}" ]; then DYNLOAD=$(find "${SIM_SLICE}" -maxdepth 4 -type d -name "lib-dynload" | head -1); fi
+          PYINC=$(find "${SIM_SLICE}/Python.framework" -maxdepth 3 -name "Python.h" -exec dirname {} \; | head -1)
+          test -n "${PYINC}"
+          # iOS simulator sysconfigdata for faking the target env under host py.
+          SYSCONFIG_PY=$(find py-support -name "_sysconfigdata__ios_*.py" | grep -i simulator | head -1)
+          if [ -z "${SYSCONFIG_PY}" ]; then
+            SYSCONFIG_PY=$(find py-support -name "_sysconfigdata_*.py" | grep -i simulator | head -1)
+          fi
+          test -n "${SYSCONFIG_PY}"
+          SYSCONFIG_DIR=$(dirname "${SYSCONFIG_PY}")
+          SYSCONFIG_NAME=$(basename "${SYSCONFIG_PY}" .py)
+          echo "SIM_SLICE=${GITHUB_WORKSPACE}/${SIM_SLICE}" >> "$GITHUB_ENV"
+          echo "PY_STDLIB=${GITHUB_WORKSPACE}/${STDLIB}" >> "$GITHUB_ENV"
+          echo "PY_DYNLOAD=${GITHUB_WORKSPACE}/${DYNLOAD}" >> "$GITHUB_ENV"
+          echo "PYINC=${GITHUB_WORKSPACE}/${PYINC}" >> "$GITHUB_ENV"
+          echo "SYSCONFIG_DIR=${GITHUB_WORKSPACE}/${SYSCONFIG_DIR}" >> "$GITHUB_ENV"
+          echo "SYSCONFIG_NAME=${SYSCONFIG_NAME}" >> "$GITHUB_ENV"
+          echo "== sysconfigdata: ${SYSCONFIG_NAME} in ${SYSCONFIG_DIR}"
+          echo "== python headers: ${PYINC}"
+
+      - name: "[8/14] Generate cross files + verify faked iOS sysconfig"
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          chmod +x ios/scripts/gen-cross-file.sh
+          # Base cross file: iOS clang wrappers + pkgconfig -> prefix.
+          ios/scripts/gen-cross-file.sh \
+            "${GITHUB_WORKSPACE}/cross-pfx.txt" "${IOS_MIN}" \
+            "${PREFIX}/lib/pkgconfig"
+          # Inject the iOS Python framework Headers into the global compile+
+          # link flags (the python dependency's own INCLUDEPY is a stale
+          # build path). Applies to every target — fine, this cross file only
+          # builds the two python extensions. The common_flags line is:
+          #   common_flags = ['-arch', 'arm64', '-isysroot', sdkroot, ios_min]
+          # -I: iOS Python headers (sysconfig INCLUDEPY is a stale build
+          # path); -F: the real framework dir (sysconfig PYTHONFRAMEWORKPREFIX
+          # is equally stale -> 'framework Python not found' at link).
+          sed -i '' "s|ios_min]|ios_min, '-I${PYINC}', '-F${SIM_SLICE}']|" "${GITHUB_WORKSPACE}/cross-pfx.txt"
+          grep "common_flags" "${GITHUB_WORKSPACE}/cross-pfx.txt"
+
+          # Cross file fragment selecting the host python3.13 as the
+          # (runnable) python meson introspects.
+          CPY="${GITHUB_WORKSPACE}/cross-python.txt"
+          : > "$CPY"
+          echo "[binaries]" >> "$CPY"
+          echo "python = '${PY313}'" >> "$CPY"
+          cat "$CPY"
+
+          # Verify the faked sysconfig reports iOS (fail early if not).
+          # Written to a file (no heredocs in YAML run blocks).
+          export _PYTHON_SYSCONFIGDATA_NAME="${SYSCONFIG_NAME}"
+          export PYTHONPATH="${SYSCONFIG_DIR}"
+          CHK="${GITHUB_WORKSPACE}/chk_sysconfig.py"
+          : > "$CHK"
+          echo "import sysconfig" >> "$CHK"
+          echo "p = sysconfig.get_platform()" >> "$CHK"
+          echo "e = sysconfig.get_config_var('EXT_SUFFIX')" >> "$CHK"
+          echo "print('faked get_platform() =', p)" >> "$CHK"
+          echo "print('faked EXT_SUFFIX      =', e)" >> "$CHK"
+          echo "ok = (('ios' in p) or ('iphone' in p)) and (e is not None) and (('ios' in e) or ('iphone' in e) or ('darwin' in e))" >> "$CHK"
+          echo "raise SystemExit(0 if ok else 'sysconfig faking did not produce an iOS target')" >> "$CHK"
+          "${PY313}" "$CHK"
+
+      - name: "[9/14] Cross-compile pycairo"
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          PYSTAGE="${GITHUB_WORKSPACE}/py-stage"
+          rm -rf "$PYSTAGE"; mkdir -p "$PYSTAGE"
+          export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig"
+          export PKG_CONFIG_LIBDIR="${PREFIX}/lib/pkgconfig"
+          export PKG_CONFIG_SYSROOT_DIR=
+          export _PYTHON_SYSCONFIGDATA_NAME="${SYSCONFIG_NAME}"
+          export PYTHONPATH="${SYSCONFIG_DIR}"
+
+          curl -fL --retry 3 -o pycairo.tar.gz \
+            "https://github.com/pygobject/pycairo/releases/download/v${PYCAIRO_VERSION}/pycairo-${PYCAIRO_VERSION}.tar.gz"
+          mkdir -p pycairo-src && tar xf pycairo.tar.gz --strip-components=1 -C pycairo-src
+          meson setup pycairo-build pycairo-src \
+            --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
+            --cross-file="${GITHUB_WORKSPACE}/cross-python.txt" \
+            --prefix="${PYSTAGE}" --buildtype=release \
+            -Dpython="${PY313}" -Dtests=false \
+            2>&1 | tee "${GITHUB_WORKSPACE}/pycairo-setup.log"
+          ninja -C pycairo-build 2>&1 | tee "${GITHUB_WORKSPACE}/pycairo-build.log"
+          ninja -C pycairo-build install 2>&1 | tee -a "${GITHUB_WORKSPACE}/pycairo-build.log"
+
+          echo "== pycairo staged files:"
+          find "$PYSTAGE" -name "*.so" -o -name "cairo" -type d | tee "${GITHUB_WORKSPACE}/pycairo-files.txt"
+          CAIRO_SO=$(find "$PYSTAGE" -name "_cairo*.so" | head -1)
+          test -n "${CAIRO_SO}"
+          file "${CAIRO_SO}"
+          lipo -info "${CAIRO_SO}" || true
+
+      - name: "[10/14] Cross-compile PyGObject (pycairo enabled)"
+        run: |
+          set -euxo pipefail
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          PYSTAGE="${GITHUB_WORKSPACE}/py-stage"
+          export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig"
+          export PKG_CONFIG_LIBDIR="${PREFIX}/lib/pkgconfig"
+          export PKG_CONFIG_SYSROOT_DIR=
+          export _PYTHON_SYSCONFIGDATA_NAME="${SYSCONFIG_NAME}"
+          export PYTHONPATH="${SYSCONFIG_DIR}"
+          # pycairo's headers (needed to build _gi_cairo) are in the stage;
+          # expose them to pkg-config (pycairo installs py3cairo.pc).
+          PYCAIRO_PC=$(find "$PYSTAGE" -name "py3cairo.pc" -exec dirname {} \; | head -1)
+          if [ -n "${PYCAIRO_PC}" ]; then
+            export PKG_CONFIG_PATH="${PYCAIRO_PC}:${PKG_CONFIG_PATH}"
+            export PKG_CONFIG_LIBDIR="${PYCAIRO_PC}:${PKG_CONFIG_LIBDIR}"
+          fi
+
+          PYGMAJMIN="$(echo "${PYGOBJECT_VERSION}" | cut -d. -f1,2)"
+          curl -fL --retry 3 -o pygobject.tar.xz \
+            "https://download.gnome.org/sources/pygobject/${PYGMAJMIN}/pygobject-${PYGOBJECT_VERSION}.tar.xz" \
+          || curl -fL --retry 3 -o pygobject.tar.gz \
+            "https://download.gnome.org/sources/pygobject/${PYGMAJMIN}/pygobject-${PYGOBJECT_VERSION}.tar.gz"
+          mkdir -p pygobject-src
+          if [ -f pygobject.tar.xz ]; then tar xf pygobject.tar.xz --strip-components=1 -C pygobject-src; else tar xf pygobject.tar.gz --strip-components=1 -C pygobject-src; fi
+
+          # NOTE: no --wrap-mode=nofallback here — PyGObject needs the
+          # pythoncapi-compat subproject (fetched from wrapdb; runner has
+          # network). tests=false avoids the gi-tests subproject.
+          meson setup pygobject-build pygobject-src \
+            --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
+            --cross-file="${GITHUB_WORKSPACE}/cross-python.txt" \
+            --prefix="${PYSTAGE}" --buildtype=release \
+            -Dpython="${PY313}" -Dpycairo=enabled -Dtests=false \
+            2>&1 | tee "${GITHUB_WORKSPACE}/pygobject-setup.log"
+          ninja -C pygobject-build 2>&1 | tee "${GITHUB_WORKSPACE}/pygobject-build.log"
+          ninja -C pygobject-build install 2>&1 | tee -a "${GITHUB_WORKSPACE}/pygobject-build.log"
+
+          echo "== gi staged files:"
+          find "$PYSTAGE" -path "*gi*" -name "*.so" | tee "${GITHUB_WORKSPACE}/pygobject-files.txt"
+          GI_SO=$(find "$PYSTAGE" -name "_gi*.so" ! -name "_gi_cairo*" | head -1)
+          test -n "${GI_SO}"
+          file "${GI_SO}"
+          lipo -info "${GI_SO}" || true
+
+
+      - name: "[10d/16] Build raygeo + vtracer wheels (Rust, maturin)"
+        run: |
+          set -euxo pipefail
+          rustup target add aarch64-apple-ios-sim
+          PY313="$(brew --prefix python@3.13)/bin/python3.13"
+          "$PY313" -m pip -q install --break-system-packages maturin || "$PY313" -m pip -q install maturin
+          export PYO3_CROSS=1
+          export PYO3_CROSS_PYTHON_VERSION=3.13
+          export PYO3_CROSS_LIB_DIR="${SIM_SLICE}/lib"
+          export IPHONEOS_DEPLOYMENT_TARGET="${IOS_MIN}"
+          MATURIN="$("$PY313" -c 'import shutil;print(shutil.which("maturin") or "")')"
+          [ -n "$MATURIN" ] || MATURIN="$(dirname "$PY313")/maturin"
+
+          git clone -q --depth 1 --branch "${RAYGEO_TAG}" https://github.com/barebaric/raygeo.git raygeo-src
+          (cd raygeo-src && "$MATURIN" build --release \
+             --target aarch64-apple-ios-sim \
+             --out "${GITHUB_WORKSPACE}/rust-wheels" \
+             2>&1 | tee "${GITHUB_WORKSPACE}/raygeo-build.log")
+
+          "$PY313" -m pip -q download --no-binary :all: --no-deps \
+            -d vtracer-sdist "vtracer==${VTRACER_VERSION}"
+          mkdir -p vtracer-src && tar xf vtracer-sdist/vtracer-*.tar.gz --strip-components=1 -C vtracer-src
+          (cd vtracer-src && "$MATURIN" build --release \
+             --target aarch64-apple-ios-sim \
+             --out "${GITHUB_WORKSPACE}/rust-wheels" \
+             2>&1 | tee "${GITHUB_WORKSPACE}/vtracer-build.log")
+          ls -la rust-wheels/
+
+      - name: "[10e/16] Collect python dependencies (BeeWare wheels + pure)"
+        run: |
+          set -euxo pipefail
+          PY313="$(brew --prefix python@3.13)/bin/python3.13"
+          STAGE="${GITHUB_WORKSPACE}/site-stage"
+          mkdir -p "$STAGE" ios-wheels pure-wheels
+
+          IOSPLAT="ios_13_0_arm64_iphonesimulator"
+          "$PY313" -m pip download --only-binary=:all: \
+            --platform "$IOSPLAT" --python-version 3.13 \
+            --index-url https://pypi.anaconda.org/beeware/simple \
+            --extra-index-url https://pypi.org/simple \
+            -d ios-wheels numpy 2>&1 | tee beeware-dl.log
+          STUB_AIOHTTP=0
+          "$PY313" -m pip download --only-binary=:all: \
+            --platform "$IOSPLAT" --python-version 3.13 \
+            --index-url https://pypi.anaconda.org/beeware/simple \
+            --extra-index-url https://pypi.org/simple \
+            -d ios-wheels aiohttp 2>&1 | tee -a beeware-dl.log \
+            || STUB_AIOHTTP=1
+          echo "STUB_AIOHTTP=${STUB_AIOHTTP}"
+
+          "$PY313" -m pip download --only-binary=:all: --no-deps \
+            --platform any --python-version 3.13 \
+            -d pure-wheels \
+            blinker==1.9.0 ezdxf==1.4.4b3 platformdirs==4.3.6 pluggy==1.6.0 \
+            pypdf==6.12.1 semver==3.0.2 svgelements==1.9.6 trimesh==4.6.8 \
+            websockets==14.2 asyncudp==0.11.0 GitPython==3.1.50 gitdb smmap \
+            pyserial PyOpenGL==3.1.10 typing_extensions \
+            2>&1 | tee pure-dl.log
+
+          for w in ios-wheels/*.whl rust-wheels/*.whl pure-wheels/*.whl; do
+            [ -f "$w" ] || continue
+            unzip -qo "$w" -d "$STAGE"
+          done
+          find "$STAGE" -maxdepth 1 -name "*.dist-info" -exec rm -rf {} +
+
+          # PyYAML: no universal wheel; its pure-python fallback is the
+          # sdist's lib/yaml package.
+          "$PY313" -m pip -q download --no-binary :all: --no-deps -d yaml-sdist PyYAML==6.0.2
+          mkdir -p yaml-src && tar xf yaml-sdist/*.tar.gz --strip-components=1 -C yaml-src
+          cp -R yaml-src/lib/yaml "$STAGE/yaml"
+
+          if [ "$STUB_AIOHTTP" = "1" ]; then
+            cp -R ios/pyshims/aiohttp_stub/aiohttp "$STAGE/aiohttp"
+          fi
+          ls "$STAGE" | head -40
+          echo "STAGE_DIR=$STAGE" >> "$GITHUB_ENV"
+
+      - name: "[10f/16] Rayforge source + iOS shims"
+        run: |
+          set -euxo pipefail
+          STAGE="${STAGE_DIR}"
+          git clone -q --depth 1 https://github.com/barebaric/rayforge.git rayforge-src
+          (cd rayforge-src && git rev-parse HEAD | tee "${GITHUB_WORKSPACE}/rayforge-sha.txt")
+          python3 ios/scripts/patch-rayforge-ios.py rayforge-src
+          cp -R rayforge-src/rayforge "$STAGE/rayforge"
+          cp -R ios/pyshims/scipy "$STAGE/scipy"
+          cp -R ios/pyshims/cv2 "$STAGE/cv2"
+          cp ios/pyshims/rayforge_ios_pool.py "$STAGE/"
+          cp ios/pyshims/ios_main.py "$STAGE/"
+          du -sh "$STAGE"
+
+      - name: "[11/16] Link Rayforge app + assemble .app bundle"
+        run: |
+          set -euxo pipefail
+          SDK=$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)
+          PREFIX="${GITHUB_WORKSPACE}/ios-out"
+          PYSTAGE="${GITHUB_WORKSPACE}/py-stage"
+          export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig"
+          export PKG_CONFIG_LIBDIR="${PREFIX}/lib/pkgconfig"
+          export PKG_CONFIG_SYSROOT_DIR=
+
+          # adw + gtk are now shared dylibs (Step 9); link them directly (no
+          # -force_load: a dylib runs its GResource constructors on load).
+          xcrun --sdk "${IOS_SDK}" clang \
+            -arch arm64 -isysroot "$SDK" \
+            -mios-simulator-version-min="${IOS_MIN}" \
+            ios/testapp/main-rayforge.c \
+            -o rayforge-app \
+            $(pkg-config --cflags libadwaita-1 gtk4) \
+            -I"${PYINC}" \
+            -L"${PREFIX}/lib" \
+            $(pkg-config --libs libadwaita-1 gtk4 glib-2.0 gio-2.0 gobject-2.0) \
+            -F"${SIM_SLICE}" -framework Python \
+            -framework CoreFoundation \
+            2>&1 | tee "${GITHUB_WORKSPACE}/testapp-link.log"
+
+          APP="RayforgeApp.app"
+          rm -rf "$APP"
+          mkdir -p "$APP/Frameworks" "$APP/share" "$APP/etc/fonts" \
+                   "$APP/lib/girepository-1.0"
+
+          cp rayforge-app "$APP/rayforge-app"
+
+          # Bundle ALL shared dylibs from the prefix (glib/gtk/adw/pango/
+          # cairo/pixbuf/graphene/harfbuzz/...). Preserve symlinks.
+          cp -a "${PREFIX}/lib/"*.dylib "$APP/Frameworks/" 2>/dev/null || true
+
+          # Normalize install names to @rpath for every real dylib and
+          # rewrite inter-dependencies that point into the build prefix.
+          for dylib in "$APP"/Frameworks/*.dylib; do
+            [ -e "$dylib" ] || continue
+            if [ -L "$dylib" ]; then continue; fi
+            base=$(basename "$dylib")
+            install_name_tool -id "@rpath/${base}" "$dylib" 2>/dev/null || true
+            otool -L "$dylib" | awk 'NR>1{print $1}' | while read -r dep; do
+              case "$dep" in
+                "${PREFIX}/lib/"*)
+                  install_name_tool -change "$dep" "@rpath/$(basename "$dep")" "$dylib" 2>/dev/null || true
+                  ;;
+              esac
+            done
+          done
+
+          # Executable: point its gtk/adw refs at @rpath, add Frameworks rpath.
+          for dep in $(otool -L "$APP/rayforge-app" | awk 'NR>1{print $1}'); do
+            case "$dep" in
+              "${PREFIX}/lib/"*)
+                install_name_tool -change "$dep" "@rpath/$(basename "$dep")" "$APP/rayforge-app" 2>/dev/null || true
+                ;;
+            esac
+          done
+          install_name_tool -add_rpath "@executable_path/Frameworks" "$APP/rayforge-app"
+          otool -L "$APP/rayforge-app" | head -12
+
+          # Embedded CPython: framework + stdlib + lib-dynload.
+          cp -R "${SIM_SLICE}/Python.framework" "$APP/Frameworks/"
+          PYVER_DIR=$(basename "${PY_STDLIB}")
+          mkdir -p "$APP/python/lib"
+          cp -R "${PY_STDLIB}" "$APP/python/lib/"
+          if [ -n "${PY_DYNLOAD}" ] && [ -d "${PY_DYNLOAD}" ]; then
+            cp -R "${PY_DYNLOAD}" "$APP/python/lib/${PYVER_DIR}/lib-dynload"
+          fi
+
+          # Install the cross-built gi + cairo packages into site-packages.
+          SITE="$APP/python/lib/${PYVER_DIR}/site-packages"
+          mkdir -p "$SITE"
+          GI_DIR=$(find "$PYSTAGE" -type d -name gi -path "*site-packages*" | head -1)
+          CAIRO_DIR=$(find "$PYSTAGE" -type d -name cairo -path "*site-packages*" | head -1)
+          test -n "${GI_DIR}"; test -n "${CAIRO_DIR}"
+          cp -R "${GI_DIR}" "$SITE/"
+          cp -R "${CAIRO_DIR}" "$SITE/"
+          # Rayforge + all python dependencies collected in [10e]/[10f]
+          cp -R "${STAGE_DIR}/." "$SITE/"
+          # Any pygobject override/_ovreride dirs live under gi/ already.
+          echo "== site-packages contents:"
+          find "$SITE" -maxdepth 2 | head -40
+
+          # Rewrite the extension modules' prefix-deps to @rpath and add an
+          # rpath from the .so location back to the bundle Frameworks dir.
+          for so in $(find "$SITE" -name "*.so"); do
+            for dep in $(otool -L "$so" | awk 'NR>1{print $1}'); do
+              case "$dep" in
+                "${PREFIX}/lib/"*)
+                  install_name_tool -change "$dep" "@rpath/$(basename "$dep")" "$so" 2>/dev/null || true
+                  ;;
+              esac
+            done
+            # $SITE/gi/_gi.so -> ../../../../../Frameworks
+            install_name_tool -add_rpath "@loader_path/../../../../../Frameworks" "$so" 2>/dev/null || true
+          done
+
+          # Typelibs record each namespace's shared-library as the ABSOLUTE
+          # prefix install name from scan time. girepository g_module_open()s
+          # that string, so at runtime dyld would load the PREFIX dylibs on
+          # top of the already-loaded bundle copies -> two libgobject
+          # instances -> GType registry chaos (rule 15). Rewrite the .gir
+          # XMLs to @rpath/<leaf> (resolved through the executable's rpath,
+          # deduped by dyld onto the loaded bundle copies) and recompile the
+          # typelibs with the host g-ir-compiler. Namespaces whose gir we do
+          # not have (pseudo girs already leaf-named) are copied as-is.
+          GIRC="$(brew --prefix gobject-introspection)/bin/g-ir-compiler"
+          BREW_GIRDIR="$(brew --prefix gobject-introspection)/share/gir-1.0"
+          mkdir -p gir-fixed
+          for gir in "${PREFIX}/share/gir-1.0/"*.gir; do
+            [ -f "$gir" ] || continue
+            base=$(basename "$gir")
+            python3 ios/scripts/fix-gir-sharedlib.py "$gir" "gir-fixed/$base"
+          done
+          ls gir-fixed/ | head -30
+          for gir in gir-fixed/*.gir; do
+            base=$(basename "$gir" .gir)
+            "$GIRC" \
+              --includedir=gir-fixed \
+              --includedir="${PREFIX}/share/gir-1.0" \
+              --includedir="$BREW_GIRDIR" \
+              "$gir" -o "$APP/lib/girepository-1.0/${base}.typelib" \
+              || { echo "::warning::recompile failed for $base, copying original"; \
+                   cp "${PREFIX}/lib/girepository-1.0/${base}.typelib" "$APP/lib/girepository-1.0/" 2>/dev/null || true; }
+          done
+          # Namespaces present only as typelib (no gir in prefix): copy as-is.
+          for tl in "${PREFIX}/lib/girepository-1.0/"*.typelib; do
+            base=$(basename "$tl")
+            [ -f "$APP/lib/girepository-1.0/$base" ] || cp "$tl" "$APP/lib/girepository-1.0/"
+          done
+          echo "== bundled typelibs:"
+          ls -1 "$APP/lib/girepository-1.0/" | head -40
+          # spot-check: no absolute prefix paths left in a core gir
+          if grep -q "${PREFIX}" gir-fixed/Gtk-4.0.gir; then
+            echo "::warning::prefix path still present in Gtk gir after rewrite"
+            grep -o "shared-library=\"[^\"]*\"" gir-fixed/Gtk-4.0.gir | head -3
+          fi
+
+          # GSettings schemas (GTK's own), compiled with the host tool.
+          mkdir -p "$APP/share/glib-2.0/schemas"
+          cp "${PREFIX}/share/glib-2.0/schemas/"*.xml "$APP/share/glib-2.0/schemas/" 2>/dev/null || true
+          "$(brew --prefix)/bin/glib-compile-schemas" "$APP/share/glib-2.0/schemas" || true
+
+          # fontconfig config for iOS system fonts.
+          FC="$APP/etc/fonts/fonts.conf"
+          : > "$FC"
+          echo '<?xml version="1.0"?>' >> "$FC"
+          echo '<!DOCTYPE fontconfig SYSTEM "fonts.dtd">' >> "$FC"
+          echo '<fontconfig>' >> "$FC"
+          echo '  <dir>/System/Library/Fonts</dir>' >> "$FC"
+          echo '  <dir>/System/Library/Fonts/Core</dir>' >> "$FC"
+          echo '  <cachedir prefix="xdg">fontconfig</cachedir>' >> "$FC"
+          echo '  <match target="pattern">' >> "$FC"
+          echo '    <test qual="any" name="family"><string>sans-serif</string></test>' >> "$FC"
+          echo '    <edit name="family" mode="assign" binding="same"><string>Helvetica</string></edit>' >> "$FC"
+          echo '  </match>' >> "$FC"
+          echo '</fontconfig>' >> "$FC"
+
+          # Info.plist
+          PL="$APP/Info.plist"
+          : > "$PL"
+          echo '<?xml version="1.0" encoding="UTF-8"?>' >> "$PL"
+          echo '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">' >> "$PL"
+          echo '<plist version="1.0"><dict>' >> "$PL"
+          echo '  <key>CFBundleExecutable</key><string>rayforge-app</string>' >> "$PL"
+          echo "  <key>CFBundleIdentifier</key><string>${BUNDLE_ID}</string>" >> "$PL"
+          echo '  <key>CFBundleName</key><string>RayforgeApp</string>' >> "$PL"
+          echo '  <key>CFBundlePackageType</key><string>APPL</string>' >> "$PL"
+          echo '  <key>CFBundleShortVersionString</key><string>0.1</string>' >> "$PL"
+          echo '  <key>CFBundleVersion</key><string>1</string>' >> "$PL"
+          echo '  <key>MinimumOSVersion</key><string>17.0</string>' >> "$PL"
+          echo '  <key>UIDeviceFamily</key><array><integer>1</integer><integer>2</integer></array>' >> "$PL"
+          echo '  <key>UILaunchScreen</key><dict/>' >> "$PL"
+          echo '  <key>UIFileSharingEnabled</key><true/>' >> "$PL"
+          echo '  <key>LSSupportsOpeningDocumentsInPlace</key><true/>' >> "$PL"
+          echo '</dict></plist>' >> "$PL"
+          plutil -lint "$PL"
+
+          # Ad-hoc code signing (sufficient for the simulator).
+          find "$APP/Frameworks" -name "*.dylib" -type f -exec codesign --force --sign - {} \; || true
+          find "$APP/python" -name "*.so" -type f -exec codesign --force --sign - {} \; || true
+          codesign --force --deep --sign - "$APP/Frameworks/Python.framework" || true
+          codesign --force --sign - "$APP" || true
+          codesign -dv "$APP" 2>&1 | head -5 || true
+
+      - name: "[12/16] Boot simulator, install, launch, self-test"
+        run: |
+          set -euxo pipefail
+          RUNTIME=$(xcrun simctl list runtimes | awk '/iOS/{id=$NF} END{print id}')
+          UDID=$(xcrun simctl create "pygi-test" \
+            "com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M4-8GB" \
+            "$RUNTIME" 2>/dev/null) || \
+          UDID=$(xcrun simctl create "pygi-test" \
+            "iPad Pro 11-inch (M4)" "$RUNTIME" 2>/dev/null) || \
+          UDID=$(xcrun simctl list devices available | awk -F '[()]' '/iPad/{print $2; exit}')
+          test -n "$UDID"
+          echo "UDID=$UDID"
+
+          xcrun simctl boot "$UDID" || true
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl install "$UDID" RayforgeApp.app
+
+          # girepository dlopens each typelib's shared-library by name; a
+          # bare leaf name is resolved by dyld via DYLD_*_LIBRARY_PATH (rpath
+          # only covers @rpath-prefixed, link-time loads). Point it at the
+          # installed bundle's Frameworks dir (path is known only post-install).
+          APP_CONTAINER=$(xcrun simctl get_app_container "$UDID" "${BUNDLE_ID}" 2>/dev/null || true)
+          echo "app container: ${APP_CONTAINER}"
+          FW_DIR="${APP_CONTAINER}/Frameworks"
+
+          LAUNCH_OUT="$PWD/app-console.log"
+          xcrun simctl launch \
+            --stdout="$LAUNCH_OUT" --stderr="$LAUNCH_OUT" \
+            "$UDID" "${BUNDLE_ID}" \
+            SIMCTL_CHILD_DYLD_LIBRARY_PATH="${FW_DIR}" \
+            SIMCTL_CHILD_DYLD_FALLBACK_LIBRARY_PATH="${FW_DIR}" \
+            SIMCTL_CHILD_G_MESSAGES_DEBUG=all | tee launch-cmd.log
+          sleep 45
+
+          APP_ALIVE=1
+          xcrun simctl spawn "$UDID" launchctl list 2>/dev/null \
+            | grep -q "${BUNDLE_ID}" || APP_ALIVE=0
+          echo "app alive: ${APP_ALIVE}"
+
+          xcrun simctl io "$UDID" screenshot simulator-screenshot.png || true
+          ls -la simulator-screenshot.png || true
+
+          xcrun simctl spawn "$UDID" log show --last 5m \
+            --predicate 'process == "rayforge-app"' \
+            > app-syslog.log 2>&1 || true
+          mkdir -p crash-reports
+          find "$HOME/Library/Logs/DiagnosticReports" -name '*rayforge*' -newer RayforgeApp.app/Info.plist \
+            -exec cp {} crash-reports/ \; 2>/dev/null || true
+          for c in crash-reports/*; do
+            [ -f "$c" ] || continue
+            echo "===== crash report: $c (first 120 lines)"; head -120 "$c"
+          done
+
+          xcrun simctl shutdown "$UDID" || true
+
+          echo "===== app console ====="; cat app-console.log || true
+          echo "===== app syslog (first 120) ====="; head -120 app-syslog.log || true
+
+          # Hard verdict: alive AND the self-test printed the OK marker.
+          test "${APP_ALIVE}" = "1"
+          if grep -q "RAYFORGE BOOT FAILED" app-console.log app-syslog.log; then
+            echo "== boot failure context:"
+            grep -B2 -A40 "Traceback" app-syslog.log | head -80 || true
+          fi
+          grep -q "RAYFORGE UI RUNNING" app-console.log app-syslog.log
+
+      - name: "[13/16] Upload artifacts"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pygobject-test-results
+          path: |
+            simulator-screenshot.png
+            app-console.log
+            app-syslog.log
+            pycairo-files.txt
+            pygobject-files.txt
+            RayforgeApp.app
+          if-no-files-found: warn
+
+      - name: "[14/16] Publish diagnostics to ci-logs branch (always)"
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uxo pipefail
+          RUN_ID="${GITHUB_RUN_ID}"
+          OUT="ci-logs/step11/run-${RUN_ID}"
+          rm -rf _cilogs && mkdir -p "_cilogs/${OUT}"
+          for f in libffi.log pycairo-setup.log pycairo-build.log pycairo-files.txt \
+                   pygobject-setup.log pygobject-build.log pygobject-files.txt \
+                   testapp-link.log launch-cmd.log app-console.log app-syslog.log \
+                   simulator-screenshot.png; do
+            [ -f "$f" ] && cp "$f" "_cilogs/${OUT}/$(echo "$f" | tr '/' '_')" || true
+          done
+          if [ -d crash-reports ]; then cp crash-reports/* "_cilogs/${OUT}/" 2>/dev/null || true; fi
+          SUMMARY="_cilogs/${OUT}/SUMMARY.txt"
+          {
+            echo "Run ID: ${RUN_ID}"
+            echo "Commit: ${GITHUB_SHA}"
+            echo "Date: $(date -u)"
+            echo
+            for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log \
+                   raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log; do
+              echo "===================== TAIL: $f ====================="
+              if [ -f "$f" ]; then tail -50 "$f"; else echo "(not produced)"; fi
+              echo
+            done
+          } > "${SUMMARY}" 2>&1 || true
+          cd _cilogs
+          git init -q
+          git config user.email "ci@rayforge.local"
+          git config user.name "Rayforge CI Logs"
+          git checkout -q -b ci-logs
+          git add -A
+          git commit -q -m "step11 diagnostics for run ${RUN_ID}" || echo "nothing to commit"
+          REMOTE="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git ls-remote --exit-code "${REMOTE}" ci-logs >/dev/null 2>&1; then
+            git fetch -q "${REMOTE}" ci-logs || true
+            git merge -q --allow-unrelated-histories -m "merge" FETCH_HEAD || true
+          fi
+          git push -q "${REMOTE}" ci-logs:ci-logs || git push -q -f "${REMOTE}" ci-logs:ci-logs
+          echo "Diagnostics pushed under ${OUT}"
