@@ -411,6 +411,7 @@ jobs:
       - name: "[11/16] Link Rayforge app + assemble .app bundle"
         run: |
           set -euxo pipefail
+          exec > >(tee "${GITHUB_WORKSPACE}/bundle-step.log") 2>&1
           SDK=$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)
           PREFIX="${GITHUB_WORKSPACE}/ios-out"
           PYSTAGE="${GITHUB_WORKSPACE}/py-stage"
@@ -608,6 +609,7 @@ jobs:
       - name: "[12/16] Boot simulator, install, launch, self-test"
         run: |
           set -euxo pipefail
+          exec > >(tee "${GITHUB_WORKSPACE}/launch-step.log") 2>&1
           RUNTIME=$(xcrun simctl list runtimes | awk '/iOS/{id=$NF} END{print id}')
           # Target device: iPad Pro 13-inch (M4), per user requirement.
           UDID=$(xcrun simctl create "rayforge-test" \
@@ -712,7 +714,8 @@ jobs:
             echo "Date: $(date -u)"
             echo
             for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log \
-                   raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log; do
+                   raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt \
+                   bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log; do
               echo "===================== TAIL: $f ====================="
               if [ -f "$f" ]; then tail -50 "$f"; else echo "(not produced)"; fi
               echo
