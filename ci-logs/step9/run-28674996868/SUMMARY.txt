@@ -1,0 +1,41 @@
++ echo 'Run ID: 28674996868'
+Run ID: 28674996868
++ echo 'Commit: 81e11255293f140918e2face61423096b1d75c16'
+Commit: 81e11255293f140918e2face61423096b1d75c16
+++ date -u
++ echo 'Date: Fri Jul  3 17:26:51 UTC 2026'
+Date: Fri Jul  3 17:26:51 UTC 2026
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: adw-setup.log ====================='
+===================== TAIL: adw-setup.log =====================
++ '[' -f adw-setup.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: adw-build.log ====================='
+===================== TAIL: adw-build.log =====================
++ '[' -f adw-build.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: typelibs.txt ====================='
+===================== TAIL: typelibs.txt =====================
++ '[' -f typelibs.txt ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
