@@ -422,6 +422,7 @@ jobs:
           cp -R ios/pyshims/scipy "$STAGE/scipy"
           cp -R ios/pyshims/cv2 "$STAGE/cv2"
           cp -R ios/pyshims/vtracer "$STAGE/vtracer"
+          cp -R ios/pyshims/pyvips "$STAGE/pyvips"
           cp ios/pyshims/rayforge_ios_pool.py "$STAGE/"
           cp ios/pyshims/rayforge_ios_shm.py "$STAGE/"
           cp ios/pyshims/ios_main.py "$STAGE/"
