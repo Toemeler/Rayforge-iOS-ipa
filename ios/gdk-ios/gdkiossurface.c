@@ -273,6 +273,30 @@ gdk_ios_toplevel_present (GdkToplevel *toplevel,
   gdk_toplevel_size_init (&size, bounds_w, bounds_h);
   gdk_toplevel_notify_compute_size (toplevel, &size);
 
+  /* The main window (no transient parent) owns the whole screen. A
+   * transient dialog (Adw.MessageDialog, preferences, machine settings,
+   * ...) is given the natural size GTK just negotiated and centred,
+   * rather than being stretched to fullscreen — stretching a small
+   * dialog to 1032x1376 is what made its contents overflow. */
+  int win_w = bounds_w, win_h = bounds_h, win_x = 0, win_y = 0;
+  if (surface->transient_for != NULL)
+    {
+      if (size.width > 0 && size.width < bounds_w)
+        {
+          win_w = size.width;
+          win_x = (bounds_w - win_w) / 2;
+        }
+      if (size.height > 0 && size.height < bounds_h)
+        {
+          win_h = size.height;
+          win_y = (bounds_h - win_h) / 2;
+        }
+    }
+  g_message ("gdk-ios: present placement transient=%d natural=%dx%d "
+             "-> frame=(%d,%d,%dx%d)",
+             (int) (surface->transient_for != NULL),
+             size.width, size.height, win_x, win_y, win_w, win_h);
+
   gdk_ios_surface_attach_layer (surface_impl);
   surface_impl->visible = TRUE;
 
@@ -283,7 +307,7 @@ gdk_ios_toplevel_present (GdkToplevel *toplevel,
   layer.hidden = NO;
 
   gdk_surface_set_is_mapped (surface, TRUE);
-  gdk_ios_surface_apply_frame (surface_impl, 0, 0, bounds_w, bounds_h);
+  gdk_ios_surface_apply_frame (surface_impl, win_x, win_y, win_w, win_h);
 }
 
 static void
