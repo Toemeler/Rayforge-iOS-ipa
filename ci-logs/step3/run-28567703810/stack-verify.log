@@ -1,0 +1,47 @@
+===== KEY STATIC LIBS =====
+FOUND libjpeg.a
+FOUND libgraphene-1.0.a
+MISSING libgraphene-gobject-1.0.a
+FOUND libgdk_pixbuf-2.0.a
+
+===== ARCHITECTURE CHECK =====
+libcairo-gobject.a                            arm64
+libcairo-script-interpreter.a                 arm64
+libcairo.a                                    arm64
+libexpat.a                                    arm64
+libffi.a                                      arm64
+libfontconfig.a                               arm64
+libfreetype.a                                 arm64
+libfribidi.a                                  arm64
+libgdk_pixbuf-2.0.a                           arm64
+libgio-2.0.a                                  arm64
+libgirepository-2.0.a                         arm64
+libglib-2.0.a                                 arm64
+libgmodule-2.0.a                              arm64
+libgobject-2.0.a                              arm64
+libgraphene-1.0.a                             arm64
+libgthread-2.0.a                              arm64
+libharfbuzz-gobject.a                         arm64
+libharfbuzz-gpu.a                             arm64
+libharfbuzz-raster.a                          arm64
+libharfbuzz-subset.a                          arm64
+libharfbuzz-vector.a                          arm64
+libharfbuzz.a                                 arm64
+libintl.a                                     arm64
+libjpeg.a                                     arm64
+libpango-1.0.a                                arm64
+libpangocairo-1.0.a                           arm64
+libpangoft2-1.0.a                             arm64
+libpcre2-16.a                                 arm64
+libpcre2-32.a                                 arm64
+libpcre2-8.a                                  arm64
+libpcre2-posix.a                              arm64
+libpixman-1.a                                 arm64
+libpng.a                                      arm64
+libpng16.a                                    arm64
+
+===== NEW .pc FILES =====
+gdk-pixbuf-2.0.pc
+graphene-1.0.pc
+graphene-gobject-1.0.pc
+libjpeg.pc
