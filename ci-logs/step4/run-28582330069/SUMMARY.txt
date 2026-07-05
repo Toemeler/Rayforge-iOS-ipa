@@ -1,0 +1,205 @@
++ echo 'Run ID: 28582330069'
+Run ID: 28582330069
++ echo 'Commit: 8565edfe65355c7c7c202c3822fc3d2a07790bbe'
+Commit: 8565edfe65355c7c7c202c3822fc3d2a07790bbe
+++ date -u
++ echo 'Date: Thu Jul  2 10:17:34 UTC 2026'
+Date: Thu Jul  2 10:17:34 UTC 2026
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: tiff.log ====================='
+===================== TAIL: tiff.log =====================
++ '[' -f tiff.log ']'
++ tail -40 tiff.log
+[ 43%] Building C object libtiff/CMakeFiles/tiff.dir/tif_jpeg_12.c.o
+[ 45%] Building C object libtiff/CMakeFiles/tiff.dir/tif_lerc.c.o
+[ 47%] Building C object libtiff/CMakeFiles/tiff.dir/tif_luv.c.o
+[ 50%] Building C object libtiff/CMakeFiles/tiff.dir/tif_lzma.c.o
+[ 52%] Building C object libtiff/CMakeFiles/tiff.dir/tif_lzw.c.o
+[ 54%] Building C object libtiff/CMakeFiles/tiff.dir/tif_next.c.o
+[ 56%] Building C object libtiff/CMakeFiles/tiff.dir/tif_ojpeg.c.o
+[ 58%] Building C object libtiff/CMakeFiles/tiff.dir/tif_open.c.o
+[ 60%] Building C object libtiff/CMakeFiles/tiff.dir/tif_packbits.c.o
+[ 63%] Building C object libtiff/CMakeFiles/tiff.dir/tif_pixarlog.c.o
+[ 65%] Building C object libtiff/CMakeFiles/tiff.dir/tif_predict.c.o
+[ 67%] Building C object libtiff/CMakeFiles/tiff.dir/tif_print.c.o
+[ 69%] Building C object libtiff/CMakeFiles/tiff.dir/tif_read.c.o
+[ 71%] Building C object libtiff/CMakeFiles/tiff.dir/tif_strip.c.o
+[ 73%] Building C object libtiff/CMakeFiles/tiff.dir/tif_swab.c.o
+[ 76%] Building C object libtiff/CMakeFiles/tiff.dir/tif_thunder.c.o
+[ 78%] Building C object libtiff/CMakeFiles/tiff.dir/tif_tile.c.o
+[ 80%] Building C object libtiff/CMakeFiles/tiff.dir/tif_version.c.o
+[ 82%] Building C object libtiff/CMakeFiles/tiff.dir/tif_warning.c.o
+[ 84%] Building C object libtiff/CMakeFiles/tiff.dir/tif_webp.c.o
+[ 86%] Building C object libtiff/CMakeFiles/tiff.dir/tif_write.c.o
+[ 89%] Building C object libtiff/CMakeFiles/tiff.dir/tif_zip.c.o
+[ 91%] Building C object libtiff/CMakeFiles/tiff.dir/tif_zstd.c.o
+[ 93%] Building C object libtiff/CMakeFiles/tiff.dir/tif_unix.c.o
+[ 95%] Linking C static library libtiff.a
+[ 95%] Built target tiff
+[ 97%] Building CXX object libtiff/CMakeFiles/tiffxx.dir/tif_stream.cxx.o
+[100%] Linking CXX static library libtiffxx.a
+[100%] Built target tiffxx
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libtiff-4.pc
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libtiff.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiff.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffio.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffvers.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffconf.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/tiff/TiffTargets.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/tiff/TiffConfigVersion.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/tiff/TiffConfig.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libtiffxx.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/tiffio.hxx
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: epoxy.log ====================='
+===================== TAIL: epoxy.log =====================
++ '[' -f epoxy.log ']'
++ tail -40 epoxy.log
+Run-time dependency gl found: YES
+Found CMake: NO
+Run-time dependency egl found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency x11 found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency glesv2 found: NO  (tried pkg-config, framework and cmake)
+Library libGLESv2 found: NO
+Run-time dependency glesv1_cm found: NO  (tried pkg-config, framework and cmake)
+Library libGLESv1_CM found: NO
+Program src/gen_dispatch.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-src/src/gen_dispatch.py)
+Configuring config.h using configuration
+WARNING: Required dependency was found to be an empty string. Did you mean to pass an empty array?
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build targets in project: 3
+
+libepoxy 1.5.10
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    buildtype      : release
+    default_library: static
+    docs           : false
+    egl            : no
+    glx            : no
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    tests          : false
+    x11            : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `epoxy-build'
+[1/6] Generating include/epoxy/gl_generated.h with a custom command
+[2/6] Generating src/gl_generated_dispatch.c with a custom command
+[3/6] Compiling C object src/libepoxy.a.p/dispatch_common.c.o
+[4/6] Compiling C object src/libepoxy.a.p/meson-generated_.._gl_generated_dispatch.c.o
+[5/6] Linking static target src/libepoxy.a
+[5/6] Installing files
+Installing include/epoxy/gl_generated.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/epoxy
+Installing src/libepoxy.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-src/include/epoxy/common.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/epoxy
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-src/include/epoxy/gl.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/epoxy
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/epoxy-build/meson-private/epoxy.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-setup.log ====================='
+===================== TAIL: gtk-setup.log =====================
++ '[' -f gtk-setup.log ']'
++ tail -40 gtk-setup.log
+    Examples         : false
+
+  Directories
+    Prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    Includedir       : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+    Libdir           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+    Datadir          : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share
+
+  User defined options
+    Cross files      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    accesskit        : disabled
+    android-backend  : false
+    broadway-backend : true
+    build-demos      : false
+    build-examples   : false
+    build-tests      : false
+    build-testsuite  : false
+    buildtype        : release
+    cloudproviders   : disabled
+    colord           : disabled
+    default_library  : static
+    documentation    : false
+    f16c             : disabled
+    introspection    : disabled
+    macos-backend    : false
+    man-pages        : false
+    media-gstreamer  : disabled
+    prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    print-cpdb       : disabled
+    print-cups       : disabled
+    screenshots      : false
+    sysprof          : disabled
+    tracker          : disabled
+    vulkan           : disabled
+    wayland-backend  : false
+    win32-backend    : false
+    wrap_mode        : nofallback
+    x11-backend      : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ tail -40 gtk-build.log
+[19/1149] Generating gsk/gpu/shaders/gskgpuradialgradientinstance.glsl with a custom command (wrapped by meson to capture output)
+[20/1149] Generating gsk/gpu/shaders/gskgpublur.glsl with a custom command (wrapped by meson to capture output)
+[21/1149] Generating gsk/gpu/shaders/gskgpuarithmetic.glsl with a custom command (wrapped by meson to capture output)
+[22/1149] Generating gsk/gpu/shaders/gskgpuroundedcolorinstance.glsl with a custom command (wrapped by meson to capture output)
+[23/1149] Generating gsk/gpu/shaders/gskgputextureinstance.glsl with a custom command (wrapped by meson to capture output)
+[24/1149] Generating gsk/gpu/shaders/gskgpublendmode.glsl with a custom command (wrapped by meson to capture output)
+[25/1149] Generating gsk/gpu/shaders/gskgpuboxshadow.glsl with a custom command (wrapped by meson to capture output)
+[26/1149] Generating gsk/gpu/shaders/gskgpuborder.glsl with a custom command (wrapped by meson to capture output)
+[27/1149] Generating gsk/gpu/shaders/gskgpucolorize.glsl with a custom command (wrapped by meson to capture output)
+[28/1149] Generating gsk/gpu/shaders/gskgpucolor.glsl with a custom command (wrapped by meson to capture output)
+[29/1149] Generating gsk/gpu/shaders/gskgpuconvert.glsl with a custom command (wrapped by meson to capture output)
+[30/1149] Generating gsk/gpu/shaders/gskgpucomposite.glsl with a custom command (wrapped by meson to capture output)
+[31/1149] Generating gsk/gpu/shaders/gskgpuconicgradient.glsl with a custom command (wrapped by meson to capture output)
+[32/1149] Generating gsk/gpu/shaders/gskgpucolormatrix.glsl with a custom command (wrapped by meson to capture output)
+[33/1149] Generating gsk/gpu/shaders/gskgpucomponenttransfer.glsl with a custom command (wrapped by meson to capture output)
+[34/1149] Generating gsk/gpu/shaders/gskgpuconvertcicp.glsl with a custom command (wrapped by meson to capture output)
+[35/1149] Generating gsk/gpu/shaders/gskgpuconvertbuiltin.glsl with a custom command (wrapped by meson to capture output)
+[36/1149] Generating gsk/gpu/shaders/gskgpudisplacement.glsl with a custom command (wrapped by meson to capture output)
+[37/1149] Generating gsk/gpu/shaders/gskgpucrossfade.glsl with a custom command (wrapped by meson to capture output)
+[38/1149] Generating gsk/gpu/shaders/gskgpulineargradient.glsl with a custom command (wrapped by meson to capture output)
+[39/1149] Generating gsk/gpu/shaders/gskgpuroundedcolor.glsl with a custom command (wrapped by meson to capture output)
+[40/1149] Generating gsk/gpu/shaders/gskgpumask.glsl with a custom command (wrapped by meson to capture output)
+[41/1149] Generating gsk/gpu/shaders/gskgpuradialgradient.glsl with a custom command (wrapped by meson to capture output)
+[42/1149] Generating gsk/gpu/shaders/gskgputexture.glsl with a custom command (wrapped by meson to capture output)
+[43/1149] Generating gsk/gsk.resources.xml with a custom command
+[44/1149] Generating GObject enum file gtk/css/gtkcssenumtypes.h (wrapped by meson to capture output)
+[45/1149] Generating glib marshaller header gdk/gdkmarshalers_h
+[46/1149] Generating glib marshaller header gtk/gtkmarshalers_h
+[47/1149] Generating GObject enum file gtk/gtkprivatetypebuiltins.h (wrapped by meson to capture output)
+[48/1149] Generating GObject enum file gsk/gskenumtypes.h (wrapped by meson to capture output)
+[49/1149] Generating gdk/version/gdkversionmacros.h with a custom command
+[50/1149] Generating profile-conf with a custom command (wrapped by meson to capture output)
+[51/1149] Generating gdk/gdkresources_c with a custom command
+FAILED: [code=137] gdk/gdkresources.c 
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-compile-resources gdk/gdk.gresource.xml --sourcedir /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/gtk-src/gdk --sourcedir ../gtk-src/gdk --c-name _gdk --internal --generate --target gdk/gdkresources.c --manual-register --dependency-file gdk/gdkresources.c.d
+[52/1149] Generating gdk/version/gdk-visibility.h with a custom command
+[53/1149] Generating GObject enum file gdk/gdkenumtypes.h (wrapped by meson because command contains newlines, to capture output)
+[54/1149] Generating GObject enum file gtk/css/gtkcssenumtypes.c (wrapped by meson to capture output)
+[55/1149] Generating GObject enum file gtk/gtktypebuiltins.h (wrapped by meson to capture output)
+ninja: build stopped: subcommand failed.
++ echo
+
++ for f in tiff.log epoxy.log gtk-setup.log gtk-build.log gtk-verify.log
++ echo '===================== TAIL: gtk-verify.log ====================='
+===================== TAIL: gtk-verify.log =====================
++ '[' -f gtk-verify.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
