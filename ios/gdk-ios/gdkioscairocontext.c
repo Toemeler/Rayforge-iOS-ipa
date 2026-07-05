@@ -66,7 +66,12 @@ gdk_ios_cairo_context_begin_frame (GdkDrawContext *draw_context,
 
   self->active_surface =
     cairo_image_surface_create (CAIRO_FORMAT_ARGB32, pixel_w, pixel_h);
-  cairo_surface_set_device_scale (self->active_surface, scale, scale);
+  /* The buffer is backing-pixel sized, but GdkCairoContext.cairo_create
+   * already applies cairo_scale(surface_scale) to the context it hands to
+   * GSK. Leave the device scale at 1.0 (as the X11/Wayland cairo backends
+   * do) — setting it to `scale` here applied the HiDPI scale twice and
+   * rendered the whole UI at 2x, overflowing the screen. */
+  cairo_surface_set_device_scale (self->active_surface, 1.0, 1.0);
 
   *out_color_state = GDK_COLOR_STATE_SRGB;
   *out_depth = gdk_color_state_get_depth (GDK_COLOR_STATE_SRGB);
