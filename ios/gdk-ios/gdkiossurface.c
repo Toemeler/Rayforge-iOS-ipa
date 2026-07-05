@@ -497,14 +497,32 @@ gdk_ios_toplevel_set_property (GObject      *object,
     }
 }
 
+static gboolean
+gdk_ios_toplevel_compute_size (GdkSurface *surface)
+{
+  /* Re-negotiate the toplevel size on every layout pass, using the
+   * current (forced) surface size as the available bounds. Without this
+   * (the inherited no-op), GTK reverts the window to its natural size
+   * after the first present, so a maximized window stops filling the
+   * screen and leaves unpainted gaps. Mirrors the GDK Android backend's
+   * single-fullscreen-window model. */
+  GdkToplevelSize size;
+  gdk_toplevel_size_init (&size, surface->width, surface->height);
+  gdk_toplevel_notify_compute_size (GDK_TOPLEVEL (surface), &size);
+  return GDK_SURFACE_CLASS (gdk_ios_toplevel_parent_class)->compute_size (surface);
+}
+
 static void
 gdk_ios_toplevel_class_init (GdkIOSToplevelClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
+  GdkSurfaceClass *surface_class = GDK_SURFACE_CLASS (klass);
 
   object_class->finalize = gdk_ios_toplevel_finalize;
   object_class->get_property = gdk_ios_toplevel_get_property;
   object_class->set_property = gdk_ios_toplevel_set_property;
+
+  surface_class->compute_size = gdk_ios_toplevel_compute_size;
 
   gdk_toplevel_install_properties (object_class, IOS_TOPLEVEL_N_PROPERTIES);
 }
