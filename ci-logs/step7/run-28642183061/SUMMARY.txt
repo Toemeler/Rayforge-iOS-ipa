@@ -1,0 +1,234 @@
++ echo 'Run ID: 28642183061'
+Run ID: 28642183061
++ echo 'Commit: aa22e3e07766aeb39eaa85b1f79b4f5743bcdfa6'
+Commit: aa22e3e07766aeb39eaa85b1f79b4f5743bcdfa6
+++ date -u
++ echo 'Date: Fri Jul  3 06:16:22 UTC 2026'
+Date: Fri Jul  3 06:16:22 UTC 2026
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ tail -60 gtk-build.log
+[1071/1130] Building translation po/kn/LC_MESSAGES/gtk40-kn.mo
+[1072/1130] Building translation po/ko/LC_MESSAGES/gtk40-ko.mo
+[1073/1130] Building translation po/ku/LC_MESSAGES/gtk40-ku.mo
+[1074/1130] Building translation po/ka/LC_MESSAGES/gtk40-ka.mo
+[1075/1130] Building translation po/lg/LC_MESSAGES/gtk40-lg.mo
+[1076/1130] Building translation po/ky/LC_MESSAGES/gtk40-ky.mo
+[1077/1130] Building translation po/li/LC_MESSAGES/gtk40-li.mo
+[1078/1130] Building translation po/mai/LC_MESSAGES/gtk40-mai.mo
+[1079/1130] Building translation po/mi/LC_MESSAGES/gtk40-mi.mo
+[1080/1130] Building translation po/mjw/LC_MESSAGES/gtk40-mjw.mo
+[1081/1130] Building translation po/lv/LC_MESSAGES/gtk40-lv.mo
+[1082/1130] Building translation po/mk/LC_MESSAGES/gtk40-mk.mo
+[1083/1130] Building translation po/mn/LC_MESSAGES/gtk40-mn.mo
+[1084/1130] Building translation po/mr/LC_MESSAGES/gtk40-mr.mo
+[1085/1130] Building translation po/ml/LC_MESSAGES/gtk40-ml.mo
+[1086/1130] Building translation po/lt/LC_MESSAGES/gtk40-lt.mo
+[1087/1130] Building translation po/ms/LC_MESSAGES/gtk40-ms.mo
+[1088/1130] Building translation po/my/LC_MESSAGES/gtk40-my.mo
+[1089/1130] Building translation po/nb/LC_MESSAGES/gtk40-nb.mo
+[1090/1130] Building translation po/nds/LC_MESSAGES/gtk40-nds.mo
+[1091/1130] Building translation po/ne/LC_MESSAGES/gtk40-ne.mo
+[1092/1130] Building translation po/nn/LC_MESSAGES/gtk40-nn.mo
+[1093/1130] Building translation po/nl/LC_MESSAGES/gtk40-nl.mo
+[1094/1130] Building translation po/nso/LC_MESSAGES/gtk40-nso.mo
+[1095/1130] Building translation po/ps/LC_MESSAGES/gtk40-ps.mo
+[1096/1130] Building translation po/oc/LC_MESSAGES/gtk40-oc.mo
+[1097/1130] Building translation po/or/LC_MESSAGES/gtk40-or.mo
+[1098/1130] Building translation po/pl/LC_MESSAGES/gtk40-pl.mo
+[1099/1130] Building translation po/pa/LC_MESSAGES/gtk40-pa.mo
+[1100/1130] Building translation po/pt/LC_MESSAGES/gtk40-pt.mo
+[1101/1130] Building translation po/pt_BR/LC_MESSAGES/gtk40-pt_BR.mo
+[1102/1130] Building translation po/ro/LC_MESSAGES/gtk40-ro.mo
+[1103/1130] Building translation po/si/LC_MESSAGES/gtk40-si.mo
+[1104/1130] Building translation po/rw/LC_MESSAGES/gtk40-rw.mo
+[1105/1130] Building translation po/sq/LC_MESSAGES/gtk40-sq.mo
+[1106/1130] Building translation po/ru/LC_MESSAGES/gtk40-ru.mo
+[1107/1130] Building translation po/sl/LC_MESSAGES/gtk40-sl.mo
+[1108/1130] Building translation po/sk/LC_MESSAGES/gtk40-sk.mo
+[1109/1130] Building translation po/sr@ije/LC_MESSAGES/gtk40-sr@ije.mo
+[1110/1130] Building translation po/ta/LC_MESSAGES/gtk40-ta.mo
+[1111/1130] Building translation po/sr/LC_MESSAGES/gtk40-sr.mo
+[1112/1130] Building translation po/te/LC_MESSAGES/gtk40-te.mo
+[1113/1130] Building translation po/sv/LC_MESSAGES/gtk40-sv.mo
+[1114/1130] Building translation po/tg/LC_MESSAGES/gtk40-tg.mo
+[1115/1130] Building translation po/tt/LC_MESSAGES/gtk40-tt.mo
+[1116/1130] Building translation po/sr@latin/LC_MESSAGES/gtk40-sr@latin.mo
+[1117/1130] Building translation po/tr/LC_MESSAGES/gtk40-tr.mo
+[1118/1130] Building translation po/ur/LC_MESSAGES/gtk40-ur.mo
+[1119/1130] Building translation po/ug/LC_MESSAGES/gtk40-ug.mo
+[1120/1130] Building translation po/uz/LC_MESSAGES/gtk40-uz.mo
+[1121/1130] Building translation po/uz@cyrillic/LC_MESSAGES/gtk40-uz@cyrillic.mo
+[1122/1130] Building translation po/uk/LC_MESSAGES/gtk40-uk.mo
+[1123/1130] Building translation po/wa/LC_MESSAGES/gtk40-wa.mo
+[1124/1130] Building translation po/yi/LC_MESSAGES/gtk40-yi.mo
+[1125/1130] Building translation po/xh/LC_MESSAGES/gtk40-xh.mo
+[1126/1130] Building translation po/th/LC_MESSAGES/gtk40-th.mo
+[1127/1130] Building translation po/vi/LC_MESSAGES/gtk40-vi.mo
+[1128/1130] Building translation po/zh_HK/LC_MESSAGES/gtk40-zh_HK.mo
+[1129/1130] Building translation po/zh_CN/LC_MESSAGES/gtk40-zh_CN.mo
+[1130/1130] Building translation po/zh_TW/LC_MESSAGES/gtk40-zh_TW.mo
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: adw-setup.log ====================='
+===================== TAIL: adw-setup.log =====================
++ '[' -f adw-setup.log ']'
++ tail -60 adw-setup.log
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wswitch-default: YES 
+Compiler for C supports arguments -Wswitch-enum: YES 
+Compiler for C supports arguments -Wtype-limits: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wunused-function: YES 
+Compiler for C supports arguments -Wfloat-equal: YES 
+Compiler for C supports arguments -fstack-protector-strong: YES 
+Program sassc found: YES (/opt/homebrew/bin/sassc)
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build-time dependency gio-2.0 found: YES 2.84.4
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring adw-version.h using configuration
+Build-time dependency glib-2.0 found: YES 2.84.4
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal)
+Program gen-public-types.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/adw-src/src/gen-public-types.py)
+Library m found: YES
+Configuring config.h using configuration
+Checking if "ld_supports_version_script" links: NO 
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Program msgfmt found: YES (/opt/homebrew/opt/gettext/bin/msgfmt)
+Program msginit found: YES (/opt/homebrew/opt/gettext/bin/msginit)
+Program msgmerge found: YES (/opt/homebrew/opt/gettext/bin/msgmerge)
+Program xgettext found: YES (/opt/homebrew/opt/gettext/bin/xgettext)
+Configuring run using configuration
+Build targets in project: 72
+
+libadwaita 1.9.1
+
+  Options
+    Tests          : false
+    Examples       : false
+    Documentation  : false
+    Introspection  : false
+    Vapi           : false
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    buildtype      : release
+    default_library: static
+    documentation  : false
+    examples       : false
+    introspection  : disabled
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    tests          : false
+    vapi           : false
+    wrap_mode      : nofallback
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: adw-build.log ====================='
+===================== TAIL: adw-build.log =====================
++ '[' -f adw-build.log ']'
++ tail -60 adw-build.log
+[126/191] Compiling C object src/libadwaita-1.a.p/adw-swipe-tracker.c.o
+[127/191] Compiling C object src/libadwaita-1.a.p/adw-tab-bar.c.o
+[128/191] Compiling C object src/libadwaita-1.a.p/adw-tab-button.c.o
+[129/191] Compiling C object src/libadwaita-1.a.p/adw-tab-overview.c.o
+[130/191] Compiling C object src/libadwaita-1.a.p/adw-timed-animation.c.o
+[131/191] Compiling C object src/libadwaita-1.a.p/adw-toast.c.o
+[132/191] Compiling C object src/libadwaita-1.a.p/adw-version.c.o
+[133/191] Compiling C object src/libadwaita-1.a.p/adw-toast-overlay.c.o
+[134/191] Compiling C object src/libadwaita-1.a.p/adw-tab-view.c.o
+[135/191] Compiling C object src/libadwaita-1.a.p/adw-toolbar-view.c.o
+[136/191] Compiling C object src/libadwaita-1.a.p/adw-toggle-group.c.o
+[137/191] Compiling C object src/libadwaita-1.a.p/adw-view-stack.c.o
+[138/191] Compiling C object src/libadwaita-1.a.p/adw-view-switcher.c.o
+[139/191] Compiling C object src/libadwaita-1.a.p/adw-view-switcher-sidebar.c.o
+[140/191] Compiling C object src/libadwaita-1.a.p/adw-view-switcher-bar.c.o
+[141/191] Compiling C object src/libadwaita-1.a.p/adw-view-switcher-title.c.o
+[142/191] Compiling C object src/libadwaita-1.a.p/adw-window.c.o
+[143/191] Compiling C object src/libadwaita-1.a.p/adw-window-title.c.o
+[144/191] Compiling C object src/libadwaita-1.a.p/adw-bidi.c.o
+[145/191] Compiling C object src/libadwaita-1.a.p/adw-adaptive-preview.c.o
+[146/191] Compiling C object src/libadwaita-1.a.p/adw-wrap-box.c.o
+[147/191] Compiling C object src/libadwaita-1.a.p/adw-wrap-layout.c.o
+[148/191] Compiling C object src/libadwaita-1.a.p/adw-color-utils.c.o
+[149/191] Compiling C object src/libadwaita-1.a.p/adw-back-button.c.o
+[150/191] Compiling C object src/libadwaita-1.a.p/adw-fading-label.c.o
+[151/191] Compiling C object src/libadwaita-1.a.p/adw-dialog-host.c.o
+[152/191] Compiling C object src/libadwaita-1.a.p/adw-gizmo.c.o
+[153/191] Compiling C object src/libadwaita-1.a.p/adw-gtkbuilder-utils.c.o
+[154/191] Compiling C object src/libadwaita-1.a.p/adw-floating-sheet.c.o
+[155/191] Compiling C object src/libadwaita-1.a.p/adw-indicator-bin.c.o
+[156/191] Compiling C object src/libadwaita-1.a.p/adw-inspector-page.c.o
+[157/191] Compiling C object src/libadwaita-1.a.p/adw-link-row.c.o
+../adw-src/src/adw-link-row.c:80:1: warning: unused function 'is_touchscreen' [-Wunused-function]
+   80 | is_touchscreen (GtkGesture *gesture)
+      | ^~~~~~~~~~~~~~
+1 warning generated.
+[158/191] Compiling C object src/libadwaita-1.a.p/adw-settings-impl.c.o
+[159/191] Compiling C object src/libadwaita-1.a.p/adw-settings.c.o
+FAILED: [code=1] src/libadwaita-1.a.p/adw-settings.c.o 
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isrc/libadwaita-1.a.p -Isrc -I../adw-src/src -I. -I../adw-src -Isrc/stylesheet -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gtk-4.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/graphene-1.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/appstream-stub -fvisibility=hidden -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu11 -O3 -DHAVE_CONFIG_H -DADWAITA_COMPILATION -Wcast-align -Wdate-time -Werror=format-security -Werror=format=2 -Wendif-labels -Werror=incompatible-pointer-types -Werror=missing-declarations -Werror=overflow -Werror=return-type -Werror=shift-count-overflow -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-field-initializers -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wno-missing-field-initializers -Wno-sign-compare -Wno-strict-aliasing -Wno-unused-parameter -Wold-style-definition -Wpointer-arith -Wredundant-decls -Wshadow -Wstrict-prototypes -Wswitch-default -Wswitch-enum -Wtype-limits -Wundef -Wunused-function -Wfloat-equal -fstack-protector-strong -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=17.0 -DFFI_STATIC_BUILD -DG_INTL_STATIC_COMPILATION -DPCRE2_STATIC '-DG_LOG_DOMAIN="Adwaita"' -MD -MQ src/libadwaita-1.a.p/adw-settings.c.o -MF src/libadwaita-1.a.p/adw-settings.c.o.d -o src/libadwaita-1.a.p/adw-settings.c.o -c ../adw-src/src/adw-settings.c
+../adw-src/src/adw-settings.c:266:25: error: call to undeclared function 'adw_settings_impl_portal_new'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  266 |   self->platform_impl = adw_settings_impl_portal_new (!found_color_scheme,
+      |                         ^
+../adw-src/src/adw-settings.c:266:23: error: incompatible integer to pointer conversion assigning to 'AdwSettingsImpl *' (aka 'struct _AdwSettingsImpl *') from 'int' [-Wint-conversion]
+  266 |   self->platform_impl = adw_settings_impl_portal_new (!found_color_scheme,
+      |                       ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  267 |                                                       !found_high_contrast,
+      |                                                       ~~~~~~~~~~~~~~~~~~~~~
+  268 |                                                       !found_accent_colors,
+      |                                                       ~~~~~~~~~~~~~~~~~~~~~
+  269 |                                                       !found_document_font_name,
+      |                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  270 |                                                       !found_monospace_font_name);
+      |                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+[160/191] Compiling C object src/libadwaita-1.a.p/adw-settings-impl-gsettings.c.o
+[161/191] Compiling C object src/libadwaita-1.a.p/adw-settings-impl-legacy.c.o
+[162/191] Compiling C object src/libadwaita-1.a.p/adw-sheet-controls.c.o
+[163/191] Compiling C object src/libadwaita-1.a.p/adw-shadow-helper.c.o
+ninja: build stopped: subcommand failed.
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: testapp-link.log ====================='
+===================== TAIL: testapp-link.log =====================
++ '[' -f testapp-link.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: app-console.log ====================='
+===================== TAIL: app-console.log =====================
++ '[' -f app-console.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: app-syslog.log ====================='
+===================== TAIL: app-syslog.log =====================
++ '[' -f app-syslog.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
