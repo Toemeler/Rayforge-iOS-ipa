@@ -62,6 +62,9 @@ gdk_ios_surface_apply_frame (GdkIOSSurface *self,
 {
   GdkSurface *surface = GDK_SURFACE (self);
 
+  gboolean changed = (x != surface->x || y != surface->y ||
+                      width != surface->width || height != surface->height);
+
   surface->x = x;
   surface->y = y;
   surface->width = width;
@@ -70,22 +73,33 @@ gdk_ios_surface_apply_frame (GdkIOSSurface *self,
   if (self->layer != NULL)
     {
       CALayer *layer = (__bridge CALayer *) self->layer;
-      [CATransaction begin];
-      [CATransaction setDisableActions:YES];
-      layer.frame = CGRectMake (x, y, width, height);
-      [CATransaction commit];
+      if (!CGRectEqualToRect (layer.frame,
+                              CGRectMake (x, y, width, height)))
+        {
+          [CATransaction begin];
+          [CATransaction setDisableActions:YES];
+          layer.frame = CGRectMake (x, y, width, height);
+          [CATransaction commit];
 
-      g_message ("gdk-ios: apply_frame surface=%p req=(%d,%d,%dx%d) "
-                 "layer.frame=(%.0f,%.0f,%.0fx%.0f)",
-                 (void *) self, x, y, width, height,
-                 (double) layer.frame.origin.x, (double) layer.frame.origin.y,
-                 (double) layer.frame.size.width,
-                 (double) layer.frame.size.height);
+          g_message ("gdk-ios: apply_frame surface=%p req=(%d,%d,%dx%d) "
+                     "layer.frame=(%.0f,%.0f,%.0fx%.0f)",
+                     (void *) self, x, y, width, height,
+                     (double) layer.frame.origin.x,
+                     (double) layer.frame.origin.y,
+                     (double) layer.frame.size.width,
+                     (double) layer.frame.size.height);
+        }
     }
 
-  _gdk_surface_update_size (surface);
-  gdk_surface_invalidate_rect (surface, NULL);
-  gdk_surface_request_layout (surface);
+  /* Only kick GTK when the geometry really changed — compute_size runs
+   * this on every layout pass, and unconditionally requesting another
+   * layout from here would spin the layout loop forever. */
+  if (changed)
+    {
+      _gdk_surface_update_size (surface);
+      gdk_surface_invalidate_rect (surface, NULL);
+      gdk_surface_request_layout (surface);
+    }
 }
 
 static void
@@ -248,6 +262,58 @@ G_DEFINE_TYPE_WITH_CODE (GdkIOSToplevel, gdk_ios_toplevel, GDK_TYPE_IOS_SURFACE,
                                                 gdk_ios_toplevel_iface_init))
 
 static void
+/* Window-manager contract, run at present time and on every subsequent
+ * layout pass (compute_size):
+ *
+ *   1. For the primary window (no transient parent), make sure GTK knows
+ *      it is MAXIMIZED *before* asking it for a size — gtk_window's
+ *      compute-size handler only requests the full monitor bounds when it
+ *      believes it is maximized (and then also drops the CSD shadow).
+ *   2. Ask GTK what size it wants, giving the screen as the bounds.
+ *   3. Grant exactly what GTK answered, clamped to the screen. Never
+ *      force a different size: if the surface size disagrees with the
+ *      size GTK laid out for, the paint is cut off / leaves gaps.
+ *   4. Place it: primary at the origin, transient dialogs centred.
+ *
+ * Renegotiating on every layout pass lets height-for-width content (e.g.
+ * wrapped dialog text) converge instead of being frozen at first guess. */
+static void
+gdk_ios_toplevel_configure (GdkIOSToplevel *self)
+{
+  GdkSurface *surface = GDK_SURFACE (self);
+  GdkIOSSurface *surface_impl = GDK_IOS_SURFACE (self);
+
+  int bounds_w = 0, bounds_h = 0;
+  gdk_ios_shell_get_bounds (&bounds_w, &bounds_h);
+  if (bounds_w <= 0 || bounds_h <= 0)
+    return;
+
+  gboolean is_dialog = (surface->transient_for != NULL);
+
+  if (!is_dialog &&
+      (surface->state & GDK_TOPLEVEL_STATE_MAXIMIZED) == 0)
+    gdk_synthesize_surface_state (surface, 0, GDK_TOPLEVEL_STATE_MAXIMIZED);
+
+  GdkToplevelSize size;
+  gdk_toplevel_size_init (&size, bounds_w, bounds_h);
+  gdk_toplevel_notify_compute_size (GDK_TOPLEVEL (self), &size);
+
+  int win_w = size.width > 0 ? MIN (size.width, bounds_w) : bounds_w;
+  int win_h = size.height > 0 ? MIN (size.height, bounds_h) : bounds_h;
+  int win_x = is_dialog ? (bounds_w - win_w) / 2 : 0;
+  int win_y = is_dialog ? (bounds_h - win_h) / 2 : 0;
+
+  if (win_w != surface->width || win_h != surface->height ||
+      win_x != surface->x || win_y != surface->y)
+    g_message ("gdk-ios: configure transient=%d granted=%dx%d at (%d,%d) "
+               "(gtk asked %dx%d, bounds %dx%d)",
+               (int) is_dialog, win_w, win_h, win_x, win_y,
+               size.width, size.height, bounds_w, bounds_h);
+
+  gdk_ios_surface_apply_frame (surface_impl, win_x, win_y, win_w, win_h);
+}
+
+static void
 gdk_ios_toplevel_present (GdkToplevel *toplevel,
                           GdkToplevelLayout *layout)
 {
@@ -262,49 +328,6 @@ gdk_ios_toplevel_present (GdkToplevel *toplevel,
       self->layout = gdk_toplevel_layout_copy (layout);
     }
 
-  /* Respect GTK's size negotiation, then occupy the full screen —
-   * the iPad application model is one fullscreen window. */
-  int bounds_w = 0, bounds_h = 0;
-  gdk_ios_shell_get_bounds (&bounds_w, &bounds_h);
-
-  g_message ("gdk-ios: toplevel_present shell_bounds=%dx%d", bounds_w, bounds_h);
-
-  GdkToplevelSize size;
-  gdk_toplevel_size_init (&size, bounds_w, bounds_h);
-  gdk_toplevel_notify_compute_size (toplevel, &size);
-
-  /* The main window (no transient parent) owns the whole screen. A
-   * transient dialog (Adw.MessageDialog, preferences, machine settings,
-   * ...) is given the natural size GTK just negotiated and centred,
-   * rather than being stretched to fullscreen — stretching a small
-   * dialog to 1032x1376 is what made its contents overflow. */
-  int win_w = bounds_w, win_h = bounds_h, win_x = 0, win_y = 0;
-  if (surface->transient_for != NULL)
-    {
-      if (size.width > 0 && size.width < bounds_w)
-        {
-          win_w = size.width;
-          win_x = (bounds_w - win_w) / 2;
-        }
-      if (size.height > 0 && size.height < bounds_h)
-        {
-          win_h = size.height;
-          win_y = (bounds_h - win_h) / 2;
-        }
-    }
-  else
-    {
-      /* Main window: tell GTK it is maximized so it drops the CSD drop
-       * shadow and rounded corners and paints edge-to-edge, instead of
-       * insetting the content (which showed as a black top/left border).
-       * Same single-fullscreen-window model as the GDK Android backend. */
-      gdk_synthesize_surface_state (surface, 0, GDK_TOPLEVEL_STATE_MAXIMIZED);
-    }
-  g_message ("gdk-ios: present placement transient=%d natural=%dx%d "
-             "-> frame=(%d,%d,%dx%d)",
-             (int) (surface->transient_for != NULL),
-             size.width, size.height, win_x, win_y, win_w, win_h);
-
   gdk_ios_surface_attach_layer (surface_impl);
   surface_impl->visible = TRUE;
 
@@ -315,7 +338,7 @@ gdk_ios_toplevel_present (GdkToplevel *toplevel,
   layer.hidden = NO;
 
   gdk_surface_set_is_mapped (surface, TRUE);
-  gdk_ios_surface_apply_frame (surface_impl, win_x, win_y, win_w, win_h);
+  gdk_ios_toplevel_configure (self);
 }
 
 static void
@@ -500,15 +523,13 @@ gdk_ios_toplevel_set_property (GObject      *object,
 static gboolean
 gdk_ios_toplevel_compute_size (GdkSurface *surface)
 {
-  /* Re-negotiate the toplevel size on every layout pass, using the
-   * current (forced) surface size as the available bounds. Without this
-   * (the inherited no-op), GTK reverts the window to its natural size
-   * after the first present, so a maximized window stops filling the
-   * screen and leaves unpainted gaps. Mirrors the GDK Android backend's
-   * single-fullscreen-window model. */
-  GdkToplevelSize size;
-  gdk_toplevel_size_init (&size, surface->width, surface->height);
-  gdk_toplevel_notify_compute_size (GDK_TOPLEVEL (surface), &size);
+  /* GTK queues a compute-size on every layout pass. Run the full
+   * window-manager contract (state -> ask GTK with *screen* bounds ->
+   * grant clamped -> place) so the surface always matches what GTK laid
+   * out. NB: bounds must be the screen, not the current surface size —
+   * feeding the surface size back in freezes the window at its first
+   * guess and clips height-for-width content like wrapped dialog text. */
+  gdk_ios_toplevel_configure (GDK_IOS_TOPLEVEL (surface));
   return GDK_SURFACE_CLASS (gdk_ios_toplevel_parent_class)->compute_size (surface);
 }
 
