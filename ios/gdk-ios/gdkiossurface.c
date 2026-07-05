@@ -261,7 +261,6 @@ G_DEFINE_TYPE_WITH_CODE (GdkIOSToplevel, gdk_ios_toplevel, GDK_TYPE_IOS_SURFACE,
                          G_IMPLEMENT_INTERFACE (GDK_TYPE_TOPLEVEL,
                                                 gdk_ios_toplevel_iface_init))
 
-static void
 /* Window-manager contract, run at present time and on every subsequent
  * layout pass (compute_size):
  *
