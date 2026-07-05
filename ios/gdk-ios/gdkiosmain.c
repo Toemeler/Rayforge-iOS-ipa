@@ -444,6 +444,48 @@ deliver_key (GdkEventType type, UIKey *key)
 
 /* --------------------------------------------------------- app bootstrap */
 
+/* Root view controller. iOS drives interface orientation from the root
+ * VC's supportedInterfaceOrientations (intersected with the Info.plist
+ * keys); a bare UIViewController reports "all", so the app never locked
+ * to the landscape the Info.plist requests. Force landscape here and log
+ * the orientation actually granted so we can see what the device did. */
+@interface GdkIOSViewController : UIViewController
+@end
+
+@implementation GdkIOSViewController
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+  return UIInterfaceOrientationMaskLandscape;
+}
+
+- (BOOL)shouldAutorotate
+{
+  return YES;
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+  return YES;
+}
+
+- (BOOL)prefersHomeIndicatorAutoHidden
+{
+  return YES;
+}
+
+- (void)viewDidLayoutSubviews
+{
+  [super viewDidLayoutSubviews];
+  CGRect s = [UIScreen mainScreen].bounds;
+  g_message ("gdk-ios: VC layout view=%.0fx%.0f screen=%.0fx%.0f",
+             (double) self.view.bounds.size.width,
+             (double) self.view.bounds.size.height,
+             (double) s.size.width, (double) s.size.height);
+}
+
+@end
+
 @interface GdkIOSAppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) CADisplayLink *displayLink;
@@ -470,7 +512,7 @@ deliver_key (GdkEventType type, UIKey *key)
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  UIViewController *vc = [[UIViewController alloc] init];
+  GdkIOSViewController *vc = [[GdkIOSViewController alloc] init];
   GdkIOSView *view = [[GdkIOSView alloc] initWithFrame:self.window.bounds];
   view.autoresizingMask =
     UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
