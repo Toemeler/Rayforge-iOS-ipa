@@ -332,7 +332,14 @@ deliver_key (GdkEventType type, UIKey *key)
   if (self)
     {
       self.multipleTouchEnabled = YES;
-      self.backgroundColor = [UIColor blackColor];
+      /* Shown through any area a toplevel's cairo contents leave
+       * transparent (e.g. when Rayforge's ~square UI does not fill a tall
+       * portrait window). Match Adwaita's light window background so these
+       * gaps blend in rather than showing as jarring black blocks. */
+      self.backgroundColor = [UIColor colorWithRed:0.980
+                                             green:0.980
+                                              blue:0.984
+                                             alpha:1.0];
 
       UIHoverGestureRecognizer *hover =
         [[UIHoverGestureRecognizer alloc] initWithTarget:self
