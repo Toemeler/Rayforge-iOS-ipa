@@ -1,0 +1,255 @@
+++ xcrun simctl list runtimes
+++ awk '/iOS/{id=$NF} END{print id}'
++ RUNTIME=com.apple.CoreSimulator.SimRuntime.iOS-26-2
+++ xcrun simctl create rayforge-test com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M4-8GB com.apple.CoreSimulator.SimRuntime.iOS-26-2
++ UDID=E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89
++ test -n E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89
++ echo UDID=E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89
+UDID=E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89
++ xcrun simctl boot E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89
++ xcrun simctl bootstatus E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89 -b
+Monitoring boot status for rayforge-test (E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89).
+[2026-07-04 13:12:30 +0000] Status=2, isTerminal=NO, Elapsed=00:55.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:48 seconds
+
+[2026-07-04 13:12:31 +0000] Status=2, isTerminal=NO, Elapsed=00:56.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:49 seconds
+
+[2026-07-04 13:12:32 +0000] Status=2, isTerminal=NO, Elapsed=00:57.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:50 seconds
+
+[2026-07-04 13:12:33 +0000] Status=2, isTerminal=NO, Elapsed=00:58.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:51 seconds
+
+[2026-07-04 13:12:34 +0000] Status=2, isTerminal=NO, Elapsed=00:59.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:52 seconds
+
+[2026-07-04 13:12:35 +0000] Status=2, isTerminal=NO, Elapsed=01:00.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:53 seconds
+
+[2026-07-04 13:12:36 +0000] Status=2, isTerminal=NO, Elapsed=01:01.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:54 seconds
+
+[2026-07-04 13:12:40 +0000] Status=2, isTerminal=NO, Elapsed=01:05.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.securityd.KeychainMigrator (KeychainMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:55 seconds
+
+[2026-07-04 13:12:43 +0000] Status=2, isTerminal=NO, Elapsed=01:08.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.appleaccount.mergebuddyprovisioningresponse.migrator (MergeBuddyProvisioningResponse.migrator)
+		Migration Elapsed:00:58 seconds
+
+[2026-07-04 13:12:45 +0000] Status=4, isTerminal=NO, Elapsed=01:10.
+	Waiting on System App
+
+[2026-07-04 13:12:46 +0000] Status=4, isTerminal=NO, Elapsed=01:11.
+	Waiting on System App
+
+[2026-07-04 13:12:47 +0000] Status=4, isTerminal=NO, Elapsed=01:12.
+	Waiting on System App
+
+[2026-07-04 13:12:48 +0000] Status=4, isTerminal=NO, Elapsed=01:13.
+	Waiting on System App
+
+[2026-07-04 13:12:48 +0000] Status=4, isTerminal=NO, Elapsed=01:13.
+	Waiting on System App
+
+[2026-07-04 13:12:50 +0000] Status=4, isTerminal=NO, Elapsed=01:15.
+	Waiting on System App
+
+[2026-07-04 13:12:51 +0000] Status=4, isTerminal=NO, Elapsed=01:16.
+	Waiting on System App
+
+[2026-07-04 13:12:51 +0000] Status=4, isTerminal=NO, Elapsed=01:17.
+	Waiting on System App
+
+[2026-07-04 13:12:52 +0000] Status=4, isTerminal=NO, Elapsed=01:17.
+	Waiting on System App
+
+[2026-07-04 13:12:54 +0000] Status=4, isTerminal=NO, Elapsed=01:19.
+	Waiting on System App
+
+[2026-07-04 13:12:55 +0000] Status=4, isTerminal=NO, Elapsed=01:20.
+	Waiting on System App
+
+[2026-07-04 13:13:02 +0000] Status=4294967295, isTerminal=YES, Elapsed=01:27.
+	Finished
+
++ xcrun simctl install E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89 RayforgeApp.app
+++ xcrun simctl get_app_container E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89 org.rayforge.app
++ APP_CONTAINER=/Users/runner/Library/Developer/CoreSimulator/Devices/E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89/data/Containers/Bundle/Application/C720523B-9F96-48CE-8DE5-7828444957C4/RayforgeApp.app
++ echo 'app container: /Users/runner/Library/Developer/CoreSimulator/Devices/E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89/data/Containers/Bundle/Application/C720523B-9F96-48CE-8DE5-7828444957C4/RayforgeApp.app'
+app container: /Users/runner/Library/Developer/CoreSimulator/Devices/E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89/data/Containers/Bundle/Application/C720523B-9F96-48CE-8DE5-7828444957C4/RayforgeApp.app
++ FW_DIR=/Users/runner/Library/Developer/CoreSimulator/Devices/E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89/data/Containers/Bundle/Application/C720523B-9F96-48CE-8DE5-7828444957C4/RayforgeApp.app/Frameworks
++ LAUNCH_OUT=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/app-console.log
++ xcrun simctl launch --stdout=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/app-console.log --stderr=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/app-console.log E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89 org.rayforge.app SIMCTL_CHILD_DYLD_LIBRARY_PATH=/Users/runner/Library/Developer/CoreSimulator/Devices/E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89/data/Containers/Bundle/Application/C720523B-9F96-48CE-8DE5-7828444957C4/RayforgeApp.app/Frameworks SIMCTL_CHILD_DYLD_FALLBACK_LIBRARY_PATH=/Users/runner/Library/Developer/CoreSimulator/Devices/E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89/data/Containers/Bundle/Application/C720523B-9F96-48CE-8DE5-7828444957C4/RayforgeApp.app/Frameworks SIMCTL_CHILD_G_MESSAGES_DEBUG=all
++ tee launch-cmd.log
+org.rayforge.app: 76847
++ sleep 45
++ APP_ALIVE=1
++ xcrun simctl spawn E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89 launchctl list
++ grep -q org.rayforge.app
++ echo 'app alive: 1'
+app alive: 1
++ xcrun simctl io E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89 screenshot simulator-screenshot.png
+Detected file type 'PNG' from extension
+Wrote screenshot to: simulator-screenshot.png
++ ls -la simulator-screenshot.png
+-rw-r--r--@ 1 runner  staff  118154 Jul  4 13:15 simulator-screenshot.png
++ xcrun simctl spawn E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89 log show --last 5m --predicate 'process == "rayforge-app"'
++ mkdir -p crash-reports
++ find /Users/runner/Library/Logs/DiagnosticReports -name '*rayforge*' -newer RayforgeApp.app/Info.plist -exec cp '{}' crash-reports/ ';'
++ for c in 'crash-reports/*'
++ '[' -f 'crash-reports/*' ']'
++ continue
++ xcrun simctl shutdown E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89
++ echo '===== app console ====='
+===== app console =====
++ cat app-console.log
+Gdk-Message: 13:15:00.698: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89/data/Containers/Bundle/Application/C720523B-9F96-48CE-8DE5-7828444957C4/RayforgeApp.app
+** Message: 13:15:01.304: GI_TYPELIB_PATH: /Users/runner/Library/Developer/CoreSimulator/Devices/E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89/data/Containers/Bundle/Application/C720523B-9F96-48CE-8DE5-7828444957C4/RayforgeApp.app/lib/girepository-1.0
+** Message: 13:15:01.305: python home: /Users/runner/Library/Developer/CoreSimulator/Devices/E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89/data/Containers/Bundle/Application/C720523B-9F96-48CE-8DE5-7828444957C4/RayforgeApp.app/python
+** Message: 13:15:01.305: site-packages: /Users/runner/Library/Developer/CoreSimulator/Devices/E2DF7545-FC1D-4BA9-B92A-DFC369F3FF89/data/Containers/Bundle/Application/C720523B-9F96-48CE-8DE5-7828444957C4/RayforgeApp.app/python/lib/python3.13/site-packages
+Fontconfig warning: using without calling FcInit()
+** Message: 13:15:53.011: pygobject self-test UI presented
++ echo '===== app syslog (first 120) ====='
+===== app syslog (first 120) =====
++ head -120 app-syslog.log
+getpwuid_r did not find a match for uid 501
+Timestamp                       Thread     Type        Activity             PID    TTL  
+2026-07-04 13:15:00.762002+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (libxpc.dylib) [com.apple.xpc:connection] [0x105005590] activating connection: mach=true listener=false peer=false name=com.apple.cfprefsd.daemon
+2026-07-04 13:15:00.762468+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (libMobileGestalt.dylib) No persisted cache on this platform.
+2026-07-04 13:15:00.765866+0000 0x2d583    Activity    0x4a7a0              76847  0    rayforge-app: (CoreFoundation) Loading Preferences From User Session CFPrefsD
+2026-07-04 13:15:00.767153+0000 0x2d584    Default     0x0                  76847  0    rayforge-app: (BoardServices) [com.apple.BoardServices:XPCErrors] [C:1] Alloc com.apple.frontboard.systemappservices
+2026-07-04 13:15:00.767471+0000 0x2d584    Default     0x0                  76847  0    rayforge-app: (libxpc.dylib) [com.apple.xpc:connection] [0x105108640] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-07-04 13:15:00.767669+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Creating new assertion because there is no existing background assertion.
+2026-07-04 13:15:00.767710+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Creating new background assertion
+2026-07-04 13:15:00.767824+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Created new background assertion <BKSProcessAssertion: 0x60000210bcf0>
+2026-07-04 13:15:00.784272+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:connection] Initializing connection
+2026-07-04 13:15:00.784346+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:process] Removing all cached process handles
+2026-07-04 13:15:00.784526+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:connection] Creating connection to com.apple.runningboard
+2026-07-04 13:15:00.784545+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (libxpc.dylib) [com.apple.xpc:connection] [0x105107c00] activating connection: mach=true listener=false peer=false name=com.apple.runningboard
+2026-07-04 13:15:00.784658+0000 0x2d585    Default     0x0                  76847  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:connection] Sending handshake request attempt #1 to server
+2026-07-04 13:15:00.786370+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason added: 10; deactivation reasons: 0 -> 1024; animating application lifecycle event: 0
+2026-07-04 13:15:00.786966+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (BoardServices) [com.apple.BoardServices:Injection] activating monitor for service com.apple.frontboard.open
+2026-07-04 13:15:00.787329+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (BoardServices) [com.apple.BoardServices:Injection] activating monitor for service com.apple.frontboard.workspace-service
+2026-07-04 13:15:00.788214+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:Common] FBSWorkspace registering source: com.apple.frontboard.systemappservices
+2026-07-04 13:15:00.788342+0000 0x2d584    Activity    0x4a7a1              76847  0    rayforge-app: (RunningBoardServices) didChangeInheritances
+2026-07-04 13:15:00.788511+0000 0x2d585    Default     0x0                  76847  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:connection] Handshake succeeded
+2026-07-04 13:15:00.788874+0000 0x2d585    Default     0x0                  76847  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:connection] Identity resolved as app<org.rayforge.app((null))>
+2026-07-04 13:15:00.791177+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x60000210bcf0>
+2026-07-04 13:15:00.791352+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x600001704d40>: taskID = 1, taskName = Launch Background Task for Coalescing, creationTime = 3090 (elapsed = 0).
+2026-07-04 13:15:00.791490+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UIApplicationSceneKeyboardSettings on FBSSceneSettings
+2026-07-04 13:15:00.795673+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneOcclusionSettings> on FBSSceneSettings
+2026-07-04 13:15:00.795933+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneInterfaceProtectionSettings> on FBSSceneSettings
+2026-07-04 13:15:00.796192+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneLayoutPreferencesHostSettingsExtension on FBSSceneSettings
+2026-07-04 13:15:00.796660+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneSafeAreaSettingsExtension on FBSSceneSettings
+2026-07-04 13:15:00.797335+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:Common] FBSWorkspace connected to endpoint : <BSServiceConnectionEndpoint: 0x600000210760; target: com.apple.frontboard.systemappservices; service: com.apple.frontboard.workspace-service>
+2026-07-04 13:15:00.797818+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneLayoutPreferenceClientSettingsExtension on FBSSceneClientSettings
+2026-07-04 13:15:00.797839+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:Common] <FBSWorkspaceScenesClient:0x600003008240 com.apple.frontboard.systemappservices> attempting immediate handshake from activate
+2026-07-04 13:15:00.798323+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:Common] <FBSWorkspaceScenesClient:0x600003008240 com.apple.frontboard.systemappservices> sent handshake
+2026-07-04 13:15:00.798365+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UIHomeAffordanceHostSceneSettings> on FBSSceneSettings
+2026-07-04 13:15:00.798522+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISystemShellSceneHostingEnvironmentSettings on FBSSceneSettings
+2026-07-04 13:15:00.798622+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneRenderingEnvironmentSettings on FBSSceneSettings
+2026-07-04 13:15:00.798988+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneRenderingEnvironmentClientSettings> on FBSSceneClientSettings
+2026-07-04 13:15:00.799083+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneTransitioningHostSettings> on FBSSceneSettings
+2026-07-04 13:15:00.799346+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:general] Added observer for process assertions expiration warning: <_RBSExpirationWarningClient: 0x60000020ec60>
+2026-07-04 13:15:00.799490+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneFocusSystemSettings> on FBSSceneSettings
+2026-07-04 13:15:00.799718+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneOrientationSettingsExtension on FBSSceneSettings
+2026-07-04 13:15:00.799793+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneOrientationClientSettingsExtension on FBSSceneClientSettings
+2026-07-04 13:15:00.800406+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneWindowingControlClientSettings on FBSSceneClientSettings
+2026-07-04 13:15:00.801054+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingContentSizePreferenceClientSettings> on FBSSceneClientSettings
+2026-07-04 13:15:00.804231+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneHostingTraitCollectionPropagationSettings on FBSSceneSettings
+2026-07-04 13:15:00.805086+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:UIScreen] Evaluated capturing state as 0 on <UIScreen: 0x104f05ec0> for initial
+2026-07-04 13:15:00.805269+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:UIScreen] Evaluated capturing state as 0 on <UIScreen: 0x104f05ec0> for CADisplay KVO
+2026-07-04 13:15:00.806775+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingSheetPresentationSettings> on FBSSceneSettings
+2026-07-04 13:15:00.807096+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (libAccessibility.dylib) [com.apple.Accessibility:AXSupportCommon] Read CategoryName: per-app = 1, category name = (null)
+2026-07-04 13:15:00.807735+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (libAccessibility.dylib) [com.apple.Accessibility:AXSupportCommon] Read CategoryName: per-app = 0, category name = (null)
+2026-07-04 13:15:00.809205+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingSheetPresentationClientSettings> on FBSSceneClientSettings
+2026-07-04 13:15:00.811720+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingEventDeferringSettings> on FBSSceneSettings
+2026-07-04 13:15:00.814036+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <UIKit__UITypedKeyValueSceneSettings> on FBSSceneSettings
+2026-07-04 13:15:00.814624+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <UIKit__UITypedKeyValueSceneSettings> on FBSSceneClientSettings
+2026-07-04 13:15:00.814955+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingViewControllerPreferencePropagationClientSettings> on FBSSceneClientSettings
+2026-07-04 13:15:00.815588+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneZoomTransitionSettings> on FBSSceneSettings
+2026-07-04 13:15:00.818287+0000 0x2d585    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneSettingsCore on FBSSceneSettings
+2026-07-04 13:15:00.820000+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (XCTTargetBootstrap) [com.apple.dt.xctest:Default] Registering for test daemon availability notify post.
+2026-07-04 13:15:00.820201+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (XCTTargetBootstrap) [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-07-04 13:15:00.820319+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (XCTTargetBootstrap) [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-07-04 13:15:00.820405+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (XCTTargetBootstrap) [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-07-04 13:15:00.820498+0000 0x2d585    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneClientSettingsCore on FBSSceneClientSettings
+2026-07-04 13:15:00.821328+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:UpdateScheduler] Selected display: name=LCD (PurpleMain), id=1
+2026-07-04 13:15:00.829088+0000 0x2d585    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] UIMutableApplicationSceneSettings setting counterpart class: UIApplicationSceneSettings
+2026-07-04 13:15:00.829427+0000 0x2d585    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] UIMutableApplicationSceneClientSettings setting counterpart class: UIApplicationSceneClientSettings
+2026-07-04 13:15:00.830028+0000 0x2d585    Default     0x0                  76847  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneTransitionContextCore on FBSSceneTransitionContext
+2026-07-04 13:15:00.854739+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Will add backgroundTask with taskName: Persistent SceneSession Map Update, expirationHandler: <__NSGlobalBlock__: 0x1e61729e0>
+2026-07-04 13:15:00.854851+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Reusing background assertion <BKSProcessAssertion: 0x60000210bcf0>
+2026-07-04 13:15:00.854874+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x60000210bcf0>
+2026-07-04 13:15:00.854904+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x600001716a80>: taskID = 2, taskName = Persistent SceneSession Map Update, creationTime = 3090 (elapsed = 0).
+2026-07-04 13:15:00.855162+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason added: 5; deactivation reasons: 1024 -> 1056; animating application lifecycle event: 1
+2026-07-04 13:15:00.855543+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x104f0ff90> (FE694493-E968-4DBD-9710-F87C3B246F90)
+2026-07-04 13:15:00.855603+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Should send trait collection or coordinate space update, interface style 1 -> 1, <UIWindowScene: 0x104f0ff90> (FE694493-E968-4DBD-9710-F87C3B246F90)
+2026-07-04 13:15:00.856559+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x104f0ff90> (FE694493-E968-4DBD-9710-F87C3B246F90)
+2026-07-04 13:15:00.856828+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:HomeAffordanceObservation] Initializing: <_UIHomeAffordanceSceneNotifier: 0x60000290c1c0>; with scene: <UIWindowScene: 0x104f0ff90>
+2026-07-04 13:15:00.856956+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (BacklightServices) [com.apple.BacklightServices:scenes] 0x600000c0d3e0 setDelegate:<0x600000c0d380 _UIBacklightEnvironment> hasDelegate:YES for environment:sceneID:org.rayforge.app-default
+2026-07-04 13:15:00.857740+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x104f0ff90> (FE694493-E968-4DBD-9710-F87C3B246F90)
+2026-07-04 13:15:00.857864+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:EventDeferring] [0x600002914620] Initialized with scene: <UIWindowScene: 0x104f0ff90>; behavior: <_UIEventDeferringBehavior_iOS: 0x600000211d00>; availableForProcess: 1, systemShellManagesKeyboardFocus: 1
+2026-07-04 13:15:00.858252+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (BoardServices) [com.apple.BoardServices:XPCErrors] [C:2] Alloc com.apple.backboard.hid-services.xpc
+2026-07-04 13:15:00.858415+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (libxpc.dylib) [com.apple.xpc:connection] [0x10510a0e0] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-07-04 13:15:00.859687+0000 0x2d582    Default     0x0                  76847  0    rayforge-app: (BackBoardServices) [com.apple.BackBoard:EventDelivery] BKSHIDEventObserver - connection activation
+2026-07-04 13:15:00.859707+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (BackBoardServices) [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x600002606e80; process scope; status: target> was:none
+2026-07-04 13:15:00.859791+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPad to LastOneWins
+2026-07-04 13:15:00.859820+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Scene target of keyboard event deferring environment did change: 1; scene: UIWindowScene: 0x104f0ff90; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.app-default
+2026-07-04 13:15:00.859873+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:UIFocus] Focus system enabled
+2026-07-04 13:15:00.860400+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:UIFocus] Failed to update focus with context <UIFocusUpdateContext: 0x600003008360; previouslyFocusedItem: (nil); nextFocusedItem: (nil); focusHeading: None>. No additional info available.
+2026-07-04 13:15:00.860533+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x104f0ff90> (FE694493-E968-4DBD-9710-F87C3B246F90)
+2026-07-04 13:15:00.860575+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:EventDeferring] [0x600002914620] Scene target of event deferring environments did update: scene: 0x104f0ff90; current systemShellManagesKeyboardFocus: 1; systemShellManagesKeyboardFocusForScene: 1; eligibleForRecordRemoval: 1;
+2026-07-04 13:15:00.860592+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x104f0ff90; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.app-default
+2026-07-04 13:15:00.860609+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Stack[KeyWindow] 0x600000c0d6b0: Taking no further action for migration from LastOneWins -> SystemShellManaged as there are no scenes
+2026-07-04 13:15:00.860629+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPad to SystemShellManaged
+2026-07-04 13:15:00.861509+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Key window needs update: 0; currentKeyWindowScene: 0x0; evaluatedKeyWindowScene: 0x104f0ff90; currentApplicationKeyWindow: 0x0; evaluatedApplicationKeyWindow: 0x0; reason: UIWindowScene: 0x104f0ff90: Window scene became target of keyboard environment
+2026-07-04 13:15:00.861707+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x104f0ff90> (FE694493-E968-4DBD-9710-F87C3B246F90)
+2026-07-04 13:15:00.862282+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x104f0ff90> (FE694493-E968-4DBD-9710-F87C3B246F90)
+2026-07-04 13:15:00.863726+0000 0x2d56b    Fault       0x4a7a2              76847  14   rayforge-app: (UIKitCore) [com.apple.runtime-issues:UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
+2026-07-04 13:15:00.863727+0000 0x2d56b    Activity    0x4a7a2              76847  0    rayforge-app: (libsystem_trace.dylib) Activity for state dumps
+2026-07-04 13:15:00.864365+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x104f0ff90> (FE694493-E968-4DBD-9710-F87C3B246F90)
+2026-07-04 13:15:00.875587+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:org.rayforge.app-default  persistentID: FE694493-E968-4DBD-9710-F87C3B246F90
+2026-07-04 13:15:00.875970+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:Application] Ignoring already applied deactivation reason: 5; deactivation reasons: 1056
+2026-07-04 13:15:00.876203+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason added: 11; deactivation reasons: 1056 -> 3104; animating application lifecycle event: 1
+2026-07-04 13:15:00.876826+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.KeyboardArbiter:Client] startConnection
+2026-07-04 13:15:00.878952+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (libxpc.dylib) [com.apple.xpc:connection] [0x104f05830] activating connection: mach=true listener=false peer=false name=com.apple.UIKit.KeyboardManagement.hosted
+2026-07-04 13:15:00.894018+0000 0x2d585    Default     0x0                  76847  0    rayforge-app: (BoardServices) [com.apple.BoardServices:XPCErrors] [C:3] Alloc com.apple.PointerUI.pointeruid.service
+2026-07-04 13:15:00.894098+0000 0x2d585    Default     0x0                  76847  0    rayforge-app: (libxpc.dylib) [com.apple.xpc:connection] [0x10500ccb0] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-07-04 13:15:00.908661+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:PointerLockState] preferredPointerLockStatus updated: scene: <UIWindowScene: 0x104f0ff90; role: UIWindowSceneSessionRoleApplication; persistentIdentifier: FE694493-E968-4DBD-9710-F87C3B246F90; activationState: UISceneActivationStateForegroundInactive>; viewController: <UIViewController: 0x10510e050>; preferredPointerLockStatus: _UIPointerLockStatusUnlocked
+2026-07-04 13:15:00.908948+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:Orientation] <UIWindowScene: 0x104f0ff90> (FE694493-E968-4DBD-9710-F87C3B246F90) Scene updated orientation preferences: none -> ( Ll Lr )
+2026-07-04 13:15:00.909114+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Key window API is scene-level: YES
+2026-07-04 13:15:00.909152+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] UIWindowScene: 0x104f0ff90: Window became key in scene: UIWindow: 0x10510bed0; contextId: 0x7C30F3C7: reason: UIWindowScene: 0x104f0ff90: Window requested to become key in scene: 0x10510bed0
+2026-07-04 13:15:00.909174+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Key window needs update: 1; currentKeyWindowScene: 0x0; evaluatedKeyWindowScene: 0x104f0ff90; currentApplicationKeyWindow: 0x0; evaluatedApplicationKeyWindow: 0x10510bed0; reason: UIWindowScene: 0x104f0ff90: Window requested to become key in scene: 0x10510bed0
+2026-07-04 13:15:00.909200+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Window did become application key: UIWindow: 0x10510bed0; contextId: 0x7C30F3C7; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.app-default
+2026-07-04 13:15:00.909253+0000 0x2d56b    Default     0x0                  76847  1    rayforge-app: (UIKitCore) [com.apple.UIKit:EventDeferring] [0x600002914620] Begin local event deferring requested for token: 0x600002603060; environments: 1; reason: UIWindowScene: 0x104f0ff90: Begin event deferring in keyboardFocus for window: 0x10510bed0
+2026-07-04 13:15:00.910958+0000 0x2d584    Default     0x0                  76847  0    rayforge-app: (BackBoardServices) [com.apple.BackBoard:EventDelivery] BKSHIDEventDeliveryManager - connection activation
+2026-07-04 13:15:00.914422+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] Reloading input views for key-window scene responder: <GdkIOSView: 0x10510e630; frame = (0 0; 1376 1032); > force:N
+2026-07-04 13:15:00.915243+0000 0x2d585    Default     0x0                  76847  0    rayforge-app: (BackBoardServices) [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x600002606e80; token: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.app-default; status: ancestor> was:target
+2026-07-04 13:15:00.916064+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _reloadInputViewsForKeyWindowSceneResponder: 1 force: 0, fromBecomeFirstResponder: 1 (automaticKeyboard: 1, reloadIdentifier: 54A5160C-8748-4FDC-B1BB-8033F9B116FF)
+2026-07-04 13:15:00.916286+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder: <GdkIOSView: 0x10510e630; frame = (0 0; 1376 1032); >, automaticKeyboard: 1, force: 0
+2026-07-04 13:15:00.916445+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder, found custom inputView: <(null): 0x0>, customInputViewController: <(null): 0x0>
+2026-07-04 13:15:00.916485+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder, found inputAccessoryView: <(null): 0x0>
+2026-07-04 13:15:00.916548+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder, responderRequiresKeyboard 0 (automaticKeyboardEnabled: 1, activeInstance: <(null): 0x0>, self.isOnScreen: 0, requiresKBWhenFirstResponder: 0)
+2026-07-04 13:15:00.916580+0000 0x2d56b    Default     0x0                  76847  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder, useKeyboard 0 (allowsSystemInputView: 1, !inputView <(null): 0x0>, responderRequiresKeyboard 0)
++ test 1 = 1
++ grep -q 'RAYFORGE BOOT FAILED' app-console.log app-syslog.log
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
