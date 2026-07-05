@@ -1,0 +1,57 @@
+Gdk-[1;32mMessage[0m: [34m05:03:24.181[0m: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/B6A7F324-53B8-43E9-9604-AF350BE45FC5/data/Containers/Bundle/Application/9F4A9F5F-1A71-44C4-A0E8-642BFB5FE1CF/RayforgeSmoke.app
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:24.693[0m: Object class GdkIOSToplevel doesn't implement property 'transient-for' from interface 'GdkToplevel'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:24.693[0m: Object class GdkIOSToplevel doesn't implement property 'title' from interface 'GdkToplevel'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:24.693[0m: Object class GdkIOSToplevel doesn't implement property 'state' from interface 'GdkToplevel'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:24.693[0m: Object class GdkIOSToplevel doesn't implement property 'startup-id' from interface 'GdkToplevel'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:24.693[0m: Object class GdkIOSToplevel doesn't implement property 'shortcuts-inhibited' from interface 'GdkToplevel'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.155[0m: Object class GdkIOSToplevel doesn't implement property 'modal' from interface 'GdkToplevel'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.155[0m: Object class GdkIOSToplevel doesn't implement property 'icon-list' from interface 'GdkToplevel'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.156[0m: Object class GdkIOSToplevel doesn't implement property 'gravity' from interface 'GdkToplevel'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.156[0m: Object class GdkIOSToplevel doesn't implement property 'fullscreen-mode' from interface 'GdkToplevel'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.156[0m: Object class GdkIOSToplevel doesn't implement property 'deletable' from interface 'GdkToplevel'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.156[0m: Object class GdkIOSToplevel doesn't implement property 'decorated' from interface 'GdkToplevel'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.287[0m: Object class GdkIOSToplevel doesn't implement property 'capabilities' from interface 'GdkToplevel'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.289[0m: invalid (NULL) pointer instance
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.289[0m: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.289[0m: g_object_set_is_valid_property: object class 'GdkIOSToplevel' has no property named 'title'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.289[0m: g_object_set_is_valid_property: object class 'GdkIOSToplevel' has no property named 'decorated'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.289[0m: g_object_set_is_valid_property: object class 'GdkIOSToplevel' has no property named 'deletable'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.396[0m: g_object_set_is_valid_property: object class 'GdkIOSToplevel' has no property named 'modal'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.396[0m: g_object_set_is_valid_property: object class 'GdkIOSToplevel' has no property named 'gravity'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.396[0m: g_object_set_is_valid_property: object class 'GdkIOSToplevel' has no property named 'icon-list'
+
+(process:30428): Gtk-[1;35mCRITICAL[0m **: [34m05:03:26.397[0m: gtk_native_realize: assertion 'clock != NULL' failed
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:26.397[0m: g_object_get_is_valid_property: object class 'GdkIOSToplevel' has no property named 'capabilities'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:27.491[0m: g_object_get_is_valid_property: object class 'GdkIOSToplevel' has no property named 'state'
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:27.491[0m: g_object_get_is_valid_property: object class 'GdkIOSToplevel' has no property named 'capabilities'
+
+(process:30428): Gdk-[1;35mCRITICAL[0m **: [34m05:03:27.492[0m: gdk_surface_request_layout: assertion 'frame_clock' failed
+
+(process:30428): Gdk-[1;35mCRITICAL[0m **: [34m05:03:27.492[0m: gdk_surface_request_layout: assertion 'frame_clock' failed
+
+(process:30428): GLib-GObject-[1;35mCRITICAL[0m **: [34m05:03:27.494[0m: g_object_set_is_valid_property: object class 'GdkIOSToplevel' has no property named 'startup-id'
+** [1;32mMessage[0m: [34m05:03:27.494[0m: smoke test UI presented
+org.rayforge.smoketest: 30428

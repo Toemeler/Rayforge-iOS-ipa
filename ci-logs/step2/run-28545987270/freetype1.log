@@ -1,0 +1,80 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ft-build1
+Build type: cross build
+Project name: freetype2
+Project version: 2.13.3
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Program python3 found: YES (/opt/homebrew/bin/python3)
+Has header "unistd.h" : YES 
+Has header "fcntl.h" : YES 
+Has header "sys/mman.h" : YES 
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency zlib found: YES 1.2.12
+Dependency zlib for host machine found: YES 1.2.12 (cached)
+Found CMake: NO
+Run-time dependency bzip2 found: NO  (tried pkg-config, framework and cmake)
+Library bz2 skipped: feature bzip2 disabled
+Run-time dependency libpng found: YES 1.6.44
+Dependency harfbuzz for host machine skipped: feature harfbuzz disabled
+Dependency libbrotlidec for host machine skipped: feature brotli disabled
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build targets in project: 5
+
+freetype2 2.13.3
+
+  Operating System
+    OS             : darwin
+
+  Used Libraries
+    Zlib           : system
+    Bzip2          : no
+    Png            : yes
+    Harfbuzz       : no
+    Brotli         : no
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-arm64-cross.txt
+    brotli         : disabled
+    buildtype      : release
+    bzip2          : disabled
+    default_library: static
+    harfbuzz       : disabled
+    png            : enabled
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `ft-build1'
+[1/46] Generating ftoption.h with a custom command
+[2/46] Generating ftconfig.h with a custom command
+[3/46] Generating ftmodule.h with a custom command
+[4/46] Compiling C object libfreetype.a.p/src_base_ftinit.c.o
+[5/46] Compiling C object libfreetype.a.p/src_cid_type1cid.c.o
+[6/46] Compiling C object libfreetype.a.p/src_type1_type1.c.o
+[7/46] Compiling C object libfreetype.a.p/src_pfr_pfr.c.o
+[8/46] Compiling C object libfreetype.a.p/src_winfonts_winfnt.c.o
+[9/46] Compiling C object libfreetype.a.p/src_type42_type42.c.o
+[10/46] Compiling C object libfreetype.a.p/src_cff_cff.c.o
+[11/46] Compiling C object libfreetype.a.p/src_sfnt_sfnt.c.o
+FAILED: [code=1] libfreetype.a.p/src_sfnt_sfnt.c.o 
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Ilibfreetype.a.p -I. -I../freetype-src -I../freetype-src/include -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -fvisibility=hidden -fdiagnostics-color=always -Wall -Winvalid-pch -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 '-DFT_CONFIG_MODULES_H=<ftmodule.h>' -DFT2_BUILD_LIBRARY=1 '-DFT_CONFIG_OPTIONS_H=<ftoption.h>' '-DFT_CONFIG_CONFIG_H=<ftconfig.h>' -MD -MQ libfreetype.a.p/src_sfnt_sfnt.c.o -MF libfreetype.a.p/src_sfnt_sfnt.c.o.d -o libfreetype.a.p/src_sfnt_sfnt.c.o -c ../freetype-src/src/sfnt/sfnt.c
+In file included from ../freetype-src/src/sfnt/sfnt.c:21:
+../freetype-src/src/sfnt/pngshim.c:31:10: fatal error: 'png.h' file not found
+   31 | #include <png.h>
+      |          ^~~~~~~
+1 error generated.
+[12/46] Compiling C object libfreetype.a.p/src_pcf_pcf.c.o
+[13/46] Compiling C object libfreetype.a.p/src_bdf_bdf.c.o
+[14/46] Compiling C object libfreetype.a.p/src_base_ftbase.c.o
+[15/46] Compiling C object libfreetype.a.p/src_truetype_truetype.c.o
+ninja: build stopped: subcommand failed.
