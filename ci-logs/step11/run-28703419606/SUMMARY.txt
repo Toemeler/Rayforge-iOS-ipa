@@ -1,0 +1,336 @@
++ echo 'Run ID: 28703419606'
+Run ID: 28703419606
++ echo 'Commit: f5f2b1842352deeefa676721defa573bb856c1a3'
+Commit: f5f2b1842352deeefa676721defa573bb856c1a3
+++ date -u
++ echo 'Date: Sat Jul  4 10:34:48 UTC 2026'
+Date: Sat Jul  4 10:34:48 UTC 2026
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pycairo-setup.log ====================='
+===================== TAIL: pycairo-setup.log =====================
++ '[' -f pycairo-setup.log ']'
++ tail -50 pycairo-setup.log
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Program /opt/homebrew/opt/python@3.13/bin/python3.13 found: YES (/opt/homebrew/opt/python@3.13/bin/python3.13)
+Compiler for C supports arguments -Wall: YES 
+Compiler for C supports arguments -Warray-bounds: YES 
+Compiler for C supports arguments -Wcast-align: YES 
+Compiler for C supports arguments -Wconversion: YES 
+Compiler for C supports arguments -Wextra: YES 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Wformat-nonliteral: YES 
+Compiler for C supports arguments -Wformat-security: YES 
+Compiler for C supports arguments -Wimplicit-function-declaration: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpacked: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wreturn-type: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wsign-compare: YES 
+Compiler for C supports arguments -Wstrict-aliasing: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wunused-but-set-variable: YES 
+Compiler for C supports arguments -Wswitch-default: YES 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Configuring METADATA using configuration
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency cairo found: YES 1.18.4
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency python found: YES 3.13
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build targets in project: 4
+
+pycairo 1.29.0
+
+  User defined options
+    Cross files: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+                 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-python.txt
+    buildtype  : release
+    prefix     : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage
+    python     : /opt/homebrew/opt/python@3.13/bin/python3.13
+    tests      : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pycairo-build.log ====================='
+===================== TAIL: pycairo-build.log =====================
++ '[' -f pycairo-build.log ']'
++ tail -50 pycairo-build.log
+ninja: Entering directory `pycairo-build'
+[1/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/bufferproxy.c.o
+[2/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/device.c.o
+[3/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/cairomodule.c.o
+[4/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/error.c.o
+[5/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/enums.c.o
+[6/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/misc.c.o
+[7/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/matrix.c.o
+[8/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/font.c.o
+[9/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/glyph.c.o
+[10/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/rectangle.c.o
+[11/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/path.c.o
+[12/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/context.c.o
+[13/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/region.c.o
+[14/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/pattern.c.o
+[15/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/textcluster.c.o
+[16/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/textextents.c.o
+[17/21] Copying file cairo/__init__.py
+[18/21] Copying file cairo/__init__.pyi
+[19/21] Copying file cairo/py.typed
+[20/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/surface.c.o
+[21/21] Linking target cairo/_cairo.cpython-313-iphonesimulator.so
+ld: warning: -undefined dynamic_lookup is deprecated on iOS-simulator
+ld: warning: search path '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14' not found
+ninja: Entering directory `pycairo-build'
+[0/1] Installing files
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo/__init__.py'...
+Installing cairo/_cairo.cpython-313-iphonesimulator.so to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/py3cairo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/include/pycairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-build/METADATA to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/pycairo-1.29.0.dist-info
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/__init__.pyi to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/py.typed to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/py3cairo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-build/meson-private/py3cairo.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/pkgconfig
+Running custom install script '/opt/homebrew/opt/python@3.13/bin/python3.13 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-build/meson-private/pycompile.py python-3.13-installed.json 0'
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pygobject-setup.log ====================='
+===================== TAIL: pygobject-setup.log =====================
++ '[' -f pygobject-setup.log ']'
++ tail -50 pygobject-setup.log
+Compiler for C supports arguments -Wlogical-op: NO 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wnull-dereference: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpacked: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wrestrict: NO 
+Compiler for C supports arguments -Wreturn-type: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wsign-compare: YES 
+Compiler for C supports arguments -Wstrict-aliasing: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wswitch-default: YES 
+Compiler for C supports arguments -Wswitch-enum: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wunused-but-set-variable: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wno-incompatible-pointer-types-discards-qualifiers: YES 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wno-discarded-qualifiers: NO 
+Compiler for C supports arguments -Wno-sign-conversion: YES 
+Compiler for C supports arguments -Wno-cast-function-type: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Configuring config.h using configuration
+Configuring pygobject-3.0.pc using configuration
+Configuring METADATA using configuration
+Configuring config.h using configuration
+Build targets in project: 2
+
+pygobject 3.56.3
+
+  Subprojects
+    pythoncapi-compat: YES
+
+  User defined options
+    Cross files      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+                       /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-python.txt
+    buildtype        : release
+    prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage
+    pycairo          : enabled
+    python           : /opt/homebrew/opt/python@3.13/bin/python3.13
+    tests            : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pygobject-build.log ====================='
+===================== TAIL: pygobject-build.log =====================
++ '[' -f pygobject-build.log ']'
++ tail -50 pygobject-build.log
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_ossighelper.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_propertyhelper.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_signalhelper.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_signature.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/types.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GLib.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GLibUnix.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Gtk.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Gdk.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GdkPixbuf.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GObject.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Gio.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GioUnix.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GIMarshallingTests.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Pango.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/__init__.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/repository/__init__.py'...
+Installing gi/_gi.cpython-313-iphonesimulator.so to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing gi/_gi_cairo.cpython-313-iphonesimulator.so to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/pygobject.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/include/pygobject-3.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/pygobject-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/include/pygobject-3.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-build/pygobject-3.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-build/METADATA to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/PyGObject-3.56.3.dist-info
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/events.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_constants.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/docstring.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_enum.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_error.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_gtktemplate.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/importer.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/module.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_ossighelper.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_propertyhelper.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_signalhelper.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_signature.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/types.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GLib.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GLibUnix.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Gtk.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Gdk.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GdkPixbuf.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GObject.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Gio.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GioUnix.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GIMarshallingTests.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Pango.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/repository/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/repository
+Running custom install script '/opt/homebrew/opt/python@3.13/bin/python3.13 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-build/meson-private/pycompile.py python-3.13-installed.json 0'
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: raygeo-build.log ====================='
+===================== TAIL: raygeo-build.log =====================
++ '[' -f raygeo-build.log ']'
++ tail -50 raygeo-build.log
+
+warning: constant `TRACE_RECORD_SIZE` is never used
+  --> src/trace.rs:20:7
+   |
+20 | const TRACE_RECORD_SIZE: usize = 128;
+   |       ^^^^^^^^^^^^^^^^^
+
+warning: constant `PAYLOAD_SIZE` is never used
+  --> src/trace.rs:22:18
+   |
+22 | pub(crate) const PAYLOAD_SIZE: usize = TRACE_RECORD_SIZE - 1;
+   |                  ^^^^^^^^^^^^
+
+warning: struct `Tracer` is never constructed
+  --> src/trace.rs:25:19
+   |
+25 | pub(crate) struct Tracer {
+   |                   ^^^^^^
+
+warning: associated items `open`, `write`, `finish`, and `path` are never used
+  --> src/trace.rs:33:19
+   |
+31 | impl Tracer {
+   | ----------- associated items in this implementation
+32 |     /// Open a new trace file, writing the 12-byte header.
+33 |     pub(crate) fn open(path: &PathBuf) -> std::io::Result<Self> {
+   |                   ^^^^
+...
+48 |     pub(crate) fn write(&mut self, kind: u8, payload: &[u8; PAYLOAD_SIZE]) {
+   |                   ^^^^^
+...
+57 |     pub(crate) fn finish(&mut self) -> std::io::Result<()> {
+   |                   ^^^^^^
+...
+64 |     pub(crate) fn path(&self) -> &std::path::Path {
+   |                   ^^^^
+
+error: linking with `cc` failed: exit status: 1
+  |
+  = note:  "cc" "-Wl,-exported_symbols_list" "-Wl,/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/raygeo-src/target/aarch64-apple-ios-sim/release/deps/rustch56Xyt/list" "/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/raygeo-src/target/aarch64-apple-ios-sim/release/deps/rustch56Xyt/symbols.o" "<17 object files omitted>" "/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/raygeo-src/target/aarch64-apple-ios-sim/release/deps/{libroxmltree-721ab34a352b0092,libpyo3_stub_gen-8d21101e8b3e2f96,libtime-1475042e8bba25db,libtime_core-9c7a6fb2ee9be00e,libnum_conv-4ea31e65c78ceb22,libderanged-409e0f11a28aeef5,libpowerfmt-8c707f5a55e8cb8d,libchrono-6b313c88fcff7244,libiana_time_zone-12e1e214759e5070,libcore_foundation_sys-cdeada0285cc932b,libordered_float-badc3e14aff5fe06,libtoml-cbc43e0e846cc9d8,libtoml_writer-dc771665f1b49bf7,libtoml_parser-c9eb058d500109c1,libwinnow-a8935f4c79a5489a,libserde_spanned-5cac79346d5f3d19,libtoml_datetime-c500bc55bda7a268,libserde_json-2049b0477c0b1b78,libmemchr-5baf049ea22f9a30,libitoa-8873e88cc45feebd,libzmij-1aee3f4fd536f255,liblog-0d9e7e9e0a171fe7,libnumpy-9a01523575149329,librustc_hash-ccfdf8333e4e193b,libndarray-08ed1d1a52f3f9fc,libmaplit-a07c0b4fdf476e77,libanyhow-3003cd5866805572,libitertools-566a60fc1fe19e32,libeither-a1e8c20d19a4ba45,libindexmap-123d79a0b9e73b27,libequivalent-a3ed3e3c3e873ad9,libhashbrown-cd4b94217cec8cb3,libserde-1627958faf382f48,libserde_core-c4434148daa1fd48,libinventory-973692798232031e,libsvgtypes-e024933087aaa576,libkurbo-4f72511af8dfdfaf,libarrayvec-e651114483e877f4,libsiphasher-165ecbed3036a9d2,libstrum-f9a22765609b371e,libnum_enum-2fd9d0fc07d7e848,libbitflags-216deef67d75c18c,libnalgebra_sparse-839a61aacac8e12e,libnalgebra-0f347b66ec23bd93,libmatrixmultiply-1ef8c756fe8584b5,librawpointer-b91953374428cf05,libnum_rational-e0f1123c0b6b92c2,libnum_integer-9538d050da28ee1c,libtypenum-2c1c3c22a7c3e9f8,libsimba-ddb3272d59669ae1,libwide-4c3ecaee1c85b89b,libbytemuck-2f24b8ef1963fe79,libnum_complex-fe2de3d5ab99d6a6,libapprox-6d4ce0f8899ca2b1,libclipper2-08c34a7cc9933f1b,libclipper2c_sys-2b511cde74452665,librand-7ef169bde40fc6f3,librand_chacha-21bf05858c589551,libppv_lite86-60df2a4a9e639345,libzerocopy-b3df3a44737a204a,librand_core-c993a5171b8e64b4,libgetrandom-bb0011012d667e6f,libcfg_if-a89290f1e7430e10,libspade-bb6de49bc8bd7927,librobust-ef24f215f6683847,librstar-525945b976289811,libheapless-8c7edea61cb79589,libhash32-2e0adaa923821927,libbyteorder-104f08745c6615e3,libsmallvec-ff2e997dac64de70,libnum_traits-c01976d2acda6b1f,libglam-66db63a0455f1c94,libpyo3-b2842a35dd0528a2,libonce_cell-261babc6ea69bf65,libpyo3_ffi-c5f2ff3a5dcd6174,liblibc-2dbbd213fb99ecb6,libthiserror-fe86f1e3f454b737}.rlib" "<sysroot>/lib/rustlib/aarch64-apple-ios-sim/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-framework" "CoreFoundation" "-lc++" "-lpython3.13" "-liconv" "-lSystem" "-lc" "-lm" "-target" "arm64-apple-ios17.0.0-simulator" "-L" "/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/raygeo-src/target/aarch64-apple-ios-sim/release/build/clipper2c-sys-76ee16ef7b78a830/out" "-L" "/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-support/Python.xcframework/ios-arm64_x86_64-simulator/platform-config/arm64-iphonesimulator" "-o" "/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/raygeo-src/target/aarch64-apple-ios-sim/release/deps/libraygeo.dylib" "-Wl,-dead_strip" "-dynamiclib" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: ld: library 'python3.13' not found
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+warning: `raygeo` (lib) generated 29 warnings
+error: could not compile `raygeo` (lib) due to 1 previous error; 29 warnings emitted
+💥 maturin failed
+  Caused by: Failed to build a native library through cargo
+  Caused by: Cargo build finished with "exit status: 101": `env -u CARGO PYO3_BUILD_EXTENSION_MODULE="1" PYO3_ENVIRONMENT_SIGNATURE="cpython-3.13-64bit" PYO3_PYTHON="/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-venv/bin/python" PYTHON_SYS_EXECUTABLE="/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-venv/bin/python" "cargo" "rustc" "--profile" "release" "--target" "aarch64-apple-ios-sim" "--message-format" "json-render-diagnostics" "--manifest-path" "/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/raygeo-src/Cargo.toml" "--lib" "--crate-type" "cdylib"`
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: vtracer-build.log ====================='
+===================== TAIL: vtracer-build.log =====================
++ '[' -f vtracer-build.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: beeware-dl.log ====================='
+===================== TAIL: beeware-dl.log =====================
++ '[' -f beeware-dl.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pure-dl.log ====================='
+===================== TAIL: pure-dl.log =====================
++ '[' -f pure-dl.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: rayforge-sha.txt ====================='
+===================== TAIL: rayforge-sha.txt =====================
++ '[' -f rayforge-sha.txt ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: testapp-link.log ====================='
+===================== TAIL: testapp-link.log =====================
++ '[' -f testapp-link.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: app-console.log ====================='
+===================== TAIL: app-console.log =====================
++ '[' -f app-console.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: app-syslog.log ====================='
+===================== TAIL: app-syslog.log =====================
++ '[' -f app-syslog.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
