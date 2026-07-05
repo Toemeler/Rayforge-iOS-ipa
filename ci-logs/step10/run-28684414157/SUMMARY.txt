@@ -1,0 +1,65 @@
++ echo 'Run ID: 28684414157'
+Run ID: 28684414157
++ echo 'Commit: f3deafd817fc1e45ef20a6a7c30aebbb8959d424'
+Commit: f3deafd817fc1e45ef20a6a7c30aebbb8959d424
+++ date -u
++ echo 'Date: Fri Jul  3 21:37:56 UTC 2026'
+Date: Fri Jul  3 21:37:56 UTC 2026
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pycairo-setup.log ====================='
+===================== TAIL: pycairo-setup.log =====================
++ '[' -f pycairo-setup.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pycairo-build.log ====================='
+===================== TAIL: pycairo-build.log =====================
++ '[' -f pycairo-build.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pygobject-setup.log ====================='
+===================== TAIL: pygobject-setup.log =====================
++ '[' -f pygobject-setup.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pygobject-build.log ====================='
+===================== TAIL: pygobject-build.log =====================
++ '[' -f pygobject-build.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: testapp-link.log ====================='
+===================== TAIL: testapp-link.log =====================
++ '[' -f testapp-link.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: app-console.log ====================='
+===================== TAIL: app-console.log =====================
++ '[' -f app-console.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: app-syslog.log ====================='
+===================== TAIL: app-syslog.log =====================
++ '[' -f app-syslog.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
