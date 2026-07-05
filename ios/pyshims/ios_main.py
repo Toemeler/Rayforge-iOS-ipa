@@ -19,8 +19,42 @@ Printed markers (captured by CI):
   RAYFORGE BOOT FAILED  — traceback follows
 """
 
+import os
 import sys
 import traceback
+
+
+def _ioslog(msg: str) -> None:
+    # fd 2 is what the simulator actually captures (g_message lands there);
+    # Python's own print()/stderr were being dropped.
+    try:
+        os.write(2, ("IOSBOOT: " + msg + "\n").encode("utf-8", "replace"))
+    except Exception:
+        pass
+
+
+class _FdWriter:
+    """Forward Python stdout/stderr straight to fd 2 so nothing is lost."""
+
+    def write(self, s):
+        try:
+            if isinstance(s, str):
+                s = s.encode("utf-8", "replace")
+            os.write(2, s)
+        except Exception:
+            pass
+        return len(s) if s is not None else 0
+
+    def flush(self):
+        pass
+
+
+def _install_excepthook() -> None:
+    def hook(exc_type, exc, tb):
+        _ioslog("UNCAUGHT " + "".join(
+            traceback.format_exception(exc_type, exc, tb)))
+
+    sys.excepthook = hook
 
 
 class _IOSKeepRunning(BaseException):
@@ -28,6 +62,10 @@ class _IOSKeepRunning(BaseException):
 
 
 def main() -> None:
+    sys.stdout = _FdWriter()
+    sys.stderr = _FdWriter()
+    _install_excepthook()
+    _ioslog("ios_main.main() start")
     sys.argv = ["rayforge"]
 
     import gi
@@ -64,25 +102,41 @@ def main() -> None:
         # ::startup (adw_init etc.) fires during register, ::activate
         # builds the window. The CADisplayLink pump dispatches from
         # here on.
+        _ioslog("_ios_run: register()")
         self.register(None)
+        _ioslog("_ios_run: activate()")
         self.activate()
+        try:
+            wins = self.get_windows()
+            _ioslog("_ios_run: activate() returned; windows=%d" % len(wins))
+            for w in wins:
+                _ioslog("  window mapped=%s visible=%s title=%r" % (
+                    w.get_mapped(), w.get_visible(), w.get_title()))
+        except Exception as e:
+            _ioslog("_ios_run: window introspection failed: %r" % (e,))
         raise _IOSKeepRunning()
 
     Adw.Application.run = _ios_run
 
     try:
+        _ioslog("import rayforge.app")
         import rayforge.app
 
+        _ioslog("rayforge.app.main()")
         rayforge.app.main()
         # main() returning means run() was never reached (e.g. argparse
         # exit) — that is a failure for our purposes.
+        _ioslog("rayforge.app.main() returned without starting UI")
         print("RAYFORGE BOOT FAILED: main() returned without starting UI")
     except _IOSKeepRunning:
+        _ioslog("keep-running caught — startup unwound cleanly")
         print("RAYFORGE UI RUNNING")
     except SystemExit as e:
+        _ioslog("SystemExit(%r)" % (e.code,))
         print(f"RAYFORGE BOOT FAILED: SystemExit({e.code})")
         traceback.print_exc()
-    except BaseException:
+    except BaseException as e:
+        _ioslog("BOOT EXC %s: %s" % (type(e).__name__, e))
         print("RAYFORGE BOOT FAILED")
         traceback.print_exc()
 
