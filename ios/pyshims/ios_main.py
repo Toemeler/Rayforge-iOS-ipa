@@ -159,6 +159,21 @@ def main() -> None:
         _ioslog("import rayforge.app")
         import rayforge.app
 
+        # iOS has no worker subprocess to build the addon manifest, so
+        # rayforge's lazy addon finder sleeps 0.5s on every rayforge_addons
+        # import (~160 of them => ~80s) before giving up. Those imports fail
+        # on iOS either way; make the finder give up immediately so boot
+        # doesn't blow past iOS's ~20s launch-responsiveness watchdog.
+        try:
+            from rayforge.addon_mgr.lazy_loader import AddonModuleFinder
+
+            AddonModuleFinder.find_spec = (
+                lambda self, fullname, path, target=None: None
+            )
+            _ioslog("addon finder fast-fail installed")
+        except Exception as e:
+            _ioslog("addon finder patch failed: %r" % (e,))
+
         _ioslog("rayforge.app.main()")
         rayforge.app.main()
         # main() returning means run() was never reached (e.g. argparse
