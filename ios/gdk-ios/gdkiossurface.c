@@ -292,6 +292,14 @@ gdk_ios_toplevel_present (GdkToplevel *toplevel,
           win_y = (bounds_h - win_h) / 2;
         }
     }
+  else
+    {
+      /* Main window: tell GTK it is maximized so it drops the CSD drop
+       * shadow and rounded corners and paints edge-to-edge, instead of
+       * insetting the content (which showed as a black top/left border).
+       * Same single-fullscreen-window model as the GDK Android backend. */
+      gdk_synthesize_surface_state (surface, 0, GDK_TOPLEVEL_STATE_MAXIMIZED);
+    }
   g_message ("gdk-ios: present placement transient=%d natural=%dx%d "
              "-> frame=(%d,%d,%dx%d)",
              (int) (surface->transient_for != NULL),
