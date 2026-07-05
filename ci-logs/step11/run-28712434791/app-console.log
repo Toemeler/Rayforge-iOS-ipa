@@ -1,0 +1,5 @@
+Gdk-Message: 16:34:21.157: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/3B40BBCD-E67C-4542-9123-B9C824ED5B23/data/Containers/Bundle/Application/8528A4B3-408D-4FC8-BBB2-9CC20123F9D1/RayforgeApp.app
+** Message: 16:34:21.325: GI_TYPELIB_PATH: /Users/runner/Library/Developer/CoreSimulator/Devices/3B40BBCD-E67C-4542-9123-B9C824ED5B23/data/Containers/Bundle/Application/8528A4B3-408D-4FC8-BBB2-9CC20123F9D1/RayforgeApp.app/lib/girepository-1.0
+** Message: 16:34:21.325: python home: /Users/runner/Library/Developer/CoreSimulator/Devices/3B40BBCD-E67C-4542-9123-B9C824ED5B23/data/Containers/Bundle/Application/8528A4B3-408D-4FC8-BBB2-9CC20123F9D1/RayforgeApp.app/python
+** Message: 16:34:21.325: site-packages: /Users/runner/Library/Developer/CoreSimulator/Devices/3B40BBCD-E67C-4542-9123-B9C824ED5B23/data/Containers/Bundle/Application/8528A4B3-408D-4FC8-BBB2-9CC20123F9D1/RayforgeApp.app/python/lib/python3.13/site-packages
+** Message: 16:35:51.904: rayforge boot: PyGObject self-test ran (CPython 3.13.14 (main, Jun 12 2026, 07:26:39) [Clang 17.0.0 (clang-1700.0.13.5)]) ? see console for PYGOBJECT OK/FAIL

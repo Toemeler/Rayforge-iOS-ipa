@@ -1,0 +1,29 @@
+ninja: Entering directory `pycairo-build'
+[1/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/bufferproxy.c.o
+[2/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/cairomodule.c.o
+[3/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/device.c.o
+[4/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/error.c.o
+[5/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/glyph.c.o
+[6/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/enums.c.o
+[7/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/matrix.c.o
+[8/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/misc.c.o
+[9/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/font.c.o
+[10/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/path.c.o
+[11/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/rectangle.c.o
+[12/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/context.c.o
+[13/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/textcluster.c.o
+[14/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/region.c.o
+[15/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/textextents.c.o
+[16/21] Copying file cairo/__init__.py
+[17/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/pattern.c.o
+[18/21] Copying file cairo/__init__.pyi
+[19/21] Copying file cairo/py.typed
+[20/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/surface.c.o
+[21/21] Linking target cairo/_cairo.cpython-313-iphonesimulator.so
+FAILED: [code=1] cairo/_cairo.cpython-313-iphonesimulator.so 
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-cc-iphonesimulator.sh  -o cairo/_cairo.cpython-313-iphonesimulator.so cairo/_cairo.cpython-313-iphonesimulator.so.p/bufferproxy.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/cairomodule.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/context.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/device.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/enums.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/error.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/font.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/glyph.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/matrix.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/misc.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/path.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/pattern.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/rectangle.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/region.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/surface.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/textcluster.c.o cairo/_cairo.cpython-313-iphonesimulator.so.p/textextents.c.o -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-support/Python.xcframework/ios-arm64_x86_64-simulator/Python.framework/Headers -Wl,-dead_strip_dylibs -Wl,-headerpad_max_install_names -Wl,-undefined,dynamic_lookup -bundle -Wl,-undefined,dynamic_lookup -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=17.0 -Wl,-rpath,/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.dylib -framework Python -F /Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14
+ld: warning: -undefined dynamic_lookup is deprecated on iOS-simulator
+ld: warning: search path '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14' not found
+ld: framework 'Python' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
