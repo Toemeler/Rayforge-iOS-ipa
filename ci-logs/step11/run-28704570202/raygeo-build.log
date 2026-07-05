@@ -1,0 +1,21 @@
+    Updating crates.io index
+error: failed to get `simba` as a dependency of package `nalgebra v0.35.0`
+    ... which satisfies dependency `nalgebra = "^0.35"` (locked to 0.35.0) of package `raygeo v0.0.0 (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/raygeo-src)`
+
+Caused by:
+  failed to load source for dependency `simba`
+
+Caused by:
+  unable to update registry `crates-io`
+
+Caused by:
+  download of si/mb/simba failed
+
+Caused by:
+  curl failed
+
+Caused by:
+  [55] Failed sending data to the peer (Send failure: Broken pipe)
+💥 maturin failed
+  Caused by: Cargo metadata failed. Does your crate compile with `cargo build`?
+  Caused by: `cargo metadata` exited with an error: 
