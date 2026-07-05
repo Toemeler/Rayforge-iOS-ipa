@@ -384,7 +384,7 @@ jobs:
             blinker==1.9.0 ezdxf==1.4.4b3 platformdirs==4.3.6 pluggy==1.6.0 \
             pypdf==6.12.1 semver==3.0.2 svgelements==1.9.6 trimesh==4.6.8 \
             websockets==14.2 asyncudp==0.11.0 GitPython==3.1.50 gitdb smmap \
-            pyserial PyOpenGL==3.1.10 typing_extensions \
+            pyserial typing_extensions \
             pyparsing fonttools \
             2>&1 | tee pure-dl.log
 
@@ -425,6 +425,12 @@ jobs:
           cp -R ios/pyshims/vtracer "$STAGE/vtracer"
           cp -R ios/pyshims/pyvips "$STAGE/pyvips"
           cp -R ios/pyshims/pymupdf "$STAGE/pymupdf"
+          # iOS has no desktop OpenGL/GLX. Replace any real PyOpenGL with
+          # an import-satisfying stub so Rayforge's UI (which imports GL
+          # renderer modules unconditionally via the settings dialog) can
+          # build. The 3D canvas itself stays disabled (RAYFORGE_DISABLE_3D).
+          rm -rf "$STAGE/OpenGL"
+          cp -R ios/pyshims/OpenGL "$STAGE/OpenGL"
           cp ios/pyshims/rayforge_ios_pool.py "$STAGE/"
           cp ios/pyshims/rayforge_ios_shm.py "$STAGE/"
           cp ios/pyshims/ios_main.py "$STAGE/"

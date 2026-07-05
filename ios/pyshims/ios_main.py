@@ -66,6 +66,11 @@ def main() -> None:
     sys.stderr = _FdWriter()
     _install_excepthook()
     _ioslog("ios_main.main() start")
+    # No desktop OpenGL on iOS: keep Rayforge's 3D canvas on its
+    # placeholder so the GL widget is never instantiated. (The OpenGL
+    # *imports* are additionally satisfied by the pyshims OpenGL stub;
+    # this flag ensures none of that inert GL code is ever executed.)
+    os.environ.setdefault("RAYFORGE_DISABLE_3D", "1")
     sys.argv = ["rayforge"]
 
     import gi
