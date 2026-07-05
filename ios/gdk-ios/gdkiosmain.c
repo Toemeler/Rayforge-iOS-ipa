@@ -446,9 +446,10 @@ deliver_key (GdkEventType type, UIKey *key)
 
 /* Root view controller. iOS drives interface orientation from the root
  * VC's supportedInterfaceOrientations (intersected with the Info.plist
- * keys); a bare UIViewController reports "all", so the app never locked
- * to the landscape the Info.plist requests. Force landscape here and log
- * the orientation actually granted so we can see what the device did. */
+ * keys). Report every orientation so the app simply adopts whatever the
+ * screen is currently in; the GdkIOSView autoresizes and GTK renders at
+ * that size. Also hides the status bar / home indicator for a clean
+ * fullscreen surface, and logs the granted size at layout time. */
 @interface GdkIOSViewController : UIViewController
 @end
 
@@ -456,7 +457,7 @@ deliver_key (GdkEventType type, UIKey *key)
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
-  return UIInterfaceOrientationMaskLandscape;
+  return UIInterfaceOrientationMaskAll;
 }
 
 - (BOOL)shouldAutorotate
