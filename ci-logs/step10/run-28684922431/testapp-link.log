@@ -1,0 +1,46 @@
+Undefined symbols for architecture arm64:
+  "_g_application_get_type", referenced from:
+      _build_app in main-pygi-68c355.o
+  "_g_build_filename", referenced from:
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+  "_g_free", referenced from:
+      _activate_cb in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+      ...
+  "_g_log", referenced from:
+      _activate_cb in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+  "_g_setenv", referenced from:
+      _init_python in main-pygi-68c355.o
+  "_g_signal_connect_data", referenced from:
+      _build_app in main-pygi-68c355.o
+  "_g_strdup", referenced from:
+      _init_python in main-pygi-68c355.o
+      _bundle_resource_path in main-pygi-68c355.o
+      _bundle_resource_path in main-pygi-68c355.o
+  "_g_strdup_printf", referenced from:
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+      _init_python in main-pygi-68c355.o
+  "_g_type_check_instance_cast", referenced from:
+      _build_app in main-pygi-68c355.o
+      _activate_cb in main-pygi-68c355.o
+      _activate_cb in main-pygi-68c355.o
+      _activate_cb in main-pygi-68c355.o
+      _ADW_HEADER_BAR in main-pygi-68c355.o
+      _ADW_TOOLBAR_VIEW in main-pygi-68c355.o
+      _ADW_STATUS_PAGE in main-pygi-68c355.o
+      ...
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
