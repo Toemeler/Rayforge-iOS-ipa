@@ -119,6 +119,38 @@ def main() -> None:
                     w.get_mapped(), w.get_visible(), w.get_title()))
         except Exception as e:
             _ioslog("_ios_run: window introspection failed: %r" % (e,))
+
+        from gi.repository import GLib, Gtk, Gdk
+
+        def _geom_probe():
+            # Runs after the pump starts and widgets are allocated, so we
+            # can compare GTK's allocation to the surface we forced.
+            try:
+                disp = Gdk.Display.get_default()
+                mons = disp.get_monitors()
+                for i in range(mons.get_n_items()):
+                    m = mons.get_item(i)
+                    g = m.get_geometry()
+                    _ioslog("GEOM monitor[%d] %dx%d+%d+%d scale=%d" % (
+                        i, g.width, g.height, g.x, g.y,
+                        m.get_scale_factor()))
+                tops = Gtk.Window.get_toplevels()
+                for i in range(tops.get_n_items()):
+                    w = tops.get_item(i)
+                    surf = w.get_surface()
+                    sw = surf.get_width() if surf is not None else -1
+                    sh = surf.get_height() if surf is not None else -1
+                    ss = surf.get_scale_factor() if surf is not None else -1
+                    _ioslog("GEOM top[%d] %r alloc=%dx%d surface=%dx%d "
+                            "surfscale=%d vis=%s" % (
+                                i, w.get_title() or "?",
+                                w.get_width(), w.get_height(),
+                                sw, sh, ss, w.get_visible()))
+            except Exception as e:
+                _ioslog("GEOM probe failed: %r" % (e,))
+            return False
+
+        GLib.timeout_add_seconds(4, _geom_probe)
         raise _IOSKeepRunning()
 
     Adw.Application.run = _ios_run
