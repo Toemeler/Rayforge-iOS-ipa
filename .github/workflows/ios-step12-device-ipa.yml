@@ -663,7 +663,8 @@ jobs:
       - name: "[12/16] Package unsigned .ipa + publish release"
         run: |
           set -euxo pipefail
-          APP="Rayforge.app"
+          exec > >(tee package-step.log) 2>&1
+          APP="RayforgeApp.app"
           test -d "$APP"
           # Sideload tools re-sign; strip any ad-hoc signature remnants is
           # unnecessary — they overwrite. Just package Payload/ verbatim.
@@ -674,7 +675,8 @@ jobs:
           ls -la Rayforge-unsigned.ipa
           unzip -l Rayforge-unsigned.ipa | head -12
 
-          TAG="ipa-$(date -u +%Y%m%d-%H%M)-${GITHUB_SHA::7}"
+          SHORT_SHA=$(echo "${GITHUB_SHA}" | cut -c1-7)
+          TAG="ipa-$(date -u +%Y%m%d-%H%M)-${SHORT_SHA}"
           # create release
           RID=$(curl -s -X POST \
             -H "Authorization: Bearer ${GITHUB_TOKEN}" \
@@ -722,7 +724,8 @@ jobs:
                    raygeo-build.log beeware-dl.log pure-dl.log rayforge-sha.txt \
                    bundle-step.log launch-step.log \
                    testapp-link.log launch-cmd.log app-console.log app-syslog.log \
-                   simulator-screenshot.png; do
+                   simulator-screenshot.png \
+                   package-step.log; do
             [ -f "$f" ] && cp "$f" "_cilogs/${OUT}/$(echo "$f" | tr '/' '_')" || true
           done
           if [ -d crash-reports ]; then cp crash-reports/* "_cilogs/${OUT}/" 2>/dev/null || true; fi

@@ -20,6 +20,9 @@
 #import <QuartzCore/QuartzCore.h>
 
 #include <math.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <TargetConditionals.h>
 #include <gdk/gdk.h>
 #include <gdk/gdkkeysyms.h>
 #include "gdkiosprivate.h"
@@ -592,6 +595,33 @@ deliver_key (GdkEventType type, UIKey *key)
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+#if !TARGET_OS_SIMULATOR
+  /* On device, mirror stdout+stderr (g_message, IOSBOOT, Python) into a
+   * user-accessible file: Documents/rayforge-log.txt, visible in the
+   * Files app under "On My iPad > Rayforge" (UIFileSharingEnabled).
+   * The previous launch is kept as rayforge-log-prev.txt. On the
+   * simulator we keep the console so CI captures app-console.log. */
+  {
+    NSString *docs = [NSSearchPathForDirectoriesInDomains (
+        NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *log = [docs stringByAppendingPathComponent:@"rayforge-log.txt"];
+    NSString *prev = [docs stringByAppendingPathComponent:@"rayforge-log-prev.txt"];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    [fm removeItemAtPath:prev error:nil];
+    [fm moveItemAtPath:log toPath:prev error:nil];
+    int fd = open ([log fileSystemRepresentation],
+                   O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    if (fd >= 0)
+      {
+        dup2 (fd, STDOUT_FILENO);
+        dup2 (fd, STDERR_FILENO);
+        close (fd);
+        setvbuf (stdout, NULL, _IOLBF, 0);
+        setvbuf (stderr, NULL, _IONBF, 0);
+        g_message ("gdk-ios: logging to %s", [log UTF8String]);
+      }
+  }
+#endif
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   GdkIOSViewController *vc = [[GdkIOSViewController alloc] init];
   GdkIOSView *view = [[GdkIOSView alloc] initWithFrame:self.window.bounds];
