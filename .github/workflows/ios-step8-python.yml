@@ -323,6 +323,7 @@ jobs:
           echo "PY_DYNLOAD=${GITHUB_WORKSPACE}/${DYNLOAD}" >> "$GITHUB_ENV"
 
       - name: "[10/13] Link Python/Adw testapp + assemble .app bundle"
+        if: env.IOS_SDK == 'iphonesimulator'
         run: |
           set -euxo pipefail
           SDK=$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)

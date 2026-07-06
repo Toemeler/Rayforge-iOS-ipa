@@ -298,6 +298,7 @@ jobs:
           lipo -info "${GI_SO}" || true
 
       - name: "[11/14] Link Adw/Python testapp + assemble .app bundle"
+        if: env.IOS_SDK == 'iphonesimulator'
         run: |
           set -euxo pipefail
           SDK=$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)

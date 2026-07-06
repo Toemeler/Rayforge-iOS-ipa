@@ -277,6 +277,7 @@ jobs:
           ls -la "${PREFIX}/lib/" | grep -i adw
 
       - name: "[10/13] Link Adw testapp + assemble .app bundle"
+        if: env.IOS_SDK == 'iphonesimulator'
         run: |
           set -euxo pipefail
           SDK=$(xcrun --sdk "${IOS_SDK}" --show-sdk-path)
