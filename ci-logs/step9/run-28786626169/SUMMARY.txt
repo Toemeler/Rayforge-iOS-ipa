@@ -1,0 +1,100 @@
++ echo 'Run ID: 28786626169'
+Run ID: 28786626169
++ echo 'Commit: ce45c885ca4ffabf2b3a9dc340020d4148f227e6'
+Commit: ce45c885ca4ffabf2b3a9dc340020d4148f227e6
+++ date -u
++ echo 'Date: Mon Jul  6 11:01:56 UTC 2026'
+Date: Mon Jul  6 11:01:56 UTC 2026
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ tail -60 gtk-build.log
+[1071/1130] Building translation po/ko/LC_MESSAGES/gtk40-ko.mo
+[1072/1130] Building translation po/ky/LC_MESSAGES/gtk40-ky.mo
+[1073/1130] Building translation po/ku/LC_MESSAGES/gtk40-ku.mo
+[1074/1130] Building translation po/lg/LC_MESSAGES/gtk40-lg.mo
+[1075/1130] Building translation po/li/LC_MESSAGES/gtk40-li.mo
+[1076/1130] Building translation po/ka/LC_MESSAGES/gtk40-ka.mo
+[1077/1130] Building translation po/lt/LC_MESSAGES/gtk40-lt.mo
+[1078/1130] Building translation po/kk/LC_MESSAGES/gtk40-kk.mo
+[1079/1130] Building translation po/mai/LC_MESSAGES/gtk40-mai.mo
+[1080/1130] Building translation po/mi/LC_MESSAGES/gtk40-mi.mo
+[1081/1130] Building translation po/mn/LC_MESSAGES/gtk40-mn.mo
+[1082/1130] Building translation po/mk/LC_MESSAGES/gtk40-mk.mo
+[1083/1130] Building translation po/ml/LC_MESSAGES/gtk40-ml.mo
+[1084/1130] Building translation po/lv/LC_MESSAGES/gtk40-lv.mo
+[1085/1130] Building translation po/mjw/LC_MESSAGES/gtk40-mjw.mo
+[1086/1130] Building translation po/nds/LC_MESSAGES/gtk40-nds.mo
+[1087/1130] Building translation po/mr/LC_MESSAGES/gtk40-mr.mo
+[1088/1130] Building translation po/ms/LC_MESSAGES/gtk40-ms.mo
+[1089/1130] Building translation po/my/LC_MESSAGES/gtk40-my.mo
+[1090/1130] Building translation po/nn/LC_MESSAGES/gtk40-nn.mo
+[1091/1130] Building translation po/nso/LC_MESSAGES/gtk40-nso.mo
+[1092/1130] Building translation po/nb/LC_MESSAGES/gtk40-nb.mo
+[1093/1130] Building translation po/nl/LC_MESSAGES/gtk40-nl.mo
+[1094/1130] Building translation po/or/LC_MESSAGES/gtk40-or.mo
+[1095/1130] Building translation po/ne/LC_MESSAGES/gtk40-ne.mo
+[1096/1130] Building translation po/ps/LC_MESSAGES/gtk40-ps.mo
+[1097/1130] Building translation po/oc/LC_MESSAGES/gtk40-oc.mo
+[1098/1130] Building translation po/pa/LC_MESSAGES/gtk40-pa.mo
+[1099/1130] Building translation po/ru/LC_MESSAGES/gtk40-ru.mo
+[1100/1130] Building translation po/pl/LC_MESSAGES/gtk40-pl.mo
+[1101/1130] Building translation po/ro/LC_MESSAGES/gtk40-ro.mo
+[1102/1130] Building translation po/pt_BR/LC_MESSAGES/gtk40-pt_BR.mo
+[1103/1130] Building translation po/rw/LC_MESSAGES/gtk40-rw.mo
+[1104/1130] Building translation po/si/LC_MESSAGES/gtk40-si.mo
+[1105/1130] Building translation po/pt/LC_MESSAGES/gtk40-pt.mo
+[1106/1130] Building translation po/sq/LC_MESSAGES/gtk40-sq.mo
+[1107/1130] Building translation po/sr@ije/LC_MESSAGES/gtk40-sr@ije.mo
+[1108/1130] Building translation po/sl/LC_MESSAGES/gtk40-sl.mo
+[1109/1130] Building translation po/sr/LC_MESSAGES/gtk40-sr.mo
+[1110/1130] Building translation po/sk/LC_MESSAGES/gtk40-sk.mo
+[1111/1130] Building translation po/te/LC_MESSAGES/gtk40-te.mo
+[1112/1130] Building translation po/tg/LC_MESSAGES/gtk40-tg.mo
+[1113/1130] Building translation po/ta/LC_MESSAGES/gtk40-ta.mo
+[1114/1130] Building translation po/sr@latin/LC_MESSAGES/gtk40-sr@latin.mo
+[1115/1130] Building translation po/sv/LC_MESSAGES/gtk40-sv.mo
+[1116/1130] Building translation po/tt/LC_MESSAGES/gtk40-tt.mo
+[1117/1130] Building translation po/tr/LC_MESSAGES/gtk40-tr.mo
+[1118/1130] Building translation po/ur/LC_MESSAGES/gtk40-ur.mo
+[1119/1130] Building translation po/th/LC_MESSAGES/gtk40-th.mo
+[1120/1130] Building translation po/uz@cyrillic/LC_MESSAGES/gtk40-uz@cyrillic.mo
+[1121/1130] Building translation po/uz/LC_MESSAGES/gtk40-uz.mo
+[1122/1130] Building translation po/uk/LC_MESSAGES/gtk40-uk.mo
+[1123/1130] Building translation po/ug/LC_MESSAGES/gtk40-ug.mo
+[1124/1130] Building translation po/xh/LC_MESSAGES/gtk40-xh.mo
+[1125/1130] Building translation po/wa/LC_MESSAGES/gtk40-wa.mo
+[1126/1130] Building translation po/yi/LC_MESSAGES/gtk40-yi.mo
+[1127/1130] Building translation po/vi/LC_MESSAGES/gtk40-vi.mo
+[1128/1130] Building translation po/zh_CN/LC_MESSAGES/gtk40-zh_CN.mo
+[1129/1130] Building translation po/zh_HK/LC_MESSAGES/gtk40-zh_HK.mo
+[1130/1130] Building translation po/zh_TW/LC_MESSAGES/gtk40-zh_TW.mo
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: adw-setup.log ====================='
+===================== TAIL: adw-setup.log =====================
++ '[' -f adw-setup.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: adw-build.log ====================='
+===================== TAIL: adw-build.log =====================
++ '[' -f adw-build.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: typelibs.txt ====================='
+===================== TAIL: typelibs.txt =====================
++ '[' -f typelibs.txt ']'
++ echo '(not produced)'
+(not produced)
++ echo
+

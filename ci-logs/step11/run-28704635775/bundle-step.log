@@ -1,0 +1,878 @@
+++ xcrun --sdk iphonesimulator --show-sdk-path
++ SDK=/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk
++ PREFIX=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
++ PYSTAGE=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage
++ export PKG_CONFIG_PATH=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ PKG_CONFIG_PATH=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ export PKG_CONFIG_LIBDIR=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ PKG_CONFIG_LIBDIR=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ export PKG_CONFIG_SYSROOT_DIR=
++ PKG_CONFIG_SYSROOT_DIR=
++ tee /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/testapp-link.log
+++ pkg-config --cflags libadwaita-1 gtk4
+++ pkg-config --libs libadwaita-1 gtk4 glib-2.0 gio-2.0 gobject-2.0
++ xcrun --sdk iphonesimulator clang -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=17.0 ios/testapp/main-rayforge.c -o rayforge-app -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libadwaita-1 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/appstream-stub -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gtk-4.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/graphene-1.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-support/Python.xcframework/ios-arm64_x86_64-simulator/Python.framework/Headers -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -L/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib -ladwaita-1 -lgtk-4 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -lgdk_pixbuf-2.0 -lcairo-gobject -lcairo -lgraphene-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lintl -F/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-support/Python.xcframework/ios-arm64_x86_64-simulator -framework Python -framework CoreFoundation
++ APP=RayforgeApp.app
++ rm -rf RayforgeApp.app
++ mkdir -p RayforgeApp.app/Frameworks RayforgeApp.app/share RayforgeApp.app/etc/fonts RayforgeApp.app/lib/girepository-1.0
++ cp rayforge-app RayforgeApp.app/rayforge-app
++ cp -a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libadwaita-1.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libadwaita-1.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.2.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-script-interpreter.2.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-script-interpreter.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.2.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libffi.7.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libffi.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgdk_pixbuf-2.0.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgdk_pixbuf-2.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgirepository-2.0.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgirepository-2.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgraphene-1.0.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgraphene-1.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgthread-2.0.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgthread-2.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgtk-4.1.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgtk-4.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-gobject.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-gobject.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-gpu.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-gpu.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-raster.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-raster.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-subset.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-subset.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-vector.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-vector.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.dylib RayforgeApp.app/Frameworks/
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libadwaita-1.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libadwaita-1.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libadwaita-1.0.dylib
++ base=libadwaita-1.0.dylib
++ install_name_tool -id @rpath/libadwaita-1.0.dylib RayforgeApp.app/Frameworks/libadwaita-1.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libadwaita-1.0.dylib
++ read -r dep
++ awk 'NR>1{print $1}'
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libadwaita-1.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib @rpath/libintl.8.dylib RayforgeApp.app/Frameworks/libadwaita-1.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib @rpath/libgio-2.0.0.dylib RayforgeApp.app/Frameworks/libadwaita-1.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib @rpath/libgobject-2.0.0.dylib RayforgeApp.app/Frameworks/libadwaita-1.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgtk-4.1.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgtk-4.1.dylib @rpath/libgtk-4.1.dylib RayforgeApp.app/Frameworks/libadwaita-1.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.0.dylib @rpath/libpango-1.0.0.dylib RayforgeApp.app/Frameworks/libadwaita-1.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgraphene-1.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgraphene-1.0.0.dylib @rpath/libgraphene-1.0.0.dylib RayforgeApp.app/Frameworks/libadwaita-1.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libadwaita-1.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libadwaita-1.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libcairo-gobject.2.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libcairo-gobject.2.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libcairo-gobject.2.dylib
++ base=libcairo-gobject.2.dylib
++ install_name_tool -id @rpath/libcairo-gobject.2.dylib RayforgeApp.app/Frameworks/libcairo-gobject.2.dylib
++ otool -L RayforgeApp.app/Frameworks/libcairo-gobject.2.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.2.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.2.dylib @rpath/libcairo.2.dylib RayforgeApp.app/Frameworks/libcairo-gobject.2.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libcairo-gobject.2.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib @rpath/libgobject-2.0.0.dylib RayforgeApp.app/Frameworks/libcairo-gobject.2.dylib
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libcairo-gobject.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libcairo-gobject.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libcairo-script-interpreter.2.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libcairo-script-interpreter.2.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libcairo-script-interpreter.2.dylib
++ base=libcairo-script-interpreter.2.dylib
++ install_name_tool -id @rpath/libcairo-script-interpreter.2.dylib RayforgeApp.app/Frameworks/libcairo-script-interpreter.2.dylib
++ otool -L RayforgeApp.app/Frameworks/libcairo-script-interpreter.2.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.2.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.2.dylib @rpath/libcairo.2.dylib RayforgeApp.app/Frameworks/libcairo-script-interpreter.2.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libcairo-script-interpreter.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libcairo-script-interpreter.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libcairo.2.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libcairo.2.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libcairo.2.dylib
++ base=libcairo.2.dylib
++ install_name_tool -id @rpath/libcairo.2.dylib RayforgeApp.app/Frameworks/libcairo.2.dylib
++ otool -L RayforgeApp.app/Frameworks/libcairo.2.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib @rpath/libharfbuzz.0.dylib RayforgeApp.app/Frameworks/libcairo.2.dylib
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libcairo.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libcairo.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libffi.7.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libffi.7.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libffi.7.dylib
++ base=libffi.7.dylib
++ install_name_tool -id @rpath/libffi.7.dylib RayforgeApp.app/Frameworks/libffi.7.dylib
++ otool -L RayforgeApp.app/Frameworks/libffi.7.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libffi.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libffi.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgdk_pixbuf-2.0.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgdk_pixbuf-2.0.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libgdk_pixbuf-2.0.0.dylib
++ base=libgdk_pixbuf-2.0.0.dylib
++ install_name_tool -id @rpath/libgdk_pixbuf-2.0.0.dylib RayforgeApp.app/Frameworks/libgdk_pixbuf-2.0.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libgdk_pixbuf-2.0.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libgdk_pixbuf-2.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib @rpath/libintl.8.dylib RayforgeApp.app/Frameworks/libgdk_pixbuf-2.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib @rpath/libgobject-2.0.0.dylib RayforgeApp.app/Frameworks/libgdk_pixbuf-2.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.0.dylib @rpath/libgmodule-2.0.0.dylib RayforgeApp.app/Frameworks/libgdk_pixbuf-2.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib @rpath/libgio-2.0.0.dylib RayforgeApp.app/Frameworks/libgdk_pixbuf-2.0.0.dylib
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgdk_pixbuf-2.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgdk_pixbuf-2.0.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgio-2.0.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgio-2.0.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libgio-2.0.0.dylib
++ base=libgio-2.0.0.dylib
++ install_name_tool -id @rpath/libgio-2.0.0.dylib RayforgeApp.app/Frameworks/libgio-2.0.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libgio-2.0.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libgio-2.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib @rpath/libintl.8.dylib RayforgeApp.app/Frameworks/libgio-2.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib @rpath/libgobject-2.0.0.dylib RayforgeApp.app/Frameworks/libgio-2.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.0.dylib @rpath/libgmodule-2.0.0.dylib RayforgeApp.app/Frameworks/libgio-2.0.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgio-2.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgio-2.0.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgirepository-2.0.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgirepository-2.0.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libgirepository-2.0.0.dylib
++ base=libgirepository-2.0.0.dylib
++ install_name_tool -id @rpath/libgirepository-2.0.0.dylib RayforgeApp.app/Frameworks/libgirepository-2.0.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libgirepository-2.0.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libgirepository-2.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib @rpath/libgobject-2.0.0.dylib RayforgeApp.app/Frameworks/libgirepository-2.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.0.dylib @rpath/libgmodule-2.0.0.dylib RayforgeApp.app/Frameworks/libgirepository-2.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libffi.7.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libffi.7.dylib @rpath/libffi.7.dylib RayforgeApp.app/Frameworks/libgirepository-2.0.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgirepository-2.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgirepository-2.0.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libglib-2.0.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libglib-2.0.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libglib-2.0.0.dylib
++ base=libglib-2.0.0.dylib
++ install_name_tool -id @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libglib-2.0.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libglib-2.0.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib @rpath/libintl.8.dylib RayforgeApp.app/Frameworks/libglib-2.0.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libglib-2.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libglib-2.0.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgmodule-2.0.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgmodule-2.0.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libgmodule-2.0.0.dylib
++ base=libgmodule-2.0.0.dylib
++ install_name_tool -id @rpath/libgmodule-2.0.0.dylib RayforgeApp.app/Frameworks/libgmodule-2.0.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libgmodule-2.0.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libgmodule-2.0.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgmodule-2.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgmodule-2.0.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgobject-2.0.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgobject-2.0.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libgobject-2.0.0.dylib
++ base=libgobject-2.0.0.dylib
++ install_name_tool -id @rpath/libgobject-2.0.0.dylib RayforgeApp.app/Frameworks/libgobject-2.0.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libgobject-2.0.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libffi.7.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libffi.7.dylib @rpath/libffi.7.dylib RayforgeApp.app/Frameworks/libgobject-2.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libgobject-2.0.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgobject-2.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgobject-2.0.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgraphene-1.0.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgraphene-1.0.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libgraphene-1.0.0.dylib
++ base=libgraphene-1.0.0.dylib
++ install_name_tool -id @rpath/libgraphene-1.0.0.dylib RayforgeApp.app/Frameworks/libgraphene-1.0.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libgraphene-1.0.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib @rpath/libgobject-2.0.0.dylib RayforgeApp.app/Frameworks/libgraphene-1.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libgraphene-1.0.0.dylib
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgraphene-1.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgraphene-1.0.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgthread-2.0.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgthread-2.0.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libgthread-2.0.0.dylib
++ base=libgthread-2.0.0.dylib
++ install_name_tool -id @rpath/libgthread-2.0.0.dylib RayforgeApp.app/Frameworks/libgthread-2.0.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libgthread-2.0.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libgthread-2.0.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgthread-2.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgthread-2.0.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgtk-4.1.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgtk-4.1.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ base=libgtk-4.1.dylib
++ install_name_tool -id @rpath/libgtk-4.1.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ otool -L RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgmodule-2.0.0.dylib @rpath/libgmodule-2.0.0.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib @rpath/libintl.8.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib @rpath/libgobject-2.0.0.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib @rpath/libgio-2.0.0.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.0.dylib @rpath/libpangocairo-1.0.0.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.0.dylib @rpath/libpango-1.0.0.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.2.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.2.dylib @rpath/libcairo.2.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib @rpath/libharfbuzz.0.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-subset.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz-subset.0.dylib @rpath/libharfbuzz-subset.0.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.2.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.2.dylib @rpath/libcairo-gobject.2.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgdk_pixbuf-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgdk_pixbuf-2.0.0.dylib @rpath/libgdk_pixbuf-2.0.0.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgraphene-1.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgraphene-1.0.0.dylib @rpath/libgraphene-1.0.0.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.0.dylib @rpath/libpangoft2-1.0.0.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-script-interpreter.2.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-script-interpreter.2.dylib @rpath/libcairo-script-interpreter.2.dylib RayforgeApp.app/Frameworks/libgtk-4.1.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libgtk-4.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libgtk-4.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libharfbuzz-gobject.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libharfbuzz-gobject.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libharfbuzz-gobject.0.dylib
++ base=libharfbuzz-gobject.0.dylib
++ install_name_tool -id @rpath/libharfbuzz-gobject.0.dylib RayforgeApp.app/Frameworks/libharfbuzz-gobject.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libharfbuzz-gobject.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib @rpath/libharfbuzz.0.dylib RayforgeApp.app/Frameworks/libharfbuzz-gobject.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libharfbuzz-gobject.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib @rpath/libgobject-2.0.0.dylib RayforgeApp.app/Frameworks/libharfbuzz-gobject.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libharfbuzz-gobject.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libharfbuzz-gobject.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libharfbuzz-gpu.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libharfbuzz-gpu.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libharfbuzz-gpu.0.dylib
++ base=libharfbuzz-gpu.0.dylib
++ install_name_tool -id @rpath/libharfbuzz-gpu.0.dylib RayforgeApp.app/Frameworks/libharfbuzz-gpu.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libharfbuzz-gpu.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib @rpath/libharfbuzz.0.dylib RayforgeApp.app/Frameworks/libharfbuzz-gpu.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libharfbuzz-gpu.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libharfbuzz-gpu.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libharfbuzz-raster.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libharfbuzz-raster.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libharfbuzz-raster.0.dylib
++ base=libharfbuzz-raster.0.dylib
++ install_name_tool -id @rpath/libharfbuzz-raster.0.dylib RayforgeApp.app/Frameworks/libharfbuzz-raster.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libharfbuzz-raster.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib @rpath/libharfbuzz.0.dylib RayforgeApp.app/Frameworks/libharfbuzz-raster.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libharfbuzz-raster.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libharfbuzz-raster.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libharfbuzz-subset.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libharfbuzz-subset.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libharfbuzz-subset.0.dylib
++ base=libharfbuzz-subset.0.dylib
++ install_name_tool -id @rpath/libharfbuzz-subset.0.dylib RayforgeApp.app/Frameworks/libharfbuzz-subset.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libharfbuzz-subset.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib @rpath/libharfbuzz.0.dylib RayforgeApp.app/Frameworks/libharfbuzz-subset.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libharfbuzz-subset.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libharfbuzz-subset.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libharfbuzz-vector.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libharfbuzz-vector.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libharfbuzz-vector.0.dylib
++ base=libharfbuzz-vector.0.dylib
++ install_name_tool -id @rpath/libharfbuzz-vector.0.dylib RayforgeApp.app/Frameworks/libharfbuzz-vector.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libharfbuzz-vector.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib @rpath/libharfbuzz.0.dylib RayforgeApp.app/Frameworks/libharfbuzz-vector.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libharfbuzz-vector.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libharfbuzz-vector.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libharfbuzz.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libharfbuzz.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libharfbuzz.0.dylib
++ base=libharfbuzz.0.dylib
++ install_name_tool -id @rpath/libharfbuzz.0.dylib RayforgeApp.app/Frameworks/libharfbuzz.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libharfbuzz.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libharfbuzz.0.dylib
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libharfbuzz.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libharfbuzz.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libintl.8.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libintl.8.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libintl.8.dylib
++ base=libintl.8.dylib
++ install_name_tool -id @rpath/libintl.8.dylib RayforgeApp.app/Frameworks/libintl.8.dylib
++ otool -L RayforgeApp.app/Frameworks/libintl.8.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libintl.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libintl.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libpango-1.0.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libpango-1.0.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libpango-1.0.0.dylib
++ base=libpango-1.0.0.dylib
++ install_name_tool -id @rpath/libpango-1.0.0.dylib RayforgeApp.app/Frameworks/libpango-1.0.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libpango-1.0.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libpango-1.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib @rpath/libgobject-2.0.0.dylib RayforgeApp.app/Frameworks/libpango-1.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib @rpath/libgio-2.0.0.dylib RayforgeApp.app/Frameworks/libpango-1.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib @rpath/libharfbuzz.0.dylib RayforgeApp.app/Frameworks/libpango-1.0.0.dylib
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libpango-1.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libpango-1.0.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libpangocairo-1.0.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libpangocairo-1.0.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libpangocairo-1.0.0.dylib
++ base=libpangocairo-1.0.0.dylib
++ install_name_tool -id @rpath/libpangocairo-1.0.0.dylib RayforgeApp.app/Frameworks/libpangocairo-1.0.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libpangocairo-1.0.0.dylib
++ awk 'NR>1{print $1}'
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.0.dylib @rpath/libpango-1.0.0.dylib RayforgeApp.app/Frameworks/libpangocairo-1.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangoft2-1.0.0.dylib @rpath/libpangoft2-1.0.0.dylib RayforgeApp.app/Frameworks/libpangocairo-1.0.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libpangocairo-1.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib @rpath/libgobject-2.0.0.dylib RayforgeApp.app/Frameworks/libpangocairo-1.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib @rpath/libharfbuzz.0.dylib RayforgeApp.app/Frameworks/libpangocairo-1.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.2.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.2.dylib @rpath/libcairo.2.dylib RayforgeApp.app/Frameworks/libpangocairo-1.0.0.dylib
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libpangocairo-1.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libpangocairo-1.0.dylib ']'
++ continue
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libpangoft2-1.0.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libpangoft2-1.0.0.dylib ']'
+++ basename RayforgeApp.app/Frameworks/libpangoft2-1.0.0.dylib
++ base=libpangoft2-1.0.0.dylib
++ install_name_tool -id @rpath/libpangoft2-1.0.0.dylib RayforgeApp.app/Frameworks/libpangoft2-1.0.0.dylib
++ otool -L RayforgeApp.app/Frameworks/libpangoft2-1.0.0.dylib
++ read -r dep
++ awk 'NR>1{print $1}'
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.0.dylib @rpath/libpango-1.0.0.dylib RayforgeApp.app/Frameworks/libpangoft2-1.0.0.dylib
++ read -r dep
++ case "$dep" in
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/Frameworks/libpangoft2-1.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib @rpath/libgobject-2.0.0.dylib RayforgeApp.app/Frameworks/libpangoft2-1.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib @rpath/libgio-2.0.0.dylib RayforgeApp.app/Frameworks/libpangoft2-1.0.0.dylib
++ read -r dep
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib @rpath/libharfbuzz.0.dylib RayforgeApp.app/Frameworks/libpangoft2-1.0.0.dylib
++ read -r dep
++ for dylib in '"$APP"/Frameworks/*.dylib'
++ '[' -e RayforgeApp.app/Frameworks/libpangoft2-1.0.dylib ']'
++ '[' -L RayforgeApp.app/Frameworks/libpangoft2-1.0.dylib ']'
++ continue
+++ otool -L RayforgeApp.app/rayforge-app
+++ awk 'NR>1{print $1}'
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libadwaita-1.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libadwaita-1.0.dylib @rpath/libadwaita-1.0.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgtk-4.1.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgtk-4.1.dylib @rpath/libgtk-4.1.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.0.dylib @rpath/libpangocairo-1.0.0.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.0.dylib @rpath/libpango-1.0.0.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.0.dylib @rpath/libharfbuzz.0.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgdk_pixbuf-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgdk_pixbuf-2.0.0.dylib @rpath/libgdk_pixbuf-2.0.0.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.2.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.2.dylib @rpath/libcairo-gobject.2.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.2.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.2.dylib @rpath/libcairo.2.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgraphene-1.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgraphene-1.0.0.dylib @rpath/libgraphene-1.0.0.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.0.dylib @rpath/libgio-2.0.0.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.0.dylib @rpath/libgobject-2.0.0.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.0.dylib @rpath/libglib-2.0.0.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib
++ install_name_tool -change /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.8.dylib @rpath/libintl.8.dylib RayforgeApp.app/rayforge-app
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
++ for dep in '$(otool -L "$APP/rayforge-app" | awk '\''NR>1{print $1}'\'')'
++ case "$dep" in
++ install_name_tool -add_rpath @executable_path/Frameworks RayforgeApp.app/rayforge-app
++ otool -L RayforgeApp.app/rayforge-app
++ head -12
+RayforgeApp.app/rayforge-app:
+	@rpath/libadwaita-1.0.dylib (compatibility version 0.0.0, current version 0.0.0)
+	@rpath/libgtk-4.1.dylib (compatibility version 2201.0.0, current version 2201.4.0)
+	@rpath/libpangocairo-1.0.0.dylib (compatibility version 5801.0.0, current version 5801.0.0)
+	@rpath/libpango-1.0.0.dylib (compatibility version 5801.0.0, current version 5801.0.0)
+	@rpath/libharfbuzz.0.dylib (compatibility version 61421.0.0, current version 61421.0.0)
+	@rpath/libgdk_pixbuf-2.0.0.dylib (compatibility version 4401.0.0, current version 4401.7.0)
+	@rpath/libcairo-gobject.2.dylib (compatibility version 2.0.0, current version 2.0.0)
+	@rpath/libcairo.2.dylib (compatibility version 2.0.0, current version 2.0.0)
+	@rpath/libgraphene-1.0.0.dylib (compatibility version 1001.0.0, current version 1001.8.0)
+	@rpath/libgio-2.0.0.dylib (compatibility version 8401.0.0, current version 8401.4.0)
+	@rpath/libgobject-2.0.0.dylib (compatibility version 8401.0.0, current version 8401.4.0)
++ cp -R /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-support/Python.xcframework/ios-arm64_x86_64-simulator/Python.framework RayforgeApp.app/Frameworks/
+++ basename /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-support/Python.xcframework/lib/python3.13
++ PYVER_DIR=python3.13
++ mkdir -p RayforgeApp.app/python/lib
++ cp -R /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-support/Python.xcframework/lib/python3.13 RayforgeApp.app/python/lib/
++ '[' -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-support/Python.xcframework/ios-arm64_x86_64-simulator/lib-arm64/python3.13/lib-dynload ']'
++ '[' -d /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-support/Python.xcframework/ios-arm64_x86_64-simulator/lib-arm64/python3.13/lib-dynload ']'
++ cp -R /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-support/Python.xcframework/ios-arm64_x86_64-simulator/lib-arm64/python3.13/lib-dynload RayforgeApp.app/python/lib/python3.13/lib-dynload
++ SITE=RayforgeApp.app/python/lib/python3.13/site-packages
++ mkdir -p RayforgeApp.app/python/lib/python3.13/site-packages
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage -type d -name gi -path '*site-packages*'
+++ head -1
++ GI_DIR=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+++ find /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage -type d -name cairo -path '*site-packages*'
+++ head -1
++ CAIRO_DIR=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
++ test -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
++ test -n /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
++ cp -R /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi RayforgeApp.app/python/lib/python3.13/site-packages/
++ cp -R /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo RayforgeApp.app/python/lib/python3.13/site-packages/
++ cp -R /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/site-stage/. RayforgeApp.app/python/lib/python3.13/site-packages/
++ echo '== site-packages contents:'
+== site-packages contents:
++ find RayforgeApp.app/python/lib/python3.13/site-packages -maxdepth 2
++ head -40
+RayforgeApp.app/python/lib/python3.13/site-packages
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/web_ws.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/client_middlewares.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/worker.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/_http_parser.pyx
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/multipart.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/_http_writer.pyx
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/web_response.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/client_ws.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/test_utils.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/tracing.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/web_exceptions.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/web_middlewares.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/web.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/http_exceptions.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/web_app.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/streams.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/web_protocol.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/_http_parser.cpython-313-iphonesimulator.so
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/log.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/compression_utils.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/client.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/web_urldispatcher.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/.hash
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/web_request.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/http_websocket.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/client_proto.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/__init__.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/web_runner.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/web_server.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/base_protocol.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/_headers.pxi
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/payload.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/_find_header.pxd
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/client_reqrep.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/http.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/web_log.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/resolver.py
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/formdata.py
+find: stdout: Undefined error: 0
