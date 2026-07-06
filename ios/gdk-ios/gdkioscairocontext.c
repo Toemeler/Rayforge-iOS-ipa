@@ -25,6 +25,9 @@ struct _GdkIOSCairoContext
 {
   GdkCairoContext parent_instance;
   cairo_surface_t *active_surface; /* valid between begin and end frame */
+  cairo_surface_t *persistent;     /* backing buffer, survives frames */
+  int persistent_w;                /* pixel size of the persistent buffer */
+  int persistent_h;
 };
 
 struct _GdkIOSCairoContextClass
@@ -59,28 +62,51 @@ gdk_ios_cairo_context_begin_frame (GdkDrawContext *draw_context,
   g_message ("gdk-ios: begin_frame surface=%dx%d scale=%.2f pixels=%dx%d",
              surface->width, surface->height, (double) scale, pixel_w, pixel_h);
 
-  /* Repaint the full surface each frame; the whole image becomes the
-   * layer contents. Partial-damage upload is a later optimization. */
-  cairo_rectangle_int_t bounds = { 0, 0, surface->width, surface->height };
-  cairo_region_union_rectangle (region, &bounds);
+  /* GTK only repaints the *damaged* region each frame. The buffer must
+   * therefore persist across frames (like the X window does for the X11
+   * backend); a fresh transparent buffer every frame left everything
+   * outside the damage transparent — the view background bled through as
+   * white blocks over previously painted content.
+   *
+   * NOTE the region handed to this vfunc is already in PIXEL coordinates
+   * (gdk_draw_context_begin_frame_full applies scale_grow before calling
+   * us), and gdk_cairo_context_cairo_create clips to it in pixel space
+   * before applying cairo_scale. Any rect we union in must be pixels. */
+  if (self->persistent == NULL ||
+      self->persistent_w != pixel_w || self->persistent_h != pixel_h)
+    {
+      g_clear_pointer (&self->persistent, cairo_surface_destroy);
+      self->persistent =
+        cairo_image_surface_create (CAIRO_FORMAT_ARGB32, pixel_w, pixel_h);
+      /* The buffer is backing-pixel sized, but GdkCairoContext.cairo_create
+       * already applies cairo_scale(surface_scale) to the context it hands
+       * to GSK. Leave the device scale at 1.0 (as the X11/Wayland cairo
+       * backends do) — setting it to `scale` applied HiDPI twice. */
+      cairo_surface_set_device_scale (self->persistent, 1.0, 1.0);
+      self->persistent_w = pixel_w;
+      self->persistent_h = pixel_h;
 
-  self->active_surface =
-    cairo_image_surface_create (CAIRO_FORMAT_ARGB32, pixel_w, pixel_h);
-  /* The buffer is backing-pixel sized, but GdkCairoContext.cairo_create
-   * already applies cairo_scale(surface_scale) to the context it hands to
-   * GSK. Leave the device scale at 1.0 (as the X11/Wayland cairo backends
-   * do) — setting it to `scale` here applied the HiDPI scale twice and
-   * rendered the whole UI at 2x, overflowing the screen. */
-  cairo_surface_set_device_scale (self->active_surface, 1.0, 1.0);
+      /* New (empty) buffer: everything must be repainted. Pixel coords! */
+      cairo_rectangle_int_t all = { 0, 0, pixel_w, pixel_h };
+      cairo_region_union_rectangle (region, &all);
+    }
+  else
+    {
+      /* Reused buffer: clear just the damaged region to transparent so the
+       * renderer composites onto a clean slate there, like a fresh paint
+       * surface would be. Retained pixels elsewhere stay valid. */
+      cairo_t *cr = cairo_create (self->persistent);
+      gdk_cairo_region (cr, region);
+      cairo_clip (cr);
+      cairo_set_operator (cr, CAIRO_OPERATOR_CLEAR);
+      cairo_paint (cr);
+      cairo_destroy (cr);
+    }
+
+  self->active_surface = cairo_surface_reference (self->persistent);
 
   *out_color_state = GDK_COLOR_STATE_SRGB;
   *out_depth = gdk_color_state_get_depth (GDK_COLOR_STATE_SRGB);
-}
-
-static void
-release_cairo_surface (void *info, const void *data, size_t size)
-{
-  cairo_surface_destroy ((cairo_surface_t *) info);
 }
 
 static void
@@ -130,12 +156,12 @@ gdk_ios_cairo_context_end_frame (GdkDrawContext *draw_context,
                center, tl, tr, bl, br);
   }
 
-  /* Hand pixel ownership to the CGImage; the release callback destroys
-   * the cairo surface when CoreAnimation is done with the frame. */
-  CGDataProviderRef provider =
-    CGDataProviderCreateWithData (self->active_surface, data,
-                                  (size_t) stride * height,
-                                  release_cairo_surface);
+  /* The backing buffer persists and is mutated next frame, so the CGImage
+   * must own a COPY of the pixels (CFData copies on create). */
+  CFDataRef pixels =
+    CFDataCreate (NULL, (const UInt8 *) data, (CFIndex) stride * height);
+  CGDataProviderRef provider = CGDataProviderCreateWithCFData (pixels);
+  CFRelease (pixels);
   CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB ();
   CGImageRef image =
     CGImageCreate (width, height,
@@ -162,8 +188,7 @@ gdk_ios_cairo_context_end_frame (GdkDrawContext *draw_context,
              (int) layer.hidden, (__bridge void *) layer.superlayer,
              (int) (layer.contents != nil));
 
-  /* Ownership moved into the CGImage's data provider. */
-  self->active_surface = NULL;
+  g_clear_pointer (&self->active_surface, cairo_surface_destroy);
 }
 
 static void
@@ -174,14 +199,30 @@ gdk_ios_cairo_context_empty_frame (GdkDrawContext *draw_context)
 static void
 gdk_ios_cairo_context_surface_resized (GdkDrawContext *draw_context)
 {
-  /* Next begin_frame allocates at the new size. */
+  GdkIOSCairoContext *self = GDK_IOS_CAIRO_CONTEXT (draw_context);
+  /* Size changed: drop the backing buffer; next begin_frame reallocates
+   * and forces a full repaint of the new buffer. */
+  g_clear_pointer (&self->persistent, cairo_surface_destroy);
+  self->persistent_w = self->persistent_h = 0;
+}
+
+static void
+gdk_ios_cairo_context_finalize (GObject *object)
+{
+  GdkIOSCairoContext *self = GDK_IOS_CAIRO_CONTEXT (object);
+  g_clear_pointer (&self->active_surface, cairo_surface_destroy);
+  g_clear_pointer (&self->persistent, cairo_surface_destroy);
+  G_OBJECT_CLASS (gdk_ios_cairo_context_parent_class)->finalize (object);
 }
 
 static void
 gdk_ios_cairo_context_class_init (GdkIOSCairoContextClass *klass)
 {
+  GObjectClass *object_class = G_OBJECT_CLASS (klass);
   GdkDrawContextClass *draw_context_class = GDK_DRAW_CONTEXT_CLASS (klass);
   GdkCairoContextClass *cairo_context_class = GDK_CAIRO_CONTEXT_CLASS (klass);
+
+  object_class->finalize = gdk_ios_cairo_context_finalize;
 
   draw_context_class->begin_frame = gdk_ios_cairo_context_begin_frame;
   draw_context_class->end_frame = gdk_ios_cairo_context_end_frame;

@@ -35,9 +35,12 @@ gdk_ios_surface_attach_layer (GdkIOSSurface *self)
   [root addSublayer:layer];
   [CATransaction commit];
 
-  g_message ("gdk-ios: attach_layer surface=%p layer=%p root=%p "
+  g_message ("gdk-ios: attach_layer surface=%p type=%s layer=%p root=%p "
              "root.bounds=%.0fx%.0f root.sublayers=%lu scale=%.2f",
-             (void *) self, (__bridge void *) layer, (__bridge void *) root,
+             (void *) self,
+             GDK_IS_TOPLEVEL (self) ? "toplevel"
+               : (GDK_IS_POPUP (self) ? "popup" : "other"),
+             (__bridge void *) layer, (__bridge void *) root,
              (double) root.bounds.size.width,
              (double) root.bounds.size.height,
              (unsigned long) root.sublayers.count, (double) self->scale);
