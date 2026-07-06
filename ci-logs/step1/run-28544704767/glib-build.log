@@ -1,0 +1,519 @@
+ninja: Entering directory `glib-build'
+[1/674] /opt/homebrew/bin/meson --internal copy ../glib-src/gio/gdbus-2.0/codegen/__init__.py gio/gdbus-2.0/codegen/__init__.py
+[2/674] /opt/homebrew/bin/meson --internal copy ../glib-src/gio/gdbus-2.0/codegen/codegen.py gio/gdbus-2.0/codegen/codegen.py
+[3/674] /opt/homebrew/bin/meson --internal copy ../glib-src/gio/gdbus-2.0/codegen/codegen_docbook.py gio/gdbus-2.0/codegen/codegen_docbook.py
+[4/674] /opt/homebrew/bin/meson --internal copy ../glib-src/gio/gdbus-2.0/codegen/codegen_main.py gio/gdbus-2.0/codegen/codegen_main.py
+[5/674] /opt/homebrew/bin/meson --internal copy ../glib-src/gio/gdbus-2.0/codegen/parser.py gio/gdbus-2.0/codegen/parser.py
+[6/674] /opt/homebrew/bin/meson --internal copy ../glib-src/gio/gdbus-2.0/codegen/dbustypes.py gio/gdbus-2.0/codegen/dbustypes.py
+[7/674] /opt/homebrew/bin/meson --internal copy ../glib-src/gio/gdbus-2.0/codegen/codegen_rst.py gio/gdbus-2.0/codegen/codegen_rst.py
+[8/674] /opt/homebrew/bin/meson --internal copy ../glib-src/gio/gdbus-2.0/codegen/codegen_md.py gio/gdbus-2.0/codegen/codegen_md.py
+[9/674] /opt/homebrew/bin/meson --internal copy ../glib-src/gio/gdbus-2.0/codegen/utils.py gio/gdbus-2.0/codegen/utils.py
+[10/674] /opt/homebrew/bin/meson --internal exe --capture gobject/glib-enumtypes.h -- /opt/homebrew/opt/python@3.14/bin/python3.14 gobject/glib-mkenums --template ../glib-src/gobject/glib-enumtypes.h.template ../glib-src/gobject/../glib/gunicode.h
+[11/674] /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/tools/gen-visibility-macros.py 2.82.4 versions-macros ../glib-src/glib/gversionmacros.h.in glib/gversionmacros.h
+[12/674] /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/tools/gen-visibility-macros.py 2.82.4 visibility-macros GLIB glib/glib-visibility.h
+[13/674] /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/tools/gen-visibility-macros.py 2.82.4 visibility-macros GOBJECT gobject/gobject-visibility.h
+[14/674] /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/tools/gen-visibility-macros.py 2.82.4 visibility-macros GMODULE gmodule/gmodule-visibility.h
+[15/674] /opt/homebrew/opt/python@3.14/bin/python3.14 gio/gdbus-2.0/codegen/gdbus-codegen --interface-prefix org.freedesktop.portal. --output-directory gio --generate-c-code xdp-dbus --c-namespace GXdp ../glib-src/gio/org.freedesktop.portal.Documents.xml ../glib-src/gio/org.freedesktop.portal.OpenURI.xml ../glib-src/gio/org.freedesktop.portal.ProxyResolver.xml ../glib-src/gio/org.freedesktop.portal.Trash.xml
+[16/674] /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/tools/gen-visibility-macros.py 2.82.4 visibility-macros GIO gio/gio-visibility.h
+[17/674] /opt/homebrew/opt/python@3.14/bin/python3.14 gio/gdbus-2.0/codegen/gdbus-codegen --interface-prefix org. --output-directory gio --generate-c-code gdbus-daemon-generated --c-namespace _G ../glib-src/gio/dbus-daemon.xml
+[18/674] /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/glib-src/tools/gen-visibility-macros.py 2.82.4 visibility-macros GI girepository/gi-visibility.h
+[19/674] /opt/homebrew/bin/meson --internal exe --capture gobject/glib-enumtypes.c -- /opt/homebrew/opt/python@3.14/bin/python3.14 gobject/glib-mkenums --template ../glib-src/gobject/glib-enumtypes.c.template ../glib-src/gobject/../glib/gunicode.h
+[20/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_config.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_config.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_config.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_config.c
+[21/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_context.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_context.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_context.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_context.c
+[22/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_auto_possess.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_auto_possess.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_auto_possess.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_auto_possess.c
+[23/674] /opt/homebrew/bin/meson --internal exe --capture gio/gioenumtypes.h -- /opt/homebrew/opt/python@3.14/bin/python3.14 gobject/glib-mkenums --template ../glib-src/gio/gioenumtypes.h.template ../glib-src/gio/gappinfo.h ../glib-src/gio/gasyncinitable.h ../glib-src/gio/gasyncresult.h ../glib-src/gio/gbufferedinputstream.h ../glib-src/gio/gbufferedoutputstream.h ../glib-src/gio/gbytesicon.h ../glib-src/gio/gcancellable.h ../glib-src/gio/gcontenttype.h ../glib-src/gio/gcharsetconverter.h ../glib-src/gio/gconverter.h ../glib-src/gio/gconverterinputstream.h ../glib-src/gio/gconverteroutputstream.h ../glib-src/gio/gdatagrambased.h ../glib-src/gio/gdatainputstream.h ../glib-src/gio/gdataoutputstream.h ../glib-src/gio/gdebugcontroller.h ../glib-src/gio/gdebugcontrollerdbus.h ../glib-src/gio/gdrive.h ../glib-src/gio/gemblem.h ../glib-src/gio/gemblemedicon.h ../glib-src/gio/gfile.h ../glib-src/gio/gfileattribute.h ../glib-src/gio/gfileenumerator.h ../glib-src/gio/gfileicon.h ../glib-src/gio/gfileinfo.h ../glib-src/gio/gfileinputstream.h ../glib-src/gio/gfilemonitor.h ../glib-src/gio/gfilenamecompleter.h ../glib-src/gio/gfileoutputstream.h ../glib-src/gio/gfileiostream.h ../glib-src/gio/gfilterinputstream.h ../glib-src/gio/gfilteroutputstream.h ../glib-src/gio/gicon.h ../glib-src/gio/ginetaddress.h ../glib-src/gio/ginetaddressmask.h ../glib-src/gio/ginetsocketaddress.h ../glib-src/gio/ginitable.h ../glib-src/gio/ginputstream.h ../glib-src/gio/gio.h ../glib-src/gio/gio-autocleanups.h ../glib-src/gio/gioenums.h ../glib-src/gio/gioerror.h ../glib-src/gio/giomodule.h ../glib-src/gio/gioscheduler.h ../glib-src/gio/giostream.h ../glib-src/gio/giotypes.h ../glib-src/gio/gloadableicon.h ../glib-src/gio/gmount.h ../glib-src/gio/gmemoryinputstream.h ../glib-src/gio/gmemorymonitor.h ../glib-src/gio/gmemoryoutputstream.h ../glib-src/gio/gmountoperation.h ../glib-src/gio/gnativesocketaddress.h ../glib-src/gio/gnativevolumemonitor.h ../glib-src/gio/gnetworkaddress.h ../glib-src/gio/gnetworkmonitor.h ../glib-src/gio/gnetworkservice.h ../glib-src/gio/goutputstream.h ../glib-src/gio/gpermission.h ../glib-src/gio/gpollableinputstream.h ../glib-src/gio/gpollableoutputstream.h ../glib-src/gio/gpollableutils.h ../glib-src/gio/gpowerprofilemonitor.h ../glib-src/gio/gproxy.h ../glib-src/gio/gproxyaddress.h ../glib-src/gio/gproxyaddressenumerator.h ../glib-src/gio/gproxyresolver.h ../glib-src/gio/gresolver.h ../glib-src/gio/gresource.h ../glib-src/gio/gseekable.h ../glib-src/gio/gsimpleasyncresult.h ../glib-src/gio/gsimpleiostream.h ../glib-src/gio/gsimplepermission.h ../glib-src/gio/gsimpleproxyresolver.h ../glib-src/gio/gsocket.h ../glib-src/gio/gsocketaddress.h ../glib-src/gio/gsocketaddressenumerator.h ../glib-src/gio/gsocketclient.h ../glib-src/gio/gsocketconnectable.h ../glib-src/gio/gsocketconnection.h ../glib-src/gio/gsocketcontrolmessage.h ../glib-src/gio/gsocketlistener.h ../glib-src/gio/gsocketservice.h ../glib-src/gio/gsrvtarget.h ../glib-src/gio/gsubprocess.h ../glib-src/gio/gsubprocesslauncher.h ../glib-src/gio/gtask.h ../glib-src/gio/gtcpconnection.h ../glib-src/gio/gtcpwrapperconnection.h ../glib-src/gio/gthemedicon.h ../glib-src/gio/gthreadedsocketservice.h ../glib-src/gio/gtlsbackend.h ../glib-src/gio/gtlscertificate.h ../glib-src/gio/gtlsclientconnection.h ../glib-src/gio/gtlsconnection.h ../glib-src/gio/gtlsdatabase.h ../glib-src/gio/gtlsfiledatabase.h ../glib-src/gio/gtlsinteraction.h ../glib-src/gio/gtlspassword.h ../glib-src/gio/gtlsserverconnection.h ../glib-src/gio/gdtlsconnection.h ../glib-src/gio/gdtlsclientconnection.h ../glib-src/gio/gdtlsserverconnection.h ../glib-src/gio/gunixconnection.h ../glib-src/gio/gunixcredentialsmessage.h ../glib-src/gio/gunixfdlist.h ../glib-src/gio/gunixsocketaddress.h ../glib-src/gio/gvfs.h ../glib-src/gio/gvolume.h ../glib-src/gio/gvolumemonitor.h ../glib-src/gio/gzlibcompressor.h ../glib-src/gio/gzlibdecompressor.h ../glib-src/gio/glistmodel.h ../glib-src/gio/gliststore.h ../glib-src/gio/gapplication.h ../glib-src/gio/gapplicationcommandline.h ../glib-src/gio/gactiongroup.h ../glib-src/gio/gactionmap.h ../glib-src/gio/gsimpleactiongroup.h ../glib-src/gio/gremoteactiongroup.h ../glib-src/gio/gactiongroupexporter.h ../glib-src/gio/gdbusactiongroup.h ../glib-src/gio/gaction.h ../glib-src/gio/gpropertyaction.h ../glib-src/gio/gsimpleaction.h ../glib-src/gio/gmenumodel.h ../glib-src/gio/gmenu.h ../glib-src/gio/gmenuexporter.h ../glib-src/gio/gdbusmenumodel.h ../glib-src/gio/gnotification.h ../glib-src/gio/gsettingsbackend.h ../glib-src/gio/gsettingsschema.h ../glib-src/gio/gsettings.h ../glib-src/gio/gdbusauthobserver.h ../glib-src/gio/gcredentials.h ../glib-src/gio/gdbusutils.h ../glib-src/gio/gdbuserror.h ../glib-src/gio/gdbusaddress.h ../glib-src/gio/gdbusconnection.h ../glib-src/gio/gdbusmessage.h ../glib-src/gio/gdbusnameowning.h ../glib-src/gio/gdbusnamewatching.h ../glib-src/gio/gdbusproxy.h ../glib-src/gio/gdbusintrospection.h ../glib-src/gio/gdbusmethodinvocation.h ../glib-src/gio/gdbusserver.h ../glib-src/gio/gdbusinterface.h ../glib-src/gio/gdbusinterfaceskeleton.h ../glib-src/gio/gdbusobject.h ../glib-src/gio/gdbusobjectskeleton.h ../glib-src/gio/gdbusobjectproxy.h ../glib-src/gio/gdbusobjectmanager.h ../glib-src/gio/gdbusobjectmanagerclient.h ../glib-src/gio/gdbusobjectmanagerserver.h ../glib-src/gio/gtestdbus.h gio/gnetworking.h
+[24/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_error.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_error.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_error.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_error.c
+../glib-src/subprojects/pcre2-10.42/src/pcre2_error.c:66:3: warning: string literal of length 4380 exceeds maximum length 4095 that ISO C99 compilers are required to support [-Woverlength-strings]
+   66 |   "no error\0"
+      |   ^~~~~~~~~~~~
+   67 |   "\\ at end of pattern\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |   "\\c at end of pattern\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |   "unrecognized character follows \\\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70 |   "numbers out of order in {} quantifier\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   71 |   /* 5 */
+      |   ~~~~~~~
+   72 |   "number too big in {} quantifier\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   73 |   "missing terminating ] for character class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   74 |   "escape sequence is invalid in character class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   75 |   "range out of order in character class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   76 |   "quantifier does not follow a repeatable item\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   77 |   /* 10 */
+      |   ~~~~~~~~
+   78 |   "internal error: unexpected repeat\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   79 |   "unrecognized character after (? or (?-\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   80 |   "POSIX named classes are supported only within a class\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   81 |   "POSIX collating elements are not supported\0"
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[25/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_extuni.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_extuni.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_extuni.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_extuni.c
+[26/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_find_bracket.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_find_bracket.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_find_bracket.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_find_bracket.c
+[27/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_jit_compile.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_jit_compile.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_jit_compile.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_jit_compile.c
+[28/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_maketables.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_maketables.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_maketables.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_maketables.c
+[29/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_convert.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_convert.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_convert.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_convert.c
+[30/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_match_data.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_match_data.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_match_data.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_match_data.c
+[31/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_newline.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_newline.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_newline.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_newline.c
+[32/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_ord2utf.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_ord2utf.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_ord2utf.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_ord2utf.c
+[33/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_pattern_info.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_pattern_info.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_pattern_info.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_pattern_info.c
+[34/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_script_run.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_script_run.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_script_run.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_script_run.c
+[35/674] /opt/homebrew/bin/meson --internal exe --capture gio/gioenumtypes.c -- /opt/homebrew/opt/python@3.14/bin/python3.14 gobject/glib-mkenums --template ../glib-src/gio/gioenumtypes.c.template ../glib-src/gio/gappinfo.h ../glib-src/gio/gasyncinitable.h ../glib-src/gio/gasyncresult.h ../glib-src/gio/gbufferedinputstream.h ../glib-src/gio/gbufferedoutputstream.h ../glib-src/gio/gbytesicon.h ../glib-src/gio/gcancellable.h ../glib-src/gio/gcontenttype.h ../glib-src/gio/gcharsetconverter.h ../glib-src/gio/gconverter.h ../glib-src/gio/gconverterinputstream.h ../glib-src/gio/gconverteroutputstream.h ../glib-src/gio/gdatagrambased.h ../glib-src/gio/gdatainputstream.h ../glib-src/gio/gdataoutputstream.h ../glib-src/gio/gdebugcontroller.h ../glib-src/gio/gdebugcontrollerdbus.h ../glib-src/gio/gdrive.h ../glib-src/gio/gemblem.h ../glib-src/gio/gemblemedicon.h ../glib-src/gio/gfile.h ../glib-src/gio/gfileattribute.h ../glib-src/gio/gfileenumerator.h ../glib-src/gio/gfileicon.h ../glib-src/gio/gfileinfo.h ../glib-src/gio/gfileinputstream.h ../glib-src/gio/gfilemonitor.h ../glib-src/gio/gfilenamecompleter.h ../glib-src/gio/gfileoutputstream.h ../glib-src/gio/gfileiostream.h ../glib-src/gio/gfilterinputstream.h ../glib-src/gio/gfilteroutputstream.h ../glib-src/gio/gicon.h ../glib-src/gio/ginetaddress.h ../glib-src/gio/ginetaddressmask.h ../glib-src/gio/ginetsocketaddress.h ../glib-src/gio/ginitable.h ../glib-src/gio/ginputstream.h ../glib-src/gio/gio.h ../glib-src/gio/gio-autocleanups.h ../glib-src/gio/gioenums.h ../glib-src/gio/gioerror.h ../glib-src/gio/giomodule.h ../glib-src/gio/gioscheduler.h ../glib-src/gio/giostream.h ../glib-src/gio/giotypes.h ../glib-src/gio/gloadableicon.h ../glib-src/gio/gmount.h ../glib-src/gio/gmemoryinputstream.h ../glib-src/gio/gmemorymonitor.h ../glib-src/gio/gmemoryoutputstream.h ../glib-src/gio/gmountoperation.h ../glib-src/gio/gnativesocketaddress.h ../glib-src/gio/gnativevolumemonitor.h ../glib-src/gio/gnetworkaddress.h ../glib-src/gio/gnetworkmonitor.h ../glib-src/gio/gnetworkservice.h ../glib-src/gio/goutputstream.h ../glib-src/gio/gpermission.h ../glib-src/gio/gpollableinputstream.h ../glib-src/gio/gpollableoutputstream.h ../glib-src/gio/gpollableutils.h ../glib-src/gio/gpowerprofilemonitor.h ../glib-src/gio/gproxy.h ../glib-src/gio/gproxyaddress.h ../glib-src/gio/gproxyaddressenumerator.h ../glib-src/gio/gproxyresolver.h ../glib-src/gio/gresolver.h ../glib-src/gio/gresource.h ../glib-src/gio/gseekable.h ../glib-src/gio/gsimpleasyncresult.h ../glib-src/gio/gsimpleiostream.h ../glib-src/gio/gsimplepermission.h ../glib-src/gio/gsimpleproxyresolver.h ../glib-src/gio/gsocket.h ../glib-src/gio/gsocketaddress.h ../glib-src/gio/gsocketaddressenumerator.h ../glib-src/gio/gsocketclient.h ../glib-src/gio/gsocketconnectable.h ../glib-src/gio/gsocketconnection.h ../glib-src/gio/gsocketcontrolmessage.h ../glib-src/gio/gsocketlistener.h ../glib-src/gio/gsocketservice.h ../glib-src/gio/gsrvtarget.h ../glib-src/gio/gsubprocess.h ../glib-src/gio/gsubprocesslauncher.h ../glib-src/gio/gtask.h ../glib-src/gio/gtcpconnection.h ../glib-src/gio/gtcpwrapperconnection.h ../glib-src/gio/gthemedicon.h ../glib-src/gio/gthreadedsocketservice.h ../glib-src/gio/gtlsbackend.h ../glib-src/gio/gtlscertificate.h ../glib-src/gio/gtlsclientconnection.h ../glib-src/gio/gtlsconnection.h ../glib-src/gio/gtlsdatabase.h ../glib-src/gio/gtlsfiledatabase.h ../glib-src/gio/gtlsinteraction.h ../glib-src/gio/gtlspassword.h ../glib-src/gio/gtlsserverconnection.h ../glib-src/gio/gdtlsconnection.h ../glib-src/gio/gdtlsclientconnection.h ../glib-src/gio/gdtlsserverconnection.h ../glib-src/gio/gunixconnection.h ../glib-src/gio/gunixcredentialsmessage.h ../glib-src/gio/gunixfdlist.h ../glib-src/gio/gunixsocketaddress.h ../glib-src/gio/gvfs.h ../glib-src/gio/gvolume.h ../glib-src/gio/gvolumemonitor.h ../glib-src/gio/gzlibcompressor.h ../glib-src/gio/gzlibdecompressor.h ../glib-src/gio/glistmodel.h ../glib-src/gio/gliststore.h ../glib-src/gio/gapplication.h ../glib-src/gio/gapplicationcommandline.h ../glib-src/gio/gactiongroup.h ../glib-src/gio/gactionmap.h ../glib-src/gio/gsimpleactiongroup.h ../glib-src/gio/gremoteactiongroup.h ../glib-src/gio/gactiongroupexporter.h ../glib-src/gio/gdbusactiongroup.h ../glib-src/gio/gaction.h ../glib-src/gio/gpropertyaction.h ../glib-src/gio/gsimpleaction.h ../glib-src/gio/gmenumodel.h ../glib-src/gio/gmenu.h ../glib-src/gio/gmenuexporter.h ../glib-src/gio/gdbusmenumodel.h ../glib-src/gio/gnotification.h ../glib-src/gio/gsettingsbackend.h ../glib-src/gio/gsettingsschema.h ../glib-src/gio/gsettings.h ../glib-src/gio/gdbusauthobserver.h ../glib-src/gio/gcredentials.h ../glib-src/gio/gdbusutils.h ../glib-src/gio/gdbuserror.h ../glib-src/gio/gdbusaddress.h ../glib-src/gio/gdbusconnection.h ../glib-src/gio/gdbusmessage.h ../glib-src/gio/gdbusnameowning.h ../glib-src/gio/gdbusnamewatching.h ../glib-src/gio/gdbusproxy.h ../glib-src/gio/gdbusintrospection.h ../glib-src/gio/gdbusmethodinvocation.h ../glib-src/gio/gdbusserver.h ../glib-src/gio/gdbusinterface.h ../glib-src/gio/gdbusinterfaceskeleton.h ../glib-src/gio/gdbusobject.h ../glib-src/gio/gdbusobjectskeleton.h ../glib-src/gio/gdbusobjectproxy.h ../glib-src/gio/gdbusobjectmanager.h ../glib-src/gio/gdbusobjectmanagerclient.h ../glib-src/gio/gdbusobjectmanagerserver.h ../glib-src/gio/gtestdbus.h gio/gnetworking.h
+[36/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_string_utils.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_string_utils.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_string_utils.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_string_utils.c
+[37/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_serialize.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_serialize.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_serialize.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_serialize.c
+[38/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_substitute.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_substitute.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_substitute.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_substitute.c
+[39/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_study.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_study.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_study.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_study.c
+[40/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_tables.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_tables.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_tables.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_tables.c
+[41/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_substring.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_substring.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_substring.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_substring.c
+[42/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_valid_utf.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_valid_utf.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_valid_utf.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_valid_utf.c
+[43/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_ucd.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_ucd.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_ucd.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_ucd.c
+[44/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_xclass.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_xclass.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_xclass.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_xclass.c
+[45/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/meson-generated_.._pcre2_chartables.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/meson-generated_.._pcre2_chartables.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/meson-generated_.._pcre2_chartables.c.o -c subprojects/pcre2-10.42/pcre2_chartables.c
+[46/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/libffi/src/libffi.a.p -Isubprojects/libffi/src -I../glib-src/subprojects/libffi/src -Isubprojects/libffi -I../glib-src/subprojects/libffi -Isubprojects/libffi/include -I../glib-src/subprojects/libffi/include -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu99 -O3 -DFFI_BUILDING -DFFI_STATIC_BUILD -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DTARGET=AARCH64 -MD -MQ subprojects/libffi/src/libffi.a.p/types.c.o -MF subprojects/libffi/src/libffi.a.p/types.c.o.d -o subprojects/libffi/src/libffi.a.p/types.c.o -c ../glib-src/subprojects/libffi/src/types.c
+[47/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/libffi/src/libffi.a.p -Isubprojects/libffi/src -I../glib-src/subprojects/libffi/src -Isubprojects/libffi -I../glib-src/subprojects/libffi -Isubprojects/libffi/include -I../glib-src/subprojects/libffi/include -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu99 -O3 -DFFI_BUILDING -DFFI_STATIC_BUILD -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DTARGET=AARCH64 -MD -MQ subprojects/libffi/src/libffi.a.p/prep_cif.c.o -MF subprojects/libffi/src/libffi.a.p/prep_cif.c.o.d -o subprojects/libffi/src/libffi.a.p/prep_cif.c.o -c ../glib-src/subprojects/libffi/src/prep_cif.c
+[48/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/libffi/src/libffi.a.p -Isubprojects/libffi/src -I../glib-src/subprojects/libffi/src -Isubprojects/libffi -I../glib-src/subprojects/libffi -Isubprojects/libffi/include -I../glib-src/subprojects/libffi/include -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu99 -O3 -DFFI_BUILDING -DFFI_STATIC_BUILD -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DTARGET=AARCH64 -MD -MQ subprojects/libffi/src/libffi.a.p/raw_api.c.o -MF subprojects/libffi/src/libffi.a.p/raw_api.c.o.d -o subprojects/libffi/src/libffi.a.p/raw_api.c.o -c ../glib-src/subprojects/libffi/src/raw_api.c
+[49/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/libffi/src/libffi.a.p -Isubprojects/libffi/src -I../glib-src/subprojects/libffi/src -Isubprojects/libffi -I../glib-src/subprojects/libffi -Isubprojects/libffi/include -I../glib-src/subprojects/libffi/include -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu99 -O3 -DFFI_BUILDING -DFFI_STATIC_BUILD -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DTARGET=AARCH64 -MD -MQ subprojects/libffi/src/libffi.a.p/java_raw_api.c.o -MF subprojects/libffi/src/libffi.a.p/java_raw_api.c.o.d -o subprojects/libffi/src/libffi.a.p/java_raw_api.c.o -c ../glib-src/subprojects/libffi/src/java_raw_api.c
+[50/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/libffi/src/libffi.a.p -Isubprojects/libffi/src -I../glib-src/subprojects/libffi/src -Isubprojects/libffi -I../glib-src/subprojects/libffi -Isubprojects/libffi/include -I../glib-src/subprojects/libffi/include -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu99 -O3 -DFFI_BUILDING -DFFI_STATIC_BUILD -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DTARGET=AARCH64 -MD -MQ subprojects/libffi/src/libffi.a.p/aarch64_ffi.c.o -MF subprojects/libffi/src/libffi.a.p/aarch64_ffi.c.o.d -o subprojects/libffi/src/libffi.a.p/aarch64_ffi.c.o -c ../glib-src/subprojects/libffi/src/aarch64/ffi.c
+[51/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/libffi/src/libffi.a.p -Isubprojects/libffi/src -I../glib-src/subprojects/libffi/src -Isubprojects/libffi -I../glib-src/subprojects/libffi -Isubprojects/libffi/include -I../glib-src/subprojects/libffi/include -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu99 -O3 -DFFI_BUILDING -DFFI_STATIC_BUILD -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DTARGET=AARCH64 -MD -MQ subprojects/libffi/src/libffi.a.p/closures.c.o -MF subprojects/libffi/src/libffi.a.p/closures.c.o.d -o subprojects/libffi/src/libffi.a.p/closures.c.o -c ../glib-src/subprojects/libffi/src/closures.c
+[52/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/libffi/src/libffi.a.p -Isubprojects/libffi/src -I../glib-src/subprojects/libffi/src -Isubprojects/libffi -I../glib-src/subprojects/libffi -Isubprojects/libffi/include -I../glib-src/subprojects/libffi/include -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu99 -O3 -DFFI_BUILDING -DFFI_STATIC_BUILD -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DTARGET=AARCH64 -MD -MQ subprojects/libffi/src/libffi.a.p/aarch64_sysv.S.o -MF subprojects/libffi/src/libffi.a.p/aarch64_sysv.S.o.d -o subprojects/libffi/src/libffi.a.p/aarch64_sysv.S.o -c ../glib-src/subprojects/libffi/src/aarch64/sysv.S
+[53/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/zlib-1.2.11/libz.a.p -Isubprojects/zlib-1.2.11 -I../glib-src/subprojects/zlib-1.2.11 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -Wno-implicit-fallthrough -Wno-implicit-function-declaration -MD -MQ subprojects/zlib-1.2.11/libz.a.p/adler32.c.o -MF subprojects/zlib-1.2.11/libz.a.p/adler32.c.o.d -o subprojects/zlib-1.2.11/libz.a.p/adler32.c.o -c ../glib-src/subprojects/zlib-1.2.11/adler32.c
+In file included from ../glib-src/subprojects/zlib-1.2.11/adler32.c:8:
+../glib-src/subprojects/zlib-1.2.11/zutil.h:163:11: warning: 'OS_CODE' macro redefined [-Wmacro-redefined]
+  163 | #  define OS_CODE 19
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/zutil.h:134:11: note: previous definition is here
+  134 | #  define OS_CODE  7
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/adler32.c:63:15: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+   63 | uLong ZEXPORT adler32_z(adler, buf, len)
+      |               ^
+../glib-src/subprojects/zlib-1.2.11/adler32.c:134:15: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  134 | uLong ZEXPORT adler32(adler, buf, len)
+      |               ^
+../glib-src/subprojects/zlib-1.2.11/adler32.c:143:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  143 | local uLong adler32_combine_(adler1, adler2, len2)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/adler32.c:172:15: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  172 | uLong ZEXPORT adler32_combine(adler1, adler2, len2)
+      |               ^
+../glib-src/subprojects/zlib-1.2.11/adler32.c:180:15: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  180 | uLong ZEXPORT adler32_combine64(adler1, adler2, len2)
+      |               ^
+6 warnings generated.
+[54/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/zlib-1.2.11/libz.a.p -Isubprojects/zlib-1.2.11 -I../glib-src/subprojects/zlib-1.2.11 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -Wno-implicit-fallthrough -Wno-implicit-function-declaration -MD -MQ subprojects/zlib-1.2.11/libz.a.p/crc32.c.o -MF subprojects/zlib-1.2.11/libz.a.p/crc32.c.o.d -o subprojects/zlib-1.2.11/libz.a.p/crc32.c.o -c ../glib-src/subprojects/zlib-1.2.11/crc32.c
+In file included from ../glib-src/subprojects/zlib-1.2.11/crc32.c:31:
+../glib-src/subprojects/zlib-1.2.11/zutil.h:163:11: warning: 'OS_CODE' macro redefined [-Wmacro-redefined]
+  163 | #  define OS_CODE 19
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/zutil.h:134:11: note: previous definition is here
+  134 | #  define OS_CODE  7
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/crc32.c:188:42: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  188 | const z_crc_t FAR * ZEXPORT get_crc_table()
+      |                                          ^
+      |                                           void
+../glib-src/subprojects/zlib-1.2.11/crc32.c:202:23: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  202 | unsigned long ZEXPORT crc32_z(crc, buf, len)
+      |                       ^
+../glib-src/subprojects/zlib-1.2.11/crc32.c:237:23: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  237 | unsigned long ZEXPORT crc32(crc, buf, len)
+      |                       ^
+../glib-src/subprojects/zlib-1.2.11/crc32.c:266:21: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  266 | local unsigned long crc32_little(crc, buf, len)
+      |                     ^
+../glib-src/subprojects/zlib-1.2.11/crc32.c:306:21: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  306 | local unsigned long crc32_big(crc, buf, len)
+      |                     ^
+../glib-src/subprojects/zlib-1.2.11/crc32.c:344:21: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  344 | local unsigned long gf2_matrix_times(mat, vec)
+      |                     ^
+../glib-src/subprojects/zlib-1.2.11/crc32.c:361:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  361 | local void gf2_matrix_square(square, mat)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/crc32.c:372:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  372 | local uLong crc32_combine_(crc1, crc2, len2)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/crc32.c:428:15: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  428 | uLong ZEXPORT crc32_combine(crc1, crc2, len2)
+      |               ^
+../glib-src/subprojects/zlib-1.2.11/crc32.c:436:15: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  436 | uLong ZEXPORT crc32_combine64(crc1, crc2, len2)
+      |               ^
+11 warnings generated.
+[55/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_dfa_match.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_dfa_match.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_dfa_match.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_dfa_match.c
+[56/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/zlib-1.2.11/libz.a.p -Isubprojects/zlib-1.2.11 -I../glib-src/subprojects/zlib-1.2.11 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -Wno-implicit-fallthrough -Wno-implicit-function-declaration -MD -MQ subprojects/zlib-1.2.11/libz.a.p/inffast.c.o -MF subprojects/zlib-1.2.11/libz.a.p/inffast.c.o.d -o subprojects/zlib-1.2.11/libz.a.p/inffast.c.o -c ../glib-src/subprojects/zlib-1.2.11/inffast.c
+In file included from ../glib-src/subprojects/zlib-1.2.11/inffast.c:6:
+../glib-src/subprojects/zlib-1.2.11/zutil.h:163:11: warning: 'OS_CODE' macro redefined [-Wmacro-redefined]
+  163 | #  define OS_CODE 19
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/zutil.h:134:11: note: previous definition is here
+  134 | #  define OS_CODE  7
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/inffast.c:50:20: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+   50 | void ZLIB_INTERNAL inflate_fast(strm, start)
+      |                    ^
+2 warnings generated.
+[57/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/zlib-1.2.11/libz.a.p -Isubprojects/zlib-1.2.11 -I../glib-src/subprojects/zlib-1.2.11 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -Wno-implicit-fallthrough -Wno-implicit-function-declaration -MD -MQ subprojects/zlib-1.2.11/libz.a.p/infback.c.o -MF subprojects/zlib-1.2.11/libz.a.p/infback.c.o.d -o subprojects/zlib-1.2.11/libz.a.p/infback.c.o -c ../glib-src/subprojects/zlib-1.2.11/infback.c
+In file included from ../glib-src/subprojects/zlib-1.2.11/infback.c:13:
+../glib-src/subprojects/zlib-1.2.11/zutil.h:163:11: warning: 'OS_CODE' macro redefined [-Wmacro-redefined]
+  163 | #  define OS_CODE 19
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/zutil.h:134:11: note: previous definition is here
+  134 | #  define OS_CODE  7
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/infback.c:28:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+   28 | int ZEXPORT inflateBackInit_(strm, windowBits, window, version, stream_size)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/infback.c:82:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+   82 | local void fixedtables(state)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/infback.c:250:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  250 | int ZEXPORT inflateBack(strm, in, in_desc, out, out_desc)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/infback.c:631:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  631 | int ZEXPORT inflateBackEnd(strm)
+      |             ^
+5 warnings generated.
+[58/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/zlib-1.2.11/libz.a.p -Isubprojects/zlib-1.2.11 -I../glib-src/subprojects/zlib-1.2.11 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -Wno-implicit-fallthrough -Wno-implicit-function-declaration -MD -MQ subprojects/zlib-1.2.11/libz.a.p/inftrees.c.o -MF subprojects/zlib-1.2.11/libz.a.p/inftrees.c.o.d -o subprojects/zlib-1.2.11/libz.a.p/inftrees.c.o -c ../glib-src/subprojects/zlib-1.2.11/inftrees.c
+In file included from ../glib-src/subprojects/zlib-1.2.11/inftrees.c:6:
+../glib-src/subprojects/zlib-1.2.11/zutil.h:163:11: warning: 'OS_CODE' macro redefined [-Wmacro-redefined]
+  163 | #  define OS_CODE 19
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/zutil.h:134:11: note: previous definition is here
+  134 | #  define OS_CODE  7
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/inftrees.c:32:19: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+   32 | int ZLIB_INTERNAL inflate_table(type, lens, codes, table, bits, work)
+      |                   ^
+2 warnings generated.
+[59/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/zlib-1.2.11/libz.a.p -Isubprojects/zlib-1.2.11 -I../glib-src/subprojects/zlib-1.2.11 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -Wno-implicit-fallthrough -Wno-implicit-function-declaration -MD -MQ subprojects/zlib-1.2.11/libz.a.p/deflate.c.o -MF subprojects/zlib-1.2.11/libz.a.p/deflate.c.o.d -o subprojects/zlib-1.2.11/libz.a.p/deflate.c.o -c ../glib-src/subprojects/zlib-1.2.11/deflate.c
+In file included from ../glib-src/subprojects/zlib-1.2.11/deflate.c:52:
+In file included from ../glib-src/subprojects/zlib-1.2.11/deflate.h:16:
+../glib-src/subprojects/zlib-1.2.11/zutil.h:163:11: warning: 'OS_CODE' macro redefined [-Wmacro-redefined]
+  163 | #  define OS_CODE 19
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/zutil.h:134:11: note: previous definition is here
+  134 | #  define OS_CODE  7
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:201:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  201 | local void slide_hash(s)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:228:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  228 | int ZEXPORT deflateInit_(strm, level, version, stream_size)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:240:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  240 | int ZEXPORT deflateInit2_(strm, level, method, windowBits, memLevel, strategy,
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:353:11: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  353 | local int deflateStateCheck (strm)
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:376:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  376 | int ZEXPORT deflateSetDictionary (strm, dictionary, dictLength)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:445:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  445 | int ZEXPORT deflateGetDictionary (strm, dictionary, dictLength)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:467:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  467 | int ZEXPORT deflateResetKeep (strm)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:505:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  505 | int ZEXPORT deflateReset (strm)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:517:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  517 | int ZEXPORT deflateSetHeader (strm, head)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:528:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  528 | int ZEXPORT deflatePending (strm, pending, bits)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:542:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  542 | int ZEXPORT deflatePrime (strm, bits, value)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:568:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  568 | int ZEXPORT deflateParams(strm, level, strategy)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:617:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  617 | int ZEXPORT deflateTune(strm, good_length, max_lazy, nice_length, max_chain)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:652:15: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  652 | uLong ZEXPORT deflateBound(strm, sourceLen)
+      |               ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:716:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  716 | local void putShortMSB (s, b)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:730:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  730 | local void flush_pending(strm)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:763:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  763 | int ZEXPORT deflate (strm, flush)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:1076:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1076 | int ZEXPORT deflateEnd (strm)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:1102:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1102 | int ZEXPORT deflateCopy (dest, source)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:1164:16: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1164 | local unsigned read_buf(strm, buf, size)
+      |                ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:1194:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1194 | local void lm_init (s)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:1236:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1236 | local uInt longest_match(s, cur_match)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:1482:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1482 | local void fill_window(s)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:1643:19: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1643 | local block_state deflate_stored(s, flush)
+      |                   ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:1824:19: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1824 | local block_state deflate_fast(s, flush)
+      |                   ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:1926:19: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1926 | local block_state deflate_slow(s, flush)
+      |                   ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:2057:19: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 2057 | local block_state deflate_rle(s, flush)
+      |                   ^
+../glib-src/subprojects/zlib-1.2.11/deflate.c:2130:19: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 2130 | local block_state deflate_huff(s, flush)
+      |                   ^
+29 warnings generated.
+[60/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/zlib-1.2.11/libz.a.p -Isubprojects/zlib-1.2.11 -I../glib-src/subprojects/zlib-1.2.11 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -Wno-implicit-fallthrough -Wno-implicit-function-declaration -MD -MQ subprojects/zlib-1.2.11/libz.a.p/zutil.c.o -MF subprojects/zlib-1.2.11/libz.a.p/zutil.c.o.d -o subprojects/zlib-1.2.11/libz.a.p/zutil.c.o -c ../glib-src/subprojects/zlib-1.2.11/zutil.c
+FAILED: [code=1] subprojects/zlib-1.2.11/libz.a.p/zutil.c.o 
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/zlib-1.2.11/libz.a.p -Isubprojects/zlib-1.2.11 -I../glib-src/subprojects/zlib-1.2.11 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -Wno-implicit-fallthrough -Wno-implicit-function-declaration -MD -MQ subprojects/zlib-1.2.11/libz.a.p/zutil.c.o -MF subprojects/zlib-1.2.11/libz.a.p/zutil.c.o.d -o subprojects/zlib-1.2.11/libz.a.p/zutil.c.o -c ../glib-src/subprojects/zlib-1.2.11/zutil.c
+In file included from ../glib-src/subprojects/zlib-1.2.11/zutil.c:8:
+../glib-src/subprojects/zlib-1.2.11/zutil.h:163:11: warning: 'OS_CODE' macro redefined [-Wmacro-redefined]
+  163 | #  define OS_CODE 19
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/zutil.h:134:11: note: previous definition is here
+  134 | #  define OS_CODE  7
+      |           ^
+In file included from ../glib-src/subprojects/zlib-1.2.11/zutil.c:10:
+In file included from ../glib-src/subprojects/zlib-1.2.11/gzguts.h:21:
+In file included from /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/stdio.h:61:
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/_stdio.h:318:7: error: expected identifier or '('
+  318 | FILE    *fdopen(int, const char *) __DARWIN_ALIAS_STARTING(__MAC_10_6, __IPHONE_2_0, __DARWIN_ALIAS(fdopen));
+      |          ^
+../glib-src/subprojects/zlib-1.2.11/zutil.h:140:33: note: expanded from macro 'fdopen'
+  140 | #        define fdopen(fd,mode) NULL /* No fdopen() */
+      |                                 ^
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_null.h:26:16: note: expanded from macro 'NULL'
+   26 | #define NULL ((void*)0)
+      |                ^
+In file included from ../glib-src/subprojects/zlib-1.2.11/zutil.c:10:
+In file included from ../glib-src/subprojects/zlib-1.2.11/gzguts.h:21:
+In file included from /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/stdio.h:61:
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/_stdio.h:318:7: error: expected ')'
+../glib-src/subprojects/zlib-1.2.11/zutil.h:140:33: note: expanded from macro 'fdopen'
+  140 | #        define fdopen(fd,mode) NULL /* No fdopen() */
+      |                                 ^
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_null.h:26:16: note: expanded from macro 'NULL'
+   26 | #define NULL ((void*)0)
+      |                ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/_stdio.h:318:7: note: to match this '('
+../glib-src/subprojects/zlib-1.2.11/zutil.h:140:33: note: expanded from macro 'fdopen'
+  140 | #        define fdopen(fd,mode) NULL /* No fdopen() */
+      |                                 ^
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_null.h:26:15: note: expanded from macro 'NULL'
+   26 | #define NULL ((void*)0)
+      |               ^
+In file included from ../glib-src/subprojects/zlib-1.2.11/zutil.c:10:
+In file included from ../glib-src/subprojects/zlib-1.2.11/gzguts.h:21:
+In file included from /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/stdio.h:61:
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/_stdio.h:318:7: error: expected ')'
+  318 | FILE    *fdopen(int, const char *) __DARWIN_ALIAS_STARTING(__MAC_10_6, __IPHONE_2_0, __DARWIN_ALIAS(fdopen));
+      |          ^
+../glib-src/subprojects/zlib-1.2.11/zutil.h:140:33: note: expanded from macro 'fdopen'
+  140 | #        define fdopen(fd,mode) NULL /* No fdopen() */
+      |                                 ^
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_null.h:26:22: note: expanded from macro 'NULL'
+   26 | #define NULL ((void*)0)
+      |                      ^
+/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/_stdio.h:318:7: note: to match this '('
+../glib-src/subprojects/zlib-1.2.11/zutil.h:140:33: note: expanded from macro 'fdopen'
+  140 | #        define fdopen(fd,mode) NULL /* No fdopen() */
+      |                                 ^
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_null.h:26:14: note: expanded from macro 'NULL'
+   26 | #define NULL ((void*)0)
+      |              ^
+../glib-src/subprojects/zlib-1.2.11/zutil.c:27:33: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   27 | const char * ZEXPORT zlibVersion()
+      |                                 ^
+      |                                  void
+../glib-src/subprojects/zlib-1.2.11/zutil.c:32:31: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   32 | uLong ZEXPORT zlibCompileFlags()
+      |                               ^
+      |                                void
+../glib-src/subprojects/zlib-1.2.11/zutil.c:133:22: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  133 | const char * ZEXPORT zError(err)
+      |                      ^
+../glib-src/subprojects/zlib-1.2.11/zutil.c:305:22: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  305 | voidpf ZLIB_INTERNAL zcalloc (opaque, items, size)
+      |                      ^
+../glib-src/subprojects/zlib-1.2.11/zutil.c:315:20: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  315 | void ZLIB_INTERNAL zcfree (opaque, ptr)
+      |                    ^
+6 warnings and 3 errors generated.
+[61/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/zlib-1.2.11/libz.a.p -Isubprojects/zlib-1.2.11 -I../glib-src/subprojects/zlib-1.2.11 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -Wno-implicit-fallthrough -Wno-implicit-function-declaration -MD -MQ subprojects/zlib-1.2.11/libz.a.p/trees.c.o -MF subprojects/zlib-1.2.11/libz.a.p/trees.c.o.d -o subprojects/zlib-1.2.11/libz.a.p/trees.c.o -c ../glib-src/subprojects/zlib-1.2.11/trees.c
+In file included from ../glib-src/subprojects/zlib-1.2.11/trees.c:37:
+In file included from ../glib-src/subprojects/zlib-1.2.11/deflate.h:16:
+../glib-src/subprojects/zlib-1.2.11/zutil.h:163:11: warning: 'OS_CODE' macro redefined [-Wmacro-redefined]
+  163 | #  define OS_CODE 19
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/zutil.h:134:11: note: previous definition is here
+  134 | #  define OS_CODE  7
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:232:26: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  232 | local void tr_static_init()
+      |                          ^
+      |                           void
+../glib-src/subprojects/zlib-1.2.11/trees.c:379:20: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  379 | void ZLIB_INTERNAL _tr_init(s)
+      |                    ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:407:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  407 | local void init_block(s)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:451:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  451 | local void pqdownheap(s, tree, k)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:486:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  486 | local void gen_bitlen(s, desc)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:572:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  572 | local void gen_codes (tree, max_code, bl_count)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:615:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  615 | local void build_tree(s, desc)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:703:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  703 | local void scan_tree (s, tree, max_code)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:748:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  748 | local void send_tree (s, tree, max_code)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:799:11: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  799 | local int build_bl_tree(s)
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:834:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  834 | local void send_all_trees(s, lcodes, dcodes, blcodes)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:863:20: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  863 | void ZLIB_INTERNAL _tr_stored_block(s, buf, stored_len, last)
+      |                    ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:886:20: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  886 | void ZLIB_INTERNAL _tr_flush_bits(s)
+      |                    ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:896:20: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  896 | void ZLIB_INTERNAL _tr_align(s)
+      |                    ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:911:20: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  911 | void ZLIB_INTERNAL _tr_flush_block(s, buf, stored_len, last)
+      |                    ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:1014:19: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1014 | int ZLIB_INTERNAL _tr_tally (s, dist, lc)
+      |                   ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:1064:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1064 | local void compress_block(s, ltree, dtree)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:1124:11: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1124 | local int detect_data_type(s)
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:1158:16: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1158 | local unsigned bi_reverse(code, len)
+      |                ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:1173:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1173 | local void bi_flush(s)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/trees.c:1190:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1190 | local void bi_windup(s)
+      |            ^
+22 warnings generated.
+[62/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/zlib-1.2.11/libz.a.p -Isubprojects/zlib-1.2.11 -I../glib-src/subprojects/zlib-1.2.11 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -Wno-implicit-fallthrough -Wno-implicit-function-declaration -MD -MQ subprojects/zlib-1.2.11/libz.a.p/inflate.c.o -MF subprojects/zlib-1.2.11/libz.a.p/inflate.c.o.d -o subprojects/zlib-1.2.11/libz.a.p/inflate.c.o -c ../glib-src/subprojects/zlib-1.2.11/inflate.c
+In file included from ../glib-src/subprojects/zlib-1.2.11/inflate.c:83:
+../glib-src/subprojects/zlib-1.2.11/zutil.h:163:11: warning: 'OS_CODE' macro redefined [-Wmacro-redefined]
+  163 | #  define OS_CODE 19
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/zutil.h:134:11: note: previous definition is here
+  134 | #  define OS_CODE  7
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:105:11: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  105 | local int inflateStateCheck(strm)
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:119:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  119 | int ZEXPORT inflateResetKeep(strm)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:144:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  144 | int ZEXPORT inflateReset(strm)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:157:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  157 | int ZEXPORT inflateReset2(strm, windowBits)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:195:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  195 | int ZEXPORT inflateInit2_(strm, windowBits, version, stream_size)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:239:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  239 | int ZEXPORT inflateInit_(strm, version, stream_size)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:247:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  247 | int ZEXPORT inflatePrime(strm, bits, value)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:278:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  278 | local void fixedtables(state)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:396:11: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  396 | local int updatewindow(strm, end, copy)
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:622:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  622 | int ZEXPORT inflate(strm, flush)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1277:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1277 | int ZEXPORT inflateEnd(strm)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1291:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1291 | int ZEXPORT inflateGetDictionary(strm, dictionary, dictLength)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1314:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1314 | int ZEXPORT inflateSetDictionary(strm, dictionary, dictLength)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1349:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1349 | int ZEXPORT inflateGetHeader(strm, head)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1377:16: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1377 | local unsigned syncsearch(have, buf, len)
+      |                ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1400:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1400 | int ZEXPORT inflateSync(strm)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1451:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1451 | int ZEXPORT inflateSyncPoint(strm)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1461:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1461 | int ZEXPORT inflateCopy(dest, source)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1508:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1508 | int ZEXPORT inflateUndermine(strm, subvert)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1526:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1526 | int ZEXPORT inflateValidate(strm, check)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1541:14: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1541 | long ZEXPORT inflateMark(strm)
+      |              ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1554:23: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1554 | unsigned long ZEXPORT inflateCodesUsed(strm)
+      |                       ^
+23 warnings generated.
+[63/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_compile.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_compile.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_compile.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_compile.c
+[64/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_match.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_match.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_match.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_match.c
+ninja: build stopped: subcommand failed.
