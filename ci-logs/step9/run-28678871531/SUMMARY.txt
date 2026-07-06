@@ -1,0 +1,242 @@
++ echo 'Run ID: 28678871531'
+Run ID: 28678871531
++ echo 'Commit: 8b58f1cf9d5ce94100abae78c634b211c0a3d5cc'
+Commit: 8b58f1cf9d5ce94100abae78c634b211c0a3d5cc
+++ date -u
++ echo 'Date: Fri Jul  3 19:21:21 UTC 2026'
+Date: Fri Jul  3 19:21:21 UTC 2026
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ tail -60 gtk-build.log
+[1081/1136] Building translation po/lv/LC_MESSAGES/gtk40-lv.mo
+[1082/1136] Building translation po/mai/LC_MESSAGES/gtk40-mai.mo
+[1083/1136] Building translation po/lt/LC_MESSAGES/gtk40-lt.mo
+[1084/1136] Building translation po/mi/LC_MESSAGES/gtk40-mi.mo
+[1085/1136] Building translation po/mk/LC_MESSAGES/gtk40-mk.mo
+[1086/1136] Building translation po/mjw/LC_MESSAGES/gtk40-mjw.mo
+[1087/1136] Building translation po/ml/LC_MESSAGES/gtk40-ml.mo
+[1088/1136] Building translation po/mn/LC_MESSAGES/gtk40-mn.mo
+[1089/1136] Building translation po/mr/LC_MESSAGES/gtk40-mr.mo
+[1090/1136] Building translation po/ms/LC_MESSAGES/gtk40-ms.mo
+[1091/1136] Building translation po/my/LC_MESSAGES/gtk40-my.mo
+[1092/1136] Building translation po/nds/LC_MESSAGES/gtk40-nds.mo
+[1093/1136] Building translation po/nb/LC_MESSAGES/gtk40-nb.mo
+[1094/1136] Building translation po/nn/LC_MESSAGES/gtk40-nn.mo
+[1095/1136] Building translation po/ne/LC_MESSAGES/gtk40-ne.mo
+[1096/1136] Building translation po/nso/LC_MESSAGES/gtk40-nso.mo
+[1097/1136] Building translation po/nl/LC_MESSAGES/gtk40-nl.mo
+[1098/1136] Building translation po/or/LC_MESSAGES/gtk40-or.mo
+[1099/1136] Building translation po/oc/LC_MESSAGES/gtk40-oc.mo
+[1100/1136] Building translation po/ps/LC_MESSAGES/gtk40-ps.mo
+[1101/1136] Building translation po/pa/LC_MESSAGES/gtk40-pa.mo
+[1102/1136] Building translation po/pt_BR/LC_MESSAGES/gtk40-pt_BR.mo
+[1103/1136] Building translation po/pl/LC_MESSAGES/gtk40-pl.mo
+[1104/1136] Building translation po/pt/LC_MESSAGES/gtk40-pt.mo
+[1105/1136] Building translation po/ro/LC_MESSAGES/gtk40-ro.mo
+[1106/1136] Building translation po/rw/LC_MESSAGES/gtk40-rw.mo
+[1107/1136] Building translation po/ru/LC_MESSAGES/gtk40-ru.mo
+[1108/1136] Building translation po/si/LC_MESSAGES/gtk40-si.mo
+[1109/1136] Building translation po/sl/LC_MESSAGES/gtk40-sl.mo
+[1110/1136] Building translation po/sq/LC_MESSAGES/gtk40-sq.mo
+[1111/1136] Building translation po/sk/LC_MESSAGES/gtk40-sk.mo
+[1112/1136] Building translation po/sr@ije/LC_MESSAGES/gtk40-sr@ije.mo
+[1113/1136] Building translation po/sr/LC_MESSAGES/gtk40-sr.mo
+[1114/1136] Building translation po/sr@latin/LC_MESSAGES/gtk40-sr@latin.mo
+[1115/1136] Building translation po/sv/LC_MESSAGES/gtk40-sv.mo
+[1116/1136] Building translation po/te/LC_MESSAGES/gtk40-te.mo
+[1117/1136] Building translation po/tg/LC_MESSAGES/gtk40-tg.mo
+[1118/1136] Building translation po/ta/LC_MESSAGES/gtk40-ta.mo
+[1119/1136] Building translation po/tr/LC_MESSAGES/gtk40-tr.mo
+[1120/1136] Building translation po/tt/LC_MESSAGES/gtk40-tt.mo
+[1121/1136] Building translation po/th/LC_MESSAGES/gtk40-th.mo
+[1122/1136] Building translation po/ug/LC_MESSAGES/gtk40-ug.mo
+[1123/1136] Building translation po/uk/LC_MESSAGES/gtk40-uk.mo
+[1124/1136] Building translation po/ur/LC_MESSAGES/gtk40-ur.mo
+[1125/1136] Generating gtk/Gsk-4.0.typelib with a custom command
+[1126/1136] Building translation po/wa/LC_MESSAGES/gtk40-wa.mo
+[1127/1136] Building translation po/uz@cyrillic/LC_MESSAGES/gtk40-uz@cyrillic.mo
+[1128/1136] Building translation po/uz/LC_MESSAGES/gtk40-uz.mo
+[1129/1136] Building translation po/xh/LC_MESSAGES/gtk40-xh.mo
+[1130/1136] Building translation po/vi/LC_MESSAGES/gtk40-vi.mo
+[1131/1136] Building translation po/yi/LC_MESSAGES/gtk40-yi.mo
+[1132/1136] Building translation po/zh_CN/LC_MESSAGES/gtk40-zh_CN.mo
+[1133/1136] Building translation po/zh_HK/LC_MESSAGES/gtk40-zh_HK.mo
+[1134/1136] Building translation po/zh_TW/LC_MESSAGES/gtk40-zh_TW.mo
+[1135/1136] Generating gtk/Gtk-4.0.gir with a custom command (wrapped by meson to set env)
+clang: warning: -lz: 'linker' input unused [-Wunused-command-line-argument]
+ld: warning: duplicate -rpath '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib' ignored
+ld: warning: duplicate -rpath '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lgio-2.0', '-lglib-2.0', '-lgmodule-2.0', '-lgobject-2.0', '-lintl', '-lz'
+[1136/1136] Generating gtk/Gtk-4.0.typelib with a custom command
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: adw-setup.log ====================='
+===================== TAIL: adw-setup.log =====================
++ '[' -f adw-setup.log ']'
++ tail -60 adw-setup.log
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wunused-function: YES 
+Compiler for C supports arguments -Wfloat-equal: YES 
+Compiler for C supports arguments -fstack-protector-strong: YES 
+Program sassc found: YES (/opt/homebrew/bin/sassc)
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build-time dependency gio-2.0 found: YES 2.84.4
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring adw-version.h using configuration
+Build-time dependency glib-2.0 found: YES 2.84.4
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal)
+Program gen-public-types.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/adw-src/src/gen-public-types.py)
+Library m found: YES
+Configuring config.h using configuration
+Checking if "ld_supports_version_script" links: NO 
+Run-time dependency gobject-introspection-1.0 found: YES 1.86.0
+Dependency gobject-introspection-1.0 for host machine found: YES 1.86.0 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/g-ir-scanner-simwrapped.sh found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/g-ir-scanner-simwrapped.sh)
+Dependency gobject-introspection-1.0 for host machine found: YES 1.86.0 (cached)
+Program /opt/homebrew/opt/gobject-introspection/bin/g-ir-compiler found: YES (/opt/homebrew/opt/gobject-introspection/bin/g-ir-compiler)
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Program msgfmt found: YES (/opt/homebrew/opt/gettext/bin/msgfmt)
+Program msginit found: YES (/opt/homebrew/opt/gettext/bin/msginit)
+Program msgmerge found: YES (/opt/homebrew/opt/gettext/bin/msgmerge)
+Program xgettext found: YES (/opt/homebrew/opt/gettext/bin/xgettext)
+Configuring run using configuration
+Build targets in project: 74
+
+libadwaita 1.9.1
+
+  Options
+    Tests          : false
+    Examples       : false
+    Documentation  : false
+    Introspection  : true
+    Vapi           : false
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    buildtype      : release
+    default_library: shared
+    documentation  : false
+    examples       : false
+    introspection  : enabled
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    tests          : false
+    vapi           : false
+    wrap_mode      : nofallback
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: adw-build.log ====================='
+===================== TAIL: adw-build.log =====================
++ '[' -f adw-build.log ']'
++ tail -60 adw-build.log
+      | ^~~~~~~~~~~~~~
+1 warning generated.
+[141/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-inspector-page.c.o
+[142/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-settings.c.o
+[143/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-settings-impl.c.o
+[144/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-settings-impl-gsettings.c.o
+[145/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-settings-impl-legacy.c.o
+[146/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-sheet-controls.c.o
+[147/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-shadow-helper.c.o
+[148/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-shortcut-row.c.o
+[149/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-tab.c.o
+[150/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-toast-widget.c.o
+[151/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-tab-thumbnail.c.o
+[152/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-tab-box.c.o
+[153/193] Building translation po/ia/LC_MESSAGES/libadwaita-ia.mo
+[154/193] Building translation po/id/LC_MESSAGES/libadwaita-id.mo
+[155/193] Building translation po/it/LC_MESSAGES/libadwaita-it.mo
+[156/193] Building translation po/ja/LC_MESSAGES/libadwaita-ja.mo
+[157/193] Building translation po/ka/LC_MESSAGES/libadwaita-ka.mo
+[158/193] Building translation po/kab/LC_MESSAGES/libadwaita-kab.mo
+[159/193] Building translation po/kk/LC_MESSAGES/libadwaita-kk.mo
+[160/193] Building translation po/ko/LC_MESSAGES/libadwaita-ko.mo
+[161/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-view-switcher-button.c.o
+[162/193] Building translation po/lt/LC_MESSAGES/libadwaita-lt.mo
+[163/193] Building translation po/lv/LC_MESSAGES/libadwaita-lv.mo
+[164/193] Building translation po/nb/LC_MESSAGES/libadwaita-nb.mo
+[165/193] Building translation po/ne/LC_MESSAGES/libadwaita-ne.mo
+[166/193] Building translation po/nl/LC_MESSAGES/libadwaita-nl.mo
+[167/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-tab-grid.c.o
+[168/193] Building translation po/nn/LC_MESSAGES/libadwaita-nn.mo
+[169/193] Building translation po/oc/LC_MESSAGES/libadwaita-oc.mo
+[170/193] Building translation po/pa/LC_MESSAGES/libadwaita-pa.mo
+[171/193] Building translation po/pl/LC_MESSAGES/libadwaita-pl.mo
+[172/193] Building translation po/pt/LC_MESSAGES/libadwaita-pt.mo
+[173/193] Building translation po/pt_BR/LC_MESSAGES/libadwaita-pt_BR.mo
+[174/193] Building translation po/ro/LC_MESSAGES/libadwaita-ro.mo
+[175/193] Building translation po/sk/LC_MESSAGES/libadwaita-sk.mo
+[176/193] Building translation po/ru/LC_MESSAGES/libadwaita-ru.mo
+[177/193] Building translation po/sl/LC_MESSAGES/libadwaita-sl.mo
+[178/193] Building translation po/sr/LC_MESSAGES/libadwaita-sr.mo
+[179/193] Building translation po/sr@latin/LC_MESSAGES/libadwaita-sr@latin.mo
+[180/193] Building translation po/th/LC_MESSAGES/libadwaita-th.mo
+[181/193] Building translation po/sv/LC_MESSAGES/libadwaita-sv.mo
+[182/193] Building translation po/tr/LC_MESSAGES/libadwaita-tr.mo
+[183/193] Building translation po/ug/LC_MESSAGES/libadwaita-ug.mo
+[184/193] Building translation po/uk/LC_MESSAGES/libadwaita-uk.mo
+[185/193] Building translation po/vi/LC_MESSAGES/libadwaita-vi.mo
+[186/193] Building translation po/uz/LC_MESSAGES/libadwaita-uz.mo
+[187/193] Building translation po/zh_CN/LC_MESSAGES/libadwaita-zh_CN.mo
+[188/193] Building translation po/zh_TW/LC_MESSAGES/libadwaita-zh_TW.mo
+[189/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-settings-impl-portal.c.o
+[190/193] Compiling C object src/libadwaita-1.0.dylib.p/adw-widget-utils.c.o
+[191/193] Linking target src/libadwaita-1.0.dylib
+[192/193] Generating src/Adw-1.gir with a custom command (wrapped by meson to set env)
+ld: warning: duplicate -rpath '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/adw-build/src' ignored
+ld: warning: duplicate -rpath '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib' ignored
+ld: warning: duplicate -rpath '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib' ignored
+ld: warning: duplicate -rpath '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib' ignored
+ld: warning: ignoring duplicate libraries: '-ladwaita-1', '-lgio-2.0', '-lglib-2.0', '-lgobject-2.0', '-lintl'
+[193/193] Generating src/Adw-1.typelib with a custom command
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: typelibs.txt ====================='
+===================== TAIL: typelibs.txt =====================
++ '[' -f typelibs.txt ']'
++ tail -60 typelibs.txt
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/Adw-1.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/cairo-1.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/fontconfig-2.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/freetype2-2.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/Gdk-4.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/GdkPixbuf-2.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/GdkPixdata-2.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/Gio-2.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/GioUnix-2.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/GIRepository-3.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/GL-1.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/GLib-2.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/GLibUnix-2.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/GModule-2.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/GObject-2.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/Graphene-1.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/Gsk-4.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/Gtk-4.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/HarfBuzz-0.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/libxml2-2.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/Pango-1.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/PangoCairo-1.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/PangoFc-1.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/PangoFT2-1.0.typelib
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/girepository-1.0/PangoOT-1.0.typelib
++ echo
+
