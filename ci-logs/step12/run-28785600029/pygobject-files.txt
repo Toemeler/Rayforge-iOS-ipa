@@ -1,0 +1,2 @@
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_gi_cairo.cpython-313-iphoneos.so
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_gi.cpython-313-iphoneos.so

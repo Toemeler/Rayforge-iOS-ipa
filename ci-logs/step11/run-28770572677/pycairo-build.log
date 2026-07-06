@@ -1,0 +1,36 @@
+ninja: Entering directory `pycairo-build'
+[1/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/bufferproxy.c.o
+[2/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/device.c.o
+[3/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/cairomodule.c.o
+[4/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/enums.c.o
+[5/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/error.c.o
+[6/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/context.c.o
+[7/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/glyph.c.o
+[8/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/font.c.o
+[9/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/matrix.c.o
+[10/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/misc.c.o
+[11/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/path.c.o
+[12/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/rectangle.c.o
+[13/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/textcluster.c.o
+[14/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/textextents.c.o
+[15/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/region.c.o
+[16/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/pattern.c.o
+[17/21] Copying file cairo/__init__.py
+[18/21] Copying file cairo/__init__.pyi
+[19/21] Copying file cairo/py.typed
+[20/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/surface.c.o
+[21/21] Linking target cairo/_cairo.cpython-313-iphonesimulator.so
+ld: warning: -undefined dynamic_lookup is deprecated on iOS-simulator
+ld: warning: search path '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14' not found
+ninja: Entering directory `pycairo-build'
+[0/1] Installing files
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo/__init__.py'...
+Installing cairo/_cairo.cpython-313-iphonesimulator.so to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/py3cairo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/include/pycairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-build/METADATA to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/pycairo-1.29.0.dist-info
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/__init__.pyi to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/py.typed to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/py3cairo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-build/meson-private/py3cairo.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/pkgconfig
+Running custom install script '/opt/homebrew/opt/python@3.13/bin/python3.13 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-build/meson-private/pycompile.py python-3.13-installed.json 0'
