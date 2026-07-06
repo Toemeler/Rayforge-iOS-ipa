@@ -268,10 +268,13 @@ G_DEFINE_TYPE_WITH_CODE (GdkIOSToplevel, gdk_ios_toplevel, GDK_TYPE_IOS_SURFACE,
  *      it is MAXIMIZED *before* asking it for a size — gtk_window's
  *      compute-size handler only requests the full monitor bounds when it
  *      believes it is maximized (and then also drops the CSD shadow).
- *   2. Ask GTK what size it wants, giving the screen as the bounds.
- *   3. Grant exactly what GTK answered, clamped to the screen. Never
- *      force a different size: if the surface size disagrees with the
- *      size GTK laid out for, the paint is cut off / leaves gaps.
+ *   2. Ask GTK what size it wants, giving the screen as the bounds
+ *      (this also yields GTK's min size).
+ *   3. Primary window: force the full screen size, like a real WM does
+ *      on maximize — compute_size only reports GTK's *preference* and
+ *      never widens to bounds by itself; GTK reflows to the size we
+ *      report via gtk_window_native_layout(). Dialogs: grant exactly
+ *      what GTK asked, clamped to the screen.
  *   4. Place it: primary at the origin, transient dialogs centred.
  *
  * Renegotiating on every layout pass lets height-for-width content (e.g.
@@ -297,8 +300,24 @@ gdk_ios_toplevel_configure (GdkIOSToplevel *self)
   gdk_toplevel_size_init (&size, bounds_w, bounds_h);
   gdk_toplevel_notify_compute_size (GDK_TOPLEVEL (self), &size);
 
-  int win_w = size.width > 0 ? MIN (size.width, bounds_w) : bounds_w;
-  int win_h = size.height > 0 ? MIN (size.height, bounds_h) : bounds_h;
+  int win_w, win_h;
+  if (!is_dialog)
+    {
+      /* Maximized primary: a real WM forces the workarea size regardless
+       * of the window's preference (compute_size only reports GTK's
+       * *preferred* size — gtk_window_compute_default_size never widens
+       * to bounds on its own, it just clamps the natural size). GTK then
+       * reflows to whatever we report via gtk_window_native_layout().
+       * Only GTK's min size may override the forced size. */
+      win_w = MAX (bounds_w, size.min_width);
+      win_h = MAX (bounds_h, size.min_height);
+    }
+  else
+    {
+      /* Dialogs get exactly the size GTK asked for, clamped to screen. */
+      win_w = size.width > 0 ? MIN (size.width, bounds_w) : bounds_w;
+      win_h = size.height > 0 ? MIN (size.height, bounds_h) : bounds_h;
+    }
   int win_x = is_dialog ? (bounds_w - win_w) / 2 : 0;
   int win_y = is_dialog ? (bounds_h - win_h) / 2 : 0;
 
