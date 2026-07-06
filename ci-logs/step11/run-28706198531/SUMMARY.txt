@@ -1,0 +1,595 @@
++ echo 'Run ID: 28706198531'
+Run ID: 28706198531
++ echo 'Commit: 36ab9ef2376465ddd1eaafaef94cce1603fac121'
+Commit: 36ab9ef2376465ddd1eaafaef94cce1603fac121
+++ date -u
++ echo 'Date: Sat Jul  4 12:35:36 UTC 2026'
+Date: Sat Jul  4 12:35:36 UTC 2026
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pycairo-setup.log ====================='
+===================== TAIL: pycairo-setup.log =====================
++ '[' -f pycairo-setup.log ']'
++ tail -50 pycairo-setup.log
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Program /opt/homebrew/opt/python@3.13/bin/python3.13 found: YES (/opt/homebrew/opt/python@3.13/bin/python3.13)
+Compiler for C supports arguments -Wall: YES 
+Compiler for C supports arguments -Warray-bounds: YES 
+Compiler for C supports arguments -Wcast-align: YES 
+Compiler for C supports arguments -Wconversion: YES 
+Compiler for C supports arguments -Wextra: YES 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Wformat-nonliteral: YES 
+Compiler for C supports arguments -Wformat-security: YES 
+Compiler for C supports arguments -Wimplicit-function-declaration: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpacked: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wreturn-type: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wsign-compare: YES 
+Compiler for C supports arguments -Wstrict-aliasing: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wunused-but-set-variable: YES 
+Compiler for C supports arguments -Wswitch-default: YES 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Configuring METADATA using configuration
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency cairo found: YES 1.18.4
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency python found: YES 3.13
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build targets in project: 4
+
+pycairo 1.29.0
+
+  User defined options
+    Cross files: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+                 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-python.txt
+    buildtype  : release
+    prefix     : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage
+    python     : /opt/homebrew/opt/python@3.13/bin/python3.13
+    tests      : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pycairo-build.log ====================='
+===================== TAIL: pycairo-build.log =====================
++ '[' -f pycairo-build.log ']'
++ tail -50 pycairo-build.log
+ninja: Entering directory `pycairo-build'
+[1/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/bufferproxy.c.o
+[2/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/cairomodule.c.o
+[3/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/device.c.o
+[4/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/enums.c.o
+[5/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/glyph.c.o
+[6/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/error.c.o
+[7/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/matrix.c.o
+[8/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/misc.c.o
+[9/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/path.c.o
+[10/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/context.c.o
+[11/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/rectangle.c.o
+[12/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/font.c.o
+[13/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/textcluster.c.o
+[14/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/textextents.c.o
+[15/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/pattern.c.o
+[16/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/region.c.o
+[17/21] Copying file cairo/__init__.pyi
+[18/21] Copying file cairo/__init__.py
+[19/21] Copying file cairo/py.typed
+[20/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/surface.c.o
+[21/21] Linking target cairo/_cairo.cpython-313-iphonesimulator.so
+ld: warning: -undefined dynamic_lookup is deprecated on iOS-simulator
+ld: warning: search path '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14' not found
+ninja: Entering directory `pycairo-build'
+[0/1] Installing files
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo/__init__.py'...
+Installing cairo/_cairo.cpython-313-iphonesimulator.so to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/py3cairo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/include/pycairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-build/METADATA to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/pycairo-1.29.0.dist-info
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/__init__.pyi to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/py.typed to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/py3cairo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-build/meson-private/py3cairo.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/pkgconfig
+Running custom install script '/opt/homebrew/opt/python@3.13/bin/python3.13 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-build/meson-private/pycompile.py python-3.13-installed.json 0'
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pygobject-setup.log ====================='
+===================== TAIL: pygobject-setup.log =====================
++ '[' -f pygobject-setup.log ']'
++ tail -50 pygobject-setup.log
+Compiler for C supports arguments -Wlogical-op: NO 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wnull-dereference: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpacked: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wrestrict: NO 
+Compiler for C supports arguments -Wreturn-type: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wsign-compare: YES 
+Compiler for C supports arguments -Wstrict-aliasing: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wswitch-default: YES 
+Compiler for C supports arguments -Wswitch-enum: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wunused-but-set-variable: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wno-incompatible-pointer-types-discards-qualifiers: YES 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wno-discarded-qualifiers: NO 
+Compiler for C supports arguments -Wno-sign-conversion: YES 
+Compiler for C supports arguments -Wno-cast-function-type: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Configuring config.h using configuration
+Configuring pygobject-3.0.pc using configuration
+Configuring METADATA using configuration
+Configuring config.h using configuration
+Build targets in project: 2
+
+pygobject 3.56.3
+
+  Subprojects
+    pythoncapi-compat: YES
+
+  User defined options
+    Cross files      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+                       /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-python.txt
+    buildtype        : release
+    prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage
+    pycairo          : enabled
+    python           : /opt/homebrew/opt/python@3.13/bin/python3.13
+    tests            : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pygobject-build.log ====================='
+===================== TAIL: pygobject-build.log =====================
++ '[' -f pygobject-build.log ']'
++ tail -50 pygobject-build.log
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_ossighelper.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_propertyhelper.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_signalhelper.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_signature.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/types.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GLib.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GLibUnix.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Gtk.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Gdk.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GdkPixbuf.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GObject.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Gio.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GioUnix.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GIMarshallingTests.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Pango.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/__init__.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/repository/__init__.py'...
+Installing gi/_gi.cpython-313-iphonesimulator.so to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing gi/_gi_cairo.cpython-313-iphonesimulator.so to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/pygobject.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/include/pygobject-3.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/pygobject-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/include/pygobject-3.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-build/pygobject-3.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-build/METADATA to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/PyGObject-3.56.3.dist-info
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/events.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_constants.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/docstring.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_enum.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_error.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_gtktemplate.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/importer.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/module.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_ossighelper.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_propertyhelper.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_signalhelper.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_signature.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/types.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GLib.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GLibUnix.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Gtk.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Gdk.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GdkPixbuf.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GObject.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Gio.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GioUnix.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GIMarshallingTests.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Pango.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/repository/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/repository
+Running custom install script '/opt/homebrew/opt/python@3.13/bin/python3.13 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-build/meson-private/pycompile.py python-3.13-installed.json 0'
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: raygeo-build.log ====================='
+===================== TAIL: raygeo-build.log =====================
++ '[' -f raygeo-build.log ']'
++ tail -50 raygeo-build.log
+  --> src/trace.rs:16:7
+   |
+16 | const TRACE_MAGIC: [u8; 4] = *b"ADPT";
+   |       ^^^^^^^^^^^
+
+warning: constant `TRACE_VERSION` is never used
+  --> src/trace.rs:18:7
+   |
+18 | const TRACE_VERSION: u32 = 1;
+   |       ^^^^^^^^^^^^^
+
+warning: constant `TRACE_RECORD_SIZE` is never used
+  --> src/trace.rs:20:7
+   |
+20 | const TRACE_RECORD_SIZE: usize = 128;
+   |       ^^^^^^^^^^^^^^^^^
+
+warning: constant `PAYLOAD_SIZE` is never used
+  --> src/trace.rs:22:18
+   |
+22 | pub(crate) const PAYLOAD_SIZE: usize = TRACE_RECORD_SIZE - 1;
+   |                  ^^^^^^^^^^^^
+
+warning: struct `Tracer` is never constructed
+  --> src/trace.rs:25:19
+   |
+25 | pub(crate) struct Tracer {
+   |                   ^^^^^^
+
+warning: associated items `open`, `write`, `finish`, and `path` are never used
+  --> src/trace.rs:33:19
+   |
+31 | impl Tracer {
+   | ----------- associated items in this implementation
+32 |     /// Open a new trace file, writing the 12-byte header.
+33 |     pub(crate) fn open(path: &PathBuf) -> std::io::Result<Self> {
+   |                   ^^^^
+...
+48 |     pub(crate) fn write(&mut self, kind: u8, payload: &[u8; PAYLOAD_SIZE]) {
+   |                   ^^^^^
+...
+57 |     pub(crate) fn finish(&mut self) -> std::io::Result<()> {
+   |                   ^^^^^^
+...
+64 |     pub(crate) fn path(&self) -> &std::path::Path {
+   |                   ^^^^
+
+warning: `raygeo` (lib) generated 29 warnings (run `cargo fix --lib -p raygeo` to apply 3 suggestions)
+    Finished `release` profile [optimized] target(s) in 1m 17s
+📦 Built wheel for abi3 Python ≥ 3.11 to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/rust-wheels/raygeo-0.0.0-cp311-abi3-ios_17_0_arm64_iphonesimulator.whl
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: vtracer-build.log ====================='
+===================== TAIL: vtracer-build.log =====================
++ '[' -f vtracer-build.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: beeware-dl.log ====================='
+===================== TAIL: beeware-dl.log =====================
++ '[' -f beeware-dl.log ']'
++ tail -50 beeware-dl.log
+Looking in indexes: https://pypi.anaconda.org/beeware/simple, https://pypi.org/simple
+Collecting numpy
+  Downloading numpy-2.5.0.post1-cp313-cp313-ios_13_0_arm64_iphonesimulator.whl (5.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 16.1 MB/s  0:00:00
+Saved ./ios-wheels/numpy-2.5.0.post1-cp313-cp313-ios_13_0_arm64_iphonesimulator.whl
+Successfully downloaded numpy
+Looking in indexes: https://pypi.anaconda.org/beeware/simple, https://pypi.org/simple
+Collecting aiohttp
+  Downloading aiohttp-3.14.1-cp313-cp313-ios_13_0_arm64_iphonesimulator.whl.metadata (8.3 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp)
+  Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp)
+  Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting attrs>=17.3.0 (from aiohttp)
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp)
+  Downloading frozenlist-1.8.0-py3-none-any.whl.metadata (20 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp)
+  Downloading multidict-6.7.1-py3-none-any.whl.metadata (5.3 kB)
+Collecting propcache>=0.2.0 (from aiohttp)
+  Downloading propcache-0.5.2-py3-none-any.whl.metadata (16 kB)
+Collecting yarl<2.0,>=1.17.0 (from aiohttp)
+  Downloading yarl-1.24.2-py3-none-any.whl.metadata (94 kB)
+Collecting idna>=2.0 (from yarl<2.0,>=1.17.0->aiohttp)
+  Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+Downloading aiohttp-3.14.1-cp313-cp313-ios_13_0_arm64_iphonesimulator.whl (492 kB)
+Downloading multidict-6.7.1-py3-none-any.whl (12 kB)
+Downloading yarl-1.24.2-py3-none-any.whl (53 kB)
+Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading frozenlist-1.8.0-py3-none-any.whl (13 kB)
+Downloading idna-3.18-py3-none-any.whl (65 kB)
+Downloading propcache-0.5.2-py3-none-any.whl (14 kB)
+Saved ./ios-wheels/aiohttp-3.14.1-cp313-cp313-ios_13_0_arm64_iphonesimulator.whl
+Saved ./ios-wheels/multidict-6.7.1-py3-none-any.whl
+Saved ./ios-wheels/yarl-1.24.2-py3-none-any.whl
+Saved ./ios-wheels/aiohappyeyeballs-2.7.1-py3-none-any.whl
+Saved ./ios-wheels/aiosignal-1.4.0-py3-none-any.whl
+Saved ./ios-wheels/attrs-26.1.0-py3-none-any.whl
+Saved ./ios-wheels/frozenlist-1.8.0-py3-none-any.whl
+Saved ./ios-wheels/idna-3.18-py3-none-any.whl
+Saved ./ios-wheels/propcache-0.5.2-py3-none-any.whl
+Successfully downloaded aiohttp multidict yarl aiohappyeyeballs aiosignal attrs frozenlist idna propcache
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pure-dl.log ====================='
+===================== TAIL: pure-dl.log =====================
++ '[' -f pure-dl.log ']'
++ tail -50 pure-dl.log
+  Downloading pyserial-3.5-py2.py3-none-any.whl.metadata (1.6 kB)
+Collecting PyOpenGL==3.1.10
+  Downloading pyopengl-3.1.10-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing_extensions
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pyparsing
+  Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting fonttools
+  Downloading fonttools-4.63.0-py3-none-any.whl.metadata (118 kB)
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading ezdxf-1.4.4b3-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 162.8 MB/s  0:00:00
+Downloading platformdirs-4.3.6-py3-none-any.whl (18 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading pypdf-6.12.1-py3-none-any.whl (343 kB)
+Downloading semver-3.0.2-py3-none-any.whl (17 kB)
+Downloading svgelements-1.9.6-py2.py3-none-any.whl (137 kB)
+Downloading trimesh-4.6.8-py3-none-any.whl (709 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 709.3/709.3 kB 120.1 MB/s  0:00:00
+Downloading websockets-14.2-py3-none-any.whl (157 kB)
+Downloading asyncudp-0.11.0-py3-none-any.whl (3.5 kB)
+Downloading gitpython-3.1.50-py3-none-any.whl (212 kB)
+Downloading pyopengl-3.1.10-py3-none-any.whl (3.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 160.0 MB/s  0:00:00
+Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+Downloading pyserial-3.5-py2.py3-none-any.whl (90 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Downloading fonttools-4.63.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 181.0 MB/s  0:00:00
+Saved ./pure-wheels/blinker-1.9.0-py3-none-any.whl
+Saved ./pure-wheels/ezdxf-1.4.4b3-py3-none-any.whl
+Saved ./pure-wheels/platformdirs-4.3.6-py3-none-any.whl
+Saved ./pure-wheels/pluggy-1.6.0-py3-none-any.whl
+Saved ./pure-wheels/pypdf-6.12.1-py3-none-any.whl
+Saved ./pure-wheels/semver-3.0.2-py3-none-any.whl
+Saved ./pure-wheels/svgelements-1.9.6-py2.py3-none-any.whl
+Saved ./pure-wheels/trimesh-4.6.8-py3-none-any.whl
+Saved ./pure-wheels/websockets-14.2-py3-none-any.whl
+Saved ./pure-wheels/asyncudp-0.11.0-py3-none-any.whl
+Saved ./pure-wheels/gitpython-3.1.50-py3-none-any.whl
+Saved ./pure-wheels/pyopengl-3.1.10-py3-none-any.whl
+Saved ./pure-wheels/gitdb-4.0.12-py3-none-any.whl
+Saved ./pure-wheels/smmap-5.0.3-py3-none-any.whl
+Saved ./pure-wheels/pyserial-3.5-py2.py3-none-any.whl
+Saved ./pure-wheels/typing_extensions-4.16.0-py3-none-any.whl
+Saved ./pure-wheels/pyparsing-3.3.2-py3-none-any.whl
+Saved ./pure-wheels/fonttools-4.63.0-py3-none-any.whl
+Successfully downloaded blinker ezdxf platformdirs pluggy pypdf semver svgelements trimesh websockets asyncudp GitPython PyOpenGL gitdb smmap pyserial typing_extensions pyparsing fonttools
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: rayforge-sha.txt ====================='
+===================== TAIL: rayforge-sha.txt =====================
++ '[' -f rayforge-sha.txt ']'
++ tail -50 rayforge-sha.txt
+74c2a124d18d74c89c45d75f96ca0e0ef744e39f
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: bundle-step.log ====================='
+===================== TAIL: bundle-step.log =====================
++ '[' -f bundle-step.log ']'
++ tail -50 bundle-step.log
+RayforgeApp.app/python/lib/python3.13/lib-dynload/_testimportmultiple.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/lib-dynload/_heapq.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/lib-dynload/_pickle.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/lib-dynload/_bisect.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/lib-dynload/_testexternalinspection.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/lib-dynload/_queue.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/lib-dynload/_interpreters.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/lib-dynload/termios.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/lib-dynload/_opcode.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/lib-dynload/_dbm.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/lib-dynload/_sha1.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/lib-dynload/_zoneinfo.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/_http_parser.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/_http_writer.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/_websocket/mask.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/aiohttp/_websocket/reader_c.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/gi/_gi_cairo.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/gi/_gi.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/raygeo/raygeo.abi3.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/cairo/_cairo.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/linalg/lapack_lite.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/linalg/_umath_linalg.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/_core/_operand_flag_tests.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/_core/_simd.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/_core/_struct_ufunc_tests.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/_core/_multiarray_umath.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/_core/_multiarray_tests.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/_core/_rational_tests.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/_core/_umath_tests.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/fft/_pocketfft_umath.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/random/_pcg64.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/random/bit_generator.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/random/mtrand.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/random/_sfc64.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/random/_philox.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/random/_generator.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/random/_mt19937.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/random/_bounded_integers.cpython-313-iphonesimulator.so: replacing existing signature
+RayforgeApp.app/python/lib/python3.13/site-packages/numpy/random/_common.cpython-313-iphonesimulator.so: replacing existing signature
++ codesign --force --deep --sign - RayforgeApp.app/Frameworks/Python.framework
+RayforgeApp.app/Frameworks/Python.framework: replacing existing signature
++ codesign --force --sign - RayforgeApp.app
+RayforgeApp.app: replacing existing signature
++ codesign -dv RayforgeApp.app
++ head -5
+Executable=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/RayforgeApp.app/rayforge-app
+Identifier=org.rayforge.app
+Format=app bundle with Mach-O thin (arm64)
+CodeDirectory v=20400 size=649 flags=0x2(adhoc) hashes=14+3 location=embedded
+Signature=adhoc
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: launch-step.log ====================='
+===================== TAIL: launch-step.log =====================
++ '[' -f launch-step.log ']'
++ tail -50 launch-step.log
++ test 1 = 1
++ grep -q 'RAYFORGE BOOT FAILED' app-console.log app-syslog.log
++ echo '== boot failure context:'
+== boot failure context:
++ grep -B2 -A40 Traceback app-syslog.log
++ head -80
+2026-07-04 12:34:31.821372+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python) this module running...
+2026-07-04 12:34:31.821541+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (Python) RAYFORGE BOOT FAILED
+2026-07-04 12:34:31.823336+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python) Traceback (most recent call last):
+2026-07-04 12:34:31.824185+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/ios_main.py", line 64, in main
+2026-07-04 12:34:31.824208+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     rayforge.app.main()
+2026-07-04 12:34:31.824216+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     ~~~~~~~~~~~~~~~~~^^
+2026-07-04 12:34:31.824227+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/app.py", line 495, in main
+2026-07-04 12:34:31.824234+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from rayforge.ui_gtk.sim3d import initialize
+2026-07-04 12:34:31.824244+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/ui_gtk/__init__.py", line 1, in <module>
+2026-07-04 12:34:31.824253+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .canvas2d.elements.dot import DotElement
+2026-07-04 12:34:31.824261+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/ui_gtk/canvas2d/__init__.py", line 2, in <module>
+2026-07-04 12:34:31.824267+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .surface import WorkSurface
+2026-07-04 12:34:31.824326+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/ui_gtk/canvas2d/surface.py", line 17, in <module>
+2026-07-04 12:34:31.824404+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from ...camera.controller import CameraController
+2026-07-04 12:34:31.824466+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/camera/controller.py", line 12, in <module>
+2026-07-04 12:34:31.824511+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from ..image.util.srgb import resize_linear_nd
+2026-07-04 12:34:31.824564+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/image/__init__.py", line 38, in <module>
+2026-07-04 12:34:31.824609+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .ruida.importer import RuidaImporter
+2026-07-04 12:34:31.824663+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/image/ruida/__init__.py", line 1, in <module>
+2026-07-04 12:34:31.824706+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .importer import RuidaImporter
+2026-07-04 12:34:31.824758+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/image/ruida/importer.py", line 23, in <module>
+2026-07-04 12:34:31.824806+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .parser import RuidaParseError, RuidaParser
+2026-07-04 12:34:31.824862+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/image/ruida/parser.py", line 4, in <module>
+2026-07-04 12:34:31.824900+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from ...machine.driver.ruida.ruida_util import (
+2026-07-04 12:34:31.824949+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     ...<6 lines>...
+2026-07-04 12:34:31.824992+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     )
+2026-07-04 12:34:31.825042+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/machine/driver/__init__.py", line 5, in <module>
+2026-07-04 12:34:31.825084+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .dummy import NoDeviceDriver
+2026-07-04 12:34:31.825148+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/machine/driver/dummy.py", line 23, in <module>
+2026-07-04 12:34:31.825196+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from ..transport import TransportStatus
+2026-07-04 12:34:31.825246+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/machine/transport/__init__.py", line 3, in <module>
+2026-07-04 12:34:31.825289+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .grbl import GrblSerialTransport
+2026-07-04 12:34:31.825336+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/machine/transport/grbl.py", line 8, in <module>
+2026-07-04 12:34:31.825379+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .serial import SerialTransport
+2026-07-04 12:34:31.825431+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/machine/transport/serial.py", line 11, in <module>
+2026-07-04 12:34:31.825489+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from serial.tools import list_ports
+2026-07-04 12:34:31.825553+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/serial/tools/list_ports.py", line 31, in <module>
+2026-07-04 12:34:31.825613+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from serial.tools.list_ports_posix import comports
+2026-07-04 12:34:31.825663+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/serial/tools/list_ports_posix.py", line 114, in <module>
+2026-07-04 12:34:31.825706+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     raise ImportError("Sorry: no implementation for your platform ('{}') available".format(os.name))
+2026-07-04 12:34:31.825763+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python) ImportError: Sorry: no implementation for your platform ('posix') available
+2026-07-04 12:34:31.883090+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x10400be60> (114AFDF3-65EB-41FF-AA4F-F74ABC004C4D)
+2026-07-04 12:34:31.883354+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (UIKitCore) [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:org.rayforge.app-default  persistentID: 114AFDF3-65EB-41FF-AA4F-F74ABC004C4D
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: testapp-link.log ====================='
+===================== TAIL: testapp-link.log =====================
++ '[' -f testapp-link.log ']'
++ tail -50 testapp-link.log
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: app-console.log ====================='
+===================== TAIL: app-console.log =====================
++ '[' -f app-console.log ']'
++ tail -50 app-console.log
+Gdk-Message: 12:34:28.163: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app
+** Message: 12:34:28.667: GI_TYPELIB_PATH: /Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/lib/girepository-1.0
+** Message: 12:34:28.667: python home: /Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python
+** Message: 12:34:28.667: site-packages: /Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages
+Fontconfig warning: using without calling FcInit()
+** Message: 12:34:31.951: pygobject self-test UI presented
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log raygeo-build.log vtracer-build.log beeware-dl.log pure-dl.log rayforge-sha.txt bundle-step.log launch-step.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: app-syslog.log ====================='
+===================== TAIL: app-syslog.log =====================
++ '[' -f app-syslog.log ']'
++ tail -50 app-syslog.log
+2026-07-04 12:34:31.824253+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .canvas2d.elements.dot import DotElement
+2026-07-04 12:34:31.824261+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/ui_gtk/canvas2d/__init__.py", line 2, in <module>
+2026-07-04 12:34:31.824267+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .surface import WorkSurface
+2026-07-04 12:34:31.824326+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/ui_gtk/canvas2d/surface.py", line 17, in <module>
+2026-07-04 12:34:31.824404+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from ...camera.controller import CameraController
+2026-07-04 12:34:31.824466+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/camera/controller.py", line 12, in <module>
+2026-07-04 12:34:31.824511+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from ..image.util.srgb import resize_linear_nd
+2026-07-04 12:34:31.824564+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/image/__init__.py", line 38, in <module>
+2026-07-04 12:34:31.824609+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .ruida.importer import RuidaImporter
+2026-07-04 12:34:31.824663+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/image/ruida/__init__.py", line 1, in <module>
+2026-07-04 12:34:31.824706+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .importer import RuidaImporter
+2026-07-04 12:34:31.824758+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/image/ruida/importer.py", line 23, in <module>
+2026-07-04 12:34:31.824806+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .parser import RuidaParseError, RuidaParser
+2026-07-04 12:34:31.824862+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/image/ruida/parser.py", line 4, in <module>
+2026-07-04 12:34:31.824900+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from ...machine.driver.ruida.ruida_util import (
+2026-07-04 12:34:31.824949+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     ...<6 lines>...
+2026-07-04 12:34:31.824992+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     )
+2026-07-04 12:34:31.825042+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/machine/driver/__init__.py", line 5, in <module>
+2026-07-04 12:34:31.825084+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .dummy import NoDeviceDriver
+2026-07-04 12:34:31.825148+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/machine/driver/dummy.py", line 23, in <module>
+2026-07-04 12:34:31.825196+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from ..transport import TransportStatus
+2026-07-04 12:34:31.825246+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/machine/transport/__init__.py", line 3, in <module>
+2026-07-04 12:34:31.825289+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .grbl import GrblSerialTransport
+2026-07-04 12:34:31.825336+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/machine/transport/grbl.py", line 8, in <module>
+2026-07-04 12:34:31.825379+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from .serial import SerialTransport
+2026-07-04 12:34:31.825431+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/machine/transport/serial.py", line 11, in <module>
+2026-07-04 12:34:31.825489+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from serial.tools import list_ports
+2026-07-04 12:34:31.825553+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/serial/tools/list_ports.py", line 31, in <module>
+2026-07-04 12:34:31.825613+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     from serial.tools.list_ports_posix import comports
+2026-07-04 12:34:31.825663+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)   File "/Users/runner/Library/Developer/CoreSimulator/Devices/EE2B1C87-76F8-46A3-B7E4-F1A6246F3C37/data/Containers/Bundle/Application/7BA7F425-7F10-401E-BD8A-DC7C5B6DC334/RayforgeApp.app/python/lib/python3.13/site-packages/serial/tools/list_ports_posix.py", line 114, in <module>
+2026-07-04 12:34:31.825706+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python)     raise ImportError("Sorry: no implementation for your platform ('{}') available".format(os.name))
+2026-07-04 12:34:31.825763+0000 0xd645     Error       0x0                  17308  0    rayforge-app: (Python) ImportError: Sorry: no implementation for your platform ('posix') available
+2026-07-04 12:34:31.883090+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x10400be60> (114AFDF3-65EB-41FF-AA4F-F74ABC004C4D)
+2026-07-04 12:34:31.883354+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (UIKitCore) [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:org.rayforge.app-default  persistentID: 114AFDF3-65EB-41FF-AA4F-F74ABC004C4D
+2026-07-04 12:34:31.883458+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason removed: 12; deactivation reasons: 4128 -> 32; animating application lifecycle event: 1
+2026-07-04 12:34:31.883503+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (UIKitCore) [com.apple.KeyboardArbiter:Client] Send setDeactivating: N (-DeactivationReason:SuspendedEventsOnly)
+2026-07-04 12:34:31.883732+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason removed: 5; deactivation reasons: 32 -> 0; animating application lifecycle event: 0
+2026-07-04 12:34:31.884424+0000 0xd645     Default     0x0                  17308  1    rayforge-app: (UIKitCore) [com.apple.UIKit:EventDeferring] [0x60000290ac30] Scene target of event deferring environments did update: scene: 0x10400be60; current systemShellManagesKeyboardFocus: 1; systemShellManagesKeyboardFocusForScene: 1; eligibleForRecordRemoval: 1;
+2026-07-04 12:34:31.884464+0000 0xd645     Default     0x0                  17308  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x10400be60; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.app-default
+2026-07-04 12:34:31.884635+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (libAccessibility.dylib) [com.apple.Accessibility:AXCommon] Read Per-App on Init: Smart invert = (null)
+2026-07-04 12:34:31.884793+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (UIKitCore) [com.apple.KeyboardArbiter:Client] startConnection
+2026-07-04 12:34:31.884930+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (UIKitCore) [com.apple.KeyboardArbiter:Client] handleKeyboardChange: set currentKeyboard:N (wasKeyboard:N)
+2026-07-04 12:34:31.886108+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardArbiterClientLog] isWritingToolsHandlingKeyboardTracking:Y (WT ready:Y, Arbiter ready:Y)
+2026-07-04 12:34:32.206032+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (Network) [com.apple.network:activity] <nw_activity 50:1 [FFC2C2C6-10D1-4009-815E-208B8CFB4770] (global parent) (reporting strategy default) complete (reason success)> complete with reason 2 (success), duration 5670ms
+2026-07-04 12:34:32.206088+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (Network) [com.apple.network:activity] <nw_activity 50:2 [36F090DA-2EF0-4772-A0CA-87F2D0624F95] (reporting strategy default) complete (reason success)> complete with reason 2 (success), duration 5670ms
+2026-07-04 12:34:32.206103+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (Network) [com.apple.network:activity] Unsetting the global parent activity <nw_activity 50:1 [FFC2C2C6-10D1-4009-815E-208B8CFB4770] (global parent) (reporting strategy default) complete (reason success)>
+2026-07-04 12:34:32.206112+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (Network) [com.apple.network:activity] Unset the global parent activity
+2026-07-04 12:34:32.206198+0000 0xd64d     Error       0x0                  17308  0    rayforge-app: (libapp_launch_measurement.dylib) [com.apple.app_launch_measurement:General] Failed to send CA Event for app launch measurements for ca_event_type: 1 event_name: com.apple.app_launch_measurement.ExtendedLaunchMetrics
+2026-07-04 12:34:42.485669+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (UIKitCore) [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:org.rayforge.app-default  persistentID: 114AFDF3-65EB-41FF-AA4F-F74ABC004C4D
+2026-07-04 12:34:44.335782+0000 0xd645     Default     0x0                  17308  0    rayforge-app: (UIKitCore) [com.apple.KeyboardArbiter:Client] RX sceneBecameFocused:(null)
++ echo
+
