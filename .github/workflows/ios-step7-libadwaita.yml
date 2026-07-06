@@ -14,14 +14,19 @@ on:
         description: "Minimum iOS deployment version"
         required: false
         default: "17.0"
+      sdk:
+        description: "Apple SDK slice: iphonesimulator or iphoneos (device)"
+        required: false
+        default: "iphonesimulator"
 
 permissions:
   contents: write
 
 env:
   IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
-  IOS_SDK: "iphonesimulator"
-  DEPS_KEY: "gtk-deps-sim-v1"
+  IOS_SDK: ${{ github.event.inputs.sdk || 'iphonesimulator' }}
+  SDK_NS: ${{ (github.event.inputs.sdk == 'iphoneos') && 'dev' || 'sim' }}
+  DEPS_KEY: gtk-deps-${{ (github.event.inputs.sdk == 'iphoneos') && 'dev' || 'sim' }}-v1
   JPEG_TURBO_VERSION: "3.2.0"
   GRAPHENE_VERSION: "1.10.8"
   GDK_PIXBUF_VERSION: "2.44.7"
@@ -367,6 +372,7 @@ jobs:
           codesign -dv "$APP" 2>&1 | head -5
 
       - name: "[11/13] Boot simulator, install, launch, screenshot"
+        if: env.IOS_SDK == 'iphonesimulator'
         run: |
           set -euxo pipefail
           # Pick the newest available iPad device type + runtime.
