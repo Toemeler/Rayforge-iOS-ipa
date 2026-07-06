@@ -756,11 +756,25 @@ jobs:
             git merge -q --allow-unrelated-histories -m "merge" FETCH_HEAD || true
           fi
           PUSHED=0
+          : > /tmp/push-errors.txt
           for attempt in 1 2 3 4 5; do
-            if git push -q "${REMOTE}" ci-logs:ci-logs; then PUSHED=1; break; fi
-            git fetch -q "${REMOTE}" ci-logs || true
-            git merge -q --allow-unrelated-histories -m "merge" FETCH_HEAD || true
+            if git push "${REMOTE}" ci-logs:ci-logs 2>>/tmp/push-errors.txt; then PUSHED=1; break; fi
+            git fetch -q "${REMOTE}" ci-logs 2>>/tmp/push-errors.txt || true
+            git merge --allow-unrelated-histories -m "merge" FETCH_HEAD 2>>/tmp/push-errors.txt || true
             sleep $((attempt * 15))
           done
-          [ "$PUSHED" = 1 ] || git push -q -f "${REMOTE}" ci-logs:ci-logs
+          if [ "$PUSHED" != 1 ]; then
+            git push -f "${REMOTE}" ci-logs:ci-logs 2>>/tmp/push-errors.txt || {
+              # Surface the real git error via the contents API on main
+              # (this API path works even when git push does not).
+              B64=$(base64 < /tmp/push-errors.txt | tr -d '\n')
+              curl -s -X PUT \
+                -H "Authorization: Bearer ${GH_TOKEN}" \
+                -H "Accept: application/vnd.github+json" \
+                "https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/ci-logs-debug/publish-fail-run-${RUN_ID}.txt" \
+                -d "{\"message\":\"publish failure trace run ${RUN_ID}\",\"content\":\"${B64}\"}" >/dev/null
+              sed 's/x-access-token:[^@]*@/x-access-token:[REDACTED]@/g' /tmp/push-errors.txt | tail -30
+              exit 1
+            }
+          fi
           echo "Diagnostics pushed under ${OUT}"
