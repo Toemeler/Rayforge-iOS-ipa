@@ -19,6 +19,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+#include <math.h>
 #include <gdk/gdk.h>
 #include <gdk/gdkkeysyms.h>
 #include "gdkiosprivate.h"
@@ -59,13 +60,67 @@ gdk_ios_shell_get_scale (void)
   return [UIScreen mainScreen].scale;
 }
 
+/* Fit-to-width scaling: when the app's minimum width exceeds the raw
+ * screen width (Rayforge min 1115pt vs 1032pt iPad portrait), the whole
+ * GDK coordinate space is scaled down uniformly via the root layer's
+ * sublayerTransform so everything stays visible. GDK then sees a virtual
+ * screen of (raw / fit_scale) points. In landscape the minimum fits and
+ * the scale is 1.0 (no effect). */
+static double shell_fit_scale = 1.0;
+static int shell_fit_min_width = 0;
+
+double
+gdk_ios_shell_get_fit_scale (void)
+{
+  return shell_fit_scale;
+}
+
+static void
+shell_update_fit_transform (void)
+{
+  if (shell_view == nil)
+    return;
+
+  CGRect b = shell_view.bounds;
+  double s = 1.0;
+  if (shell_fit_min_width > 0 && b.size.width > 0 &&
+      (double) shell_fit_min_width > b.size.width)
+    s = b.size.width / (double) shell_fit_min_width;
+
+  CATransform3D m = CATransform3DMakeScale (s, s, 1.0);
+  /* sublayerTransform is applied about the layer's anchor (its centre);
+   * add the translation that makes it a scale about the origin. */
+  m.m41 = (s - 1.0) * b.size.width / 2.0;
+  m.m42 = (s - 1.0) * b.size.height / 2.0;
+
+  [CATransaction begin];
+  [CATransaction setDisableActions:YES];
+  shell_view.layer.sublayerTransform = m;
+  [CATransaction commit];
+
+  if (fabs (s - shell_fit_scale) > 0.0005)
+    g_message ("gdk-ios: fit scale -> %.4f (min width %d, raw %.0fx%.0f)",
+               s, shell_fit_min_width,
+               (double) b.size.width, (double) b.size.height);
+  shell_fit_scale = s;
+}
+
+void
+gdk_ios_shell_set_min_width (int min_width)
+{
+  if (min_width == shell_fit_min_width)
+    return;
+  shell_fit_min_width = min_width;
+  shell_update_fit_transform ();
+}
+
 void
 gdk_ios_shell_get_bounds (int *width, int *height)
 {
   CGRect b = shell_view != nil ? shell_view.bounds
                                : [UIScreen mainScreen].bounds;
-  if (width) *width = (int) b.size.width;
-  if (height) *height = (int) b.size.height;
+  if (width) *width = (int) floor (b.size.width / shell_fit_scale);
+  if (height) *height = (int) floor (b.size.height / shell_fit_scale);
 }
 
 void
@@ -368,7 +423,8 @@ deliver_key (GdkEventType type, UIKey *key)
 - (void)onHover:(UIHoverGestureRecognizer *)recognizer
 {
   CGPoint p = [recognizer locationInView:self];
-  deliver_motion (p.x, p.y);
+  double fs = gdk_ios_shell_get_fit_scale ();
+  deliver_motion (p.x / fs, p.y / fs);
 }
 
 - (void)onScroll:(UIPanGestureRecognizer *)recognizer
@@ -377,14 +433,17 @@ deliver_key (GdkEventType type, UIKey *key)
   [recognizer setTranslation:CGPointZero inView:self];
   gboolean is_stop = (recognizer.state == UIGestureRecognizerStateEnded ||
                       recognizer.state == UIGestureRecognizerStateCancelled);
+  double fs = gdk_ios_shell_get_fit_scale ();
   /* GDK scroll deltas: positive = content moves up/left. */
-  deliver_scroll (-t.x, -t.y, is_stop);
+  deliver_scroll (-t.x / fs, -t.y / fs, is_stop);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
   UITouch *touch = [touches anyObject];
   CGPoint p = [touch locationInView:self];
+  double fs = gdk_ios_shell_get_fit_scale ();
+  p.x /= fs; p.y /= fs;
   deliver_motion (p.x, p.y);
   deliver_button (GDK_BUTTON_PRESS,
                   (touch.type == UITouchTypeIndirectPointer &&
@@ -396,13 +455,16 @@ deliver_key (GdkEventType type, UIKey *key)
 {
   UITouch *touch = [touches anyObject];
   CGPoint p = [touch locationInView:self];
-  deliver_motion (p.x, p.y);
+  double fs = gdk_ios_shell_get_fit_scale ();
+  deliver_motion (p.x / fs, p.y / fs);
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
   UITouch *touch = [touches anyObject];
   CGPoint p = [touch locationInView:self];
+  double fs = gdk_ios_shell_get_fit_scale ();
+  p.x /= fs; p.y /= fs;
   deliver_button (GDK_BUTTON_RELEASE,
                   (touch.type == UITouchTypeIndirectPointer &&
                    (event.buttonMask & UIEventButtonMaskSecondary)) ? 3 : 1,
@@ -498,6 +560,7 @@ deliver_key (GdkEventType type, UIKey *key)
   if (!CGSizeEqualToSize (now, last_size))
     {
       last_size = now;
+      shell_update_fit_transform ();
       _gdk_ios_display_bounds_changed ();
     }
 }

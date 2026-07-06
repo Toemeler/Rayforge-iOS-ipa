@@ -156,6 +156,8 @@ gboolean   gdk_ios_shell_is_ready (void);
 gpointer   gdk_ios_shell_get_root_layer (void);  /* CALayer* of the root view */
 double     gdk_ios_shell_get_scale (void);
 void       gdk_ios_shell_get_bounds (int *width, int *height); /* points */
+double     gdk_ios_shell_get_fit_scale (void);
+void       gdk_ios_shell_set_min_width (int min_width);
 void       gdk_ios_shell_get_pointer_position (double *x, double *y,
                                                GdkModifierType *mask);
 

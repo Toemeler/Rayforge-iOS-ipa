@@ -315,11 +315,15 @@ gdk_ios_toplevel_configure (GdkIOSToplevel *self)
        * (1115pt) exceeds the iPad portrait width (1032pt), and honoring
        * it hung ~83pt of UI off the right edge. Granting the screen size
        * keeps everything on-screen; GTK squeezes below min gracefully. */
+      /* If GTK's minimum width exceeds the screen, granting less makes
+       * GTK lay out at its minimum anyway and clip both sides. Instead
+       * tell the shell the minimum: it scales the whole coordinate space
+       * down (fit-to-width) so the virtual screen is at least min wide,
+       * then grant those virtual bounds. Landscape: scale is 1.0. */
+      gdk_ios_shell_set_min_width (size.min_width);
+      gdk_ios_shell_get_bounds (&bounds_w, &bounds_h);
       win_w = bounds_w;
       win_h = bounds_h;
-      if (size.min_width > bounds_w || size.min_height > bounds_h)
-        g_message ("gdk-ios: configure: granting %dx%d below GTK min %dx%d",
-                   bounds_w, bounds_h, size.min_width, size.min_height);
     }
   else
     {
