@@ -129,8 +129,8 @@ jobs:
           # arm64 iOS simulator: --host generic arm-apple-darwin; simulator
           # flags in CC/CFLAGS. libffi 3.4.6 has the Apple static-trampoline
           # closure path (no JIT) needed on iOS.
-          export CC="${CC} -arch arm64 -isysroot ${SDK} -mios-simulator-version-min=${IOS_MIN}"
-          export CFLAGS="-arch arm64 -isysroot ${SDK} -mios-simulator-version-min=${IOS_MIN} -O2 -fPIC"
+          export CC="${CC} -arch arm64 -isysroot ${SDK} $([ "${IOS_SDK}" = iphoneos ] && echo "-miphoneos-version-min=${IOS_MIN}" || echo "-mios-simulator-version-min=${IOS_MIN}")"
+          export CFLAGS="-arch arm64 -isysroot ${SDK} $([ "${IOS_SDK}" = iphoneos ] && echo "-miphoneos-version-min=${IOS_MIN}" || echo "-mios-simulator-version-min=${IOS_MIN}") -O2 -fPIC"
           # Belt & suspenders vs the Xcode-16 assembler CFI rejection
           # (fixed upstream in >=3.4.7, cache var disables CFI if it recurs).
           export libffi_cv_as_cfi_pseudo_op=no
@@ -312,7 +312,7 @@ jobs:
           # -force_load: a dylib runs its GResource constructors on load).
           xcrun --sdk "${IOS_SDK}" clang \
             -arch arm64 -isysroot "$SDK" \
-            -mios-simulator-version-min="${IOS_MIN}" \
+            $([ "${IOS_SDK}" = iphoneos ] && echo "-miphoneos-version-min=${IOS_MIN}" || echo "$([ "${IOS_SDK}" = iphoneos ] && echo "-miphoneos-version-min=${IOS_MIN}" || echo "-mios-simulator-version-min=${IOS_MIN}")") \
             ios/testapp/main-pygi.c \
             -o rayforge-pygitest \
             $(pkg-config --cflags libadwaita-1 gtk4) \

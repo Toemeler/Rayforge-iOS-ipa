@@ -238,7 +238,7 @@ jobs:
           cp ios/adw-shims/appstream.h "${PREFIX}/include/appstream-stub/"
           xcrun --sdk "${IOS_SDK}" clang -c \
             -arch arm64 -isysroot "$SDK" \
-            -mios-simulator-version-min="${IOS_MIN}" \
+            $([ "${IOS_SDK}" = iphoneos ] && echo "-miphoneos-version-min=${IOS_MIN}" || echo "$([ "${IOS_SDK}" = iphoneos ] && echo "-miphoneos-version-min=${IOS_MIN}" || echo "-mios-simulator-version-min=${IOS_MIN}")") \
             ios/adw-shims/appstream-stub.c \
             $(pkg-config --cflags glib-2.0 gio-2.0) \
             -o appstream-stub.o 2>&1 | tee adw-stub.log
@@ -294,7 +294,7 @@ jobs:
           # widget crashes at runtime.
           xcrun --sdk "${IOS_SDK}" clang \
             -arch arm64 -isysroot "$SDK" \
-            -mios-simulator-version-min="${IOS_MIN}" \
+            $([ "${IOS_SDK}" = iphoneos ] && echo "-miphoneos-version-min=${IOS_MIN}" || echo "$([ "${IOS_SDK}" = iphoneos ] && echo "-miphoneos-version-min=${IOS_MIN}" || echo "-mios-simulator-version-min=${IOS_MIN}")") \
             ios/testapp/main-adw.c \
             -o rayforge-adwtest \
             $(pkg-config --cflags libadwaita-1 gtk4) \
