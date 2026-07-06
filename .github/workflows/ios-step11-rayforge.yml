@@ -787,5 +787,12 @@ jobs:
             git fetch -q "${REMOTE}" ci-logs || true
             git merge -q --allow-unrelated-histories -m "merge" FETCH_HEAD || true
           fi
-          git push -q "${REMOTE}" ci-logs:ci-logs || git push -q -f "${REMOTE}" ci-logs:ci-logs
+          PUSHED=0
+          for attempt in 1 2 3 4 5; do
+            if git push -q "${REMOTE}" ci-logs:ci-logs; then PUSHED=1; break; fi
+            git fetch -q "${REMOTE}" ci-logs || true
+            git merge -q --allow-unrelated-histories -m "merge" FETCH_HEAD || true
+            sleep $((attempt * 15))
+          done
+          [ "$PUSHED" = 1 ] || git push -q -f "${REMOTE}" ci-logs:ci-logs
           echo "Diagnostics pushed under ${OUT}"
