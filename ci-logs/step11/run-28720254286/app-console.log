@@ -1,0 +1,21 @@
+Gdk-Message: 21:37:00.313: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/1401495A-47BD-42B5-8887-423D8F5423A5/data/Containers/Bundle/Application/05AEB77C-BC22-43B9-938B-FC4B1F8A5636/RayforgeApp.app
+Gdk-Message: 21:37:00.498: gdk-ios: shell ready window=1376x1032 view=1376x1032 scale=2.00
+Gdk-Message: 21:37:00.531: gdk-ios: entering user main
+** Message: 21:37:00.531: GI_TYPELIB_PATH: /Users/runner/Library/Developer/CoreSimulator/Devices/1401495A-47BD-42B5-8887-423D8F5423A5/data/Containers/Bundle/Application/05AEB77C-BC22-43B9-938B-FC4B1F8A5636/RayforgeApp.app/lib/girepository-1.0
+** Message: 21:37:00.531: python home: /Users/runner/Library/Developer/CoreSimulator/Devices/1401495A-47BD-42B5-8887-423D8F5423A5/data/Containers/Bundle/Application/05AEB77C-BC22-43B9-938B-FC4B1F8A5636/RayforgeApp.app/python
+** Message: 21:37:00.531: site-packages: /Users/runner/Library/Developer/CoreSimulator/Devices/1401495A-47BD-42B5-8887-423D8F5423A5/data/Containers/Bundle/Application/05AEB77C-BC22-43B9-938B-FC4B1F8A5636/RayforgeApp.app/python/lib/python3.13/site-packages
+** Message: 21:38:31.613: rayforge boot: PyGObject self-test ran (CPython 3.13.14 (main, Jun 12 2026, 07:26:39) [Clang 17.0.0 (clang-1700.0.13.5)]) ? see console for PYGOBJECT OK/FAIL
+Gdk-Message: 21:38:31.630: gdk-ios: user main returned
+Gdk-Message: 21:38:33.696: gdk-ios: pump alive frame=120 total_iterations=2
+Gdk-Message: 21:38:35.696: gdk-ios: pump alive frame=240 total_iterations=2
+Gdk-Message: 21:38:37.696: gdk-ios: pump alive frame=360 total_iterations=2
+Gdk-Message: 21:38:39.696: gdk-ios: pump alive frame=480 total_iterations=2
+Gdk-Message: 21:38:41.696: gdk-ios: pump alive frame=600 total_iterations=2
+Gdk-Message: 21:38:43.696: gdk-ios: pump alive frame=720 total_iterations=2
+Gdk-Message: 21:38:45.696: gdk-ios: pump alive frame=840 total_iterations=2
+Gdk-Message: 21:38:47.696: gdk-ios: pump alive frame=960 total_iterations=2
+Gdk-Message: 21:38:49.696: gdk-ios: pump alive frame=1080 total_iterations=2
+Gdk-Message: 21:38:51.696: gdk-ios: pump alive frame=1200 total_iterations=2
+Gdk-Message: 21:38:53.696: gdk-ios: pump alive frame=1320 total_iterations=2
+Gdk-Message: 21:38:55.696: gdk-ios: pump alive frame=1440 total_iterations=2
+Gdk-Message: 21:38:57.696: gdk-ios: pump alive frame=1560 total_iterations=2

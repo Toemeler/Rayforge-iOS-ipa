@@ -1,0 +1,69 @@
+-- The C compiler identification is AppleClang 17.0.0.17000013
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- CMAKE_BUILD_TYPE = Release
+-- VERSION = 3.2.0, BUILD = 20260702
+CMake Error at CMakeLists.txt:108 (string):
+  string no output variable specified
+
+
+-- 64-bit build (arm64)
+-- CMAKE_INSTALL_PREFIX = /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+-- CMAKE_INSTALL_BINDIR = bin (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin)
+-- CMAKE_INSTALL_DATAROOTDIR = share (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share)
+-- CMAKE_INSTALL_DOCDIR = share/doc/libjpeg-turbo (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/doc/libjpeg-turbo)
+-- CMAKE_INSTALL_INCLUDEDIR = include (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include)
+-- CMAKE_INSTALL_LIBDIR = lib (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib)
+-- CMAKE_INSTALL_MANDIR = share/man (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man)
+-- Shared libraries disabled (ENABLE_SHARED = 0)
+-- Static libraries enabled (ENABLE_STATIC = 1)
+-- Arithmetic decoding support enabled (WITH_ARITH_DEC = 1)
+-- Arithmetic encoding support enabled (WITH_ARITH_ENC = 1)
+-- TurboJPEG API library disabled (WITH_TURBOJPEG = 0)
+-- TurboJPEG Java Native Access interfaces (TurboJPEG/JNA) disabled
+   (WITH_JNA = )
+-- Command-line tools enabled (WITH_TOOLS = 1)
+-- Regression tests enabled (WITH_TESTS = 1)
+-- Emulating libjpeg API/ABI v6.2 (WITH_JPEG7 = 0, WITH_JPEG8 = 0)
+-- libjpeg API shared library version = 62.4.0
+-- Compiler flags =  -O3 -DNDEBUG
+-- Linker flags =  
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Performing Test HAVE_BUILTIN_CTZL
+-- Performing Test HAVE_BUILTIN_CTZL - Success
+-- Performing Test HIDDEN_WORKS
+-- Performing Test HIDDEN_WORKS - Success
+-- HIDDEN = __attribute__((visibility("hidden")))
+-- Performing Test INLINE_WORKS
+-- Performing Test INLINE_WORKS - Success
+-- INLINE = __inline__ __attribute__((always_inline)) (FORCE_INLINE = 1)
+-- Performing Test HAVE_THREAD_LOCAL
+-- Performing Test HAVE_THREAD_LOCAL - Success
+-- THREAD_LOCAL = __thread
+-- CMAKE_EXECUTABLE_SUFFIX = 
+-- Performing Test HAVE_VLD1_S16_X3
+-- Performing Test HAVE_VLD1_S16_X3 - Success
+-- Performing Test HAVE_VLD1_U16_X2
+-- Performing Test HAVE_VLD1_U16_X2 - Success
+-- Performing Test HAVE_VLD1Q_U8_X4
+-- Performing Test HAVE_VLD1Q_U8_X4 - Success
+-- SIMD extensions: ARM64 (WITH_SIMD = 1)
+-- System-supplied libspng disabled (WITH_SYSTEM_SPNG = 0)
+-- System-supplied zlib disabled (WITH_SYSTEM_ZLIB = 0)
+-- Looking for fmemopen
+-- Looking for fmemopen - found
+-- FLOATTEST8 = fp-contract
+-- FLOATTEST12 = fp-contract
+-- Configuring incomplete, errors occurred!

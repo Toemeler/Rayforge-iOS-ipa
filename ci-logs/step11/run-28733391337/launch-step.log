@@ -1,0 +1,585 @@
+++ xcrun simctl list runtimes
+++ awk '/iOS/{id=$NF} END{print id}'
++ RUNTIME=com.apple.CoreSimulator.SimRuntime.iOS-26-2
+++ xcrun simctl create rayforge-test com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M4-8GB com.apple.CoreSimulator.SimRuntime.iOS-26-2
++ UDID=19BB10A3-5C7D-4FBE-8461-EC124A28A05D
++ test -n 19BB10A3-5C7D-4FBE-8461-EC124A28A05D
++ echo UDID=19BB10A3-5C7D-4FBE-8461-EC124A28A05D
+UDID=19BB10A3-5C7D-4FBE-8461-EC124A28A05D
++ xcrun simctl boot 19BB10A3-5C7D-4FBE-8461-EC124A28A05D
++ xcrun simctl bootstatus 19BB10A3-5C7D-4FBE-8461-EC124A28A05D -b
+Monitoring boot status for rayforge-test (19BB10A3-5C7D-4FBE-8461-EC124A28A05D).
+[2026-07-05 07:34:37 +0000] Status=2, isTerminal=NO, Elapsed=00:31.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:27 seconds
+
+[2026-07-05 07:34:38 +0000] Status=2, isTerminal=NO, Elapsed=00:32.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:28 seconds
+
+[2026-07-05 07:34:39 +0000] Status=2, isTerminal=NO, Elapsed=00:33.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:29 seconds
+
+[2026-07-05 07:34:40 +0000] Status=2, isTerminal=NO, Elapsed=00:34.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:30 seconds
+
+[2026-07-05 07:34:41 +0000] Status=2, isTerminal=NO, Elapsed=00:35.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:31 seconds
+
+[2026-07-05 07:34:42 +0000] Status=2, isTerminal=NO, Elapsed=00:36.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:32 seconds
+
+[2026-07-05 07:34:43 +0000] Status=2, isTerminal=NO, Elapsed=00:37.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:33 seconds
+
+[2026-07-05 07:34:44 +0000] Status=2, isTerminal=NO, Elapsed=00:38.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:34 seconds
+
+[2026-07-05 07:34:45 +0000] Status=2, isTerminal=NO, Elapsed=00:39.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:35 seconds
+
+[2026-07-05 07:34:46 +0000] Status=2, isTerminal=NO, Elapsed=00:40.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:36 seconds
+
+[2026-07-05 07:34:47 +0000] Status=2, isTerminal=NO, Elapsed=00:41.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:37 seconds
+
+[2026-07-05 07:34:48 +0000] Status=2, isTerminal=NO, Elapsed=00:42.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:38 seconds
+
+[2026-07-05 07:34:49 +0000] Status=2, isTerminal=NO, Elapsed=00:43.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:39 seconds
+
+[2026-07-05 07:34:53 +0000] Status=2, isTerminal=NO, Elapsed=00:47.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.securityd.KeychainMigrator (KeychainMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:40 seconds
+
+[2026-07-05 07:34:55 +0000] Status=2, isTerminal=NO, Elapsed=00:49.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.appleaccount.migrator (AppleAccountMigrator.migrator)
+		Migration Elapsed:00:43 seconds
+
+[2026-07-05 07:34:55 +0000] Status=4, isTerminal=NO, Elapsed=00:50.
+	Waiting on System App
+
+[2026-07-05 07:34:57 +0000] Status=4, isTerminal=NO, Elapsed=00:51.
+	Waiting on System App
+
+[2026-07-05 07:34:57 +0000] Status=4, isTerminal=NO, Elapsed=00:52.
+	Waiting on System App
+
+[2026-07-05 07:34:58 +0000] Status=4, isTerminal=NO, Elapsed=00:52.
+	Waiting on System App
+
+[2026-07-05 07:34:58 +0000] Status=4, isTerminal=NO, Elapsed=00:52.
+	Waiting on System App
+
+[2026-07-05 07:35:00 +0000] Status=4, isTerminal=NO, Elapsed=00:54.
+	Waiting on System App
+
+[2026-07-05 07:35:01 +0000] Status=4, isTerminal=NO, Elapsed=00:55.
+	Waiting on System App
+
+[2026-07-05 07:35:08 +0000] Status=4294967295, isTerminal=YES, Elapsed=01:02.
+	Finished
+
++ xcrun simctl install 19BB10A3-5C7D-4FBE-8461-EC124A28A05D RayforgeApp.app
+++ xcrun simctl get_app_container 19BB10A3-5C7D-4FBE-8461-EC124A28A05D org.rayforge.app
++ APP_CONTAINER=/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app
++ echo 'app container: /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app'
+app container: /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app
++ FW_DIR=/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/Frameworks
++ LAUNCH_OUT=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/app-console.log
++ xcrun simctl launch --stdout=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/app-console.log --stderr=/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/app-console.log 19BB10A3-5C7D-4FBE-8461-EC124A28A05D org.rayforge.app SIMCTL_CHILD_DYLD_LIBRARY_PATH=/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/Frameworks SIMCTL_CHILD_DYLD_FALLBACK_LIBRARY_PATH=/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/Frameworks SIMCTL_CHILD_G_MESSAGES_DEBUG=all
++ tee launch-cmd.log
+org.rayforge.app: 53604
++ MARKER_SEEN=0
+++ seq 1 36
++ for i in '$(seq 1 36)'
++ sleep 5
++ xcrun simctl spawn 19BB10A3-5C7D-4FBE-8461-EC124A28A05D log show --last 6m --predicate 'process == "rayforge-app"'
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
++ grep -q 'RAYFORGE BOOT FAILED' app-console.log app-syslog.log
++ for i in '$(seq 1 36)'
++ sleep 5
++ xcrun simctl spawn 19BB10A3-5C7D-4FBE-8461-EC124A28A05D log show --last 6m --predicate 'process == "rayforge-app"'
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
++ grep -q 'RAYFORGE BOOT FAILED' app-console.log app-syslog.log
++ for i in '$(seq 1 36)'
++ sleep 5
++ xcrun simctl spawn 19BB10A3-5C7D-4FBE-8461-EC124A28A05D log show --last 6m --predicate 'process == "rayforge-app"'
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
++ grep -q 'RAYFORGE BOOT FAILED' app-console.log app-syslog.log
++ for i in '$(seq 1 36)'
++ sleep 5
++ xcrun simctl spawn 19BB10A3-5C7D-4FBE-8461-EC124A28A05D log show --last 6m --predicate 'process == "rayforge-app"'
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
++ grep -q 'RAYFORGE BOOT FAILED' app-console.log app-syslog.log
++ for i in '$(seq 1 36)'
++ sleep 5
++ xcrun simctl spawn 19BB10A3-5C7D-4FBE-8461-EC124A28A05D log show --last 6m --predicate 'process == "rayforge-app"'
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
++ grep -q 'RAYFORGE BOOT FAILED' app-console.log app-syslog.log
++ for i in '$(seq 1 36)'
++ sleep 5
++ xcrun simctl spawn 19BB10A3-5C7D-4FBE-8461-EC124A28A05D log show --last 6m --predicate 'process == "rayforge-app"'
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
++ grep -q 'RAYFORGE BOOT FAILED' app-console.log app-syslog.log
++ for i in '$(seq 1 36)'
++ sleep 5
++ xcrun simctl spawn 19BB10A3-5C7D-4FBE-8461-EC124A28A05D log show --last 6m --predicate 'process == "rayforge-app"'
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
++ grep -q 'RAYFORGE BOOT FAILED' app-console.log app-syslog.log
++ for i in '$(seq 1 36)'
++ sleep 5
++ xcrun simctl spawn 19BB10A3-5C7D-4FBE-8461-EC124A28A05D log show --last 6m --predicate 'process == "rayforge-app"'
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
++ grep -q 'RAYFORGE BOOT FAILED' app-console.log app-syslog.log
++ for i in '$(seq 1 36)'
++ sleep 5
++ xcrun simctl spawn 19BB10A3-5C7D-4FBE-8461-EC124A28A05D log show --last 6m --predicate 'process == "rayforge-app"'
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
++ grep -q 'RAYFORGE BOOT FAILED' app-console.log app-syslog.log
++ for i in '$(seq 1 36)'
++ sleep 5
++ xcrun simctl spawn 19BB10A3-5C7D-4FBE-8461-EC124A28A05D log show --last 6m --predicate 'process == "rayforge-app"'
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
++ MARKER_SEEN=1
++ echo 'marker seen after ~50s'
+marker seen after ~50s
++ break
++ APP_ALIVE=1
++ xcrun simctl spawn 19BB10A3-5C7D-4FBE-8461-EC124A28A05D launchctl list
++ grep -q org.rayforge.app
++ echo 'app alive: 1  marker seen: 1'
+app alive: 1  marker seen: 1
++ echo 'waiting for first rendered frames...'
+waiting for first rendered frames...
++ sleep 20
++ xcrun simctl io 19BB10A3-5C7D-4FBE-8461-EC124A28A05D screenshot simulator-screenshot.png
+Detected file type 'PNG' from extension
+Wrote screenshot to: simulator-screenshot.png
++ ls -la simulator-screenshot.png
+-rw-r--r--@ 1 runner  staff  179046 Jul  5 07:39 simulator-screenshot.png
++ mkdir -p crash-reports
++ find /Users/runner/Library/Logs/DiagnosticReports -name '*rayforge*' -newer RayforgeApp.app/Info.plist -exec cp '{}' crash-reports/ ';'
++ for c in 'crash-reports/*'
++ '[' -f 'crash-reports/*' ']'
++ continue
++ xcrun simctl shutdown 19BB10A3-5C7D-4FBE-8461-EC124A28A05D
++ echo '===== app console ====='
+===== app console =====
++ cat app-console.log
+Gdk-Message: 07:37:20.358: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app
+Gdk-Message: 07:37:20.681: gdk-ios: shell ready window=1376x1032 view=1376x1032 scale=2.00
+Gdk-Message: 07:37:20.778: gdk-ios: entering user main
+** Message: 07:37:20.778: GI_TYPELIB_PATH: /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/lib/girepository-1.0
+** Message: 07:37:20.778: python home: /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python
+** Message: 07:37:20.778: site-packages: /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages
+IOSBOOT: ios_main.main() start
+IOSBOOT: import rayforge.app
+IOSBOOT: rayforge.app.main()
+2026-07-05 07:37:23,336 - root - INFO - Logging configured. Console level: INFO
+2026-07-05 07:37:23,336 - root - INFO - Session log file: /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Data/Application/574A200B-538F-48C2-8DB8-9E1731C69748/.local/state/rayforge/log/session-2026-07-05_07-37-23.log
+2026-07-05 07:37:23,337 - rayforge.app - INFO - Application starting with log level INFO
+2026-07-05 07:37:23,337 - rayforge.app - INFO - PyCairo version: 1.29.0
+2026-07-05 07:37:26,585 - rayforge.image.svg.svg_fallback - WARNING - pyvips svgload_buffer not available. Using Cairo/Rsvg fallback for SVG rendering.
+2026-07-05 07:37:28,724 - rayforge.ui_gtk.sim3d - INFO - Skipping Canvas3D import due to RAYFORGE_DISABLE_3D
+2026-07-05 07:37:28,725 - rayforge.ui_gtk.sim3d - INFO - 3D canvas disabled via RAYFORGE_DISABLE_3D environment variable.
+2026-07-05 07:37:29,160 - rayforge.addon_mgr.addon_manager - INFO - Scanning for addons in /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons...
+2026-07-05 07:37:29,166 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: core_materials (builtin)
+2026-07-05 07:37:29,706 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:30,236 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:30,813 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:31,341 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:31,868 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:32,388 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:32,913 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:33,433 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:33,959 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:34,499 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:35,022 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:35,544 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:36,064 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:36,591 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:37,137 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:37,662 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:38,184 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:38,704 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:39,231 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:39,752 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:40,279 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:40,808 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:41,332 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:41,861 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:42,392 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:42,931 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:43,461 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:44,000 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:44,524 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:45,052 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:45,583 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:46,108 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:46,632 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:47,158 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:47,183 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: sketcher (builtin)
+2026-07-05 07:37:47,721 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:48,244 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:48,771 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:49,295 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:49,819 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:50,346 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:50,872 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:51,390 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:51,912 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:52,428 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:52,951 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:53,471 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:53,992 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:54,510 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:55,031 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:55,549 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:56,078 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:56,600 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:57,140 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:57,668 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:58,189 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:58,718 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:59,263 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:59,268 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: laser_essentials (builtin)
+2026-07-05 07:37:59,276 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: print_and_cut (builtin)
+2026-07-05 07:37:59,805 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:00,327 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:00,850 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:01,372 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:01,895 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:02,420 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:02,946 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:03,464 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:03,985 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:04,510 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:05,029 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:05,551 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:06,077 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:06,600 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:07,122 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:07,642 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:08,166 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:08,171 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: post_processors (builtin)
+2026-07-05 07:38:08,700 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:09,224 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:09,781 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:10,302 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:10,309 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: ai_workpiece_generator (builtin)
+2026-07-05 07:38:10,932 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:11,456 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:11,989 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:12,513 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:13,051 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:13,577 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:14,231 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:14,755 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:15,284 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:15,819 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:16,349 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:16,874 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:17,395 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:17,917 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:18,443 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:18,963 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:19,482 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:20,001 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:20,526 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:21,046 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:21,567 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:22,089 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:22,608 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:23,149 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:23,671 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:24,202 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:24,735 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:25,258 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:25,776 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:26,299 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:26,824 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:27,347 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:27,871 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:28,394 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:28,916 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:29,441 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:29,975 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:30,505 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:31,027 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:31,550 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:32,072 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:32,591 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:33,120 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:33,644 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:34,165 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:34,689 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:35,217 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:35,741 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:36,266 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:36,791 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:37,316 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:37,849 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:38,371 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:38,895 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:39,413 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:39,943 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:40,460 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:40,992 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:41,520 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:42,042 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:42,568 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:43,093 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:43,619 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:44,138 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:44,659 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:45,178 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:45,705 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:46,226 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:46,756 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:47,279 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:47,811 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:48,335 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:48,871 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:49,395 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:49,920 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:50,445 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:50,971 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:51,505 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:52,039 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:52,566 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:53,098 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:53,626 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:54,147 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:54,672 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:55,197 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:55,220 - rayforge.context - INFO - Addons loaded (headless=False)
+IOSBOOT: _ios_run: register()
+IOSBOOT: _ios_run: activate()
+2026-07-05 07:38:57,214 - rayforge.context - INFO - Lazy loading config manager
+2026-07-05 07:38:57,228 - rayforge.context - INFO - Lazy loading machine manager
+2026-07-05 07:38:57,251 - rayforge.core.config - INFO - Config file does not exist, creating default config.
+2026-07-05 07:38:57,435 - rayforge.context - INFO - Lazy loading camera manager
+2026-07-05 07:38:57,630 - rayforge.worker_init - ERROR - Failed to load enabled worker module 'rayforge_addons.core_materials.core_materials.worker': Plugin name already registered: rayforge_addons.core_materials.core_materials.worker=<module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>
+{'rayforge_addons.core_materials.core_materials.worker': <module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>, 'rayforge_addons.sketcher.sketcher.worker': <module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>, 'rayforge_addons.sketcher.sketcher.frontend': <module 'rayforge_addons.sketcher.sketcher.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/frontend.py'>, 'rayforge_addons.laser_essentials.laser_essentials.worker': <module 'rayforge_addons.laser_essentials.laser_essentials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/worker.py'>, 'rayforge_addons.laser_essentials.laser_essentials.frontend': <module 'rayforge_addons.laser_essentials.laser_essentials.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/frontend.py'>, 'rayforge_addons.print_and_cut.print_and_cut.frontend': <module 'rayforge_addons.print_and_cut.print_and_cut.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-print-and-cut/print_and_cut/frontend.py'>, 'rayforge_addons.post_processors.post_processors.worker': <module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>, 'rayforge_addons.post_processors.post_processors.frontend': <module 'rayforge_addons.post_processors.post_processors.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/frontend.py'>, 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend': <module 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-ai-workpiece/ai_workpiece_generator/frontend.py'>}
+2026-07-05 07:38:57,631 - rayforge.worker_init - ERROR - Failed to load enabled worker module 'rayforge_addons.sketcher.sketcher.worker': Plugin name already registered: rayforge_addons.sketcher.sketcher.worker=<module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>
+{'rayforge_addons.core_materials.core_materials.worker': <module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>, 'rayforge_addons.sketcher.sketcher.worker': <module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>, 'rayforge_addons.sketcher.sketcher.frontend': <module 'rayforge_addons.sketcher.sketcher.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/frontend.py'>, 'rayforge_addons.laser_essentials.laser_essentials.worker': <module 'rayforge_addons.laser_essentials.laser_essentials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/worker.py'>, 'rayforge_addons.laser_essentials.laser_essentials.frontend': <module 'rayforge_addons.laser_essentials.laser_essentials.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/frontend.py'>, 'rayforge_addons.print_and_cut.print_and_cut.frontend': <module 'rayforge_addons.print_and_cut.print_and_cut.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-print-and-cut/print_and_cut/frontend.py'>, 'rayforge_addons.post_processors.post_processors.worker': <module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>, 'rayforge_addons.post_processors.post_processors.frontend': <module 'rayforge_addons.post_processors.post_processors.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/frontend.py'>, 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend': <module 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-ai-workpiece/ai_workpiece_generator/frontend.py'>}
+2026-07-05 07:38:57,631 - rayforge.worker_init - ERROR - Failed to load enabled worker module 'rayforge_addons.laser_essentials.laser_essentials.worker': Plugin name already registered: rayforge_addons.laser_essentials.laser_essentials.worker=<module 'rayforge_addons.laser_essentials.laser_essentials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/worker.py'>
+{'rayforge_addons.core_materials.core_materials.worker': <module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>, 'rayforge_addons.sketcher.sketcher.worker': <module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>, 'rayforge_addons.sketcher.sketcher.frontend': <module 'rayforge_addons.sketcher.sketcher.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/frontend.py'>, 'rayforge_addons.laser_essentials.laser_essentials.worker': <module 'rayforge_addons.laser_essentials.laser_essentials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/worker.py'>, 'rayforge_addons.laser_essentials.laser_essentials.frontend': <module 'rayforge_addons.laser_essentials.laser_essentials.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/frontend.py'>, 'rayforge_addons.print_and_cut.print_and_cut.frontend': <module 'rayforge_addons.print_and_cut.print_and_cut.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-print-and-cut/print_and_cut/frontend.py'>, 'rayforge_addons.post_processors.post_processors.worker': <module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>, 'rayforge_addons.post_processors.post_processors.frontend': <module 'rayforge_addons.post_processors.post_processors.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/frontend.py'>, 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend': <module 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-ai-workpiece/ai_workpiece_generator/frontend.py'>}
+2026-07-05 07:38:57,631 - rayforge.worker_init - ERROR - Failed to load enabled worker module 'rayforge_addons.post_processors.post_processors.worker': Plugin name already registered: rayforge_addons.post_processors.post_processors.worker=<module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>
+{'rayforge_addons.core_materials.core_materials.worker': <module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>, 'rayforge_addons.sketcher.sketcher.worker': <module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>, 'rayforge_addons.sketcher.sketcher.frontend': <module 'rayforge_addons.sketcher.sketcher.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/frontend.py'>, 'rayforge_addons.laser_essentials.laser_essentials.worker': <module 'rayforge_addons.laser_essentials.laser_essentials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/worker.py'>, 'rayforge_addons.laser_essentials.laser_essentials.frontend': <module 'rayforge_addons.laser_essentials.laser_essentials.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/frontend.py'>, 'rayforge_addons.print_and_cut.print_and_cut.frontend': <module 'rayforge_addons.print_and_cut.print_and_cut.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-print-and-cut/print_and_cut/frontend.py'>, 'rayforge_addons.post_processors.post_processors.worker': <module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>, 'rayforge_addons.post_processors.post_processors.frontend': <module 'rayforge_addons.post_processors.post_processors.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/frontend.py'>, 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend': <module 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-ai-workpiece/ai_workpiece_generator/frontend.py'>}
+2026-07-05 07:38:57,640 - rayforge.context - INFO - Lazy loading recipe manager
+2026-07-05 07:38:57,641 - rayforge.core.recipe_manager - INFO - Loaded 0 recipes.
+2026-07-05 07:38:57,649 - rayforge.doceditor.step_cmd - INFO - Added default 'Contour' step to layer 'Layer 1'.
+Gdk-Message: 07:38:57.896: gdk-ios: toplevel_present shell_bounds=1376x1032
+Fontconfig warning: using without calling FcInit()
+Gdk-Message: 07:38:58.209: gdk-ios: attach_layer surface=0x10e4ca3e0 layer=0x600000cc0e10 root=0x600000c0c540 root.bounds=1376x1032 root.sublayers=1 scale=2.00
+Gdk-Message: 07:38:58.210: gdk-ios: apply_frame surface=0x10e4ca3e0 req=(0,0,1376x1032) layer.frame=(0,0,1376x1032)
+Gdk-Message: 07:38:58.213: gdk-ios: toplevel_present shell_bounds=1376x1032
+Gdk-Message: 07:38:58.214: gdk-ios: apply_frame surface=0x10e4ca3e0 req=(0,0,1376x1032) layer.frame=(0,0,1376x1032)
+Gdk-Message: 07:38:58.217: gdk-ios: toplevel_present shell_bounds=1376x1032
+Gdk-Message: 07:38:58.233: gdk-ios: attach_layer surface=0x1094f3560 layer=0x600000cbe940 root=0x600000c0c540 root.bounds=1376x1032 root.sublayers=2 scale=2.00
+Gdk-Message: 07:38:58.233: gdk-ios: apply_frame surface=0x1094f3560 req=(0,0,1376x1032) layer.frame=(0,0,1376x1032)
+Gdk-Message: 07:38:58.234: gdk-ios: toplevel_present shell_bounds=1376x1032
+Gdk-Message: 07:38:58.234: gdk-ios: apply_frame surface=0x1094f3560 req=(0,0,1376x1032) layer.frame=(0,0,1376x1032)
+2026-07-05 07:38:58,236 - rayforge.addon_mgr.update_cmd - INFO - Scheduling startup addon update check.
+2026-07-05 07:38:58,237 - rayforge.updater - INFO - Scheduling app version update check.
+IOSBOOT: _ios_run: activate() returned; windows=1
+IOSBOOT:   window mapped=True visible=True title='Rayforge'
+IOSBOOT: keep-running caught — startup unwound cleanly
+RAYFORGE UI RUNNING
+** Message: 07:38:58.238: rayforge boot: PyGObject self-test ran (CPython 3.13.14 (main, Jun 12 2026, 07:26:39) [Clang 17.0.0 (clang-1700.0.13.5)]) ? see console for PYGOBJECT OK/FAIL
+Gdk-Message: 07:38:58.257: gdk-ios: user main returned
+2026-07-05 07:38:58,483 - rayforge.addon_mgr.addon_manager - INFO - Checking for available addon updates...
+2026-07-05 07:38:58,484 - rayforge.addon_mgr.addon_manager - INFO - Fetching registry from https://raw.githubusercontent.com/barebaric/rayforge-registry/main/registry.yaml
+2026-07-05 07:38:58,499 - rayforge.machine.models.controller - INFO - Machine 'Default Machine' (id:f977b375-f653-4994-bcc9-2821fab2b76e) rebuilding driver to 'None'
+Gdk-Message: 07:38:58.617: gdk-ios: begin_frame surface=1376x1032 scale=2.00 pixels=2752x2064
+Gdk-Message: 07:38:58.666: gdk-ios: end_frame 2752x2064 stride=11008 data=0x111f88000 layer=0x600000cc0e10 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0xFFF5F5F6
+Gdk-Message: 07:38:58.666: gdk-ios: presented layer=0x600000cc0e10 frame=(0,0,1376x1032) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c0c540 hasContents=1
+Gdk-Message: 07:38:58.668: gdk-ios: begin_frame surface=1376x1032 scale=2.00 pixels=2752x2064
+Gdk-Message: 07:38:58.689: gdk-ios: end_frame 2752x2064 stride=11008 data=0x113534000 layer=0x600000cbe940 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0xFFFAFAFB
+Gdk-Message: 07:38:58.690: gdk-ios: presented layer=0x600000cbe940 frame=(0,0,1376x1032) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c0c540 hasContents=1
+Gdk-Message: 07:38:58.694: gdk-ios: begin_frame surface=1376x1032 scale=2.00 pixels=2752x2064
+Gdk-Message: 07:38:58.748: gdk-ios: end_frame 2752x2064 stride=11008 data=0x114ae0000 layer=0x600000cc0e10 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0xFFF5F5F6
+Gdk-Message: 07:38:58.753: gdk-ios: presented layer=0x600000cc0e10 frame=(0,0,1376x1032) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c0c540 hasContents=1
+2026-07-05 07:38:58,781 - rayforge.machine.models.controller - INFO - Synced active WCS from device: 'G54'
+Gdk-Message: 07:38:58.810: gdk-ios: begin_frame surface=1376x1032 scale=2.00 pixels=2752x2064
+Gdk-Message: 07:38:58.845: gdk-ios: end_frame 2752x2064 stride=11008 data=0x111f88000 layer=0x600000cc0e10 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0xFFF5F5F6
+Gdk-Message: 07:38:58.849: gdk-ios: presented layer=0x600000cc0e10 frame=(0,0,1376x1032) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c0c540 hasContents=1
+Gdk-Message: 07:38:58.941: gdk-ios: begin_frame surface=1376x1032 scale=2.00 pixels=2752x2064
+Gdk-Message: 07:38:59.059: gdk-ios: end_frame 2752x2064 stride=11008 data=0x117638000 layer=0x600000cc0e10 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0xFFF5F5F6
+Gdk-Message: 07:38:59.143: gdk-ios: presented layer=0x600000cc0e10 frame=(0,0,1376x1032) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c0c540 hasContents=1
+Gdk-Message: 07:38:59.143: gdk-ios: begin_frame surface=1376x1032 scale=2.00 pixels=2752x2064
+Gdk-Message: 07:38:59.251: gdk-ios: end_frame 2752x2064 stride=11008 data=0x111f88000 layer=0x600000cc0e10 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0xFFF5F5F6
+Gdk-Message: 07:38:59.426: gdk-ios: presented layer=0x600000cc0e10 frame=(0,0,1376x1032) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c0c540 hasContents=1
+Gdk-Message: 07:39:01.384: gdk-ios: pump alive frame=120 total_iterations=14
+Gdk-Message: 07:39:03.385: gdk-ios: pump alive frame=240 total_iterations=14
+Gdk-Message: 07:39:05.385: gdk-ios: pump alive frame=360 total_iterations=14
+Gdk-Message: 07:39:07.385: gdk-ios: pump alive frame=480 total_iterations=14
+Gdk-Message: 07:39:09.385: gdk-ios: pump alive frame=600 total_iterations=14
+Gdk-Message: 07:39:11.385: gdk-ios: pump alive frame=720 total_iterations=14
+Gdk-Message: 07:39:13.385: gdk-ios: pump alive frame=840 total_iterations=14
+Gdk-Message: 07:39:15.385: gdk-ios: pump alive frame=960 total_iterations=14
+Gdk-Message: 07:39:17.385: gdk-ios: pump alive frame=1080 total_iterations=14
+Gdk-Message: 07:39:19.385: gdk-ios: pump alive frame=1200 total_iterations=14
+Gdk-Message: 07:39:21.385: gdk-ios: pump alive frame=1320 total_iterations=14
+Gdk-Message: 07:39:23.385: gdk-ios: pump alive frame=1440 total_iterations=14
+Gdk-Message: 07:39:25.385: gdk-ios: pump alive frame=1560 total_iterations=14
+Gdk-Message: 07:39:27.385: gdk-ios: pump alive frame=1680 total_iterations=14
+Gdk-Message: 07:39:29.384: gdk-ios: pump alive frame=1800 total_iterations=14
+Gdk-Message: 07:39:31.387: gdk-ios: pump alive frame=1920 total_iterations=14
+Gdk-Message: 07:39:33.386: gdk-ios: pump alive frame=2040 total_iterations=14
++ echo '===== app syslog (first 120) ====='
+===== app syslog (first 120) =====
++ head -120 app-syslog.log
+getpwuid_r did not find a match for uid 501
+Timestamp                       Thread     Type        Activity             PID    TTL  
+2026-07-05 07:37:20.458093+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (libMobileGestalt.dylib) No persisted cache on this platform.
+2026-07-05 07:37:20.466021+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (libxpc.dylib) [com.apple.xpc:connection] [0x102b05f70] activating connection: mach=true listener=false peer=false name=com.apple.cfprefsd.daemon
+2026-07-05 07:37:20.480037+0000 0x201ec    Activity    0x45fb0              53604  0    rayforge-app: (CoreFoundation) Loading Preferences From User Session CFPrefsD
+2026-07-05 07:37:20.492673+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Creating new assertion because there is no existing background assertion.
+2026-07-05 07:37:20.492873+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Creating new background assertion
+2026-07-05 07:37:20.493256+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Created new background assertion <BKSProcessAssertion: 0x60000210a940>
+2026-07-05 07:37:20.493325+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:connection] Initializing connection
+2026-07-05 07:37:20.493386+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:process] Removing all cached process handles
+2026-07-05 07:37:20.493677+0000 0x201eb    Default     0x0                  53604  0    rayforge-app: (BoardServices) [com.apple.BoardServices:XPCErrors] [C:1] Alloc com.apple.frontboard.systemappservices
+2026-07-05 07:37:20.493971+0000 0x201eb    Default     0x0                  53604  0    rayforge-app: (libxpc.dylib) [com.apple.xpc:connection] [0x102905800] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-07-05 07:37:20.494062+0000 0x201ed    Default     0x0                  53604  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:connection] Sending handshake request attempt #1 to server
+2026-07-05 07:37:20.494490+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:connection] Creating connection to com.apple.runningboard
+2026-07-05 07:37:20.504879+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (libxpc.dylib) [com.apple.xpc:connection] [0x102b076d0] activating connection: mach=true listener=false peer=false name=com.apple.runningboard
+2026-07-05 07:37:20.508407+0000 0x201ec    Activity    0x45fb1              53604  0    rayforge-app: (RunningBoardServices) didChangeInheritances
+2026-07-05 07:37:20.508797+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason added: 10; deactivation reasons: 0 -> 1024; animating application lifecycle event: 0
+2026-07-05 07:37:20.508920+0000 0x201ed    Default     0x0                  53604  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:connection] Handshake succeeded
+2026-07-05 07:37:20.509072+0000 0x201ed    Default     0x0                  53604  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:connection] Identity resolved as app<org.rayforge.app((null))>
+2026-07-05 07:37:20.509108+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (BoardServices) [com.apple.BoardServices:Injection] activating monitor for service com.apple.frontboard.open
+2026-07-05 07:37:20.509949+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (BoardServices) [com.apple.BoardServices:Injection] activating monitor for service com.apple.frontboard.workspace-service
+2026-07-05 07:37:20.511064+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x60000210a940>
+2026-07-05 07:37:20.511130+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:Common] FBSWorkspace registering source: com.apple.frontboard.systemappservices
+2026-07-05 07:37:20.511174+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x600001701b80>: taskID = 1, taskName = Launch Background Task for Coalescing, creationTime = 1993 (elapsed = 0).
+2026-07-05 07:37:20.511501+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UIApplicationSceneKeyboardSettings on FBSSceneSettings
+2026-07-05 07:37:20.512763+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneOcclusionSettings> on FBSSceneSettings
+2026-07-05 07:37:20.513054+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneInterfaceProtectionSettings> on FBSSceneSettings
+2026-07-05 07:37:20.513218+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneLayoutPreferencesHostSettingsExtension on FBSSceneSettings
+2026-07-05 07:37:20.513336+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneSafeAreaSettingsExtension on FBSSceneSettings
+2026-07-05 07:37:20.513681+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneLayoutPreferenceClientSettingsExtension on FBSSceneClientSettings
+2026-07-05 07:37:20.513752+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:Common] FBSWorkspace connected to endpoint : <BSServiceConnectionEndpoint: 0x60000020d020; target: com.apple.frontboard.systemappservices; service: com.apple.frontboard.workspace-service>
+2026-07-05 07:37:20.513886+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:Common] <FBSWorkspaceScenesClient:0x6000030042d0 com.apple.frontboard.systemappservices> attempting immediate handshake from activate
+2026-07-05 07:37:20.513942+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UIHomeAffordanceHostSceneSettings> on FBSSceneSettings
+2026-07-05 07:37:20.514073+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:Common] <FBSWorkspaceScenesClient:0x6000030042d0 com.apple.frontboard.systemappservices> sent handshake
+2026-07-05 07:37:20.514237+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISystemShellSceneHostingEnvironmentSettings on FBSSceneSettings
+2026-07-05 07:37:20.514496+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (RunningBoardServices) [com.apple.runningboard:general] Added observer for process assertions expiration warning: <_RBSExpirationWarningClient: 0x600000211a60>
+2026-07-05 07:37:20.514635+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneRenderingEnvironmentSettings on FBSSceneSettings
+2026-07-05 07:37:20.514902+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneRenderingEnvironmentClientSettings> on FBSSceneClientSettings
+2026-07-05 07:37:20.515050+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneTransitioningHostSettings> on FBSSceneSettings
+2026-07-05 07:37:20.515454+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneFocusSystemSettings> on FBSSceneSettings
+2026-07-05 07:37:20.515554+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneOrientationSettingsExtension on FBSSceneSettings
+2026-07-05 07:37:20.515789+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneOrientationClientSettingsExtension on FBSSceneClientSettings
+2026-07-05 07:37:20.515878+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneWindowingControlClientSettings on FBSSceneClientSettings
+2026-07-05 07:37:20.516442+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingContentSizePreferenceClientSettings> on FBSSceneClientSettings
+2026-07-05 07:37:20.516965+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneHostingTraitCollectionPropagationSettings on FBSSceneSettings
+2026-07-05 07:37:20.519356+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingSheetPresentationSettings> on FBSSceneSettings
+2026-07-05 07:37:20.519584+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:UIScreen] Evaluated capturing state as 0 on <UIScreen: 0x102905940> for initial
+2026-07-05 07:37:20.520104+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:UIScreen] Evaluated capturing state as 0 on <UIScreen: 0x102905940> for CADisplay KVO
+2026-07-05 07:37:20.521500+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (libAccessibility.dylib) [com.apple.Accessibility:AXSupportCommon] Read CategoryName: per-app = 1, category name = (null)
+2026-07-05 07:37:20.521833+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingSheetPresentationClientSettings> on FBSSceneClientSettings
+2026-07-05 07:37:20.521899+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (libAccessibility.dylib) [com.apple.Accessibility:AXSupportCommon] Read CategoryName: per-app = 0, category name = (null)
+2026-07-05 07:37:20.522745+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingEventDeferringSettings> on FBSSceneSettings
+2026-07-05 07:37:20.548076+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <UIKit__UITypedKeyValueSceneSettings> on FBSSceneSettings
+2026-07-05 07:37:20.548358+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <UIKit__UITypedKeyValueSceneSettings> on FBSSceneClientSettings
+2026-07-05 07:37:20.548479+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingViewControllerPreferencePropagationClientSettings> on FBSSceneClientSettings
+2026-07-05 07:37:20.549080+0000 0x201ea    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneZoomTransitionSettings> on FBSSceneSettings
+2026-07-05 07:37:20.550675+0000 0x201f4    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneSettingsCore on FBSSceneSettings
+2026-07-05 07:37:20.552907+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (XCTTargetBootstrap) [com.apple.dt.xctest:Default] Registering for test daemon availability notify post.
+2026-07-05 07:37:20.552961+0000 0x201f4    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneClientSettingsCore on FBSSceneClientSettings
+2026-07-05 07:37:20.553339+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (XCTTargetBootstrap) [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-07-05 07:37:20.553545+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (XCTTargetBootstrap) [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-07-05 07:37:20.553683+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (XCTTargetBootstrap) [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-07-05 07:37:20.554364+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:UpdateScheduler] Selected display: name=LCD (PurpleMain), id=1
+2026-07-05 07:37:20.557602+0000 0x201f4    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] UIMutableApplicationSceneSettings setting counterpart class: UIApplicationSceneSettings
+2026-07-05 07:37:20.557807+0000 0x201f4    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] UIMutableApplicationSceneClientSettings setting counterpart class: UIApplicationSceneClientSettings
+2026-07-05 07:37:20.558009+0000 0x201f4    Default     0x0                  53604  0    rayforge-app: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneTransitionContextCore on FBSSceneTransitionContext
+2026-07-05 07:37:20.568641+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Will add backgroundTask with taskName: Persistent SceneSession Map Update, expirationHandler: <__NSGlobalBlock__: 0x1e61729e0>
+2026-07-05 07:37:20.577655+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Reusing background assertion <BKSProcessAssertion: 0x60000210a940>
+2026-07-05 07:37:20.577917+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x60000210a940>
+2026-07-05 07:37:20.578069+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x600001712a40>: taskID = 2, taskName = Persistent SceneSession Map Update, creationTime = 1994 (elapsed = 0).
+2026-07-05 07:37:20.579198+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason added: 5; deactivation reasons: 1024 -> 1056; animating application lifecycle event: 1
+2026-07-05 07:37:20.580425+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x102b06880> (DA10E383-6417-4BE5-A188-D50D6D9DEA54)
+2026-07-05 07:37:20.580784+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Should send trait collection or coordinate space update, interface style 1 -> 1, <UIWindowScene: 0x102b06880> (DA10E383-6417-4BE5-A188-D50D6D9DEA54)
+2026-07-05 07:37:20.582562+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x102b06880> (DA10E383-6417-4BE5-A188-D50D6D9DEA54)
+2026-07-05 07:37:20.583040+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:HomeAffordanceObservation] Initializing: <_UIHomeAffordanceSceneNotifier: 0x6000029145b0>; with scene: <UIWindowScene: 0x102b06880>
+2026-07-05 07:37:20.583270+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (BacklightServices) [com.apple.BacklightServices:scenes] 0x600000c11bc0 setDelegate:<0x600000c12a00 _UIBacklightEnvironment> hasDelegate:YES for environment:sceneID:org.rayforge.app-default
+2026-07-05 07:37:20.584571+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x102b06880> (DA10E383-6417-4BE5-A188-D50D6D9DEA54)
+2026-07-05 07:37:20.584922+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:EventDeferring] [0x600002914b60] Initialized with scene: <UIWindowScene: 0x102b06880>; behavior: <_UIEventDeferringBehavior_iOS: 0x600000205720>; availableForProcess: 1, systemShellManagesKeyboardFocus: 1
+2026-07-05 07:37:20.585456+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (BoardServices) [com.apple.BoardServices:XPCErrors] [C:2] Alloc com.apple.backboard.hid-services.xpc
+2026-07-05 07:37:20.585628+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (libxpc.dylib) [com.apple.xpc:connection] [0x102b0a420] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-07-05 07:37:20.588119+0000 0x201ec    Default     0x0                  53604  0    rayforge-app: (BackBoardServices) [com.apple.BackBoard:EventDelivery] BKSHIDEventObserver - connection activation
+2026-07-05 07:37:20.588141+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (BackBoardServices) [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x6000026102a0; process scope; status: target> was:none
+2026-07-05 07:37:20.588258+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPad to LastOneWins
+2026-07-05 07:37:20.588288+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Scene target of keyboard event deferring environment did change: 1; scene: UIWindowScene: 0x102b06880; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.app-default
+2026-07-05 07:37:20.588344+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:UIFocus] Focus system enabled
+2026-07-05 07:37:20.589434+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:UIFocus] Failed to update focus with context <UIFocusUpdateContext: 0x600003004480; previouslyFocusedItem: (nil); nextFocusedItem: (nil); focusHeading: None>. No additional info available.
+2026-07-05 07:37:20.589569+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x102b06880> (DA10E383-6417-4BE5-A188-D50D6D9DEA54)
+2026-07-05 07:37:20.589613+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:EventDeferring] [0x600002914b60] Scene target of event deferring environments did update: scene: 0x102b06880; current systemShellManagesKeyboardFocus: 1; systemShellManagesKeyboardFocusForScene: 1; eligibleForRecordRemoval: 1;
+2026-07-05 07:37:20.589631+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x102b06880; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.app-default
+2026-07-05 07:37:20.589648+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Stack[KeyWindow] 0x600000c07870: Taking no further action for migration from LastOneWins -> SystemShellManaged as there are no scenes
+2026-07-05 07:37:20.589663+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPad to SystemShellManaged
+2026-07-05 07:37:20.590131+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Key window needs update: 0; currentKeyWindowScene: 0x0; evaluatedKeyWindowScene: 0x102b06880; currentApplicationKeyWindow: 0x0; evaluatedApplicationKeyWindow: 0x0; reason: UIWindowScene: 0x102b06880: Window scene became target of keyboard environment
+2026-07-05 07:37:20.590298+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x102b06880> (DA10E383-6417-4BE5-A188-D50D6D9DEA54)
+2026-07-05 07:37:20.590711+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x102b06880> (DA10E383-6417-4BE5-A188-D50D6D9DEA54)
+2026-07-05 07:37:20.601390+0000 0x201e3    Fault       0x45fb2              53604  14   rayforge-app: (UIKitCore) [com.apple.runtime-issues:UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
+2026-07-05 07:37:20.601392+0000 0x201e3    Activity    0x45fb2              53604  0    rayforge-app: (libsystem_trace.dylib) Activity for state dumps
+2026-07-05 07:37:20.602229+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x102b06880> (DA10E383-6417-4BE5-A188-D50D6D9DEA54)
+2026-07-05 07:37:20.621294+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:org.rayforge.app-default  persistentID: DA10E383-6417-4BE5-A188-D50D6D9DEA54
+2026-07-05 07:37:20.622635+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:Application] Ignoring already applied deactivation reason: 5; deactivation reasons: 1056
+2026-07-05 07:37:20.622762+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason added: 11; deactivation reasons: 1056 -> 3104; animating application lifecycle event: 1
+2026-07-05 07:37:20.623440+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.KeyboardArbiter:Client] startConnection
+2026-07-05 07:37:20.625578+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (libxpc.dylib) [com.apple.xpc:connection] [0x102a0a8f0] activating connection: mach=true listener=false peer=false name=com.apple.UIKit.KeyboardManagement.hosted
+2026-07-05 07:37:20.644785+0000 0x201f4    Default     0x0                  53604  0    rayforge-app: (BoardServices) [com.apple.BoardServices:XPCErrors] [C:3] Alloc com.apple.PointerUI.pointeruid.service
+2026-07-05 07:37:20.644852+0000 0x201f4    Default     0x0                  53604  0    rayforge-app: (libxpc.dylib) [com.apple.xpc:connection] [0x102a0bd90] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-07-05 07:37:20.670996+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:PointerLockState] preferredPointerLockStatus updated: scene: <UIWindowScene: 0x102b06880; role: UIWindowSceneSessionRoleApplication; persistentIdentifier: DA10E383-6417-4BE5-A188-D50D6D9DEA54; activationState: UISceneActivationStateForegroundInactive>; viewController: <UIViewController: 0x102a0cba0>; preferredPointerLockStatus: _UIPointerLockStatusUnlocked
+2026-07-05 07:37:20.671180+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:Orientation] <UIWindowScene: 0x102b06880> (DA10E383-6417-4BE5-A188-D50D6D9DEA54) Scene updated orientation preferences: none -> ( Ll Lr )
+2026-07-05 07:37:20.671309+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Key window API is scene-level: YES
+2026-07-05 07:37:20.671340+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] UIWindowScene: 0x102b06880: Window became key in scene: UIWindow: 0x102a0aa30; contextId: 0x274220C1: reason: UIWindowScene: 0x102b06880: Window requested to become key in scene: 0x102a0aa30
+2026-07-05 07:37:20.671365+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Key window needs update: 1; currentKeyWindowScene: 0x0; evaluatedKeyWindowScene: 0x102b06880; currentApplicationKeyWindow: 0x0; evaluatedApplicationKeyWindow: 0x102a0aa30; reason: UIWindowScene: 0x102b06880: Window requested to become key in scene: 0x102a0aa30
+2026-07-05 07:37:20.671395+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyWindow] Window did become application key: UIWindow: 0x102a0aa30; contextId: 0x274220C1; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.app-default
+2026-07-05 07:37:20.671458+0000 0x201e3    Default     0x0                  53604  1    rayforge-app: (UIKitCore) [com.apple.UIKit:EventDeferring] [0x600002914b60] Begin local event deferring requested for token: 0x60000260ed00; environments: 1; reason: UIWindowScene: 0x102b06880: Begin event deferring in keyboardFocus for window: 0x102a0aa30
+2026-07-05 07:37:20.672022+0000 0x201f4    Default     0x0                  53604  0    rayforge-app: (BackBoardServices) [com.apple.BackBoard:EventDelivery] BKSHIDEventDeliveryManager - connection activation
+2026-07-05 07:37:20.675627+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] Reloading input views for key-window scene responder: <GdkIOSView: 0x102a0d180; frame = (0 0; 1376 1032); > force:N
+2026-07-05 07:37:20.676170+0000 0x201f4    Default     0x0                  53604  0    rayforge-app: (BackBoardServices) [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x6000026102a0; token: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.app-default; status: ancestor> was:target
+2026-07-05 07:37:20.678528+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _reloadInputViewsForKeyWindowSceneResponder: 1 force: 0, fromBecomeFirstResponder: 1 (automaticKeyboard: 1, reloadIdentifier: 26BD2263-0EC1-43E1-94D5-85E30BC037DE)
+2026-07-05 07:37:20.678610+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder: <GdkIOSView: 0x102a0d180; frame = (0 0; 1376 1032); >, automaticKeyboard: 1, force: 0
+2026-07-05 07:37:20.678707+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder, found custom inputView: <(null): 0x0>, customInputViewController: <(null): 0x0>
+2026-07-05 07:37:20.678731+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder, found inputAccessoryView: <(null): 0x0>
+2026-07-05 07:37:20.678769+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder, responderRequiresKeyboard 0 (automaticKeyboardEnabled: 1, activeInstance: <(null): 0x0>, self.isOnScreen: 0, requiresKBWhenFirstResponder: 0)
+2026-07-05 07:37:20.678784+0000 0x201e3    Default     0x0                  53604  0    rayforge-app: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder, useKeyboard 0 (allowsSystemInputView: 1, !inputView <(null): 0x0>, responderRequiresKeyboard 0)
++ test 1 = 1
++ grep -q 'RAYFORGE BOOT FAILED' app-console.log app-syslog.log
++ grep -q 'RAYFORGE UI RUNNING' app-console.log app-syslog.log
