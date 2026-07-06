@@ -1,0 +1,6 @@
+Gdk-Message: 12:24:48.437: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/BDE7FEC2-4DED-4CE6-8A4A-96BF001A6AA2/data/Containers/Bundle/Application/63F92A6D-0633-491A-AD31-8E1B2196A8C7/RayforgeApp.app
+** Message: 12:24:49.354: GI_TYPELIB_PATH: /Users/runner/Library/Developer/CoreSimulator/Devices/BDE7FEC2-4DED-4CE6-8A4A-96BF001A6AA2/data/Containers/Bundle/Application/63F92A6D-0633-491A-AD31-8E1B2196A8C7/RayforgeApp.app/lib/girepository-1.0
+** Message: 12:24:49.354: python home: /Users/runner/Library/Developer/CoreSimulator/Devices/BDE7FEC2-4DED-4CE6-8A4A-96BF001A6AA2/data/Containers/Bundle/Application/63F92A6D-0633-491A-AD31-8E1B2196A8C7/RayforgeApp.app/python
+** Message: 12:24:49.354: site-packages: /Users/runner/Library/Developer/CoreSimulator/Devices/BDE7FEC2-4DED-4CE6-8A4A-96BF001A6AA2/data/Containers/Bundle/Application/63F92A6D-0633-491A-AD31-8E1B2196A8C7/RayforgeApp.app/python/lib/python3.13/site-packages
+Fontconfig warning: using without calling FcInit()
+** Message: 12:24:54.403: pygobject self-test UI presented

@@ -1,0 +1,3 @@
+Gdk-[1;32mMessage[0m: [34m05:15:36.590[0m: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/8B9557EC-E2E9-4E2E-8A71-0B92DBD34E55/data/Containers/Bundle/Application/EA8C2EC3-6ED5-401C-9965-388EC749D677/RayforgeSmoke.app
+** [1;32mMessage[0m: [34m05:15:39.593[0m: smoke test UI presented
+org.rayforge.smoketest: 11442

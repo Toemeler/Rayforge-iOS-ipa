@@ -1,0 +1,300 @@
++ echo 'Run ID: 28685037251'
+Run ID: 28685037251
++ echo 'Commit: 137216d96eaa8c2ecb7e939cef0f54a0ae8ed783'
+Commit: 137216d96eaa8c2ecb7e939cef0f54a0ae8ed783
+++ date -u
++ echo 'Date: Fri Jul  3 22:00:14 UTC 2026'
+Date: Fri Jul  3 22:00:14 UTC 2026
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pycairo-setup.log ====================='
+===================== TAIL: pycairo-setup.log =====================
++ '[' -f pycairo-setup.log ']'
++ tail -50 pycairo-setup.log
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Program /opt/homebrew/opt/python@3.13/bin/python3.13 found: YES (/opt/homebrew/opt/python@3.13/bin/python3.13)
+Compiler for C supports arguments -Wall: YES 
+Compiler for C supports arguments -Warray-bounds: YES 
+Compiler for C supports arguments -Wcast-align: YES 
+Compiler for C supports arguments -Wconversion: YES 
+Compiler for C supports arguments -Wextra: YES 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Wformat-nonliteral: YES 
+Compiler for C supports arguments -Wformat-security: YES 
+Compiler for C supports arguments -Wimplicit-function-declaration: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpacked: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wreturn-type: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wsign-compare: YES 
+Compiler for C supports arguments -Wstrict-aliasing: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wunused-but-set-variable: YES 
+Compiler for C supports arguments -Wswitch-default: YES 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Configuring METADATA using configuration
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency cairo found: YES 1.18.4
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency python found: YES 3.13
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build targets in project: 4
+
+pycairo 1.29.0
+
+  User defined options
+    Cross files: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+                 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-python.txt
+    buildtype  : release
+    prefix     : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage
+    python     : /opt/homebrew/opt/python@3.13/bin/python3.13
+    tests      : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pycairo-build.log ====================='
+===================== TAIL: pycairo-build.log =====================
++ '[' -f pycairo-build.log ']'
++ tail -50 pycairo-build.log
+ninja: Entering directory `pycairo-build'
+[1/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/bufferproxy.c.o
+[2/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/cairomodule.c.o
+[3/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/device.c.o
+[4/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/error.c.o
+[5/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/glyph.c.o
+[6/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/enums.c.o
+[7/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/misc.c.o
+[8/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/matrix.c.o
+[9/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/path.c.o
+[10/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/font.c.o
+[11/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/rectangle.c.o
+[12/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/context.c.o
+[13/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/pattern.c.o
+[14/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/textcluster.c.o
+[15/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/region.c.o
+[16/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/textextents.c.o
+[17/21] Copying file cairo/__init__.py
+[18/21] Copying file cairo/__init__.pyi
+[19/21] Copying file cairo/py.typed
+[20/21] Compiling C object cairo/_cairo.cpython-313-iphonesimulator.so.p/surface.c.o
+[21/21] Linking target cairo/_cairo.cpython-313-iphonesimulator.so
+ld: warning: -undefined dynamic_lookup is deprecated on iOS-simulator
+ld: warning: search path '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14' not found
+ninja: Entering directory `pycairo-build'
+[0/1] Installing files
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo/__init__.py'...
+Installing cairo/_cairo.cpython-313-iphonesimulator.so to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/py3cairo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/include/pycairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-build/METADATA to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/pycairo-1.29.0.dist-info
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/__init__.pyi to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/py.typed to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-src/cairo/py3cairo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/cairo/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-build/meson-private/py3cairo.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/pkgconfig
+Running custom install script '/opt/homebrew/opt/python@3.13/bin/python3.13 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pycairo-build/meson-private/pycompile.py python-3.13-installed.json 0'
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pygobject-setup.log ====================='
+===================== TAIL: pygobject-setup.log =====================
++ '[' -f pygobject-setup.log ']'
++ tail -50 pygobject-setup.log
+Compiler for C supports arguments -Wlogical-op: NO 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wnull-dereference: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpacked: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wrestrict: NO 
+Compiler for C supports arguments -Wreturn-type: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wsign-compare: YES 
+Compiler for C supports arguments -Wstrict-aliasing: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wswitch-default: YES 
+Compiler for C supports arguments -Wswitch-enum: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wunused-but-set-variable: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wno-incompatible-pointer-types-discards-qualifiers: YES 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wno-discarded-qualifiers: NO 
+Compiler for C supports arguments -Wno-sign-conversion: YES 
+Compiler for C supports arguments -Wno-cast-function-type: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Configuring config.h using configuration
+Configuring pygobject-3.0.pc using configuration
+Configuring METADATA using configuration
+Configuring config.h using configuration
+Build targets in project: 2
+
+pygobject 3.56.3
+
+  Subprojects
+    pythoncapi-compat: YES
+
+  User defined options
+    Cross files      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+                       /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-python.txt
+    buildtype        : release
+    prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage
+    pycairo          : enabled
+    python           : /opt/homebrew/opt/python@3.13/bin/python3.13
+    tests            : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: pygobject-build.log ====================='
+===================== TAIL: pygobject-build.log =====================
++ '[' -f pygobject-build.log ']'
++ tail -50 pygobject-build.log
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_ossighelper.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_propertyhelper.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_signalhelper.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_signature.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/types.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GLib.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GLibUnix.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Gtk.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Gdk.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GdkPixbuf.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GObject.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Gio.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GioUnix.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GIMarshallingTests.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Pango.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/__init__.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/repository/__init__.py'...
+Installing gi/_gi.cpython-313-iphonesimulator.so to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing gi/_gi_cairo.cpython-313-iphonesimulator.so to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/pygobject.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/include/pygobject-3.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/pygobject-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/include/pygobject-3.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-build/pygobject-3.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-build/METADATA to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/PyGObject-3.56.3.dist-info
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/events.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_constants.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/docstring.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_enum.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_error.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_gtktemplate.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/importer.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/module.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_ossighelper.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_propertyhelper.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_signalhelper.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_signature.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/types.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GLib.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GLibUnix.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Gtk.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Gdk.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GdkPixbuf.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GObject.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Gio.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GioUnix.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GIMarshallingTests.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Pango.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/repository/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/repository
+Running custom install script '/opt/homebrew/opt/python@3.13/bin/python3.13 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-build/meson-private/pycompile.py python-3.13-installed.json 0'
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: testapp-link.log ====================='
+===================== TAIL: testapp-link.log =====================
++ '[' -f testapp-link.log ']'
++ tail -50 testapp-link.log
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: app-console.log ====================='
+===================== TAIL: app-console.log =====================
++ '[' -f app-console.log ']'
++ tail -50 app-console.log
+Gdk-Message: 21:59:24.638: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/65FCA660-B730-425D-8C45-F1E10FBB0F16/data/Containers/Bundle/Application/DE20B77D-0E5E-462F-A3F1-2A9D1D988BFD/RayforgePyGI.app
+** Message: 21:59:25.161: GI_TYPELIB_PATH: /Users/runner/Library/Developer/CoreSimulator/Devices/65FCA660-B730-425D-8C45-F1E10FBB0F16/data/Containers/Bundle/Application/DE20B77D-0E5E-462F-A3F1-2A9D1D988BFD/RayforgePyGI.app/lib/girepository-1.0
+** Message: 21:59:25.162: python home: /Users/runner/Library/Developer/CoreSimulator/Devices/65FCA660-B730-425D-8C45-F1E10FBB0F16/data/Containers/Bundle/Application/DE20B77D-0E5E-462F-A3F1-2A9D1D988BFD/RayforgePyGI.app/python
+** Message: 21:59:25.162: site-packages: /Users/runner/Library/Developer/CoreSimulator/Devices/65FCA660-B730-425D-8C45-F1E10FBB0F16/data/Containers/Bundle/Application/DE20B77D-0E5E-462F-A3F1-2A9D1D988BFD/RayforgePyGI.app/python/lib/python3.13/site-packages
+Fontconfig warning: using without calling FcInit()
+** Message: 21:59:27.980: pygobject self-test UI presented
++ echo
+
++ for f in pycairo-setup.log pycairo-build.log pygobject-setup.log pygobject-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: app-syslog.log ====================='
+===================== TAIL: app-syslog.log =====================
++ '[' -f app-syslog.log ']'
++ tail -50 app-syslog.log
+2026-07-03 21:59:24.757709+0000 0xe7a0     Default     0x0                  22538  0    rayforge-pygitest: (libxpc.dylib) [com.apple.xpc:session] [0x60000210a8a0] Session created from connection [0x103210a90]
+2026-07-03 21:59:24.757730+0000 0xe7a0     Default     0x0                  22538  0    rayforge-pygitest: (libxpc.dylib) [com.apple.xpc:connection] [0x103210a90] activating connection: mach=true listener=false peer=false name=com.apple.uiintelligencesupport.agent
+2026-07-03 21:59:24.758616+0000 0xe7a0     Default     0x0                  22538  0    rayforge-pygitest: (libxpc.dylib) [com.apple.xpc:session] [0x60000210a8a0] Session activated
+2026-07-03 21:59:24.758650+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:UIFocus] Failed to update focus with context <UIFocusUpdateContext: 0x6000030046c0; previouslyFocusedItem: (nil); nextFocusedItem: (nil); focusHeading: None>. No additional info available.
+2026-07-03 21:59:24.761489+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (libxpc.dylib) [com.apple.xpc:connection] [0x1033099f0] activating connection: mach=true listener=false peer=false name=com.apple.lsd.mapdb
+2026-07-03 21:59:24.775837+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Network) [com.apple.network:activity] Create activity from XPC object <nw_activity 50:1 [153200A2-F07E-4FF7-81CC-B2AABB42B730] (reporting strategy default)>
+2026-07-03 21:59:24.775871+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Network) [com.apple.network:activity] Create activity from XPC object <nw_activity 50:2 [32B1EF8D-FF33-4DBE-A720-8614961977B1] (reporting strategy default)>
+2026-07-03 21:59:24.775884+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Network) [com.apple.network:activity] Set activity <nw_activity 50:1 [153200A2-F07E-4FF7-81CC-B2AABB42B730] (reporting strategy default)> as the global parent
+2026-07-03 21:59:24.775920+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Ending background task with UIBackgroundTaskIdentifier: 1
+2026-07-03 21:59:24.775955+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Ending task with identifier 1 and description: <_UIBackgroundTaskInfo: 0x6000017053c0>: taskID = 1, taskName = Launch Background Task for Coalescing, creationTime = 854 (elapsed = 0), _expireHandler: (null)
+2026-07-03 21:59:24.775961+0000 0xe7a6     Default     0x0                  22538  0    rayforge-pygitest: (CoreAnalytics) [com.apple.CoreAnalytics:client] No XPC connection in Simulator
+2026-07-03 21:59:24.775981+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Decrementing reference count for assertion <BKSProcessAssertion: 0x600002106b20> (used by background task with identifier 1: <_UIBackgroundTaskInfo: 0x6000017053c0>: taskID = 1, taskName = Launch Background Task for Coalescing, creationTime = 854 (elapsed = 0))
+2026-07-03 21:59:24.775987+0000 0xe7a6     Error       0x0                  22538  0    rayforge-pygitest: (libapp_launch_measurement.dylib) [com.apple.app_launch_measurement:General] Failed to send CA Event for app launch measurements for ca_event_type: 0 event_name: com.apple.app_launch_measurement.FirstFramePresentationMetric
+2026-07-03 21:59:24.776399+0000 0xe789     Default     0x0                  22538  1    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:EventDeferring] [0x60000290e920] Scene target of event deferring environments did update: scene: 0x103209de0; current systemShellManagesKeyboardFocus: 1; systemShellManagesKeyboardFocusForScene: 1; eligibleForRecordRemoval: 1;
+2026-07-03 21:59:24.776422+0000 0xe789     Default     0x0                  22538  1    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x103209de0; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.pygitest-default
+2026-07-03 21:59:25.271280+0000 0xe7a6     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Ending background task with UIBackgroundTaskIdentifier: 2
+2026-07-03 21:59:25.271418+0000 0xe7a6     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Ending task with identifier 2 and description: <_UIBackgroundTaskInfo: 0x600001707800>: taskID = 2, taskName = Persistent SceneSession Map Update, creationTime = 854 (elapsed = 0), _expireHandler: <__NSGlobalBlock__: 0x1e61729e0>
+2026-07-03 21:59:25.271553+0000 0xe7a6     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Decrementing reference count for assertion <BKSProcessAssertion: 0x600002106b20> (used by background task with identifier 2: <_UIBackgroundTaskInfo: 0x600001707800>: taskID = 2, taskName = Persistent SceneSession Map Update, creationTime = 854 (elapsed = 0))
+2026-07-03 21:59:25.271606+0000 0xe7a6     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Will invalidate assertion: <BKSProcessAssertion: 0x600002106b20> for task identifier: 2
+2026-07-03 21:59:25.273819+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Python) py 3.13.14 (main, Jun 12 2026, 07:26:39) [Clang 17.0.0 (clang-1700.0.13.5)] platform ios
+2026-07-03 21:59:25.274728+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Python) sys.path = ['/Users/runner/Library/Developer/CoreSimulator/Devices/65FCA660-B730-425D-8C45-F1E10FBB0F16/data/Containers/Bundle/Application/DE20B77D-0E5E-462F-A3F1-2A9D1D988BFD/RayforgePyGI.app/python/lib/python3.13', '/Users/runner/Library/Developer/CoreSimulator/Devices/65FCA660-B730-425D-8C45-F1E10FBB0F16/data/Containers/Bundle/Application/DE20B77D-0E5E-462F-A3F1-2A9D1D988BFD/RayforgePyGI.app/python/lib/python3.13/lib-dynload', '/Users/runner/Library/Developer/CoreSimulator/Devices/65FCA660-B730-425D-8C45-F1E10FBB0F16/data/Containers/Bundle/Application/DE20B77D-0E5E-462F-A3F1-2A9D1D988BFD/RayforgePyGI.app/python/lib/python3.13/site-packages']
+2026-07-03 21:59:25.274767+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Python) GI_TYPELIB_PATH = /Users/runner/Library/Developer/CoreSimulator/Devices/65FCA660-B730-425D-8C45-F1E10FBB0F16/data/Containers/Bundle/Application/DE20B77D-0E5E-462F-A3F1-2A9D1D988BFD/RayforgePyGI.app/lib/girepository-1.0
+2026-07-03 21:59:25.316686+0000 0xe7a6     Activity    0x2fd53              22538  0    rayforge-pygitest: (RunningBoardServices) didChangeInheritances
+2026-07-03 21:59:25.778366+0000 0xe79f     Activity    0x2fd54              22538  0    rayforge-pygitest: (RunningBoardServices) didChangeInheritances
+2026-07-03 21:59:25.889985+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Python) gi from /Users/runner/Library/Developer/CoreSimulator/Devices/65FCA660-B730-425D-8C45-F1E10FBB0F16/data/Containers/Bundle/Application/DE20B77D-0E5E-462F-A3F1-2A9D1D988BFD/RayforgePyGI.app/python/lib/python3.13/site-packages/gi/__init__.py
+2026-07-03 21:59:26.002735+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Python) cairo from /Users/runner/Library/Developer/CoreSimulator/Devices/65FCA660-B730-425D-8C45-F1E10FBB0F16/data/Containers/Bundle/Application/DE20B77D-0E5E-462F-A3F1-2A9D1D988BFD/RayforgePyGI.app/python/lib/python3.13/site-packages/cairo/__init__.py version 1.29.0
+2026-07-03 21:59:26.003161+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Python) Gtk.Label -> <Gtk.Label object at 0x1090c2140 (GtkLabel at 0x103283d00)> text= hello from python
+2026-07-03 21:59:26.006796+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Python) Adw.WindowTitle -> <Adw.WindowTitle object at 0x10913b980 (AdwWindowTitle at 0x10349ab40)> title= T
+2026-07-03 21:59:26.011855+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Python) cairo surface -> 8 x 8
+2026-07-03 21:59:26.011910+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Python) PYGOBJECT OK
+2026-07-03 21:59:27.980735+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:EventBus] Event Timing Profile for Touch: not found, path="/System/Library/EventTimingProfiles/Sim.Touch.plist"
+2026-07-03 21:59:27.980860+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:EventBus] Event Timing Profile for Pencil: not found, path="/System/Library/EventTimingProfiles/Sim.Pencil.plist"
+2026-07-03 21:59:27.980987+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:UpdateScheduler] Target list changed: <CADisplay:LCD PurpleMain>
+2026-07-03 21:59:27.981415+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.KeyboardArbiter:Client] startConnection
+2026-07-03 21:59:27.981630+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (libAccessibility.dylib) [com.apple.Accessibility:AXCommon] Read Per-App on Init: Smart invert = (null)
+2026-07-03 21:59:27.981908+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.KeyboardArbiter:Client] handleKeyboardChange: set currentKeyboard:N (wasKeyboard:N)
+2026-07-03 21:59:27.983365+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:KeyboardArbiterClientLog] isWritingToolsHandlingKeyboardTracking:Y (WT ready:Y, Arbiter ready:Y)
+2026-07-03 21:59:27.984179+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:org.rayforge.pygitest-default  persistentID: D14EF072-124D-4860-9B94-0E5A4AB4E662
+2026-07-03 21:59:27.985680+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x103209de0> (D14EF072-124D-4860-9B94-0E5A4AB4E662)
+2026-07-03 21:59:27.986863+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x103209de0> (D14EF072-124D-4860-9B94-0E5A4AB4E662)
+2026-07-03 21:59:27.987225+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:org.rayforge.pygitest-default  persistentID: D14EF072-124D-4860-9B94-0E5A4AB4E662
+2026-07-03 21:59:27.987348+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason removed: 12; deactivation reasons: 4128 -> 32; animating application lifecycle event: 1
+2026-07-03 21:59:27.987413+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.KeyboardArbiter:Client] Send setDeactivating: N (-DeactivationReason:SuspendedEventsOnly)
+2026-07-03 21:59:27.988126+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason removed: 5; deactivation reasons: 32 -> 0; animating application lifecycle event: 0
+2026-07-03 21:59:28.264928+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Network) [com.apple.network:activity] <nw_activity 50:1 [153200A2-F07E-4FF7-81CC-B2AABB42B730] (global parent) (reporting strategy default) complete (reason success)> complete with reason 2 (success), duration 4890ms
+2026-07-03 21:59:28.264980+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Network) [com.apple.network:activity] <nw_activity 50:2 [32B1EF8D-FF33-4DBE-A720-8614961977B1] (reporting strategy default) complete (reason success)> complete with reason 2 (success), duration 4890ms
+2026-07-03 21:59:28.264994+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Network) [com.apple.network:activity] Unsetting the global parent activity <nw_activity 50:1 [153200A2-F07E-4FF7-81CC-B2AABB42B730] (global parent) (reporting strategy default) complete (reason success)>
+2026-07-03 21:59:28.265004+0000 0xe789     Default     0x0                  22538  0    rayforge-pygitest: (Network) [com.apple.network:activity] Unset the global parent activity
+2026-07-03 21:59:28.265070+0000 0xe79f     Error       0x0                  22538  0    rayforge-pygitest: (libapp_launch_measurement.dylib) [com.apple.app_launch_measurement:General] Failed to send CA Event for app launch measurements for ca_event_type: 1 event_name: com.apple.app_launch_measurement.ExtendedLaunchMetrics
+2026-07-03 22:00:01.770540+0000 0xe79f     Activity    0x2fd55              22538  0    rayforge-pygitest: (RunningBoardServices) didChangeInheritances
++ echo
+
