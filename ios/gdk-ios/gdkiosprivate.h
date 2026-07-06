@@ -113,6 +113,7 @@ struct _GdkIOSDisplay
   GdkDevice *core_keyboard;
 
   GList *toplevels;          /* of GdkIOSSurface, most recent first */
+  GList *popups;             /* of GdkIOSSurface, most recent first */
 
   guint32 next_serial;
 };

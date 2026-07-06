@@ -77,10 +77,22 @@ def main() -> None:
     # not (PermissionError on device; the simulator was permissive).
     # Config goes to Documents so machine configs are visible in the
     # Files app; state/data/cache go to Library.
+    try:
+        import certifi
+        os.environ.setdefault("SSL_CERT_FILE", certifi.where())
+        os.environ.setdefault("REQUESTS_CA_BUNDLE", certifi.where())
+        _ioslog(f"SSL CA bundle: {certifi.where()}")
+    except Exception as _e:
+        _ioslog(f"certifi unavailable: {_e!r}")
+
+    # The C shell sets HOME to the container's Documents directory (so
+    # GTK file choosers and g_get_home_dir land somewhere user-visible).
+    # The sandbox container root is its parent; Library sits next to
+    # Documents there.
     _home = os.environ.get("HOME", "")
     if _home:
-        _docs = os.path.join(_home, "Documents")
-        _lib = os.path.join(_home, "Library")
+        _docs = _home if os.path.basename(_home) == "Documents"             else os.path.join(_home, "Documents")
+        _lib = os.path.join(os.path.dirname(_docs), "Library")
         _xdg = {
             "XDG_CONFIG_HOME": os.path.join(_docs, "config"),
             "XDG_STATE_HOME": os.path.join(_lib, "state"),
@@ -93,6 +105,12 @@ def main() -> None:
                 os.makedirs(os.environ[_k], exist_ok=True)
             except OSError as _e:
                 _ioslog(f"XDG dir {_k}={_v} not creatable: {_e}")
+    try:
+        if _home and os.path.isdir(_home):
+            os.chdir(_home)
+            _ioslog(f"cwd: {_home}")
+    except OSError as _e:
+        _ioslog(f"chdir failed: {_e!r}")
     sys.argv = ["rayforge"]
 
     import gi
@@ -131,6 +149,11 @@ def main() -> None:
         # here on.
         _ioslog("_ios_run: register()")
         self.register(None)
+        # Keep the GApplication alive forever: on iOS the app lifecycle
+        # belongs to UIKit, never to "last window closed" (closing the
+        # consent dialog must not quit the app).
+        self.hold()
+        _ioslog("_ios_run: hold() — app pinned alive")
         _ioslog("_ios_run: activate()")
         self.activate()
         try:

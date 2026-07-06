@@ -109,6 +109,14 @@ static void
 gdk_ios_surface_hide (GdkSurface *surface)
 {
   GdkIOSSurface *self = GDK_IOS_SURFACE (surface);
+  GdkIOSDisplay *display = GDK_IOS_DISPLAY (gdk_surface_get_display (surface));
+
+  g_message ("gdk-ios: hide surface=%p type=%s", (void *) self,
+             GDK_IS_TOPLEVEL (self) ? "toplevel"
+               : (GDK_IS_POPUP (self) ? "popup" : "other"));
+
+  if (GDK_IS_POPUP (self))
+    display->popups = g_list_remove (display->popups, self);
 
   self->visible = FALSE;
   if (self->layer != NULL)
@@ -170,7 +178,12 @@ gdk_ios_surface_destroy (GdkSurface *surface,
   GdkIOSSurface *self = GDK_IOS_SURFACE (surface);
   GdkIOSDisplay *display = GDK_IOS_DISPLAY (gdk_surface_get_display (surface));
 
+  g_message ("gdk-ios: destroy surface=%p type=%s foreign=%d", (void *) self,
+             GDK_IS_TOPLEVEL (self) ? "toplevel"
+               : (GDK_IS_POPUP (self) ? "popup" : "other"),
+             foreign_destroy);
   display->toplevels = g_list_remove (display->toplevels, self);
+  display->popups = g_list_remove (display->popups, self);
   gdk_ios_surface_detach_layer (self);
 }
 
@@ -636,6 +649,11 @@ gdk_ios_popup_present (GdkPopup *popup,
 
   gdk_ios_surface_attach_layer (surface_impl);
   surface_impl->visible = TRUE;
+
+  /* Register for event routing: popups stack above toplevels and must
+   * receive the taps that land on them (hit-tested in surface_at). */
+  if (g_list_find (display->popups, surface_impl) == NULL)
+    display->popups = g_list_prepend (display->popups, surface_impl);
 
   CALayer *layer = (__bridge CALayer *) surface_impl->layer;
   layer.hidden = NO;

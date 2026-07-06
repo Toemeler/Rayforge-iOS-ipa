@@ -32,7 +32,7 @@ env:
   IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
   IOS_SDK: "iphonesimulator"
   BUNDLE_ID: "org.rayforge.app"
-  RAYGEO_TAG: "v0.13.2"
+  RAYGEO_TAG: "v0.14.0"
   VTRACER_VERSION: "0.6.11"
   PY_SUPPORT_URL: "https://github.com/beeware/Python-Apple-support/releases/download/3.13-b14/Python-3.13-iOS-support.b14.tar.gz"
   LIBFFI_VERSION: "3.5.2"
@@ -384,7 +384,7 @@ jobs:
             blinker==1.9.0 ezdxf==1.4.4b3 platformdirs==4.3.6 pluggy==1.6.0 \
             pypdf==6.12.1 semver==3.0.2 svgelements==1.9.6 trimesh==4.6.8 \
             websockets==14.2 asyncudp==0.11.0 GitPython==3.1.50 gitdb smmap \
-            pyserial typing_extensions \
+            pyserial typing_extensions certifi \
             pyparsing fonttools \
             2>&1 | tee pure-dl.log
 
@@ -628,6 +628,19 @@ jobs:
           echo '  <key>UIRequiresFullScreen</key><true/>' >> "$PL"
           echo '  <key>UIFileSharingEnabled</key><true/>' >> "$PL"
           echo '  <key>LSSupportsOpeningDocumentsInPlace</key><true/>' >> "$PL"
+          echo '  <key>CFBundleDocumentTypes</key><array>' >> "$PL"
+          echo '    <dict>' >> "$PL"
+          echo '      <key>CFBundleTypeName</key><string>Vector / Raster Artwork</string>' >> "$PL"
+          echo '      <key>LSHandlerRank</key><string>Alternate</string>' >> "$PL"
+          echo '      <key>LSItemContentTypes</key><array>' >> "$PL"
+          echo '        <string>public.svg-image</string>' >> "$PL"
+          echo '        <string>public.png</string>' >> "$PL"
+          echo '        <string>public.jpeg</string>' >> "$PL"
+          echo '        <string>com.adobe.pdf</string>' >> "$PL"
+          echo '        <string>public.data</string>' >> "$PL"
+          echo '      </array>' >> "$PL"
+          echo '    </dict>' >> "$PL"
+          echo '  </array>' >> "$PL"
           echo '</dict></plist>' >> "$PL"
           plutil -lint "$PL"
 

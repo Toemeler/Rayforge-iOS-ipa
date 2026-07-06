@@ -23,6 +23,8 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <TargetConditionals.h>
+#include <execinfo.h>
+#include <signal.h>
 #include <gdk/gdk.h>
 #include <gdk/gdkkeysyms.h>
 #include "gdkiosprivate.h"
@@ -225,6 +227,13 @@ deliver_button (GdkEventType type, guint button,
   update_pointer_surface (display, target, lx, ly, time);
   if (target == NULL)
     return;
+
+  g_message ("gdk-ios: %s btn=%u root=(%.0f,%.0f) -> %s %p local=(%.0f,%.0f)",
+             type == GDK_BUTTON_PRESS ? "press" : "release",
+             button, root_x, root_y,
+             GDK_IS_TOPLEVEL (target) ? "toplevel"
+               : (GDK_IS_POPUP (target) ? "popup" : "other"),
+             (void *) target, lx, ly);
 
   GdkModifierType button_mask =
     (GdkModifierType) (GDK_BUTTON1_MASK << (button - 1));
@@ -575,6 +584,42 @@ deliver_key (GdkEventType type, UIKey *key)
 @property (strong, nonatomic) CADisplayLink *displayLink;
 @end
 
+static void
+ios_crash_signal_handler (int sig)
+{
+  /* Best-effort: write signal + native backtrace to fd 2 (the log file
+   * on device). Not fully async-signal-safe, but this runs at the point
+   * of no return anyway and has proven reliable enough in practice. */
+  char buf[64];
+  int n = snprintf (buf, sizeof buf, "\n=== CRASH: signal %d ===\n", sig);
+  write (2, buf, n);
+  void *frames[64];
+  int count = backtrace (frames, 64);
+  backtrace_symbols_fd (frames, count, 2);
+  signal (sig, SIG_DFL);
+  raise (sig);
+}
+
+static void
+ios_uncaught_exception_handler (NSException *ex)
+{
+  fprintf (stderr, "\n=== CRASH: uncaught ObjC exception %s: %s ===\n",
+           [ex.name UTF8String], [ex.reason UTF8String]);
+  for (NSString *line in ex.callStackSymbols)
+    fprintf (stderr, "%s\n", [line UTF8String]);
+  fflush (stderr);
+}
+
+static void
+ios_install_crash_handlers (void)
+{
+  NSSetUncaughtExceptionHandler (&ios_uncaught_exception_handler);
+  int sigs[] = { SIGSEGV, SIGBUS, SIGILL, SIGFPE, SIGABRT, SIGTRAP };
+  for (size_t i = 0; i < sizeof sigs / sizeof sigs[0]; i++)
+    signal (sigs[i], ios_crash_signal_handler);
+}
+
+
 @implementation GdkIOSAppDelegate
 
 - (void)pumpGLib:(CADisplayLink *)link
@@ -595,6 +640,16 @@ deliver_key (GdkEventType type, UIKey *key)
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  ios_install_crash_handlers ();
+
+  /* Make GLib/GTK treat the user-visible Documents directory as $HOME:
+   * file choosers open there, g_get_home_dir() is writable, and files
+   * are reachable via the Files app. XDG dirs are set separately in
+   * ios_main.py. (NSHomeDirectory does not read the env var.) */
+  NSString *docsDir = [NSSearchPathForDirectoriesInDomains (
+      NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+  setenv ("HOME", [docsDir fileSystemRepresentation], 1);
+
 #if !TARGET_OS_SIMULATOR
   /* On device, mirror stdout+stderr (g_message, IOSBOOT, Python) into a
    * user-accessible file: Documents/rayforge-log.txt, visible in the

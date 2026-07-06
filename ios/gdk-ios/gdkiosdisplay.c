@@ -363,6 +363,24 @@ gdk_ios_display_surface_at (GdkIOSDisplay *self,
                             double x, double y,
                             double *local_x, double *local_y)
 {
+  /* Popups stack above everything; check them first (most recent
+   * first — innermost submenu wins). Coordinates are root points;
+   * popup surface->x/y are stored as root coordinates. */
+  for (GList *l = self->popups; l; l = l->next)
+    {
+      GdkSurface *surface = GDK_SURFACE (l->data);
+      if (!GDK_SURFACE_IS_MAPPED (surface))
+        continue;
+      if (x >= surface->x && y >= surface->y &&
+          x < surface->x + surface->width &&
+          y < surface->y + surface->height)
+        {
+          if (local_x) *local_x = x - surface->x;
+          if (local_y) *local_y = y - surface->y;
+          return GDK_IOS_SURFACE (l->data);
+        }
+    }
+
   /* Iterate surfaces most-recent-first; coordinates are root points. */
   for (GList *l = self->toplevels; l; l = l->next)
     {
@@ -389,6 +407,7 @@ gdk_ios_display_finalize (GObject *object)
   g_clear_object (&self->monitors);
   g_clear_object (&self->keymap);
   g_list_free (self->toplevels);
+  g_list_free (self->popups);
   if (the_display == self)
     the_display = NULL;
 
