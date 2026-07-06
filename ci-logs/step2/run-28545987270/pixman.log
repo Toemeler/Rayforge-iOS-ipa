@@ -1,0 +1,130 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixman-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixman-build
+Build type: cross build
+Project name: pixman
+Project version: 0.44.2
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Compiler for C supports arguments -Wdeclaration-after-statement: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -ftrapping-math: YES 
+Compiler for C supports arguments -Wunused-local-typedefs: YES 
+Checking if "test for ASM .func directive" compiles: NO 
+Checking if "test for ASM .syntax unified directive" compiles: NO 
+Checking if "test for ASM leading underscore" links: YES 
+Checking if "NEON A64 Intrinsic Support" compiles: YES 
+Checking if "GNU Inline ASM support." compiles: YES 
+WARNING: OpenMP support not available because: Couldn't find libomp
+Run-time dependency OpenMP found: NO  (tried system)
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Found CMake: NO
+Run-time dependency gtk+-3.0 found: NO  (tried pkg-config, framework and cmake)
+Run-time dependency glib-2.0 found: YES 2.82.4
+Run-time dependency libpng found: NO  (tried pkg-config, framework and cmake)
+Has header "png.h" : NO 
+Has header "png.h" : NO (cached)
+Has header "png.h" : NO (cached)
+Has header "png.h" : NO (cached)
+Has header "png.h" : NO (cached)
+Has header "png.h" : NO (cached)
+Library m found: YES
+Run-time dependency threads found: YES
+Has header "pthread.h" : YES 
+Checking for function "sigaction" : YES 
+Checking for function "alarm" : YES 
+Checking for function "mprotect" : YES 
+Checking for function "getpagesize" : YES 
+Checking for function "mmap" : YES 
+Checking for function "getisax" : NO 
+Checking for function "gettimeofday" : YES 
+Checking for function "posix_memalign" : YES 
+Checking for function "feenableexcept" with dependency -lm: NO 
+Header "fenv.h" has symbol "FE_DIVBYZERO" : YES 
+Check usable header "sys/mman.h" : YES 
+Check usable header "fenv.h" : YES 
+Check usable header "unistd.h" : YES 
+Checking if "TLS via __thread" compiles: YES 
+Checking if "__attribute__((constructor))" links: YES 
+Checking if "__attribute__((destructor))" links: YES 
+Checking if "Has float128 support" links: NO 
+Checking for function "clz" : YES 
+Checking if "Support for GCC vector extensions" links: YES 
+Checking for size of "long" : 8 
+Configuring pixman-config.h using configuration
+Configuring pixman-version.h using configuration
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build targets in project: 2
+
+pixman 0.44.2
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-arm64-cross.txt
+    buildtype      : release
+    default_library: static
+    demos          : disabled
+    gtk            : disabled
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    tests          : disabled
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `pixman-build'
+[1/37] Compiling C object pixman/libpixman-arm-neon.a.p/pixman-arma64-neon-asm-bilinear.S.o
+[2/37] Compiling C object pixman/libpixman-1.a.p/pixman.c.o
+[3/37] Compiling C object pixman/libpixman-1.a.p/pixman-arm.c.o
+[4/37] Compiling C object pixman/libpixman-1.a.p/pixman-access-accessors.c.o
+[5/37] Compiling C object pixman/libpixman-1.a.p/pixman-bits-image.c.o
+[6/37] Compiling C object pixman/libpixman-1.a.p/pixman-access.c.o
+[7/37] Compiling C object pixman/libpixman-1.a.p/pixman-conical-gradient.c.o
+[8/37] Compiling C object pixman/libpixman-arm-neon.a.p/pixman-arma64-neon-asm.S.o
+[9/37] Compiling C object pixman/libpixman-1.a.p/pixman-combine32.c.o
+[10/37] Compiling C object pixman/libpixman-1.a.p/pixman-edge-accessors.c.o
+[11/37] Compiling C object pixman/libpixman-1.a.p/pixman-edge.c.o
+[12/37] Compiling C object pixman/libpixman-1.a.p/pixman-filter.c.o
+[13/37] Compiling C object pixman/libpixman-1.a.p/pixman-glyph.c.o
+../pixman-src/pixman/pixman-glyph.c:395:16: warning: unknown attribute '__force_align_arg_pointer__' ignored [-Wunknown-attributes]
+  395 | __attribute__((__force_align_arg_pointer__))
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../pixman-src/pixman/pixman-glyph.c:637:16: warning: unknown attribute '__force_align_arg_pointer__' ignored [-Wunknown-attributes]
+  637 | __attribute__((__force_align_arg_pointer__))
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+[14/37] Compiling C object pixman/libpixman-1.a.p/pixman-general.c.o
+[15/37] Compiling C object pixman/libpixman-1.a.p/pixman-gradient-walker.c.o
+[16/37] Compiling C object pixman/libpixman-1.a.p/pixman-image.c.o
+[17/37] Compiling C object pixman/libpixman-1.a.p/pixman-implementation.c.o
+[18/37] Compiling C object pixman/libpixman-1.a.p/pixman-linear-gradient.c.o
+[19/37] Compiling C object pixman/libpixman-1.a.p/pixman-mips.c.o
+[20/37] Compiling C object pixman/libpixman-1.a.p/pixman-matrix.c.o
+[21/37] Compiling C object pixman/libpixman-1.a.p/pixman-noop.c.o
+[22/37] Compiling C object pixman/libpixman-1.a.p/pixman-ppc.c.o
+[23/37] Compiling C object pixman/libpixman-1.a.p/pixman-radial-gradient.c.o
+[24/37] Compiling C object pixman/libpixman-1.a.p/pixman-region32.c.o
+[25/37] Compiling C object pixman/libpixman-1.a.p/pixman-region16.c.o
+[26/37] Compiling C object pixman/libpixman-1.a.p/pixman-riscv.c.o
+[27/37] Compiling C object pixman/libpixman-1.a.p/pixman-solid-fill.c.o
+[28/37] Compiling C object pixman/libpixman-arm-neon.a.p/pixman-arm-neon.c.o
+[29/37] Compiling C object pixman/libpixman-1.a.p/pixman-timer.c.o
+[30/37] Compiling C object pixman/libpixman-1.a.p/pixman-x86.c.o
+[31/37] Compiling C object pixman/libpixman-1.a.p/pixman-utils.c.o
+[32/37] Compiling C object pixman/libpixman-1.a.p/pixman-trap.c.o
+[33/37] Linking static target pixman/libpixman-arm-neon.a
+[34/37] Compiling C object pixman/libpixman-1.a.p/pixman-combine-float.c.o
+[35/37] Compiling C object pixman/libpixman-1.a.p/pixman-fast-path.c.o
+[36/37] Linking static target pixman/libpixman-1.a
+[36/37] Installing files
+Installing pixman/libpixman-1.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixman-src/pixman/pixman.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixman-build/pixman/pixman-version.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixman-build/meson-private/pixman-1.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
