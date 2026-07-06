@@ -184,6 +184,7 @@ gdk_ios_surface_destroy (GdkSurface *surface,
              foreign_destroy);
   display->toplevels = g_list_remove (display->toplevels, self);
   display->popups = g_list_remove (display->popups, self);
+  gdk_ios_shell_forget_surface (self);
   gdk_ios_surface_detach_layer (self);
 }
 

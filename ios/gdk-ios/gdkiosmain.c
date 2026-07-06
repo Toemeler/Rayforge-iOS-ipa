@@ -137,6 +137,19 @@ gdk_ios_shell_get_pointer_position (double *x, double *y,
   if (mask) *mask = key_modifiers | button_modifiers;
 }
 
+void
+gdk_ios_shell_forget_surface (GdkIOSSurface *surface)
+{
+  /* pointer_surface is a weak (non-owning) reference. Once its surface is
+   * destroyed the object is freed, but the next motion/button event would
+   * still read it in update_pointer_surface() to emit a LEAVE crossing —
+   * a use-after-free that crashed the app right after any dialog/window
+   * closed (e.g. the consent dialog, a file-chooser Cancel, closing
+   * Settings). Drop the reference here so it is never dereferenced again. */
+  if (pointer_surface == surface)
+    pointer_surface = NULL;
+}
+
 /* --------------------------------------------------------- event helpers */
 
 static guint32

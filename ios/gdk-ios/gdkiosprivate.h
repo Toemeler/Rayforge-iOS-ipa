@@ -161,6 +161,10 @@ double     gdk_ios_shell_get_fit_scale (void);
 void       gdk_ios_shell_set_min_width (int min_width);
 void       gdk_ios_shell_get_pointer_position (double *x, double *y,
                                                GdkModifierType *mask);
+/* Drop any weak reference the input layer holds to a surface that is
+ * being destroyed (the cached pointer-focus surface), so the next event
+ * never dereferences freed memory. */
+void       gdk_ios_shell_forget_surface (GdkIOSSurface *surface);
 
 /* Event helpers (gdkiosmain.c -> display) */
 void gdk_ios_display_deliver_event (GdkIOSDisplay *display, GdkEvent *event);
