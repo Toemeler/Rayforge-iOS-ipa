@@ -71,6 +71,28 @@ def main() -> None:
     # *imports* are additionally satisfied by the pyshims OpenGL stub;
     # this flag ensures none of that inert GL code is ever executed.)
     os.environ.setdefault("RAYFORGE_DISABLE_3D", "1")
+
+    # iOS sandbox: only Documents/, Library/ and tmp/ inside the data
+    # container are writable — platformdirs' default ~/.local/state is
+    # not (PermissionError on device; the simulator was permissive).
+    # Config goes to Documents so machine configs are visible in the
+    # Files app; state/data/cache go to Library.
+    _home = os.environ.get("HOME", "")
+    if _home:
+        _docs = os.path.join(_home, "Documents")
+        _lib = os.path.join(_home, "Library")
+        _xdg = {
+            "XDG_CONFIG_HOME": os.path.join(_docs, "config"),
+            "XDG_STATE_HOME": os.path.join(_lib, "state"),
+            "XDG_DATA_HOME": os.path.join(_lib, "data"),
+            "XDG_CACHE_HOME": os.path.join(_lib, "caches"),
+        }
+        for _k, _v in _xdg.items():
+            os.environ.setdefault(_k, _v)
+            try:
+                os.makedirs(os.environ[_k], exist_ok=True)
+            except OSError as _e:
+                _ioslog(f"XDG dir {_k}={_v} not creatable: {_e}")
     sys.argv = ["rayforge"]
 
     import gi
