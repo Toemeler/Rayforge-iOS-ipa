@@ -13,14 +13,20 @@ on:
         description: "Minimum iOS deployment version"
         required: false
         default: "17.0"
+      sdk:
+        description: "Apple SDK slice: iphonesimulator or iphoneos (device)"
+        required: false
+        default: "iphonesimulator"
 
 permissions:
   contents: write
 
 env:
   IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
-  IOS_SDK: "iphonesimulator"
-  DEPS_KEY: "gtk-deps-sim-v1"
+  IOS_SDK: ${{ github.event.inputs.sdk || 'iphonesimulator' }}
+  SDK_NS: ${{ (github.event.inputs.sdk == 'iphoneos') && 'dev' || 'sim' }}
+  GI_MODE: ${{ (github.event.inputs.sdk == 'iphoneos') && 'disabled' || 'enabled' }}
+  DEPS_KEY: gtk-deps-${{ (github.event.inputs.sdk == 'iphoneos') && 'dev' || 'sim' }}-v1
   JPEG_TURBO_VERSION: "3.2.0"
   GRAPHENE_VERSION: "1.10.8"
   GDK_PIXBUF_VERSION: "2.44.7"
@@ -63,6 +69,7 @@ jobs:
 
 
       - name: "[3b/13] Boot simulator early (exe_wrapper target)"
+        if: env.IOS_SDK == 'iphonesimulator'
         run: |
           set -euxo pipefail
           RUNTIME=$(xcrun simctl list runtimes | awk '/iOS/{id=$NF} END{print id}')
@@ -90,20 +97,20 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ios-out
-          key: gi-sim-v2-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}-run${{ github.run_id }}
+          key: gi-${{ env.SDK_NS }}-v2-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}-run${{ github.run_id }}
           restore-keys: |
-            gi-sim-v2-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}-
-            gi-sim-v2-
+            gi-${{ env.SDK_NS }}-v2-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/**') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}-
+            gi-${{ env.SDK_NS }}-v2-
 
       - name: "[5/13] Build base stack for simulator (resumes from cache)"
         run: |
           set -euxo pipefail
-          if [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/Pango-1.0.typelib" ]; then
+          if { if [ "${GI_MODE}" = disabled ]; then [ -f "${GITHUB_WORKSPACE}/ios-out/lib/libpango-1.0.0.dylib" ]; else [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/Pango-1.0.typelib" ]; fi; }; then
             echo "base stack with introspection already in prefix — skipping"
             exit 0
           fi
           chmod +x ios/scripts/gen-cross-file.sh ios/scripts/build-base-stack.sh ios/scripts/sim-run.sh
-          export INTROSPECTION=enabled
+          export INTROSPECTION="${GI_MODE}"
           export LIB_MODE=shared
 
           # Synthetic gobject-introspection-1.0.pc: glib/pango/gtk look this
@@ -140,7 +147,7 @@ jobs:
       - name: "[6/13] Build jpeg/graphene/pixbuf/tiff/epoxy for simulator (resumes from cache)"
         run: |
           set -euxo pipefail
-          if [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/GdkPixbuf-2.0.typelib" ]; then
+          if { if [ "${GI_MODE}" = disabled ]; then [ -f "${GITHUB_WORKSPACE}/ios-out/lib/libgdk_pixbuf-2.0.0.dylib" ]; else [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/GdkPixbuf-2.0.typelib" ]; fi; }; then
             echo "pixbuf layer with introspection already in prefix — skipping"
             exit 0
           fi
@@ -170,7 +177,7 @@ jobs:
           meson setup graphene-build graphene-src \
             --cross-file="${CROSS}" \
             --default-library=shared --prefix="${PREFIX}" --buildtype=release \
-            -Dtests=false -Dinstalled_tests=false -Dintrospection=enabled \
+            -Dtests=false -Dinstalled_tests=false -Dintrospection="${GI_MODE}" \
             -Dgtk_doc=false -Dgobject_types=true -Dsse2=false -Darm_neon=true \
             2>&1 | tee graphene.log
           ninja -k0 -C graphene-build 2>&1 | tee -a graphene.log || true
@@ -189,7 +196,7 @@ jobs:
             -Dbuiltin_loaders=png,jpeg,gif,bmp,ico,ani \
             -Dtests=false -Dinstalled_tests=false \
             -Dman=false -Ddocumentation=false \
-            -Dthumbnailer=disabled -Dintrospection=enabled \
+            -Dthumbnailer=disabled -Dintrospection="${GI_MODE}" \
             -Drelocatable=true \
             2>&1 | tee pixbuf.log
           ninja -k0 -C pixbuf-build 2>&1 | tee -a pixbuf.log || true
@@ -255,7 +262,7 @@ jobs:
           BACKEND_HASH="$(git -C "${GITHUB_WORKSPACE}" ls-files -s ios/gdk-ios ios/scripts | shasum | cut -c1-40)"
           STAMP="${GITHUB_WORKSPACE}/ios-out/.gdk-ios-backend-hash"
           echo "GTK rebuild check: backend_hash=${BACKEND_HASH}"
-          if [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/Gtk-4.0.typelib" ] && [ -f "${STAMP}" ] && [ "$(cat "${STAMP}")" = "${BACKEND_HASH}" ]; then
+          if { if [ "${GI_MODE}" = disabled ]; then [ -f "${GITHUB_WORKSPACE}/ios-out/lib/libgtk-4.1.dylib" ]; else [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/Gtk-4.0.typelib" ]; fi; } && [ -f "${STAMP}" ] && [ "$(cat "${STAMP}")" = "${BACKEND_HASH}" ]; then
             echo "GTK with introspection (backend ${BACKEND_HASH}) already in prefix — skipping"
             exit 0
           fi
@@ -298,7 +305,7 @@ jobs:
             -Dvulkan=disabled -Dcloudproviders=disabled -Dsysprof=disabled \
             -Dtracker=disabled -Dcolord=disabled -Daccesskit=disabled \
             -Df16c=disabled \
-            -Dintrospection=enabled -Ddocumentation=false -Dman-pages=false \
+            -Dintrospection="${GI_MODE}" -Ddocumentation=false -Dman-pages=false \
             -Dscreenshots=false \
             -Dbuild-demos=false -Dbuild-testsuite=false -Dbuild-examples=false \
             -Dbuild-tests=false \
@@ -313,7 +320,7 @@ jobs:
       - name: "[9/13] Build appstream stub + libadwaita (resumes from cache)"
         run: |
           set -euxo pipefail
-          if [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/Adw-1.typelib" ]; then
+          if { if [ "${GI_MODE}" = disabled ]; then [ -f "${GITHUB_WORKSPACE}/ios-out/lib/libadwaita-1.0.dylib" ]; else [ -f "${GITHUB_WORKSPACE}/ios-out/lib/girepository-1.0/Adw-1.typelib" ]; fi; }; then
             echo "libadwaita with introspection already in prefix — skipping"
             exit 0
           fi
@@ -374,7 +381,7 @@ jobs:
             --cross-file="${GITHUB_WORKSPACE}/cross-pfx.txt" \
             --default-library=shared --prefix="${PREFIX}" --buildtype=release \
             --wrap-mode=nofallback \
-            -Dintrospection=enabled -Dvapi=false \
+            -Dintrospection="${GI_MODE}" -Dvapi=false \
             -Dtests=false -Dexamples=false -Ddocumentation=false \
             2>&1 | tee adw-setup.log
           ninja -k0 -C adw-build 2>&1 | tee adw-build.log || true
@@ -383,6 +390,7 @@ jobs:
 
 
       - name: "[10/13] Compile pseudo-girs (cairo etc.) + verify typelibs"
+        if: env.IOS_SDK == 'iphonesimulator'
         run: |
           set -euxo pipefail
           GIRDIR="$(brew --prefix gobject-introspection)/share/gir-1.0"

@@ -24,13 +24,19 @@ on:
         description: "Minimum iOS deployment version"
         required: false
         default: "17.0"
+      sdk:
+        description: "Apple SDK slice: iphonesimulator or iphoneos (device)"
+        required: false
+        default: "iphonesimulator"
 
 permissions:
   contents: write
 
 env:
   IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
-  IOS_SDK: "iphonesimulator"
+  IOS_SDK: ${{ github.event.inputs.sdk || 'iphonesimulator' }}
+  SDK_NS: ${{ (github.event.inputs.sdk == 'iphoneos') && 'dev' || 'sim' }}
+  GI_MODE: ${{ (github.event.inputs.sdk == 'iphoneos') && 'disabled' || 'enabled' }}
   BUNDLE_ID: "org.rayforge.pygitest"
   PY_SUPPORT_URL: "https://github.com/beeware/Python-Apple-support/releases/download/3.13-b14/Python-3.13-iOS-support.b14.tar.gz"
   LIBFFI_VERSION: "3.5.2"
@@ -76,10 +82,10 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ios-out
-          key: pygobject-sim-v1-${{ hashFiles('ios/testapp/main-pygi.c') }}-run${{ github.run_id }}
+          key: pygobject-${{ env.SDK_NS }}-v1-${{ hashFiles('ios/testapp/main-pygi.c') }}-run${{ github.run_id }}
           restore-keys: |
-            pygobject-sim-v1-
-            gi-sim-v2-
+            pygobject-${{ env.SDK_NS }}-v1-
+            gi-${{ env.SDK_NS }}-v2-
 
       - name: "[5/14] Verify prefix has the Step-9 outputs"
         run: |
@@ -87,13 +93,16 @@ jobs:
           PREFIX="${GITHUB_WORKSPACE}/ios-out"
           echo "PREFIX=${PREFIX}" >> "$GITHUB_ENV"
           MISSING=0
-          for f in \
-            "${PREFIX}/lib/libgtk-4.1.dylib" \
-            "${PREFIX}/lib/girepository-1.0/Gtk-4.0.typelib" \
-            "${PREFIX}/lib/girepository-1.0/Adw-1.typelib" \
-            "${PREFIX}/lib/pkgconfig/girepository-2.0.pc" \
-            "${PREFIX}/lib/pkgconfig/gtk4.pc" \
-            "${PREFIX}/lib/pkgconfig/cairo-gobject.pc"; do
+          FILES="${PREFIX}/lib/libgtk-4.1.dylib \
+            ${PREFIX}/lib/pkgconfig/girepository-2.0.pc \
+            ${PREFIX}/lib/pkgconfig/gtk4.pc \
+            ${PREFIX}/lib/pkgconfig/cairo-gobject.pc"
+          if [ "${GI_MODE}" = enabled ]; then
+            FILES="${FILES} \
+              ${PREFIX}/lib/girepository-1.0/Gtk-4.0.typelib \
+              ${PREFIX}/lib/girepository-1.0/Adw-1.typelib"
+          fi
+          for f in ${FILES}; do
             if [ ! -f "$f" ]; then echo "::error::missing from cached prefix: $f"; MISSING=1; fi
           done
           if [ "$MISSING" != "0" ]; then
@@ -139,7 +148,11 @@ jobs:
           set -euxo pipefail
           curl -fL --retry 3 -o py-support.tar.gz "${PY_SUPPORT_URL}"
           mkdir -p py-support && tar xf py-support.tar.gz -C py-support
-          SIM_SLICE=$(find py-support -maxdepth 2 -type d -name "*simulator*" -path "*Python.xcframework*" | head -1)
+          if [ "${IOS_SDK}" = "iphoneos" ]; then
+            SIM_SLICE=$(find py-support -maxdepth 2 -type d -name "ios-arm64" -not -name "*simulator*" -path "*Python.xcframework*" | head -1)
+          else
+            SIM_SLICE=$(find py-support -maxdepth 2 -type d -name "*simulator*" -path "*Python.xcframework*" | head -1)
+          fi
           test -n "${SIM_SLICE}"
           test -d "${SIM_SLICE}/Python.framework"
           STDLIB=$(find py-support -maxdepth 3 -type d -name "python3.*" -path "*Python.xcframework/lib/*" | head -1)
@@ -471,6 +484,7 @@ jobs:
           codesign -dv "$APP" 2>&1 | head -5 || true
 
       - name: "[12/14] Boot simulator, install, launch, self-test"
+        if: env.IOS_SDK == 'iphonesimulator'
         run: |
           set -euxo pipefail
           RUNTIME=$(xcrun simctl list runtimes | awk '/iOS/{id=$NF} END{print id}')

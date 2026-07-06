@@ -14,14 +14,19 @@ on:
         description: "Minimum iOS deployment version"
         required: false
         default: "17.0"
+      sdk:
+        description: "Apple SDK slice: iphonesimulator or iphoneos (device)"
+        required: false
+        default: "iphonesimulator"
 
 permissions:
   contents: write
 
 env:
   IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
-  IOS_SDK: "iphonesimulator"
-  DEPS_KEY: "gtk-deps-sim-v1"
+  IOS_SDK: ${{ github.event.inputs.sdk || 'iphonesimulator' }}
+  SDK_NS: ${{ (github.event.inputs.sdk == 'iphoneos') && 'dev' || 'sim' }}
+  DEPS_KEY: gtk-deps-${{ (github.event.inputs.sdk == 'iphoneos') && 'dev' || 'sim' }}-v1
   JPEG_TURBO_VERSION: "3.2.0"
   GRAPHENE_VERSION: "1.10.8"
   GDK_PIXBUF_VERSION: "2.44.7"
@@ -68,7 +73,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ios-out
-          key: gtkadw-sim-v1-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/patch-gtk-ios.py', 'ios/scripts/patch-adw-ios.py', 'ios/scripts/build-base-stack.sh', 'ios/scripts/gen-cross-file.sh') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}
+          key: gtkadw-${{ env.SDK_NS }}-v1-${{ hashFiles('ios/gdk-ios/**', 'ios/adw-shims/**', 'ios/scripts/patch-gtk-ios.py', 'ios/scripts/patch-adw-ios.py', 'ios/scripts/build-base-stack.sh', 'ios/scripts/gen-cross-file.sh') }}-gtk${{ env.GTK_VERSION }}-adw${{ env.ADW_VERSION }}
 
       - name: "[4/13] Restore cached simulator deps prefix"
         if: steps.cache-full.outputs.cache-hit != 'true'
@@ -291,7 +296,11 @@ jobs:
           echo "== support package layout (top 3 levels)"
           find py-support -maxdepth 3 | head -40
           find py-support -maxdepth 4 > py-layout.txt
-          SIM_SLICE=$(find py-support -maxdepth 2 -type d -name "*simulator*" -path "*Python.xcframework*" | head -1)
+          if [ "${IOS_SDK}" = "iphoneos" ]; then
+            SIM_SLICE=$(find py-support -maxdepth 2 -type d -name "ios-arm64" -not -name "*simulator*" -path "*Python.xcframework*" | head -1)
+          else
+            SIM_SLICE=$(find py-support -maxdepth 2 -type d -name "*simulator*" -path "*Python.xcframework*" | head -1)
+          fi
           echo "SIM_SLICE=${SIM_SLICE}"
           test -n "${SIM_SLICE}"
           test -d "${SIM_SLICE}/Python.framework"
@@ -430,6 +439,7 @@ jobs:
           codesign -dv "$APP" 2>&1 | head -5
 
       - name: "[11/13] Boot simulator, install, launch, screenshot"
+        if: env.IOS_SDK == 'iphonesimulator'
         run: |
           set -euxo pipefail
           # Pick the newest available iPad device type + runtime.
