@@ -1,0 +1,154 @@
+ninja: Entering directory `pygobject-build'
+[1/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pyginterface.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[2/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygboxed.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[3/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygenum.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[4/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygflags.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[5/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygobject-class.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[6/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygpointer.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[7/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygobject-props.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[8/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygspawn.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[9/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/gimodule.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[10/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-capi.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[11/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-repository.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[12/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-struct.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[13/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-foreign.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[14/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-source.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[15/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-resulttuple.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[16/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-argument.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[17/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygobject-object.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[18/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-async.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[19/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-boxed.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[20/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-util.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[21/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-ccallback.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[22/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-closure.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[23/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-property.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[24/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-signal-closure.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[25/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-type.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[26/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-cache-basic.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[27/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-info.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[28/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-invoke.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[29/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-cache-array.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[30/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-cache-enum.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[31/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-cache-closure.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[32/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-cache.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[33/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-cache-error.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[34/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-cache-interface.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[35/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-cache-hashtable.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[36/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-cache-list.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[37/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-cache-object.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[38/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-marshal-cleanup.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[39/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-cache-struct.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[40/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-error.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[41/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-fundamental.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[42/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-basictype.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[43/46] Compiling C object gi/_gi.cpython-313-iphonesimulator.so.p/pygi-value.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[44/46] Compiling C object gi/_gi_cairo.cpython-313-iphonesimulator.so.p/pygi-foreign-cairo.c.o
+clang: warning: no such include directory: '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/iOS/iphonesimulator.arm64/python-3.13.14/include/python3.13' [-Wmissing-include-dirs]
+[45/46] Linking target gi/_gi.cpython-313-iphonesimulator.so
+ld: warning: -undefined dynamic_lookup is deprecated on iOS-simulator
+[46/46] Linking target gi/_gi_cairo.cpython-313-iphonesimulator.so
+ld: warning: -undefined dynamic_lookup is deprecated on iOS-simulator
+ninja: Entering directory `pygobject-build'
+[0/1] Installing files
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/events.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_constants.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/docstring.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_enum.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_error.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_gtktemplate.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/importer.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/__init__.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/module.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_ossighelper.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_propertyhelper.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_signalhelper.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/_signature.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/types.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GLib.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GLibUnix.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Gtk.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Gdk.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GdkPixbuf.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GObject.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Gio.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GioUnix.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/GIMarshallingTests.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/Pango.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides/__init__.py'...
+Compiling '/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/repository/__init__.py'...
+Installing gi/_gi.cpython-313-iphonesimulator.so to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing gi/_gi_cairo.cpython-313-iphonesimulator.so to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/pygobject.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/include/pygobject-3.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/pygobject-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/include/pygobject-3.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-build/pygobject-3.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-build/METADATA to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/PyGObject-3.56.3.dist-info
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/events.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_constants.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/docstring.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_enum.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_error.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_gtktemplate.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/importer.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/module.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_ossighelper.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_propertyhelper.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_signalhelper.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/_signature.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/types.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GLib.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GLibUnix.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Gtk.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Gdk.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GdkPixbuf.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GObject.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Gio.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GioUnix.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/GIMarshallingTests.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/Pango.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/overrides/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/overrides
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-src/gi/repository/__init__.py to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/py-stage/lib/python3.13/site-packages/gi/repository
+Running custom install script '/opt/homebrew/opt/python@3.13/bin/python3.13 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pygobject-build/meson-private/pycompile.py python-3.13-installed.json 0'

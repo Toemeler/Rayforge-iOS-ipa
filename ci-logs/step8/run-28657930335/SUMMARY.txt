@@ -1,0 +1,295 @@
++ echo 'Run ID: 28657930335'
+Run ID: 28657930335
++ echo 'Commit: ecb674b4961bde0c2a7d7e67f02cef3b6945ee12'
+Commit: ecb674b4961bde0c2a7d7e67f02cef3b6945ee12
+++ date -u
++ echo 'Date: Fri Jul  3 11:41:55 UTC 2026'
+Date: Fri Jul  3 11:41:55 UTC 2026
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ tail -60 gtk-build.log
+[1072/1130] Building translation po/kk/LC_MESSAGES/gtk40-kk.mo
+[1073/1130] Building translation po/ku/LC_MESSAGES/gtk40-ku.mo
+[1074/1130] Building translation po/ky/LC_MESSAGES/gtk40-ky.mo
+[1075/1130] Building translation po/lg/LC_MESSAGES/gtk40-lg.mo
+[1076/1130] Building translation po/li/LC_MESSAGES/gtk40-li.mo
+[1077/1130] Building translation po/mai/LC_MESSAGES/gtk40-mai.mo
+[1078/1130] Building translation po/mi/LC_MESSAGES/gtk40-mi.mo
+[1079/1130] Building translation po/lv/LC_MESSAGES/gtk40-lv.mo
+[1080/1130] Building translation po/mjw/LC_MESSAGES/gtk40-mjw.mo
+[1081/1130] Building translation po/lt/LC_MESSAGES/gtk40-lt.mo
+[1082/1130] Building translation po/mk/LC_MESSAGES/gtk40-mk.mo
+[1083/1130] Building translation po/mn/LC_MESSAGES/gtk40-mn.mo
+[1084/1130] Building translation po/ml/LC_MESSAGES/gtk40-ml.mo
+[1085/1130] Building translation po/mr/LC_MESSAGES/gtk40-mr.mo
+[1086/1130] Building translation po/ms/LC_MESSAGES/gtk40-ms.mo
+[1087/1130] Building translation po/nds/LC_MESSAGES/gtk40-nds.mo
+[1088/1130] Building translation po/my/LC_MESSAGES/gtk40-my.mo
+[1089/1130] Building translation po/nb/LC_MESSAGES/gtk40-nb.mo
+[1090/1130] Building translation po/nn/LC_MESSAGES/gtk40-nn.mo
+[1091/1130] Building translation po/nso/LC_MESSAGES/gtk40-nso.mo
+[1092/1130] Building translation po/nl/LC_MESSAGES/gtk40-nl.mo
+[1093/1130] Building translation po/ne/LC_MESSAGES/gtk40-ne.mo
+[1094/1130] Building translation po/or/LC_MESSAGES/gtk40-or.mo
+[1095/1130] Building translation po/pl/LC_MESSAGES/gtk40-pl.mo
+[1096/1130] Building translation po/oc/LC_MESSAGES/gtk40-oc.mo
+[1097/1130] Building translation po/ps/LC_MESSAGES/gtk40-ps.mo
+[1098/1130] Building translation po/pa/LC_MESSAGES/gtk40-pa.mo
+[1099/1130] Building translation po/pt_BR/LC_MESSAGES/gtk40-pt_BR.mo
+[1100/1130] Building translation po/ro/LC_MESSAGES/gtk40-ro.mo
+[1101/1130] Building translation po/pt/LC_MESSAGES/gtk40-pt.mo
+[1102/1130] Building translation po/ru/LC_MESSAGES/gtk40-ru.mo
+[1103/1130] Building translation po/rw/LC_MESSAGES/gtk40-rw.mo
+[1104/1130] Building translation po/si/LC_MESSAGES/gtk40-si.mo
+[1105/1130] Building translation po/sl/LC_MESSAGES/gtk40-sl.mo
+[1106/1130] Linking target tools/gtk4-encode-symbolic-svg
+ld: warning: ignoring duplicate libraries: '-liconv', '-lresolv', '-lz'
+[1107/1130] Building translation po/sk/LC_MESSAGES/gtk40-sk.mo
+[1108/1130] Building translation po/sr@ije/LC_MESSAGES/gtk40-sr@ije.mo
+[1109/1130] Building translation po/sq/LC_MESSAGES/gtk40-sq.mo
+[1110/1130] Building translation po/sr@latin/LC_MESSAGES/gtk40-sr@latin.mo
+[1111/1130] Building translation po/sv/LC_MESSAGES/gtk40-sv.mo
+[1112/1130] Building translation po/te/LC_MESSAGES/gtk40-te.mo
+[1113/1130] Building translation po/ta/LC_MESSAGES/gtk40-ta.mo
+[1114/1130] Building translation po/tg/LC_MESSAGES/gtk40-tg.mo
+[1115/1130] Building translation po/tt/LC_MESSAGES/gtk40-tt.mo
+[1116/1130] Building translation po/tr/LC_MESSAGES/gtk40-tr.mo
+[1117/1130] Building translation po/sr/LC_MESSAGES/gtk40-sr.mo
+[1118/1130] Building translation po/th/LC_MESSAGES/gtk40-th.mo
+[1119/1130] Building translation po/ur/LC_MESSAGES/gtk40-ur.mo
+[1120/1130] Building translation po/uk/LC_MESSAGES/gtk40-uk.mo
+[1121/1130] Building translation po/ug/LC_MESSAGES/gtk40-ug.mo
+[1122/1130] Building translation po/uz@cyrillic/LC_MESSAGES/gtk40-uz@cyrillic.mo
+[1123/1130] Building translation po/uz/LC_MESSAGES/gtk40-uz.mo
+[1124/1130] Building translation po/wa/LC_MESSAGES/gtk40-wa.mo
+[1125/1130] Building translation po/vi/LC_MESSAGES/gtk40-vi.mo
+[1126/1130] Building translation po/yi/LC_MESSAGES/gtk40-yi.mo
+[1127/1130] Building translation po/xh/LC_MESSAGES/gtk40-xh.mo
+[1128/1130] Building translation po/zh_HK/LC_MESSAGES/gtk40-zh_HK.mo
+[1129/1130] Building translation po/zh_CN/LC_MESSAGES/gtk40-zh_CN.mo
+[1130/1130] Building translation po/zh_TW/LC_MESSAGES/gtk40-zh_TW.mo
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: adw-setup.log ====================='
+===================== TAIL: adw-setup.log =====================
++ '[' -f adw-setup.log ']'
++ tail -60 adw-setup.log
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wswitch-default: YES 
+Compiler for C supports arguments -Wswitch-enum: YES 
+Compiler for C supports arguments -Wtype-limits: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wunused-function: YES 
+Compiler for C supports arguments -Wfloat-equal: YES 
+Compiler for C supports arguments -fstack-protector-strong: YES 
+Program sassc found: YES (/opt/homebrew/bin/sassc)
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build-time dependency gio-2.0 found: YES 2.84.4
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring adw-version.h using configuration
+Build-time dependency glib-2.0 found: YES 2.84.4
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal)
+Program gen-public-types.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/adw-src/src/gen-public-types.py)
+Library m found: YES
+Configuring config.h using configuration
+Checking if "ld_supports_version_script" links: NO 
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Program msgfmt found: YES (/opt/homebrew/opt/gettext/bin/msgfmt)
+Program msginit found: YES (/opt/homebrew/opt/gettext/bin/msginit)
+Program msgmerge found: YES (/opt/homebrew/opt/gettext/bin/msgmerge)
+Program xgettext found: YES (/opt/homebrew/opt/gettext/bin/xgettext)
+Configuring run using configuration
+Build targets in project: 72
+
+libadwaita 1.9.1
+
+  Options
+    Tests          : false
+    Examples       : false
+    Documentation  : false
+    Introspection  : false
+    Vapi           : false
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    buildtype      : release
+    default_library: static
+    documentation  : false
+    examples       : false
+    introspection  : disabled
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    tests          : false
+    vapi           : false
+    wrap_mode      : nofallback
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: adw-build.log ====================='
+===================== TAIL: adw-build.log =====================
++ '[' -f adw-build.log ']'
++ tail -60 adw-build.log
+[132/191] Compiling C object src/libadwaita-1.a.p/adw-inspector-page.c.o
+[133/191] Compiling C object src/libadwaita-1.a.p/adw-settings.c.o
+[134/191] Compiling C object src/libadwaita-1.a.p/adw-settings-impl.c.o
+[135/191] Compiling C object src/libadwaita-1.a.p/adw-settings-impl-gsettings.c.o
+[136/191] Compiling C object src/libadwaita-1.a.p/adw-settings-impl-legacy.c.o
+[137/191] Compiling C object src/libadwaita-1.a.p/adw-sheet-controls.c.o
+[138/191] Compiling C object src/libadwaita-1.a.p/adw-shadow-helper.c.o
+[139/191] Compiling C object src/libadwaita-1.a.p/adw-shortcut-row.c.o
+[140/191] Compiling C object src/libadwaita-1.a.p/adw-tab.c.o
+[141/191] Compiling C object src/libadwaita-1.a.p/adw-toast-widget.c.o
+[142/191] Compiling C object src/libadwaita-1.a.p/adw-tab-thumbnail.c.o
+[143/191] Compiling C object src/libadwaita-1.a.p/adw-view-switcher-button.c.o
+[144/191] Compiling C object src/libadwaita-1.a.p/adw-tab-box.c.o
+[145/191] Building translation po/fil/LC_MESSAGES/libadwaita-fil.mo
+[146/191] Building translation po/fi/LC_MESSAGES/libadwaita-fi.mo
+[147/191] Building translation po/fr/LC_MESSAGES/libadwaita-fr.mo
+[148/191] Building translation po/fur/LC_MESSAGES/libadwaita-fur.mo
+[149/191] Building translation po/gl/LC_MESSAGES/libadwaita-gl.mo
+[150/191] Building translation po/he/LC_MESSAGES/libadwaita-he.mo
+[151/191] Building translation po/hr/LC_MESSAGES/libadwaita-hr.mo
+[152/191] Building translation po/hi/LC_MESSAGES/libadwaita-hi.mo
+[153/191] Building translation po/ia/LC_MESSAGES/libadwaita-ia.mo
+[154/191] Building translation po/hu/LC_MESSAGES/libadwaita-hu.mo
+[155/191] Building translation po/id/LC_MESSAGES/libadwaita-id.mo
+[156/191] Building translation po/it/LC_MESSAGES/libadwaita-it.mo
+[157/191] Building translation po/ja/LC_MESSAGES/libadwaita-ja.mo
+[158/191] Building translation po/ka/LC_MESSAGES/libadwaita-ka.mo
+[159/191] Building translation po/kab/LC_MESSAGES/libadwaita-kab.mo
+[160/191] Building translation po/kk/LC_MESSAGES/libadwaita-kk.mo
+[161/191] Compiling C object src/libadwaita-1.a.p/adw-tab-grid.c.o
+[162/191] Compiling C object src/libadwaita-1.a.p/adw-settings-impl-portal.c.o
+[163/191] Building translation po/ko/LC_MESSAGES/libadwaita-ko.mo
+[164/191] Building translation po/lt/LC_MESSAGES/libadwaita-lt.mo
+[165/191] Building translation po/lv/LC_MESSAGES/libadwaita-lv.mo
+[166/191] Building translation po/nb/LC_MESSAGES/libadwaita-nb.mo
+[167/191] Building translation po/ne/LC_MESSAGES/libadwaita-ne.mo
+[168/191] Building translation po/nl/LC_MESSAGES/libadwaita-nl.mo
+[169/191] Building translation po/nn/LC_MESSAGES/libadwaita-nn.mo
+[170/191] Building translation po/oc/LC_MESSAGES/libadwaita-oc.mo
+[171/191] Building translation po/pa/LC_MESSAGES/libadwaita-pa.mo
+[172/191] Building translation po/pl/LC_MESSAGES/libadwaita-pl.mo
+[173/191] Building translation po/pt/LC_MESSAGES/libadwaita-pt.mo
+[174/191] Building translation po/ro/LC_MESSAGES/libadwaita-ro.mo
+[175/191] Building translation po/pt_BR/LC_MESSAGES/libadwaita-pt_BR.mo
+[176/191] Building translation po/ru/LC_MESSAGES/libadwaita-ru.mo
+[177/191] Building translation po/sk/LC_MESSAGES/libadwaita-sk.mo
+[178/191] Building translation po/sl/LC_MESSAGES/libadwaita-sl.mo
+[179/191] Building translation po/sr/LC_MESSAGES/libadwaita-sr.mo
+[180/191] Building translation po/sr@latin/LC_MESSAGES/libadwaita-sr@latin.mo
+[181/191] Building translation po/sv/LC_MESSAGES/libadwaita-sv.mo
+[182/191] Building translation po/th/LC_MESSAGES/libadwaita-th.mo
+[183/191] Building translation po/tr/LC_MESSAGES/libadwaita-tr.mo
+[184/191] Building translation po/ug/LC_MESSAGES/libadwaita-ug.mo
+[185/191] Building translation po/uk/LC_MESSAGES/libadwaita-uk.mo
+[186/191] Building translation po/uz/LC_MESSAGES/libadwaita-uz.mo
+[187/191] Building translation po/vi/LC_MESSAGES/libadwaita-vi.mo
+[188/191] Building translation po/zh_CN/LC_MESSAGES/libadwaita-zh_CN.mo
+[189/191] Building translation po/zh_TW/LC_MESSAGES/libadwaita-zh_TW.mo
+[190/191] Compiling C object src/libadwaita-1.a.p/adw-widget-utils.c.o
+[191/191] Linking static target src/libadwaita-1.a
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: testapp-link.log ====================='
+===================== TAIL: testapp-link.log =====================
++ '[' -f testapp-link.log ']'
++ tail -60 testapp-link.log
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: app-console.log ====================='
+===================== TAIL: app-console.log =====================
++ '[' -f app-console.log ']'
++ tail -60 app-console.log
+Gdk-Message: 11:41:01.337: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/9FBCD544-302A-429F-B09D-BCEF862188F4/data/Containers/Bundle/Application/06E55160-61A1-49DC-B912-89350252F794/RayforgePy.app
+** Message: 11:41:02.282: python home: /Users/runner/Library/Developer/CoreSimulator/Devices/9FBCD544-302A-429F-B09D-BCEF862188F4/data/Containers/Bundle/Application/06E55160-61A1-49DC-B912-89350252F794/RayforgePy.app/python
+** Message: 11:41:02.283: python stdlib: /Users/runner/Library/Developer/CoreSimulator/Devices/9FBCD544-302A-429F-B09D-BCEF862188F4/data/Containers/Bundle/Application/06E55160-61A1-49DC-B912-89350252F794/RayforgePy.app/python/lib/python3.13
+** Message: 11:41:04.970: python smoke test UI presented
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log testapp-link.log app-console.log app-syslog.log
++ echo '===================== TAIL: app-syslog.log ====================='
+===================== TAIL: app-syslog.log =====================
++ '[' -f app-syslog.log ']'
++ tail -60 app-syslog.log
+2026-07-03 11:41:01.973948+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder, responderRequiresKeyboard 0 (automaticKeyboardEnabled: 1, activeInstance: <(null): 0x0>, self.isOnScreen: 0, requiresKBWhenFirstResponder: 0)
+2026-07-03 11:41:01.974048+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder, useKeyboard 0 (allowsSystemInputView: 1, !inputView <(null): 0x0>, responderRequiresKeyboard 0)
+2026-07-03 11:41:01.974179+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder, configuring _responderWithoutAutomaticAppearanceEnabled: <(null): 0x0> (_automaticAppearEnabled: 1)
+2026-07-03 11:41:01.974443+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder, needsIVPlaceholder: 0, needsIAVPlaceholder: 0, needsInputSetWithPlaceholder: 0
+2026-07-03 11:41:01.974700+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:KeyboardSceneDelegate] _inputViewsForResponder returning: <<UIInputViewSet: 0x600003700d80>; (empty)>
+2026-07-03 11:41:01.977134+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason removed: 10; deactivation reasons: 3104 -> 2080; animating application lifecycle event: 1
+2026-07-03 11:41:01.977702+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason added: 12; deactivation reasons: 2080 -> 6176; animating application lifecycle event: 1
+2026-07-03 11:41:01.978104+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason removed: 11; deactivation reasons: 6176 -> 4128; animating application lifecycle event: 1
+2026-07-03 11:41:01.979283+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (FrontBoardServices) [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneIntelligenceSupportSettings> on FBSSceneSettings
+2026-07-03 11:41:01.985647+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x102f09d50> (F497E026-7885-4961-BEF8-B79A45E78FB7)
+2026-07-03 11:41:01.996803+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (libxpc.dylib) [com.apple.xpc:connection] [0x102f04580] activating connection: mach=true listener=false peer=false name=com.apple.lsd.mapdb
+2026-07-03 11:41:01.997230+0000 0x105b3    Default     0x0                  23313  0    rayforge-pytest: (UIIntelligenceSupport) [com.apple.UIIntelligenceSupport:xpc] establishing connection to agent
+2026-07-03 11:41:01.999962+0000 0x105b3    Default     0x0                  23313  0    rayforge-pytest: (libxpc.dylib) [com.apple.xpc:session] [0x600002105400] Session created.
+2026-07-03 11:41:01.999987+0000 0x105b3    Default     0x0                  23313  0    rayforge-pytest: (libxpc.dylib) [com.apple.xpc:session] [0x600002105400] Session created from connection [0x103008890]
+2026-07-03 11:41:02.000369+0000 0x105b3    Default     0x0                  23313  0    rayforge-pytest: (libxpc.dylib) [com.apple.xpc:connection] [0x103008890] activating connection: mach=true listener=false peer=false name=com.apple.uiintelligencesupport.agent
+2026-07-03 11:41:02.000469+0000 0x105b3    Default     0x0                  23313  0    rayforge-pytest: (libxpc.dylib) [com.apple.xpc:session] [0x600002105400] Session activated
+2026-07-03 11:41:02.021887+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (Network) [com.apple.network:activity] Create activity from XPC object <nw_activity 50:1 [B37CB00C-7932-477E-89B4-8E63A1CD5902] (reporting strategy default)>
+2026-07-03 11:41:02.021937+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (Network) [com.apple.network:activity] Create activity from XPC object <nw_activity 50:2 [AD59FD50-58CB-461E-B378-6DA9967151EB] (reporting strategy default)>
+2026-07-03 11:41:02.021951+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (Network) [com.apple.network:activity] Set activity <nw_activity 50:1 [B37CB00C-7932-477E-89B4-8E63A1CD5902] (reporting strategy default)> as the global parent
+2026-07-03 11:41:02.021987+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Ending background task with UIBackgroundTaskIdentifier: 1
+2026-07-03 11:41:02.022034+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Ending task with identifier 1 and description: <_UIBackgroundTaskInfo: 0x600001704a40>: taskID = 1, taskName = Launch Background Task for Coalescing, creationTime = 806 (elapsed = 1), _expireHandler: (null)
+2026-07-03 11:41:02.022072+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Decrementing reference count for assertion <BKSProcessAssertion: 0x600002104140> (used by background task with identifier 1: <_UIBackgroundTaskInfo: 0x600001704a40>: taskID = 1, taskName = Launch Background Task for Coalescing, creationTime = 806 (elapsed = 1))
+2026-07-03 11:41:02.426437+0000 0x105b0    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Ending background task with UIBackgroundTaskIdentifier: 2
+2026-07-03 11:41:02.426884+0000 0x105b0    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Ending task with identifier 2 and description: <_UIBackgroundTaskInfo: 0x600001714240>: taskID = 2, taskName = Persistent SceneSession Map Update, creationTime = 807 (elapsed = 0), _expireHandler: <__NSGlobalBlock__: 0x1e61729e0>
+2026-07-03 11:41:02.426934+0000 0x105b0    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Decrementing reference count for assertion <BKSProcessAssertion: 0x600002104140> (used by background task with identifier 2: <_UIBackgroundTaskInfo: 0x600001714240>: taskID = 2, taskName = Persistent SceneSession Map Update, creationTime = 807 (elapsed = 0))
+2026-07-03 11:41:02.426964+0000 0x105b0    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:BackgroundTask] Will invalidate assertion: <BKSProcessAssertion: 0x600002104140> for task identifier: 2
+2026-07-03 11:41:02.439540+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (Python) PYTHON OK 3.13.14 (main, Jun 12 2026, 07:26:39) [Clang 17.0.0 (clang-1700.0.13.5)]
+2026-07-03 11:41:02.440952+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (Python) sys.platform = ios
+2026-07-03 11:41:02.440976+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (Python) sys.path = ['/Users/runner/Library/Developer/CoreSimulator/Devices/9FBCD544-302A-429F-B09D-BCEF862188F4/data/Containers/Bundle/Application/06E55160-61A1-49DC-B912-89350252F794/RayforgePy.app/python/lib/python3.13', '/Users/runner/Library/Developer/CoreSimulator/Devices/9FBCD544-302A-429F-B09D-BCEF862188F4/data/Containers/Bundle/Application/06E55160-61A1-49DC-B912-89350252F794/RayforgePy.app/python/lib/python3.13/lib-dynload', '/Users/runner/Library/Developer/CoreSimulator/Devices/9FBCD544-302A-429F-B09D-BCEF862188F4/data/Containers/Bundle/Application/06E55160-61A1-49DC-B912-89350252F794/RayforgePy.app/python/lib/python3.13/site-packages']
+2026-07-03 11:41:02.481425+0000 0x105b0    Activity    0x502f4              23313  0    rayforge-pytest: (RunningBoardServices) didChangeInheritances
+2026-07-03 11:41:02.893809+0000 0x105b0    Default     0x0                  23313  0    rayforge-pytest: (BackBoardServices) [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x600002608420; token: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.pytest-default; status: ancestor> was:none
+2026-07-03 11:41:02.956291+0000 0x105b2    Activity    0x502f5              23313  0    rayforge-pytest: (RunningBoardServices) didChangeInheritances
+2026-07-03 11:41:03.213467+0000 0x105b2    Activity    0x502f6              23313  0    rayforge-pytest: (RunningBoardServices) didChangeInheritances
+2026-07-03 11:41:03.458444+0000 0x105b0    Activity    0x502f7              23313  0    rayforge-pytest: (RunningBoardServices) didChangeInheritances
+2026-07-03 11:41:04.971367+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (libAccessibility.dylib) [com.apple.Accessibility:AXCommon] Read Per-App on Init: Smart invert = (null)
+2026-07-03 11:41:04.971745+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:EventBus] Event Timing Profile for Touch: not found, path="/System/Library/EventTimingProfiles/Sim.Touch.plist"
+2026-07-03 11:41:04.971863+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:EventBus] Event Timing Profile for Pencil: not found, path="/System/Library/EventTimingProfiles/Sim.Pencil.plist"
+2026-07-03 11:41:04.972083+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:UpdateScheduler] Target list changed: <CADisplay:LCD PurpleMain>
+2026-07-03 11:41:04.972790+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.KeyboardArbiter:Client] startConnection
+2026-07-03 11:41:04.972955+0000 0x105a2    Default     0x0                  23313  1    rayforge-pytest: (UIKitCore) [com.apple.UIKit:KeyWindow] Scene target of keyboard event deferring environment did change: 1; scene: UIWindowScene: 0x102f09d50; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.pytest-default
+2026-07-03 11:41:04.973084+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:UIFocus] Focus system enabled
+2026-07-03 11:41:04.975146+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:UIFocus] Failed to update focus with context <UIFocusUpdateContext: 0x60000300ef40; previouslyFocusedItem: (nil); nextFocusedItem: (nil); focusHeading: None>. No additional info available.
+2026-07-03 11:41:04.975841+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x102f09d50> (F497E026-7885-4961-BEF8-B79A45E78FB7)
+2026-07-03 11:41:04.976373+0000 0x105a2    Default     0x0                  23313  1    rayforge-pytest: (UIKitCore) [com.apple.UIKit:EventDeferring] [0x60000290c310] Scene target of event deferring environments did update: scene: 0x102f09d50; current systemShellManagesKeyboardFocus: 1; systemShellManagesKeyboardFocusForScene: 1; eligibleForRecordRemoval: 1;
+2026-07-03 11:41:04.976497+0000 0x105a2    Default     0x0                  23313  1    rayforge-pytest: (UIKitCore) [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x102f09d50; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Aorg.rayforge.pytest-default
+2026-07-03 11:41:04.976560+0000 0x105a2    Default     0x0                  23313  1    rayforge-pytest: (UIKitCore) [com.apple.UIKit:KeyWindow] Stack[KeyWindow] 0x600000c0e5b0: Migrate scenes from LastOneWins -> SystemShellManaged
+2026-07-03 11:41:04.976616+0000 0x105a2    Default     0x0                  23313  1    rayforge-pytest: (UIKitCore) [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPad to SystemShellManaged
+2026-07-03 11:41:04.977771+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.KeyboardArbiter:Client] handleKeyboardChange: set currentKeyboard:N (wasKeyboard:N)
+2026-07-03 11:41:04.981508+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:KeyboardArbiterClientLog] isWritingToolsHandlingKeyboardTracking:Y (WT ready:Y, Arbiter ready:Y)
+2026-07-03 11:41:04.983786+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:org.rayforge.pytest-default  persistentID: F497E026-7885-4961-BEF8-B79A45E78FB7
+2026-07-03 11:41:04.984889+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x102f09d50> (F497E026-7885-4961-BEF8-B79A45E78FB7)
+2026-07-03 11:41:04.985721+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x102f09d50> (F497E026-7885-4961-BEF8-B79A45E78FB7)
+2026-07-03 11:41:04.986001+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:org.rayforge.pytest-default  persistentID: F497E026-7885-4961-BEF8-B79A45E78FB7
+2026-07-03 11:41:04.986101+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason removed: 12; deactivation reasons: 4128 -> 32; animating application lifecycle event: 1
+2026-07-03 11:41:04.986152+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.KeyboardArbiter:Client] Send setDeactivating: N (-DeactivationReason:SuspendedEventsOnly)
+2026-07-03 11:41:04.986642+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (UIKitCore) [com.apple.UIKit:Application] Deactivation reason removed: 5; deactivation reasons: 32 -> 0; animating application lifecycle event: 0
+2026-07-03 11:41:05.262624+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (Network) [com.apple.network:activity] <nw_activity 50:1 [B37CB00C-7932-477E-89B4-8E63A1CD5902] (global parent) (reporting strategy default) complete (reason success)> complete with reason 2 (success), duration 4396ms
+2026-07-03 11:41:05.262671+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (Network) [com.apple.network:activity] <nw_activity 50:2 [AD59FD50-58CB-461E-B378-6DA9967151EB] (reporting strategy default) complete (reason success)> complete with reason 2 (success), duration 4396ms
+2026-07-03 11:41:05.262684+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (Network) [com.apple.network:activity] Unsetting the global parent activity <nw_activity 50:1 [B37CB00C-7932-477E-89B4-8E63A1CD5902] (global parent) (reporting strategy default) complete (reason success)>
+2026-07-03 11:41:05.262694+0000 0x105a2    Default     0x0                  23313  0    rayforge-pytest: (Network) [com.apple.network:activity] Unset the global parent activity
++ echo
+
