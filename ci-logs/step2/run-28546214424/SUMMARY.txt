@@ -1,0 +1,313 @@
++ echo 'Run ID: 28546214424'
+Run ID: 28546214424
++ echo 'Commit: 015520028647c738e9bb4b1d4b747012f6ceb126'
+Commit: 015520028647c738e9bb4b1d4b747012f6ceb126
+++ date -u
++ echo 'Date: Wed Jul  1 20:41:59 UTC 2026'
+Date: Wed Jul  1 20:41:59 UTC 2026
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: pixman.log ====================='
+===================== TAIL: pixman.log =====================
++ '[' -f pixman.log ']'
++ tail -25 pixman.log
+[17/37] Compiling C object pixman/libpixman-1.a.p/pixman-implementation.c.o
+[18/37] Compiling C object pixman/libpixman-1.a.p/pixman-linear-gradient.c.o
+[19/37] Compiling C object pixman/libpixman-1.a.p/pixman-mips.c.o
+[20/37] Compiling C object pixman/libpixman-1.a.p/pixman-noop.c.o
+[21/37] Compiling C object pixman/libpixman-1.a.p/pixman-ppc.c.o
+[22/37] Compiling C object pixman/libpixman-1.a.p/pixman-radial-gradient.c.o
+[23/37] Compiling C object pixman/libpixman-1.a.p/pixman-matrix.c.o
+[24/37] Compiling C object pixman/libpixman-arm-neon.a.p/pixman-arm-neon.c.o
+[25/37] Compiling C object pixman/libpixman-1.a.p/pixman-riscv.c.o
+[26/37] Compiling C object pixman/libpixman-1.a.p/pixman-solid-fill.c.o
+[27/37] Compiling C object pixman/libpixman-1.a.p/pixman-timer.c.o
+[28/37] Compiling C object pixman/libpixman-1.a.p/pixman-region32.c.o
+[29/37] Compiling C object pixman/libpixman-1.a.p/pixman-utils.c.o
+[30/37] Compiling C object pixman/libpixman-1.a.p/pixman-region16.c.o
+[31/37] Linking static target pixman/libpixman-arm-neon.a
+[32/37] Compiling C object pixman/libpixman-1.a.p/pixman-x86.c.o
+[33/37] Compiling C object pixman/libpixman-1.a.p/pixman-trap.c.o
+[34/37] Compiling C object pixman/libpixman-1.a.p/pixman-combine-float.c.o
+[35/37] Compiling C object pixman/libpixman-1.a.p/pixman-fast-path.c.o
+[36/37] Linking static target pixman/libpixman-1.a
+[36/37] Installing files
+Installing pixman/libpixman-1.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixman-src/pixman/pixman.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixman-build/pixman/pixman-version.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixman-build/meson-private/pixman-1.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: libpng.log ====================='
+===================== TAIL: libpng.log =====================
++ '[' -f libpng.log ']'
++ tail -25 libpng.log
+[ 94%] Building C object CMakeFiles/png_static.dir/arm/palette_neon_intrinsics.c.o
+[100%] Linking C static library libpng16.a
+[100%] Built target png_static
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng16.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/png.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pngconf.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pnglibconf.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16/png.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16/pngconf.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16/pnglibconf.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/libpng-config
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/libpng16-config
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man/man3/libpng.3
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man/man3/libpngpf.3
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/man/man5/png.5
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libpng.pc
+-- Up-to-date: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/libpng-config
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/libpng16.pc
+-- Up-to-date: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/libpng16-config
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng/libpng16.cmake
+-- Up-to-date: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpng16.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/PNG/PNGTargets.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/PNG/PNGConfig.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/PNG/PNGConfigVersion.cmake
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: freetype1.log ====================='
+===================== TAIL: freetype1.log =====================
++ '[' -f freetype1.log ']'
++ tail -25 freetype1.log
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftoutln.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftparams.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftpfr.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftrender.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftsizes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftsnames.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftstroke.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftsynth.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftsystem.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/fttrigon.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/fttypes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftwinfnt.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/otsvg.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/t1tables.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ttnameid.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/tttables.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/tttags.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/ftconfig.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/ftheader.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/ftstdlib.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/integer-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/mac-support.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/public-macros.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/builds/unix/freetype2.m4 to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/aclocal
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ft-build1/meson-private/freetype2.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: harfbuzz.log ====================='
+===================== TAIL: harfbuzz.log =====================
++ '[' -f harfbuzz.log ']'
++ tail -25 harfbuzz.log
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-name.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-shape.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot-var.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ot.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-script-list.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-set.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-shape-plan.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-shape.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-style.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-unicode.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/src/hb-version.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-ft.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-glib.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-subset.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/harfbuzz-src/src/hb-subset-serialize.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/src/hb-version.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/src/hb-features.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/meson-private/harfbuzz-raster.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/meson-private/harfbuzz-vector.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/meson-private/harfbuzz-gpu.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/meson-private/harfbuzz.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/meson-private/harfbuzz-subset.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/src/harfbuzz-config.cmake to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/harfbuzz
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/hb-build/meson-private/harfbuzz-gobject.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: freetype2.log ====================='
+===================== TAIL: freetype2.log =====================
++ '[' -f freetype2.log ']'
++ tail -25 freetype2.log
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftoutln.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftparams.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftpfr.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftrender.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftsizes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftsnames.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftstroke.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftsynth.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftsystem.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/fttrigon.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/fttypes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftwinfnt.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/otsvg.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/t1tables.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ttnameid.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/tttables.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/tttags.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/ftconfig.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/ftheader.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/ftstdlib.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/integer-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/mac-support.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/public-macros.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/builds/unix/freetype2.m4 to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/aclocal
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ft-build2/meson-private/freetype2.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: fribidi.log ====================='
+===================== TAIL: fribidi.log =====================
++ '[' -f fribidi.log ']'
++ tail -25 fribidi.log
+[46/47] Installing files
+Installing gen.tab/fribidi-unicode-version.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing lib/libfribidi.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-arabic.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-begindecls.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-bidi.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-bidi-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-bidi-types-list.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-char-sets.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-char-sets-list.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-common.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-deprecated.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-enddecls.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-flags.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-joining.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-joining-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-joining-types-list.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-mirroring.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-brackets.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-shape.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi-unicode.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-src/lib/fribidi.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-build/lib/fribidi-config.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fribidi-build/meson-private/fribidi.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: expat.log ====================='
+===================== TAIL: expat.log =====================
++ '[' -f expat.log ']'
++ tail -25 expat.log
+--     /dev/random .............. ON
+-- 
+-- Continue with
+--   make
+--   sudo make install
+-- 
+-- ===========================================================================
+-- Configuring done (5.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/expat-build
+[ 25%] Building C object CMakeFiles/expat.dir/lib/xmlparse.c.o
+[ 50%] Building C object CMakeFiles/expat.dir/lib/xmlrole.c.o
+[ 75%] Building C object CMakeFiles/expat.dir/lib/xmltok.c.o
+[100%] Linking C static library libexpat.a
+[100%] Built target expat
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/expat_config.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libexpat.a
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/expat.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/expat_external.h
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig/expat.pc
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/doc/expat/AUTHORS
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/doc/expat/changelog
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/expat-2.6.4/expat-config.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/expat-2.6.4/expat-config-version.cmake
+-- Installing: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cmake/expat-2.6.4/expat.cmake
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: fontconfig.log ====================='
+===================== TAIL: fontconfig.log =====================
++ '[' -f fontconfig.log ']'
++ tail -25 fontconfig.log
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/25-unhint-nonlatin.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/30-metric-aliases.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/40-nonlatin.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/45-generic.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/45-latin.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/48-spacing.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/49-sansserif.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/50-user.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/51-local.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/60-generic.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/60-latin.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/65-fonts-persian.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/65-khmer.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/65-nonlatin.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/69-unifont.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/70-no-bitmaps.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/70-yes-bitmaps.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/80-delicious.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/90-synthetic.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fc-build/conf.d/README to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/etc/fonts/conf.d
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/its/fontconfig.its to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/gettext/its
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/its/fontconfig.loc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/gettext/its
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fc-build/fonts.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/etc/fonts
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/fonts.dtd to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/xml/fontconfig
+Running custom install script '/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/link_confs.py /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/etc/fonts/conf.d 10-hinting-slight.conf 10-scale-bitmap-fonts.conf 10-sub-pixel-none.conf 10-yes-antialias.conf 11-lcdfilter-default.conf 20-unhint-small-vera.conf 30-metric-aliases.conf 40-nonlatin.conf 45-generic.conf 45-latin.conf 48-spacing.conf 49-sansserif.conf 50-user.conf 51-local.conf 60-generic.conf 60-latin.conf 65-fonts-persian.conf 65-nonlatin.conf 69-unifont.conf 80-delicious.conf 90-synthetic.conf'
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: cairo.log ====================='
+===================== TAIL: cairo.log =====================
++ '[' -f cairo.log ']'
++ tail -25 cairo.log
+Dependency xext for host machine skipped: feature xlib disabled
+Dependency xcb for host machine skipped: feature xcb disabled
+Dependency xcb-render for host machine skipped: feature xcb disabled
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr_4fqu21
+Code:
+int main(void) { return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr_4fqu21/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpr_4fqu21/output.exe -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -framework CoreFoundation` -> 0
+Running compile:
+Working directory:  /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpkciz8mfm
+Code:
+int main(void) { return 0; }
+-----------
+Command line: `/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpkciz8mfm/testfile.c -o /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/tmpkciz8mfm/output.exe -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -O0 -U_FORTIFY_SOURCE -Werror=implicit-function-declaration -framework ApplicationServices` -> 1
+stderr:
+ld: framework 'ApplicationServices' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+-----------
+Run-time dependency appleframeworks found: NO  (tried framework)
+
+cairo-src/meson.build:454:16: ERROR: Dependency "appleframeworks" not found (tried framework)
+
+::endgroup::
+
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: pango.log ====================='
+===================== TAIL: pango.log =====================
++ '[' -f pango.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in pixman.log libpng.log freetype1.log harfbuzz.log freetype2.log fribidi.log expat.log fontconfig.log cairo.log pango.log stack-verify.log
++ echo '===================== TAIL: stack-verify.log ====================='
+===================== TAIL: stack-verify.log =====================
++ '[' -f stack-verify.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+

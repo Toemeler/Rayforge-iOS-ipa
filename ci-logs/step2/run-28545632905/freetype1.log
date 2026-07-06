@@ -1,0 +1,219 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ft-build1
+Build type: cross build
+Project name: freetype2
+Project version: 2.13.3
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Program python3 found: YES (/opt/homebrew/bin/python3)
+Has header "unistd.h" : YES 
+Has header "fcntl.h" : YES 
+Has header "sys/mman.h" : YES 
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Found CMake: NO
+Run-time dependency zlib found: YES 1.2.12
+Dependency zlib for host machine found: YES 1.2.12 (cached)
+Run-time dependency bzip2 found: NO  (tried pkg-config, framework and cmake)
+Library bz2 skipped: feature bzip2 disabled
+WARNING: Pkg-config error with 'libpng': Could not generate cflags for libpng:
+Package zlib was not found in the pkg-config search path.
+Perhaps you should add the directory containing `zlib.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'zlib', required by 'libpng', not found
+
+Run-time dependency libpng found: NO  (tried pkg-config, framework and cmake)
+Looking for a fallback subproject for the dependency libpng
+Downloading libpng source from https://github.com/glennrp/libpng/archive/v1.6.43.tar.gz
+Downloading libpng patch from https://wrapdb.mesonbuild.com/v2/libpng_1.6.43-2/get_patch
+
+Executing subproject libpng 
+
+libpng| Project name: libpng
+libpng| Project version: 1.6.43
+libpng| C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+libpng| C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+libpng| C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+libpng| C linker for the build machine: cc ld64 1167.5
+libpng| Dependency zlib for host machine found: YES 1.2.12 (cached)
+libpng| Library m found: YES
+libpng| Configuring libpng16.pc using configuration
+libpng| Configuring libpng.pc using configuration
+libpng| Build targets in project: 3
+libpng| Subproject libpng finished.
+
+Dependency libpng for host machine from subproject subprojects/libpng-1.6.43 found: YES 1.6.43
+Dependency harfbuzz for host machine skipped: feature harfbuzz disabled
+Dependency libbrotlidec for host machine skipped: feature brotli disabled
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build targets in project: 7
+
+freetype2 2.13.3
+
+  Operating System
+    OS             : darwin
+
+  Used Libraries
+    Zlib           : system
+    Bzip2          : no
+    Png            : yes
+    Harfbuzz       : no
+    Brotli         : no
+
+  Subprojects
+    libpng         : YES
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-arm64-cross.txt
+    brotli         : disabled
+    buildtype      : release
+    bzip2          : disabled
+    default_library: static
+    harfbuzz       : disabled
+    png            : enabled
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `ft-build1'
+[1/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngmem.c.o
+[2/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngget.c.o
+[3/68] Generating ftmodule.h with a custom command
+[4/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngerror.c.o
+[5/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngrio.c.o
+[6/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngpread.c.o
+[7/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngset.c.o
+[8/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngtrans.c.o
+[9/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/png.c.o
+[10/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngwio.c.o
+[11/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngread.c.o
+[12/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngwtran.c.o
+[13/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/arm_arm_init.c.o
+[14/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngwrite.c.o
+[15/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/arm_filter_neon_intrinsics.c.o
+[16/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/arm_filter_neon.S.o
+[17/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/arm_palette_neon_intrinsics.c.o
+[18/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngrutil.c.o
+[19/68] Generating ftoption.h with a custom command
+[20/68] Generating ftconfig.h with a custom command
+[21/68] Compiling C object libfreetype.a.p/src_base_ftinit.c.o
+[22/68] Compiling C object subprojects/libpng-1.6.43/pngtest.p/pngtest.c.o
+[23/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngwutil.c.o
+[24/68] Compiling C object subprojects/libpng-1.6.43/libpng16.a.p/pngrtran.c.o
+[25/68] Linking static target subprojects/libpng-1.6.43/libpng16.a
+[26/68] Compiling C object libfreetype.a.p/src_type1_type1.c.o
+[27/68] Compiling C object libfreetype.a.p/src_cid_type1cid.c.o
+[28/68] Compiling C object libfreetype.a.p/src_type42_type42.c.o
+[29/68] Compiling C object libfreetype.a.p/src_winfonts_winfnt.c.o
+[30/68] Compiling C object libfreetype.a.p/src_cff_cff.c.o
+[31/68] Compiling C object libfreetype.a.p/src_pfr_pfr.c.o
+[32/68] Compiling C object libfreetype.a.p/src_pcf_pcf.c.o
+[33/68] Compiling C object libfreetype.a.p/src_bdf_bdf.c.o
+[34/68] Compiling C object libfreetype.a.p/src_base_ftbase.c.o
+[35/68] Compiling C object libfreetype.a.p/src_smooth_smooth.c.o
+[36/68] Compiling C object libfreetype.a.p/src_pshinter_pshinter.c.o
+[37/68] Compiling C object libfreetype.a.p/src_svg_svg.c.o
+[38/68] Compiling C object libfreetype.a.p/src_raster_raster.c.o
+[39/68] Compiling C object libfreetype.a.p/src_cache_ftcache.c.o
+[40/68] Compiling C object libfreetype.a.p/src_sdf_sdf.c.o
+[41/68] Compiling C object libfreetype.a.p/src_gzip_ftgzip.c.o
+[42/68] Compiling C object libfreetype.a.p/src_lzw_ftlzw.c.o
+[43/68] Compiling C object libfreetype.a.p/src_psnames_psnames.c.o
+[44/68] Compiling C object libfreetype.a.p/src_base_ftbbox.c.o
+[45/68] Compiling C object libfreetype.a.p/src_autofit_autofit.c.o
+[46/68] Compiling C object libfreetype.a.p/src_base_ftbdf.c.o
+[47/68] Compiling C object libfreetype.a.p/src_base_ftcid.c.o
+[48/68] Compiling C object libfreetype.a.p/src_truetype_truetype.c.o
+[49/68] Compiling C object libfreetype.a.p/src_base_ftfstype.c.o
+[50/68] Compiling C object libfreetype.a.p/src_base_ftgasp.c.o
+[51/68] Compiling C object libfreetype.a.p/src_base_ftbitmap.c.o
+[52/68] Compiling C object libfreetype.a.p/src_base_ftgxval.c.o
+[53/68] Compiling C object libfreetype.a.p/src_base_ftglyph.c.o
+[54/68] Compiling C object libfreetype.a.p/src_base_ftotval.c.o
+[55/68] Compiling C object libfreetype.a.p/src_base_ftpatent.c.o
+[56/68] Compiling C object libfreetype.a.p/src_base_ftmm.c.o
+[57/68] Compiling C object libfreetype.a.p/src_base_ftpfr.c.o
+[58/68] Compiling C object libfreetype.a.p/src_base_ftsynth.c.o
+[59/68] Compiling C object libfreetype.a.p/src_base_fttype1.c.o
+[60/68] Compiling C object libfreetype.a.p/src_base_ftwinfnt.c.o
+[61/68] Compiling C object libfreetype.a.p/src_base_ftdebug.c.o
+[62/68] Compiling C object libfreetype.a.p/builds_unix_ftsystem.c.o
+[63/68] Compiling C object libfreetype.a.p/src_base_ftstroke.c.o
+[64/68] Linking target subprojects/libpng-1.6.43/pngtest
+ld: warning: ignoring duplicate libraries: '-lz'
+[65/68] Compiling C object libfreetype.a.p/src_sfnt_sfnt.c.o
+[66/68] Compiling C object libfreetype.a.p/src_psaux_psaux.c.o
+[67/68] Linking static target libfreetype.a
+[67/68] Installing files
+Installing ftmodule.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing subprojects/libpng-1.6.43/libpng16.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing ftoption.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing ftconfig.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing libfreetype.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/subprojects/libpng-1.6.43/png.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/subprojects/libpng-1.6.43/pngconf.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ft-build1/subprojects/libpng-1.6.43/pnglibconf.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/ft2build.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/freetype.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftadvanc.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftbbox.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftbdf.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftbitmap.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftbzip2.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftcache.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftchapters.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftcid.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftcolor.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftdriver.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/fterrdef.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/fterrors.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftfntfmt.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftgasp.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftglyph.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftgxval.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftgzip.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftimage.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftincrem.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftlcdfil.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftlist.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftlzw.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftmac.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftmm.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftmodapi.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftmoderr.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftotval.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftoutln.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftparams.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftpfr.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftrender.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftsizes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftsnames.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftstroke.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftsynth.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftsystem.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/fttrigon.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/fttypes.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ftwinfnt.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/otsvg.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/t1tables.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/ttnameid.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/tttables.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/tttags.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/ftconfig.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/ftheader.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/ftstdlib.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/integer-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/mac-support.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/include/freetype/config/public-macros.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2/freetype/config
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ft-build1/subprojects/libpng-1.6.43/libpng16.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ft-build1/subprojects/libpng-1.6.43/libpng.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/freetype-src/builds/unix/freetype2.m4 to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/aclocal
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ft-build1/meson-private/freetype2.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
