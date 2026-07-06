@@ -165,6 +165,7 @@ void       gdk_ios_shell_get_pointer_position (double *x, double *y,
  * being destroyed (the cached pointer-focus surface), so the next event
  * never dereferences freed memory. */
 void       gdk_ios_shell_forget_surface (GdkIOSSurface *surface);
+int        gdk_ios_shell_get_refresh_milli_hz (void); /* e.g. 120000 */
 
 /* Event helpers (gdkiosmain.c -> display) */
 void gdk_ios_display_deliver_event (GdkIOSDisplay *display, GdkEvent *event);

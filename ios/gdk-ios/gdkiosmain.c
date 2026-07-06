@@ -5,8 +5,10 @@
  *  - GdkIOSView: fullscreen UIView translating UIKit input into GDK
  *    events with desktop mouse+keyboard semantics:
  *      * trackpad/mouse hover  -> motion events   (UIHoverGestureRecognizer)
- *      * touches / clicks      -> button 1 press/motion/release
- *      * two-finger / wheel    -> smooth scroll   (UIPanGestureRecognizer,
+ *      * single touch / clicks -> button 1 press/motion/release
+ *      * two-finger touch drag -> pan (synthetic middle-button drag)
+ *      * pinch                 -> zoom (scroll ticks at the centroid)
+ *      * trackpad two-finger / wheel -> smooth scroll (UIPanGestureRecognizer,
  *                                 scroll-typed input only)
  *      * hardware keyboard     -> key press/release with full modifiers
  *  - The application bootstrap gdk_ios_main(): runs UIApplicationMain,
@@ -41,6 +43,13 @@ static double pointer_y = 0.0;
 static GdkModifierType key_modifiers = 0;
 static GdkModifierType button_modifiers = 0;
 static GdkIOSSurface *pointer_surface = NULL; /* weak */
+
+/* Touchscreen gesture state: single finger = button-1 draw, two-finger
+ * drag = synthetic middle-button pan, pinch = zoom (scroll ticks). */
+static gboolean touch1_down = FALSE;        /* raw button-1 press delivered */
+static gboolean multi_touch_active = FALSE; /* >=2 fingers: gestures own input */
+static gboolean two_finger_panning = FALSE; /* synthetic middle-drag in flight */
+static double   pinch_accum = 0.0;          /* accumulated log(scale) */
 
 static GdkIOSMainFunc user_main_func = NULL;
 static gpointer user_main_data = NULL;
@@ -148,6 +157,18 @@ gdk_ios_shell_forget_surface (GdkIOSSurface *surface)
    * Settings). Drop the reference here so it is never dereferenced again. */
   if (pointer_surface == surface)
     pointer_surface = NULL;
+}
+
+int
+gdk_ios_shell_get_refresh_milli_hz (void)
+{
+  /* Feed the real display rate to the GdkFrameClock so paint scheduling
+   * is paced against the hardware (120 Hz ProMotion on iPad Pro) instead
+   * of the 60 Hz fallback used when a monitor reports no refresh rate. */
+  NSInteger fps = UIScreen.mainScreen.maximumFramesPerSecond;
+  if (fps <= 0)
+    fps = 60;
+  return (int) fps * 1000;
 }
 
 /* --------------------------------------------------------- event helpers */
@@ -401,7 +422,8 @@ deliver_key (GdkEventType type, UIKey *key)
 
 /* ---------------------------------------------------------------- UIView */
 
-@interface GdkIOSView : UIView <UIPointerInteractionDelegate>
+@interface GdkIOSView : UIView <UIPointerInteractionDelegate,
+                                UIGestureRecognizerDelegate>
 @end
 
 @implementation GdkIOSView
@@ -434,6 +456,26 @@ deliver_key (GdkEventType type, UIKey *key)
       scroll.maximumNumberOfTouches = 0;
       [self addGestureRecognizer:scroll];
 
+      /* Touchscreen: two-finger drag pans (synthetic middle-button drag —
+       * Rayforge pans on BUTTON_MIDDLE) and pinch zooms (scroll ticks).
+       * Direct touches only, so the trackpad scroll path is unaffected.
+       * Both may run simultaneously (maps-style pan+zoom). */
+      UIPanGestureRecognizer *twoPan =
+        [[UIPanGestureRecognizer alloc] initWithTarget:self
+                                                action:@selector(onTwoFingerPan:)];
+      twoPan.minimumNumberOfTouches = 2;
+      twoPan.maximumNumberOfTouches = 2;
+      twoPan.allowedTouchTypes = @[@(UITouchTypeDirect)];
+      twoPan.delegate = self;
+      [self addGestureRecognizer:twoPan];
+
+      UIPinchGestureRecognizer *pinch =
+        [[UIPinchGestureRecognizer alloc] initWithTarget:self
+                                                  action:@selector(onPinch:)];
+      pinch.allowedTouchTypes = @[@(UITouchTypeDirect)];
+      pinch.delegate = self;
+      [self addGestureRecognizer:pinch];
+
       [self addInteraction:
         [[UIPointerInteraction alloc] initWithDelegate:self]];
     }
@@ -463,17 +505,60 @@ deliver_key (GdkEventType type, UIKey *key)
   deliver_scroll (-t.x / fs, -t.y / fs, is_stop);
 }
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer
+    shouldRecognizeSimultaneouslyWithGestureRecognizer:
+        (UIGestureRecognizer *)otherGestureRecognizer
+{
+  /* Let two-finger pan and pinch track the same touches (maps-style). */
+  return YES;
+}
+
+static NSUInteger
+live_touch_count (UIEvent *event)
+{
+  NSUInteger n = 0;
+  for (UITouch *t in event.allTouches)
+    if (t.phase != UITouchPhaseEnded && t.phase != UITouchPhaseCancelled)
+      n++;
+  return n;
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
   UITouch *touch = [touches anyObject];
   CGPoint p = [touch locationInView:self];
   double fs = gdk_ios_shell_get_fit_scale ();
   p.x /= fs; p.y /= fs;
+
+  if (touch.type == UITouchTypeIndirectPointer)
+    {
+      /* Trackpad/mouse click: keep desktop semantics untouched. */
+      deliver_motion (p.x, p.y);
+      deliver_button (GDK_BUTTON_PRESS,
+                      (event.buttonMask & UIEventButtonMaskSecondary) ? 3 : 1,
+                      p.x, p.y);
+      return;
+    }
+
+  if (live_touch_count (event) >= 2)
+    {
+      /* Second finger landed: this is a pan/pinch, not a draw. Cancel any
+       * button-1 press already delivered for the first finger. */
+      multi_touch_active = TRUE;
+      if (touch1_down)
+        {
+          deliver_button (GDK_BUTTON_RELEASE, 1, p.x, p.y);
+          touch1_down = FALSE;
+        }
+      return;
+    }
+
+  if (multi_touch_active)
+    return; /* leftover finger of a gesture: don't start a draw */
+
   deliver_motion (p.x, p.y);
-  deliver_button (GDK_BUTTON_PRESS,
-                  (touch.type == UITouchTypeIndirectPointer &&
-                   (event.buttonMask & UIEventButtonMaskSecondary)) ? 3 : 1,
-                  p.x, p.y);
+  deliver_button (GDK_BUTTON_PRESS, 1, p.x, p.y);
+  touch1_down = TRUE;
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -481,6 +566,11 @@ deliver_key (GdkEventType type, UIKey *key)
   UITouch *touch = [touches anyObject];
   CGPoint p = [touch locationInView:self];
   double fs = gdk_ios_shell_get_fit_scale ();
+
+  if (touch.type != UITouchTypeIndirectPointer &&
+      (multi_touch_active || !touch1_down))
+    return; /* fingers owned by pan/pinch: no motion-as-draw */
+
   deliver_motion (p.x / fs, p.y / fs);
 }
 
@@ -490,15 +580,107 @@ deliver_key (GdkEventType type, UIKey *key)
   CGPoint p = [touch locationInView:self];
   double fs = gdk_ios_shell_get_fit_scale ();
   p.x /= fs; p.y /= fs;
-  deliver_button (GDK_BUTTON_RELEASE,
-                  (touch.type == UITouchTypeIndirectPointer &&
-                   (event.buttonMask & UIEventButtonMaskSecondary)) ? 3 : 1,
-                  p.x, p.y);
+
+  if (touch.type == UITouchTypeIndirectPointer)
+    {
+      deliver_button (GDK_BUTTON_RELEASE,
+                      (event.buttonMask & UIEventButtonMaskSecondary) ? 3 : 1,
+                      p.x, p.y);
+      return;
+    }
+
+  if (live_touch_count (event) == 0)
+    {
+      if (touch1_down)
+        {
+          deliver_button (GDK_BUTTON_RELEASE, 1, p.x, p.y);
+          touch1_down = FALSE;
+        }
+      multi_touch_active = FALSE;
+    }
 }
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
   [self touchesEnded:touches withEvent:event];
+}
+
+- (void)onTwoFingerPan:(UIPanGestureRecognizer *)recognizer
+{
+  double fs = gdk_ios_shell_get_fit_scale ();
+  CGPoint c = [recognizer locationInView:self]; /* two-finger centroid */
+  double x = c.x / fs, y = c.y / fs;
+
+  switch (recognizer.state)
+    {
+    case UIGestureRecognizerStateBegan:
+      multi_touch_active = TRUE;
+      deliver_motion (x, y);
+      deliver_button (GDK_BUTTON_PRESS, 2, x, y); /* Rayforge pans on middle */
+      two_finger_panning = TRUE;
+      break;
+    case UIGestureRecognizerStateChanged:
+      if (two_finger_panning)
+        deliver_motion (x, y);
+      break;
+    case UIGestureRecognizerStateEnded:
+    case UIGestureRecognizerStateCancelled:
+    case UIGestureRecognizerStateFailed:
+      if (two_finger_panning)
+        {
+          deliver_button (GDK_BUTTON_RELEASE, 2, x, y);
+          two_finger_panning = FALSE;
+        }
+      multi_touch_active = FALSE;
+      break;
+    default:
+      break;
+    }
+}
+
+- (void)onPinch:(UIPinchGestureRecognizer *)recognizer
+{
+  double fs = gdk_ios_shell_get_fit_scale ();
+  CGPoint c = [recognizer locationInView:self]; /* pinch centroid */
+  double x = c.x / fs, y = c.y / fs;
+
+  if (recognizer.state == UIGestureRecognizerStateBegan)
+    {
+      multi_touch_active = TRUE;
+      pinch_accum = 0.0;
+      return;
+    }
+  if (recognizer.state == UIGestureRecognizerStateEnded ||
+      recognizer.state == UIGestureRecognizerStateCancelled ||
+      recognizer.state == UIGestureRecognizerStateFailed)
+    {
+      multi_touch_active = FALSE;
+      return;
+    }
+  if (recognizer.state != UIGestureRecognizerStateChanged)
+    return;
+
+  /* Rayforge's on_scroll uses only the sign of dy, one fixed zoom step per
+   * event (5% after the iOS zoom_speed patch). Accumulate log(scale) and
+   * emit one tick per ln(1.05), so a physical 2x pinch maps to ~2x zoom.
+   * A motion event at the centroid first makes Rayforge zoom around the
+   * fingers, not the last cursor position. dy < 0 zooms in. */
+  pinch_accum += log (recognizer.scale);
+  [recognizer setScale:1.0];
+
+  const double step = 0.04879; /* ln(1.05) */
+  while (pinch_accum >= step)
+    {
+      deliver_motion (x, y);
+      deliver_scroll (0, -1, FALSE);
+      pinch_accum -= step;
+    }
+  while (pinch_accum <= -step)
+    {
+      deliver_motion (x, y);
+      deliver_scroll (0, 1, FALSE);
+      pinch_accum += step;
+    }
 }
 
 - (void)pressesBegan:(NSSet<UIPress *> *)presses withEvent:(UIPressesEvent *)event
@@ -640,11 +822,13 @@ ios_install_crash_handlers (void)
   static unsigned long frames = 0;
   static unsigned long iterations = 0;
   GMainContext *context = g_main_context_default ();
-  while (g_main_context_pending (context))
-    {
-      g_main_context_iteration (context, FALSE);
-      iterations++;
-    }
+  /* Textbook non-blocking drain: iteration() returns TRUE iff a source was
+   * dispatched. The previous pending()+iteration() pair ran prepare() twice
+   * per source without a dispatch in between, which can desync timing-based
+   * sources like the frame clock (candidate cause of paints that only
+   * happened once input events forced a frame). */
+  while (g_main_context_iteration (context, FALSE))
+    iterations++;
   if ((++frames % 120) == 0)
     g_message ("gdk-ios: pump alive frame=%lu total_iterations=%lu",
                frames, iterations);

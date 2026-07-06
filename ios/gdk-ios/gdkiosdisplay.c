@@ -55,6 +55,8 @@ gdk_ios_monitor_new (GdkDisplay *display)
   GdkRectangle geometry = { 0, 0, width, height };
   gdk_monitor_set_geometry (GDK_MONITOR (self), &geometry);
   gdk_monitor_set_scale (GDK_MONITOR (self), gdk_ios_shell_get_scale ());
+  gdk_monitor_set_refresh_rate (GDK_MONITOR (self),
+                                gdk_ios_shell_get_refresh_milli_hz ());
   gdk_monitor_set_connector (GDK_MONITOR (self), "ios-0");
   gdk_monitor_set_model (GDK_MONITOR (self), "iPad display");
   gdk_monitor_set_manufacturer (GDK_MONITOR (self), "Apple");
