@@ -1,0 +1,380 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build
+Build type: cross build
+Program version.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/version.py)
+Project name: cairo
+Project version: 1.18.4
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Werror-implicit-function-declaration: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wsign-compare: YES 
+Compiler for C supports arguments -Wpacked: YES 
+Compiler for C supports arguments -Wswitch-enum: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wvolatile-register-var: YES 
+Compiler for C supports arguments -Wstrict-aliasing=2: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wunsafe-loop-optimizations: NO 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wno-attributes: YES 
+Compiler for C supports arguments -Wno-long-long: YES 
+Compiler for C supports arguments -Winline: YES 
+Compiler for C supports arguments -Wno-unused-but-set-variable: YES 
+Compiler for C supports arguments -Wno-enum-conversion: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fno-common: YES 
+Compiler for C supports arguments -Wp,-D_FORTIFY_SOURCE=2: YES 
+Program python3 found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14)
+Library m found: YES
+Dependency gtk+-2.0 for host machine skipped: feature gtk2-utils disabled
+Compiler for C supports link arguments -Wl,-Bsymbolic-functions: NO 
+Fetching value of define "__FLOAT_WORD_ORDER__" : (undefined) 
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Found CMake: NO
+Run-time dependency lzo2 found: NO  (tried pkg-config, framework and cmake)
+Library dl found: YES
+Checking for function "dlsym" with dependency -ldl: YES 
+Run-time dependency zlib found: YES 1.2.12
+Run-time dependency libpng found: YES 1.6.44
+Run-time dependency fontconfig found: YES 2.17.1
+Program ttx found: NO
+Run-time dependency freetype2 found: YES 26.2.20
+Checking for type "FT_SVG_Document" with dependency freetype2: YES 
+Checking if define "FT_LOAD_NO_SVG" with dependency freetype2 exists: YES 
+Checking for function "FT_Get_Color_Glyph_Paint" with dependency freetype2: YES 
+Dependency x11 for host machine skipped: feature xlib disabled
+Dependency xext for host machine skipped: feature xlib disabled
+Dependency xcb for host machine skipped: feature xcb disabled
+Dependency xcb-render for host machine skipped: feature xcb disabled
+Run-time dependency gobject-2.0 found: YES 2.82.4
+Run-time dependency glib-2.0 found: YES 2.82.4
+Has header "bfd.h" : NO 
+Program gs skipped: feature tests disabled
+Run-time dependency libspectre found: NO  (tried pkg-config, framework and cmake)
+Dependency poppler-glib for host machine skipped: feature tests disabled
+Dependency librsvg-2.0 for host machine skipped: feature tests disabled
+Run-time dependency pixman-1 found: YES 0.44.2
+Checking for size of "void *" : 8 
+Checking for size of "int" : 4 
+Checking for size of "long" : 8 
+Checking for size of "long long" : 8 
+Checking for size of "size_t" : 8 
+Has header "stdint.h" : YES 
+Has header "inttypes.h" : YES 
+Has header "sys/int_types.h" : NO 
+Has header "fcntl.h" : YES 
+Has header "unistd.h" : YES 
+Has header "signal.h" : YES 
+Has header "sys/stat.h" : YES 
+Has header "sys/socket.h" : YES 
+Has header "poll.h" : YES 
+Has header "sys/poll.h" : YES 
+Has header "sys/un.h" : YES 
+Has header "sched.h" : YES 
+Has header "sys/mman.h" : YES 
+Has header "time.h" : YES 
+Has header "libgen.h" : YES 
+Has header "byteswap.h" : NO 
+Has header "signal.h" : YES (cached)
+Has header "setjmp.h" : YES 
+Has header "fenv.h" : YES 
+Has header "sys/wait.h" : YES 
+Has header "sys/stat.h" : YES (cached)
+Has header "io.h" : NO 
+Has header "fenv.h" : YES (cached)
+Has header "xlocale.h" : YES 
+Has header "sys/ioctl.h" : YES 
+Has header "intsafe.h" : NO 
+Has header "alloca.h" : YES 
+Has header "termios.h" : YES 
+Checking for type "uint64_t" : YES 
+Checking for type "uint128_t" : NO 
+Checking for type "__uint128_t" : YES 
+Checking for function "alarm" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "ctime_r" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "localtime_r" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "gmtime_r" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "drand48" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "flockfile" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "funlockfile" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "getline" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "link" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "fork" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "waitpid" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "raise" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "newlocale" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "strtod_l" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "FcInit" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "FcFini" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "sched_getaffinity" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: NO 
+Checking for function "mmap" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "clock_gettime" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "feenableexcept" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: NO 
+Checking for function "fedisableexcept" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: NO 
+Checking for function "feclearexcept" with dependencies -lm, -ldl, zlib, libpng, fontconfig, freetype2, pixman-1: YES 
+Checking for function "strndup" : YES 
+Checking if "pthreads" links: YES 
+Checking if "Atomic ops: c11" links: YES 
+Library rt found: NO
+Compiler for C supports arguments -Wno-attributes: YES (cached)
+Compiler for C supports arguments -Wno-unused-but-set-variable: YES (cached)
+Compiler for C supports arguments -Wno-missing-field-initializers: YES (cached)
+Compiler for C supports arguments -Wno-unused-parameter: YES (cached)
+Compiler for C supports arguments -Wno-long-long: YES (cached)
+Configuring cairo-features.h using configuration
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Program sh found: YES (/bin/sh)
+Configuring cairo-trace using configuration
+Configuring config.h using configuration
+Build targets in project: 11
+
+cairo 1.18.4
+
+  Surface Backends
+    Image                   : YES
+    Recording               : YES
+    Observer                : YES
+    Mime                    : YES
+    Tee                     : YES
+    Xlib                    : NO
+    Xlib Xrender            : NO
+    Quartz                  : NO
+    Quartz-image            : NO
+    XCB                     : NO
+    Win32                   : NO
+    CairoScript             : YES
+    PostScript              : YES
+    PDF                     : YES
+    SVG                     : YES
+
+  Font Backends
+    User                    : YES
+    FreeType                : YES
+    Fontconfig              : YES
+    Win32                   : NO
+    Win32 DWrite            : NO
+    Quartz                  : NO
+
+  Functions
+    PNG functions           : YES
+    X11-xcb                 : NO
+    XCB-shm                 : NO
+
+  Features and Utilities
+    cairo-trace:            : YES
+    cairo-script-interpreter: YES
+    API reference           : NO
+
+  User defined options
+    Cross files             : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-arm64-cross.txt
+    buildtype               : release
+    default_library         : static
+    fontconfig              : enabled
+    freetype                : enabled
+    glib                    : enabled
+    png                     : enabled
+    prefix                  : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    quartz                  : disabled
+    tests                   : disabled
+    xcb                     : disabled
+    xlib                    : disabled
+    zlib                    : enabled
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `cairo-build'
+[1/150] Compiling C object src/libcairo.a.p/cairo-atomic.c.o
+[2/150] Compiling C object src/libcairo.a.p/cairo-arc.c.o
+[3/150] Compiling C object src/libcairo.a.p/cairo-base64-stream.c.o
+[4/150] Compiling C object src/libcairo.a.p/cairo-array.c.o
+[5/150] Compiling C object src/libcairo.a.p/cairo-analysis-surface.c.o
+[6/150] Compiling C object src/libcairo.a.p/cairo-base85-stream.c.o
+[7/150] Compiling C object src/libcairo.a.p/cairo-bentley-ottmann-rectilinear.c.o
+[8/150] Compiling C object src/libcairo.a.p/cairo-bentley-ottmann-rectangular.c.o
+[9/150] Compiling C object src/libcairo.a.p/cairo-bentley-ottmann.c.o
+[10/150] Compiling C object src/libcairo.a.p/cairo-boxes-intersect.c.o
+[11/150] Compiling C object src/libcairo.a.p/cairo-cache.c.o
+[12/150] Compiling C object src/libcairo.a.p/cairo-clip-polygon.c.o
+[13/150] Compiling C object src/libcairo.a.p/cairo-clip-region.c.o
+[14/150] Compiling C object src/libcairo.a.p/cairo-clip-boxes.c.o
+[15/150] Compiling C object src/libcairo.a.p/cairo-boxes.c.o
+[16/150] Compiling C object src/libcairo.a.p/cairo-clip-surface.c.o
+[17/150] Compiling C object src/libcairo.a.p/cairo-color.c.o
+[18/150] Compiling C object src/libcairo.a.p/cairo-composite-rectangles.c.o
+[19/150] Compiling C object src/libcairo.a.p/cairo-compositor.c.o
+[20/150] Compiling C object src/libcairo.a.p/cairo-contour.c.o
+[21/150] Compiling C object src/libcairo.a.p/cairo-botor-scan-converter.c.o
+[22/150] Compiling C object src/libcairo.a.p/cairo-clip.c.o
+[23/150] Compiling C object src/libcairo.a.p/cairo-damage.c.o
+[24/150] Compiling C object src/libcairo.a.p/cairo-debug.c.o
+[25/150] Compiling C object src/libcairo.a.p/cairo-device.c.o
+[26/150] Compiling C object src/libcairo.a.p/cairo-error.c.o
+[27/150] Compiling C object src/libcairo.a.p/cairo-fallback-compositor.c.o
+[28/150] Compiling C object src/libcairo.a.p/cairo-fixed.c.o
+[29/150] Compiling C object src/libcairo.a.p/cairo-font-face-twin-data.c.o
+[30/150] Compiling C object src/libcairo.a.p/cairo-font-face.c.o
+[31/150] Compiling C object src/libcairo.a.p/cairo-freed-pool.c.o
+[32/150] Compiling C object src/libcairo.a.p/cairo-default-context.c.o
+[33/150] Compiling C object src/libcairo.a.p/cairo-font-options.c.o
+[34/150] Compiling C object src/libcairo.a.p/cairo-freelist.c.o
+[35/150] Compiling C object src/libcairo.a.p/cairo-hash.c.o
+[36/150] Compiling C object src/libcairo.a.p/cairo-font-face-twin.c.o
+[37/150] Compiling C object src/libcairo.a.p/cairo-hull.c.o
+[38/150] Compiling C object src/libcairo.a.p/cairo-image-info.c.o
+[39/150] Compiling C object src/libcairo.a.p/cairo-clip-tor-scan-converter.c.o
+[40/150] Compiling C object src/libcairo.a.p/cairo-line.c.o
+[41/150] Compiling C object src/libcairo.a.p/cairo-image-surface.c.o
+[42/150] Compiling C object src/libcairo.a.p/cairo-lzw.c.o
+[43/150] Compiling C object src/libcairo.a.p/cairo-image-source.c.o
+[44/150] Compiling C object src/libcairo.a.p/cairo-matrix.c.o
+[45/150] Compiling C object src/libcairo.a.p/cairo-gstate.c.o
+[46/150] Compiling C object src/libcairo.a.p/cairo-mask-compositor.c.o
+[47/150] Compiling C object src/libcairo.a.p/cairo-mempool.c.o
+[48/150] Compiling C object src/libcairo.a.p/cairo-mutex.c.o
+[49/150] Compiling C object src/libcairo.a.p/cairo-misc.c.o
+[50/150] Compiling C object src/libcairo.a.p/cairo-mono-scan-converter.c.o
+[51/150] Compiling C object src/libcairo.a.p/cairo-no-compositor.c.o
+[52/150] Compiling C object src/libcairo.a.p/cairo-observer.c.o
+[53/150] Compiling C object src/libcairo.a.p/cairo-path-bounds.c.o
+[54/150] Compiling C object src/libcairo.a.p/cairo-paginated-surface.c.o
+[55/150] Compiling C object src/libcairo.a.p/cairo-mesh-pattern-rasterizer.c.o
+[56/150] Compiling C object src/libcairo.a.p/cairo-output-stream.c.o
+[57/150] Compiling C object src/libcairo.a.p/cairo-path-in-fill.c.o
+[58/150] Compiling C object src/libcairo.a.p/cairo-path-fill.c.o
+[59/150] Compiling C object src/libcairo.a.p/cairo-path-stroke-boxes.c.o
+[60/150] Compiling C object src/libcairo.a.p/cairo-path-stroke-traps.c.o
+[61/150] Compiling C object src/libcairo.a.p/cairo-path-stroke-polygon.c.o
+[62/150] Compiling C object src/libcairo.a.p/cairo-path-stroke-tristrip.c.o
+[63/150] Compiling C object src/libcairo.a.p/cairo-path.c.o
+[64/150] Compiling C object src/libcairo.a.p/cairo-pen.c.o
+[65/150] Compiling C object src/libcairo.a.p/cairo-path-stroke.c.o
+[66/150] Compiling C object src/libcairo.a.p/cairo-image-compositor.c.o
+[67/150] Compiling C object src/libcairo.a.p/cairo-path-fixed.c.o
+[68/150] Compiling C object src/libcairo.a.p/cairo-raster-source-pattern.c.o
+[69/150] Compiling C object src/libcairo.a.p/cairo-polygon.c.o
+[70/150] Compiling C object src/libcairo.a.p/cairo-rectangle.c.o
+[71/150] Compiling C object src/libcairo.a.p/cairo-polygon-reduce.c.o
+[72/150] Compiling C object src/libcairo.a.p/cairo-polygon-intersect.c.o
+[73/150] Compiling C object src/libcairo.a.p/cairo-region.c.o
+[74/150] Compiling C object src/libcairo.a.p/cairo-rtree.c.o
+[75/150] Compiling C object src/libcairo.a.p/cairo-rectangular-scan-converter.c.o
+[76/150] Compiling C object src/libcairo.a.p/cairo-shape-mask-compositor.c.o
+[77/150] Compiling C object src/libcairo.a.p/cairo-slope.c.o
+[78/150] Compiling C object src/libcairo.a.p/cairo-spans.c.o
+[79/150] Compiling C object src/libcairo.a.p/cairo-spans-compositor.c.o
+[80/150] Compiling C object src/libcairo.a.p/cairo-pattern.c.o
+[81/150] Compiling C object src/libcairo.a.p/cairo-spline.c.o
+[82/150] Compiling C object src/libcairo.a.p/cairo-stroke-dash.c.o
+[83/150] Compiling C object src/libcairo.a.p/cairo-surface-clipper.c.o
+[84/150] Compiling C object src/libcairo.a.p/cairo-stroke-style.c.o
+[85/150] Compiling C object src/libcairo.a.p/cairo-surface-fallback.c.o
+[86/150] Compiling C object src/libcairo.a.p/cairo-surface-offset.c.o
+[87/150] Compiling C object src/libcairo.a.p/cairo-surface-snapshot.c.o
+[88/150] Compiling C object src/libcairo.a.p/cairo-recording-surface.c.o
+[89/150] Compiling C object src/libcairo.a.p/cairo-surface-subsurface.c.o
+[90/150] Compiling C object src/libcairo.a.p/cairo-scaled-font.c.o
+[91/150] Compiling C object src/libcairo.a.p/cairo-surface-wrapper.c.o
+[92/150] Compiling C object src/libcairo.a.p/cairo-time.c.o
+[93/150] Compiling C object src/libcairo.a.p/cairo-toy-font-face.c.o
+[94/150] Compiling C object src/libcairo.a.p/cairo-tor22-scan-converter.c.o
+[95/150] Compiling C object src/libcairo.a.p/cairo-tor-scan-converter.c.o
+[96/150] Compiling C object src/libcairo.a.p/cairo-surface-observer.c.o
+[97/150] Compiling C object src/libcairo.a.p/cairo-traps-compositor.c.o
+[98/150] Compiling C object src/libcairo.a.p/cairo-tristrip.c.o
+[99/150] Compiling C object src/libcairo.a.p/cairo-unicode.c.o
+[100/150] Compiling C object src/libcairo.a.p/cairo-user-font.c.o
+[101/150] Compiling C object src/libcairo.a.p/cairo-version.c.o
+[102/150] Compiling C object src/libcairo.a.p/cairo-wideint.c.o
+[103/150] Compiling C object src/libcairo.a.p/cairo-surface.c.o
+[104/150] Compiling C object src/libcairo.a.p/cairo-traps.c.o
+[105/150] Compiling C object src/libcairo.a.p/cairo.c.o
+[106/150] Compiling C object src/libcairo.a.p/cairo-scaled-font-subsets.c.o
+[107/150] Compiling C object src/libcairo.a.p/cairo-type1-glyph-names.c.o
+[108/150] Compiling C object src/libcairo.a.p/cairo-type1-fallback.c.o
+[109/150] Compiling C object src/libcairo.a.p/cairo-type3-glyph-surface.c.o
+[110/150] Compiling C object src/libcairo.a.p/cairo-pdf-shading.c.o
+[111/150] Compiling C object src/libcairo.a.p/cairo-pdf-operators.c.o
+[112/150] Compiling C object src/libcairo.a.p/cairo-tag-attributes.c.o
+[113/150] Compiling C object src/libcairo.a.p/cairo-tag-stack.c.o
+[114/150] Compiling C object src/libcairo.a.p/cairo-truetype-subset.c.o
+[115/150] Compiling C object src/libcairo.a.p/cairo-deflate-stream.c.o
+[116/150] Compiling C object src/libcairo.a.p/cairo-type1-subset.c.o
+[117/150] Compiling C object src/libcairo.a.p/cairo-png.c.o
+[118/150] Compiling C object src/libcairo.a.p/cairo-colr-glyph-render.c.o
+[119/150] Compiling C object src/libcairo.a.p/cairo-cff-subset.c.o
+[120/150] Compiling C object src/libcairo.a.p/cairo-svg-surface.c.o
+[121/150] Compiling C object src/libcairo.a.p/cairo-ft-font.c.o
+[122/150] Compiling C object src/libcairo.a.p/cairo-ps-surface.c.o
+[123/150] Compiling C object src/libcairo.a.p/cairo-svg-glyph-render.c.o
+[124/150] Compiling C object src/libcairo.a.p/cairo-script-surface.c.o
+[125/150] Compiling C object src/libcairo.a.p/cairo-tee-surface.c.o
+[126/150] Compiling C object util/cairo-script/libcairo-script-interpreter.a.p/cairo-script-hash.c.o
+[127/150] Compiling C object util/cairo-script/libcairo-script-interpreter.a.p/cairo-script-file.c.o
+[128/150] Compiling C object util/cairo-script/libcairo-script-interpreter.a.p/cairo-script-interpreter.c.o
+[129/150] Compiling C object util/cairo-script/libcairo-script-interpreter.a.p/cairo-script-objects.c.o
+[130/150] Compiling C object util/cairo-script/libcairo-script-interpreter.a.p/cairo-script-stack.c.o
+[131/150] Compiling C object src/libcairo.a.p/cairo-pdf-interchange.c.o
+[132/150] Compiling C object util/cairo-gobject/libcairo-gobject.a.p/cairo-gobject-enums.c.o
+[133/150] Compiling C object util/cairo-gobject/libcairo-gobject.a.p/cairo-gobject-structs.c.o
+[134/150] Compiling C object util/cairo-script/csi-replay.p/csi-replay.c.o
+[135/150] Compiling C object util/cairo-script/csi-exec.p/csi-exec.c.o
+[136/150] Compiling C object util/cairo-script/libcairo-script-interpreter.a.p/cairo-script-scanner.c.o
+[137/150] Compiling C object util/cairo-script/csi-trace.p/csi-trace.c.o
+[138/150] Linking static target util/cairo-gobject/libcairo-gobject.a
+[139/150] Compiling C object util/cairo-fdr/libcairo-fdr.a.p/fdr.c.o
+[140/150] Linking static target util/cairo-fdr/libcairo-fdr.a
+[141/150] Compiling C object src/libcairo.a.p/cairo-pdf-surface.c.o
+[142/150] Compiling C object util/cairo-script/libcairo-script-interpreter.a.p/cairo-script-operators.c.o
+[143/150] Linking static target src/libcairo.a
+[144/150] Linking static target util/cairo-script/libcairo-script-interpreter.a
+[145/150] Linking target util/cairo-script/csi-replay
+ld: warning: ignoring duplicate libraries: '-liconv', '-lz'
+[146/150] Linking target util/cairo-script/csi-exec
+ld: warning: ignoring duplicate libraries: '-liconv', '-lz'
+[147/150] Linking target util/cairo-script/csi-trace
+ld: warning: ignoring duplicate libraries: '-liconv', '-lz'
+[148/150] Compiling C object util/cairo-trace/libcairo-trace.a.p/trace.c.o
+[149/150] Linking static target util/cairo-trace/libcairo-trace.a
+[149/150] Installing files
+Installing src/libcairo.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing util/cairo-gobject/libcairo-gobject.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing util/cairo-script/libcairo-script-interpreter.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing util/cairo-trace/libcairo-trace.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cairo
+Installing util/cairo-fdr/libcairo-fdr.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/src/cairo.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/src/cairo-version.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/src/cairo-deprecated.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/src/cairo-svg.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/src/cairo-ft.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/src/cairo-script.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/src/cairo-ps.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/src/cairo-pdf.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/src/cairo-tee.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/src/cairo-features.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/util/cairo-gobject/cairo-gobject.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-src/util/cairo-script/cairo-script-interpreter.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/cairo.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/cairo-gobject.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/cairo-script-interpreter.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/util/cairo-trace/cairo-trace to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/cairo-png.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/cairo-svg.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/cairo-fc.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/cairo-ft.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/cairo-script.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/cairo-ps.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/cairo-pdf.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cairo-build/meson-private/cairo-tee.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
