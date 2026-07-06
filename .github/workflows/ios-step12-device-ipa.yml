@@ -690,6 +690,9 @@ jobs:
 
           SHORT_SHA=$(echo "${GITHUB_SHA}" | cut -c1-7)
           TAG="ipa-$(date -u +%Y%m%d-%H%M)-${SHORT_SHA}"
+          # xtrace would leak the token into package-step.log, which then
+          # trips GitHub secret-scanning push protection on ci-logs.
+          set +x
           # create release
           RID=$(curl -s -X POST \
             -H "Authorization: Bearer ${GITHUB_TOKEN}" \
@@ -759,6 +762,13 @@ jobs:
           cd _cilogs
           git init -q
           git config user.email "ci@rayforge.local"
+          # scrub any token remnants from copied logs (push protection)
+          if [ -n "${GH_TOKEN:-}" ]; then
+            find . -type f -name '*.log' -exec sed -i '' "s/${GH_TOKEN}/[REDACTED]/g" {} + 2>/dev/null || true
+          fi
+          grep -rl 'ghs_[A-Za-z0-9]\{20,\}' . 2>/dev/null | while read -r f; do
+            sed -i '' -E 's/ghs_[A-Za-z0-9]{20,}/[REDACTED]/g' "$f"
+          done
           git config user.name "Rayforge CI Logs"
           git checkout -q -b ci-logs
           git add -A
