@@ -311,9 +311,15 @@ gdk_ios_toplevel_configure (GdkIOSToplevel *self)
        * *preferred* size — gtk_window_compute_default_size never widens
        * to bounds on its own, it just clamps the natural size). GTK then
        * reflows to whatever we report via gtk_window_native_layout().
-       * Only GTK's min size may override the forced size. */
-      win_w = MAX (bounds_w, size.min_width);
-      win_h = MAX (bounds_h, size.min_height);
+       * Deliberately ignore GTK's min size here: Rayforge's min width
+       * (1115pt) exceeds the iPad portrait width (1032pt), and honoring
+       * it hung ~83pt of UI off the right edge. Granting the screen size
+       * keeps everything on-screen; GTK squeezes below min gracefully. */
+      win_w = bounds_w;
+      win_h = bounds_h;
+      if (size.min_width > bounds_w || size.min_height > bounds_h)
+        g_message ("gdk-ios: configure: granting %dx%d below GTK min %dx%d",
+                   bounds_w, bounds_h, size.min_width, size.min_height);
     }
   else
     {
