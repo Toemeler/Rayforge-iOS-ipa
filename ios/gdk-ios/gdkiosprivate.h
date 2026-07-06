@@ -48,6 +48,7 @@ typedef struct _GdkIOSDisplayClass GdkIOSDisplayClass;
 #define GDK_IOS_DISPLAY(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), GDK_TYPE_IOS_DISPLAY, GdkIOSDisplay))
 #define GDK_IS_IOS_DISPLAY(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), GDK_TYPE_IOS_DISPLAY))
 GType gdk_ios_display_get_type (void);
+void _gdk_ios_display_bounds_changed (void);
 
 typedef struct _GdkIOSMonitor GdkIOSMonitor;
 typedef struct _GdkIOSMonitorClass GdkIOSMonitorClass;

@@ -490,6 +490,16 @@ deliver_key (GdkEventType type, UIKey *key)
              (double) self.view.bounds.size.width,
              (double) self.view.bounds.size.height,
              (double) s.size.width, (double) s.size.height);
+
+  /* Propagate rotation / size changes into GDK: update the monitor and
+   * relayout all toplevels at the new bounds. Only on real change. */
+  static CGSize last_size = { 0, 0 };
+  CGSize now = self.view.bounds.size;
+  if (!CGSizeEqualToSize (now, last_size))
+    {
+      last_size = now;
+      _gdk_ios_display_bounds_changed ();
+    }
 }
 
 @end

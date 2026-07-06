@@ -428,6 +428,35 @@ gdk_ios_display_init (GdkIOSDisplay *self)
   self->monitors = g_list_store_new (GDK_TYPE_MONITOR);
 }
 
+
+/* Called from the UIKit shell (viewDidLayoutSubviews) when the root view
+ * bounds change, e.g. on device rotation. Updates the monitor geometry and
+ * asks every toplevel for a fresh layout; the frame-clock layout phase then
+ * runs compute_size -> configure with the new bounds. */
+void
+_gdk_ios_display_bounds_changed (void)
+{
+  if (the_display == NULL)
+    return;
+
+  int w = 0, h = 0;
+  gdk_ios_shell_get_bounds (&w, &h);
+  if (w <= 0 || h <= 0)
+    return;
+
+  if (the_display->monitor != NULL)
+    {
+      GdkRectangle geometry = { 0, 0, w, h };
+      gdk_monitor_set_geometry (GDK_MONITOR (the_display->monitor), &geometry);
+    }
+
+  g_message ("gdk-ios: bounds changed -> %dx%d, relayout %u toplevels",
+             w, h, g_list_length (the_display->toplevels));
+
+  for (GList *l = the_display->toplevels; l != NULL; l = l->next)
+    gdk_surface_request_layout (GDK_SURFACE (l->data));
+}
+
 GdkDisplay *
 _gdk_ios_display_open (const char *display_name)
 {
