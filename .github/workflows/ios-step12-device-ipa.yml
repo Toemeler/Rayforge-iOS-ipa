@@ -312,7 +312,7 @@ jobs:
       - name: "[10d/16] Build raygeo + vtracer wheels (Rust, maturin)"
         run: |
           set -euxo pipefail
-          rustup target add aarch64-apple-ios-sim
+          rustup target add aarch64-apple-ios
           PY313="$(brew --prefix python@3.13)/bin/python3.13"
           "$PY313" -m pip -q install --break-system-packages maturin || "$PY313" -m pip -q install maturin
           export PYO3_CROSS=1
@@ -362,7 +362,7 @@ jobs:
           for attempt in 1 2 3; do
             if (cd raygeo-src && "$MATURIN" build --release \
                  -i "$CROSS_PY" \
-                 --target aarch64-apple-ios-sim \
+                 --target aarch64-apple-ios \
                  --out "${GITHUB_WORKSPACE}/rust-wheels" \
                  2>&1 | tee "${GITHUB_WORKSPACE}/raygeo-build.log"); then
               BUILT=1; break
