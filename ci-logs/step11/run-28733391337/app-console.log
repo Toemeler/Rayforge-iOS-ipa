@@ -1,0 +1,262 @@
+Gdk-Message: 07:37:20.358: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app
+Gdk-Message: 07:37:20.681: gdk-ios: shell ready window=1376x1032 view=1376x1032 scale=2.00
+Gdk-Message: 07:37:20.778: gdk-ios: entering user main
+** Message: 07:37:20.778: GI_TYPELIB_PATH: /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/lib/girepository-1.0
+** Message: 07:37:20.778: python home: /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python
+** Message: 07:37:20.778: site-packages: /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages
+IOSBOOT: ios_main.main() start
+IOSBOOT: import rayforge.app
+IOSBOOT: rayforge.app.main()
+2026-07-05 07:37:23,336 - root - INFO - Logging configured. Console level: INFO
+2026-07-05 07:37:23,336 - root - INFO - Session log file: /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Data/Application/574A200B-538F-48C2-8DB8-9E1731C69748/.local/state/rayforge/log/session-2026-07-05_07-37-23.log
+2026-07-05 07:37:23,337 - rayforge.app - INFO - Application starting with log level INFO
+2026-07-05 07:37:23,337 - rayforge.app - INFO - PyCairo version: 1.29.0
+2026-07-05 07:37:26,585 - rayforge.image.svg.svg_fallback - WARNING - pyvips svgload_buffer not available. Using Cairo/Rsvg fallback for SVG rendering.
+2026-07-05 07:37:28,724 - rayforge.ui_gtk.sim3d - INFO - Skipping Canvas3D import due to RAYFORGE_DISABLE_3D
+2026-07-05 07:37:28,725 - rayforge.ui_gtk.sim3d - INFO - 3D canvas disabled via RAYFORGE_DISABLE_3D environment variable.
+2026-07-05 07:37:29,160 - rayforge.addon_mgr.addon_manager - INFO - Scanning for addons in /Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons...
+2026-07-05 07:37:29,166 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: core_materials (builtin)
+2026-07-05 07:37:29,706 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:30,236 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:30,813 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:31,341 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:31,868 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:32,388 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:32,913 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:33,433 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:33,959 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:34,499 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:35,022 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:35,544 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:36,064 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:36,591 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:37,137 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:37,662 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:38,184 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:38,704 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:39,231 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:39,752 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:40,279 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:40,808 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:41,332 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:41,861 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:42,392 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:42,931 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:43,461 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:44,000 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:44,524 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:45,052 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:45,583 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:46,108 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:46,632 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:47,158 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:47,183 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: sketcher (builtin)
+2026-07-05 07:37:47,721 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:48,244 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:48,771 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:49,295 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:49,819 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:50,346 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:50,872 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:51,390 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:51,912 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:52,428 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:52,951 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:53,471 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:53,992 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:54,510 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:55,031 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:55,549 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:56,078 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:56,600 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:57,140 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:57,668 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:58,189 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:58,718 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:59,263 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:37:59,268 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: laser_essentials (builtin)
+2026-07-05 07:37:59,276 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: print_and_cut (builtin)
+2026-07-05 07:37:59,805 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:00,327 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:00,850 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:01,372 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:01,895 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:02,420 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:02,946 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:03,464 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:03,985 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:04,510 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:05,029 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:05,551 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:06,077 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:06,600 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:07,122 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:07,642 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:08,166 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:08,171 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: post_processors (builtin)
+2026-07-05 07:38:08,700 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:09,224 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:09,781 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:10,302 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:10,309 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: ai_workpiece_generator (builtin)
+2026-07-05 07:38:10,932 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:11,456 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:11,989 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:12,513 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:13,051 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:13,577 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:14,231 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:14,755 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:15,284 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:15,819 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:16,349 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:16,874 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:17,395 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:17,917 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:18,443 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:18,963 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:19,482 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:20,001 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:20,526 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:21,046 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:21,567 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:22,089 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:22,608 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:23,149 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:23,671 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:24,202 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:24,735 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:25,258 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:25,776 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:26,299 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:26,824 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:27,347 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:27,871 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:28,394 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:28,916 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:29,441 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:29,975 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:30,505 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:31,027 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:31,550 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:32,072 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:32,591 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:33,120 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:33,644 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:34,165 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:34,689 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:35,217 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:35,741 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:36,266 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:36,791 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:37,316 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:37,849 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:38,371 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:38,895 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:39,413 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:39,943 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:40,460 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:40,992 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:41,520 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:42,042 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:42,568 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:43,093 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:43,619 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:44,138 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:44,659 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:45,178 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:45,705 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:46,226 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:46,756 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:47,279 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:47,811 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:48,335 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:48,871 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:49,395 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:49,920 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:50,445 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:50,971 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:51,505 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:52,039 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:52,566 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:53,098 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:53,626 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:54,147 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:54,672 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:55,197 - rayforge.addon_mgr.lazy_loader - WARNING - Manifest not ready, giving up
+2026-07-05 07:38:55,220 - rayforge.context - INFO - Addons loaded (headless=False)
+IOSBOOT: _ios_run: register()
+IOSBOOT: _ios_run: activate()
+2026-07-05 07:38:57,214 - rayforge.context - INFO - Lazy loading config manager
+2026-07-05 07:38:57,228 - rayforge.context - INFO - Lazy loading machine manager
+2026-07-05 07:38:57,251 - rayforge.core.config - INFO - Config file does not exist, creating default config.
+2026-07-05 07:38:57,435 - rayforge.context - INFO - Lazy loading camera manager
+2026-07-05 07:38:57,630 - rayforge.worker_init - ERROR - Failed to load enabled worker module 'rayforge_addons.core_materials.core_materials.worker': Plugin name already registered: rayforge_addons.core_materials.core_materials.worker=<module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>
+{'rayforge_addons.core_materials.core_materials.worker': <module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>, 'rayforge_addons.sketcher.sketcher.worker': <module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>, 'rayforge_addons.sketcher.sketcher.frontend': <module 'rayforge_addons.sketcher.sketcher.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/frontend.py'>, 'rayforge_addons.laser_essentials.laser_essentials.worker': <module 'rayforge_addons.laser_essentials.laser_essentials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/worker.py'>, 'rayforge_addons.laser_essentials.laser_essentials.frontend': <module 'rayforge_addons.laser_essentials.laser_essentials.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/frontend.py'>, 'rayforge_addons.print_and_cut.print_and_cut.frontend': <module 'rayforge_addons.print_and_cut.print_and_cut.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-print-and-cut/print_and_cut/frontend.py'>, 'rayforge_addons.post_processors.post_processors.worker': <module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>, 'rayforge_addons.post_processors.post_processors.frontend': <module 'rayforge_addons.post_processors.post_processors.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/frontend.py'>, 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend': <module 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-ai-workpiece/ai_workpiece_generator/frontend.py'>}
+2026-07-05 07:38:57,631 - rayforge.worker_init - ERROR - Failed to load enabled worker module 'rayforge_addons.sketcher.sketcher.worker': Plugin name already registered: rayforge_addons.sketcher.sketcher.worker=<module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>
+{'rayforge_addons.core_materials.core_materials.worker': <module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>, 'rayforge_addons.sketcher.sketcher.worker': <module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>, 'rayforge_addons.sketcher.sketcher.frontend': <module 'rayforge_addons.sketcher.sketcher.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/frontend.py'>, 'rayforge_addons.laser_essentials.laser_essentials.worker': <module 'rayforge_addons.laser_essentials.laser_essentials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/worker.py'>, 'rayforge_addons.laser_essentials.laser_essentials.frontend': <module 'rayforge_addons.laser_essentials.laser_essentials.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/frontend.py'>, 'rayforge_addons.print_and_cut.print_and_cut.frontend': <module 'rayforge_addons.print_and_cut.print_and_cut.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-print-and-cut/print_and_cut/frontend.py'>, 'rayforge_addons.post_processors.post_processors.worker': <module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>, 'rayforge_addons.post_processors.post_processors.frontend': <module 'rayforge_addons.post_processors.post_processors.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/frontend.py'>, 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend': <module 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-ai-workpiece/ai_workpiece_generator/frontend.py'>}
+2026-07-05 07:38:57,631 - rayforge.worker_init - ERROR - Failed to load enabled worker module 'rayforge_addons.laser_essentials.laser_essentials.worker': Plugin name already registered: rayforge_addons.laser_essentials.laser_essentials.worker=<module 'rayforge_addons.laser_essentials.laser_essentials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/worker.py'>
+{'rayforge_addons.core_materials.core_materials.worker': <module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>, 'rayforge_addons.sketcher.sketcher.worker': <module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>, 'rayforge_addons.sketcher.sketcher.frontend': <module 'rayforge_addons.sketcher.sketcher.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/frontend.py'>, 'rayforge_addons.laser_essentials.laser_essentials.worker': <module 'rayforge_addons.laser_essentials.laser_essentials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/worker.py'>, 'rayforge_addons.laser_essentials.laser_essentials.frontend': <module 'rayforge_addons.laser_essentials.laser_essentials.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/frontend.py'>, 'rayforge_addons.print_and_cut.print_and_cut.frontend': <module 'rayforge_addons.print_and_cut.print_and_cut.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-print-and-cut/print_and_cut/frontend.py'>, 'rayforge_addons.post_processors.post_processors.worker': <module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>, 'rayforge_addons.post_processors.post_processors.frontend': <module 'rayforge_addons.post_processors.post_processors.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/frontend.py'>, 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend': <module 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-ai-workpiece/ai_workpiece_generator/frontend.py'>}
+2026-07-05 07:38:57,631 - rayforge.worker_init - ERROR - Failed to load enabled worker module 'rayforge_addons.post_processors.post_processors.worker': Plugin name already registered: rayforge_addons.post_processors.post_processors.worker=<module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>
+{'rayforge_addons.core_materials.core_materials.worker': <module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>, 'rayforge_addons.sketcher.sketcher.worker': <module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>, 'rayforge_addons.sketcher.sketcher.frontend': <module 'rayforge_addons.sketcher.sketcher.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/frontend.py'>, 'rayforge_addons.laser_essentials.laser_essentials.worker': <module 'rayforge_addons.laser_essentials.laser_essentials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/worker.py'>, 'rayforge_addons.laser_essentials.laser_essentials.frontend': <module 'rayforge_addons.laser_essentials.laser_essentials.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-laser/laser_essentials/frontend.py'>, 'rayforge_addons.print_and_cut.print_and_cut.frontend': <module 'rayforge_addons.print_and_cut.print_and_cut.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-print-and-cut/print_and_cut/frontend.py'>, 'rayforge_addons.post_processors.post_processors.worker': <module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>, 'rayforge_addons.post_processors.post_processors.frontend': <module 'rayforge_addons.post_processors.post_processors.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/frontend.py'>, 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend': <module 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/19BB10A3-5C7D-4FBE-8461-EC124A28A05D/data/Containers/Bundle/Application/5F2E0790-9AF5-4E35-8EB0-2760E0028FF6/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-ai-workpiece/ai_workpiece_generator/frontend.py'>}
+2026-07-05 07:38:57,640 - rayforge.context - INFO - Lazy loading recipe manager
+2026-07-05 07:38:57,641 - rayforge.core.recipe_manager - INFO - Loaded 0 recipes.
+2026-07-05 07:38:57,649 - rayforge.doceditor.step_cmd - INFO - Added default 'Contour' step to layer 'Layer 1'.
+Gdk-Message: 07:38:57.896: gdk-ios: toplevel_present shell_bounds=1376x1032
+Fontconfig warning: using without calling FcInit()
+Gdk-Message: 07:38:58.209: gdk-ios: attach_layer surface=0x10e4ca3e0 layer=0x600000cc0e10 root=0x600000c0c540 root.bounds=1376x1032 root.sublayers=1 scale=2.00
+Gdk-Message: 07:38:58.210: gdk-ios: apply_frame surface=0x10e4ca3e0 req=(0,0,1376x1032) layer.frame=(0,0,1376x1032)
+Gdk-Message: 07:38:58.213: gdk-ios: toplevel_present shell_bounds=1376x1032
+Gdk-Message: 07:38:58.214: gdk-ios: apply_frame surface=0x10e4ca3e0 req=(0,0,1376x1032) layer.frame=(0,0,1376x1032)
+Gdk-Message: 07:38:58.217: gdk-ios: toplevel_present shell_bounds=1376x1032
+Gdk-Message: 07:38:58.233: gdk-ios: attach_layer surface=0x1094f3560 layer=0x600000cbe940 root=0x600000c0c540 root.bounds=1376x1032 root.sublayers=2 scale=2.00
+Gdk-Message: 07:38:58.233: gdk-ios: apply_frame surface=0x1094f3560 req=(0,0,1376x1032) layer.frame=(0,0,1376x1032)
+Gdk-Message: 07:38:58.234: gdk-ios: toplevel_present shell_bounds=1376x1032
+Gdk-Message: 07:38:58.234: gdk-ios: apply_frame surface=0x1094f3560 req=(0,0,1376x1032) layer.frame=(0,0,1376x1032)
+2026-07-05 07:38:58,236 - rayforge.addon_mgr.update_cmd - INFO - Scheduling startup addon update check.
+2026-07-05 07:38:58,237 - rayforge.updater - INFO - Scheduling app version update check.
+IOSBOOT: _ios_run: activate() returned; windows=1
+IOSBOOT:   window mapped=True visible=True title='Rayforge'
+IOSBOOT: keep-running caught — startup unwound cleanly
+RAYFORGE UI RUNNING
+** Message: 07:38:58.238: rayforge boot: PyGObject self-test ran (CPython 3.13.14 (main, Jun 12 2026, 07:26:39) [Clang 17.0.0 (clang-1700.0.13.5)]) ? see console for PYGOBJECT OK/FAIL
+Gdk-Message: 07:38:58.257: gdk-ios: user main returned
+2026-07-05 07:38:58,483 - rayforge.addon_mgr.addon_manager - INFO - Checking for available addon updates...
+2026-07-05 07:38:58,484 - rayforge.addon_mgr.addon_manager - INFO - Fetching registry from https://raw.githubusercontent.com/barebaric/rayforge-registry/main/registry.yaml
+2026-07-05 07:38:58,499 - rayforge.machine.models.controller - INFO - Machine 'Default Machine' (id:f977b375-f653-4994-bcc9-2821fab2b76e) rebuilding driver to 'None'
+Gdk-Message: 07:38:58.617: gdk-ios: begin_frame surface=1376x1032 scale=2.00 pixels=2752x2064
+Gdk-Message: 07:38:58.666: gdk-ios: end_frame 2752x2064 stride=11008 data=0x111f88000 layer=0x600000cc0e10 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0xFFF5F5F6
+Gdk-Message: 07:38:58.666: gdk-ios: presented layer=0x600000cc0e10 frame=(0,0,1376x1032) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c0c540 hasContents=1
+Gdk-Message: 07:38:58.668: gdk-ios: begin_frame surface=1376x1032 scale=2.00 pixels=2752x2064
+Gdk-Message: 07:38:58.689: gdk-ios: end_frame 2752x2064 stride=11008 data=0x113534000 layer=0x600000cbe940 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0xFFFAFAFB
+Gdk-Message: 07:38:58.690: gdk-ios: presented layer=0x600000cbe940 frame=(0,0,1376x1032) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c0c540 hasContents=1
+Gdk-Message: 07:38:58.694: gdk-ios: begin_frame surface=1376x1032 scale=2.00 pixels=2752x2064
+Gdk-Message: 07:38:58.748: gdk-ios: end_frame 2752x2064 stride=11008 data=0x114ae0000 layer=0x600000cc0e10 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0xFFF5F5F6
+Gdk-Message: 07:38:58.753: gdk-ios: presented layer=0x600000cc0e10 frame=(0,0,1376x1032) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c0c540 hasContents=1
+2026-07-05 07:38:58,781 - rayforge.machine.models.controller - INFO - Synced active WCS from device: 'G54'
+Gdk-Message: 07:38:58.810: gdk-ios: begin_frame surface=1376x1032 scale=2.00 pixels=2752x2064
+Gdk-Message: 07:38:58.845: gdk-ios: end_frame 2752x2064 stride=11008 data=0x111f88000 layer=0x600000cc0e10 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0xFFF5F5F6
+Gdk-Message: 07:38:58.849: gdk-ios: presented layer=0x600000cc0e10 frame=(0,0,1376x1032) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c0c540 hasContents=1
+Gdk-Message: 07:38:58.941: gdk-ios: begin_frame surface=1376x1032 scale=2.00 pixels=2752x2064
+Gdk-Message: 07:38:59.059: gdk-ios: end_frame 2752x2064 stride=11008 data=0x117638000 layer=0x600000cc0e10 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0xFFF5F5F6
+Gdk-Message: 07:38:59.143: gdk-ios: presented layer=0x600000cc0e10 frame=(0,0,1376x1032) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c0c540 hasContents=1
+Gdk-Message: 07:38:59.143: gdk-ios: begin_frame surface=1376x1032 scale=2.00 pixels=2752x2064
+Gdk-Message: 07:38:59.251: gdk-ios: end_frame 2752x2064 stride=11008 data=0x111f88000 layer=0x600000cc0e10 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0xFFF5F5F6
+Gdk-Message: 07:38:59.426: gdk-ios: presented layer=0x600000cc0e10 frame=(0,0,1376x1032) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c0c540 hasContents=1
+Gdk-Message: 07:39:01.384: gdk-ios: pump alive frame=120 total_iterations=14
+Gdk-Message: 07:39:03.385: gdk-ios: pump alive frame=240 total_iterations=14
+Gdk-Message: 07:39:05.385: gdk-ios: pump alive frame=360 total_iterations=14
+Gdk-Message: 07:39:07.385: gdk-ios: pump alive frame=480 total_iterations=14
+Gdk-Message: 07:39:09.385: gdk-ios: pump alive frame=600 total_iterations=14
+Gdk-Message: 07:39:11.385: gdk-ios: pump alive frame=720 total_iterations=14
+Gdk-Message: 07:39:13.385: gdk-ios: pump alive frame=840 total_iterations=14
+Gdk-Message: 07:39:15.385: gdk-ios: pump alive frame=960 total_iterations=14
+Gdk-Message: 07:39:17.385: gdk-ios: pump alive frame=1080 total_iterations=14
+Gdk-Message: 07:39:19.385: gdk-ios: pump alive frame=1200 total_iterations=14
+Gdk-Message: 07:39:21.385: gdk-ios: pump alive frame=1320 total_iterations=14
+Gdk-Message: 07:39:23.385: gdk-ios: pump alive frame=1440 total_iterations=14
+Gdk-Message: 07:39:25.385: gdk-ios: pump alive frame=1560 total_iterations=14
+Gdk-Message: 07:39:27.385: gdk-ios: pump alive frame=1680 total_iterations=14
+Gdk-Message: 07:39:29.384: gdk-ios: pump alive frame=1800 total_iterations=14
+Gdk-Message: 07:39:31.387: gdk-ios: pump alive frame=1920 total_iterations=14
+Gdk-Message: 07:39:33.386: gdk-ios: pump alive frame=2040 total_iterations=14
