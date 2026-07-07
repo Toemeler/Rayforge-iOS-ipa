@@ -1,0 +1,247 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-build
+Build type: cross build
+Project name: graphene
+Project version: 1.10.8
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Compiler for C supports arguments -ffast-math: YES 
+Compiler for C supports arguments -fstrict-aliasing: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wunused: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wlogical-op: NO 
+Compiler for C supports arguments -Wcast-align: YES 
+Compiler for C supports arguments -Wno-unused-local-typedefs: YES 
+Compiler for C supports arguments -Werror=float-conversion: YES 
+Compiler for C supports arguments -Werror=float-equal: YES 
+Compiler for C supports arguments -Werror=redundant-decls: YES 
+Compiler for C supports arguments -Werror=missing-prototypes: YES 
+Compiler for C supports arguments -Werror=missing-declarations: YES 
+Compiler for C supports arguments -Werror=format=2: YES 
+Compiler for C supports arguments -Werror=uninitialized: YES 
+Compiler for C supports arguments -Werror=shadow: YES 
+Compiler for C supports arguments -Werror=implicit: YES 
+Compiler for C supports arguments -Werror=init-self: YES 
+Compiler for C supports arguments -Werror=main: YES 
+Compiler for C supports arguments -Werror=missing-braces: YES 
+Compiler for C supports arguments -Werror=return-type: YES 
+Compiler for C supports arguments -Werror=array-bounds: YES 
+Compiler for C supports arguments -Werror=write-strings: YES 
+Compiler for C supports arguments -Werror=undef: YES 
+Library m found: YES
+Run-time dependency threads found: YES
+Has header "stdlib.h" : YES 
+Has header "stdint.h" : YES 
+Has header "stdbool.h" : YES 
+Has header "memory.h" : YES 
+Has header "pthread.h" with dependency threads: YES 
+Checking for function "memalign" : NO 
+Checking for function "_aligned_malloc" : NO 
+Checking for function "aligned_alloc" : YES 
+graphene-src/meson.build:166: DEPRECATION: configuration_data.set10 with number. The `set10` method should only be used with booleans
+Checking for function "sincosf" with dependency -lm: NO 
+Checking for function "isinff" with dependency -lm: NO 
+Checking for function "isnanf" with dependency -lm: NO 
+Message: Disabling assertions
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency gobject-2.0 found: YES 2.84.4
+Program g-ir-scanner skipped: feature introspection disabled
+Message: Cross-building, assuming IEEE 754 division: true
+Checking if "GCC vector intrinsics" compiles: NO 
+Checking if "ARM NEON intrinsics" compiles: YES 
+Configuring graphene-config.h using configuration
+Configuring graphene-version.h using configuration
+Configuring config.h using configuration
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build targets in project: 1
+
+graphene 1.10.8
+
+  Directories
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    libdir         : lib
+    includedir     : include
+
+  SIMD
+    SSE            : NO
+    GCC vector     : NO
+    ARM NEON       : YES
+
+  Features
+    GObject types  : YES
+    Introspection  : NO
+
+  Build
+    Documentation  : NO
+    Tests          : NO
+    Installed tests: NO
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    arm_neon       : true
+    buildtype      : release
+    default_library: static
+    gobject_types  : true
+    gtk_doc        : false
+    installed_tests: false
+    introspection  : disabled
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    sse2           : false
+    tests          : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `graphene-build'
+[1/21] Compiling C object src/libgraphene-1.0.a.p/graphene-alloc.c.o
+[2/21] Compiling C object src/libgraphene-1.0.a.p/graphene-frustum.c.o
+[3/21] Compiling C object src/libgraphene-1.0.a.p/graphene-euler.c.o
+[4/21] Compiling C object src/libgraphene-1.0.a.p/graphene-box.c.o
+../graphene-src/src/graphene-box.c:439:54: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  439 |   graphene_simd4f_t neg_inf = graphene_simd4f_init (-INFINITY, -INFINITY, -INFINITY, 0.f);
+      |                                                      ^
+../graphene-src/src/graphene-box.c:439:65: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  439 |   graphene_simd4f_t neg_inf = graphene_simd4f_init (-INFINITY, -INFINITY, -INFINITY, 0.f);
+      |                                                                 ^
+../graphene-src/src/graphene-box.c:439:76: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  439 |   graphene_simd4f_t neg_inf = graphene_simd4f_init (-INFINITY, -INFINITY, -INFINITY, 0.f);
+      |                                                                            ^
+../graphene-src/src/graphene-box.c:440:53: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  440 |   graphene_simd4f_t pos_inf = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                     ^
+../graphene-src/src/graphene-box.c:440:63: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  440 |   graphene_simd4f_t pos_inf = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                               ^
+../graphene-src/src/graphene-box.c:440:73: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  440 |   graphene_simd4f_t pos_inf = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                                         ^
+../graphene-src/src/graphene-box.c:466:54: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  466 |   graphene_simd4f_t neg_inf = graphene_simd4f_init (-INFINITY, -INFINITY, -INFINITY, 0.f);
+      |                                                      ^
+../graphene-src/src/graphene-box.c:466:65: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  466 |   graphene_simd4f_t neg_inf = graphene_simd4f_init (-INFINITY, -INFINITY, -INFINITY, 0.f);
+      |                                                                 ^
+../graphene-src/src/graphene-box.c:466:76: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  466 |   graphene_simd4f_t neg_inf = graphene_simd4f_init (-INFINITY, -INFINITY, -INFINITY, 0.f);
+      |                                                                            ^
+../graphene-src/src/graphene-box.c:467:53: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  467 |   graphene_simd4f_t pos_inf = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                     ^
+../graphene-src/src/graphene-box.c:467:63: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  467 |   graphene_simd4f_t pos_inf = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                               ^
+../graphene-src/src/graphene-box.c:467:73: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  467 |   graphene_simd4f_t pos_inf = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                                         ^
+../graphene-src/src/graphene-box.c:498:41: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  498 |     size->value = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                         ^
+../graphene-src/src/graphene-box.c:498:51: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  498 |     size->value = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                   ^
+../graphene-src/src/graphene-box.c:498:61: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  498 |     size->value = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                             ^
+../graphene-src/src/graphene-box.c:746:63: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  746 |   static_box[BOX_INFINITY].min.value = graphene_simd4f_init (-INFINITY, -INFINITY, -INFINITY, 0.f);
+      |                                                               ^
+../graphene-src/src/graphene-box.c:746:74: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  746 |   static_box[BOX_INFINITY].min.value = graphene_simd4f_init (-INFINITY, -INFINITY, -INFINITY, 0.f);
+      |                                                                          ^
+../graphene-src/src/graphene-box.c:746:85: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  746 |   static_box[BOX_INFINITY].min.value = graphene_simd4f_init (-INFINITY, -INFINITY, -INFINITY, 0.f);
+      |                                                                                     ^
+../graphene-src/src/graphene-box.c:747:62: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  747 |   static_box[BOX_INFINITY].max.value = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                              ^
+../graphene-src/src/graphene-box.c:747:72: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  747 |   static_box[BOX_INFINITY].max.value = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                                        ^
+../graphene-src/src/graphene-box.c:747:82: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  747 |   static_box[BOX_INFINITY].max.value = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                                                  ^
+../graphene-src/src/graphene-box.c:749:59: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  749 |   static_box[BOX_EMPTY].min.value = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                           ^
+../graphene-src/src/graphene-box.c:749:69: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  749 |   static_box[BOX_EMPTY].min.value = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                                     ^
+../graphene-src/src/graphene-box.c:749:79: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  749 |   static_box[BOX_EMPTY].min.value = graphene_simd4f_init (INFINITY, INFINITY, INFINITY, 0.f);
+      |                                                                               ^
+../graphene-src/src/graphene-box.c:750:60: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  750 |   static_box[BOX_EMPTY].max.value = graphene_simd4f_init (-INFINITY, -INFINITY, -INFINITY, 0.f);
+      |                                                            ^
+../graphene-src/src/graphene-box.c:750:71: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  750 |   static_box[BOX_EMPTY].max.value = graphene_simd4f_init (-INFINITY, -INFINITY, -INFINITY, 0.f);
+      |                                                                       ^
+../graphene-src/src/graphene-box.c:750:82: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  750 |   static_box[BOX_EMPTY].max.value = graphene_simd4f_init (-INFINITY, -INFINITY, -INFINITY, 0.f);
+      |                                                                                  ^
+27 warnings generated.
+[5/21] Compiling C object src/libgraphene-1.0.a.p/graphene-plane.c.o
+[6/21] Compiling C object src/libgraphene-1.0.a.p/graphene-point.c.o
+[7/21] Compiling C object src/libgraphene-1.0.a.p/graphene-quad.c.o
+[8/21] Compiling C object src/libgraphene-1.0.a.p/graphene-point3d.c.o
+[9/21] Compiling C object src/libgraphene-1.0.a.p/graphene-ray.c.o
+../graphene-src/src/graphene-ray.c:299:14: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  299 |       return INFINITY;
+      |              ^
+../graphene-src/src/graphene-ray.c:306:10: warning: use of infinity via a macro is undefined behavior due to the currently enabled floating-point options [-Wnan-infinity-disabled]
+  306 |   return INFINITY;
+      |          ^
+2 warnings generated.
+[10/21] Compiling C object src/libgraphene-1.0.a.p/graphene-size.c.o
+[11/21] Compiling C object src/libgraphene-1.0.a.p/graphene-quaternion.c.o
+[12/21] Compiling C object src/libgraphene-1.0.a.p/graphene-triangle.c.o
+[13/21] Compiling C object src/libgraphene-1.0.a.p/graphene-rect.c.o
+[14/21] Compiling C object src/libgraphene-1.0.a.p/graphene-sphere.c.o
+[15/21] Compiling C object src/libgraphene-1.0.a.p/graphene-matrix.c.o
+[16/21] Compiling C object src/libgraphene-1.0.a.p/graphene-simd4f.c.o
+[17/21] Compiling C object src/libgraphene-1.0.a.p/graphene-vectors.c.o
+[18/21] Compiling C object src/libgraphene-1.0.a.p/graphene-simd4x4f.c.o
+[19/21] Compiling C object src/libgraphene-1.0.a.p/graphene-gobject.c.o
+[20/21] Linking static target src/libgraphene-1.0.a
+[20/21] Installing files
+Installing src/libgraphene-1.0.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-box.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-euler.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-frustum.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-macros.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-matrix.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-plane.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-point.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-point3d.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-quad.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-quaternion.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-ray.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-rect.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-size.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-sphere.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-triangle.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-vec2.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-vec3.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-vec4.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-version-macros.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-gobject.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-simd4f.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene-simd4x4f.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-src/include/graphene.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-build/include/graphene-config.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/graphene-1.0/include
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-build/include/graphene-version.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-build/meson-private/graphene-1.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/graphene-build/meson-private/graphene-gobject-1.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig

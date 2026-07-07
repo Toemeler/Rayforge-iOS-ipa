@@ -1,0 +1,218 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fc-build
+Build type: cross build
+DEPRECATION: WrapDB v1 is deprecated, updated using `meson wrap update libpng`
+DEPRECATION: WrapDB v1 is deprecated, updated using `meson wrap update zlib`
+DEPRECATION: WrapDB v1 is deprecated, updated using `meson wrap update expat`
+Project name: fontconfig
+Project version: 2.15.0
+C compiler for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency freetype2 found: YES 26.2.20
+Run-time dependency expat found: YES 2.6.4
+Program python3 found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14)
+Has header "dirent.h" : YES 
+Has header "fcntl.h" : YES 
+Has header "stdlib.h" : YES 
+Has header "string.h" : YES 
+Has header "unistd.h" : YES 
+Has header "sys/statvfs.h" : YES 
+Has header "sys/vfs.h" : NO 
+Has header "sys/statfs.h" : NO 
+Has header "sys/param.h" : YES 
+Has header "sys/mount.h" : YES 
+Checking for function "link" : YES 
+Checking for function "mkstemp" : YES 
+Checking for function "mkostemp" : YES 
+Checking for function "_mktemp_s" : NO 
+Checking for function "mkdtemp" : YES 
+Checking for function "getopt" : YES 
+Checking for function "getopt_long" : YES 
+Checking for function "getprogname" : YES 
+Checking for function "getexecname" : NO 
+Checking for function "rand" : YES 
+Checking for function "random" : YES 
+Checking for function "lrand48" : YES 
+Checking for function "random_r" : NO 
+Checking for function "rand_r" : YES 
+Checking for function "readlink" : YES 
+Checking for function "fstatvfs" : YES 
+Checking for function "fstatfs" : YES 
+Checking for function "lstat" : YES 
+Checking for function "mmap" : YES 
+Checking for function "vprintf" : YES 
+Checking for function "FT_Get_BDF_Property" with dependency freetype2: YES 
+Checking for function "FT_Get_PS_Font_Info" with dependency freetype2: YES 
+Checking for function "FT_Has_PS_Glyph_Names" with dependency freetype2: YES 
+Checking for function "FT_Get_X11_Font_Format" with dependency freetype2: YES 
+Checking for function "FT_Done_MM_Var" with dependency freetype2: YES 
+Header "fcntl.h" has symbol "posix_fadvise" : NO 
+Checking whether type "struct statvfs" has member "f_basetype" : NO 
+Checking whether type "struct statvfs" has member "f_fstypename" : NO 
+Checking whether type "struct statfs" has member "f_flags" : NO 
+Checking whether type "struct statfs" has member "f_fstypename" : NO 
+Checking whether type "struct dirent" has member "d_type" : YES 
+Checking for size of "void *" : 8 
+Checking for alignment of "void *" : 8 
+Checking for alignment of "double" : 8 
+Checking if "stdatomic.h atomics" links: YES 
+Checking if "Intel atomics" links: YES 
+Checking if "Solaris atomic ops" links: NO 
+Dependency iconv for host machine skipped: feature iconv disabled
+Run-time dependency threads found: YES
+Program gperf found: YES (/usr/bin/gperf)
+Message: gperf len type is unsigned
+Checking for type "uint64_t" : YES 
+Checking for type "int32_t" : YES 
+Checking for type "uintptr_t" : YES 
+Checking for type "intptr_t" : YES 
+Program fc-case.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/fc-case/fc-case.py)
+Program fc-lang.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/fc-lang/fc-lang.py)
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Program write-35-lang-normalize-conf.py found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/write-35-lang-normalize-conf.py)
+Configuring README using configuration
+Program xgettext skipped: feature nls disabled
+Configuring config.h using configuration
+Configuring fonts.conf using configuration
+Build targets in project: 8
+
+fontconfig 2.15.0
+
+  General
+    Documentation              : NO
+    NLS                        : NO
+    Tests                      : NO
+    Tools                      : NO
+    iconv                      : NO
+
+  Defaults
+    Hinting                    : slight
+    Font directories           : /System/Library/Fonts, /Library/Fonts,
+                                 ~/Library/Fonts,
+                                 /System/Library/Assets/com_apple_MobileAsset_Font3,
+                                 /System/Library/Assets/com_apple_MobileAsset_Font4
+    Additional font directories:
+
+  Paths
+    Cache directory            : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/var/cache/fontconfig
+    Template directory         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+    Base config directory      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/etc/fonts
+    Config directory           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/etc/fonts/conf.d
+    XML directory              : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/xml/fontconfig
+
+  User defined options
+    Cross files                : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-arm64-cross.txt
+    buildtype                  : release
+    default_library            : static
+    doc                        : disabled
+    nls                        : disabled
+    prefix                     : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    tests                      : disabled
+    tools                      : disabled
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `fc-build'
+[1/37] Generating ft_alias_headers with a custom command
+[2/37] Generating fc-case/fccase.h with a custom command
+[3/37] Generating src/fcobjshash.gperf with a custom command
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fc-build/../fontconfig-src/src/cutout.py:40: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  stripped = re.sub('^\s+', '', l)
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fc-build/../fontconfig-src/src/cutout.py:41: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  stripped = re.sub('\s*,\s*', ',', stripped)
+[4/37] Generating conf.d/35-lang-normalize.conf with a custom command
+[5/37] Generating alias_headers with a custom command
+[6/37] Generating src/fcobjshash.h with a custom command
+[7/37] Generating fc-lang/fclang.h with a custom command
+[8/37] Compiling C object src/libfontconfig.a.p/fccompat.c.o
+[9/37] Compiling C object src/libfontconfig.a.p/fcatomic.c.o
+[10/37] Compiling C object src/libfontconfig.a.p/fcdefault.c.o
+[11/37] Compiling C object src/libfontconfig.a.p/fcdbg.c.o
+[12/37] Compiling C object src/libfontconfig.a.p/fcdir.c.o
+[13/37] Compiling C object src/libfontconfig.a.p/fcformat.c.o
+[14/37] Compiling C object src/libfontconfig.a.p/fccache.c.o
+[15/37] Compiling C object src/libfontconfig.a.p/fcfs.c.o
+[16/37] Compiling C object src/libfontconfig.a.p/fcptrlist.c.o
+[17/37] Compiling C object src/libfontconfig.a.p/fcinit.c.o
+[18/37] Compiling C object src/libfontconfig.a.p/fccharset.c.o
+[19/37] Compiling C object src/libfontconfig.a.p/fchash.c.o
+[20/37] Compiling C object src/libfontconfig.a.p/fclist.c.o
+[21/37] Compiling C object src/libfontconfig.a.p/fccfg.c.o
+[22/37] Compiling C object src/libfontconfig.a.p/fcfreetype.c.o
+[23/37] Compiling C object src/libfontconfig.a.p/fcmatrix.c.o
+[24/37] Compiling C object src/libfontconfig.a.p/fcobjs.c.o
+[25/37] Compiling C object src/libfontconfig.a.p/fcrange.c.o
+[26/37] Compiling C object src/libfontconfig.a.p/fcmatch.c.o
+[27/37] Compiling C object src/libfontconfig.a.p/fcname.c.o
+[28/37] Compiling C object src/libfontconfig.a.p/fcstat.c.o
+[29/37] Compiling C object src/libfontconfig.a.p/fclang.c.o
+[30/37] Compiling C object src/libfontconfig.a.p/fcserialize.c.o
+[31/37] Compiling C object src/libfontconfig.a.p/fcweight.c.o
+[32/37] Compiling C object src/libfontconfig.a.p/ftglue.c.o
+[33/37] Compiling C object src/libfontconfig.a.p/fcpat.c.o
+[34/37] Compiling C object src/libfontconfig.a.p/fcstr.c.o
+[35/37] Compiling C object src/libfontconfig.a.p/fcxml.c.o
+[36/37] Linking static target src/libfontconfig.a
+[36/37] Installing files
+Installing src/libfontconfig.a to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing conf.d/35-lang-normalize.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/fontconfig/fontconfig.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fontconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/fontconfig/fcfreetype.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fontconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/fontconfig/fcprivate.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fontconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fc-build/meson-private/fontconfig.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/05-reset-dirs-sample.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/09-autohint-if-no-hinting.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-autohint.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-hinting-full.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-hinting-medium.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-hinting-none.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-hinting-slight.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-no-antialias.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-scale-bitmap-fonts.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-sub-pixel-bgr.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-sub-pixel-none.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-sub-pixel-rgb.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-sub-pixel-vbgr.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-sub-pixel-vrgb.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-unhinted.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/10-yes-antialias.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/11-lcdfilter-default.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/11-lcdfilter-legacy.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/11-lcdfilter-light.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/11-lcdfilter-none.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/20-unhint-small-vera.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/25-unhint-nonlatin.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/30-metric-aliases.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/40-nonlatin.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/45-generic.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/45-latin.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/48-spacing.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/49-sansserif.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/50-user.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/51-local.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/60-generic.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/60-latin.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/65-fonts-persian.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/65-khmer.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/65-nonlatin.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/69-unifont.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/70-no-bitmaps.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/70-yes-bitmaps.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/80-delicious.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/90-synthetic.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fc-build/conf.d/README to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/etc/fonts/conf.d
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/its/fontconfig.its to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/gettext/its
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/its/fontconfig.loc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/gettext/its
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fc-build/fonts.conf to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/etc/fonts
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/fonts.dtd to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/xml/fontconfig
+Running custom install script '/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/fontconfig-src/conf.d/link_confs.py /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/fontconfig/conf.avail /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/etc/fonts/conf.d 10-hinting-slight.conf 10-scale-bitmap-fonts.conf 10-sub-pixel-none.conf 10-yes-antialias.conf 11-lcdfilter-default.conf 20-unhint-small-vera.conf 30-metric-aliases.conf 40-nonlatin.conf 45-generic.conf 45-latin.conf 48-spacing.conf 49-sansserif.conf 50-user.conf 51-local.conf 60-generic.conf 60-latin.conf 65-fonts-persian.conf 65-nonlatin.conf 69-unifont.conf 80-delicious.conf 90-synthetic.conf'
