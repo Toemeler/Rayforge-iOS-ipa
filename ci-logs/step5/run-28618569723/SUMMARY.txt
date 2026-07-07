@@ -1,0 +1,139 @@
++ echo 'Run ID: 28618569723'
+Run ID: 28618569723
++ echo 'Commit: bff06916ecfaf4d555c3f099308a37abcd5dc882'
+Commit: bff06916ecfaf4d555c3f099308a37abcd5dc882
+++ date -u
++ echo 'Date: Thu Jul  2 20:12:30 UTC 2026'
+Date: Thu Jul  2 20:12:30 UTC 2026
++ echo
+
++ for f in gtk-setup.log gtk-build.log testapp-link.log gtk-verify.log
++ echo '===================== TAIL: gtk-setup.log ====================='
+===================== TAIL: gtk-setup.log =====================
++ '[' -f gtk-setup.log ']'
++ tail -50 gtk-setup.log
+  Build
+    Debugging        : false
+    Optimization     : 3
+    Introspection    : false
+    Documentation    : false
+    Man pages        : false
+    Testsuite        : false
+    Tests            : false
+    Demos            : false
+    Examples         : false
+
+  Directories
+    Prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    Includedir       : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include
+    Libdir           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+    Datadir          : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share
+
+  User defined options
+    Cross files      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    accesskit        : disabled
+    android-backend  : false
+    broadway-backend : false
+    build-demos      : false
+    build-examples   : false
+    build-tests      : false
+    build-testsuite  : false
+    buildtype        : release
+    cloudproviders   : disabled
+    colord           : disabled
+    default_library  : static
+    documentation    : false
+    f16c             : disabled
+    introspection    : disabled
+    ios-backend      : true
+    macos-backend    : false
+    man-pages        : false
+    media-gstreamer  : disabled
+    prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    print-cpdb       : disabled
+    print-cups       : disabled
+    screenshots      : false
+    sysprof          : disabled
+    tracker          : disabled
+    vulkan           : disabled
+    wayland-backend  : false
+    win32-backend    : false
+    wrap_mode        : nofallback
+    x11-backend      : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in gtk-setup.log gtk-build.log testapp-link.log gtk-verify.log
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ tail -50 gtk-build.log
+<scratch space>:10:1: note: expanded from here
+   10 | glib_autoptr_clear_GdkCairoContext
+      | ^
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: 'glib_autoptr_clear_GdkIOSCairoContext' declared here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:36: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1343:49: note: expanded from macro '_GLIB_AUTOPTR_CLEAR_FUNC_NAME'
+ 1343 | #define _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) glib_autoptr_clear_##TypeName
+      |                                                 ^
+<scratch space>:19:1: note: expanded from here
+   19 | glib_autoptr_clear_GdkIOSCairoContext
+      | ^
+In file included from ../gtk-src/gdk/ios/gdkiosmain.c:24:
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: warning: incompatible pointer types passing 'GdkCairoContext *' (aka 'struct _GdkCairoContext *') to parameter of type 'GdkIOSCairoContext *' (aka 'struct _GdkIOSCairoContext *') [-Wincompatible-pointer-types]
+   62 | G_DECLARE_FINAL_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK, IOS_CAIRO_CONTEXT, GdkCairoContext)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1365:18: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1365 |     { (cleanup) ((ParentName *) _ptr); }                                                                        \
+      |                  ^~~~~~~~~~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosprivate.h:62:1: note: passing argument to parameter '_ptr' here
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/gobject/gtype.h:1614:3: note: expanded from macro 'G_DECLARE_FINAL_TYPE'
+ 1614 |   _GLIB_DEFINE_AUTOPTR_CHAINUP (ModuleObjName, ParentName)                                               \
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1374:3: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CHAINUP'
+ 1374 |   _GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS(ModuleObjName, ParentName, _GLIB_AUTOPTR_CLEAR_FUNC_NAME(ParentName))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1360:87: note: expanded from macro '_GLIB_DEFINE_AUTOPTR_CLEANUP_FUNCS'
+ 1360 |   static G_GNUC_UNUSED inline void _GLIB_AUTOPTR_CLEAR_FUNC_NAME(TypeName) (TypeName *_ptr)                     \
+      |                                                                                       ^
+../gtk-src/gdk/ios/gdkiosmain.c:234:11: warning: 137 enumeration values not explicitly handled in switch: 'UIKeyboardHIDUsageKeyboardErrorRollOver', 'UIKeyboardHIDUsageKeyboardPOSTFail', 'UIKeyboardHIDUsageKeyboardErrorUndefined'... [-Wswitch-enum]
+  234 |   switch (key.keyCode)
+      |           ^~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiosmain.c:234:11: note: add missing switch cases
+  234 |   switch (key.keyCode)
+      |           ^
+5 warnings and 6 errors generated.
+ninja: build stopped: subcommand failed.
++ echo
+
++ for f in gtk-setup.log gtk-build.log testapp-link.log gtk-verify.log
++ echo '===================== TAIL: testapp-link.log ====================='
+===================== TAIL: testapp-link.log =====================
++ '[' -f testapp-link.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
++ for f in gtk-setup.log gtk-build.log testapp-link.log gtk-verify.log
++ echo '===================== TAIL: gtk-verify.log ====================='
+===================== TAIL: gtk-verify.log =====================
++ '[' -f gtk-verify.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+

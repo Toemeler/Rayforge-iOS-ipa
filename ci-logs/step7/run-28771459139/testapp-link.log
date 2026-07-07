@@ -1,0 +1,2 @@
+ld: building for 'iOS-simulator', but linking in object file (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libadwaita-1.a[2](meson-generated_.._adw-enums.c.o)) built for 'iOS'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
