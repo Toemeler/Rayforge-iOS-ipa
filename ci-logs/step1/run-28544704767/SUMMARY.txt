@@ -1,0 +1,153 @@
++ echo 'Run ID: 28544704767'
+Run ID: 28544704767
++ echo 'Workflow: iOS Step 1 - Build GLib (arm64)'
+Workflow: iOS Step 1 - Build GLib (arm64)
++ echo 'Commit: be8095c7c7cc4bfe500b0fc9af95c1babc22f01b'
+Commit: be8095c7c7cc4bfe500b0fc9af95c1babc22f01b
+++ date -u
++ echo 'Date: Wed Jul  1 20:10:58 UTC 2026'
+Date: Wed Jul  1 20:10:58 UTC 2026
++ echo
+
++ for f in meson-setup.log glib-build.log glib-install.log
++ echo '===================== TAIL: meson-setup.log ====================='
+===================== TAIL: meson-setup.log =====================
++ '[' -f meson-setup.log ']'
++ tail -60 meson-setup.log
+    build cpu          : aarch64
+    build endian       : little
+    build system       : darwin
+
+  Directories
+    prefix             : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    bindir             : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+    libexecdir         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/libexec
+    pkgdatadir         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/glib-2.0
+    datadir            : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share
+    includedir         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0
+    giomodulesdir      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/gio/modules
+    localstatedir      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/var
+    runstatedir        : /run
+
+  Options
+    xattr              : false
+    man-pages          : disabled
+    dtrace             : false
+    systemtap          : false
+    sysprof            : false
+    documentation      : false
+    bsymbolic_functions: true
+    force_posix_threads: false
+    tests              : false
+    installed_tests    : false
+    nls                : disabled
+    oss_fuzz           : disabled
+    glib_debug         : enabled
+    glib_assert        : true
+    glib_checks        : true
+    libelf             : auto
+    multiarch          : false
+    introspection      : false
+
+  Subprojects
+    gvdb               : YES
+    libffi             : YES
+    pcre2              : YES
+    proxy-libintl      : YES 2 warnings
+    sysprof            : NO
+                         Dependency "libunwind-generic" not found (tried pkg-config and framework)
+    zlib               : YES
+
+  User defined options
+    Cross files        : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-arm64-cross.txt
+    buildtype          : release
+    default_library    : static
+    force_fallback_for : pcre2,zlib,libffi
+    introspection      : disabled
+    libmount           : disabled
+    man-pages          : disabled
+    nls                : disabled
+    prefix             : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    selinux            : disabled
+    tests              : false
+    wrap_mode          : forcefallback
+    xattr              : false
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in meson-setup.log glib-build.log glib-install.log
++ echo '===================== TAIL: glib-build.log ====================='
+===================== TAIL: glib-build.log =====================
++ '[' -f glib-build.log ']'
++ tail -60 glib-build.log
+  157 | int ZEXPORT inflateReset2(strm, windowBits)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:195:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  195 | int ZEXPORT inflateInit2_(strm, windowBits, version, stream_size)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:239:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  239 | int ZEXPORT inflateInit_(strm, version, stream_size)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:247:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  247 | int ZEXPORT inflatePrime(strm, bits, value)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:278:12: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  278 | local void fixedtables(state)
+      |            ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:396:11: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  396 | local int updatewindow(strm, end, copy)
+      |           ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:622:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+  622 | int ZEXPORT inflate(strm, flush)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1277:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1277 | int ZEXPORT inflateEnd(strm)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1291:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1291 | int ZEXPORT inflateGetDictionary(strm, dictionary, dictLength)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1314:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1314 | int ZEXPORT inflateSetDictionary(strm, dictionary, dictLength)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1349:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1349 | int ZEXPORT inflateGetHeader(strm, head)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1377:16: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1377 | local unsigned syncsearch(have, buf, len)
+      |                ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1400:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1400 | int ZEXPORT inflateSync(strm)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1451:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1451 | int ZEXPORT inflateSyncPoint(strm)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1461:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1461 | int ZEXPORT inflateCopy(dest, source)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1508:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1508 | int ZEXPORT inflateUndermine(strm, subvert)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1526:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1526 | int ZEXPORT inflateValidate(strm, check)
+      |             ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1541:14: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1541 | long ZEXPORT inflateMark(strm)
+      |              ^
+../glib-src/subprojects/zlib-1.2.11/inflate.c:1554:23: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C23 [-Wdeprecated-non-prototype]
+ 1554 | unsigned long ZEXPORT inflateCodesUsed(strm)
+      |                       ^
+23 warnings generated.
+[63/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_compile.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_compile.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_compile.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_compile.c
+[64/674] /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Isubprojects/pcre2-10.42/libpcre2-8.a.p -Isubprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42 -I../glib-src/subprojects/pcre2-10.42/src -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=gnu99 -O3 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -DHAVE_BZLIB_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_WAIT_H -DHAVE_INTTYPES_H -DHAVE_DIRENT_H -DHAVE_DLFCN_H -DHAVE_LIMITS_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_UNISTD_H -DHAVE_MEMMOVE -DHAVE_STRERROR -DSTDC_HEADERS -DSUPPORT_PCRE2_8 -DSUPPORT_UNICODE -DPCRE2_STATIC -DHAVE_CONFIG_H -DPCRE2_CODE_UNIT_WIDTH=8 -MD -MQ subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_match.c.o -MF subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_match.c.o.d -o subprojects/pcre2-10.42/libpcre2-8.a.p/src_pcre2_match.c.o -c ../glib-src/subprojects/pcre2-10.42/src/pcre2_match.c
+ninja: build stopped: subcommand failed.
++ echo
+
++ for f in meson-setup.log glib-build.log glib-install.log
++ echo '===================== TAIL: glib-install.log ====================='
+===================== TAIL: glib-install.log =====================
++ '[' -f glib-install.log ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
