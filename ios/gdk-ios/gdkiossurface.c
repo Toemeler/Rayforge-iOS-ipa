@@ -177,15 +177,26 @@ gdk_ios_surface_destroy (GdkSurface *surface,
 {
   GdkIOSSurface *self = GDK_IOS_SURFACE (surface);
   GdkIOSDisplay *display = GDK_IOS_DISPLAY (gdk_surface_get_display (surface));
+  GdkFrameClock *clock = gdk_surface_get_frame_clock (surface);
 
-  g_message ("gdk-ios: destroy surface=%p type=%s foreign=%d", (void *) self,
+  g_message ("gdk-ios: destroy surface=%p type=%s foreign=%d clock=%p parent=%p",
+             (void *) self,
              GDK_IS_TOPLEVEL (self) ? "toplevel"
                : (GDK_IS_POPUP (self) ? "popup" : "other"),
-             foreign_destroy);
+             foreign_destroy, (void *) clock, (void *) surface->parent);
   display->toplevels = g_list_remove (display->toplevels, self);
   display->popups = g_list_remove (display->popups, self);
   gdk_ios_shell_forget_surface (self);
   gdk_ios_surface_detach_layer (self);
+
+  /* Every surface in this backend has its OWN frame clock (constructed()),
+   * but common code only disposes the clock for parent==NULL surfaces --
+   * on other backends popups share the parent's clock. Here that leaves a
+   * popup's private clock alive with pending flush/paint timeout sources.
+   * Dispose it ourselves so no clock source can ever outlive its surface
+   * (dispose is idempotent; common code's dispose for toplevels is fine). */
+  if (clock != NULL && surface->parent != NULL)
+    g_object_run_dispose (G_OBJECT (clock));
 }
 
 static double
@@ -216,6 +227,8 @@ gdk_ios_surface_constructed (GObject *object)
    * GLib main context, which our CADisplayLink pumps). */
   frame_clock = _gdk_frame_clock_idle_new ();
   gdk_surface_set_frame_clock (surface, frame_clock);
+  g_message ("gdk-ios: constructed surface=%p clock=%p", (void *) self,
+             (void *) frame_clock);
   g_object_unref (frame_clock);
 
   G_OBJECT_CLASS (gdk_ios_surface_parent_class)->constructed (object);
@@ -225,6 +238,7 @@ static void
 gdk_ios_surface_finalize (GObject *object)
 {
   GdkIOSSurface *self = GDK_IOS_SURFACE (object);
+  g_message ("gdk-ios: finalize surface=%p", (void *) self);
   gdk_ios_surface_detach_layer (self);
   G_OBJECT_CLASS (gdk_ios_surface_parent_class)->finalize (object);
 }

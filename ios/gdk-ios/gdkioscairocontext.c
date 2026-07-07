@@ -37,6 +37,18 @@ struct _GdkIOSCairoContextClass
 
 G_DEFINE_TYPE (GdkIOSCairoContext, gdk_ios_cairo_context, GDK_TYPE_CAIRO_CONTEXT)
 
+/* Per-frame diagnostics write 3 lines per frame to the on-device log
+ * FILE (stdout is redirected) at up to 120 fps - measurable jank. Gate
+ * them behind GDK_IOS_TRACE; lifecycle logs elsewhere stay unconditional. */
+static gboolean
+gdk_ios_trace_frames (void)
+{
+  static int t = -1;
+  if (t < 0)
+    t = g_getenv ("GDK_IOS_TRACE") != NULL ? 1 : 0;
+  return t;
+}
+
 static cairo_t *
 gdk_ios_cairo_context_cairo_create (GdkCairoContext *cairo_context)
 {
@@ -59,8 +71,9 @@ gdk_ios_cairo_context_begin_frame (GdkDrawContext *draw_context,
   int pixel_w = (int) ceil (surface->width * scale);
   int pixel_h = (int) ceil (surface->height * scale);
 
-  g_message ("gdk-ios: begin_frame surface=%dx%d scale=%.2f pixels=%dx%d",
-             surface->width, surface->height, (double) scale, pixel_w, pixel_h);
+  if (gdk_ios_trace_frames ())
+    g_message ("gdk-ios: begin_frame surface=%dx%d scale=%.2f pixels=%dx%d",
+               surface->width, surface->height, (double) scale, pixel_w, pixel_h);
 
   /* GTK only repaints the *damaged* region each frame. The buffer must
    * therefore persist across frames (like the X window does for the X11
@@ -141,6 +154,7 @@ gdk_ios_cairo_context_end_frame (GdkDrawContext *draw_context,
    * ground-truth test: if these are non-zero the app IS painting and any
    * black screen is a presentation/geometry bug; if they are 0x00000000
    * the paint never reached this surface. */
+  if (gdk_ios_trace_frames ())
   {
     const guint32 *px = (const guint32 *) data;
     int row = stride / 4;
@@ -178,7 +192,8 @@ gdk_ios_cairo_context_end_frame (GdkDrawContext *draw_context,
   layer.contents = (__bridge_transfer id) image;
   [CATransaction commit];
 
-  g_message ("gdk-ios: presented layer=%p frame=(%.0f,%.0f,%.0fx%.0f) "
+  if (gdk_ios_trace_frames ())
+    g_message ("gdk-ios: presented layer=%p frame=(%.0f,%.0f,%.0fx%.0f) "
              "contentsScale=%.2f opacity=%.2f hidden=%d super=%p "
              "hasContents=%d",
              (__bridge void *) layer,

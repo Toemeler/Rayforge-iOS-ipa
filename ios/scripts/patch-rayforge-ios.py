@@ -58,13 +58,23 @@ PATCHES = [
     (
         "rayforge/ui_gtk/canvas/worldsurface.py",
         "        zoom_speed = 0.1",
-        "        zoom_speed = 0.05  # iOS: half sensitivity (was 0.1)",
+        # iOS: zoom proportionally to the scroll magnitude instead of a
+        # fixed 10% per event. Trackpads fire dozens of events per swipe
+        # (each was a full step -> way too fast); the backend's pinch
+        # sends dy = -ln(scale)/0.002 so a 2x pinch is a 2x zoom.
+        "        import math\n"
+        "        zoom_speed = math.expm1(min(abs(dy), 120.0) * 0.002)",
     ),
     (
         "rayforge/builtin_addons/rayforge-addon-print-and-cut/"
         "print_and_cut/pick_surface.py",
         "        zoom_speed = 0.1",
-        "        zoom_speed = 0.05  # iOS: half sensitivity (was 0.1)",
+        # iOS: zoom proportionally to the scroll magnitude instead of a
+        # fixed 10% per event. Trackpads fire dozens of events per swipe
+        # (each was a full step -> way too fast); the backend's pinch
+        # sends dy = -ln(scale)/0.002 so a 2x pinch is a 2x zoom.
+        "        import math\n"
+        "        zoom_speed = math.expm1(min(abs(dy), 120.0) * 0.002)",
     ),
     # P6: icons. The iOS bundle has no gdk-pixbuf SVG loader (librsvg is
     # not built for iOS), so Gio.FileIcon/GdkPixbuf on Rayforge's .svg

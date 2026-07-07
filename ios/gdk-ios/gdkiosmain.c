@@ -49,7 +49,6 @@ static GdkIOSSurface *pointer_surface = NULL; /* weak */
 static gboolean touch1_down = FALSE;        /* raw button-1 press delivered */
 static gboolean multi_touch_active = FALSE; /* >=2 fingers: gestures own input */
 static gboolean two_finger_panning = FALSE; /* synthetic middle-drag in flight */
-static double   pinch_accum = 0.0;          /* accumulated log(scale) */
 
 static GdkIOSMainFunc user_main_func = NULL;
 static gpointer user_main_data = NULL;
@@ -167,6 +166,11 @@ gdk_ios_shell_get_refresh_milli_hz (void)
    * of the 60 Hz fallback used when a monitor reports no refresh rate. */
   NSInteger fps = UIScreen.mainScreen.maximumFramesPerSecond;
   if (fps <= 0)
+    fps = 60;
+  /* Cap at 60: the Cairo software renderer cannot sustain 120 Hz
+   * full-window repaints (3200x2400 px); pacing above its capacity
+   * produces missed frames that feel laggier than a stable 60. */
+  if (fps > 60)
     fps = 60;
   return (int) fps * 1000;
 }
@@ -615,6 +619,7 @@ live_touch_count (UIEvent *event)
     {
     case UIGestureRecognizerStateBegan:
       multi_touch_active = TRUE;
+      g_message ("gdk-ios: two-finger pan begin at (%.0f,%.0f)", x, y);
       deliver_motion (x, y);
       deliver_button (GDK_BUTTON_PRESS, 2, x, y); /* Rayforge pans on middle */
       two_finger_panning = TRUE;
@@ -628,6 +633,7 @@ live_touch_count (UIEvent *event)
     case UIGestureRecognizerStateFailed:
       if (two_finger_panning)
         {
+          g_message ("gdk-ios: two-finger pan end at (%.0f,%.0f)", x, y);
           deliver_button (GDK_BUTTON_RELEASE, 2, x, y);
           two_finger_panning = FALSE;
         }
@@ -647,7 +653,7 @@ live_touch_count (UIEvent *event)
   if (recognizer.state == UIGestureRecognizerStateBegan)
     {
       multi_touch_active = TRUE;
-      pinch_accum = 0.0;
+      g_message ("gdk-ios: pinch begin at (%.0f,%.0f)", x, y);
       return;
     }
   if (recognizer.state == UIGestureRecognizerStateEnded ||
@@ -660,27 +666,21 @@ live_touch_count (UIEvent *event)
   if (recognizer.state != UIGestureRecognizerStateChanged)
     return;
 
-  /* Rayforge's on_scroll uses only the sign of dy, one fixed zoom step per
-   * event (5% after the iOS zoom_speed patch). Accumulate log(scale) and
-   * emit one tick per ln(1.05), so a physical 2x pinch maps to ~2x zoom.
-   * A motion event at the centroid first makes Rayforge zoom around the
-   * fingers, not the last cursor position. dy < 0 zooms in. */
-  pinch_accum += log (recognizer.scale);
+  /* Rayforge's on_scroll is patched on iOS to zoom proportionally to the
+   * scroll magnitude: factor = exp(k*|dy|), k = 0.002/px. Convert the
+   * incremental pinch ratio to the dy that produces the same factor
+   * (dy = -ln(scale)/k, dy < 0 zooms in), so a physical 2x pinch is a 2x
+   * zoom. A motion event at the centroid first makes Rayforge zoom
+   * around the fingers, not the last cursor position. */
+  double r = recognizer.scale;
   [recognizer setScale:1.0];
-
-  const double step = 0.04879; /* ln(1.05) */
-  while (pinch_accum >= step)
-    {
-      deliver_motion (x, y);
-      deliver_scroll (0, -1, FALSE);
-      pinch_accum -= step;
-    }
-  while (pinch_accum <= -step)
-    {
-      deliver_motion (x, y);
-      deliver_scroll (0, 1, FALSE);
-      pinch_accum += step;
-    }
+  if (r <= 0)
+    return;
+  double dy = -log (r) / 0.002;
+  if (fabs (dy) < 0.01)
+    return;
+  deliver_motion (x, y);
+  deliver_scroll (0, dy, FALSE);
 }
 
 - (void)pressesBegan:(NSSet<UIPress *> *)presses withEvent:(UIPressesEvent *)event
