@@ -676,7 +676,9 @@ live_touch_count (UIEvent *event)
   [recognizer setScale:1.0];
   if (r <= 0)
     return;
-  double dy = -log (r) / 0.002;
+  /* 0.45x sub-physical: full 1:1 (ln(r)/0.002 = *500) felt too fast
+   * on device; a 2x pinch now zooms ~1.4x. */
+  double dy = -log (r) * 225.0;
   if (fabs (dy) < 0.01)
     return;
   deliver_motion (x, y);

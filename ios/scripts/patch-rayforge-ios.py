@@ -58,11 +58,21 @@ PATCHES = [
     (
         "rayforge/ui_gtk/canvas/worldsurface.py",
         "        zoom_speed = 0.1",
-        # iOS: zoom proportionally to the scroll magnitude instead of a
-        # fixed 10% per event. Trackpads fire dozens of events per swipe
-        # (each was a full step -> way too fast); the backend's pinch
-        # sends dy = -ln(scale)/0.002 so a 2x pinch is a 2x zoom.
+        # iOS: horizontal two-finger scroll pans; vertical zooms
+        # proportionally to the scroll magnitude instead of a fixed 10%
+        # per event (trackpads fire dozens of events per swipe - each
+        # was a full step -> way too fast).
         "        import math\n"
+        "        if abs(dx) > abs(dy):\n"
+        "            _base = self._axis_renderer.get_base_pixels_per_mm(\n"
+        "                self.get_width(), self.get_height()\n"
+        "            )\n"
+        "            _ppm = _base * self.zoom_level\n"
+        "            if _ppm > 0:\n"
+        "                self.set_pan(\n"
+        "                    self.pan_x_mm + dx / _ppm, self.pan_y_mm\n"
+        "                )\n"
+        "            return\n"
         "        zoom_speed = math.expm1(min(abs(dy), 120.0) * 0.002)",
     ),
     (
@@ -76,7 +86,22 @@ PATCHES = [
         "        import math\n"
         "        zoom_speed = math.expm1(min(abs(dy), 120.0) * 0.002)",
     ),
-    # P6: icons. The iOS bundle has no gdk-pixbuf SVG loader (librsvg is
+    # P6: the Cairo software renderer saturates the main loop during
+    # zoom/pan; PRIORITY_DEFAULT_IDLE callbacks (task events, shm
+    # adoption ACKs) starve past the 5s deadline, artifacts NACK, and
+    # laser-op lines vanish until a later re-render. Dispatch worker->
+    # main-thread callbacks at PRIORITY_DEFAULT instead.
+    (
+        "rayforge/shared/util/glib.py",
+        "    GLib.idle_add(lambda: falsify(func, *args, **kwargs))",
+        "    import sys as _sys\n"
+        "    if _sys.platform == 'ios':\n"
+        "        GLib.idle_add(lambda: falsify(func, *args, **kwargs),\n"
+        "                      priority=GLib.PRIORITY_DEFAULT)\n"
+        "    else:\n"
+        "        GLib.idle_add(lambda: falsify(func, *args, **kwargs))",
+    ),
+    # P7: icons. The iOS bundle has no gdk-pixbuf SVG loader (librsvg is
     # not built for iOS), so Gio.FileIcon/GdkPixbuf on Rayforge's .svg
     # icons render blank. The bundle step pre-rasterizes every icon SVG to
     # a PNG sibling (gdk-pixbuf's PNG loader is builtin); prefer it here.

@@ -449,6 +449,82 @@ gdk_ios_display_init (GdkIOSDisplay *self)
   self->monitors = g_list_store_new (GDK_TYPE_MONITOR);
 }
 
+/* Event source: emits queued input events from the main loop, like every
+ * desktop backend (mirrors x11/gdkeventsource.c).
+ *
+ * Without it, the ONLY drain of the display event queue was the frame
+ * clock's flush-events handler (gdk_surface_flush_events), so every input
+ * event was emitted from INSIDE that handler. A click that closes a
+ * window then destroys and finalizes the very surface the handler holds
+ * as its raw `data` pointer, and when the emission returns the handler
+ * dereferences freed memory -> the 100%-reproducible SIGSEGV on closing
+ * any dialog/Settings (device log: destroy -> finalize -> crash in
+ * gdk_surface_flush_events, all within 1 ms). With this source, input is
+ * emitted at GDK_PRIORITY_EVENTS from the pump, outside any frame-clock
+ * signal emission, exactly as on desktop. */
+typedef struct
+{
+  GSource source;
+  GdkDisplay *display;
+} GdkIOSEventSource;
+
+static gboolean
+gdk_ios_event_source_prepare (GSource *source,
+                              int     *timeout)
+{
+  GdkDisplay *display = ((GdkIOSEventSource *) source)->display;
+
+  *timeout = -1;
+  return _gdk_event_queue_find_first (display) != NULL;
+}
+
+static gboolean
+gdk_ios_event_source_check (GSource *source)
+{
+  GdkDisplay *display = ((GdkIOSEventSource *) source)->display;
+
+  return _gdk_event_queue_find_first (display) != NULL;
+}
+
+static gboolean
+gdk_ios_event_source_dispatch (GSource     *source,
+                               GSourceFunc  callback,
+                               gpointer     user_data)
+{
+  GdkDisplay *display = ((GdkIOSEventSource *) source)->display;
+  GdkEvent *event = gdk_display_get_event (display);
+
+  if (event)
+    {
+      _gdk_event_emit (event);
+      gdk_event_unref (event);
+    }
+
+  return G_SOURCE_CONTINUE;
+}
+
+static GSourceFuncs gdk_ios_event_source_funcs = {
+  gdk_ios_event_source_prepare,
+  gdk_ios_event_source_check,
+  gdk_ios_event_source_dispatch,
+  NULL
+};
+
+static void
+gdk_ios_display_attach_event_source (GdkIOSDisplay *self)
+{
+  GSource *source;
+
+  source = g_source_new (&gdk_ios_event_source_funcs,
+                         sizeof (GdkIOSEventSource));
+  ((GdkIOSEventSource *) source)->display = GDK_DISPLAY (self);
+  g_source_set_static_name (source, "GDK iOS event source");
+  g_source_set_priority (source, GDK_PRIORITY_EVENTS);
+  g_source_set_can_recurse (source, TRUE);
+  g_source_attach (source, NULL);
+  g_source_unref (source);
+}
+
 
 /* Called from the UIKit shell (viewDidLayoutSubviews) when the root view
  * bounds change, e.g. on device rotation. Updates the monitor geometry and
@@ -495,6 +571,8 @@ _gdk_ios_display_open (const char *display_name)
 
   GdkIOSDisplay *self = g_object_new (GDK_TYPE_IOS_DISPLAY, NULL);
   the_display = self;
+
+  gdk_ios_display_attach_event_source (self);
 
   self->keymap = g_object_new (GDK_TYPE_IOS_KEYMAP, "display", self, NULL);
 
