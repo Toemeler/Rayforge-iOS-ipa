@@ -434,7 +434,7 @@ jobs:
           STAGE="${STAGE_DIR}"
           git clone -q --depth 1 https://github.com/barebaric/rayforge.git rayforge-src
           (cd rayforge-src && git rev-parse HEAD | tee "${GITHUB_WORKSPACE}/rayforge-sha.txt")
-          python3 ios/scripts/patch-rayforge-ios.py rayforge-src
+          python3 ios/rayforge-patches/patch-rayforge-ios.py rayforge-src
           # iOS-only device profile: Sculpfun S30 Ultra 11W (preconfigured)
           cp -R ios/devices/sculpfun-s30-ultra-11w rayforge-src/rayforge/resources/devices/
           # Pre-rasterize every icon SVG to a PNG sibling: the iOS bundle
