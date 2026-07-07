@@ -222,6 +222,42 @@ PATCHES = [
         '    gi.require_version("Rsvg", "2.0")\n'
         '    from gi.repository import Rsvg',
     ),
+    # P15: preconfigured machine. On first run (no machines), create
+    # the Sculpfun S30 Ultra 11W from its bundled device profile instead
+    # of a blank generic machine, so the app is ready to use out of the
+    # box for this user's laser.
+    (
+        "rayforge/context.py",
+        "            self._machine_mgr = MachineManager(MACHINE_DIR)\n"
+        "            if not self._machine_mgr.machines:\n"
+        "                self._machine_mgr.create_default_machine()",
+        "            self._machine_mgr = MachineManager(MACHINE_DIR)\n"
+        "            if not self._machine_mgr.machines:\n"
+        "                import sys as _sys\n"
+        "                _created = False\n"
+        "                if _sys.platform == 'ios':\n"
+        "                    try:\n"
+        "                        from .config import BUILTIN_DEVICES_DIR\n"
+        "                        from .machine.device.profile import (\n"
+        "                            DeviceProfile,\n"
+        "                        )\n"
+        "                        _prof = DeviceProfile.from_path(\n"
+        "                            BUILTIN_DEVICES_DIR\n"
+        "                            / 'sculpfun-s30-ultra-11w'\n"
+        "                        )\n"
+        "                        _m = _prof.create_machine(self)\n"
+        "                        self._machine_mgr.save_machine(_m)\n"
+        "                        _created = True\n"
+        "                        logger.info(\n"
+        "                            'iOS: created Sculpfun S30 Ultra 11W'\n"
+        "                        )\n"
+        "                    except Exception:\n"
+        "                        logger.exception(\n"
+        "                            'iOS default machine setup failed'\n"
+        "                        )\n"
+        "                if not _created:\n"
+        "                    self._machine_mgr.create_default_machine()",
+    ),
     # P7: icons. The iOS bundle has no gdk-pixbuf SVG loader (librsvg is
     # not built for iOS), so Gio.FileIcon/GdkPixbuf on Rayforge's .svg
     # icons render blank. The bundle step pre-rasterizes every icon SVG to
