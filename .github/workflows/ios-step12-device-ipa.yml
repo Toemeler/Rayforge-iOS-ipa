@@ -468,6 +468,7 @@ jobs:
           cp -R ios/pyshims/OpenGL "$STAGE/OpenGL"
           cp ios/pyshims/rayforge_ios_pool.py "$STAGE/"
           cp ios/pyshims/rayforge_ios_shm.py "$STAGE/"
+          cp ios/pyshims/rayforge_ios_svg.py "$STAGE/"
           cp ios/pyshims/ios_main.py "$STAGE/"
           du -sh "$STAGE"
 
@@ -633,6 +634,15 @@ jobs:
           echo '  </match>' >> "$FC"
           echo '</fontconfig>' >> "$FC"
 
+          # App icons from the Rayforge logo (sideload: loose PNGs +
+          # CFBundleIcons; iOS composites alpha onto black, so use a
+          # white background)
+          RSVG="$(brew --prefix librsvg)/bin/rsvg-convert"
+          LOGO="rayforge-src/rayforge/resources/icons/org.rayforge.rayforge.svg"
+          "$RSVG" -w 120 -h 120 -b white "$LOGO" -o "$APP/AppIcon60x60@2x.png"
+          "$RSVG" -w 152 -h 152 -b white "$LOGO" -o "$APP/AppIcon76x76@2x~ipad.png"
+          "$RSVG" -w 167 -h 167 -b white "$LOGO" -o "$APP/AppIcon83.5x83.5@2x~ipad.png"
+
           # Info.plist
           PL="$APP/Info.plist"
           : > "$PL"
@@ -662,6 +672,8 @@ jobs:
           echo '  </array>' >> "$PL"
           echo '  <key>UIRequiresFullScreen</key><true/>' >> "$PL"
           echo '  <key>UIFileSharingEnabled</key><true/>' >> "$PL"
+          echo '  <key>CFBundleIcons</key><dict><key>CFBundlePrimaryIcon</key><dict><key>CFBundleIconFiles</key><array><string>AppIcon60x60</string></array></dict></dict>' >> "$PL"
+          echo '  <key>CFBundleIcons~ipad</key><dict><key>CFBundlePrimaryIcon</key><dict><key>CFBundleIconFiles</key><array><string>AppIcon60x60</string><string>AppIcon76x76</string><string>AppIcon83.5x83.5</string></array></dict></dict>' >> "$PL"
           echo '  <key>LSSupportsOpeningDocumentsInPlace</key><true/>' >> "$PL"
           echo '  <key>CFBundleDocumentTypes</key><array>' >> "$PL"
           echo '    <dict>' >> "$PL"

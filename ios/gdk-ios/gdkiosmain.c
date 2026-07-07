@@ -695,9 +695,9 @@ live_touch_count (UIEvent *event)
   if (r <= 0)
     return;
   /* 0.3x sub-physical (ln(r)*150): 0.45x still felt too fast on
-   * device; a 2x pinch now zooms ~1.15x. Tagged with CONTROL so the
-   * patched on_scroll zooms instead of panning. */
-  double dy = -log (r) * 100.0;
+   * device; a 2x pinch now zooms ~1.06x, for fine control. Tagged with
+   * CONTROL so the patched on_scroll zooms instead of panning. */
+  double dy = -log (r) * 40.0;
   if (fabs (dy) < 0.01)
     return;
   deliver_motion (x, y);

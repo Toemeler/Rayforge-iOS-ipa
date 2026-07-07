@@ -195,6 +195,33 @@ PATCHES = [
         "        timeout: float = 5.0,",
         "        timeout: float = 30.0,",
     ),
+    # P14: real SVG rendering on iOS. Neither libvips svgload (pyvips
+    # is a Phase-2 stub) nor the Rsvg GIR exists in the bundle, so every
+    # workpiece render raised 'Namespace Rsvg not available' and retried
+    # forever: the eternal progress bar and half-rendered laser lines in
+    # the device log. rayforge_ios_svg rasterizes via svgelements
+    # (already bundled, pure Python) + pycairo.
+    (
+        "rayforge/image/svg/svg_fallback.py",
+        '    import cairo\n'
+        '    import gi\n'
+        '\n'
+        '    gi.require_version("Rsvg", "2.0")\n'
+        '    from gi.repository import Rsvg',
+        "    import cairo\n"
+        "    import sys as _sys\n"
+        "    if _sys.platform == 'ios':\n"
+        "        try:\n"
+        "            from rayforge_ios_svg import render_svg_to_cairo_ios\n"
+        "            return render_svg_to_cairo_ios(svg_data, width, height)\n"
+        "        except Exception:\n"
+        "            logger.exception('iOS svgelements renderer failed')\n"
+        "            return None\n"
+        '    import gi\n'
+        '\n'
+        '    gi.require_version("Rsvg", "2.0")\n'
+        '    from gi.repository import Rsvg',
+    ),
     # P7: icons. The iOS bundle has no gdk-pixbuf SVG loader (librsvg is
     # not built for iOS), so Gio.FileIcon/GdkPixbuf on Rayforge's .svg
     # icons render blank. The bundle step pre-rasterizes every icon SVG to
