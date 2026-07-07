@@ -1,0 +1,5 @@
+Gdk-Message: 07:12:30.891: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/A86FFCEE-BD4D-4FF2-AC46-67C0DE5EDC36/data/Containers/Bundle/Application/CF383B4D-676D-43D3-B87D-109568B04275/RayforgePy.app
+** Message: 07:12:31.457: python home: /Users/runner/Library/Developer/CoreSimulator/Devices/A86FFCEE-BD4D-4FF2-AC46-67C0DE5EDC36/data/Containers/Bundle/Application/CF383B4D-676D-43D3-B87D-109568B04275/RayforgePy.app/python
+
+** (process:15149): CRITICAL **: 07:12:31.529: python init failed: Failed to import encodings module
+** Message: 07:12:33.423: python smoke test UI presented

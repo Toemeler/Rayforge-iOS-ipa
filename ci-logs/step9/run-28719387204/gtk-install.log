@@ -1,0 +1,67 @@
+ninja: Entering directory `gtk-build'
+[1/25] Generating profile-conf with a custom command (wrapped by meson to capture output)
+[2/23] Compiling C object gdk/ios/libgdk-ios.a.p/gdkioscairocontext.c.o
+FAILED: [code=1] gdk/ios/libgdk-ios.a.p/gdkioscairocontext.c.o 
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-cc-iphonesimulator.sh -Igdk/ios/libgdk-ios.a.p -Igdk/ios -I../gtk-src/gdk/ios -I. -I../gtk-src -Igdk -I../gtk-src/gdk -Igdk/version -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/graphene-1.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0 -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu11 -O3 -DG_LOG_USE_STRUCTURED=1 -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_84 -DGLIB_VERSION_MAX_ALLOWED=GLIB_VERSION_2_84 '-DPANGO_VERSION_MIN_REQUIRED=G_ENCODE_VERSION(1,56)' '-DPANGO_VERSION_MAX_ALLOWED=G_ENCODE_VERSION(1,56)' '-DGTK_VERSION="4.22.4"' -D_GNU_SOURCE -DG_DISABLE_CAST_CHECKS -DG_DISABLE_ASSERT -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=17.0 -DGTK_COMPILATION '-DG_LOG_DOMAIN="Gdk"' -fno-strict-aliasing -Wno-c++11-extensions -Wno-missing-include-dirs -Wno-typedef-redefinition -Wno-tautological-constant-out-of-range-compare -Wformat=2 -Wformat-nonliteral -Wformat-security -Wignored-qualifiers -Wimplicit-function-declaration -Wmisleading-indentation -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wold-style-definition -Wpointer-arith -Wshadow -Wstrict-prototypes -Wswitch-default -Wswitch-enum -Wundef -Wuninitialized -Wunused -Waddress -Warray-bounds -Wempty-body -Wimplicit -Wimplicit-fallthrough -Winit-self -Wint-to-pointer-cast -Wmain -Wmissing-braces -Wmissing-declarations -Wmissing-prototypes -Wnonnull -Woverride-init -Wpointer-to-int-cast -Wredundant-decls -Wreturn-type -Wsequence-point -Wtrigraphs -Wvla -Wwrite-strings -xobjective-c -fobjc-arc -MD -MQ gdk/ios/libgdk-ios.a.p/gdkioscairocontext.c.o -MF gdk/ios/libgdk-ios.a.p/gdkioscairocontext.c.o.d -o gdk/ios/libgdk-ios.a.p/gdkioscairocontext.c.o -c ../gtk-src/gdk/ios/gdkioscairocontext.c
+../gtk-src/gdk/ios/gdkioscairocontext.c:153:14: error: cast of Objective-C pointer type 'CALayer *' to C pointer type 'void *' requires a bridged cast
+  153 |              (void *) layer,
+      |              ^~~~~~~~ ~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmessages.h:333:63: note: expanded from macro 'g_message'
+  333 |                                                    G_STRFUNC, __VA_ARGS__)
+      |                                                               ^~~~~~~~~~~
+../gtk-src/gdk/ios/gdkioscairocontext.c:153:14: note: use __bridge to convert directly (no change in ownership)
+../gtk-src/gdk/ios/gdkioscairocontext.c:153:23: note: use CFBridgingRetain call to make an ARC object available as a +1 'void *'
+  153 |              (void *) layer,
+      |                       ^
+      |                       CFBridgingRetain(
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmessages.h:333:63: note: expanded from macro 'g_message'
+  333 |                                                    G_STRFUNC, __VA_ARGS__)
+      |                                                               ^
+../gtk-src/gdk/ios/gdkioscairocontext.c:157:34: error: cast of Objective-C pointer type 'CALayer * _Nullable' to C pointer type 'void *' requires a bridged cast
+  157 |              (int) layer.hidden, (void *) layer.superlayer,
+      |                                  ^~~~~~~~ ~~~~~~~~~~~~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmessages.h:333:63: note: expanded from macro 'g_message'
+  333 |                                                    G_STRFUNC, __VA_ARGS__)
+      |                                                               ^~~~~~~~~~~
+../gtk-src/gdk/ios/gdkioscairocontext.c:157:34: note: use __bridge to convert directly (no change in ownership)
+../gtk-src/gdk/ios/gdkioscairocontext.c:157:43: note: use CFBridgingRetain call to make an ARC object available as a +1 'void *'
+  157 |              (int) layer.hidden, (void *) layer.superlayer,
+      |                                           ^
+      |                                           CFBridgingRetain(
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmessages.h:333:63: note: expanded from macro 'g_message'
+  333 |                                                    G_STRFUNC, __VA_ARGS__)
+      |                                                               ^
+2 errors generated.
+[3/23] Compiling C object gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o
+FAILED: [code=1] gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o 
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-cc-iphonesimulator.sh -Igdk/ios/libgdk-ios.a.p -Igdk/ios -I../gtk-src/gdk/ios -I. -I../gtk-src -Igdk -I../gtk-src/gdk -Igdk/version -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/libpng16 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include -I/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/cairo -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/freetype2 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/harfbuzz -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pixman-1 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/pango-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/fribidi -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/graphene-1.0 -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/graphene-1.0/include -I/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gio-unix-2.0 -fdiagnostics-color=always -Wall -Winvalid-pch -std=gnu11 -O3 -DG_LOG_USE_STRUCTURED=1 -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_84 -DGLIB_VERSION_MAX_ALLOWED=GLIB_VERSION_2_84 '-DPANGO_VERSION_MIN_REQUIRED=G_ENCODE_VERSION(1,56)' '-DPANGO_VERSION_MAX_ALLOWED=G_ENCODE_VERSION(1,56)' '-DGTK_VERSION="4.22.4"' -D_GNU_SOURCE -DG_DISABLE_CAST_CHECKS -DG_DISABLE_ASSERT -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=17.0 -DGTK_COMPILATION '-DG_LOG_DOMAIN="Gdk"' -fno-strict-aliasing -Wno-c++11-extensions -Wno-missing-include-dirs -Wno-typedef-redefinition -Wno-tautological-constant-out-of-range-compare -Wformat=2 -Wformat-nonliteral -Wformat-security -Wignored-qualifiers -Wimplicit-function-declaration -Wmisleading-indentation -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wold-style-definition -Wpointer-arith -Wshadow -Wstrict-prototypes -Wswitch-default -Wswitch-enum -Wundef -Wuninitialized -Wunused -Waddress -Warray-bounds -Wempty-body -Wimplicit -Wimplicit-fallthrough -Winit-self -Wint-to-pointer-cast -Wmain -Wmissing-braces -Wmissing-declarations -Wmissing-prototypes -Wnonnull -Woverride-init -Wpointer-to-int-cast -Wredundant-decls -Wreturn-type -Wsequence-point -Wtrigraphs -Wvla -Wwrite-strings -xobjective-c -fobjc-arc -MD -MQ gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o -MF gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o.d -o gdk/ios/libgdk-ios.a.p/gdkiossurface.c.o -c ../gtk-src/gdk/ios/gdkiossurface.c
+../gtk-src/gdk/ios/gdkiossurface.c:40:29: error: cast of Objective-C pointer type 'CALayer *' to C pointer type 'void *' requires a bridged cast
+   40 |              (void *) self, (void *) layer, (void *) root,
+      |                             ^~~~~~~~ ~~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmessages.h:333:63: note: expanded from macro 'g_message'
+  333 |                                                    G_STRFUNC, __VA_ARGS__)
+      |                                                               ^~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiossurface.c:40:29: note: use __bridge to convert directly (no change in ownership)
+../gtk-src/gdk/ios/gdkiossurface.c:40:38: note: use CFBridgingRetain call to make an ARC object available as a +1 'void *'
+   40 |              (void *) self, (void *) layer, (void *) root,
+      |                                      ^
+      |                                      CFBridgingRetain(
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmessages.h:333:63: note: expanded from macro 'g_message'
+  333 |                                                    G_STRFUNC, __VA_ARGS__)
+      |                                                               ^
+../gtk-src/gdk/ios/gdkiossurface.c:40:45: error: cast of Objective-C pointer type 'CALayer *' to C pointer type 'void *' requires a bridged cast
+   40 |              (void *) self, (void *) layer, (void *) root,
+      |                                             ^~~~~~~~ ~~~~
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmessages.h:333:63: note: expanded from macro 'g_message'
+  333 |                                                    G_STRFUNC, __VA_ARGS__)
+      |                                                               ^~~~~~~~~~~
+../gtk-src/gdk/ios/gdkiossurface.c:40:45: note: use __bridge to convert directly (no change in ownership)
+../gtk-src/gdk/ios/gdkiossurface.c:40:54: note: use CFBridgingRetain call to make an ARC object available as a +1 'void *'
+   40 |              (void *) self, (void *) layer, (void *) root,
+      |                                                      ^
+      |                                                      CFBridgingRetain(
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmessages.h:333:63: note: expanded from macro 'g_message'
+  333 |                                                    G_STRFUNC, __VA_ARGS__)
+      |                                                               ^
+2 errors generated.
+ninja: build stopped: subcommand failed.
