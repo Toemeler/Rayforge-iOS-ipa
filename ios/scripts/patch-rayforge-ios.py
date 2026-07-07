@@ -258,6 +258,15 @@ PATCHES = [
         "                if not _created:\n"
         "                    self._machine_mgr.create_default_machine()",
     ),
+    # P16: air assist ON by default. The S30 Ultra's pump is mainboard-
+    # controlled (M8/M9) and the user wants it active for every
+    # operation; upstream defaults each step's toggle to off. Job end
+    # emits M9 (verified in the gcode encoder), so the pump stops.
+    (
+        "rayforge/core/step.py",
+        "        self.air_assist: bool = False",
+        "        self.air_assist: bool = True  # iOS: S30U auto air assist",
+    ),
     # P7: icons. The iOS bundle has no gdk-pixbuf SVG loader (librsvg is
     # not built for iOS), so Gio.FileIcon/GdkPixbuf on Rayforge's .svg
     # icons render blank. The bundle step pre-rasterizes every icon SVG to
@@ -284,6 +293,27 @@ PATCHES = [
 ]
 
 
+# (rel, old, new, expected_count): applied to ALL occurrences, with the
+# count asserted so upstream drift is caught loudly.
+REPLACE_ALL = [
+    # air assist default ON in every capability (Cut/Engrave/Raster)
+    (
+        "rayforge/core/capability.py",
+        '''                BoolVar(
+                    key="air_assist",
+                    label=_("Air Assist"),
+                    default=False,
+                ),''',
+        '''                BoolVar(
+                    key="air_assist",
+                    label=_("Air Assist"),
+                    default=True,  # iOS: S30U auto air assist
+                ),''',
+        3,
+    ),
+]
+
+
 def main() -> int:
     if len(sys.argv) != 2:
         print(__doc__)
@@ -292,6 +322,21 @@ def main() -> int:
     if not (root / "rayforge").is_dir():
         print(f"error: {root} does not look like a rayforge tree")
         return 1
+
+    for rel, old, new, count in REPLACE_ALL:
+        path = root / rel
+        text = path.read_text()
+        if new in text:
+            print(f"ok (already patched): {rel} [replace-all]")
+            continue
+        if text.count(old) != count:
+            print(
+                f"error: expected {count} occurrences in {rel}, "
+                f"found {text.count(old)}"
+            )
+            return 1
+        path.write_text(text.replace(old, new))
+        print(f"patched: {rel} [{count}x] ({old.splitlines()[0][:40]}...)")
 
     for rel, old, new in PATCHES:
         path = root / rel
