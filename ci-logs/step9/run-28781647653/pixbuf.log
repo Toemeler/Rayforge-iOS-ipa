@@ -1,0 +1,598 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src
+Build dir: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-build
+Build type: cross build
+Project name: gdk-pixbuf
+Project version: 2.44.7
+C compiler for the host machine: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-cc-iphoneos.sh (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the host machine: /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-cc-iphoneos.sh ld64 1167.5
+C compiler for the build machine: cc (clang 17.0.0 "Apple clang version 17.0.0 (clang-1700.0.13.5)")
+C linker for the build machine: cc ld64 1167.5
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Target machine cpu family: aarch64
+Target machine cpu: aarch64
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Run-time dependency glib-2.0 found: YES 2.84.4
+Run-time dependency gobject-2.0 found: YES 2.84.4
+Run-time dependency gmodule-no-export-2.0 found: YES 2.84.4
+Run-time dependency gio-2.0 found: YES 2.84.4
+Has header "unistd.h" : YES 
+Has header "sys/resource.h" : YES 
+Has header "sys/time.h" : YES 
+Library m found: YES
+Checking for function "round" with dependency -lm: YES 
+Checking for function "lrint" with dependency -lm: YES 
+Library intl found: NO
+Checking for function "bind_textdomain_codeset" with dependency -lintl: NO 
+Checking for function "setrlimit" : YES 
+Checking for function "readlink" : YES 
+Checking if "sigsetjmp" links: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wdeclaration-after-statement: YES 
+Compiler for C supports arguments -Wunused: YES 
+Compiler for C supports arguments -Wcast-align: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wlogical-op: NO 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -Wno-int-conversion: YES 
+Compiler for C supports arguments -Wno-uninitialized: YES 
+Compiler for C supports arguments -Wno-discarded-qualifiers: NO 
+Compiler for C supports arguments -Werror=undef: YES 
+Compiler for C supports arguments -Werror=implicit: YES 
+Compiler for C supports arguments -Werror=nonnull: YES 
+Compiler for C supports arguments -Werror=init-self: YES 
+Compiler for C supports arguments -Werror=main: YES 
+Compiler for C supports arguments -Werror=missing-braces: YES 
+Compiler for C supports arguments -Werror=sequence-point: YES 
+Compiler for C supports arguments -Werror=return-type: YES 
+Compiler for C supports arguments -Werror=trigraphs: YES 
+Compiler for C supports arguments -Werror=array-bounds: YES 
+Compiler for C supports arguments -Werror=write-strings: YES 
+Compiler for C supports arguments -Werror=address: YES 
+Compiler for C supports arguments -Werror=int-to-pointer-cast: YES 
+Compiler for C supports arguments -Werror=pointer-to-int-cast: YES 
+Compiler for C supports arguments -Werror=empty-body: YES 
+Compiler for C supports arguments -Werror=tautological-unsigned-zero-compare: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Library jnigraphics skipped: feature android disabled
+Library mlib found: NO
+Run-time dependency libpng found: YES 1.6.44
+Run-time dependency libjpeg found: YES 3.2.0
+Checking for function "jpeg_destroy_decompress" with dependency libjpeg: YES 
+Checking for function "jpeg_simple_progression" with dependency libjpeg: YES 
+Configuring config.h using configuration
+Program build-aux/gen-resources.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/build-aux/gen-resources.py)
+Program build-aux/gen-installed-test.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/build-aux/gen-installed-test.py)
+Program build-aux/gen-thumbnailer.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/build-aux/gen-thumbnailer.py)
+Program glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring gdk-pixbuf-features.h using configuration
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build-time dependency glib-2.0 found: YES 2.84.4
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Program g-ir-scanner skipped: feature introspection disabled
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Program msgfmt found: YES (/opt/homebrew/opt/gettext/bin/msgfmt)
+Program msginit found: YES (/opt/homebrew/opt/gettext/bin/msginit)
+Program msgmerge found: YES (/opt/homebrew/opt/gettext/bin/msgmerge)
+Program xgettext found: YES (/opt/homebrew/opt/gettext/bin/xgettext)
+Found CMake: NO
+Run-time dependency gi-docgen found: NO  (tried pkg-config, framework and cmake)
+Configuring gdk-pixbuf.toml using configuration
+Configuring gdk-pixdata.toml using configuration
+Program gi-docgen found: NO
+Program rst2man rst2man.py found: NO
+Build targets in project: 125
+
+gdk-pixbuf 2.44.7
+
+  Directories
+    prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    libdir           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+    datadir          : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share
+    libexecdir       : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+    docdir           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/doc
+
+  Loaders
+    Shared modules   : YES
+    Enabled loaders  : png
+                       gif
+                       jpeg
+    Builtin loaders  : png
+                       jpeg
+                       gif
+                       bmp
+                       ico
+                       ani
+    Thumbnailer      : NO
+
+  Build
+    Debugging        : NO
+    Optimization     : 3
+    GIO MIME sniffing: NO
+    MediaLib         : NO
+    Introspection    : NO
+    Documentation    : NO
+    Manual pages     : NO
+    Relocatable      : YES
+    Build tests      : NO
+    Installed tests  : NO
+
+  User defined options
+    Cross files      : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    android          : disabled
+    buildtype        : release
+    builtin_loaders  : png,jpeg,gif,bmp,ico,ani
+    c_link_args      : -lz
+    default_library  : shared
+    documentation    : false
+    gif              : enabled
+    glycin           : disabled
+    installed_tests  : false
+    introspection    : disabled
+    jpeg             : enabled
+    man              : false
+    others           : disabled
+    png              : enabled
+    prefix           : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    relocatable      : true
+    tests            : false
+    thumbnailer      : disabled
+    tiff             : disabled
+    wrap_mode        : nofallback
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
+ninja: Entering directory `pixbuf-build'
+[1/146] Building translation po/ab/LC_MESSAGES/gdk-pixbuf-ab.mo
+[2/146] Building translation po/af/LC_MESSAGES/gdk-pixbuf-af.mo
+[3/146] Generating glib marshaller header gdk-pixbuf/gdk-pixbuf-marshal_h
+[4/146] Building translation po/ang/LC_MESSAGES/gdk-pixbuf-ang.mo
+[5/146] Compiling C object gdk-pixbuf/pixops/timescale.p/timescale.c.o
+[6/146] Building translation po/ar/LC_MESSAGES/gdk-pixbuf-ar.mo
+[7/146] Building translation po/as/LC_MESSAGES/gdk-pixbuf-as.mo
+[8/146] Building translation po/ast/LC_MESSAGES/gdk-pixbuf-ast.mo
+[9/146] Building translation po/az/LC_MESSAGES/gdk-pixbuf-az.mo
+[10/146] Building translation po/be/LC_MESSAGES/gdk-pixbuf-be.mo
+[11/146] Generating glib marshaller source gdk-pixbuf/gdk-pixbuf-marshal_c
+[12/146] Building translation po/be@latin/LC_MESSAGES/gdk-pixbuf-be@latin.mo
+[13/146] Generating GObject enum file gdk-pixbuf/gdk-pixbuf-enum-types.h (wrapped by meson to capture output)
+[14/146] Building translation po/bg/LC_MESSAGES/gdk-pixbuf-bg.mo
+[15/146] Building translation po/bn/LC_MESSAGES/gdk-pixbuf-bn.mo
+[16/146] Building translation po/bn_IN/LC_MESSAGES/gdk-pixbuf-bn_IN.mo
+[17/146] Generating GObject enum file gdk-pixbuf/gdk-pixbuf-enum-types.c (wrapped by meson to capture output)
+[18/146] Compiling C object gdk-pixbuf/libstaticpixbufloader-gif.a.p/io-gif-animation.c.o
+[19/146] Compiling C object gdk-pixbuf/pixops/libpixops.a.p/pixops.c.o
+[20/146] Compiling C object gdk-pixbuf/libstaticpixbufloader-gif.a.p/lzw.c.o
+[21/146] Compiling C object gdk-pixbuf/libstaticpixbufloader-png.a.p/io-png.c.o
+../pixbuf-src/gdk-pixbuf/io-png.c:181:1: warning: function 'png_simple_error_callback' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+  181 | {
+      | ^
+../pixbuf-src/gdk-pixbuf/io-png.c:859:1: warning: function 'png_error_callback' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+  859 | {
+      | ^
+../pixbuf-src/gdk-pixbuf/io-png.c:993:34: warning: assigning to 'png_charp' (aka 'char *') from 'const char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  993 |                         text.key = unprefixed_key;
+      |                                  ^ ~~~~~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/io-png.c:1079:28: warning: cast from 'gchar *' (aka 'char *') to 'png_textp' (aka 'struct png_text_struct *') increases required alignment from 1 to 8 [-Wcast-align]
+ 1079 |                 text_ptr = (png_textp) g_array_free (text_data, FALSE);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4 warnings generated.
+[22/146] Linking static target gdk-pixbuf/libstaticpixbufloader-png.a
+[23/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/meson-generated_.._gdk-pixbuf-marshal.c.o
+[24/146] Compiling C object gdk-pixbuf/libstaticpixbufloader-gif.a.p/io-gif.c.o
+[25/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/meson-generated_.._gdk-pixbuf-enum-types.c.o
+[26/146] Linking static target gdk-pixbuf/libstaticpixbufloader-gif.a
+[27/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/gdk-pixbuf-data.c.o
+[28/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/gdk-pixbuf-animation.c.o
+[29/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/gdk-pixbuf.c.o
+[30/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/gdk-pixbuf-scale.c.o
+[31/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/gdk-pixbuf-loader.c.o
+[32/146] Compiling C object gdk-pixbuf/libstaticpixbufloader-jpeg.a.p/io-jpeg.c.o
+../pixbuf-src/gdk-pixbuf/io-jpeg.c:113:1: warning: function 'fatal_error_handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+  113 | {
+      | ^
+1 warning generated.
+[33/146] Linking static target gdk-pixbuf/libstaticpixbufloader-jpeg.a
+[34/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/gdk-pixbuf-simple-anim.c.o
+[35/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/gdk-pixbuf-scaled-anim.c.o
+[36/146] Linking static target gdk-pixbuf/pixops/libpixops.a
+[37/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/gdk-pixbuf-util.c.o
+[38/146] Compiling C object gdk-pixbuf/gdk-pixbuf-csource.p/gdk-pixbuf-csource.c.o
+[39/146] Compiling C object gdk-pixbuf/gdk-pixbuf-pixdata.p/gdk-pixbuf-pixdata.c.o
+[40/146] Linking target gdk-pixbuf/pixops/timescale
+[41/146] Building translation po/br/LC_MESSAGES/gdk-pixbuf-br.mo
+[42/146] Building translation po/bs/LC_MESSAGES/gdk-pixbuf-bs.mo
+[43/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/gdk-pixbuf-io.c.o
+../pixbuf-src/gdk-pixbuf/gdk-pixbuf-io.c:224:15: warning: Deprecated pre-processor symbol: replace with "g_path_get_dirname" [-W#pragma-messages]
+  224 |     bin_dir = g_dirname(pathbuf);
+      |               ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gfileutils.h:208:38: note: expanded from macro 'g_dirname'
+  208 | #define g_dirname g_path_get_dirname GLIB_DEPRECATED_MACRO_IN_2_26_FOR(g_path_get_dirname)
+      |                                      ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/glib-visibility.h:40:46: note: expanded from macro 'GLIB_DEPRECATED_MACRO_IN_2_26_FOR'
+   40 | #define GLIB_DEPRECATED_MACRO_IN_2_26_FOR(f) GLIB_DEPRECATED_MACRO_FOR (f)
+      |                                              ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1304:3: note: expanded from macro 'GLIB_DEPRECATED_MACRO_FOR'
+ 1304 |   _GLIB_GNUC_DO_PRAGMA(GCC warning G_STRINGIFY (Deprecated pre-processor symbol: replace with #f))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1301:33: note: expanded from macro '_GLIB_GNUC_DO_PRAGMA'
+ 1301 | #define _GLIB_GNUC_DO_PRAGMA(x) _Pragma(G_STRINGIFY (x))
+      |                                 ^
+<scratch space>:106:6: note: expanded from here
+  106 |  GCC warning "Deprecated pre-processor symbol: replace with \"g_path_get_dirname\""
+      |      ^
+1 warning generated.
+[44/146] Building translation po/ca/LC_MESSAGES/gdk-pixbuf-ca.mo
+[45/146] Building translation po/ca@valencia/LC_MESSAGES/gdk-pixbuf-ca@valencia.mo
+[46/146] Building translation po/crh/LC_MESSAGES/gdk-pixbuf-crh.mo
+[47/146] Building translation po/cs/LC_MESSAGES/gdk-pixbuf-cs.mo
+[48/146] Building translation po/csb/LC_MESSAGES/gdk-pixbuf-csb.mo
+[49/146] Building translation po/cy/LC_MESSAGES/gdk-pixbuf-cy.mo
+[50/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/gdk-pixdata.c.o
+../pixbuf-src/gdk-pixbuf/gdk-pixdata.c:155:13: warning: cast from 'guint8 *' (aka 'unsigned char *') to 'guint32 *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+  155 |   istream = (guint32*) stream;
+      |             ^~~~~~~~~~~~~~~~~
+1 warning generated.
+[51/146] Building translation po/da/LC_MESSAGES/gdk-pixbuf-da.mo
+[52/146] Compiling C object gdk-pixbuf/gdk-pixbuf-query-loaders.p/queryloaders.c.o
+../pixbuf-src/gdk-pixbuf/queryloaders.c:140:27: warning: Deprecated pre-processor symbol: replace with "g_path_get_dirname" [-W#pragma-messages]
+  140 |                 bin_dir = g_dirname (pathbuf);
+      |                           ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gfileutils.h:208:38: note: expanded from macro 'g_dirname'
+  208 | #define g_dirname g_path_get_dirname GLIB_DEPRECATED_MACRO_IN_2_26_FOR(g_path_get_dirname)
+      |                                      ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/glib-visibility.h:40:46: note: expanded from macro 'GLIB_DEPRECATED_MACRO_IN_2_26_FOR'
+   40 | #define GLIB_DEPRECATED_MACRO_IN_2_26_FOR(f) GLIB_DEPRECATED_MACRO_FOR (f)
+      |                                              ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1304:3: note: expanded from macro 'GLIB_DEPRECATED_MACRO_FOR'
+ 1304 |   _GLIB_GNUC_DO_PRAGMA(GCC warning G_STRINGIFY (Deprecated pre-processor symbol: replace with #f))
+      |   ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1301:33: note: expanded from macro '_GLIB_GNUC_DO_PRAGMA'
+ 1301 | #define _GLIB_GNUC_DO_PRAGMA(x) _Pragma(G_STRINGIFY (x))
+      |                                 ^
+<scratch space>:70:6: note: expanded from here
+   70 |  GCC warning "Deprecated pre-processor symbol: replace with \"g_path_get_dirname\""
+      |      ^
+../pixbuf-src/gdk-pixbuf/queryloaders.c:449:43: warning: Deprecated pre-processor symbol [-W#pragma-messages]
+  449 |                                 if (len > SOEXT_LEN &&
+      |                                           ^
+../pixbuf-src/gdk-pixbuf/queryloaders.c:43:28: note: expanded from macro 'SOEXT_LEN'
+   43 | #define SOEXT_LEN (strlen (SOEXT))
+      |                            ^
+../pixbuf-src/gdk-pixbuf/queryloaders.c:41:20: note: expanded from macro 'SOEXT'
+   41 | #define SOEXT ("." G_MODULE_SUFFIX)
+      |                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include/glibconfig.h:195:30: note: expanded from macro 'G_MODULE_SUFFIX'
+  195 | #define G_MODULE_SUFFIX "so" GLIB_DEPRECATED_MACRO_IN_2_76
+      |                              ^
+note: (skipping 1 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1302:31: note: expanded from macro 'GLIB_DEPRECATED_MACRO'
+ 1302 | #define GLIB_DEPRECATED_MACRO _GLIB_GNUC_DO_PRAGMA(GCC warning "Deprecated pre-processor symbol")
+      |                               ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1301:33: note: expanded from macro '_GLIB_GNUC_DO_PRAGMA'
+ 1301 | #define _GLIB_GNUC_DO_PRAGMA(x) _Pragma(G_STRINGIFY (x))
+      |                                 ^
+<scratch space>:89:6: note: expanded from here
+   89 |  GCC warning "Deprecated pre-processor symbol"
+      |      ^
+../pixbuf-src/gdk-pixbuf/queryloaders.c:450:58: warning: Deprecated pre-processor symbol [-W#pragma-messages]
+  450 |                                     strcmp (dent + len - SOEXT_LEN, SOEXT) == 0) {
+      |                                                          ^
+../pixbuf-src/gdk-pixbuf/queryloaders.c:43:28: note: expanded from macro 'SOEXT_LEN'
+   43 | #define SOEXT_LEN (strlen (SOEXT))
+      |                            ^
+../pixbuf-src/gdk-pixbuf/queryloaders.c:41:20: note: expanded from macro 'SOEXT'
+   41 | #define SOEXT ("." G_MODULE_SUFFIX)
+      |                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include/glibconfig.h:195:30: note: expanded from macro 'G_MODULE_SUFFIX'
+  195 | #define G_MODULE_SUFFIX "so" GLIB_DEPRECATED_MACRO_IN_2_76
+      |                              ^
+note: (skipping 1 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1302:31: note: expanded from macro 'GLIB_DEPRECATED_MACRO'
+ 1302 | #define GLIB_DEPRECATED_MACRO _GLIB_GNUC_DO_PRAGMA(GCC warning "Deprecated pre-processor symbol")
+      |                               ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1301:33: note: expanded from macro '_GLIB_GNUC_DO_PRAGMA'
+ 1301 | #define _GLIB_GNUC_DO_PRAGMA(x) _Pragma(G_STRINGIFY (x))
+      |                                 ^
+<scratch space>:92:6: note: expanded from here
+   92 |  GCC warning "Deprecated pre-processor symbol"
+      |      ^
+../pixbuf-src/gdk-pixbuf/queryloaders.c:450:69: warning: Deprecated pre-processor symbol [-W#pragma-messages]
+  450 |                                     strcmp (dent + len - SOEXT_LEN, SOEXT) == 0) {
+      |                                                                     ^
+../pixbuf-src/gdk-pixbuf/queryloaders.c:41:20: note: expanded from macro 'SOEXT'
+   41 | #define SOEXT ("." G_MODULE_SUFFIX)
+      |                    ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/glib-2.0/include/glibconfig.h:195:30: note: expanded from macro 'G_MODULE_SUFFIX'
+  195 | #define G_MODULE_SUFFIX "so" GLIB_DEPRECATED_MACRO_IN_2_76
+      |                              ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/glib-visibility.h:889:39: note: expanded from macro 'GLIB_DEPRECATED_MACRO_IN_2_76'
+  889 | #define GLIB_DEPRECATED_MACRO_IN_2_76 GLIB_DEPRECATED_MACRO
+      |                                       ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1302:31: note: expanded from macro 'GLIB_DEPRECATED_MACRO'
+ 1302 | #define GLIB_DEPRECATED_MACRO _GLIB_GNUC_DO_PRAGMA(GCC warning "Deprecated pre-processor symbol")
+      |                               ^
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/glib-2.0/glib/gmacros.h:1301:33: note: expanded from macro '_GLIB_GNUC_DO_PRAGMA'
+ 1301 | #define _GLIB_GNUC_DO_PRAGMA(x) _Pragma(G_STRINGIFY (x))
+      |                                 ^
+<scratch space>:95:6: note: expanded from here
+   95 |  GCC warning "Deprecated pre-processor symbol"
+      |      ^
+4 warnings generated.
+[53/146] Building translation po/de/LC_MESSAGES/gdk-pixbuf-de.mo
+[54/146] Building translation po/dz/LC_MESSAGES/gdk-pixbuf-dz.mo
+[55/146] Building translation po/el/LC_MESSAGES/gdk-pixbuf-el.mo
+[56/146] Building translation po/en_CA/LC_MESSAGES/gdk-pixbuf-en_CA.mo
+[57/146] Building translation po/en_GB/LC_MESSAGES/gdk-pixbuf-en_GB.mo
+[58/146] Building translation po/en@shaw/LC_MESSAGES/gdk-pixbuf-en@shaw.mo
+[59/146] Building translation po/eo/LC_MESSAGES/gdk-pixbuf-eo.mo
+[60/146] Building translation po/es/LC_MESSAGES/gdk-pixbuf-es.mo
+[61/146] Building translation po/et/LC_MESSAGES/gdk-pixbuf-et.mo
+[62/146] Building translation po/eu/LC_MESSAGES/gdk-pixbuf-eu.mo
+[63/146] Building translation po/fa/LC_MESSAGES/gdk-pixbuf-fa.mo
+[64/146] Building translation po/fi/LC_MESSAGES/gdk-pixbuf-fi.mo
+[65/146] Building translation po/fr/LC_MESSAGES/gdk-pixbuf-fr.mo
+[66/146] Building translation po/fur/LC_MESSAGES/gdk-pixbuf-fur.mo
+[67/146] Building translation po/ga/LC_MESSAGES/gdk-pixbuf-ga.mo
+[68/146] Building translation po/gl/LC_MESSAGES/gdk-pixbuf-gl.mo
+[69/146] Building translation po/gu/LC_MESSAGES/gdk-pixbuf-gu.mo
+[70/146] Building translation po/he/LC_MESSAGES/gdk-pixbuf-he.mo
+[71/146] Building translation po/hi/LC_MESSAGES/gdk-pixbuf-hi.mo
+[72/146] Building translation po/hr/LC_MESSAGES/gdk-pixbuf-hr.mo
+[73/146] Building translation po/hu/LC_MESSAGES/gdk-pixbuf-hu.mo
+[74/146] Building translation po/hy/LC_MESSAGES/gdk-pixbuf-hy.mo
+[75/146] Building translation po/ia/LC_MESSAGES/gdk-pixbuf-ia.mo
+[76/146] Building translation po/id/LC_MESSAGES/gdk-pixbuf-id.mo
+[77/146] Building translation po/io/LC_MESSAGES/gdk-pixbuf-io.mo
+[78/146] Building translation po/is/LC_MESSAGES/gdk-pixbuf-is.mo
+[79/146] Building translation po/it/LC_MESSAGES/gdk-pixbuf-it.mo
+[80/146] Building translation po/ja/LC_MESSAGES/gdk-pixbuf-ja.mo
+[81/146] Building translation po/ka/LC_MESSAGES/gdk-pixbuf-ka.mo
+[82/146] Building translation po/kab/LC_MESSAGES/gdk-pixbuf-kab.mo
+[83/146] Building translation po/kk/LC_MESSAGES/gdk-pixbuf-kk.mo
+[84/146] Building translation po/km/LC_MESSAGES/gdk-pixbuf-km.mo
+[85/146] Building translation po/kn/LC_MESSAGES/gdk-pixbuf-kn.mo
+[86/146] Building translation po/ko/LC_MESSAGES/gdk-pixbuf-ko.mo
+[87/146] Building translation po/ku/LC_MESSAGES/gdk-pixbuf-ku.mo
+[88/146] Building translation po/li/LC_MESSAGES/gdk-pixbuf-li.mo
+[89/146] Building translation po/lo/LC_MESSAGES/gdk-pixbuf-lo.mo
+[90/146] Building translation po/lt/LC_MESSAGES/gdk-pixbuf-lt.mo
+[91/146] Building translation po/lv/LC_MESSAGES/gdk-pixbuf-lv.mo
+[92/146] Building translation po/mi/LC_MESSAGES/gdk-pixbuf-mi.mo
+[93/146] Building translation po/mai/LC_MESSAGES/gdk-pixbuf-mai.mo
+[94/146] Building translation po/mk/LC_MESSAGES/gdk-pixbuf-mk.mo
+[95/146] Building translation po/ml/LC_MESSAGES/gdk-pixbuf-ml.mo
+[96/146] Building translation po/mn/LC_MESSAGES/gdk-pixbuf-mn.mo
+[97/146] Building translation po/mr/LC_MESSAGES/gdk-pixbuf-mr.mo
+[98/146] Building translation po/ms/LC_MESSAGES/gdk-pixbuf-ms.mo
+[99/146] Building translation po/my/LC_MESSAGES/gdk-pixbuf-my.mo
+[100/146] Building translation po/nb/LC_MESSAGES/gdk-pixbuf-nb.mo
+[101/146] Building translation po/nds/LC_MESSAGES/gdk-pixbuf-nds.mo
+[102/146] Building translation po/nl/LC_MESSAGES/gdk-pixbuf-nl.mo
+[103/146] Building translation po/ne/LC_MESSAGES/gdk-pixbuf-ne.mo
+[104/146] Building translation po/nn/LC_MESSAGES/gdk-pixbuf-nn.mo
+[105/146] Building translation po/nso/LC_MESSAGES/gdk-pixbuf-nso.mo
+[106/146] Building translation po/oc/LC_MESSAGES/gdk-pixbuf-oc.mo
+[107/146] Building translation po/or/LC_MESSAGES/gdk-pixbuf-or.mo
+[108/146] Building translation po/pa/LC_MESSAGES/gdk-pixbuf-pa.mo
+[109/146] Building translation po/pl/LC_MESSAGES/gdk-pixbuf-pl.mo
+[110/146] Building translation po/ps/LC_MESSAGES/gdk-pixbuf-ps.mo
+[111/146] Building translation po/pt/LC_MESSAGES/gdk-pixbuf-pt.mo
+[112/146] Building translation po/pt_BR/LC_MESSAGES/gdk-pixbuf-pt_BR.mo
+[113/146] Building translation po/ro/LC_MESSAGES/gdk-pixbuf-ro.mo
+[114/146] Building translation po/ru/LC_MESSAGES/gdk-pixbuf-ru.mo
+[115/146] Building translation po/si/LC_MESSAGES/gdk-pixbuf-si.mo
+[116/146] Building translation po/sk/LC_MESSAGES/gdk-pixbuf-sk.mo
+[117/146] Building translation po/sl/LC_MESSAGES/gdk-pixbuf-sl.mo
+[118/146] Building translation po/sq/LC_MESSAGES/gdk-pixbuf-sq.mo
+[119/146] Building translation po/sr/LC_MESSAGES/gdk-pixbuf-sr.mo
+[120/146] Building translation po/sr@ije/LC_MESSAGES/gdk-pixbuf-sr@ije.mo
+[121/146] Building translation po/sr@latin/LC_MESSAGES/gdk-pixbuf-sr@latin.mo
+[122/146] Building translation po/sv/LC_MESSAGES/gdk-pixbuf-sv.mo
+[123/146] Building translation po/ta/LC_MESSAGES/gdk-pixbuf-ta.mo
+[124/146] Building translation po/te/LC_MESSAGES/gdk-pixbuf-te.mo
+[125/146] Building translation po/tg/LC_MESSAGES/gdk-pixbuf-tg.mo
+[126/146] Building translation po/th/LC_MESSAGES/gdk-pixbuf-th.mo
+[127/146] Building translation po/tk/LC_MESSAGES/gdk-pixbuf-tk.mo
+[128/146] Building translation po/tr/LC_MESSAGES/gdk-pixbuf-tr.mo
+[129/146] Building translation po/tt/LC_MESSAGES/gdk-pixbuf-tt.mo
+[130/146] Building translation po/ug/LC_MESSAGES/gdk-pixbuf-ug.mo
+[131/146] Building translation po/uk/LC_MESSAGES/gdk-pixbuf-uk.mo
+[132/146] Building translation po/uz@cyrillic/LC_MESSAGES/gdk-pixbuf-uz@cyrillic.mo
+[133/146] Building translation po/uz/LC_MESSAGES/gdk-pixbuf-uz.mo
+[134/146] Building translation po/vi/LC_MESSAGES/gdk-pixbuf-vi.mo
+[135/146] Building translation po/wa/LC_MESSAGES/gdk-pixbuf-wa.mo
+[136/146] Building translation po/xh/LC_MESSAGES/gdk-pixbuf-xh.mo
+[137/146] Building translation po/yi/LC_MESSAGES/gdk-pixbuf-yi.mo
+[138/146] Building translation po/zh_CN/LC_MESSAGES/gdk-pixbuf-zh_CN.mo
+[139/146] Building translation po/zh_HK/LC_MESSAGES/gdk-pixbuf-zh_HK.mo
+[140/146] Building translation po/zh_TW/LC_MESSAGES/gdk-pixbuf-zh_TW.mo
+[141/146] Compiling C object gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/pixops_pixops.c.o
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:332:29: warning: cast from 'guchar *' (aka 'unsigned char *') to 'guint32 *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+  332 |               INNER_LOOP(4, 4, p32=(guint32*)dest;*p32=*((guint32*)p));
+      |                                    ^~~~~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:281:11: note: expanded from macro 'INNER_LOOP'
+  281 |           ASSIGN_PIXEL;                                         \
+      |           ^~~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:332:51: warning: cast from 'const guchar *' (aka 'const unsigned char *') to 'guint32 *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+  332 |               INNER_LOOP(4, 4, p32=(guint32*)dest;*p32=*((guint32*)p));
+      |                                                          ^~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:281:11: note: expanded from macro 'INNER_LOOP'
+  281 |           ASSIGN_PIXEL;                                         \
+      |           ^~~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:332:29: warning: cast from 'guchar *' (aka 'unsigned char *') to 'guint32 *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+  332 |               INNER_LOOP(4, 4, p32=(guint32*)dest;*p32=*((guint32*)p));
+      |                                    ^~~~~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:288:11: note: expanded from macro 'INNER_LOOP'
+  288 |           ASSIGN_PIXEL;                                         \
+      |           ^~~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:332:51: warning: cast from 'const guchar *' (aka 'const unsigned char *') to 'guint32 *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+  332 |               INNER_LOOP(4, 4, p32=(guint32*)dest;*p32=*((guint32*)p));
+      |                                                          ^~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:288:11: note: expanded from macro 'INNER_LOOP'
+  288 |           ASSIGN_PIXEL;                                         \
+      |           ^~~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:332:29: warning: cast from 'guchar *' (aka 'unsigned char *') to 'guint32 *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+  332 |               INNER_LOOP(4, 4, p32=(guint32*)dest;*p32=*((guint32*)p));
+      |                                    ^~~~~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:296:11: note: expanded from macro 'INNER_LOOP'
+  296 |           ASSIGN_PIXEL;                                         \
+      |           ^~~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:332:51: warning: cast from 'const guchar *' (aka 'const unsigned char *') to 'guint32 *' (aka 'unsigned int *') increases required alignment from 1 to 4 [-Wcast-align]
+  332 |               INNER_LOOP(4, 4, p32=(guint32*)dest;*p32=*((guint32*)p));
+      |                                                          ^~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:296:11: note: expanded from macro 'INNER_LOOP'
+  296 |           ASSIGN_PIXEL;                                         \
+      |           ^~~~~~~~~~~~
+../pixbuf-src/gdk-pixbuf/pixops/pixops.c:796:23: warning: cast from 'char *' to 'int *' increases required alignment from 1 to 4 [-Wcast-align]
+  796 |       pixel_weights = (int *)((char *)weights +
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+  797 |         ((x >> (SCALE_SHIFT - SUBSAMPLE_BITS - 4)) & (SUBSAMPLE_MASK << 4)));
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7 warnings generated.
+[142/146] Linking target gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib
+[143/146] Generating symbol file gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib.p/libgdk_pixbuf-2.0.0.dylib.symbols
+[144/146] Linking target gdk-pixbuf/gdk-pixbuf-query-loaders
+[145/146] Linking target gdk-pixbuf/gdk-pixbuf-csource
+[146/146] Linking target gdk-pixbuf/gdk-pixbuf-pixdata
+ninja: Entering directory `pixbuf-build'
+[0/1] Installing files
+Installing gdk-pixbuf/gdk-pixbuf-marshal.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing gdk-pixbuf/gdk-pixbuf-enum-types.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing gdk-pixbuf/libgdk_pixbuf-2.0.0.dylib to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib
+Installing gdk-pixbuf/gdk-pixbuf-csource to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing gdk-pixbuf/gdk-pixbuf-pixdata to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing gdk-pixbuf/gdk-pixbuf-query-loaders to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin
+Installing po/ab/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ab/LC_MESSAGES
+Installing po/af/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/af/LC_MESSAGES
+Installing po/ang/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ang/LC_MESSAGES
+Installing po/ar/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ar/LC_MESSAGES
+Installing po/as/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/as/LC_MESSAGES
+Installing po/ast/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ast/LC_MESSAGES
+Installing po/az/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/az/LC_MESSAGES
+Installing po/be/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/be/LC_MESSAGES
+Installing po/be@latin/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/be@latin/LC_MESSAGES
+Installing po/bg/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/bg/LC_MESSAGES
+Installing po/bn/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/bn/LC_MESSAGES
+Installing po/bn_IN/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/bn_IN/LC_MESSAGES
+Installing po/br/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/br/LC_MESSAGES
+Installing po/bs/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/bs/LC_MESSAGES
+Installing po/ca/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ca/LC_MESSAGES
+Installing po/ca@valencia/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ca@valencia/LC_MESSAGES
+Installing po/crh/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/crh/LC_MESSAGES
+Installing po/cs/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/cs/LC_MESSAGES
+Installing po/csb/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/csb/LC_MESSAGES
+Installing po/cy/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/cy/LC_MESSAGES
+Installing po/da/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/da/LC_MESSAGES
+Installing po/de/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/de/LC_MESSAGES
+Installing po/dz/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/dz/LC_MESSAGES
+Installing po/el/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/el/LC_MESSAGES
+Installing po/en_CA/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/en_CA/LC_MESSAGES
+Installing po/en_GB/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/en_GB/LC_MESSAGES
+Installing po/en@shaw/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/en@shaw/LC_MESSAGES
+Installing po/eo/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/eo/LC_MESSAGES
+Installing po/es/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/es/LC_MESSAGES
+Installing po/et/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/et/LC_MESSAGES
+Installing po/eu/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/eu/LC_MESSAGES
+Installing po/fa/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/fa/LC_MESSAGES
+Installing po/fi/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/fi/LC_MESSAGES
+Installing po/fr/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/fr/LC_MESSAGES
+Installing po/fur/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/fur/LC_MESSAGES
+Installing po/ga/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ga/LC_MESSAGES
+Installing po/gl/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/gl/LC_MESSAGES
+Installing po/gu/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/gu/LC_MESSAGES
+Installing po/he/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/he/LC_MESSAGES
+Installing po/hi/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/hi/LC_MESSAGES
+Installing po/hr/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/hr/LC_MESSAGES
+Installing po/hu/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/hu/LC_MESSAGES
+Installing po/hy/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/hy/LC_MESSAGES
+Installing po/ia/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ia/LC_MESSAGES
+Installing po/id/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/id/LC_MESSAGES
+Installing po/io/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/io/LC_MESSAGES
+Installing po/is/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/is/LC_MESSAGES
+Installing po/it/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/it/LC_MESSAGES
+Installing po/ja/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ja/LC_MESSAGES
+Installing po/ka/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ka/LC_MESSAGES
+Installing po/kab/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/kab/LC_MESSAGES
+Installing po/kk/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/kk/LC_MESSAGES
+Installing po/km/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/km/LC_MESSAGES
+Installing po/kn/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/kn/LC_MESSAGES
+Installing po/ko/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ko/LC_MESSAGES
+Installing po/ku/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ku/LC_MESSAGES
+Installing po/li/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/li/LC_MESSAGES
+Installing po/lo/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/lo/LC_MESSAGES
+Installing po/lt/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/lt/LC_MESSAGES
+Installing po/lv/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/lv/LC_MESSAGES
+Installing po/mai/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/mai/LC_MESSAGES
+Installing po/mi/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/mi/LC_MESSAGES
+Installing po/mk/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/mk/LC_MESSAGES
+Installing po/ml/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ml/LC_MESSAGES
+Installing po/mn/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/mn/LC_MESSAGES
+Installing po/mr/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/mr/LC_MESSAGES
+Installing po/ms/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ms/LC_MESSAGES
+Installing po/my/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/my/LC_MESSAGES
+Installing po/nb/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/nb/LC_MESSAGES
+Installing po/nds/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/nds/LC_MESSAGES
+Installing po/ne/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ne/LC_MESSAGES
+Installing po/nl/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/nl/LC_MESSAGES
+Installing po/nn/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/nn/LC_MESSAGES
+Installing po/nso/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/nso/LC_MESSAGES
+Installing po/oc/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/oc/LC_MESSAGES
+Installing po/or/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/or/LC_MESSAGES
+Installing po/pa/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/pa/LC_MESSAGES
+Installing po/pl/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/pl/LC_MESSAGES
+Installing po/ps/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ps/LC_MESSAGES
+Installing po/pt/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/pt/LC_MESSAGES
+Installing po/pt_BR/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/pt_BR/LC_MESSAGES
+Installing po/ro/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ro/LC_MESSAGES
+Installing po/ru/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ru/LC_MESSAGES
+Installing po/si/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/si/LC_MESSAGES
+Installing po/sk/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/sk/LC_MESSAGES
+Installing po/sl/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/sl/LC_MESSAGES
+Installing po/sq/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/sq/LC_MESSAGES
+Installing po/sr/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/sr/LC_MESSAGES
+Installing po/sr@ije/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/sr@ije/LC_MESSAGES
+Installing po/sr@latin/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/sr@latin/LC_MESSAGES
+Installing po/sv/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/sv/LC_MESSAGES
+Installing po/ta/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ta/LC_MESSAGES
+Installing po/te/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/te/LC_MESSAGES
+Installing po/tg/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/tg/LC_MESSAGES
+Installing po/th/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/th/LC_MESSAGES
+Installing po/tk/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/tk/LC_MESSAGES
+Installing po/tr/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/tr/LC_MESSAGES
+Installing po/tt/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/tt/LC_MESSAGES
+Installing po/ug/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/ug/LC_MESSAGES
+Installing po/uk/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/uk/LC_MESSAGES
+Installing po/uz/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/uz/LC_MESSAGES
+Installing po/uz@cyrillic/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/uz@cyrillic/LC_MESSAGES
+Installing po/vi/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/vi/LC_MESSAGES
+Installing po/wa/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/wa/LC_MESSAGES
+Installing po/xh/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/xh/LC_MESSAGES
+Installing po/yi/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/yi/LC_MESSAGES
+Installing po/zh_CN/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/zh_CN/LC_MESSAGES
+Installing po/zh_HK/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/zh_HK/LC_MESSAGES
+Installing po/zh_TW/LC_MESSAGES/gdk-pixbuf.mo to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/share/locale/zh_TW/LC_MESSAGES
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-animation.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-core.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-io.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-loader.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-macros.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-simple-anim.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixbuf-transform.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-src/gdk-pixbuf/gdk-pixdata.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-build/gdk-pixbuf/gdk-pixbuf-features.h to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/include/gdk-pixbuf-2.0/gdk-pixbuf
+Installing /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/pixbuf-build/meson-private/gdk-pixbuf-2.0.pc to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/pkgconfig
+Installing symlink pointing to libgdk_pixbuf-2.0.0.dylib to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgdk_pixbuf-2.0.dylib

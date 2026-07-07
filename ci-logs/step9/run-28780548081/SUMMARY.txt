@@ -1,0 +1,218 @@
++ echo 'Run ID: 28780548081'
+Run ID: 28780548081
++ echo 'Commit: 82740d51c1b56cf688098df78b005cf70eab637c'
+Commit: 82740d51c1b56cf688098df78b005cf70eab637c
+++ date -u
++ echo 'Date: Mon Jul  6 09:16:48 UTC 2026'
+Date: Mon Jul  6 09:16:48 UTC 2026
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: gtk-build.log ====================='
+===================== TAIL: gtk-build.log =====================
++ '[' -f gtk-build.log ']'
++ tail -60 gtk-build.log
+[1072/1130] Building translation po/ky/LC_MESSAGES/gtk40-ky.mo
+[1073/1130] Building translation po/ka/LC_MESSAGES/gtk40-ka.mo
+[1074/1130] Building translation po/lg/LC_MESSAGES/gtk40-lg.mo
+[1075/1130] Building translation po/li/LC_MESSAGES/gtk40-li.mo
+[1076/1130] Building translation po/kk/LC_MESSAGES/gtk40-kk.mo
+[1077/1130] Building translation po/lv/LC_MESSAGES/gtk40-lv.mo
+[1078/1130] Building translation po/lt/LC_MESSAGES/gtk40-lt.mo
+[1079/1130] Building translation po/mi/LC_MESSAGES/gtk40-mi.mo
+[1080/1130] Building translation po/mai/LC_MESSAGES/gtk40-mai.mo
+[1081/1130] Building translation po/mjw/LC_MESSAGES/gtk40-mjw.mo
+[1082/1130] Building translation po/mk/LC_MESSAGES/gtk40-mk.mo
+[1083/1130] Building translation po/mn/LC_MESSAGES/gtk40-mn.mo
+[1084/1130] Building translation po/mr/LC_MESSAGES/gtk40-mr.mo
+[1085/1130] Building translation po/ml/LC_MESSAGES/gtk40-ml.mo
+[1086/1130] Building translation po/ms/LC_MESSAGES/gtk40-ms.mo
+[1087/1130] Building translation po/nds/LC_MESSAGES/gtk40-nds.mo
+[1088/1130] Building translation po/nb/LC_MESSAGES/gtk40-nb.mo
+[1089/1130] Building translation po/my/LC_MESSAGES/gtk40-my.mo
+[1090/1130] Building translation po/nn/LC_MESSAGES/gtk40-nn.mo
+[1091/1130] Building translation po/nso/LC_MESSAGES/gtk40-nso.mo
+[1092/1130] Building translation po/nl/LC_MESSAGES/gtk40-nl.mo
+[1093/1130] Building translation po/ne/LC_MESSAGES/gtk40-ne.mo
+[1094/1130] Building translation po/or/LC_MESSAGES/gtk40-or.mo
+[1095/1130] Building translation po/oc/LC_MESSAGES/gtk40-oc.mo
+[1096/1130] Building translation po/pl/LC_MESSAGES/gtk40-pl.mo
+[1097/1130] Building translation po/ps/LC_MESSAGES/gtk40-ps.mo
+[1098/1130] Building translation po/pa/LC_MESSAGES/gtk40-pa.mo
+[1099/1130] Building translation po/pt/LC_MESSAGES/gtk40-pt.mo
+[1100/1130] Building translation po/ru/LC_MESSAGES/gtk40-ru.mo
+[1101/1130] Building translation po/rw/LC_MESSAGES/gtk40-rw.mo
+[1102/1130] Building translation po/ro/LC_MESSAGES/gtk40-ro.mo
+[1103/1130] Building translation po/si/LC_MESSAGES/gtk40-si.mo
+[1104/1130] Building translation po/sl/LC_MESSAGES/gtk40-sl.mo
+[1105/1130] Building translation po/sk/LC_MESSAGES/gtk40-sk.mo
+[1106/1130] Building translation po/pt_BR/LC_MESSAGES/gtk40-pt_BR.mo
+[1107/1130] Building translation po/sq/LC_MESSAGES/gtk40-sq.mo
+[1108/1130] Linking target tools/gtk4-launch
+ld: warning: ignoring duplicate libraries: '-lz'
+[1109/1130] Building translation po/sr@ije/LC_MESSAGES/gtk40-sr@ije.mo
+[1110/1130] Building translation po/sr/LC_MESSAGES/gtk40-sr.mo
+[1111/1130] Building translation po/ta/LC_MESSAGES/gtk40-ta.mo
+[1112/1130] Building translation po/te/LC_MESSAGES/gtk40-te.mo
+[1113/1130] Building translation po/sv/LC_MESSAGES/gtk40-sv.mo
+[1114/1130] Building translation po/tg/LC_MESSAGES/gtk40-tg.mo
+[1115/1130] Building translation po/tt/LC_MESSAGES/gtk40-tt.mo
+[1116/1130] Building translation po/sr@latin/LC_MESSAGES/gtk40-sr@latin.mo
+[1117/1130] Building translation po/tr/LC_MESSAGES/gtk40-tr.mo
+[1118/1130] Building translation po/th/LC_MESSAGES/gtk40-th.mo
+[1119/1130] Building translation po/ur/LC_MESSAGES/gtk40-ur.mo
+[1120/1130] Building translation po/uz@cyrillic/LC_MESSAGES/gtk40-uz@cyrillic.mo
+[1121/1130] Building translation po/uk/LC_MESSAGES/gtk40-uk.mo
+[1122/1130] Building translation po/ug/LC_MESSAGES/gtk40-ug.mo
+[1123/1130] Building translation po/wa/LC_MESSAGES/gtk40-wa.mo
+[1124/1130] Building translation po/xh/LC_MESSAGES/gtk40-xh.mo
+[1125/1130] Building translation po/vi/LC_MESSAGES/gtk40-vi.mo
+[1126/1130] Building translation po/uz/LC_MESSAGES/gtk40-uz.mo
+[1127/1130] Building translation po/yi/LC_MESSAGES/gtk40-yi.mo
+[1128/1130] Building translation po/zh_HK/LC_MESSAGES/gtk40-zh_HK.mo
+[1129/1130] Building translation po/zh_CN/LC_MESSAGES/gtk40-zh_CN.mo
+[1130/1130] Building translation po/zh_TW/LC_MESSAGES/gtk40-zh_TW.mo
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: adw-setup.log ====================='
+===================== TAIL: adw-setup.log =====================
++ '[' -f adw-setup.log ']'
++ tail -60 adw-setup.log
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wswitch-default: YES 
+Compiler for C supports arguments -Wswitch-enum: YES 
+Compiler for C supports arguments -Wtype-limits: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wunused-function: YES 
+Compiler for C supports arguments -Wfloat-equal: YES 
+Compiler for C supports arguments -fstack-protector-strong: YES 
+Program sassc found: YES (/opt/homebrew/bin/sassc)
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Build-time dependency gio-2.0 found: YES 2.84.4
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Dependency gio-2.0 for build machine found: YES 2.84.4 (cached)
+Program /opt/homebrew/bin/glib-compile-resources found: YES (/opt/homebrew/bin/glib-compile-resources)
+Configuring adw-version.h using configuration
+Build-time dependency glib-2.0 found: YES 2.84.4
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-mkenums)
+Dependency glib-2.0 for build machine found: YES 2.84.4 (cached)
+Program /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal found: YES (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/bin/glib-genmarshal)
+Program gen-public-types.py found: YES (/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/adw-src/src/gen-public-types.py)
+Library m found: YES
+Configuring config.h using configuration
+Checking if "ld_supports_version_script" links: NO 
+Found pkg-config: YES (/opt/homebrew/bin/pkg-config) 2.5.1
+Program msgfmt found: YES (/opt/homebrew/opt/gettext/bin/msgfmt)
+Program msginit found: YES (/opt/homebrew/opt/gettext/bin/msginit)
+Program msgmerge found: YES (/opt/homebrew/opt/gettext/bin/msgmerge)
+Program xgettext found: YES (/opt/homebrew/opt/gettext/bin/xgettext)
+Configuring run using configuration
+Build targets in project: 72
+
+libadwaita 1.9.1
+
+  Options
+    Tests          : false
+    Examples       : false
+    Documentation  : false
+    Introspection  : false
+    Vapi           : false
+
+  User defined options
+    Cross files    : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-pfx.txt
+    buildtype      : release
+    default_library: shared
+    documentation  : false
+    examples       : false
+    introspection  : disabled
+    prefix         : /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out
+    tests          : false
+    vapi           : false
+    wrap_mode      : nofallback
+
+Found ninja-1.13.2 at /opt/homebrew/bin/ninja
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: adw-build.log ====================='
+===================== TAIL: adw-build.log =====================
++ '[' -f adw-build.log ']'
++ tail -60 adw-build.log
+[141/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-status-page.c.o
+[142/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-swipeable.c.o
+[143/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-switch-row.c.o
+[144/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-tab-bar.c.o
+[145/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-swipe-tracker.c.o
+[146/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-tab-button.c.o
+[147/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-timed-animation.c.o
+[148/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-tab-overview.c.o
+[149/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-toast.c.o
+[150/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-version.c.o
+[151/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-toast-overlay.c.o
+[152/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-tab-view.c.o
+[153/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-toolbar-view.c.o
+[154/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-view-switcher.c.o
+[155/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-toggle-group.c.o
+[156/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-view-stack.c.o
+[157/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-view-switcher-bar.c.o
+[158/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-view-switcher-sidebar.c.o
+[159/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-view-switcher-title.c.o
+[160/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-window.c.o
+[161/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-window-title.c.o
+[162/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-bidi.c.o
+[163/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-wrap-box.c.o
+[164/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-back-button.c.o
+[165/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-adaptive-preview.c.o
+[166/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-wrap-layout.c.o
+[167/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-color-utils.c.o
+[168/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-dialog-host.c.o
+[169/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-fading-label.c.o
+[170/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-gizmo.c.o
+[171/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-floating-sheet.c.o
+[172/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-gtkbuilder-utils.c.o
+[173/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-indicator-bin.c.o
+[174/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-link-row.c.o
+../adw-src/src/adw-link-row.c:80:1: warning: unused function 'is_touchscreen' [-Wunused-function]
+   80 | is_touchscreen (GtkGesture *gesture)
+      | ^~~~~~~~~~~~~~
+1 warning generated.
+[175/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-settings.c.o
+[176/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-settings-impl.c.o
+[177/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-inspector-page.c.o
+[178/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-settings-impl-gsettings.c.o
+[179/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-settings-impl-legacy.c.o
+[180/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-shortcut-row.c.o
+[181/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-sheet-controls.c.o
+[182/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-shadow-helper.c.o
+[183/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-tab.c.o
+[184/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-toast-widget.c.o
+[185/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-tab-thumbnail.c.o
+[186/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-tab-box.c.o
+[187/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-view-switcher-button.c.o
+[188/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-tab-grid.c.o
+[189/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-settings-impl-portal.c.o
+[190/191] Compiling C object src/libadwaita-1.0.dylib.p/adw-widget-utils.c.o
+[191/191] Linking target src/libadwaita-1.0.dylib
+FAILED: [code=1] src/libadwaita-1.0.dylib 
+/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-cc-iphoneos.sh  -o src/libadwaita-1.0.dylib src/libadwaita-1.0.dylib.p/meson-generated_.._adw-enums.c.o src/libadwaita-1.0.dylib.p/meson-generated_.._adw-enums-private.c.o src/libadwaita-1.0.dylib.p/meson-generated_.._adw-marshalers.c.o src/libadwaita-1.0.dylib.p/meson-generated_.._adw-resources.c.o src/libadwaita-1.0.dylib.p/meson-generated_.._stylesheet_adwaita-stylesheet-resources.c.o src/libadwaita-1.0.dylib.p/meson-generated_.._adw-public-types.c.o src/libadwaita-1.0.dylib.p/adw-about-dialog.c.o src/libadwaita-1.0.dylib.p/adw-about-window.c.o src/libadwaita-1.0.dylib.p/adw-accent-color.c.o src/libadwaita-1.0.dylib.p/adw-action-row.c.o src/libadwaita-1.0.dylib.p/adw-alert-dialog.c.o src/libadwaita-1.0.dylib.p/adw-animation.c.o src/libadwaita-1.0.dylib.p/adw-animation-target.c.o src/libadwaita-1.0.dylib.p/adw-animation-util.c.o src/libadwaita-1.0.dylib.p/adw-application.c.o src/libadwaita-1.0.dylib.p/adw-application-window.c.o src/libadwaita-1.0.dylib.p/adw-avatar.c.o src/libadwaita-1.0.dylib.p/adw-banner.c.o src/libadwaita-1.0.dylib.p/adw-bin.c.o src/libadwaita-1.0.dylib.p/adw-bottom-sheet.c.o src/libadwaita-1.0.dylib.p/adw-breakpoint.c.o src/libadwaita-1.0.dylib.p/adw-breakpoint-bin.c.o src/libadwaita-1.0.dylib.p/adw-button-content.c.o src/libadwaita-1.0.dylib.p/adw-button-row.c.o src/libadwaita-1.0.dylib.p/adw-carousel.c.o src/libadwaita-1.0.dylib.p/adw-carousel-indicator-dots.c.o src/libadwaita-1.0.dylib.p/adw-carousel-indicator-lines.c.o src/libadwaita-1.0.dylib.p/adw-clamp.c.o src/libadwaita-1.0.dylib.p/adw-clamp-layout.c.o src/libadwaita-1.0.dylib.p/adw-clamp-scrollable.c.o src/libadwaita-1.0.dylib.p/adw-combo-row.c.o src/libadwaita-1.0.dylib.p/adw-dialog.c.o src/libadwaita-1.0.dylib.p/adw-easing.c.o src/libadwaita-1.0.dylib.p/adw-entry-row.c.o src/libadwaita-1.0.dylib.p/adw-enum-list-model.c.o src/libadwaita-1.0.dylib.p/adw-expander-row.c.o src/libadwaita-1.0.dylib.p/adw-flap.c.o src/libadwaita-1.0.dylib.p/adw-fold-threshold-policy.c.o src/libadwaita-1.0.dylib.p/adw-header-bar.c.o src/libadwaita-1.0.dylib.p/adw-inline-view-switcher.c.o src/libadwaita-1.0.dylib.p/adw-layout.c.o src/libadwaita-1.0.dylib.p/adw-layout-slot.c.o src/libadwaita-1.0.dylib.p/adw-leaflet.c.o src/libadwaita-1.0.dylib.p/adw-length-unit.c.o src/libadwaita-1.0.dylib.p/adw-main.c.o src/libadwaita-1.0.dylib.p/adw-message-dialog.c.o src/libadwaita-1.0.dylib.p/adw-multi-layout-view.c.o src/libadwaita-1.0.dylib.p/adw-navigation-direction.c.o src/libadwaita-1.0.dylib.p/adw-navigation-split-view.c.o src/libadwaita-1.0.dylib.p/adw-navigation-view.c.o src/libadwaita-1.0.dylib.p/adw-overlay-split-view.c.o src/libadwaita-1.0.dylib.p/adw-password-entry-row.c.o src/libadwaita-1.0.dylib.p/adw-preferences-dialog.c.o src/libadwaita-1.0.dylib.p/adw-preferences-group.c.o src/libadwaita-1.0.dylib.p/adw-preferences-page.c.o src/libadwaita-1.0.dylib.p/adw-preferences-row.c.o src/libadwaita-1.0.dylib.p/adw-preferences-window.c.o src/libadwaita-1.0.dylib.p/adw-shortcut-label.c.o src/libadwaita-1.0.dylib.p/adw-shortcuts-dialog.c.o src/libadwaita-1.0.dylib.p/adw-shortcuts-item.c.o src/libadwaita-1.0.dylib.p/adw-shortcuts-section.c.o src/libadwaita-1.0.dylib.p/adw-sidebar.c.o src/libadwaita-1.0.dylib.p/adw-sidebar-item.c.o src/libadwaita-1.0.dylib.p/adw-sidebar-section.c.o src/libadwaita-1.0.dylib.p/adw-spin-row.c.o src/libadwaita-1.0.dylib.p/adw-spinner.c.o src/libadwaita-1.0.dylib.p/adw-spinner-paintable.c.o src/libadwaita-1.0.dylib.p/adw-split-button.c.o src/libadwaita-1.0.dylib.p/adw-spring-animation.c.o src/libadwaita-1.0.dylib.p/adw-spring-params.c.o src/libadwaita-1.0.dylib.p/adw-squeezer.c.o src/libadwaita-1.0.dylib.p/adw-style-manager.c.o src/libadwaita-1.0.dylib.p/adw-status-page.c.o src/libadwaita-1.0.dylib.p/adw-swipe-tracker.c.o src/libadwaita-1.0.dylib.p/adw-swipeable.c.o src/libadwaita-1.0.dylib.p/adw-switch-row.c.o src/libadwaita-1.0.dylib.p/adw-tab-bar.c.o src/libadwaita-1.0.dylib.p/adw-tab-button.c.o src/libadwaita-1.0.dylib.p/adw-tab-overview.c.o src/libadwaita-1.0.dylib.p/adw-tab-view.c.o src/libadwaita-1.0.dylib.p/adw-timed-animation.c.o src/libadwaita-1.0.dylib.p/adw-toast.c.o src/libadwaita-1.0.dylib.p/adw-toast-overlay.c.o src/libadwaita-1.0.dylib.p/adw-toggle-group.c.o src/libadwaita-1.0.dylib.p/adw-toolbar-view.c.o src/libadwaita-1.0.dylib.p/adw-version.c.o src/libadwaita-1.0.dylib.p/adw-view-stack.c.o src/libadwaita-1.0.dylib.p/adw-view-switcher.c.o src/libadwaita-1.0.dylib.p/adw-view-switcher-bar.c.o src/libadwaita-1.0.dylib.p/adw-view-switcher-sidebar.c.o src/libadwaita-1.0.dylib.p/adw-view-switcher-title.c.o src/libadwaita-1.0.dylib.p/adw-window.c.o src/libadwaita-1.0.dylib.p/adw-window-title.c.o src/libadwaita-1.0.dylib.p/adw-wrap-box.c.o src/libadwaita-1.0.dylib.p/adw-wrap-layout.c.o src/libadwaita-1.0.dylib.p/adw-adaptive-preview.c.o src/libadwaita-1.0.dylib.p/adw-back-button.c.o src/libadwaita-1.0.dylib.p/adw-bidi.c.o src/libadwaita-1.0.dylib.p/adw-color-utils.c.o src/libadwaita-1.0.dylib.p/adw-dialog-host.c.o src/libadwaita-1.0.dylib.p/adw-fading-label.c.o src/libadwaita-1.0.dylib.p/adw-floating-sheet.c.o src/libadwaita-1.0.dylib.p/adw-gizmo.c.o src/libadwaita-1.0.dylib.p/adw-gtkbuilder-utils.c.o src/libadwaita-1.0.dylib.p/adw-indicator-bin.c.o src/libadwaita-1.0.dylib.p/adw-inspector-page.c.o src/libadwaita-1.0.dylib.p/adw-link-row.c.o src/libadwaita-1.0.dylib.p/adw-settings.c.o src/libadwaita-1.0.dylib.p/adw-settings-impl.c.o src/libadwaita-1.0.dylib.p/adw-settings-impl-gsettings.c.o src/libadwaita-1.0.dylib.p/adw-settings-impl-legacy.c.o src/libadwaita-1.0.dylib.p/adw-sheet-controls.c.o src/libadwaita-1.0.dylib.p/adw-shadow-helper.c.o src/libadwaita-1.0.dylib.p/adw-shortcut-row.c.o src/libadwaita-1.0.dylib.p/adw-tab.c.o src/libadwaita-1.0.dylib.p/adw-tab-box.c.o src/libadwaita-1.0.dylib.p/adw-tab-grid.c.o src/libadwaita-1.0.dylib.p/adw-tab-thumbnail.c.o src/libadwaita-1.0.dylib.p/adw-toast-widget.c.o src/libadwaita-1.0.dylib.p/adw-view-switcher-button.c.o src/libadwaita-1.0.dylib.p/adw-widget-utils.c.o src/libadwaita-1.0.dylib.p/adw-settings-impl-portal.c.o -Wl,-dead_strip_dylibs -Wl,-headerpad_max_install_names -shared -install_name @rpath/libadwaita-1.0.dylib -compatibility_version 0 -current_version 0 -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mios-version-min=17.0 -Wl,-rpath,/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libglib-2.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libintl.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libfribidi.a /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgio-2.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgobject-2.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgtk-4.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpangocairo-1.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libpango-1.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libharfbuzz.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgdk_pixbuf-2.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo-gobject.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libcairo.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libgraphene-1.0.dylib /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libappstream-stub.a -lm
+ld: building for 'iOS', but linking in object file (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/ios-out/lib/libappstream-stub.a[2](appstream-stub.o)) built for 'iOS-simulator'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: cannot make progress due to previous errors.
++ echo
+
++ for f in gtk-build.log adw-setup.log adw-build.log typelibs.txt
++ echo '===================== TAIL: typelibs.txt ====================='
+===================== TAIL: typelibs.txt =====================
++ '[' -f typelibs.txt ']'
++ echo '(not produced)'
+(not produced)
++ echo
+
