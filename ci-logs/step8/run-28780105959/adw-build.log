@@ -1,0 +1,196 @@
+ninja: Entering directory `adw-build'
+[1/191] Generating glib marshaller header src/adw-marshalers_h
+[2/191] Generating GObject enum file src/adw-enums.h (wrapped by meson because command contains newlines, to capture output)
+[3/191] Generating src/stylesheet/gtk.scss with a custom command
+[4/191] Generating GObject enum file src/adw-enums.c (wrapped by meson because command contains newlines, to capture output)
+[5/191] Generating src/stylesheet/adwaita-stylesheet-resources_h with a custom command
+[6/191] Generating src/stylesheet/adwaita-stylesheet-resources_c with a custom command
+[7/191] Generating src/adw-resources_h with a custom command
+[8/191] Generating glib marshaller source src/adw-marshalers_c
+[9/191] Generating src/adw-resources_c with a custom command
+[10/191] Building translation po/ab/LC_MESSAGES/libadwaita-ab.mo
+[11/191] Building translation po/be/LC_MESSAGES/libadwaita-be.mo
+[12/191] Building translation po/bg/LC_MESSAGES/libadwaita-bg.mo
+[13/191] Building translation po/ca/LC_MESSAGES/libadwaita-ca.mo
+[14/191] Generating GObject enum file src/adw-enums-private.c (wrapped by meson because command contains newlines, to capture output)
+[15/191] Building translation po/cs/LC_MESSAGES/libadwaita-cs.mo
+[16/191] Building translation po/da/LC_MESSAGES/libadwaita-da.mo
+[17/191] Building translation po/de/LC_MESSAGES/libadwaita-de.mo
+[18/191] Building translation po/el/LC_MESSAGES/libadwaita-el.mo
+[19/191] Building translation po/en_GB/LC_MESSAGES/libadwaita-en_GB.mo
+[20/191] Generating GObject enum file src/adw-enums-private.h (wrapped by meson because command contains newlines, to capture output)
+[21/191] Building translation po/eo/LC_MESSAGES/libadwaita-eo.mo
+[22/191] Building translation po/eu/LC_MESSAGES/libadwaita-eu.mo
+[23/191] Building translation po/es/LC_MESSAGES/libadwaita-es.mo
+[24/191] Generating src/adw-public-types.c with a custom command (wrapped by meson to capture output)
+[25/191] Compiling C object src/libadwaita-1.a.p/meson-generated_.._adw-marshalers.c.o
+[26/191] Compiling C object src/libadwaita-1.a.p/meson-generated_.._adw-resources.c.o
+[27/191] Compiling C object src/libadwaita-1.a.p/meson-generated_.._stylesheet_adwaita-stylesheet-resources.c.o
+[28/191] Compiling C object src/libadwaita-1.a.p/meson-generated_.._adw-enums-private.c.o
+[29/191] Compiling C object src/libadwaita-1.a.p/meson-generated_.._adw-enums.c.o
+[30/191] Compiling C object src/libadwaita-1.a.p/meson-generated_.._adw-public-types.c.o
+[31/191] Compiling C object src/libadwaita-1.a.p/adw-accent-color.c.o
+[32/191] Compiling C object src/libadwaita-1.a.p/adw-about-window.c.o
+[33/191] Compiling C object src/libadwaita-1.a.p/adw-about-dialog.c.o
+[34/191] Compiling C object src/libadwaita-1.a.p/adw-action-row.c.o
+[35/191] Compiling C object src/libadwaita-1.a.p/adw-animation-util.c.o
+[36/191] Compiling C object src/libadwaita-1.a.p/adw-alert-dialog.c.o
+[37/191] Compiling C object src/libadwaita-1.a.p/adw-animation.c.o
+[38/191] Compiling C object src/libadwaita-1.a.p/adw-animation-target.c.o
+[39/191] Compiling C object src/libadwaita-1.a.p/adw-application.c.o
+[40/191] Compiling C object src/libadwaita-1.a.p/adw-application-window.c.o
+[41/191] Compiling C object src/libadwaita-1.a.p/adw-avatar.c.o
+[42/191] Compiling C object src/libadwaita-1.a.p/adw-banner.c.o
+[43/191] Compiling C object src/libadwaita-1.a.p/adw-bin.c.o
+[44/191] Compiling C object src/libadwaita-1.a.p/adw-bottom-sheet.c.o
+[45/191] Compiling C object src/libadwaita-1.a.p/adw-button-content.c.o
+[46/191] Compiling C object src/libadwaita-1.a.p/adw-breakpoint-bin.c.o
+[47/191] Compiling C object src/libadwaita-1.a.p/adw-button-row.c.o
+[48/191] Compiling C object src/libadwaita-1.a.p/adw-breakpoint.c.o
+[49/191] Compiling C object src/libadwaita-1.a.p/adw-carousel-indicator-dots.c.o
+[50/191] Compiling C object src/libadwaita-1.a.p/adw-carousel-indicator-lines.c.o
+[51/191] Compiling C object src/libadwaita-1.a.p/adw-clamp.c.o
+[52/191] Compiling C object src/libadwaita-1.a.p/adw-clamp-layout.c.o
+[53/191] Compiling C object src/libadwaita-1.a.p/adw-carousel.c.o
+[54/191] Compiling C object src/libadwaita-1.a.p/adw-easing.c.o
+[55/191] Compiling C object src/libadwaita-1.a.p/adw-clamp-scrollable.c.o
+[56/191] Compiling C object src/libadwaita-1.a.p/adw-combo-row.c.o
+[57/191] Compiling C object src/libadwaita-1.a.p/adw-enum-list-model.c.o
+[58/191] Compiling C object src/libadwaita-1.a.p/adw-dialog.c.o
+[59/191] Compiling C object src/libadwaita-1.a.p/adw-fold-threshold-policy.c.o
+[60/191] Compiling C object src/libadwaita-1.a.p/adw-entry-row.c.o
+[61/191] Compiling C object src/libadwaita-1.a.p/adw-expander-row.c.o
+[62/191] Compiling C object src/libadwaita-1.a.p/adw-layout.c.o
+[63/191] Compiling C object src/libadwaita-1.a.p/adw-inline-view-switcher.c.o
+[64/191] Compiling C object src/libadwaita-1.a.p/adw-flap.c.o
+[65/191] Compiling C object src/libadwaita-1.a.p/adw-header-bar.c.o
+[66/191] Compiling C object src/libadwaita-1.a.p/adw-layout-slot.c.o
+[67/191] Compiling C object src/libadwaita-1.a.p/adw-length-unit.c.o
+[68/191] Compiling C object src/libadwaita-1.a.p/adw-main.c.o
+[69/191] Compiling C object src/libadwaita-1.a.p/adw-navigation-direction.c.o
+[70/191] Compiling C object src/libadwaita-1.a.p/adw-multi-layout-view.c.o
+[71/191] Compiling C object src/libadwaita-1.a.p/adw-message-dialog.c.o
+[72/191] Compiling C object src/libadwaita-1.a.p/adw-leaflet.c.o
+[73/191] Compiling C object src/libadwaita-1.a.p/adw-navigation-split-view.c.o
+[74/191] Compiling C object src/libadwaita-1.a.p/adw-password-entry-row.c.o
+[75/191] Compiling C object src/libadwaita-1.a.p/adw-navigation-view.c.o
+[76/191] Compiling C object src/libadwaita-1.a.p/adw-overlay-split-view.c.o
+[77/191] Compiling C object src/libadwaita-1.a.p/adw-preferences-dialog.c.o
+[78/191] Compiling C object src/libadwaita-1.a.p/adw-preferences-group.c.o
+[79/191] Compiling C object src/libadwaita-1.a.p/adw-preferences-row.c.o
+[80/191] Compiling C object src/libadwaita-1.a.p/adw-preferences-page.c.o
+[81/191] Compiling C object src/libadwaita-1.a.p/adw-preferences-window.c.o
+[82/191] Compiling C object src/libadwaita-1.a.p/adw-shortcut-label.c.o
+[83/191] Compiling C object src/libadwaita-1.a.p/adw-shortcuts-dialog.c.o
+[84/191] Compiling C object src/libadwaita-1.a.p/adw-shortcuts-item.c.o
+[85/191] Compiling C object src/libadwaita-1.a.p/adw-shortcuts-section.c.o
+[86/191] Compiling C object src/libadwaita-1.a.p/adw-sidebar-item.c.o
+[87/191] Compiling C object src/libadwaita-1.a.p/adw-spinner.c.o
+[88/191] Compiling C object src/libadwaita-1.a.p/adw-sidebar-section.c.o
+[89/191] Compiling C object src/libadwaita-1.a.p/adw-sidebar.c.o
+[90/191] Compiling C object src/libadwaita-1.a.p/adw-spring-params.c.o
+[91/191] Compiling C object src/libadwaita-1.a.p/adw-spin-row.c.o
+[92/191] Compiling C object src/libadwaita-1.a.p/adw-spinner-paintable.c.o
+[93/191] Compiling C object src/libadwaita-1.a.p/adw-spring-animation.c.o
+[94/191] Compiling C object src/libadwaita-1.a.p/adw-split-button.c.o
+[95/191] Compiling C object src/libadwaita-1.a.p/adw-style-manager.c.o
+[96/191] Compiling C object src/libadwaita-1.a.p/adw-squeezer.c.o
+[97/191] Compiling C object src/libadwaita-1.a.p/adw-status-page.c.o
+[98/191] Compiling C object src/libadwaita-1.a.p/adw-swipeable.c.o
+[99/191] Compiling C object src/libadwaita-1.a.p/adw-switch-row.c.o
+[100/191] Compiling C object src/libadwaita-1.a.p/adw-swipe-tracker.c.o
+[101/191] Compiling C object src/libadwaita-1.a.p/adw-tab-bar.c.o
+[102/191] Compiling C object src/libadwaita-1.a.p/adw-tab-button.c.o
+[103/191] Compiling C object src/libadwaita-1.a.p/adw-tab-overview.c.o
+[104/191] Compiling C object src/libadwaita-1.a.p/adw-timed-animation.c.o
+[105/191] Compiling C object src/libadwaita-1.a.p/adw-toast.c.o
+[106/191] Compiling C object src/libadwaita-1.a.p/adw-toast-overlay.c.o
+[107/191] Compiling C object src/libadwaita-1.a.p/adw-version.c.o
+[108/191] Compiling C object src/libadwaita-1.a.p/adw-tab-view.c.o
+[109/191] Compiling C object src/libadwaita-1.a.p/adw-toolbar-view.c.o
+[110/191] Compiling C object src/libadwaita-1.a.p/adw-toggle-group.c.o
+[111/191] Compiling C object src/libadwaita-1.a.p/adw-view-switcher.c.o
+[112/191] Compiling C object src/libadwaita-1.a.p/adw-view-stack.c.o
+[113/191] Compiling C object src/libadwaita-1.a.p/adw-view-switcher-bar.c.o
+[114/191] Compiling C object src/libadwaita-1.a.p/adw-view-switcher-title.c.o
+[115/191] Compiling C object src/libadwaita-1.a.p/adw-view-switcher-sidebar.c.o
+[116/191] Compiling C object src/libadwaita-1.a.p/adw-window.c.o
+[117/191] Compiling C object src/libadwaita-1.a.p/adw-window-title.c.o
+[118/191] Compiling C object src/libadwaita-1.a.p/adw-bidi.c.o
+[119/191] Compiling C object src/libadwaita-1.a.p/adw-wrap-box.c.o
+[120/191] Compiling C object src/libadwaita-1.a.p/adw-adaptive-preview.c.o
+[121/191] Compiling C object src/libadwaita-1.a.p/adw-wrap-layout.c.o
+[122/191] Compiling C object src/libadwaita-1.a.p/adw-back-button.c.o
+[123/191] Compiling C object src/libadwaita-1.a.p/adw-color-utils.c.o
+[124/191] Compiling C object src/libadwaita-1.a.p/adw-dialog-host.c.o
+[125/191] Compiling C object src/libadwaita-1.a.p/adw-fading-label.c.o
+[126/191] Compiling C object src/libadwaita-1.a.p/adw-gizmo.c.o
+[127/191] Compiling C object src/libadwaita-1.a.p/adw-floating-sheet.c.o
+[128/191] Compiling C object src/libadwaita-1.a.p/adw-gtkbuilder-utils.c.o
+[129/191] Compiling C object src/libadwaita-1.a.p/adw-indicator-bin.c.o
+[130/191] Compiling C object src/libadwaita-1.a.p/adw-inspector-page.c.o
+[131/191] Compiling C object src/libadwaita-1.a.p/adw-link-row.c.o
+../adw-src/src/adw-link-row.c:80:1: warning: unused function 'is_touchscreen' [-Wunused-function]
+   80 | is_touchscreen (GtkGesture *gesture)
+      | ^~~~~~~~~~~~~~
+1 warning generated.
+[132/191] Compiling C object src/libadwaita-1.a.p/adw-settings.c.o
+[133/191] Compiling C object src/libadwaita-1.a.p/adw-settings-impl.c.o
+[134/191] Compiling C object src/libadwaita-1.a.p/adw-settings-impl-gsettings.c.o
+[135/191] Compiling C object src/libadwaita-1.a.p/adw-settings-impl-legacy.c.o
+[136/191] Compiling C object src/libadwaita-1.a.p/adw-sheet-controls.c.o
+[137/191] Compiling C object src/libadwaita-1.a.p/adw-shadow-helper.c.o
+[138/191] Compiling C object src/libadwaita-1.a.p/adw-shortcut-row.c.o
+[139/191] Compiling C object src/libadwaita-1.a.p/adw-tab.c.o
+[140/191] Compiling C object src/libadwaita-1.a.p/adw-toast-widget.c.o
+[141/191] Compiling C object src/libadwaita-1.a.p/adw-tab-thumbnail.c.o
+[142/191] Compiling C object src/libadwaita-1.a.p/adw-view-switcher-button.c.o
+[143/191] Compiling C object src/libadwaita-1.a.p/adw-tab-grid.c.o
+[144/191] Building translation po/fa/LC_MESSAGES/libadwaita-fa.mo
+[145/191] Building translation po/fi/LC_MESSAGES/libadwaita-fi.mo
+[146/191] Building translation po/fil/LC_MESSAGES/libadwaita-fil.mo
+[147/191] Building translation po/fr/LC_MESSAGES/libadwaita-fr.mo
+[148/191] Building translation po/fur/LC_MESSAGES/libadwaita-fur.mo
+[149/191] Building translation po/gl/LC_MESSAGES/libadwaita-gl.mo
+[150/191] Building translation po/he/LC_MESSAGES/libadwaita-he.mo
+[151/191] Building translation po/hr/LC_MESSAGES/libadwaita-hr.mo
+[152/191] Building translation po/hi/LC_MESSAGES/libadwaita-hi.mo
+[153/191] Building translation po/hu/LC_MESSAGES/libadwaita-hu.mo
+[154/191] Building translation po/ia/LC_MESSAGES/libadwaita-ia.mo
+[155/191] Building translation po/id/LC_MESSAGES/libadwaita-id.mo
+[156/191] Building translation po/it/LC_MESSAGES/libadwaita-it.mo
+[157/191] Building translation po/ja/LC_MESSAGES/libadwaita-ja.mo
+[158/191] Building translation po/ka/LC_MESSAGES/libadwaita-ka.mo
+[159/191] Building translation po/kab/LC_MESSAGES/libadwaita-kab.mo
+[160/191] Building translation po/kk/LC_MESSAGES/libadwaita-kk.mo
+[161/191] Building translation po/ko/LC_MESSAGES/libadwaita-ko.mo
+[162/191] Building translation po/lt/LC_MESSAGES/libadwaita-lt.mo
+[163/191] Building translation po/lv/LC_MESSAGES/libadwaita-lv.mo
+[164/191] Building translation po/nb/LC_MESSAGES/libadwaita-nb.mo
+[165/191] Building translation po/ne/LC_MESSAGES/libadwaita-ne.mo
+[166/191] Building translation po/nl/LC_MESSAGES/libadwaita-nl.mo
+[167/191] Building translation po/nn/LC_MESSAGES/libadwaita-nn.mo
+[168/191] Building translation po/oc/LC_MESSAGES/libadwaita-oc.mo
+[169/191] Building translation po/pa/LC_MESSAGES/libadwaita-pa.mo
+[170/191] Building translation po/pl/LC_MESSAGES/libadwaita-pl.mo
+[171/191] Building translation po/pt/LC_MESSAGES/libadwaita-pt.mo
+[172/191] Building translation po/pt_BR/LC_MESSAGES/libadwaita-pt_BR.mo
+[173/191] Building translation po/ro/LC_MESSAGES/libadwaita-ro.mo
+[174/191] Building translation po/ru/LC_MESSAGES/libadwaita-ru.mo
+[175/191] Compiling C object src/libadwaita-1.a.p/adw-tab-box.c.o
+[176/191] Building translation po/sk/LC_MESSAGES/libadwaita-sk.mo
+[177/191] Building translation po/sl/LC_MESSAGES/libadwaita-sl.mo
+[178/191] Building translation po/sr/LC_MESSAGES/libadwaita-sr.mo
+[179/191] Building translation po/sr@latin/LC_MESSAGES/libadwaita-sr@latin.mo
+[180/191] Building translation po/sv/LC_MESSAGES/libadwaita-sv.mo
+[181/191] Building translation po/th/LC_MESSAGES/libadwaita-th.mo
+[182/191] Building translation po/tr/LC_MESSAGES/libadwaita-tr.mo
+[183/191] Building translation po/ug/LC_MESSAGES/libadwaita-ug.mo
+[184/191] Building translation po/uk/LC_MESSAGES/libadwaita-uk.mo
+[185/191] Building translation po/vi/LC_MESSAGES/libadwaita-vi.mo
+[186/191] Building translation po/uz/LC_MESSAGES/libadwaita-uz.mo
+[187/191] Building translation po/zh_CN/LC_MESSAGES/libadwaita-zh_CN.mo
+[188/191] Building translation po/zh_TW/LC_MESSAGES/libadwaita-zh_TW.mo
+[189/191] Compiling C object src/libadwaita-1.a.p/adw-settings-impl-portal.c.o
+[190/191] Compiling C object src/libadwaita-1.a.p/adw-widget-utils.c.o
+[191/191] Linking static target src/libadwaita-1.a
