@@ -1,0 +1,586 @@
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded anyhow v1.0.102
+  Downloaded allocator-api2 v0.2.21
+  Downloaded autocfg v1.5.0
+  Downloaded byteorder v1.5.0
+  Downloaded chrono v0.4.44
+  Downloaded clipper2 v0.6.0
+  Downloaded crossbeam-utils v0.8.21
+  Downloaded crunchy v0.2.4
+  Downloaded find-msvc-tools v0.1.9
+  Downloaded getrandom v0.3.4
+  Downloaded hash32 v0.3.1
+  Downloaded glam v0.31.1
+  Downloaded indexmap v2.14.0
+  Downloaded heapless v0.8.0
+  Downloaded is-macro v0.3.7
+  Downloaded inventory v0.3.24
+  Downloaded log v0.4.29
+  Downloaded libm v0.2.16
+  Downloaded num-bigint v0.4.6
+  Downloaded nalgebra-macros v0.3.0
+  Downloaded num-conv v0.2.2
+  Downloaded num-complex v0.4.6
+  Downloaded once_cell v1.21.4
+  Downloaded phf_codegen v0.11.3
+  Downloaded powerfmt v0.2.0
+  Downloaded ppv-lite86 v0.2.21
+  Downloaded pyo3-ffi v0.28.3
+  Downloaded rand v0.8.6
+  Downloaded rand_chacha v0.3.1
+  Downloaded rand v0.9.4
+  Downloaded rayon-core v1.13.0
+  Downloaded rustc-hash v2.1.2
+  Downloaded rayon v1.12.0
+  Downloaded rustpython-parser-vendored v0.4.0
+  Downloaded rustpython-parser-core v0.4.0
+  Downloaded pyo3-stub-gen v0.22.3
+  Downloaded serde_spanned v1.1.1
+  Downloaded serde_json v1.0.149
+  Downloaded stable_deref_trait v1.2.1
+  Downloaded strum_macros v0.27.2
+  Downloaded target-lexicon v0.13.5
+  Downloaded thiserror v2.0.18
+  Downloaded toml v1.1.2+spec-1.1.0
+  Downloaded toml_parser v1.1.2+spec-1.1.0
+  Downloaded toml_writer v1.1.1+spec-1.1.0
+  Downloaded unic-common v0.9.0
+  Downloaded unicode-ident v1.0.24
+  Downloaded unicode_names2_generator v1.3.0
+  Downloaded zerocopy v0.8.48
+  Downloaded cc v1.2.62
+  Downloaded arrayvec v0.7.6
+  Downloaded cfg-if v1.0.4
+  Downloaded clipper2c-sys v0.2.0
+  Downloaded foldhash v0.2.0
+  Downloaded glam v0.29.3
+  Downloaded heck v0.5.0
+  Downloaded glam v0.30.10
+  Downloaded lalrpop-util v0.20.2
+  Downloaded iana-time-zone v0.1.65
+  Downloaded maplit v1.0.2
+  Downloaded libc v0.2.186
+  Downloaded num_enum_derive v0.7.6
+  Downloaded num-rational v0.4.2
+  Downloaded ordered-float v5.3.0
+  Downloaded numpy v0.28.0
+  Downloaded pyo3-macros v0.28.3
+  Downloaded pyo3-build-config v0.28.3
+  Downloaded rand_core v0.9.5
+  Downloaded rand_core v0.6.4
+  Downloaded rustc-hash v1.1.0
+  Downloaded rustpython-ast v0.4.0
+  Downloaded serde_derive v1.0.228
+  Downloaded shlex v1.3.0
+  Downloaded spade v2.15.1
+  Downloaded static_assertions v1.1.0
+  Downloaded time v0.3.47
+  Downloaded typenum v1.20.1
+  Downloaded time-core v0.1.8
+  Downloaded unic-ucd-ident v0.9.0
+  Downloaded unic-emoji-char v0.9.0
+  Downloaded approx v0.5.1
+  Downloaded zmij v1.0.21
+  Downloaded deranged v0.5.8
+  Downloaded crossbeam-epoch v0.9.18
+  Downloaded hashbrown v0.17.1
+  Downloaded glam v0.32.1
+  Downloaded memchr v2.8.0
+  Downloaded itoa v1.0.18
+  Downloaded nalgebra-sparse v0.12.0
+  Downloaded nalgebra v0.35.0
+  Downloaded phf_shared v0.11.3
+  Downloaded pyo3 v0.28.3
+  Downloaded pyo3-macros-backend v0.28.3
+  Downloaded robust v1.2.0
+  Downloaded roxmltree v0.20.0
+  Downloaded siphasher v1.0.3
+  Downloaded serde_core v1.0.228
+  Downloaded strum v0.27.2
+  Downloaded smallvec v1.15.1
+  Downloaded unic-char-range v0.9.0
+  Downloaded unic-char-property v0.9.0
+  Downloaded winnow v1.0.3
+  Downloaded equivalent v1.0.2
+  Downloaded bitflags v2.11.1
+  Downloaded getrandom v0.2.17
+  Downloaded getopts v0.2.24
+  Downloaded num-integer v0.1.46
+  Downloaded ndarray v0.17.2
+  Downloaded quote v1.0.45
+  Downloaded proc-macro-crate v3.5.0
+  Downloaded rawpointer v0.2.1
+  Downloaded rand_chacha v0.9.0
+  Downloaded svgtypes v0.14.0
+  Downloaded siphasher v0.3.11
+  Downloaded unicode-width v0.2.2
+  Downloaded unic-ucd-version v0.9.0
+  Downloaded either v1.15.0
+  Downloaded crossbeam-deque v0.8.6
+  Downloaded matrixmultiply v0.3.10
+  Downloaded kurbo v0.10.4
+  Downloaded proc-macro2 v1.0.106
+  Downloaded rustpython-parser v0.4.0
+  Downloaded thiserror-impl v2.0.18
+  Downloaded rustversion v1.0.22
+  Downloaded toml_edit v0.25.11+spec-1.1.0
+  Downloaded unicode_names2 v1.3.0
+  Downloaded itertools v0.11.0
+  Downloaded itertools v0.14.0
+  Downloaded pyo3-stub-gen-derive v0.22.3
+  Downloaded rstar v0.12.2
+  Downloaded tiny-keccak v2.0.2
+  Downloaded bytemuck v1.25.0
+  Downloaded num-traits v0.2.19
+  Downloaded phf_generator v0.11.3
+  Downloaded syn v2.0.117
+  Downloaded toml_datetime v1.1.1+spec-1.1.0
+  Downloaded num_enum v0.7.6
+  Downloaded phf v0.11.3
+  Downloaded core-foundation-sys v0.8.7
+  Downloaded simba v0.10.0
+  Downloaded hashbrown v0.16.1
+  Downloaded glam v0.33.1
+  Downloaded serde v1.0.228
+  Downloaded wide v1.5.0
+🍹 Building a mixed python/rust project
+🐍 Found CPython 3.13 at /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/cross-venv/bin/python
+🔗 Found pyo3 bindings with abi3-py3.11 support
+   Compiling autocfg v1.5.0
+   Compiling proc-macro2 v1.0.106
+   Compiling unicode-ident v1.0.24
+   Compiling quote v1.0.45
+   Compiling zerocopy v0.8.48
+   Compiling libc v0.2.186
+   Compiling libm v0.2.16
+   Compiling num-traits v0.2.19
+   Compiling syn v2.0.117
+   Compiling target-lexicon v0.13.5
+   Compiling cfg-if v1.0.4
+   Compiling getrandom v0.2.17
+   Compiling ppv-lite86 v0.2.21
+   Compiling rand_core v0.6.4
+   Compiling siphasher v1.0.3
+   Compiling pyo3-build-config v0.28.3
+   Compiling phf_shared v0.11.3
+   Compiling rand_chacha v0.3.1
+   Compiling heck v0.5.0
+   Compiling rand v0.8.6
+   Compiling anyhow v1.0.102
+   Compiling phf_generator v0.11.3
+   Compiling unicode-width v0.2.2
+   Compiling phf_codegen v0.11.3
+   Compiling getopts v0.2.24
+   Compiling log v0.4.29
+   Compiling crunchy v0.2.4
+   Compiling unicode_names2_generator v1.3.0
+   Compiling num-integer v0.1.46
+   Compiling tiny-keccak v2.0.2
+   Compiling is-macro v0.3.7
+   Compiling unicode_names2 v1.3.0
+   Compiling serde_core v1.0.228
+   Compiling matrixmultiply v0.3.10
+   Compiling once_cell v1.21.4
+   Compiling equivalent v1.0.2
+   Compiling hashbrown v0.17.1
+   Compiling rustpython-parser v0.4.0
+   Compiling indexmap v2.14.0
+   Compiling pyo3-macros-backend v0.28.3
+   Compiling pyo3-ffi v0.28.3
+   Compiling num-complex v0.4.6
+   Compiling crossbeam-utils v0.8.21
+   Compiling memchr v2.8.0
+   Compiling unic-common v0.9.0
+   Compiling unic-char-range v0.9.0
+   Compiling rawpointer v0.2.1
+   Compiling unic-char-property v0.9.0
+   Compiling rustpython-parser-vendored v0.4.0
+   Compiling unic-ucd-version v0.9.0
+   Compiling shlex v1.3.0
+   Compiling find-msvc-tools v0.1.9
+   Compiling getrandom v0.3.4
+   Compiling either v1.15.0
+   Compiling winnow v1.0.3
+   Compiling cc v1.2.62
+   Compiling num-bigint v0.4.6
+   Compiling toml_parser v1.1.2+spec-1.1.0
+   Compiling rustpython-parser-core v0.4.0
+   Compiling pyo3 v0.28.3
+   Compiling phf v0.11.3
+   Compiling static_assertions v1.1.0
+   Compiling toml_datetime v1.1.1+spec-1.1.0
+   Compiling smallvec v1.15.1
+   Compiling zmij v1.0.21
+   Compiling bytemuck v1.25.0
+   Compiling wide v1.5.0
+   Compiling pyo3-macros v0.28.3
+   Compiling toml_edit v0.25.11+spec-1.1.0
+   Compiling itertools v0.11.0
+   Compiling rustpython-ast v0.4.0
+   Compiling crossbeam-epoch v0.9.18
+   Compiling clipper2c-sys v0.2.0
+   Compiling unic-ucd-ident v0.9.0
+   Compiling unic-emoji-char v0.9.0
+   Compiling numpy v0.28.0
+   Compiling approx v0.5.1
+   Compiling core-foundation-sys v0.8.7
+   Compiling serde v1.0.228
+   Compiling rayon-core v1.13.0
+   Compiling rustc-hash v1.1.0
+   Compiling rustversion v1.0.22
+   Compiling heapless v0.8.0
+   Compiling lalrpop-util v0.20.2
+   Compiling powerfmt v0.2.0
+   Compiling byteorder v1.5.0
+   Compiling thiserror v2.0.18
+   Compiling serde_json v1.0.149
+   Compiling hash32 v0.3.1
+   Compiling deranged v0.5.8
+   Compiling iana-time-zone v0.1.65
+   Compiling simba v0.10.0
+   Compiling crossbeam-deque v0.8.6
+   Compiling proc-macro-crate v3.5.0
+   Compiling rand_core v0.9.5
+   Compiling ndarray v0.17.2
+   Compiling serde_spanned v1.1.1
+   Compiling num-rational v0.4.2
+   Compiling thiserror-impl v2.0.18
+   Compiling serde_derive v1.0.228
+   Compiling nalgebra-macros v0.3.0
+   Compiling foldhash v0.2.0
+   Compiling itoa v1.0.18
+   Compiling toml_writer v1.1.1+spec-1.1.0
+   Compiling num-conv v0.2.2
+   Compiling stable_deref_trait v1.2.1
+   Compiling time-core v0.1.8
+   Compiling allocator-api2 v0.2.21
+   Compiling rustc-hash v2.1.2
+   Compiling typenum v1.20.1
+   Compiling arrayvec v0.7.6
+   Compiling nalgebra v0.35.0
+   Compiling kurbo v0.10.4
+   Compiling hashbrown v0.16.1
+   Compiling time v0.3.47
+   Compiling toml v1.1.2+spec-1.1.0
+   Compiling rand_chacha v0.9.0
+   Compiling num_enum_derive v0.7.6
+   Compiling chrono v0.4.44
+   Compiling pyo3-stub-gen-derive v0.22.3
+   Compiling itertools v0.14.0
+   Compiling strum_macros v0.27.2
+   Compiling ordered-float v5.3.0
+   Compiling robust v1.2.0
+   Compiling inventory v0.3.24
+   Compiling siphasher v0.3.11
+   Compiling maplit v1.0.2
+   Compiling pyo3-stub-gen v0.22.3
+   Compiling svgtypes v0.14.0
+   Compiling strum v0.27.2
+   Compiling spade v2.15.1
+   Compiling num_enum v0.7.6
+   Compiling rayon v1.12.0
+   Compiling rand v0.9.4
+   Compiling clipper2 v0.6.0
+   Compiling rstar v0.12.2
+   Compiling nalgebra-sparse v0.12.0
+   Compiling prof-macros v0.1.0 (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/raygeo-src/prof-macros)
+   Compiling glam v0.29.3
+   Compiling roxmltree v0.20.0
+   Compiling bitflags v2.11.1
+   Compiling raygeo v0.0.0 (/Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/raygeo-src)
+warning: unused imports: `RecordBuf`, `TraceKind`, and `write_toolpath`
+  --> src/ops/assembly/adaptive.rs:31:20
+   |
+31 | use super::trace::{write_toolpath, RecordBuf, TraceKind};
+   |                    ^^^^^^^^^^^^^^  ^^^^^^^^^  ^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: variable `tp_len` is assigned to, but never used
+   --> src/ops/assembly/adaptive.rs:635:9
+    |
+635 |     let mut tp_len: u32 = 1; // the initial move_to above
+    |         ^^^^^^^^^^
+    |
+    = note: consider using `_tp_len` instead
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: variable `trace_step_idx` is assigned to, but never used
+   --> src/ops/assembly/adaptive.rs:656:9
+    |
+656 |     let mut trace_step_idx: u32 = 1;
+    |         ^^^^^^^^^^^^^^^^^^
+    |
+    = note: consider using `_trace_step_idx` instead
+
+warning: variable `iter` is assigned to, but never used
+   --> src/ops/assembly/adaptive.rs:704:9
+    |
+704 |     let mut iter: usize = 0;
+    |         ^^^^^^^^
+    |
+    = note: consider using `_iter` instead
+
+warning: value assigned to `tp_len` is never read
+    --> src/ops/assembly/adaptive.rs:845:25
+     |
+ 845 |                         tp_len = moving_count(&ops);
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^ this value is reassigned later and never used
+...
+1044 |         tp_len += 1;
+     |         ----------- `tp_len` is overwritten here before the previous value is read
+     |
+     = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default
+
+warning: value assigned to `tp_len` is never read
+    --> src/ops/assembly/adaptive.rs:1044:9
+     |
+ 975 |                 tp_len = moving_count(&ops);
+     |                 --------------------------- `tp_len` is overwritten here before the previous value is read
+...
+1044 |         tp_len += 1;
+     |         ^^^^^^^^^^^ this value is reassigned later and never used
+
+warning: value assigned to `tp_len` is never read
+   --> src/ops/assembly/adaptive.rs:975:17
+    |
+975 |                 tp_len = moving_count(&ops);
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `trace_step_idx` is never read
+    --> src/ops/assembly/adaptive.rs:872:25
+     |
+ 872 |                         trace_step_idx += 1;
+     |                         ^^^^^^^^^^^^^^^^^^^ this value is reassigned later and never used
+...
+1087 |         trace_step_idx += 1;
+     |         ------------------- `trace_step_idx` is overwritten here before the previous value is read
+
+warning: value assigned to `trace_step_idx` is never read
+    --> src/ops/assembly/adaptive.rs:1087:9
+     |
+ 999 |                 trace_step_idx += 1;
+     |                 ------------------- `trace_step_idx` is overwritten here before the previous value is read
+...
+1087 |         trace_step_idx += 1;
+     |         ^^^^^^^^^^^^^^^^^^^ this value is reassigned later and never used
+
+warning: value assigned to `trace_step_idx` is never read
+   --> src/ops/assembly/adaptive.rs:999:17
+    |
+999 |                 trace_step_idx += 1;
+    |                 ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `iter` is never read
+   --> src/ops/assembly/adaptive.rs:706:9
+    |
+706 |         iter += 1;
+    |         ^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: unused variable: `tp`
+   --> src/ops/cut/search.rs:341:21
+    |
+341 |     if let Some((_, tp)) = best {
+    |                     ^^ help: if this is intentional, prefix it with an underscore: `_tp`
+
+warning: variable `last_angle` is assigned to, but never used
+   --> src/ops/cut/stepper.rs:286:9
+    |
+286 |     let mut last_angle = 0.0_f64;
+    |         ^^^^^^^^^^^^^^
+    |
+    = note: consider using `_last_angle` instead
+
+warning: variable `exit_reason` is assigned to, but never used
+   --> src/ops/cut/stepper.rs:289:9
+    |
+289 |     let mut exit_reason = "max_iters";
+    |         ^^^^^^^^^^^^^^^
+    |
+    = note: consider using `_exit_reason` instead
+
+warning: unused variable: `iter_kind`
+   --> src/ops/cut/stepper.rs:356:13
+    |
+356 |         let iter_kind = if is_not_interp { "SMPL" } else { "INTR" };
+    |             ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_iter_kind`
+
+warning: value assigned to `last_angle` is never read
+   --> src/ops/cut/stepper.rs:376:9
+    |
+376 |         last_angle = angle;
+    |         ^^^^^^^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `exit_reason` is never read
+   --> src/ops/cut/stepper.rs:322:17
+    |
+322 |                 exit_reason = "lost_engagement";
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `exit_reason` is never read
+   --> src/ops/cut/stepper.rs:386:13
+    |
+386 |             exit_reason = "converged";
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: value assigned to `exit_reason` is never read
+   --> src/ops/cut/stepper.rs:307:13
+    |
+307 |             exit_reason = "skip_limit";
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: enum `TraceKind` is never used
+  --> src/ops/assembly/trace.rs:20:17
+   |
+20 | pub(crate) enum TraceKind {
+   |                 ^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: struct `RecordBuf` is never constructed
+  --> src/ops/assembly/trace.rs:34:19
+   |
+34 | pub(crate) struct RecordBuf([u8; crate::trace::PAYLOAD_SIZE]);
+   |                   ^^^^^^^^^
+
+warning: multiple methods are never used
+   --> src/ops/assembly/trace.rs:45:8
+    |
+ 42 | impl RecordBuf {
+    | -------------- methods in this implementation
+...
+ 45 |     fn u8(&mut self, o: usize, v: u8) {
+    |        ^^
+...
+ 48 |     fn u32(&mut self, o: usize, v: u32) {
+    |        ^^^
+...
+ 51 |     fn f64(&mut self, o: usize, v: f64) {
+    |        ^^^
+...
+ 54 |     fn point(&mut self, o: usize, v: Point) {
+    |        ^^^^^
+...
+ 62 |     pub fn status(&mut self, v: StepStatus) {
+    |            ^^^^^^
+...
+ 72 |     pub fn step_idx(&mut self, v: u32) {
+    |            ^^^^^^^^
+...
+ 76 |     pub fn iters(&mut self, v: u32) {
+    |            ^^^^^
+...
+ 80 |     pub fn pos(&mut self, v: Point) {
+    |            ^^^
+...
+ 84 |     pub fn heading(&mut self, v: f64) {
+    |            ^^^^^^^
+...
+ 88 |     pub fn smoothed_heading(&mut self, v: f64) {
+    |            ^^^^^^^^^^^^^^^^
+...
+ 92 |     pub fn predicted_angle(&mut self, v: f64) {
+    |            ^^^^^^^^^^^^^^^
+...
+ 96 |     pub fn iteration_angle(&mut self, v: f64) {
+    |            ^^^^^^^^^^^^^^^
+...
+100 |     pub fn eng_angle(&mut self, v: f64) {
+    |            ^^^^^^^^^
+...
+104 |     pub fn eng_area(&mut self, v: f64) {
+    |            ^^^^^^^^
+...
+108 |     pub fn eng_chord(&mut self, v: f64) {
+    |            ^^^^^^^^^
+...
+112 |     pub fn cut_area(&mut self, v: f64) {
+    |            ^^^^^^^^
+...
+116 |     pub fn total_area(&mut self, v: f64) {
+    |            ^^^^^^^^^^
+...
+120 |     pub fn remaining_area(&mut self, v: f64) {
+    |            ^^^^^^^^^^^^^^
+...
+124 |     pub fn prev_pos(&mut self, v: Point) {
+    |            ^^^^^^^^
+...
+128 |     pub fn ops_len(&mut self, v: u32) {
+    |            ^^^^^^^
+...
+132 |     pub fn pack(&self) -> &[u8; crate::trace::PAYLOAD_SIZE] {
+    |            ^^^^
+
+warning: function `write_toolpath` is never used
+   --> src/ops/assembly/trace.rs:143:15
+    |
+143 | pub(crate) fn write_toolpath(trace_path: &std::path::Path, ops: &Ops) {
+    |               ^^^^^^^^^^^^^^
+
+warning: constant `TRACE_MAGIC` is never used
+  --> src/trace.rs:16:7
+   |
+16 | const TRACE_MAGIC: [u8; 4] = *b"ADPT";
+   |       ^^^^^^^^^^^
+
+warning: constant `TRACE_VERSION` is never used
+  --> src/trace.rs:18:7
+   |
+18 | const TRACE_VERSION: u32 = 1;
+   |       ^^^^^^^^^^^^^
+
+warning: constant `TRACE_RECORD_SIZE` is never used
+  --> src/trace.rs:20:7
+   |
+20 | const TRACE_RECORD_SIZE: usize = 128;
+   |       ^^^^^^^^^^^^^^^^^
+
+warning: constant `PAYLOAD_SIZE` is never used
+  --> src/trace.rs:22:18
+   |
+22 | pub(crate) const PAYLOAD_SIZE: usize = TRACE_RECORD_SIZE - 1;
+   |                  ^^^^^^^^^^^^
+
+warning: struct `Tracer` is never constructed
+  --> src/trace.rs:25:19
+   |
+25 | pub(crate) struct Tracer {
+   |                   ^^^^^^
+
+warning: associated items `open`, `write`, `finish`, and `path` are never used
+  --> src/trace.rs:33:19
+   |
+31 | impl Tracer {
+   | ----------- associated items in this implementation
+32 |     /// Open a new trace file, writing the 12-byte header.
+33 |     pub(crate) fn open(path: &PathBuf) -> std::io::Result<Self> {
+   |                   ^^^^
+...
+48 |     pub(crate) fn write(&mut self, kind: u8, payload: &[u8; PAYLOAD_SIZE]) {
+   |                   ^^^^^
+...
+57 |     pub(crate) fn finish(&mut self) -> std::io::Result<()> {
+   |                   ^^^^^^
+...
+64 |     pub(crate) fn path(&self) -> &std::path::Path {
+   |                   ^^^^
+
+warning: `raygeo` (lib) generated 29 warnings (run `cargo fix --lib -p raygeo` to apply 3 suggestions)
+    Finished `release` profile [optimized] target(s) in 1m 21s
+📦 Built wheel for abi3 Python ≥ 3.11 to /Users/runner/work/Rayforge-iOS-ipa/Rayforge-iOS-ipa/rust-wheels/raygeo-0.0.0-cp311-abi3-ios_17_0_arm64_iphoneos.whl

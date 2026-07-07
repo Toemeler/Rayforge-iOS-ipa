@@ -1,0 +1,119 @@
+Gdk-Message: 05:13:04.021: gdk-ios: bundle resources at /Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app
+Gdk-Message: 05:13:04.258: gdk-ios: shell ready window=1032x1376 view=1032x1376 scale=2.00
+Gdk-Message: 05:13:04.282: gdk-ios: VC layout view=1032x1376 screen=1032x1376
+Gdk-Message: 05:13:04.304: gdk-ios: entering user main
+** Message: 05:13:04.304: GI_TYPELIB_PATH: /Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/lib/girepository-1.0
+** Message: 05:13:04.304: python home: /Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python
+** Message: 05:13:04.304: site-packages: /Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages
+IOSBOOT: ios_main.main() start
+IOSBOOT: import rayforge.app
+IOSBOOT: addon finder fast-fail installed
+IOSBOOT: rayforge.app.main()
+2026-07-06 05:13:05,738 - root - INFO - Logging configured. Console level: INFO
+2026-07-06 05:13:05,738 - root - INFO - Session log file: /Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Data/Application/79CBBA15-BCD4-4568-BB51-3F35FE1F8E1D/.local/state/rayforge/log/session-2026-07-06_05-13-05.log
+2026-07-06 05:13:05,739 - rayforge.app - INFO - Application starting with log level INFO
+2026-07-06 05:13:05,739 - rayforge.app - INFO - PyCairo version: 1.29.0
+2026-07-06 05:13:07,505 - rayforge.image.svg.svg_fallback - WARNING - pyvips svgload_buffer not available. Using Cairo/Rsvg fallback for SVG rendering.
+2026-07-06 05:13:08,516 - rayforge.ui_gtk.sim3d - INFO - Skipping Canvas3D import due to RAYFORGE_DISABLE_3D
+2026-07-06 05:13:08,516 - rayforge.ui_gtk.sim3d - INFO - 3D canvas disabled via RAYFORGE_DISABLE_3D environment variable.
+2026-07-06 05:13:08,610 - rayforge.addon_mgr.addon_manager - INFO - Scanning for addons in /Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons...
+2026-07-06 05:13:08,615 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: core_materials (builtin)
+2026-07-06 05:13:08,738 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: sketcher (builtin)
+2026-07-06 05:13:08,748 - rayforge.addon_mgr.addon_manager - ERROR - Error importing addon laser_essentials: No module named 'raygeo.cnc'
+2026-07-06 05:13:08,754 - rayforge.addon_mgr.addon_manager - ERROR - Error importing addon laser_essentials: No module named 'raygeo.cnc'
+2026-07-06 05:13:08,755 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: laser_essentials (builtin)
+2026-07-06 05:13:08,760 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: print_and_cut (builtin)
+2026-07-06 05:13:08,797 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: post_processors (builtin)
+2026-07-06 05:13:08,813 - rayforge.addon_mgr.addon_manager - INFO - Loaded addon: ai_workpiece_generator (builtin)
+2026-07-06 05:13:09,019 - rayforge.context - INFO - Addons loaded (headless=False)
+IOSBOOT: _ios_run: register()
+IOSBOOT: _ios_run: activate()
+2026-07-06 05:13:09,810 - rayforge.context - INFO - Lazy loading config manager
+2026-07-06 05:13:09,816 - rayforge.context - INFO - Lazy loading machine manager
+2026-07-06 05:13:09,822 - rayforge.core.config - INFO - Config file does not exist, creating default config.
+2026-07-06 05:13:09,926 - rayforge.context - INFO - Lazy loading camera manager
+2026-07-06 05:13:10,009 - rayforge.worker_init - ERROR - Failed to load enabled worker module 'rayforge_addons.core_materials.core_materials.worker': Plugin name already registered: rayforge_addons.core_materials.core_materials.worker=<module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>
+{'rayforge_addons.core_materials.core_materials.worker': <module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>, 'rayforge_addons.sketcher.sketcher.worker': <module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>, 'rayforge_addons.sketcher.sketcher.frontend': <module 'rayforge_addons.sketcher.sketcher.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/frontend.py'>, 'rayforge_addons.print_and_cut.print_and_cut.frontend': <module 'rayforge_addons.print_and_cut.print_and_cut.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-print-and-cut/print_and_cut/frontend.py'>, 'rayforge_addons.post_processors.post_processors.worker': <module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>, 'rayforge_addons.post_processors.post_processors.frontend': <module 'rayforge_addons.post_processors.post_processors.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/frontend.py'>, 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend': <module 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-ai-workpiece/ai_workpiece_generator/frontend.py'>}
+2026-07-06 05:13:10,010 - rayforge.worker_init - ERROR - Failed to load enabled worker module 'rayforge_addons.sketcher.sketcher.worker': Plugin name already registered: rayforge_addons.sketcher.sketcher.worker=<module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>
+{'rayforge_addons.core_materials.core_materials.worker': <module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>, 'rayforge_addons.sketcher.sketcher.worker': <module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>, 'rayforge_addons.sketcher.sketcher.frontend': <module 'rayforge_addons.sketcher.sketcher.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/frontend.py'>, 'rayforge_addons.print_and_cut.print_and_cut.frontend': <module 'rayforge_addons.print_and_cut.print_and_cut.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-print-and-cut/print_and_cut/frontend.py'>, 'rayforge_addons.post_processors.post_processors.worker': <module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>, 'rayforge_addons.post_processors.post_processors.frontend': <module 'rayforge_addons.post_processors.post_processors.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/frontend.py'>, 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend': <module 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-ai-workpiece/ai_workpiece_generator/frontend.py'>}
+2026-07-06 05:13:10,010 - rayforge.worker_init - ERROR - Failed to load enabled worker module 'rayforge_addons.post_processors.post_processors.worker': Plugin name already registered: rayforge_addons.post_processors.post_processors.worker=<module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>
+{'rayforge_addons.core_materials.core_materials.worker': <module 'rayforge_addons.core_materials.core_materials.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-materials/core_materials/worker.py'>, 'rayforge_addons.sketcher.sketcher.worker': <module 'rayforge_addons.sketcher.sketcher.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/worker.py'>, 'rayforge_addons.sketcher.sketcher.frontend': <module 'rayforge_addons.sketcher.sketcher.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-sketcher/sketcher/frontend.py'>, 'rayforge_addons.print_and_cut.print_and_cut.frontend': <module 'rayforge_addons.print_and_cut.print_and_cut.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-print-and-cut/print_and_cut/frontend.py'>, 'rayforge_addons.post_processors.post_processors.worker': <module 'rayforge_addons.post_processors.post_processors.worker' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/worker.py'>, 'rayforge_addons.post_processors.post_processors.frontend': <module 'rayforge_addons.post_processors.post_processors.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-post/post_processors/frontend.py'>, 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend': <module 'rayforge_addons.ai_workpiece_generator.ai_workpiece_generator.frontend' from '/Users/runner/Library/Developer/CoreSimulator/Devices/0723BCD5-B2B4-4439-B31E-39802EFB1397/data/Containers/Bundle/Application/D7E0D0EE-2025-4918-B299-B8397ED27D2A/RayforgeApp.app/python/lib/python3.13/site-packages/rayforge/builtin_addons/rayforge-addon-ai-workpiece/ai_workpiece_generator/frontend.py'>}
+Gdk-Message: 05:13:10.153: gdk-ios: attach_layer surface=0x110080490 type=toplevel layer=0x600000ca6280 root=0x600000c12be0 root.bounds=1032x1376 root.sublayers=1 scale=2.00
+Fontconfig warning: using without calling FcInit()
+Gdk-Message: 05:13:10.231: gdk-ios: configure: granting 1032x1376 below GTK min 1115x458
+Gdk-Message: 05:13:10.231: gdk-ios: configure transient=0 granted=1032x1376 at (0,0) (gtk asked 1115x1100, bounds 1032x1376)
+Gdk-Message: 05:13:10.231: gdk-ios: apply_frame surface=0x110080490 req=(0,0,1032x1376) layer.frame=(0,0,1032x1376)
+Gdk-Message: 05:13:10.233: gdk-ios: configure: granting 1032x1376 below GTK min 1115x458
+Gdk-Message: 05:13:10.234: gdk-ios: attach_layer surface=0x1131d8480 type=toplevel layer=0x600000cc5b60 root=0x600000c12be0 root.bounds=1032x1376 root.sublayers=2 scale=2.00
+Gdk-Message: 05:13:10.240: gdk-ios: configure transient=1 granted=394x318 at (319,529) (gtk asked 394x318, bounds 1032x1376)
+Gdk-Message: 05:13:10.241: gdk-ios: apply_frame surface=0x1131d8480 req=(319,529,394x318) layer.frame=(319,529,394x318)
+2026-07-06 05:13:10,242 - rayforge.addon_mgr.update_cmd - INFO - Scheduling startup addon update check.
+2026-07-06 05:13:10,242 - rayforge.updater - INFO - Scheduling app version update check.
+IOSBOOT: _ios_run: activate() returned; windows=1
+IOSBOOT:   window mapped=True visible=True title='Rayforge'
+IOSBOOT: keep-running caught — startup unwound cleanly
+RAYFORGE UI RUNNING
+** Message: 05:13:10.244: rayforge boot: PyGObject self-test ran (CPython 3.13.14 (main, Jun 12 2026, 07:26:39) [Clang 17.0.0 (clang-1700.0.13.5)]) ? see console for PYGOBJECT OK/FAIL
+Gdk-Message: 05:13:10.250: gdk-ios: user main returned
+Gdk-Message: 05:13:10.251: gdk-ios: VC layout view=1032x1376 screen=1032x1376
+2026-07-06 05:13:10,289 - rayforge.addon_mgr.addon_manager - INFO - Checking for available addon updates...
+Gdk-Message: 05:13:10.289: gdk-ios: configure: granting 1032x1376 below GTK min 1115x458
+2026-07-06 05:13:10,828 - rayforge.addon_mgr.addon_manager - INFO - Fetching registry from https://raw.githubusercontent.com/barebaric/rayforge-registry/main/registry.yaml
+Gdk-Message: 05:13:10.840: gdk-ios: begin_frame surface=1032x1376 scale=2.00 pixels=2064x2752
+Gdk-Message: 05:13:10.937: gdk-ios: end_frame 2064x2752 stride=8256 data=0x1163b8000 layer=0x600000ca6280 center=0xFFF5F5F6 tl=0xFFFFFFFF tr=0xFFFFFFFF bl=0xFFFAFAFB br=0xFFFAFAFB
+Gdk-Message: 05:13:10.942: gdk-ios: presented layer=0x600000ca6280 frame=(0,0,1032x1376) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c12be0 hasContents=1
+Gdk-Message: 05:13:10.943: gdk-ios: begin_frame surface=394x318 scale=2.00 pixels=788x636
+Gdk-Message: 05:13:10.948: gdk-ios: end_frame 788x636 stride=3152 data=0x118f10000 layer=0x600000cc5b60 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0x00000000
+Gdk-Message: 05:13:10.948: gdk-ios: presented layer=0x600000cc5b60 frame=(319,529,394x318) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c12be0 hasContents=1
+Gdk-Message: 05:13:10.952: gdk-ios: configure: granting 1032x1376 below GTK min 1115x458
+Gdk-Message: 05:13:10.953: gdk-ios: begin_frame surface=1032x1376 scale=2.00 pixels=2064x2752
+Gdk-Message: 05:13:10.953: gdk-ios: end_frame 2064x2752 stride=8256 data=0x1163b8000 layer=0x600000ca6280 center=0xFFF5F5F6 tl=0xFFFFFFFF tr=0xFFFFFFFF bl=0xFFFAFAFB br=0xFFFAFAFB
+Gdk-Message: 05:13:10.958: gdk-ios: presented layer=0x600000ca6280 frame=(0,0,1032x1376) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c12be0 hasContents=1
+Gdk-Message: 05:13:10.976: gdk-ios: configure transient=1 granted=344x447 at (344,464) (gtk asked 344x447, bounds 1032x1376)
+Gdk-Message: 05:13:10.976: gdk-ios: apply_frame surface=0x1131d8480 req=(344,464,344x447) layer.frame=(344,464,344x447)
+Gdk-Message: 05:13:10.977: gdk-ios: begin_frame surface=344x447 scale=2.00 pixels=688x894
+Gdk-Message: 05:13:10.981: gdk-ios: end_frame 688x894 stride=2752 data=0x117964000 layer=0x600000cc5b60 center=0xFFFAFAFB tl=0x00000000 tr=0x00000000 bl=0x00000000 br=0x00000000
+Gdk-Message: 05:13:10.981: gdk-ios: presented layer=0x600000cc5b60 frame=(344,464,344x447) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c12be0 hasContents=1
+Gdk-Message: 05:13:10.982: gdk-ios: configure: granting 1032x1376 below GTK min 1115x458
+Gdk-Message: 05:13:10.983: gdk-ios: begin_frame surface=1032x1376 scale=2.00 pixels=2064x2752
+Gdk-Message: 05:13:10.983: gdk-ios: end_frame 2064x2752 stride=8256 data=0x1163b8000 layer=0x600000ca6280 center=0xFFF5F5F6 tl=0xFFFFFFFF tr=0xFFFFFFFF bl=0xFFFAFAFB br=0xFFFAFAFB
+Gdk-Message: 05:13:10.988: gdk-ios: presented layer=0x600000ca6280 frame=(0,0,1032x1376) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c12be0 hasContents=1
+Gdk-Message: 05:13:10.991: gdk-ios: VC layout view=1032x1376 screen=1032x1376
+Gdk-Message: 05:13:11.003: gdk-ios: configure: granting 1032x1376 below GTK min 1115x458
+Gdk-Message: 05:13:11.006: gdk-ios: begin_frame surface=1032x1376 scale=2.00 pixels=2064x2752
+Gdk-Message: 05:13:11.076: gdk-ios: end_frame 2064x2752 stride=8256 data=0x1163b8000 layer=0x600000ca6280 center=0xFFF5F5F6 tl=0xFFFFFFFF tr=0xFFFFFFFF bl=0xFFDDDDDD br=0xFFDDDDDD
+Gdk-Message: 05:13:11.095: gdk-ios: presented layer=0x600000ca6280 frame=(0,0,1032x1376) contentsScale=2.00 opacity=1.00 hidden=0 super=0x600000c12be0 hasContents=1
+Gdk-Message: 05:13:11.095: gdk-ios: configure: granting 1032x1376 below GTK min 1115x458
+Gdk-Message: 05:13:13.051: gdk-ios: pump alive frame=120 total_iterations=14
+IOSBOOT: GEOM monitor[0] 1032x1376+0+0 scale=2
+IOSBOOT: GEOM top[0] 'Rayforge' alloc=1032x1376 surface=1032x1376 surfscale=2 vis=True
+IOSBOOT: GEOM top[1] 'Help Improve Rayforge' alloc=300x403 surface=344x447 surfscale=2 vis=True
+Gdk-Message: 05:13:15.051: gdk-ios: pump alive frame=240 total_iterations=15
+Gdk-Message: 05:13:17.051: gdk-ios: pump alive frame=360 total_iterations=15
+Gdk-Message: 05:13:19.051: gdk-ios: pump alive frame=480 total_iterations=15
+Gdk-Message: 05:13:21.049: gdk-ios: pump alive frame=600 total_iterations=15
+Gdk-Message: 05:13:23.051: gdk-ios: pump alive frame=720 total_iterations=15
+Gdk-Message: 05:13:25.051: gdk-ios: pump alive frame=840 total_iterations=15
+Gdk-Message: 05:13:27.050: gdk-ios: pump alive frame=960 total_iterations=15
+Gdk-Message: 05:13:29.049: gdk-ios: pump alive frame=1080 total_iterations=15
+Gdk-Message: 05:13:31.050: gdk-ios: pump alive frame=1200 total_iterations=15
+Gdk-Message: 05:13:33.050: gdk-ios: pump alive frame=1320 total_iterations=15
+Gdk-Message: 05:13:35.051: gdk-ios: pump alive frame=1440 total_iterations=15
+Gdk-Message: 05:13:37.049: gdk-ios: pump alive frame=1560 total_iterations=15
+Gdk-Message: 05:13:39.051: gdk-ios: pump alive frame=1680 total_iterations=15
+Gdk-Message: 05:13:41.049: gdk-ios: pump alive frame=1800 total_iterations=15
+Gdk-Message: 05:13:43.051: gdk-ios: pump alive frame=1920 total_iterations=15
+Gdk-Message: 05:13:45.051: gdk-ios: pump alive frame=2040 total_iterations=15
+Gdk-Message: 05:13:47.049: gdk-ios: pump alive frame=2160 total_iterations=15
+Gdk-Message: 05:13:49.051: gdk-ios: pump alive frame=2280 total_iterations=15
+Gdk-Message: 05:13:51.051: gdk-ios: pump alive frame=2400 total_iterations=15
+Gdk-Message: 05:13:53.050: gdk-ios: pump alive frame=2520 total_iterations=15
+Gdk-Message: 05:13:55.049: gdk-ios: pump alive frame=2640 total_iterations=15
+Gdk-Message: 05:13:57.051: gdk-ios: pump alive frame=2760 total_iterations=15
+Gdk-Message: 05:13:59.050: gdk-ios: pump alive frame=2880 total_iterations=15
+Gdk-Message: 05:14:01.050: gdk-ios: pump alive frame=3000 total_iterations=15
+Gdk-Message: 05:14:03.054: gdk-ios: pump alive frame=3120 total_iterations=15
+Gdk-Message: 05:14:05.051: gdk-ios: pump alive frame=3240 total_iterations=15
+Gdk-Message: 05:14:07.050: gdk-ios: pump alive frame=3360 total_iterations=15
+Gdk-Message: 05:14:09.051: gdk-ios: pump alive frame=3480 total_iterations=15
+Gdk-Message: 05:14:11.051: gdk-ios: pump alive frame=3600 total_iterations=15
