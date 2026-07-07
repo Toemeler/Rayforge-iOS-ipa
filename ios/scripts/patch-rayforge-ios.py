@@ -103,6 +103,69 @@ PATCHES = [
         "    else:\n"
         "        GLib.idle_add(lambda: falsify(func, *args, **kwargs))",
     ),
+    # P10: dx never reached on_scroll - the controller was created
+    # VERTICAL-only, so GTK dropped horizontal deltas and sideways
+    # two-finger panning did nothing.
+    (
+        "rayforge/ui_gtk/canvas/worldsurface.py",
+        "        self._scroll_controller = Gtk.EventControllerScroll.new(\n"
+        "            Gtk.EventControllerScrollFlags.VERTICAL\n"
+        "        )",
+        "        self._scroll_controller = Gtk.EventControllerScroll.new(\n"
+        "            Gtk.EventControllerScrollFlags.BOTH_AXES\n"
+        "        )",
+    ),
+    # P11: keep the stale ops surface when a re-render STARTS. Upstream
+    # drops it immediately (fine on PC where the replacement lands in
+    # ms); on iOS the replacement is slow or lost, which is exactly the
+    # 'lines invisible until layer toggle' symptom.
+    (
+        "rayforge/ui_gtk/canvas2d/elements/workpiece.py",
+        "        if workpiece_uid != self.data.uid or not self.canvas:\n"
+        "            return\n"
+        "        self._remove_ops_surface(step_uid)\n"
+        "        self._composited_dirty = True\n"
+        "        self.canvas.queue_draw()",
+        "        if workpiece_uid != self.data.uid or not self.canvas:\n"
+        "            return\n"
+        "        import sys as _sys\n"
+        "        if _sys.platform != 'ios':\n"
+        "            self._remove_ops_surface(step_uid)\n"
+        "        logger.warning(f'iOS-diag: artifact_created step={step_uid}')\n"
+        "        self._composited_dirty = True\n"
+        "        self.canvas.queue_draw()",
+    ),
+    # P12/P13: name the silent branch that eats the artifact.
+    (
+        "rayforge/ui_gtk/canvas2d/elements/workpiece.py",
+        "        if view_handle is None:\n"
+        "            return\n"
+        "\n"
+        "        artifact = self.view_manager.store.get(view_handle)\n"
+        "        if not isinstance(artifact, WorkPieceViewArtifact):\n"
+        "            return",
+        "        if view_handle is None:\n"
+        "            logger.warning(f'iOS-diag: no view handle step={step_uid}')\n"
+        "            return\n"
+        "\n"
+        "        artifact = self.view_manager.store.get(view_handle)\n"
+        "        if not isinstance(artifact, WorkPieceViewArtifact):\n"
+        "            logger.warning(\n"
+        "                f'iOS-diag: bad artifact step={step_uid}: '\n"
+        "                f'{type(artifact).__name__}'\n"
+        "            )\n"
+        "            return",
+    ),
+    (
+        "rayforge/ui_gtk/canvas2d/elements/workpiece.py",
+        "        if workpiece_uid != self.data.uid:\n"
+        "            return\n"
+        "        edited = self.data._edited_boundaries",
+        "        if workpiece_uid != self.data.uid:\n"
+        "            return\n"
+        "        logger.warning(f'iOS-diag: gen_finished step={step_uid}')\n"
+        "        edited = self.data._edited_boundaries",
+    ),
     # P8: a transiently blank view buffer (read race with the worker /
     # a NACKed handle) removed the cached ops surface -> laser lines
     # invisible until a full regeneration (e.g. layer visibility
@@ -116,6 +179,9 @@ PATCHES = [
         "            if not np.any(new_data):\n"
         "                import sys as _sys\n"
         "                if _sys.platform == 'ios':\n"
+        "                    logger.warning(\n"
+        "                        f'iOS-diag: blank buffer step={step_uid}'\n"
+        "                    )\n"
         "                    return  # keep previous surface\n"
         "                self._remove_ops_surface(step_uid)\n"
         "                self._invalidate_composited()\n"
