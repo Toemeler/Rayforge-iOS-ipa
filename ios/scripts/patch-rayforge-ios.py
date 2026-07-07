@@ -58,19 +58,21 @@ PATCHES = [
     (
         "rayforge/ui_gtk/canvas/worldsurface.py",
         "        zoom_speed = 0.1",
-        # iOS: horizontal two-finger scroll pans; vertical zooms
-        # proportionally to the scroll magnitude instead of a fixed 10%
-        # per event (trackpads fire dozens of events per swipe - each
-        # was a full step -> way too fast).
+        # iOS: two-finger scroll pans (both axes); zoom happens only via
+        # pinch, whose synthesized scroll events the backend tags with
+        # CONTROL. Zoom is proportional to the tagged magnitude.
         "        import math\n"
-        "        if abs(dx) > abs(dy):\n"
+        "        from gi.repository import Gdk as _Gdk\n"
+        "        _state = controller.get_current_event_state()\n"
+        "        if not (_state & _Gdk.ModifierType.CONTROL_MASK):\n"
         "            _base = self._axis_renderer.get_base_pixels_per_mm(\n"
         "                self.get_width(), self.get_height()\n"
         "            )\n"
         "            _ppm = _base * self.zoom_level\n"
         "            if _ppm > 0:\n"
         "                self.set_pan(\n"
-        "                    self.pan_x_mm + dx / _ppm, self.pan_y_mm\n"
+        "                    self.pan_x_mm + dx / _ppm,\n"
+        "                    self.pan_y_mm - dy / _ppm,\n"
         "                )\n"
         "            return\n"
         "        zoom_speed = math.expm1(min(abs(dy), 120.0) * 0.002)",
@@ -100,6 +102,32 @@ PATCHES = [
         "                      priority=GLib.PRIORITY_DEFAULT)\n"
         "    else:\n"
         "        GLib.idle_add(lambda: falsify(func, *args, **kwargs))",
+    ),
+    # P8: a transiently blank view buffer (read race with the worker /
+    # a NACKed handle) removed the cached ops surface -> laser lines
+    # invisible until a full regeneration (e.g. layer visibility
+    # toggle). Keep the previous surface instead; stale beats blank.
+    (
+        "rayforge/ui_gtk/canvas2d/elements/workpiece.py",
+        "            if not np.any(new_data):\n"
+        "                self._remove_ops_surface(step_uid)\n"
+        "                self._invalidate_composited()\n"
+        "                return",
+        "            if not np.any(new_data):\n"
+        "                import sys as _sys\n"
+        "                if _sys.platform == 'ios':\n"
+        "                    return  # keep previous surface\n"
+        "                self._remove_ops_surface(step_uid)\n"
+        "                self._invalidate_composited()\n"
+        "                return",
+    ),
+    # P9: NACK-on-timeout destroys the artifact the main thread is about
+    # to adopt; under software-rendering load 5s is too tight. The wait
+    # only parks a worker thread, so be generous.
+    (
+        "rayforge/shared/tasker/proxy.py",
+        "        timeout: float = 5.0,",
+        "        timeout: float = 30.0,",
     ),
     # P7: icons. The iOS bundle has no gdk-pixbuf SVG loader (librsvg is
     # not built for iOS), so Gio.FileIcon/GdkPixbuf on Rayforge's .svg

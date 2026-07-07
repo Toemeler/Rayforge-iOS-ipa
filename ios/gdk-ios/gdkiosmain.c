@@ -49,6 +49,9 @@ static GdkIOSSurface *pointer_surface = NULL; /* weak */
 static gboolean touch1_down = FALSE;        /* raw button-1 press delivered */
 static gboolean multi_touch_active = FALSE; /* >=2 fingers: gestures own input */
 static gboolean two_finger_panning = FALSE; /* synthetic middle-drag in flight */
+static gboolean synth_zoom_scroll = FALSE;  /* pinch: tag scroll with CONTROL */
+static UIGestureRecognizer *g_two_finger_pan_recognizer = nil;
+static UIGestureRecognizer *g_pinch_recognizer = nil;
 
 static GdkIOSMainFunc user_main_func = NULL;
 static gpointer user_main_data = NULL;
@@ -308,7 +311,8 @@ deliver_scroll (double dx, double dy, gboolean is_stop)
     gdk_scroll_event_new (GDK_SURFACE (target),
                           display->core_pointer,
                           NULL, event_time_now (),
-                          key_modifiers | button_modifiers,
+                          key_modifiers | button_modifiers |
+                            (synth_zoom_scroll ? GDK_CONTROL_MASK : 0),
                           dx, dy, is_stop,
                           GDK_SCROLL_UNIT_SURFACE,
                           GDK_SCROLL_RELATIVE_DIRECTION_UNKNOWN));
@@ -476,9 +480,17 @@ deliver_key (GdkEventType type, UIKey *key)
       UIPinchGestureRecognizer *pinch =
         [[UIPinchGestureRecognizer alloc] initWithTarget:self
                                                   action:@selector(onPinch:)];
-      pinch.allowedTouchTypes = @[@(UITouchTypeDirect)];
+      /* Direct = touchscreen pinch; IndirectPointer = trackpad pinch. */
+      pinch.allowedTouchTypes = @[@(UITouchTypeDirect),
+                                  @(UITouchTypeIndirectPointer)];
       pinch.delegate = self;
       [self addGestureRecognizer:pinch];
+
+      /* Pan and pinch are exclusive: two-finger drag = pan only, pinch =
+       * zoom only (the earlier simultaneous mode made screen pinches pan
+       * and jitter). Whichever crosses its threshold first wins. */
+      g_two_finger_pan_recognizer = twoPan;
+      g_pinch_recognizer = pinch;
 
       [self addInteraction:
         [[UIPointerInteraction alloc] initWithDelegate:self]];
@@ -513,7 +525,13 @@ deliver_key (GdkEventType type, UIKey *key)
     shouldRecognizeSimultaneouslyWithGestureRecognizer:
         (UIGestureRecognizer *)otherGestureRecognizer
 {
-  /* Let two-finger pan and pinch track the same touches (maps-style). */
+  /* Two-finger pan and pinch are mutually exclusive (pan-only vs
+   * zoom-only, per user request); everything else may run together. */
+  if ((gestureRecognizer == g_two_finger_pan_recognizer &&
+       otherGestureRecognizer == g_pinch_recognizer) ||
+      (gestureRecognizer == g_pinch_recognizer &&
+       otherGestureRecognizer == g_two_finger_pan_recognizer))
+    return NO;
   return YES;
 }
 
@@ -676,13 +694,16 @@ live_touch_count (UIEvent *event)
   [recognizer setScale:1.0];
   if (r <= 0)
     return;
-  /* 0.45x sub-physical: full 1:1 (ln(r)/0.002 = *500) felt too fast
-   * on device; a 2x pinch now zooms ~1.4x. */
-  double dy = -log (r) * 225.0;
+  /* 0.3x sub-physical (ln(r)*150): 0.45x still felt too fast on
+   * device; a 2x pinch now zooms ~1.23x. Tagged with CONTROL so the
+   * patched on_scroll zooms instead of panning. */
+  double dy = -log (r) * 150.0;
   if (fabs (dy) < 0.01)
     return;
   deliver_motion (x, y);
+  synth_zoom_scroll = TRUE;
   deliver_scroll (0, dy, FALSE);
+  synth_zoom_scroll = FALSE;
 }
 
 - (void)pressesBegan:(NSSet<UIPress *> *)presses withEvent:(UIPressesEvent *)event
