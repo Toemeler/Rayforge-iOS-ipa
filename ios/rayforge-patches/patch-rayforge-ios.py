@@ -305,6 +305,28 @@ PATCHES = [
         "                            logger.info(\n"
         "                                'iOS: host -> relay mdns name'\n"
         "                            )\n"
+        "                        elif (\n"
+        "                            _m.driver_name == 'GrblTelnetDriver'\n"
+        "                            and (_m.driver_args or {}).get(\n"
+        "                                'host') == 'rayforge-laser.local'\n"
+        "                            and (_m.driver_args or {}).get(\n"
+        "                                'poll_status_while_running')\n"
+        "                            is False\n"
+        "                            and (_m.driver_args or {}).get(\n"
+        "                                'deadlock_detection') is False\n"
+        "                        ):\n"
+        "                            # v4: our exact earlier defaults ->\n"
+        "                            # live position polling during\n"
+        "                            # jobs. Any user-edited arg stops\n"
+        "                            # this from re-applying.\n"
+        "                            _m.driver_args = dict(\n"
+        "                                _m.driver_args,\n"
+        "                                poll_status_while_running=True,\n"
+        "                            )\n"
+        "                            self._machine_mgr.save_machine(_m)\n"
+        "                            logger.info(\n"
+        "                                'iOS: job status polling on'\n"
+        "                            )\n"
         "                except Exception:\n"
         "                    logger.exception(\n"
         "                        'iOS telnet migration failed'\n"
@@ -374,6 +396,64 @@ PATCHES = [
         "        except Exception:\n"
         "            pass  # fall through to the .svg lookup\n"
         '    filename = f"{icon_name}.svg"',
+    ),
+    # P17: no update checks. A sideloaded ipa has no self-update path,
+    # so the startup addon/app-version checks are pointless network
+    # chatter (and a spinner) on every launch.
+    (
+        "rayforge/ui_gtk/mainwindow.py",
+        "        # Trigger the non-blocking check for addon updates\n"
+        "        self.update_cmd.check_for_updates_on_startup()\n"
+        "\n"
+        "        # Trigger the non-blocking check for app version updates\n"
+        "        self.app_update_checker.check_on_startup()",
+        "        # iOS: update checks removed — a sideloaded ipa cannot\n"
+        "        # self-update; checking is noise on every launch.\n"
+        "        pass",
+    ),
+    # P18: auto-home once per app launch on the FIRST successful
+    # connect (not on reconnects, so a WiFi blip mid-positioning can
+    # never surprise-home the head). GRBL with homing enabled boots in
+    # alarm and rejects motion until homed — this also removes the
+    # stuck/slow first job.
+    (
+        "rayforge/machine/driver/grbl/grbl_serial.py",
+        '                logger.info("Connection established successfully.")',
+        '                logger.info("Connection established successfully.")\n'
+        "                if not getattr(\n"
+        "                    type(self), '_ios_autohomed', False\n"
+        "                ):\n"
+        "                    setattr(type(self), '_ios_autohomed', True)\n"
+        "\n"
+        "                    async def _ios_home(drv=self):\n"
+        "                        try:\n"
+        "                            await asyncio.sleep(2.0)\n"
+        "                            await drv.home()\n"
+        "                            logger.info('iOS: auto-home done')\n"
+        "                        except Exception:\n"
+        "                            logger.exception(\n"
+        "                                'iOS: auto-home failed'\n"
+        "                            )\n"
+        "\n"
+        "                    asyncio.create_task(_ios_home())",
+    ),
+    # P19: DXF is imported as millimeters, always. CAD exporters
+    # routinely stamp a wrong $INSUNITS (inches on mm geometry ->
+    # 25.4x too big). LightBurn's default treats DXF as mm; match it.
+    (
+        "rayforge/image/dxf/importer.py",
+        '    def _get_scale_to_mm(self, doc, default: float = 1.0) -> float:\n'
+        '        insunits = doc.header.get("$INSUNITS", 0)\n'
+        "        return units_to_mm.get(insunits, default) or default",
+        '    def _get_scale_to_mm(self, doc, default: float = 1.0) -> float:\n'
+        '        insunits = doc.header.get("$INSUNITS", 0)\n'
+        "        if units_to_mm.get(insunits, 1.0) != 1.0:\n"
+        "            import logging as _lg\n"
+        "            _lg.getLogger(__name__).info(\n"
+        '                "DXF $INSUNITS=%s ignored; importing as mm",\n'
+        "                insunits,\n"
+        "            )\n"
+        "        return 1.0",
     ),
 ]
 
