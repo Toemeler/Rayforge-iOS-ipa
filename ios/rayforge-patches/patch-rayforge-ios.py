@@ -472,6 +472,21 @@ PATCHES = [
         "            )\n"
         "        return 1.0",
     ),
+    # P20: 10 Hz idle status polling (was 2 Hz). Two purposes: live
+    # position feel, and — critical on the BT relay — steady traffic
+    # keeps the DevKit's WiFi/BT radios out of deep power-save, so a
+    # jog never pays the radio wake-up tax (100-300 ms otherwise).
+    (
+        "rayforge/machine/driver/grbl/grbl_serial.py",
+        "                    await asyncio.sleep(0.5)\n"
+        "\n"
+        "                    if not self.keep_running or not "
+        "transport.is_connected:",
+        "                    await asyncio.sleep(0.1)  # iOS: keep-warm\n"
+        "\n"
+        "                    if not self.keep_running or not "
+        "transport.is_connected:",
+    ),
 ]
 
 
