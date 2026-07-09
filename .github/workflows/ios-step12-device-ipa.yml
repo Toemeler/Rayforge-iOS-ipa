@@ -678,6 +678,9 @@ jobs:
           # denies every socket to a LAN address (the telnet driver
           # would fail with no prompt ever shown to the user).
           echo '  <key>NSLocalNetworkUsageDescription</key><string>Rayforge connects to your Sculpfun laser over the local WiFi network to send jobs and control the machine.</string>' >> "$PL"
+          # Bonjour/mDNS: the machine is addressed by its mDNS name
+          # (rayforge-laser.local), so declare the service types.
+          echo '  <key>NSBonjourServices</key><array><string>_telnet._tcp</string><string>_http._tcp</string></array>' >> "$PL"
           echo '  <key>CFBundleIcons</key><dict><key>CFBundlePrimaryIcon</key><dict><key>CFBundleIconFiles</key><array><string>AppIcon60x60</string></array></dict></dict>' >> "$PL"
           echo '  <key>CFBundleIcons~ipad</key><dict><key>CFBundlePrimaryIcon</key><dict><key>CFBundleIconFiles</key><array><string>AppIcon60x60</string><string>AppIcon76x76</string><string>AppIcon83.5x83.5</string></array></dict></dict>' >> "$PL"
           echo '  <key>LSSupportsOpeningDocumentsInPlace</key><true/>' >> "$PL"

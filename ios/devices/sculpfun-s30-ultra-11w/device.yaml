@@ -3,12 +3,12 @@ device:
   name: Sculpfun S30 Ultra 11W
   description: 11W diode laser engraver with 600x600mm work area, automatic
     air-assist and WiFi (Grbl_ESP32 telnet, port 23). Default host is the
-    laser's own access-point IP (192.168.0.1); change it in machine
+    BT relay's mDNS name (rayforge-laser.local); change it in machine
     settings if the laser joins your home WiFi instead ($Radio/Mode=STA).
 machine:
   driver: GrblTelnetDriver
   driver_args:
-    host: 192.168.0.1
+    host: rayforge-laser.local
     port: 23
     poll_status_while_running: false
     deadlock_detection: false
