@@ -520,6 +520,15 @@ PATCHES = [
 # (rel, old, new, expected_count): applied to ALL occurrences, with the
 # count asserted so upstream drift is caught loudly.
 REPLACE_ALL = [
+    # Command timeout 10s -> 120s: GRBL does not ack '$H' until homing
+    # finishes; 600mm homing takes >10s, so the driver aborted mid-home
+    # and desynced the queue (seen in the on-device session log).
+    (
+        "rayforge/machine/driver/grbl/grbl_serial.py",
+        "await asyncio.wait_for(request.finished.wait(), timeout=10.0)",
+        "await asyncio.wait_for(request.finished.wait(), timeout=120.0)",
+        2,
+    ),
     # air assist default ON in every capability (Cut/Engrave/Raster)
     (
         "rayforge/core/capability.py",

@@ -142,6 +142,30 @@ def main() -> None:
     _lp.main = lambda *a, **kw: None
     sys.modules["serial.tools.list_ports"] = _lp
 
+    # Diagnostic: a 100ms GLib timer that logs every 5s with the real
+    # elapsed wall time. If the logged interval >> 5s while the app is
+    # untouched, GLib timeout dispatch is starving without input —
+    # pinpointing the "stuck until I pan" report at the main-loop level.
+    def _ios_heartbeat_start():
+        import time as _t
+        from gi.repository import GLib as _GLib
+        state = {"n": 0, "t": _t.monotonic()}
+
+        def _beat():
+            state["n"] += 1
+            if state["n"] % 50 == 0:
+                now = _t.monotonic()
+                _ioslog(
+                    "heartbeat: 50 ticks (5.0s nominal) took "
+                    f"{now - state['t']:.2f}s"
+                )
+                state["t"] = now
+            return True
+
+        _GLib.timeout_add(100, _beat)
+
+    _ios_heartbeat_start()
+
     def _ios_run(self, argv=None):
         # Equivalent of g_application_run() minus the blocking loop:
         # ::startup (adw_init etc.) fires during register, ::activate
