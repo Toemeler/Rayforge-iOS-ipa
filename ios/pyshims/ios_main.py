@@ -166,6 +166,79 @@ def main() -> None:
 
     _ios_heartbeat_start()
 
+    # Fire-watch preview: a small live camera box (bottom-right) fed
+    # by 1 fps snapshots from the CAM node. Fully defensive: any
+    # failure logs once and the app runs without the box.
+    def _ios_camera_box_start(app):
+        import threading
+        import urllib.request
+        from gi.repository import Gtk, GLib, Gdk, GdkPixbuf
+
+        state = {"pic": None, "fails": 0}
+
+        def _fetch():
+            try:
+                with urllib.request.urlopen(
+                    "http://rayforge-cam.local/jpg", timeout=3
+                ) as r:
+                    return r.read()
+            except Exception:
+                return None
+
+        def _apply(data):
+            try:
+                loader = GdkPixbuf.PixbufLoader.new_with_type("jpeg")
+                loader.write(data)
+                loader.close()
+                pb = loader.get_pixbuf()
+                if pb is not None and state["pic"] is not None:
+                    state["pic"].set_paintable(
+                        Gdk.Texture.new_for_pixbuf(pb)
+                    )
+            except Exception:
+                pass
+            return False
+
+        def _tick():
+            def worker():
+                data = _fetch()
+                if data:
+                    state["fails"] = 0
+                    GLib.idle_add(_apply, data)
+                else:
+                    state["fails"] += 1
+            threading.Thread(target=worker, daemon=True).start()
+            return True
+
+        def _install():
+            try:
+                win = app.get_active_window()
+                if win is None:
+                    return True  # retry until the window exists
+                child = win.get_child()
+                if child is None:
+                    return True
+                overlay = Gtk.Overlay()
+                win.set_child(None)
+                overlay.set_child(child)
+                pic = Gtk.Picture()
+                pic.set_size_request(240, 180)
+                pic.set_halign(Gtk.Align.END)
+                pic.set_valign(Gtk.Align.END)
+                pic.set_margin_end(12)
+                pic.set_margin_bottom(12)
+                pic.add_css_class("card")
+                overlay.add_overlay(pic)
+                win.set_child(overlay)
+                state["pic"] = pic
+                GLib.timeout_add(1000, _tick)
+                _ioslog("camera box installed")
+            except Exception as e:
+                _ioslog(f"camera box failed: {e}")
+            return False
+
+        GLib.timeout_add(4000, _install)
+
     def _ios_run(self, argv=None):
         # Equivalent of g_application_run() minus the blocking loop:
         # ::startup (adw_init etc.) fires during register, ::activate
@@ -220,6 +293,7 @@ def main() -> None:
             return False
 
         GLib.timeout_add_seconds(4, _geom_probe)
+        _ios_camera_box_start(self)
         raise _IOSKeepRunning()
 
     Adw.Application.run = _ios_run
