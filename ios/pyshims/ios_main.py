@@ -293,7 +293,7 @@ def main() -> None:
             return False
 
         GLib.timeout_add_seconds(4, _geom_probe)
-        _ios_camera_box_start(self)
+        # _ios_camera_box_start(self)  # DISABLED: crashes — see handoff
         raise _IOSKeepRunning()
 
     Adw.Application.run = _ios_run
