@@ -467,9 +467,13 @@ PATCHES = [
         "\n"
         "                    asyncio.create_task(_ios_home())",
     ),
-    # P19: DXF is imported as millimeters, always. CAD exporters
-    # routinely stamp a wrong $INSUNITS (inches on mm geometry ->
-    # 25.4x too big). LightBurn's default treats DXF as mm; match it.
+    # P19 (v2): respect $INSUNITS (upstream behavior), but LOG the
+    # conversion. The old P19 forced mm and broke genuinely inch-
+    # authored files (e.g. planetary.dxf: $INSUNITS=1, 1.1953 in
+    # geometry = 30.36 mm; forcing mm shrank it to 1.2 mm). The
+    # original "25.4x too big" symptom was the pyvips render failure,
+    # not a units bug — verified against unpatched upstream, which
+    # imports planetary.dxf at exactly 30.36 mm.
     (
         "rayforge/image/dxf/importer.py",
         '    def _get_scale_to_mm(self, doc, default: float = 1.0) -> float:\n'
@@ -477,13 +481,41 @@ PATCHES = [
         "        return units_to_mm.get(insunits, default) or default",
         '    def _get_scale_to_mm(self, doc, default: float = 1.0) -> float:\n'
         '        insunits = doc.header.get("$INSUNITS", 0)\n'
-        "        if units_to_mm.get(insunits, 1.0) != 1.0:\n"
-        "            import logging as _lg\n"
-        "            _lg.getLogger(__name__).info(\n"
-        '                "DXF $INSUNITS=%s ignored; importing as mm",\n'
-        "                insunits,\n"
-        "            )\n"
-        "        return 1.0",
+        "        scale = units_to_mm.get(insunits, default) or default\n"
+        "        import logging as _lg\n"
+        "        _lg.getLogger(__name__).info(\n"
+        '            "DXF $INSUNITS=%s -> scale_to_mm=%s", insunits, scale,\n'
+        "        )\n"
+        "        return scale",
+    ),
+    # P22: upstream hardcodes thumbnail line_width=2.0 in GEOMETRY
+    # units; for small-native-unit files (inch DXF, ~1.2 units) the
+    # stroke floods the whole canvas -> solid gray thumbnail. Passing
+    # None uses the renderer's scale-aware default (~1 px).
+    (
+        "rayforge/image/dxf/importer.py",
+        "        return render_geometry_to_png(\n"
+        "            merged,\n"
+        "            size,\n"
+        "            line_width=2.0,\n"
+        "            color=(0.2, 0.2, 0.2, 1.0),\n"
+        "        )",
+        "        return render_geometry_to_png(\n"
+        "            merged,\n"
+        "            size,\n"
+        "            line_width=None,\n"
+        "            color=(0.2, 0.2, 0.2, 1.0),\n"
+        "        )",
+    ),
+    # P23: geo_renderer's default stroke width has a 0.5 GEOMETRY-unit
+    # floor; for small-unit files (inch DXF) that's ~100 px and floods
+    # the thumbnail. Use a fixed 1.5 px width in geometry units.
+    (
+        "rayforge/image/geo_renderer.py",
+        "    width = line_width if line_width is not None else "
+        "max(1.0 / scale, 0.5)",
+        "    width = line_width if line_width is not None else "
+        "1.5 / scale",
     ),
     # P21: log the imported DXF's computed world size (mm) so a wrong
     # on-device size is diagnosable from the session log.

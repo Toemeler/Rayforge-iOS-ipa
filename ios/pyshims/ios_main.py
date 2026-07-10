@@ -191,10 +191,20 @@ def main() -> None:
                 loader.write(data)
                 loader.close()
                 pb = loader.get_pixbuf()
-                if pb is not None and state["pic"] is not None:
-                    state["pic"].set_paintable(
+                pic = state["pic"]
+                if pb is not None and pic is not None:
+                    pic.set_paintable(
                         Gdk.Texture.new_for_pixbuf(pb)
                     )
+                    pic.set_visible(True)
+            except Exception:
+                pass
+            return False
+
+        def _hide():
+            try:
+                if state["pic"] is not None:
+                    state["pic"].set_visible(False)
             except Exception:
                 pass
             return False
@@ -207,32 +217,38 @@ def main() -> None:
                     GLib.idle_add(_apply, data)
                 else:
                     state["fails"] += 1
+                    if state["fails"] == 5:
+                        GLib.idle_add(_hide)
             threading.Thread(target=worker, daemon=True).start()
             return True
 
         def _install():
+            # Adw-safe: never re-parent window content. MainWindow already
+            # owns a Gtk.Overlay around the canvas (_canvas_overlay); we
+            # only add_overlay() a Picture onto it. Retries until the
+            # window + overlay exist, gives up after ~30 s.
+            state["tries"] = state.get("tries", 0) + 1
             try:
                 win = app.get_active_window()
-                if win is None:
-                    return True  # retry until the window exists
-                child = win.get_child()
-                if child is None:
-                    return True
-                overlay = Gtk.Overlay()
-                win.set_child(None)
-                overlay.set_child(child)
+                overlay = getattr(win, "_canvas_overlay", None)
+                if overlay is None or not isinstance(overlay, Gtk.Overlay):
+                    if state["tries"] > 30:
+                        _ioslog("camera box: no _canvas_overlay; giving up")
+                        return False
+                    return True  # retry
                 pic = Gtk.Picture()
                 pic.set_size_request(240, 180)
                 pic.set_halign(Gtk.Align.END)
                 pic.set_valign(Gtk.Align.END)
                 pic.set_margin_end(12)
                 pic.set_margin_bottom(12)
+                pic.set_can_target(False)  # clicks pass through to canvas
                 pic.add_css_class("card")
+                pic.set_visible(False)  # shown on first good frame
                 overlay.add_overlay(pic)
-                win.set_child(overlay)
                 state["pic"] = pic
                 GLib.timeout_add(1000, _tick)
-                _ioslog("camera box installed")
+                _ioslog("camera box installed (canvas overlay)")
             except Exception as e:
                 _ioslog(f"camera box failed: {e}")
             return False
@@ -293,7 +309,7 @@ def main() -> None:
             return False
 
         GLib.timeout_add_seconds(4, _geom_probe)
-        # _ios_camera_box_start(self)  # DISABLED: crashes — see handoff
+        _ios_camera_box_start(self)  # Adw-safe: overlays onto _canvas_overlay
         raise _IOSKeepRunning()
 
     Adw.Application.run = _ios_run
