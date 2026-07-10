@@ -377,6 +377,19 @@ PATCHES = [
         "                                logger.info(\n"
         "                                    'iOS: camera -> cam node'\n"
         "                                )\n"
+        "                            if _c.name == 'Laser Camera':\n"
+        "                                # v6: side-mounted monitoring\n"
+        "                                # cam: canvas overlay off by\n"
+        "                                # default. Rename marks the\n"
+        "                                # migration done, so a user\n"
+        "                                # re-enable in settings sticks.\n"
+        "                                _c.name = 'Fire Watch'\n"
+        "                                _c.enabled = False\n"
+        "                                self._machine_mgr\\\n"
+        "                                    .save_machine(_m)\n"
+        "                                logger.info(\n"
+        "                                    'iOS: camera overlay off'\n"
+        "                                )\n"
         "                except Exception:\n"
         "                    logger.exception(\n"
         "                        'iOS camera attach failed'\n"
@@ -471,6 +484,20 @@ PATCHES = [
         "                insunits,\n"
         "            )\n"
         "        return 1.0",
+    ),
+    # P21: log the imported DXF's computed world size (mm) so a wrong
+    # on-device size is diagnosable from the session log.
+    (
+        "rayforge/image/dxf/importer.py",
+        "        # 6. Final Result\n"
+        "        result = ParsingResult(",
+        "        # 6. Final Result\n"
+        "        import logging as _lg\n"
+        "        _lg.getLogger(__name__).info(\n"
+        "            'DXF import: world_frame=%s scale=%s',\n"
+        "            world_frame, native_unit_to_mm,\n"
+        "        )\n"
+        "        result = ParsingResult(",
     ),
     # P20: 10 Hz idle status polling (was 2 Hz). Two purposes: live
     # position feel, and — critical on the BT relay — steady traffic
