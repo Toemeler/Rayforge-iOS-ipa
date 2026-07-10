@@ -517,6 +517,49 @@ PATCHES = [
         "    width = line_width if line_width is not None else "
         "1.5 / scale",
     ),
+    # P24: promote the fit-check inputs to INFO so the on-device
+    # session log shows WHY an import was called oversized (bbox vs
+    # work_area), including per-item natural sizes.
+    (
+        "rayforge/doceditor/file_cmd.py",
+        "        bbox_x, bbox_y, bbox_w, bbox_h = bbox\n"
+        "        area_x, area_y, area_w, area_h = config.machine.work_area\n"
+        "        logger.debug(",
+        "        bbox_x, bbox_y, bbox_w, bbox_h = bbox\n"
+        "        area_x, area_y, area_w, area_h = config.machine.work_area\n"
+        "        logger.info(\n"
+        "            'fit-check: bbox=(%.3f, %.3f, %.3f, %.3f) '\n"
+        "            'work_area=(%.3f, %.3f, %.3f, %.3f) items=%s',\n"
+        "            bbox_x, bbox_y, bbox_w, bbox_h,\n"
+        "            area_x, area_y, area_w, area_h,\n"
+        "            [\n"
+        "                (type(i).__name__,\n"
+        "                 getattr(i, 'natural_width_mm', None),\n"
+        "                 getattr(i, 'natural_height_mm', None))\n"
+        "                for i in content_items\n"
+        "            ],\n"
+        "        )\n"
+        "        logger.debug(",
+    ),
+    # P25: log which importer class handles a file — the device log
+    # showed a DXF import with ZERO DxfImporter log output, so verify
+    # the registry actually picked DxfImporter.
+    (
+        "rayforge/doceditor/file_cmd.py",
+        "            importer = importer_cls(\n"
+        "                data=file_bytes, source_file=Path(filename)\n"
+        "            )\n"
+        "            import_result = importer.get_doc_items(spec)",
+        "            logger.info(\n"
+        "                'import preview: %s handles %s (spec=%s)',\n"
+        "                importer_cls.__name__, filename,\n"
+        "                type(spec).__name__,\n"
+        "            )\n"
+        "            importer = importer_cls(\n"
+        "                data=file_bytes, source_file=Path(filename)\n"
+        "            )\n"
+        "            import_result = importer.get_doc_items(spec)",
+    ),
     # P21: log the imported DXF's computed world size (mm) so a wrong
     # on-device size is diagnosable from the session log.
     (

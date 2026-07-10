@@ -193,6 +193,14 @@ def main() -> None:
                 pb = loader.get_pixbuf()
                 pic = state["pic"]
                 if pb is not None and pic is not None:
+                    # Gtk.Picture renders at the paintable's NATURAL size
+                    # (set_size_request is only a minimum), so scale the
+                    # frame itself: factor 0.25.
+                    pb = pb.scale_simple(
+                        max(1, pb.get_width() // 4),
+                        max(1, pb.get_height() // 4),
+                        GdkPixbuf.InterpType.BILINEAR,
+                    )
                     pic.set_paintable(
                         Gdk.Texture.new_for_pixbuf(pb)
                     )
@@ -237,7 +245,7 @@ def main() -> None:
                         return False
                     return True  # retry
                 pic = Gtk.Picture()
-                pic.set_size_request(240, 180)
+                pic.set_size_request(1, 1)  # size comes from the scaled frame
                 pic.set_halign(Gtk.Align.END)
                 pic.set_valign(Gtk.Align.END)
                 pic.set_margin_end(12)
@@ -247,7 +255,7 @@ def main() -> None:
                 pic.set_visible(False)  # shown on first good frame
                 overlay.add_overlay(pic)
                 state["pic"] = pic
-                GLib.timeout_add(1000, _tick)
+                GLib.timeout_add(400, _tick)
                 _ioslog("camera box installed (canvas overlay)")
             except Exception as e:
                 _ioslog(f"camera box failed: {e}")
