@@ -560,6 +560,56 @@ PATCHES = [
         "            )\n"
         "            import_result = importer.get_doc_items(spec)",
     ),
+    # P26: iOS reports unknown file types as application/octet-stream;
+    # RuidaImporter registers that generic mime, so a .dxf opened via
+    # the file dialog was parsed as a binary Ruida job -> garbage
+    # geometry (device log: 95x1576 mm from a 30 mm file). Treat
+    # generic mimes as untrusted and let the extension decide; log the
+    # final choice.
+    (
+        "rayforge/doceditor/file_cmd.py",
+        "        importer_cls = None\n"
+        "        if mime_type:\n"
+        "            importer_cls = importer_registry.get_by_mime_type("
+        "mime_type)\n"
+        "\n"
+        "        if not importer_cls and file_path.suffix:\n"
+        "            importer_cls = importer_registry.get_by_extension(\n"
+        "                file_path.suffix.lower()\n"
+        "            )\n"
+        "\n"
+        "        if importer_cls:\n"
+        "            return importer_cls, importer_cls.features\n"
+        "        return None, set()",
+        "        _GENERIC_MIMES = {\n"
+        "            'application/octet-stream',\n"
+        "            'text/plain',\n"
+        "            'application/x-unknown',\n"
+        "        }\n"
+        "        importer_cls = None\n"
+        "        if mime_type and mime_type not in _GENERIC_MIMES:\n"
+        "            importer_cls = importer_registry.get_by_mime_type("
+        "mime_type)\n"
+        "\n"
+        "        if not importer_cls and file_path.suffix:\n"
+        "            importer_cls = importer_registry.get_by_extension(\n"
+        "                file_path.suffix.lower()\n"
+        "            )\n"
+        "\n"
+        "        if not importer_cls and mime_type in _GENERIC_MIMES:\n"
+        "            # No extension match: fall back to the generic mime.\n"
+        "            importer_cls = importer_registry.get_by_mime_type("
+        "mime_type)\n"
+        "\n"
+        "        logger.info(\n"
+        "            'importer selection: file=%s mime=%s -> %s',\n"
+        "            file_path.name, mime_type,\n"
+        "            importer_cls.__name__ if importer_cls else None,\n"
+        "        )\n"
+        "        if importer_cls:\n"
+        "            return importer_cls, importer_cls.features\n"
+        "        return None, set()",
+    ),
     # P21: log the imported DXF's computed world size (mm) so a wrong
     # on-device size is diagnosable from the session log.
     (
