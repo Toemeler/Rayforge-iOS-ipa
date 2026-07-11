@@ -130,6 +130,29 @@ def main() -> None:
     sys.modules["multiprocessing.shared_memory"] = rayforge_ios_shm
     multiprocessing.shared_memory = rayforge_ios_shm
 
+    # send_event_and_wait exists to keep a WORKER PROCESS's shm handle
+    # open until the main process adopts it (Windows lifetime rules).
+    # In the single-process iOS build the shm registry keeps blocks
+    # alive until unlink regardless of handles, so the wait is
+    # semantically unnecessary — and actively harmful: the ack is set
+    # by a main-thread dispatch, and the iOS main loop can starve for
+    # tens of seconds (heartbeat evidence: 24-33 s), so the 5 s wait
+    # times out, the view runner then UNLINKS the artifact it just
+    # created and aborts. Result: ops overlays stuck at the initial
+    # low ppm + render churn (flicker). Ack immediately instead;
+    # adoption still happens asynchronously on the main thread.
+    def _ios_patch_send_event_and_wait():
+        from rayforge.shared.tasker.proxy import ExecutionContextProxy
+
+        def send_event_and_wait(
+            self, name, data=None, timeout=5.0, logger=None
+        ):
+            self.send_event(name, data)
+            return True
+
+        ExecutionContextProxy.send_event_and_wait = send_event_and_wait
+        _ioslog("patched send_event_and_wait: in-process immediate ack")
+
     # pyserial's list_ports platform dispatch does not know iOS and
     # raises ImportError at module import time. Serial hardware is
     # unavailable on iOS anyway (no USB serial without MFi), so an
@@ -141,6 +164,8 @@ def main() -> None:
     _lp.grep = lambda *a, **kw: iter(())
     _lp.main = lambda *a, **kw: None
     sys.modules["serial.tools.list_ports"] = _lp
+
+    _ios_patch_send_event_and_wait()
 
     # Diagnostic: a 100ms GLib timer that logs every 5s with the real
     # elapsed wall time. If the logged interval >> 5s while the app is
