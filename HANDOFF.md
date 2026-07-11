@@ -29,8 +29,11 @@ timeout, auto-home-once, telnet driver.
   copyMakeBorder (constant), imencode('.bmp') with real-cv2 BGR
   semantics. **pyvips additions**: Image.black, invert (uint8+linear),
   used by the TraceSpec preview chain (thumbnail->flatten->invert).
-- **raygeo v1.15.2** (upstream HEAD f36b7fc bumped requirements
-  overnight; 1.15.1 lacks geo.Matrix — tags updated in step11+12).
+- **rayforge is now PINNED** in step12 (RAYFORGE_SHA=65684a3...) with
+  raygeo v1.16.0. Upstream broke two builds in one day via requirement
+  bumps landing between validation and build (geo.Matrix, then
+  raygeo.image transparency fns -> all-white boot failure). Bump the
+  pin only together with RAYGEO_TAG after a full local validation.
 
 ## 3D — ENABLED (user insisted; architecture chosen to avoid C changes)
 NOT via GTK's GL plumbing (gdk-ios has no GdkGLContext; libepoxy 1.5.10

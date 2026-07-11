@@ -32,7 +32,7 @@ env:
   IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
   IOS_SDK: "iphoneos"
   BUNDLE_ID: "org.rayforge.app"
-  RAYGEO_TAG: "v1.15.2"
+  RAYGEO_TAG: "v1.16.0"
   VTRACER_VERSION: "0.6.11"
   PY_SUPPORT_URL: "https://github.com/beeware/Python-Apple-support/releases/download/3.13-b14/Python-3.13-iOS-support.b14.tar.gz"
   LIBFFI_VERSION: "3.5.2"
@@ -445,7 +445,15 @@ jobs:
         run: |
           set -euxo pipefail
           STAGE="${STAGE_DIR}"
-          git clone -q --depth 1 https://github.com/barebaric/rayforge.git rayforge-src
+          # PINNED: upstream moves daily and has broken two builds via
+          # requirement bumps landing between validation and build
+          # (raygeo geo.Matrix, then raygeo.image transparency fns).
+          # Bump RAYFORGE_SHA only together with RAYGEO_TAG after a
+          # full local validation run.
+          RAYFORGE_SHA=65684a346b10111d79b3c8fe499d4f624f2ccd25
+          git clone -q https://github.com/barebaric/rayforge.git rayforge-src
+          git -C rayforge-src checkout -q "$RAYFORGE_SHA" || {
+            echo "::error::pinned rayforge sha not found"; exit 1; }
           (cd rayforge-src && git rev-parse HEAD | tee "${GITHUB_WORKSPACE}/rayforge-sha.txt")
           python3 ios/rayforge-patches/patch-rayforge-ios.py rayforge-src
           # iOS-only device profile: Sculpfun S30 Ultra 11W (preconfigured)
