@@ -8,7 +8,7 @@ use pyo3::exceptions::PyException;
 use pyo3::prelude::*;
 use std::io::{BufReader, Cursor};
 use visioncortex::{ColorImage, PathSimplifyMode};
-use vtracer::{convert, ColorMode, Config, Hierarchical};
+use vtracer_core::{convert, ColorMode, Config, Hierarchical};
 
 #[allow(clippy::too_many_arguments)]
 fn construct_config(

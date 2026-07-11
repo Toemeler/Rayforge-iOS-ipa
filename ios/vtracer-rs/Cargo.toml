@@ -12,7 +12,7 @@ name = "vtracer"
 crate-type = ["cdylib"]
 
 [dependencies]
-vtracer = { version = "0.6", default-features = false }
+vtracer_core = { package = "vtracer", version = "0.6", default-features = false }
 visioncortex = "0.8"
 image = { version = "0.24", default-features = false, features = ["bmp", "png", "jpeg"] }
 pyo3 = { version = "0.28", features = ["abi3", "abi3-py311", "extension-module"] }

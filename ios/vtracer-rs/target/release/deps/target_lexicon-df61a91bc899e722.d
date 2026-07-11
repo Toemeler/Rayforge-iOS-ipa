@@ -1,0 +1,15 @@
+/home/claude/repo/ios/vtracer-rs/target/release/deps/libtarget_lexicon-df61a91bc899e722.rmeta: /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/lib.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/data_model.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/host.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/parse_error.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/targets.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/triple.rs /home/claude/repo/ios/vtracer-rs/target/release/build/target-lexicon-0b8cdacf3aaa9ac9/out/host.rs
+
+/home/claude/repo/ios/vtracer-rs/target/release/deps/libtarget_lexicon-df61a91bc899e722.rlib: /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/lib.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/data_model.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/host.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/parse_error.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/targets.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/triple.rs /home/claude/repo/ios/vtracer-rs/target/release/build/target-lexicon-0b8cdacf3aaa9ac9/out/host.rs
+
+/home/claude/repo/ios/vtracer-rs/target/release/deps/target_lexicon-df61a91bc899e722.d: /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/lib.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/data_model.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/host.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/parse_error.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/targets.rs /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/triple.rs /home/claude/repo/ios/vtracer-rs/target/release/build/target-lexicon-0b8cdacf3aaa9ac9/out/host.rs
+
+/root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/lib.rs:
+/root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/data_model.rs:
+/root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/host.rs:
+/root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/parse_error.rs:
+/root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/targets.rs:
+/root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/target-lexicon-0.13.5/src/triple.rs:
+/home/claude/repo/ios/vtracer-rs/target/release/build/target-lexicon-0b8cdacf3aaa9ac9/out/host.rs:
+
+# env-dep:OUT_DIR=/home/claude/repo/ios/vtracer-rs/target/release/build/target-lexicon-0b8cdacf3aaa9ac9/out
