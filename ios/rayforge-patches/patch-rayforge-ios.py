@@ -610,6 +610,18 @@ PATCHES = [
         "            return importer_cls, importer_cls.features\n"
         "        return None, set()",
     ),
+    # P27: render ops views OVERSAMPLED at 3x the screen ppm so the
+    # bitmap stays crisp while zooming in (pan never degrades a
+    # bitmap). The composited draw derives scale from actual surface
+    # dimensions, so oversampling is transparent; CAIRO_MAX_DIMENSION
+    # (8192) still caps memory for large workpieces.
+    (
+        "rayforge/ui_gtk/canvas2d/surface.py",
+        "        context = RenderContext(\n"
+        "            pixels_per_mm=(ppm_x, ppm_y),",
+        "        context = RenderContext(\n"
+        "            pixels_per_mm=(ppm_x * 3.0, ppm_y * 3.0),",
+    ),
     # P21: log the imported DXF's computed world size (mm) so a wrong
     # on-device size is diagnosable from the session log.
     (
