@@ -610,7 +610,7 @@ PATCHES = [
         "            return importer_cls, importer_cls.features\n"
         "        return None, set()",
     ),
-    # P27: render ops views OVERSAMPLED at 3x the screen ppm so the
+    # P27: render ops views OVERSAMPLED at 2x the screen ppm so the
     # bitmap stays crisp while zooming in (pan never degrades a
     # bitmap). The composited draw derives scale from actual surface
     # dimensions, so oversampling is transparent; CAIRO_MAX_DIMENSION
@@ -620,7 +620,7 @@ PATCHES = [
         "        context = RenderContext(\n"
         "            pixels_per_mm=(ppm_x, ppm_y),",
         "        context = RenderContext(\n"
-        "            pixels_per_mm=(ppm_x * 3.0, ppm_y * 3.0),",
+        "            pixels_per_mm=(ppm_x * 2.0, ppm_y * 2.0),",
     ),
     # P21: log the imported DXF's computed world size (mm) so a wrong
     # on-device size is diagnosable from the session log.
@@ -657,6 +657,19 @@ PATCHES = [
 # (rel, old, new, expected_count): applied to ALL occurrences, with the
 # count asserted so upstream drift is caught loudly.
 REPLACE_ALL = [
+    # P28 (companion to P27): the ops renderer strokes at exactly one
+    # BITMAP pixel (1.0/effective_ppm). With 2x oversampling that is
+    # half a screen pixel: hairline-thin, shimmering, sub-pixel alpha
+    # "fighting" the vector base lines. Stroke at the oversample
+    # factor so lines land at ~1 screen pixel.
+    (
+        "rayforge/pipeline/view/view_compute.py",
+        "line_width_mm = 1.0 / effective_ppm_x if effective_ppm_x > 0"
+        " else 1.0",
+        "line_width_mm = 2.0 / effective_ppm_x if effective_ppm_x > 0"
+        " else 1.0",
+        3,
+    ),
     # Command timeout 10s -> 120s: GRBL does not ack '$H' until homing
     # finishes; 600mm homing takes >10s, so the driver aborted mid-home
     # and desynced the queue (seen in the on-device session log).

@@ -296,9 +296,56 @@ def install(Gtk, Gio, GLib, documents_dir, ioslog=lambda m: None):
 
         # ------------------------------------------------------- save
         def save(self, win, cancellable, callback, user_data=None):
+            """Ask for a name first, then write + present export sheet."""
+            try:
+                self._prompt_name(
+                    win,
+                    lambda name: self._do_save(name, callback, user_data),
+                    lambda: self._cancel_save(callback, user_data),
+                )
+            except Exception:
+                logger.exception("iOS save prompt failed; GTK fallback")
+                self._gtk_fallback("save", win, cancellable, callback,
+                                   user_data)
+
+        def _prompt_name(self, win, on_ok, on_cancel):
+            import gi
+            gi.require_version("Adw", "1")
+            from gi.repository import Adw
+
+            name = self._initial_name or "untitled"
+            base, ext = os.path.splitext(name)
+
+            dlg = Adw.AlertDialog.new("Save As", None)
+            entry = Gtk.Entry()
+            entry.set_text(base)
+            entry.set_activates_default(True)
+            entry.set_margin_top(6)
+            dlg.set_extra_child(entry)
+            dlg.add_response("cancel", "Cancel")
+            dlg.add_response("save", "Save")
+            dlg.set_default_response("save")
+            dlg.set_response_appearance(
+                "save", Adw.ResponseAppearance.SUGGESTED
+            )
+
+            def on_response(_dlg, response):
+                if response == "save":
+                    text = entry.get_text().strip() or base
+                    if ext and not text.endswith(ext):
+                        text += ext
+                    on_ok(text)
+                else:
+                    on_cancel()
+
+            dlg.connect("response", on_response)
+            parent = win if isinstance(win, Gtk.Widget) else None
+            dlg.present(parent)
+            entry.grab_focus()
+
+        def _do_save(self, name, callback, user_data):
             try:
                 os.makedirs(export_dir, exist_ok=True)
-                name = self._initial_name or "untitled"
                 base, ext = os.path.splitext(name)
                 path = os.path.join(export_dir, name)
                 i = 1
@@ -310,9 +357,12 @@ def install(Gtk, Gio, GLib, documents_dir, ioslog=lambda m: None):
                 self._schedule_export(path)
                 ioslog(f"iOS file picker: save -> {path}")
             except Exception:
-                logger.exception("iOS save bridge failed; GTK fallback")
-                self._gtk_fallback("save", win, cancellable, callback,
-                                   user_data)
+                logger.exception("iOS save bridge failed")
+                self._cancel_save(callback, user_data)
+
+        def _cancel_save(self, callback, user_data):
+            self._picked = None
+            GLib.idle_add(self._fire, callback, user_data)
 
         def save_finish(self, result):
             return self._picked
