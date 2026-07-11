@@ -7,6 +7,13 @@ import sys
 import numpy as np
 
 # ------------------------------------------------------------ library
+# iOS system frameworks live in the dyld shared cache and are NOT
+# visible on the filesystem — os.path.exists() is always False for
+# them. Always attempt CDLL; dyld resolves from the cache.
+# If nothing loads, DO NOT raise at import time: rayforge has
+# unguarded module-level `from OpenGL import GL` imports (machine
+# settings page), so an import-time failure kills the whole UI. Fall
+# back to a lazy-failing mode: constants work, calls raise GLError.
 _CANDIDATES = [
     os.environ.get("RAYFORGE_GLES_LIB") or "",
     "/System/Library/Frameworks/OpenGLES.framework/OpenGLES",  # iOS
@@ -14,18 +21,15 @@ _CANDIDATES = [
     "libGLESv2.so",
 ]
 _lib = None
-for _c in _CANDIDATES:
-    if not _c:
-        continue
-    if _c.startswith("/") and not os.path.exists(_c):
-        continue
-    try:
-        _lib = ctypes.CDLL(_c)
-        break
-    except OSError:
-        continue
-if _lib is None:
-    raise ImportError("no GLES library available")
+if os.environ.get("RAYFORGE_GLES_LIB") != "__stub__":  # test hook
+    for _c in _CANDIDATES:
+        if not _c:
+            continue
+        try:
+            _lib = ctypes.CDLL(_c)
+            break
+        except OSError:
+            continue
 
 # ---------------------------------------------------------- constants
 GL_FALSE = 0
@@ -102,10 +106,19 @@ _p = _c.POINTER
 
 
 def _fn(name, restype, *argtypes):
+    if _lib is None:
+        def _unavailable(*_a, **_k):
+            raise GLError(
+                f"{name}: no GLES library available on this system"
+            )
+        return _unavailable
     f = getattr(_lib, name)
     f.restype = restype
     f.argtypes = list(argtypes)
     return f
+
+
+GL_AVAILABLE = _lib is not None
 
 
 _glGetError = _fn("glGetError", _c.c_uint)
