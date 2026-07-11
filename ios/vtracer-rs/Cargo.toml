@@ -1,0 +1,18 @@
+# iOS-buildable vtracer Python module.
+# PyPI vtracer pins pyo3 0.19 (predates the aarch64-apple-ios target);
+# this thin wrapper re-exposes the identical Python API on pyo3 0.28
+# (abi3-py311) over the unchanged vtracer 0.6 conversion core.
+[package]
+name = "vtracer_ios"
+version = "0.6.11"
+edition = "2021"
+
+[lib]
+name = "vtracer"
+crate-type = ["cdylib"]
+
+[dependencies]
+vtracer = { version = "0.6", default-features = false }
+visioncortex = "0.8"
+image = { version = "0.24", default-features = false, features = ["bmp", "png", "jpeg"] }
+pyo3 = { version = "0.28", features = ["abi3", "abi3-py311", "extension-module"] }

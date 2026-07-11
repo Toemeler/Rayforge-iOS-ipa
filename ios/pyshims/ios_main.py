@@ -365,6 +365,11 @@ def main() -> None:
 
         GLib.timeout_add_seconds(4, _geom_probe)
         _ios_camera_box_start(self)  # Adw-safe: overlays onto _canvas_overlay
+        try:
+            import rayforge_ios_vecops
+            rayforge_ios_vecops.install(ioslog=_ioslog)
+        except Exception as _e:
+            _ioslog(f"vector toolpaths unavailable (raster kept): {_e!r}")
         raise _IOSKeepRunning()
 
     Adw.Application.run = _ios_run

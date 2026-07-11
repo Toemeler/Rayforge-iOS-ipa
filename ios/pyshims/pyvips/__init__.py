@@ -329,6 +329,23 @@ class Image(metaclass=_ImageMeta):
         rgb = a[:, :, :3] * alpha + bg[None, None, :] * (1 - alpha)
         return Image(rgb.astype(_np.uint8))
 
+    def invert(self):
+        a = self._a
+        if self._linear:
+            out = 1.0 - _np.clip(a, 0.0, 1.0)
+            return Image(out, linear=True)
+        out = a.copy()
+        if self.bands in (2, 4):
+            out[:, :, :-1] = 255 - out[:, :, :-1]
+        else:
+            out = 255 - out
+        return Image(out)
+
+    @staticmethod
+    def black(width, height, bands=1):
+        return Image(_np.zeros((int(height), int(width), int(bands)),
+                               _np.uint8))
+
     def write_to_memory(self):
         return _np.ascontiguousarray(self._a).tobytes()
 

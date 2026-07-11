@@ -55,6 +55,8 @@ COLOR_BGR2RGB = 4  # == COLOR_RGB2BGR
 COLOR_RGB2BGR = 4
 COLOR_BGR2GRAY = 6
 COLOR_RGB2RGBA = 0  # same op as BGR2BGRA (append alpha)
+COLOR_BGRA2GRAY = 10
+BORDER_CONSTANT = 0
 
 INTER_NEAREST = 0
 INTER_LINEAR = 1
@@ -240,6 +242,10 @@ def cvtColor(src, code):
         return np.concatenate([a, alpha], axis=2)
     if code == COLOR_BGRA2BGR:
         return a[:, :, :3].copy()
+    if code == COLOR_BGRA2GRAY:
+        a = np.asarray(src).astype(np.float64)
+        gray = 0.114 * a[..., 0] + 0.587 * a[..., 1] + 0.299 * a[..., 2]
+        return np.clip(np.rint(gray), 0, 255).astype(np.uint8)
     if code == COLOR_BGR2GRAY:
         w = np.array([0.114, 0.587, 0.299])  # BGR weights
         return (a[:, :, :3].astype(np.float32) @ w).astype(a.dtype)
@@ -369,6 +375,69 @@ class _RaisingMeta(type):
 
     def __call__(cls, *a, **kw):
         raise error(f"{_MSG} (instantiating cv2.{cls.__name__})")
+
+
+def copyMakeBorder(src, top, bottom, left, right, borderType,
+                   value=None):
+    """Constant-border padding (the only mode rayforge uses)."""
+    if borderType != BORDER_CONSTANT:
+        raise Error(f"copyMakeBorder borderType {borderType} unsupported")
+    a = np.asarray(src)
+    if value is None:
+        fill = 0
+    elif np.isscalar(value):
+        fill = value
+    else:
+        fill = value[0] if len(value) else 0
+    if a.ndim == 2:
+        out = np.full(
+            (a.shape[0] + top + bottom, a.shape[1] + left + right),
+            fill, dtype=a.dtype,
+        )
+    else:
+        out = np.full(
+            (a.shape[0] + top + bottom, a.shape[1] + left + right,
+             a.shape[2]),
+            fill, dtype=a.dtype,
+        )
+    out[top:top + a.shape[0], left:left + a.shape[1]] = a
+    return out
+
+
+def imencode(ext, img, params=None):
+    """BMP encoding only (what rayforge's tracing path uses).
+
+    Matches OpenCV semantics: 3-channel input is BGR; BMP stores BGR
+    bottom-up, so bytes are written verbatim. Grayscale is expanded.
+    """
+    import struct as _st
+    if str(ext).lower() not in (".bmp", "bmp"):
+        raise Error(f"imencode {ext} unsupported in iOS build")
+    a = np.asarray(img)
+    if a.dtype != np.uint8:
+        a = np.clip(a, 0, 255).astype(np.uint8)
+    if a.ndim == 2:
+        a = np.repeat(a[:, :, None], 3, axis=2)
+    if a.shape[2] == 4:
+        a = a[:, :, :3]
+    h, w = a.shape[:2]
+    row_bytes = w * 3
+    pad = (4 - row_bytes % 4) % 4
+    stride = row_bytes + pad
+    img_size = stride * h
+    header = _st.pack(
+        "<2sIHHI", b"BM", 14 + 40 + img_size, 0, 0, 14 + 40
+    )
+    dib = _st.pack(
+        "<IiiHHIIiiII", 40, w, h, 1, 24, 0, img_size, 2835, 2835, 0, 0
+    )
+    rows = bytearray()
+    zeros = b"\x00" * pad
+    for r in range(h - 1, -1, -1):  # bottom-up
+        rows += a[r].tobytes()
+        rows += zeros
+    buf = header + dib + bytes(rows)
+    return True, np.frombuffer(buf, dtype=np.uint8)
 
 
 def _is_class_like(name: str) -> bool:

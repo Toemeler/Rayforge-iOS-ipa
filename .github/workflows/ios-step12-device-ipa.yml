@@ -32,7 +32,7 @@ env:
   IOS_MIN: ${{ github.event.inputs.ios_min || '17.0' }}
   IOS_SDK: "iphoneos"
   BUNDLE_ID: "org.rayforge.app"
-  RAYGEO_TAG: "v1.15.1"
+  RAYGEO_TAG: "v1.15.2"
   VTRACER_VERSION: "0.6.11"
   PY_SUPPORT_URL: "https://github.com/beeware/Python-Apple-support/releases/download/3.13-b14/Python-3.13-iOS-support.b14.tar.gz"
   LIBFFI_VERSION: "3.5.2"
@@ -372,10 +372,23 @@ jobs:
           done
           test "$BUILT" = "1"
 
-          # vtracer: deliberately NOT built in Phase 1 — it is only used
-          # by raster tracing, which the cv2 stub already disables, and
-          # its released pyo3 pin predates iOS target support. A stub is
-          # bundled instead; the real build lands with OpenCV in Phase 2.
+          # vtracer: built from the vendored pyo3-0.28 wrapper crate at
+          # ios/vtracer-rs (the released PyPI binding pins pyo3 0.19,
+          # which predates the aarch64-apple-ios target). Conversion
+          # core is the unmodified vtracer 0.6 crate from crates.io.
+          BUILT=0
+          for attempt in 1 2 3; do
+            if (cd ios/vtracer-rs && "$MATURIN" build --release \
+                 -i "$CROSS_PY" \
+                 --target aarch64-apple-ios \
+                 --out "${GITHUB_WORKSPACE}/rust-wheels" \
+                 2>&1 | tee "${GITHUB_WORKSPACE}/vtracer-build.log"); then
+              BUILT=1; break
+            fi
+            echo "maturin attempt $attempt failed; retrying in 15s"
+            sleep 15
+          done
+          test "$BUILT" = "1"
           ls -la rust-wheels/
 
       - name: "[10e/16] Collect python dependencies (BeeWare wheels + pure)"
@@ -459,7 +472,6 @@ jobs:
           cp -R rayforge-src/rayforge "$STAGE/rayforge"
           cp -R ios/pyshims/scipy "$STAGE/scipy"
           cp -R ios/pyshims/cv2 "$STAGE/cv2"
-          cp -R ios/pyshims/vtracer "$STAGE/vtracer"
           cp -R ios/pyshims/pyvips "$STAGE/pyvips"
           cp -R ios/pyshims/pymupdf "$STAGE/pymupdf"
           # iOS has no desktop OpenGL/GLX. Replace any real PyOpenGL with
@@ -472,6 +484,7 @@ jobs:
           cp ios/pyshims/rayforge_ios_shm.py "$STAGE/"
           cp ios/pyshims/rayforge_ios_svg.py "$STAGE/"
           cp ios/pyshims/rayforge_ios_filepicker.py "$STAGE/"
+          cp ios/pyshims/rayforge_ios_vecops.py "$STAGE/"
           cp ios/pyshims/ios_main.py "$STAGE/"
           du -sh "$STAGE"
 
