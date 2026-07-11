@@ -204,12 +204,31 @@ def _present_picker(picker, on_pick, on_cancel):
     )
 
 
-def present_open(on_pick, on_cancel):
-    """Native open picker; picks are copied into the sandbox by iOS."""
-    ut = _msg(
-        _cls("UTType"), "typeWithIdentifier:", _nsstring("public.data")
-    )
-    types = _nsarray([ut])
+def present_open(on_pick, on_cancel, extensions=None):
+    """Native open picker; picks are copied into the sandbox by iOS.
+
+    extensions: optional iterable of filename extensions (no dot) to
+    restrict the picker to; falls back to public.data.
+    """
+    uttypes = []
+    for ext in extensions or ():
+        try:
+            ut = _msg(
+                _cls("UTType"), "typeWithFilenameExtension:",
+                _nsstring(ext),
+            )
+            if ut:
+                uttypes.append(ut)
+        except Exception:
+            pass
+    if not uttypes:
+        uttypes = [
+            _msg(
+                _cls("UTType"), "typeWithIdentifier:",
+                _nsstring("public.data"),
+            )
+        ]
+    types = _nsarray(uttypes)
     picker = _msg(
         _msg(_cls("UIDocumentPickerViewController"), "alloc"),
         "initForOpeningContentTypes:asCopy:",
@@ -250,6 +269,7 @@ def install(Gtk, Gio, GLib, documents_dir, ioslog=lambda m: None):
         def __init__(self):
             self._initial_name = None
             self._picked = None  # Gio.File or None
+            self._filters = None
 
         @staticmethod
         def new():
@@ -259,6 +279,52 @@ def install(Gtk, Gio, GLib, documents_dir, ioslog=lambda m: None):
         # anything, honor what matters.
         def set_initial_name(self, name):
             self._initial_name = name
+
+        def set_filters(self, list_store):
+            self._filters = list_store
+
+        def set_default_filter(self, f):
+            pass
+
+        def _filter_extensions(self):
+            """Extract filename extensions from the GTK filter store.
+
+            Gtk.FileFilter exposes its rules only through to_gvariant();
+            parse its string form defensively for '*.ext' patterns and
+            bare suffix entries.
+            """
+            import re
+            exts = set()
+            try:
+                store = getattr(self, "_filters", None)
+                if store is None:
+                    return None
+                for i in range(store.get_n_items()):
+                    f = store.get_item(i)
+                    try:
+                        desc = str(f.to_gvariant())
+                    except Exception:
+                        continue
+                    exts.update(
+                        m.group(1).lower()
+                        for m in re.finditer(
+                            r"\*\.([A-Za-z0-9]+)", desc
+                        )
+                    )
+                    sfx = re.search(
+                        r"suffixes[^\[]*\[([^\]]*)\]", desc
+                    )
+                    if sfx:
+                        exts.update(
+                            m.group(1).lower()
+                            for m in re.finditer(
+                                r"'\.?([A-Za-z0-9]+)'", sfx.group(1)
+                            )
+                        )
+            except Exception:
+                logger.exception("filter extension extraction failed")
+                return None
+            return sorted(exts) or None
 
         def set_initial_file(self, gfile):
             try:
@@ -284,8 +350,9 @@ def install(Gtk, Gio, GLib, documents_dir, ioslog=lambda m: None):
                 GLib.idle_add(self._fire, callback, user_data)
 
             try:
-                present_open(on_pick, on_cancel)
-                ioslog("iOS file picker: open presented")
+                exts = self._filter_extensions()
+                present_open(on_pick, on_cancel, extensions=exts)
+                ioslog(f"iOS file picker: open presented (exts={exts})")
             except Exception:
                 logger.exception("iOS open picker failed; GTK fallback")
                 self._gtk_fallback("open", win, cancellable, callback,

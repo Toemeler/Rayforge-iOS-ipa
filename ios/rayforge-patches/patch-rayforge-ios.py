@@ -622,6 +622,23 @@ PATCHES = [
         "        context = RenderContext(\n"
         "            pixels_per_mm=(ppm_x * 2.0, ppm_y * 2.0),",
     ),
+    # P29: diagnose "partially colored toolpaths": log every view
+    # render's completion at INFO (with px dims and cancel state) so a
+    # render that dies mid-chunk is visible in the session log.
+    (
+        "rayforge/pipeline/view/view_runner.py",
+        '    proxy.send_event("view_artifact_updated")\n'
+        '    logger.debug("Worker: Sent final view_artifact_updated event")'
+        "\n\n"
+        '    logger.debug("Worker: View artifact rendering complete.")',
+        '    proxy.send_event("view_artifact_updated")\n'
+        '    logger.debug("Worker: Sent final view_artifact_updated event")'
+        "\n\n"
+        "    logger.info(\n"
+        "        'view render complete: %dx%d px, step=%s, cancelled=%s',\n"
+        "        width_px, height_px, step_uid, proxy.is_cancelled(),\n"
+        "    )",
+    ),
     # P21: log the imported DXF's computed world size (mm) so a wrong
     # on-device size is diagnosable from the session log.
     (

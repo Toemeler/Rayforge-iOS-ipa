@@ -242,10 +242,10 @@ def main() -> None:
                 if pb is not None and pic is not None:
                     # Gtk.Picture renders at the paintable's NATURAL size
                     # (set_size_request is only a minimum), so scale the
-                    # frame itself: factor 0.25.
+                    # frame itself: factor 0.375 (user-tuned: 0.25 * 1.5).
                     pb = pb.scale_simple(
-                        max(1, pb.get_width() // 4),
-                        max(1, pb.get_height() // 4),
+                        max(1, pb.get_width() * 3 // 8),
+                        max(1, pb.get_height() * 3 // 8),
                         GdkPixbuf.InterpType.BILINEAR,
                     )
                     pic.set_paintable(
