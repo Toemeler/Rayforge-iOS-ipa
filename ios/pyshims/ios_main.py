@@ -70,7 +70,9 @@ def main() -> None:
     # placeholder so the GL widget is never instantiated. (The OpenGL
     # *imports* are additionally satisfied by the pyshims OpenGL stub;
     # this flag ensures none of that inert GL code is ever executed.)
-    os.environ.setdefault("RAYFORGE_DISABLE_3D", "1")
+    # 3D ENABLED: real GLES3 binding (OpenGL pyshim) + GLArea emulation
+    # (rayforge_ios_glarea) replace the Phase-1 stubs.
+    os.environ.pop("RAYFORGE_DISABLE_3D", None)
 
     # iOS sandbox: only Documents/, Library/ and tmp/ inside the data
     # container are writable — platformdirs' default ~/.local/state is
@@ -186,6 +188,11 @@ def main() -> None:
         rayforge_ios_filepicker.install(
             _Gtk, _Gio, _GLib, _fp_docs, ioslog=_ioslog
         )
+        from gi.repository import GObject as _GObject
+
+        import rayforge_ios_glarea
+
+        rayforge_ios_glarea.install(_Gtk, _GObject, ioslog=_ioslog)
     except Exception as _e:
         _ioslog(f"file picker install failed, GTK dialogs kept: {_e!r}")
 

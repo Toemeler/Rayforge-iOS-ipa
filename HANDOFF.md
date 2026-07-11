@@ -32,14 +32,31 @@ timeout, auto-home-once, telnet driver.
 - **raygeo v1.15.2** (upstream HEAD f36b7fc bumped requirements
   overnight; 1.15.1 lacks geo.Matrix — tags updated in step11+12).
 
-## 3D — deliberately NOT included (be honest with the user)
-gdk-ios has zero GdkGLContext implementation (pure Cairo/CoreAnimation);
-rayforge sim3d = Gtk.GLArea + PyOpenGL + desktop GLSL. Enabling 3D means
-writing a GLES/EAGL (or ANGLE/Metal) context in the C backend, a
-PyOpenGL-on-iOS loading story, and shader porting — a multi-session
-project requiring device iterations. Shipping it blind into a final
-build risked a startup crash; it stays cleanly disabled
-(RAYFORGE_DISABLE_3D).
+## 3D — ENABLED (user insisted; architecture chosen to avoid C changes)
+NOT via GTK's GL plumbing (gdk-ios has no GdkGLContext; libepoxy 1.5.10
+hardcodes macOS OpenGL.framework so it can never resolve GLES on iOS).
+Instead:
+- `OpenGL` pyshim is now a REAL ctypes GLES3 binding (OpenGLES.framework
+  on device, Mesa libGLESv2 in the Linux validation env) implementing
+  the exact PyOpenGL calling conventions sim3d uses (~45 fns; Gen/Delete
+  flex args, numpy buffers, uniform arrays, GLError, GL.shaders
+  compileShader/compileProgram/ShaderValidationError).
+- `rayforge_ios_glarea.py` replaces Gtk.GLArea (attr swap pre-import,
+  same pattern as FileDialog): Gtk.DrawingArea subclass + custom
+  'render' signal, EAGLContext(ES3) via the filepicker's ObjC bridge,
+  RGBA8+DEPTH16 renderbuffer FBO bound inside make_current(), pixels
+  read back per frame -> premultiplied BGRA -> cairo paint. resize
+  pre-handler keeps context/FBO current before Canvas3D's handlers.
+- RAYFORGE_DISABLE_3D removed in ios_main. Upstream gl_utils already
+  auto-selects '#version 300 es' headers when GL_VERSION says ES.
+Validated on a LIVE Mesa ES3.2 surfaceless context: rayforge's real
+Shader class compiles/links with ES headers; VAO/VBO/uniform/draw/
+readback lit-pixel test green; FBO lifecycle + cairo conversion green.
+Untested on device: EAGL context creation + CoreAnimation interplay
+(everything else exercised for real). If 3D misbehaves on device, the
+first log lines to check: 'GLArea: ES3 context created' /
+'GLArea make_current failed' / 'GLArea draw failed' — failures flip a
+per-widget _failed latch (blank 3D pane, app unaffected).
 
 ## Architecture (unchanged)
 ESP32 DevKit V1 BT-Classic<->TCP:23 relay (rayforge-laser.local,

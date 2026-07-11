@@ -477,7 +477,8 @@ jobs:
           # iOS has no desktop OpenGL/GLX. Replace any real PyOpenGL with
           # an import-satisfying stub so Rayforge's UI (which imports GL
           # renderer modules unconditionally via the settings dialog) can
-          # build. The 3D canvas itself stays disabled (RAYFORGE_DISABLE_3D).
+          # OpenGL package = real GLES3 ctypes binding (3D is ENABLED,
+          # rendered via rayforge_ios_glarea EAGL/FBO emulation).
           rm -rf "$STAGE/OpenGL"
           cp -R ios/pyshims/OpenGL "$STAGE/OpenGL"
           cp ios/pyshims/rayforge_ios_pool.py "$STAGE/"
@@ -485,6 +486,7 @@ jobs:
           cp ios/pyshims/rayforge_ios_svg.py "$STAGE/"
           cp ios/pyshims/rayforge_ios_filepicker.py "$STAGE/"
           cp ios/pyshims/rayforge_ios_vecops.py "$STAGE/"
+          cp ios/pyshims/rayforge_ios_glarea.py "$STAGE/"
           cp ios/pyshims/ios_main.py "$STAGE/"
           du -sh "$STAGE"
 
