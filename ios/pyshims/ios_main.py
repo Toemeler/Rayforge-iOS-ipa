@@ -167,6 +167,28 @@ def main() -> None:
 
     _ios_patch_send_event_and_wait()
 
+    # Native iOS document picker replacing Gtk.FileDialog everywhere
+    # (import, open/save project, exports, machine profiles, ...).
+    # Fully defensive: on any failure the GTK dialog remains in place.
+    try:
+        from gi.repository import Gio as _Gio
+        from gi.repository import GLib as _GLib
+        from gi.repository import Gtk as _Gtk
+
+        import rayforge_ios_filepicker
+
+        _fp_home = os.environ.get("HOME", "")
+        _fp_docs = (
+            _fp_home
+            if os.path.basename(_fp_home) == "Documents"
+            else os.path.join(_fp_home, "Documents")
+        )
+        rayforge_ios_filepicker.install(
+            _Gtk, _Gio, _GLib, _fp_docs, ioslog=_ioslog
+        )
+    except Exception as _e:
+        _ioslog(f"file picker install failed, GTK dialogs kept: {_e!r}")
+
     # Diagnostic: a 100ms GLib timer that logs every 5s with the real
     # elapsed wall time. If the logged interval >> 5s while the app is
     # untouched, GLib timeout dispatch is starving without input —

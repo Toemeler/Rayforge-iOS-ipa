@@ -471,6 +471,7 @@ jobs:
           cp ios/pyshims/rayforge_ios_pool.py "$STAGE/"
           cp ios/pyshims/rayforge_ios_shm.py "$STAGE/"
           cp ios/pyshims/rayforge_ios_svg.py "$STAGE/"
+          cp ios/pyshims/rayforge_ios_filepicker.py "$STAGE/"
           cp ios/pyshims/ios_main.py "$STAGE/"
           du -sh "$STAGE"
 
